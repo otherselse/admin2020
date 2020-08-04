@@ -15,26 +15,26 @@ $(function(){
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			]
 		}
-		,{"title":"审批管理",
+		,{"title":"审批管理3",
 		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	{"bigM":"角色管理类3-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
 			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}			
 
 			]
 		}
-		,{"title":"评审管理",
+		,{"title":"评审管理4",
 		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	{"bigM":"角色管理类4-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
 
 
 
 			]
 		}
-		,{"title":"评审管理",
+		,{"title":"评审管理5",
 		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	{"bigM":"角色管理类5-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
 			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
@@ -42,7 +42,7 @@ $(function(){
 
 			]
 		}
-		,{"title":"审批管理2",
+		,{"title":"审批管理",
 		 "menuList":[
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			]
@@ -51,7 +51,22 @@ $(function(){
 		 "menuList":[
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}			
+			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+
+
+			]
+		}
+		,{"title":"审批管理",
+		 "menuList":[
+			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			]
+		}
+		,{"title":"审批管理",
+		 "menuList":[
+			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+			 			
 
 			]
 		}
@@ -72,7 +87,7 @@ $(function(){
 			_menuStr+=_menuStrA+'</div></div></div></span>'
 		}else{
 			var w=(160+50)*l-50
-			_menuStr+='<span class="menuList menuhook">'+
+			_menuStr+='<span class="menuList menuhook" dataChild="'+l+'">'+
 				 '<span>'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont" style="width:'+w+'px">'
 			var _menuStrD='';
 			for(var j=0;j<menu_Data[i].menuList.length;j++){
@@ -93,8 +108,11 @@ $(function(){
 
 
 	$("body").on("mouseover",".menuhook",function(){
-		if($(this).attr("datachild")!="1"){
+		if($(this).attr("datachild")>="4"){
 			$(this).find(".mDetail").css("left",$(".menu").offset().left-$(this).offset().left)
+		}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
+			var _w=$(this).find(".mDetailCont").outerWidth(true)/2-$(this).outerWidth(true)/2;
+			$(this).find(".mDetail").css("left",-_w)
 		}
 		$(this).find(".mDetail").show();
 	}).on("mouseout",".menuhook",function(){
