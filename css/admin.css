@@ -3,7 +3,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 .blue{color:#3A9EFF}
 .topBar{height:76px;background:url(../images/index/bg.png); min-width:1440px;background-size:100%;font-size: 0;padding:0 2%;box-sizing: border-box;}
-.logo{display: inline-block;font-size: 16px;color:#BDCCF4;line-height: 76px;}
+.logo{display: inline-block;font-size: 16px;color:#BDCCF4;line-height: 76px;float: left}
 .logoSvg{width: 133px;height: 56px;display: inline-block;}
 .topLogo{width: 32px;height: 32px;border-radius: 50%;}
 .topRight{line-height: 76px;float: right;font-size: 14px; }
@@ -11,5 +11,18 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .iconAlumni{width: 20px;height: 20px;background-position: -15px -15px;}
 .iconExit{width: 20px;height: 20px;background-position: -64px -15px;}
 
-.menu{line-height: 76px;display:inline-block;box-sizing: border-box;font-size: 16px;margin-left:5%;}
-.menuList{display: inline-block;color: #fff;padding:0 10px;margin:0 10px 0 0;}
+/*menu*/
+.menu{line-height: 76px;display:inline-block;box-sizing: border-box;font-size: 16px;margin-left:3%;}
+.menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 3px 0 0;position: relative;}
+.menuList:hover,.menuList.on{background: #2d66ec;color:#fff;}
+.menuList.on:before{content: '';position: absolute;width: 100%;height: 3px;background: #4f9fff;bottom: 0;left: 0}
+.menuConfig{display: inline-block;}
+.menuhook{cursor: pointer;}
+.mDetail{left:0;top:76px;position: absolute;display: none}
+.mDetailCont{margin-top:3px;padding:30px;line-height: 14px;background:linear-gradient(90deg,rgba(34,75,170,1),rgba(29,47,163,1));
+box-shadow:0px 4px 18px 0px rgba(117,125,174,1);}
+.mDList{width: 160px;font-size: 14px;color:#fff;display: inline-block;margin-right: 50px;vertical-align: top}
+.mDListTitle{border-bottom: 1px rgba(232,230,228,0.2) solid;padding-bottom: 10px;margin-bottom:5px;font-weight: bold}
+.mDListShow{display: block;padding:6px 0;color:rgba(255,255,255,0.8);}
+.mDListShow:hover{color:#fff;}
+.mDList:last-child{margin-right:0;}
