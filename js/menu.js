@@ -36,13 +36,13 @@ $(function(){
 		 "menuList":[
 			 	{"bigM":"角色管理类5-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	 ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 
 
 			]
 		}
-		,{"title":"审批管理",
+	,{"title":"审批管理",
 		 "menuList":[
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			]
@@ -108,10 +108,19 @@ $(function(){
 
 
 	$("body").on("mouseover",".menuhook",function(){
+		var _ww=$(window).width()/2;
+		var _myL=$(this).offset().left;
+
+
 		if($(this).attr("datachild")>="4"){
-			$(this).find(".mDetail").css("left",$(".menu").offset().left-$(this).offset().left)
+			$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
 		}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
-			var _w=$(this).find(".mDetailCont").outerWidth(true)/2-$(this).outerWidth(true)/2;
+			if(_myL>_ww){  //在屏幕右侧
+				_w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
+			}else{  //在屏幕左侧
+				_w=0;
+			}
+			
 			$(this).find(".mDetail").css("left",-_w)
 		}
 		$(this).find(".mDetail").show();
