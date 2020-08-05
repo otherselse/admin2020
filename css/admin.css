@@ -2,33 +2,68 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 
 .blue{color:#3A9EFF}
+.gbd{color:rgba(189, 204, 244, 0.2)}
+.f08{color:rgba(255, 255, 255, 0.8)}
+.gd8{color: #D8D8D8}
+.g80{color:#808080;}
+.gga{color: #9A9A9A}
+.gd9{color:#D9D9D9}
 .topBar{height:76px;background:url(../images/index/bg.png); min-width:1440px;background-size:100%;font-size: 0;padding:0 2%;box-sizing: border-box;}
-.logo{display: inline-block;font-size: 16px;color:#BDCCF4;line-height: 76px;float: left}
-.logoSvg{width: 133px;height: 56px;display: inline-block;}
+.logo{display: inline-block;font-size: 16px;line-height: 76px;float: left}
+.logoSvg svg{width: 133px;height: 56px;display: inline-block;vertical-align: middle;}
 .topLogo{width: 32px;height: 32px;border-radius: 50%;}
 .topRight{line-height: 76px;float: right;font-size: 14px; }
 .admIcon{background: url(../images/adminIcon.png);display: inline-block;}
 .iconAlumni{width: 20px;height: 20px;background-position: -15px -15px;}
 .iconExit{width: 20px;height: 20px;background-position: -64px -15px;}
+.minH{min-height: calc(100vh - 76px)}
 
 /*menu*/
 .menu{line-height: 76px;display:inline-block;box-sizing: border-box;font-size: 16px}
-.menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 0px 0 0;position: relative;}
+.menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 3px 0 0;position: relative;}
 .menuList:hover,.menuList.on{background: #2d66ec;color:#fff;}
 .menuList.on:before{content: '';position: absolute;width: 100%;height: 3px;background: #4f9fff;bottom: 0;left: 0}
 .menuConfig{display: inline-block;}
 .menuhook{cursor: pointer;}
-.mDetail{left:0;top:60px;position: absolute;display: none;text-align: left;}
-.mDetailCont{margin-top:18px;padding:30px;line-height: 14px;background:linear-gradient(90deg,rgba(34,75,170,1),rgba(29,47,163,1));
-box-shadow:0px 4px 18px 0px rgba(117,125,174,1);}
+.mDetail{left:0;top:60px;position: absolute;display: none;text-align: left;z-index: 999}
+.mDetailCont{margin-top:18px;padding:30px;line-height: 14px;background:url(../images/index/menubg.png) center;background-size:100% 100%;box-shadow:0px 4px 18px 0px rgba(117,125,174,1);}
 .mDList{width: 160px;font-size: 14px;color:#fff;display: inline-block;margin-right: 50px;vertical-align: top}
 .mDListTitle{border-bottom: 1px rgba(232,230,228,0.2) solid;padding-bottom: 10px;margin-bottom:5px;font-weight: bold}
 .mDListShow{display: block;padding:6px 0;color:rgba(255,255,255,0.8);}
 .mDListShow:hover{color:#fff;}
 .mDList:last-child{margin-right:0;}
-
 .m_top{display: none}
 
+
+/*bar*/
+.leftBar{width: 200px;box-shadow:10px 17px 20px 0px #EEF1F6;position:absolute;left:0;bottom:0;background:#FAFAFB;top:76px;transition: all 0.5s;-webkit-transition: all 0.5s;overflow-y: auto;padding-top:20px;}
+.leftBar::-webkit-scrollbar {width:6px;height:4px;}
+.leftBar::-webkit-scrollbar-track-piece {background-color:#ddecf5;margin:0px;}
+.leftBar::-webkit-scrollbar-thumb{background:#b9d0e0;border-radius:2px;}
+.leftBar::-webkit-scrollbar-thumb:vertical:hover{background:#8cb2ca;}
+.leftBar::-webkit-scrollbar-thumb:horizontal:hover{background:#8cb2ca}
+.menuItem{color:#282828;margin:0px 0 10px 30px;display: inline-block;}
+.menuItemText{display: inline-block;min-width: 100px;}
+.smenu{display: none}
+.open > .smenu{display: block;}
+.imenu-up{ width: 16px;height: 14px;background-position:-118px -18px;}
+.open .imenu-up{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);}
+.smlist{display: block;line-height: 40px;height: 40px;padding-left:30px;color:#282828;position: relative;}
+.smlist.on{background:rgba(19,101,232,0.2);color:#1365E8;}
+.smlist.on:before{right:0;width: 2px;height: 100%;}
+.mulfolder{padding-bottom:20px;}
+
+
+
+.rightBar{position:absolute;left:200px;top:76px;right:0;bottom: 0;box-sizing: border-box;padding:0 30px;transition: all 0.5s;-webkit-transition: all 0.5s;}
+.nav{font-size: 12px;padding:10px 0;color: #282828}
+
+
+
+
+/*bLeftBar 没有左侧菜单*/
+.bLeftBar .leftBar{display: none;}
+.bLeftBar .rightBar{left:0;min-width: 1440px;}
 
 /*m_status 状态表示是手机状态下*/
 .m_status .topBar .logo,.m_status .topBar .topRight{display: none;}
@@ -37,4 +72,10 @@ box-shadow:0px 4px 18px 0px rgba(117,125,174,1);}
 .m_status .menu{font-size: 22px}
 .m_status .mDList{font-size: 20px}
 .m_status .mDetailCont{line-height: 20px}
-.m_status .m_top{display: block;line-height:76px;height: 76px;background: #224baa;min-width: 1440px;box-sizing: border-box;padding:0 20px;}
+.m_status .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 1440px;box-sizing: border-box;padding:0 20px;}
+.m_status .menuList{margin-right: 15px}
+.m_status .topBar.tc{text-align: left}
+.m_status .leftBar{display: none}
+.m_status .rightBar{position: inherit;min-width: 1440px;}
+.m_status .setLeftBar{display: none}
+.m_status .m_dn{display: none}

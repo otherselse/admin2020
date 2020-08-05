@@ -108,7 +108,6 @@ $(function(){
 		
 	}
 	$(".menuConfig").html(_menuStr)
-
 	if(!IsPC()){ //手机端
 		var logo=$(".logo").clone(true);
 		var topRight=$(".topRight").clone(true);
