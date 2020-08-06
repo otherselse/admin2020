@@ -27,7 +27,7 @@
 	'		<span class="menuConfig trans"></span>	'+		
 	'	</span>'+
 	'	<span class="topRight">'+
-	'		<img src="../images/adv1.png" class="topLogo vm">'+
+	'		<span class="topLogoCont vm"><img src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></span>'+
 	'		<a href="##" class="blue ml5">hi,钢铁大王</a>'+
 	'		<span class="dib mr5 ml5 gbd">|</span>'+
 	'		<a href="##" class="admIcon iconAlumni vm"></a>'+

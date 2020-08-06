@@ -34,3 +34,8 @@ function showsMenu(obj){
 	myobj.slideToggle();
 	$(obj).toggleClass("open")
 }
+
+
+function hideTipCont(obj){
+	$(obj).parents(".noticeTip").slideUp()
+}
