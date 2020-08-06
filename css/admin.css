@@ -15,14 +15,21 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .topLogoCont{width: 32px;height: 32px;border-radius: 50%;overflow:hidden;display: inline-block;}
 .topRight{line-height: 76px;float: right;font-size: 14px; }
 .admIcon{background: url(../images/adminIcon.png);display: inline-block;}
-.iconAlumni{width: 20px;height: 20px;background-position: -15px -15px;opacity: 0.8;filter:alpha(opacity=100); }
+.iconAlumni{width: 20px;height: 20px;background-position: -15px -15px;opacity: 0.8;filter:alpha(opacity=80); }
 .iconAlumni:hover,.iconExit:hover{opacity:1;filter:alpha(opacity=100); }
-.iconExit{width: 20px;height: 20px;background-position: -64px -15px;opacity: 0.8;filter:alpha(opacity=100); }
+.iconExit{width: 20px;height: 20px;background-position: -64px -15px;opacity: 0.8;filter:alpha(opacity=80); }
 .minH{min-height: calc(100vh - 76px)}
 .indent15{text-indent: 15px}
 .tipIcon{width: 16px;height: 16px;background-position: -168px -17px;}
 .tipCloseIcon{width: 20px;height: 35px;background-position: -215px -8px;}
 .tipCloseIcon:hover{-webkit-filter: brightness(70%); filter: brightness(70%);}
+
+.scrollbar::-webkit-scrollbar {width:4px;height:4px;}
+.scrollbar::-webkit-scrollbar-track-piece {background-color:#fff;margin:0px;}
+.scrollbar::-webkit-scrollbar-thumb{background:#E6E6E6;border-radius:2px;}
+.scrollbar::-webkit-scrollbar-thumb:vertical:hover{background:#cecccc;}
+.scrollbar::-webkit-scrollbar-thumb:horizontal:hover{background:#cecccc}
+
 /*menu*/
 .menu{line-height: 76px;display:inline-block;box-sizing: border-box;font-size: 16px}
 .menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 3px 0 0;position: relative;}
@@ -38,24 +45,21 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .mDListShow:hover{color:#fff;}
 .mDList:last-child{margin-right:0;}
 .m_top{display: none}
+.leftBar .ui-input.searchUp{background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAADd6iHDAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADnRSTlMAFD47Jw8FKyMLCDQzG7FXsNUAAABfSURBVAjXY2DIOLRlAQMYsJpLihhCmMkXGBiEIcLtQMxSAGYeBCkyADM1gZhNDczciBB1AWIOiNrFAgwMQRPATEaTsAglAYjBS4zMJyoyQAAbA4MQWBiiCigMA9JADAAlHw21aNl1RAAAAABJRU5ErkJggg==');}
 
 
 /*bar*/
 .leftBar{width: 200px;box-shadow:10px 17px 20px 0px #EEF1F6;position:absolute;left:0;bottom:0;background:#FAFAFB;top:76px;transition: all 0.5s;-webkit-transition: all 0.5s;overflow-y: auto;padding-top:20px;}
-.leftBar::-webkit-scrollbar {width:6px;height:4px;}
-.leftBar::-webkit-scrollbar-track-piece {background-color:#ddecf5;margin:0px;}
-.leftBar::-webkit-scrollbar-thumb{background:#b9d0e0;border-radius:2px;}
-.leftBar::-webkit-scrollbar-thumb:vertical:hover{background:#8cb2ca;}
-.leftBar::-webkit-scrollbar-thumb:horizontal:hover{background:#8cb2ca}
+
 .menuItem{color:#282828;margin:0px 0 10px 30px;display: inline-block;}
 .menuItemText{display: inline-block;min-width: 100px;}
 .smenu{display: none}
 .open > .smenu{display: block;}
-.imenu-up{ width: 16px;height: 14px;background-position:-118px -18px;}
-.open .imenu-up{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);}
-.smlist{display: block;line-height: 40px;height: 40px;padding-left:30px;color:#282828;position: relative;}
+.imenu-up{ width: 16px;height: 14px;background-position:-118px -18px;opacity: 0.8;filter:alpha(opacity=80);}
+.open .imenu-up{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);opacity: 1;filter:alpha(opacity=100);}
+.smlist{display: block;line-height: 40px;height: 40px;padding-left:50px;color:#282828;position: relative;}
 .smlist.on{background:rgba(19,101,232,0.2);color:#1365E8;}
-.smlist.on:before{right:0;width: 2px;height: 100%;}
+.smlist.on:before{content:'';right:0;width: 4px;height: 40px;background:#3A9EFF;top:0;position: absolute;}
 .mulfolder{padding-bottom:20px;}
 .leftbarIcon{width: 20px;height: 20px;background-position:-267px -16px;}
 .leftbarIcon.type1{background-position:-316px -16px;}
@@ -80,11 +84,6 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .indexContNum{height:18px;line-height: 18px;background:#1365E8;border-radius:4px;color: #fff;font-size: 14px;padding:0 6px;}
 .indexTitlebg{background:#FCFCFC;border-top:1px #DBDBDB solid;border-bottom: 1px #DBDBDB solid;line-height: 40px;height: 40px;box-sizing: border-box;color:#ADADAD;padding:0  15px;}
 .indexDetCont{height: 200px;color: #282828;overflow-y: auto}
-.indexDetCont::-webkit-scrollbar {width:4px;height:4px;}
-.indexDetCont::-webkit-scrollbar-track-piece {background-color:#fff;margin:0px;}
-.indexDetCont::-webkit-scrollbar-thumb{background:#E6E6E6;border-radius:2px;}
-.indexDetCont::-webkit-scrollbar-thumb:vertical:hover{background:#cecccc;}
-.indexDetCont::-webkit-scrollbar-thumb:horizontal:hover{background:#cecccc}
 .indexDetList{border-bottom: 1px #F4F4F4 solid;height: 50px;line-height: 50px;box-sizing: border-box;}
 
 

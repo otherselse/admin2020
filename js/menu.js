@@ -2,17 +2,23 @@ $(function(){
 	var menu_Data=[
 		{"title":"评审管理",
 		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-
+			 	{"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../index/index.html"},{"mtitle":"单位评审","href":"../index/index.html"},{"mtitle":"实名注册审批","href":"../index/index.html"},{"mtitle":"加工主账号评审","href":"../index/index.html"},{"mtitle":"公司信息评审","href":"../index/index.html"},{"mtitle":"质保书评审","href":"../index/index.html"},{"mtitle":"单位预审","href":"../index/index.html"},{"mtitle":"SAAS用户审核","href":"../index/index.html"},{"mtitle":"主账号移交记录","href":"../index/index.html"}
+			 	]}
 
 			]
 		}
-		,{"title":"审批管理2",
+		,{"title":"审批管理",
 		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../index/index.html"},{"mtitle":"VIP业务采购合同评审","href":"../index/index.html"},{"mtitle":"备货采购合同审批","href":"../index/index.html"},{"mtitle":"运输合同审批","href":"../index/index.html"},{"mtitle":"加工仓储协议审批","href":"../index/index.html"},{"mtitle":"退货入库审批单据","href":"../index/index.html"},{"mtitle":"售后审批","href":"../index/index.html"}
+			 	]}
+			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../index/index.html"},{"mtitle":"风险保证金审核","href":"../index/index.html"},{"mtitle":"租赁分红审批","href":"../index/index.html"}
+			 	]}
+			 	,{"bigM":"加工类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"}
+			 	]}
+			 	,{"bigM":"外贸类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"}
+			 	]}
+			 	,{"bigM":"其他","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"}
+			 	]}
 			]
 		}
 		,{"title":"审批管理3",
