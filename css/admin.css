@@ -80,6 +80,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .indexCont{overflow: hidden;}
 .indexContItem{height:322px;background:#fff;box-shadow:10px 0px 25px 0px rgba(238,241,246,1);border-radius:6px;width: 49.25%;margin-right:1.5%;float:left;margin-bottom: 20px}
 .indexContItem:nth-of-type(2n){margin-right: 0}
+.indexContItem:last-child{width: 100%}
 .indexContTitle{color:#282828;font-size: 16px;line-height: 50px;height: 50px;padding-left: 15px;}
 .indexContNum{height:18px;line-height: 18px;background:#1365E8;border-radius:4px;color: #fff;font-size: 14px;padding:0 6px;}
 .indexTitlebg{background:#FCFCFC;border-top:1px #DBDBDB solid;border-bottom: 1px #DBDBDB solid;line-height: 40px;height: 40px;box-sizing: border-box;color:#ADADAD;padding:0  15px;}
@@ -94,10 +95,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /*m_status 状态表示是手机状态下*/
 .m_status .f14{font-size: 16px !important}
 .m_status .topBar .logo,.m_status .topBar .topRight{display: none;}
-.m_status .mDetailCont{width: 160px !important}
+.m_status .mDetailCont{max-width:270px;padding:30px 25px;}
 .m_status .mDList+.mDList{margin-top:20px;}
 .m_status .menu{font-size: 22px}
-.m_status .mDList{font-size: 20px}
+.m_status .mDList{font-size: 20px;width:270px;margin-right: 0}
+.m_status .m_first{width:150px}
 .m_status .mDetailCont{line-height: 20px}
 .m_status .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 1440px;box-sizing: border-box;padding:0 20px;}
 .m_status .menuList{margin-right: 15px}
@@ -107,3 +109,5 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .m_status .setLeftBar{display: none}
 .m_status .m_dn{display: none}
 .m_status .indexContItem{width: 100%;margin-right: 0}
+.m_status .mDListTitle{display: inline-block;width:30%;vertical-align: top;margin-top:8px;}
+.m_status .mDListCont{display: inline-block;width:68%;vertical-align: top;}
