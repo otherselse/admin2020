@@ -1,15 +1,14 @@
-$(function(){
 	var menu_Data=[
 		{"title":"评审管理",
 		 "menuList":[
-			 	{"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../index/index.html"},{"mtitle":"单位评审","href":"../index/index.html"},{"mtitle":"实名注册审批","href":"../index/index.html"},{"mtitle":"加工主账号评审","href":"../index/index.html"},{"mtitle":"公司信息评审","href":"../index/index.html"},{"mtitle":"质保书评审","href":"../index/index.html"},{"mtitle":"单位预审","href":"../index/index.html"},{"mtitle":"SAAS用户审核","href":"../index/index.html"},{"mtitle":"主账号移交记录","href":"../index/index.html"}
+			 	{"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../toApplySale/toPersonList.html"},{"mtitle":"单位评审","href":"../toApplySale/adminIndexListNew.html"},{"mtitle":"实名注册审批","href":"../index/index.html"},{"mtitle":"加工主账号评审","href":"../index/index.html"},{"mtitle":"公司信息评审","href":"../index/index.html"},{"mtitle":"质保书评审","href":"../index/index.html"},{"mtitle":"单位预审","href":"../index/index.html"},{"mtitle":"SAAS用户审核","href":"../index/index.html"},{"mtitle":"主账号移交记录","href":"../index/index.html"}
 			 	]}
 
 			]
 		}
 		,{"title":"审批管理",
 		 "menuList":[
-			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../index/index.html"},{"mtitle":"VIP业务采购合同评审","href":"../index/index.html"},{"mtitle":"备货采购合同审批","href":"../index/index.html"},{"mtitle":"运输合同审批","href":"../index/index.html"},{"mtitle":"加工仓储协议审批","href":"../index/index.html"},{"mtitle":"退货入库审批单据","href":"../index/index.html"},{"mtitle":"售后审批","href":"../index/index.html"}
+			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../index/index.html"},{"mtitle":"备货采购合同审批","href":"../index/index.html"},{"mtitle":"运输合同审批","href":"../index/index.html"},{"mtitle":"加工仓储协议审批","href":"../index/index.html"},{"mtitle":"退货入库审批单据","href":"../index/index.html"},{"mtitle":"售后审批","href":"../index/index.html"}
 			 	]}
 			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../index/index.html"},{"mtitle":"风险保证金审核","href":"../index/index.html"},{"mtitle":"租赁分红审批","href":"../index/index.html"}
 			 	]}
@@ -83,7 +82,6 @@ $(function(){
 
 	]
 
-
 	var _menuStr=''
 	for(var i=0;i<menu_Data.length;i++){
 		var l=menu_Data[i].menuList.length;
@@ -114,44 +112,51 @@ $(function(){
 		
 	}
 	$(".menuConfig").html(_menuStr)
-	if(!IsPC()){ //手机端
-		var logo=$(".logo").clone(true);
-		var topRight=$(".topRight").clone(true);
-		$(".m_top").append(logo).append(topRight);
-		$("body").addClass("m_status")
-	}
+	//console.log(_menuStr)
 
-	$("body").on("mouseover",".menuhook",function(){
-		if(IsPC()){
-			var _ww=$(window).width()/2;
-			var _myL=$(this).offset().left;
-			var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
-			//console.log(_index)
 
-			if($(this).attr("datachild")>="4"){
-				if(_index>7){
-						$(this).find(".mDetail").css("left",-($(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true)))
-				}else{
-					$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
-				}
-				
-			}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
-				if(_myL>_ww){  //在屏幕右侧
-					_w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
-				}else{  //在屏幕左侧
-					_w=0;
-				}
-				
-				$(this).find(".mDetail").css("left",-_w)
-			}
-		}else{
-			$(this).find(".mDetail").css("left",0)
+
+
+
+	$(function(){
+		if(!IsPC()){ //手机端
+			var logo=$(".logo").clone(true);
+			var topRight=$(".topRight").clone(true);
+			$(".m_top").append(logo).append(topRight);
+			$("body").addClass("m_status")
 		}
-		
-		$(this).find(".mDetail").show();
-	}).on("mouseout",".menuhook",function(){
-		$(this).find(".mDetail").hide();
-	})
+
+		$("body").on("mouseover",".menuhook",function(){
+			if(IsPC()){
+				var _ww=$(window).width()/2;
+				var _myL=$(this).offset().left;
+				var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
+				//console.log(_index)
+
+				if($(this).attr("datachild")>="4"){
+					if(_index>7){
+							$(this).find(".mDetail").css("left",-($(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true)))
+					}else{
+						$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
+					}
+					
+				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
+					if(_myL>_ww){  //在屏幕右侧
+						_w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
+					}else{  //在屏幕左侧
+						_w=0;
+					}
+					
+					$(this).find(".mDetail").css("left",-_w)
+				}
+			}else{
+				$(this).find(".mDetail").css("left",0)
+			}
+			
+			$(this).find(".mDetail").show();
+		}).on("mouseout",".menuhook",function(){
+			$(this).find(".mDetail").hide();
+		})
 })
 
 
