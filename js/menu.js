@@ -87,7 +87,7 @@
 		var l=menu_Data[i].menuList.length;
 		if(l==1){   //只有一个菜单的情况下
 			_menuStr+='<span class="menuList menuhook" dataChild="1">'+
-				 '<span>'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont"><div class="mDList">'
+				 '<span>'+menu_Data[i].title+'</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
 			var _menuStrA=''
 			for(var a=0;a<menu_Data[i].menuList[0].smallM.length;a++){
 				_menuStrA+='<a class="mDListShow" href="'+menu_Data[i].menuList[0].smallM[a].href+'">'+menu_Data[i].menuList[0].smallM[a].mtitle+'</a>'
@@ -104,7 +104,7 @@
 				for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
 					_menuStrV+='<a class="mDListShow" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}
-				_menuStrD+=_menuStrV+'</div>'
+				_menuStrD+='<div class="mDListCont">'+_menuStrV+'</div></div>'
 			}
 					 
 			_menuStr+=_menuStrD+'</div></div></span>'
