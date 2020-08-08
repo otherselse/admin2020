@@ -20,11 +20,11 @@
 			 	]}
 			]
 		}
-		,{"title":"审批管理3",
+		,{"title":"物流管理",
 		 "menuList":[
-			 	{"bigM":"角色管理类3-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}			
+			 	{"bigM":"物流管理","smallM":[{"mtitle":"货权(入库)确认","href":"../trans/cargoRights.html"},{"mtitle":"出库确认","href":"../trans/warehouseOut.html"},{"mtitle":"自提确认","href":"../trans/selfRaising.html"},{"mtitle":"销售退货入库","href":"../trans/returnGoods.html"},{"mtitle":"库存盘点登记","href":"../trans/inventory.html"},{"mtitle":"单据打印","href":"../trans/print.html"},{"mtitle":"月结对账","href":"../trans/reconciliation.html"},{"mtitle":"物流报价确认","href":"../trans/offer.html"}
+			 	]}
+			
 
 			]
 		}

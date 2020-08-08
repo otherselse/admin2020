@@ -33,6 +33,16 @@ $(function(){
 		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
 		$(this).parents(".input-selSearch").find(".search-cont").hide();
 	})
+
+	//选择单选
+	$(".single").on("click", ".ui-option", function () {
+		$(this).addClass("on").siblings("button").removeClass("on");
+	})
+
+	//去掉浏览器默认的下拉选项
+	$("input[type='text']").each(function(){
+		$(this).attr("autocomplete","off");
+	})
 })
 
 
