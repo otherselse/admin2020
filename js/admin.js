@@ -17,6 +17,9 @@ $(function(){
 		}
 	})
 
+	//不可复制的功能
+	$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+
 	//搜索下拉
 	$("body").on("click", function () {
 		$(".search-cont").hide();
@@ -43,13 +46,37 @@ $(function(){
 	$("input[type='text']").each(function(){
 		$(this).attr("autocomplete","off");
 	})
+
+	//同时绑定多个
+	lay('.render-time').each(function(){
+	  laydate.render({
+	    elem: this
+	    ,trigger: 'click'
+	    , theme: 'lgblue'
+	  });
+	}); 
+
+	//提示
+	$(".showTip").find('[title]').qtip({
+		position: {
+			my: 'bottom center', //my:是指三角的位置
+			at: 'top center' //是在提示在组件的相对位置
+		},
+		style: {
+			classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+		}
+	});
+
+
 })
 
 
 //set left height
 function setHeight(){
 	var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;   //屏幕的高度
-	$(".leftBar").height(h);
+	var rh=$(".rightBar").outerHeight(true);
+	$(".leftBar").height((rh>h-76?rh:h-76)-20);
+
 }
 
 
