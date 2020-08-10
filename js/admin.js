@@ -18,7 +18,7 @@ $(function(){
 	})
 
 	//不可复制的功能
-	$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
 	//搜索下拉
 	$("body").on("click", function () {

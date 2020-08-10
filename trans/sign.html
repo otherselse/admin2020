@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>货权(入库)确认-物流管理-乐刚智能云系统</title>
+	<title>出库确认-物流管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	
 	
@@ -29,7 +29,7 @@
 		            <span class="dib pl5 pr5 ">/</span>
 		            物流管理
 		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">货权(入库)确认</span>
+		            <span class="g28">出库确认</span>
 		        </div>
 	        </div>
 			<div class="ui-content ovh minH">
@@ -42,27 +42,27 @@
 							</span>
 						</span>
 						<span class="pct75 dib f12">
-							入库类型：<div class="dib selectSingle  mr20">
-	                                    <a class="on" href="javscript:void(0)">转货</a>
+							运输类型：<div class="dib selectSingle  mr20">
+	                                    <a class="on" href="javscript:void(0)">运输</a>
 	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">成品运输</a>
+	                                    <a href="javscript:void(0)">短驳</a>
 	                                </div>
 	                        业务类型：<div class="dib selectSingle">
 	                                    <a class="on" href="javscript:void(0)">全部</a>
 	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">外贸</a>	                                    
+	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">现款业务</a>
+	                                     <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">客户单位备货业务</a>
 	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">款到卸货</a>
 	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">供应链业务</a>	                                    
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">客户单位任你押业务</a>
+	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">欠款业务</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">外贸</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">快速备业务</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">任你押业务</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">寄售业务</a>
 	                                </div>
 						</span>
 					</div>
@@ -80,20 +80,17 @@
 							</span>
 						</span>
 						<span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-						<span class="pct25 dib f12">单位名称：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
+						<span class="pct25 dib f12">&emsp;合同号：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
+						<span class="pct25 dib f12">提单号：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
+					</div>
+					<div class="mb10 f0">
+						<span class="pct25 dib f12">&emsp;&emsp;单位名称：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
 						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-					</div>
-					<div class="mb10 f0">
-						<span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;品名：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-						<span class="pct25 dib f12">&emsp;&emsp;规格：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-						<span class="pct25 dib f12">&emsp;&emsp;重量：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-						<span class="pct25 dib f12">&emsp;&emsp;仓库：<input type="text" class="ui-input pct60" placeholder="请输入"></span>
-					</div>
-					<div class="mb10 f0">
-						<span class="pct25 dib f12">入库申请时间：<span class="ui-input tc f0 pct60" data-type="time">
+						<span class="pct25 dib f12">提货时间：<span class="ui-input tc f0 pct60" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-					</span></span>
+					</span></span></span>
 					</div>
+					<div class="cl"><span class="ui-tip" data-type="blue">提单开具后，请物流及时跟进交货情况，并在七天内收回仓库出库码单和客户签收单原件完成出库确认！</span></div>
 					<div class="tc mt20">
 	                    <button type="button" class="ui-button mr10">查询</button>
 	                    <button type="button" class="ui-button " data-type="clear">清空</button>
@@ -105,14 +102,16 @@
 	                    <thead>
 	                        <tr>
 	                            <th width="5%">序号</th>
-	                            <th width="12%">入库申请时间</th>
+	                            <th width="12%">出库申请时间</th>
+	                            <th width="8%">订单号</th>
 	                            <th width="8%">金牌商家</th>
-	                            <th width="10%">入库类型</th>
-	                            <th width="10%">业务类型</th>
-	                            <th width="10%">申请编号</th>
-	                            <th width="10%">订单号</th>
-	                            <th width="10%">单位名称</th>
-	                            <th width="10%">操作</th>
+	                            <th width="8%">业务类型</th>
+	                            <th width="6%">区域</th>
+	                            <th width="8%">运输合同号</th>	                            
+	                            <th width="8%">提单号</th>
+	                            <th width="8%">提货时间</th>	                            
+	                            <th width="12%">签收单位</th>
+	                            <th width="5%">操作</th>
 	                            
 	                        </tr>
 	                    </thead>
@@ -120,27 +119,31 @@
 	                        <tr>
 	                            <td>1</td>
 	                            <td>2020-07-24 13:20:13</td>
-	                            <td><a href="javascript:void(0)" title="18911111888/【成都】">青丘白浅</a></td>
-	                            <td>转货权</td>
-	                            <td>快速备业务</td>
+	                            <td>60870</td>
+	                            <td><a href="javascript:void(0)" title="联系电话:14565545684">尹相春</a></td>
+	                            <td>欠款业务</td>
+	                            <td>上海</td>
+	                            <td>PPC(01)-19000534</td>
 	                            <td>PPC(01)-19000534</td>	                            
-	                            <td>46520</td>
-	                            <td>瓜子二手钢直卖网</td>
-	                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="small" onclick="showDiv_lrl(this)">重量核实</a></td>
+	                            <td>2020-07-24 13:20:13</td>
+	                            <td><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555">瓜子二手钢直卖网</td>
+	                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="small" onclick="showDiv_lrl(this)">申请确认</a></td>
 	                        </tr>
 	                        <tr>
 	                            <td>2</td>
 	                            <td>2020-07-24 13:20:13</td>
-	                            <td><a href="javascript:void(0)" title="18911111888/【成都】">青丘白浅</a></td>
-	                            <td>转货权</td>
-	                            <td>快速备业务</td>
+	                            <td>60870</td>
+	                            <td><a href="javascript:void(0)" title="联系电话:14565545684">尹相春</a></td>
+	                            <td>欠款业务</td>
+	                            <td>上海</td>
+	                            <td>PPC(01)-19000534</td>
 	                            <td>PPC(01)-19000534</td>	                            
-	                            <td>46520</td>
-	                            <td>瓜子二手钢直卖网</td>
-	                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="small" onclick="showDiv_lrl(this)">重量核实</a></td>
+	                            <td>2020-07-24 13:20:13</td>
+	                            <td><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555">瓜子二手钢直卖网</td>
+	                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="small" onclick="showDiv_lrl(this)">申请确认</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
-	                            <td colspan="9">
+	                            <td colspan="11">
 	                                <div class="pl20 pr20">
 	                                    <div class="ovh mb10 tl g28 f14 b">货物信息</div>
 	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
@@ -150,13 +153,15 @@
 	                                                <th width="10%">品名</th>
 	                                                <th width="10%">规格</th>
 	                                                <th width="8%">牌号</th>
-	                                                <th width="8%">数量</th>
-	                                                <th width="8%">重量(吨)</th>
-	                                                <th width="8%">盘盈重量(吨)</th>
-	                                                <th width="8%">计量方式</th>
-	                                                <th width="12%">捆包号</th>
-	                                                <th width="8%">钢厂</th>
 	                                                <th width="5%">仓库</th>
+	                                                <th width="8%">入库重量(吨)</th>
+	                                                <th width="8%">出库数量</th>
+	                                                <th width="8%">出库重量(吨)</th>
+	                                                <th width="8%">计量方式</th>
+	                                                <th width="8%">捆包号</th>
+	                                                <th width="8%">钢厂</th>
+	                                                <th width="8%">原始订单号</th>
+	                                                
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody class="ui-thover">
@@ -165,30 +170,31 @@
 	                                                <td>彩涂卷板</td>
 	                                                <td>11.000*800*C</td>
 	                                                <td>Dx58661</td>
+	                                                <td>聚方库</td>
 	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
 	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="1.6"></td>
-	                                                <td>2.001</td>
+	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
 	                                                <td>抄码</td>
 	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
 	                                                <td>兆顺</td>
-	                                                <td>聚方库</td>
+	                                                <td>1233</td>
 	                                            </tr>
 	                                        </tbody>
 	                                        <tfoot>
 	                                            <tr class="bgfa">
-	                                                <td colspan="4" >合计</td>
+	                                                <td colspan="6" >合计</td>
 	                                                <td>10</td>
 	                                                <td>4</td>
-	                                                <td colspan="5"></td>
+	                                                <td colspan="4"></td>
 	                                            </tr>
 	                                        </tfoot>
 	                                    </table>
-	                                    <div class="g28 f14 mt20 b tl mb10">附加费用</div>
+	                                    <div class="g28 f14 mt20 b tl mb10">出库信息</div>
 	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
 	                                        <thead>
 	                                            <tr>
-	                                                <th width="25%">序号</th>
-	                                                <th width="25%">品名</th>
+	                                                <th width="10%">序号</th>
+	                                                <td width="40%">苏J52862</td>
 	                                                <th width="25%">规格</th>
 	                                                <th width="25%">牌号</th>
 	                                            </tr>
@@ -206,97 +212,69 @@
 	                                    <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
 	                                        <tbody>
 	                                            <tr class="resource-table">
-	                                                <td class="tr vt bgfa" width="10%"><span class="pt5 dib">入库单据上传：</span></td>
+	                                                <td class="tr vt " width="10%"><span class="pt5 dib">入库单据上传：</span></td>
 	                                                <td width="90%">
 	                                                    <div class="pl5 pr5">
 	                                                    	<div class="pct80 l">
-	                                                    		<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高拍仪上传</button>
+	                                                    		<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
 	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 	                                                    		<div class="cl mt10">
 	                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
 	                                                    		</div>
 	                                                    	</div>
 	                                                    	<div class="r">
-	                                                    		<a href="##">入库单据模板 > </a>
+	                                                    		<a href="##">出库单据模板 > </a>
 	                                                    	</div>                                                    
 		                                                    <div class="pt5 cl">
-		                                                        <span class="ui-tip" data-type="normal">提示：1.需上传清晰可辨的第三方仓库转货权证明或入库证明，未转货权的必须上传供应商提单，直发货物可上传客户签收单！2.必须按仓库入库单据模板进行确认，其他单据无效，没有模板的必须上传盖章的发货单或者转货权单！</span>
+		                                                        <span class="ui-tip" data-type="normal">提示：1.只允许上传仓库出库码单，否则核查不通过。2.仓库单据必须按仓库出库单据模板进行确认，其他单据无效，没有模板的必须上传客户签收单模板</span>
 		                                                    </div>
 	                                                </div>
 
 	                                                </td>
-	                                            </tr>                                           
-	                                        </tbody>
-	                                    </table>
-										<div class="g28 f14 mt20 b tl mb10">现场附件上传</div>
-	                                    <table class="ui-table  f12 tl" width="100%">
-                                        	<tbody>
+	                                            </tr>
 	                                            <tr  clcass="resource-table">
-	                                                <td class="tr vt bgfa" width="10%">
-	                                                    <span>货物全景上传：</span>
-	                                                </td>
-	                                                <td width="90%">
-	                                                    <div class="pl5">
-	                                                    	<button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
-	                                                    	<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
-	                                                    </div>
-	                                                    <div class="mt10 pl5"> <a href="javascript:void(0)" title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">示例图片查看</a>
-	                                                        <span>提示：需有乐刚物流人员在场如示例照片进行拍摄，每张照片需有水印时间！</span>
-	                                                    </div>
-	                                                </td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                                <td class="tr vt bgfa">
-	                                                    <span> 货物近景上传：</span>
+	                                                <td class="tr vt" >
+	                                                    <span>客户签收单：</span>
 	                                                </td>
 	                                                <td>
-	                                                    <div class="pl5"> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
-	                                                    </div>
-	                                                    <div class="mt10 pl5"><a href="javascript:void(0)" title="<img src='../images/hwjj.jpg' width='150' height='250' ></a>">示例图片查看</a></div>
-	                                                </td>
-	                                            </tr>
-	                                            <tr  class="resource-table">
-	                                                <td class="tr vt bgfa">
-	                                                    <span> 原厂质保书上传：</span>
-	                                                </td>
-	                                                <td >
-	                                                    <div class="pl5 "> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
-	                                                    </div>
-	                                                    <div class="mt10 pl5"> 
-	                                                        <span>提示：除螺纹、中板、热轧等普材外均需上传原厂质保书，且质保书内容必须与货物标签保持一致！</span>
+	                                                    <div class="pl10">
+	                                                    	<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
+	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
+	                  	                                </div>
+	                  	                                <div class="cl mt10">
+	                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
+	                                                    		</div>
+	                                                    <div class="mt10 pl10">
+	                                                        <span class="ui-tip" data-type="normal">只允许上传客户签收单，提交的“签收时间” 必须与上传的签收单保持一致，否则核查不通过</span>
 	                                                    </div>
 	                                                </td>
 	                                            </tr>
-	                                            <tr class="resource-table">
-	                                                <td class="tr vt bgfa">
-	                                                    <span> 货物标签上传：</span>
+	                                            <tr  clcass="resource-table">
+	                                                <td class="tr vt bgfa" >
+	                                                    <span>入库单据：</span>
 	                                                </td>
 	                                                <td>
-	                                                    <div class="pl5"> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
-	                                                    </div>
-	                                                    <div class="mt10 pl5"> <a href="javascript:void(0)" title="<img src='../images/hwbq.jpg' width='250' height='155' ></a>">示例图片查看</a>
-	                                                        <span>提示：提示：请上传合同对应所有货物的标签照片，每张照片需有水印时间！</span>
-	                                                    </div>
-	                                                </td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                                <td class="tr vt bgfa">
-	                                                    <span> 第三方检测结果：</span>
-	                                                </td>
-	                                                <td >
-	                                                    <div class="pl5"> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
-	                                                    </div>
-	                                                    <div class="mt10 pl5">
-	                                                        <span>提示：特殊材料必须上传第三方检测结果，如：不锈钢及铝卷、铜卷等有色金属材料！</span>
+	                                                    <div class="pl10">
+	                                                    	<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
+	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
+	                	                                </div>
+	                	                                <div class="cl mt10">
+	                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
+	                                                    		</div>
+	                                                    <div class="mt10 pl10">
+	                                                        <span class="ui-tip" data-type="normal">修改入库重量，必须上传相关仓库单据，否则核查不通过</span>
 	                                                    </div>
 	                                                </td>
-	                                            </tr>
+	                                            </tr>                                            
 	                                        </tbody>
 	                                    </table>
+										<div class="g28 f14 mt20 b tl mb10">签收信息</div>
+	                                    
 
 	                                    <div class="tc  mt20 mb20">
-	                                    	<button type="button" class="ui-button mr10" >确认入库</button>
-	                                    	<button type="button" class="ui-button" data-type="clear">全部退回</button>
+	                                    	<button type="button" class="ui-button mr10" >确认出库</button>
+	                                    	<button type="button" class="ui-button mr10" data-type="clear">退回</button>
+	                                    	<button type="button" class="ui-button" data-type="clear">拒签</button>
 	                                    </div>
 
 	                                </div>
@@ -324,7 +302,7 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script>
 		$(function(){
-			$(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
 
