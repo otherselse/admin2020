@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>销售退货入库-物流管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            物流管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">销售退货入库</span>
+		        </div>
+	        </div>
+			<div class="ui-content ovh minH">
+				<div class="p20">
+					<div class="cl mb30 f12 ">
+	                    选项：<div class="dib selectSingle mr20">
+	                                    <a class="on" href="javscript:void(0)">未确认</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">已经确认</a>	                                    
+	                                </div>
+	                    订单号：<input type="text" class="ui-input pct16 mr20" placeholder="请输入">
+	                    单位名称：<input type="text" class="ui-input pct16 mr20" placeholder="请输入">
+	                    <button type="button" class="ui-button mr10">查询</button>
+	                    <button type="button" class="ui-button " data-type="clear">清空</button>
+					</div>
+	                <!-- search end -->
+					<div class="lgui-table-min">
+					<div class="lgui-table-box">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+								<thead>
+			                        <tr>
+			                            <th width="5%">序号</th>
+			                            <th width="10%">类型</th>
+			                            <th width="12%">申请编号</th>
+			                            <th width="10%">订单号</th>
+			                            <th width="15%">单位名称</th>
+			                            <th width="10%">金牌商家</th>
+			                            <th width="10%">退货入库时间</th>
+			                            <th width="10%">重量</th>
+			                            <th width="10%">退货确认人</th>
+			                            <th width="8%">操作</th>	                            
+			                        </tr>
+			                    </thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+			                <table class="ui-table tc f12 " width="100%">			                    
+			                    <tbody class="ui-thover">
+			                    	 <tr>
+			                            <td width="5%">1</td>
+			                            <td width="10%">销售退货入库申请</td>
+			                            <td width="12%">PPC(01)-19000534</td>
+			                            <td width="10%">60646</td>
+			                            <td width="15%">王至于有限公司</td>
+			                            <td width="10%">之华</td>
+			                            <td width="10%">2020-11-01 11:11:11</td>
+			                            <td width="10%">1.300</td>
+			                            <td width="10%">之华</td>
+			                            <td width="8%"><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                        <tr class="hideTr dn">
+			                            <td colspan="10">
+			                                <div class="pl20 pr20">
+				                                    <table class="ui-table tc f12 auto  showShadow " width="100%">
+			                                        <thead>
+			                                            <tr>
+			                                                <th width="10%">品名</th>
+			                                                <th width="10%">规格</th>
+			                                                <th width="10%">牌号</th>
+			                                                <th width="10%">数量</th>
+			                                                <th width="10%">重量(吨)</th>
+			                                                <th width="10%">计量方式</th>
+			                                                <th width="10%">捆包号</th>
+			                                                <th width="10%">钢厂</th>
+			                                                <th width="10%">钢厂</th>
+			                                                <th width="10%">仓库</th>	                                                
+			                                            </tr>
+			                                        </thead>
+			                                        <tbody class="ui-thover">
+			                                            <tr>
+			                                                <td>1</td>
+			                                                <td>彩涂卷板</td>
+			                                                <td>11.000*800*C</td>
+			                                                <td>Dx58661</td>
+			                                                <td>1</td>
+			                                                <td>1.233</td>
+			                                                <td>过磅</td>
+			                                                <td>JS22</td>
+			                                                <td>宝钢</td>
+			                                                <td>聚方库</td>
+			                                            </tr>
+			                                        </tbody>
+			                                        <tfoot>
+			                                        	<tr class="bgfa ">
+			                                        		<td>附件单据</td>
+			                                        		<td colspan="9" class="tl"><div class="pl10"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div></td>
+			                                        	</tr>
+			                                        </tfoot>
+			                                    </table>
+			                                   
+			                                    
+			                                </div>
+			                            </td>
+			                        </tr><!-- 隐藏内容end -->
+			                         <tr>
+			                           <td>2</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="small" onclick="showDiv_lrl1(this)">确认</a></td>
+			                        </tr>
+			                        <tr class="hideTr dn">
+			                            <td colspan="10">
+			                                <div class="pl20 pr20">
+												<table class="ui-table tc f12 auto  showShadow " width="100%">
+			                                        <thead>
+			                                            <tr>
+			                                                <th width="10%">品名</th>
+			                                                <th width="10%">规格</th>
+			                                                <th width="10%">牌号</th>
+			                                                <th width="10%">数量</th>
+			                                                <th width="10%">重量(吨)</th>
+			                                                <th width="10%">计量方式</th>
+			                                                <th width="10%">捆包号</th>
+			                                                <th width="10%">钢厂</th>
+			                                                <th width="10%">钢厂</th>
+			                                                <th width="10%">仓库</th>	                                                
+			                                            </tr>
+			                                        </thead>
+			                                        <tbody class="ui-thover">
+			                                            <tr>
+			                                                <td>1</td>
+			                                                <td>彩涂卷板</td>
+			                                                <td>11.000*800*C</td>
+			                                                <td>Dx58661</td>
+			                                                <td>1</td>
+			                                                <td>1.233</td>
+			                                                <td>过磅</td>
+			                                                <td>JS22</td>
+			                                                <td>宝钢</td>
+			                                                <td>聚方库</td>
+			                                            </tr>
+			                                        </tbody>
+			                                    </table>
+												<div class="g28 f14 mt20 b tl mb10">单据上传</div>
+			                                    <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
+			                                        <tbody>
+			                                            <tr class="resource-table">
+			                                                <td class="vt bgfa" width="10%"><span class="pt5 dib pl10">附件上传：</span></td>
+			                                                <td width="90%">
+			                                                    <div class="pl10 pr5">
+			                                                    	<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高拍仪上传</button>
+			                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
+			                                                    		<div class="cl mt10">
+			                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
+			                                                    		</div>
+			                                                    	                                                  
+				                                                    <div class="pt5 cl">
+				                                                        <span class="ui-tip" data-type="normal">提示：需上传仓库的单据！</span>
+				                                                    </div>
+			                                                </div>
+
+			                                                </td>
+			                                            </tr>                                           
+			                                        </tbody>
+			                                    </table>
+
+			                                    <div class="tc  mt20 mb20">
+			                                    	<button type="button" class="ui-button">确认入库</button>
+			                                    </div>
+			                                    
+			                                </div>
+			                            </td>
+			                        </tr><!-- 隐藏内容end -->
+			                         <tr>
+			                            <td>1</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                         <tr>
+			                            <td>1</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                         <tr>
+			                            <td>1</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                         <tr>
+			                            <td>1</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                         <tr>
+			                            <td>1</td>
+			                            <td>销售退货入库申请</td>
+			                            <td>PPC(01)-19000534</td>
+			                            <td>60646</td>
+			                            <td>王至于有限公司</td>
+			                            <td>之华</td>
+			                            <td>2020-11-01 11:11:11</td>
+			                            <td>1.300</td>
+			                            <td>之华</td>
+			                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+			                <!-- table end -->
+			            </div>
+				</div><!-- lgui-table-box end -->
+			</div>
+
+				<script type="text/javascript" src="../js/pagelist.js"></script>
+
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/table/lgBaseFuncBut.js"></script>
+	<script>
+		$(function(){
+			$(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			lgScrollTable.fixHeader(); //默认".lgui-table-box", ".lgui-table-header", ".lgui-table-body"固定滚动
+
+		})
+
+
+		function showDiv_lrl(obj){
+			if($(obj).parents("tr").next(".hideTr").css("display")=="none"){
+                $(obj).parents("tr").next(".hideTr").show();
+                $(obj).text("收起").addClass("down");
+			}else{
+				$(obj).parents("tr").next(".hideTr").hide();
+                $(obj).text("查看").removeClass("down");
+			}
+		}
+
+		function showDiv_lrl1(obj){
+			if($(obj).parents("tr").next(".hideTr").css("display")=="none"){
+                $(obj).parents("tr").next(".hideTr").show();
+                $(obj).text("收起").addClass("down");
+			}else{
+				$(obj).parents("tr").next(".hideTr").hide();
+                $(obj).text("审核").removeClass("down");
+			}
+		}
+
+
+		function showdiv(obj){
+			$(obj).parents(".hideTr").find('.httkxs').toggle();
+		}
+		
+		
+	</script>
+</body>
+</html>

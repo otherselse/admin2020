@@ -191,20 +191,12 @@
 	                                    </table>
 	                                    <div class="g28 f14 mt20 b tl mb10">出库信息</div>
 	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
-	                                        <thead>
-	                                            <tr>
-	                                                <th width="10%">序号</th>
-	                                                <td width="40%">苏J52862</td>
-	                                                <th width="25%">规格</th>
-	                                                <th width="25%">牌号</th>
-	                                            </tr>
-	                                        </thead>
-	                                        <tbody class="ui-thover">
-	                                            <tr>
-	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
-	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="1.6"></td>
-	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
-	                                                <td><input type="text" class="ui-input tc pct80" data-type="small" value="6"></td>
+	              	                         <tbody>
+	                                            <tr class="resource-table">
+	                                            	<td class="title" width="10%">车号：</td>
+	                                            	<td width="40%" class="cont">沪c42184</span></td>
+	                                            	<td class="title" width="10%">身份证号：</td>
+	                                            	<td width="40%" class="cont">123456789012345678</td>
 	                                            </tr>
 	                                        </tbody>
 	                                    </table>
@@ -212,9 +204,9 @@
 	                                    <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
 	                                        <tbody>
 	                                            <tr class="resource-table">
-	                                                <td class="tr vt " width="10%"><span class="pt5 dib">入库单据上传：</span></td>
+	                                                <td class="bgfa vt " width="10%"><span class="pt5 dib pl10">入库单据上传：</span></td>
 	                                                <td width="90%">
-	                                                    <div class="pl5 pr5">
+	                                                    <div class="pl10 pr5">
 	                                                    	<div class="pct80 l">
 	                                                    		<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
 	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
@@ -233,15 +225,15 @@
 	                                                </td>
 	                                            </tr>
 	                                            <tr  clcass="resource-table">
-	                                                <td class="tr vt" >
-	                                                    <span>客户签收单：</span>
+	                                                <td class="bgfa vt" >
+	                                                    <span class="pl10">客户签收单：</span>
 	                                                </td>
 	                                                <td>
 	                                                    <div class="pl10">
 	                                                    	<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
 	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 	                  	                                </div>
-	                  	                                <div class="cl mt10">
+	                  	                                <div class="cl mt10 pl10">
 	                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
 	                                                    		</div>
 	                                                    <div class="mt10 pl10">
@@ -250,15 +242,15 @@
 	                                                </td>
 	                                            </tr>
 	                                            <tr  clcass="resource-table">
-	                                                <td class="tr vt bgfa" >
-	                                                    <span>入库单据：</span>
+	                                                <td class=" vt bgfa" >
+	                                                    <span class="pl10">入库单据：</span>
 	                                                </td>
 	                                                <td>
 	                                                    <div class="pl10">
 	                                                    	<button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">高清仪上传</button>
 	                                                    		<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 	                	                                </div>
-	                	                                <div class="cl mt10">
+	                	                                <div class="cl mt10 pl10">
 	                                                    			<span class="ui-files mr5  vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><i class="icon-sdel goldIcon vm ml5"></i></span>
 	                                                    		</div>
 	                                                    <div class="mt10 pl10">
@@ -269,6 +261,16 @@
 	                                        </tbody>
 	                                    </table>
 										<div class="g28 f14 mt20 b tl mb10">签收信息</div>
+	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+	              	                         <tbody>
+	                                            <tr class="resource-table">
+	                                            	<td class="title" width="10%">签收人：</td>
+	                                            	<td width="40%" class="cont"><input type="text" class="ui-input pct50 bd_none" placeholder="请输入"></td>
+	                                            	<td class="title" width="10%">身份证号：</td>
+	                                            	<td width="40%" class="cont"><span class="ui-input pct50 bd_none" data-type="time"><input type="text" placeholder="请选择时间" readonly="" class="render-time" ></span></td>
+	                                            </tr>
+	                                        </tbody>
+	                                    </table>
 	                                    
 
 	                                    <div class="tc  mt20 mb20">
@@ -313,7 +315,7 @@
                 $(obj).text("收起").addClass("down");
 			}else{
 				$(obj).parents("tr").next(".hideTr").hide();
-                $(obj).text("重量核实").removeClass("down");
+                $(obj).text("申请确认").removeClass("down");
 			}
 		}
 		

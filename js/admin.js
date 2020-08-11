@@ -47,6 +47,13 @@ $(function(){
 		$(this).attr("autocomplete","off");
 	})
 
+
+	//radio点选
+	$("body").on("click", ".ui-radio", function () {
+		$(this).parents(".radio").find(".ui-radio").removeClass("on");
+		$(this).addClass("on")
+	})
+
 	//同时绑定多个
 	lay('.render-time').each(function(){
 	  laydate.render({

@@ -22,7 +22,7 @@
 		}
 		,{"title":"物流管理",
 		 "menuList":[
-			 	{"bigM":"物流管理","smallM":[{"mtitle":"货权(入库)确认","href":"../trans/cargoRights.html"},{"mtitle":"出库确认","href":"../trans/sign.html"},{"mtitle":"自提确认","href":"../trans/selfRaising.html"},{"mtitle":"销售退货入库","href":"../trans/returnGoods.html"},{"mtitle":"库存盘点登记","href":"../trans/inventory.html"},{"mtitle":"单据打印","href":"../trans/print.html"},{"mtitle":"月结对账","href":"../trans/reconciliation.html"},{"mtitle":"物流报价确认","href":"../trans/offer.html"}
+			 	{"bigM":"物流管理","smallM":[{"mtitle":"货权(入库)确认","href":"../trans/cargoRights.html"},{"mtitle":"出库确认","href":"../trans/sign.html"},{"mtitle":"自提确认","href":"../trans/pick.html"},{"mtitle":"销售退货入库","href":"../trans/saleBack.html"},{"mtitle":"库存盘点登记","href":"../trans/stockCheckList.html"},{"mtitle":"单据打印","href":"../trans/printMain.html"},{"mtitle":"月结对账","href":"../trans/monthView.html"},{"mtitle":"物流报价确认","href":"../trans/quoteCheck.html"}
 			 	]}
 			
 

@@ -8,7 +8,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .g80{color:#808080;}
 .gga{color: #9A9A9A}
 .gd9{color:#D9D9D9}
-.topBar{height:76px;background:url(../images/index/bg.png); min-width:1440px;background-size:100%;font-size: 0;padding:0 2%;box-sizing: border-box;}
+.topBar{height:76px;background:url(../images/index/bg.png); background-size:100%;font-size: 0;padding:0 2%;box-sizing: border-box;}
 .logo{display: inline-block;font-size: 16px;line-height: 76px;float: left}
 .logoSvg svg{width: 133px;height: 56px;display: inline-block;vertical-align: middle;}
 .topLogo{width: 32px;min-height: 34px;margin-top:-2px;}
@@ -24,6 +24,9 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .tipCloseIcon{width: 20px;height: 35px;background-position: -215px -8px;}
 .tipCloseIcon:hover{-webkit-filter: brightness(70%); filter: brightness(70%);}
 
+
+.lgui-table-header.fixed{position: fixed;top:0;z-index: 9}
+.lgui-table-min{overflow-x: auto;}
 
 .selectSingle a{color: #808080;display: inline-block;}
 .selectSingle a:hover{color: #1365e8;}
@@ -52,10 +55,19 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     border-bottom: 1px solid #cccc;
 }
 
+.ui-input.bd_none{border:0;}
 .ui-button.w86{width: 86px;min-width: 86px}
 .ui-button.w120{width: 120px;min-width: 120px}
 .link-up.ui-button{background-image:url(../images/upIcon.png);background-position:right;background-repeat: no-repeat;}
 .link-up.down.ui-button{background-image:url(../images/downIcon.png);background-position:right;background-repeat: no-repeat;}
+
+.pct16{width: 16%}
+
+.resource-table .title{background: #FAFAFA;text-align: left;padding-left: 10px;}
+.resource-table .cont{text-align: left;padding-left: 10px;color: #282828}
+
+.m1440 .rightBar{min-width: 1240px}
+.m1440 .topBar{min-width: 1440px}
 
 /*pageWrap*/
 .pageWrap{margin: 20px auto 0;text-align: center;}
@@ -123,11 +135,13 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 
 
 /*bLeftBar 没有左侧菜单*/
+
 .bLeftBar .leftBar{display: none;}
 .bLeftBar .rightBar{left:0;min-width: 1440px;}
 
 .m_first{width:120px}
 /*m_status 状态表示是手机状态下*/
+.m_status .topBar{min-width: 1440px;}
 .m_status .f12{font-size: 16px !important}
 .m_status .f14{font-size: 16px !important}
 .m_status .nav{font-size:16px !important;}
