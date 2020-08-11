@@ -74,9 +74,25 @@ $(function(){
 		}
 	});
 
+	//判断浏览器在1440以下
+	getWidth()
+	$(window).resize(function(){
+			getWidth();
+	})
+
 
 })
 
+
+function getWidth(){
+	if($(window).width()<1440){
+		$("body").addClass("bLeftBar");
+		$(".setLeftBar").removeClass("on");
+	}else{
+		$("body").removeClass("bLeftBar");
+		$(".setLeftBar").addClass("on");
+	}
+}
 
 //set left height
 function setHeight(){

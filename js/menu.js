@@ -124,7 +124,12 @@
 			var topRight=$(".topRight").clone(true);
 			$(".m_top").append(logo).append(topRight);
 			$("body").addClass("m_status")
+		}else{
+			$("body").addClass("pc_status")
 		}
+
+
+		
 
 		$("body").on("mouseover",".menuhook",function(){
 			if(IsPC()){
