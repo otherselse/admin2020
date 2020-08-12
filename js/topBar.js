@@ -23,7 +23,7 @@
 	'		<span class="dib ml5 mr5 gbd">|</span>智能云系统'+
 	'	</span>'+
 	'	<span class="menu">'+
-	'		<a class="menuList on" href="../index/index.html">首页</a>'+
+	'		<a class="menuList on" href="../index/index.html"><span class="menuText">首页</span></a>'+
 	'		<span class="menuConfig trans"></span>	'+		
 	'	</span>'+
 	'	<span class="topRight">'+
