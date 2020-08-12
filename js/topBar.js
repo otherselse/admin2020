@@ -1,7 +1,7 @@
 (function(){
 	var str1='<div class="m_top"></div>'+
 	'<div class="topBar tc">'+
-	'	<span class="logo f08">'+
+	'	<span class="logo wh">'+
 	'	<span class="logoSvg"><svg width="151px" height="56px" viewBox="0 0 151 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'+
     '<!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->'+
 			    '<title>编组 3</title>'+
@@ -20,7 +20,7 @@
 	'		        </g>'+
 	'		    </g>'+
 	'		</svg></span>'+
-	'		<span class="dib ml5 mr5 gbd">|</span><span class="my_name">乐刚</span>智能云系统'+
+	'		<span class="dib ml5 mr5 gbd">|</span>智能云系统'+
 	'	</span>'+
 	'	<span class="menu">'+
 	'		<a class="menuList on" href="../index/index.html">首页</a>'+
@@ -28,9 +28,9 @@
 	'	</span>'+
 	'	<span class="topRight">'+
 	'		<a class="topLogoCont vm" href="##" ><img  src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></a>'+
-	'		<a href="##" class="blue ml5 my_name">hi,钢铁大王</a>'+
+	'		<a href="##" class="wh ml5 my_name">hi,钢铁大王</a>'+
 	'		<span class="dib mr5 ml5 gbd">|</span>'+
-	'		<a href="##" class="admIcon iconAlumni vm"></a>'+
+	'		<a href="##" class="wh">通讯录</a>'+
 	'		<span class="dib mr5 ml5 gbd">|</span>'+
 	'		<a href="##" class="admIcon iconExit vm"></a>'+
 	'	</span>'+
