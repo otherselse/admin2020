@@ -123,5 +123,12 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/menu.js?v=1"></script>
+	<script type="text/javascript">
+		$(function(){
+			if(($(".indexContItem").length%2)==1){
+				$(".indexContItem").eq($(".indexContItem").length-1).width("100%")
+			}
+		})
+	</script>
 </body>
 </html>

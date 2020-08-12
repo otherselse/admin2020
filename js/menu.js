@@ -160,7 +160,7 @@
 			
 			$(this).find(".mDetail").show();
 		}).on("mouseout",".menuhook",function(){
-			$(this).find(".mDetail").hide();
+			//$(this).find(".mDetail").hide();
 		})
 })
 
