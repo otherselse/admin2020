@@ -11,10 +11,12 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("body").addClass("bLeftBar");
+		
 		}else{
 			$(this).addClass("on");
-			$("body").removeClass("bLeftBar");
+			$("body").removeClass("bLeftBar");	
 		}
+		getHeader()	
 	})
 
 	//不可复制的功能
@@ -75,13 +77,12 @@ $(function(){
 	});
 
 	//判断浏览器在1440以下
-	getWidth()
+	getWidth();
 	$(window).resize(function(){
-			getWidth();
+		getWidth();
 	})
-
-
 })
+
 
 
 function getWidth(){
@@ -89,9 +90,52 @@ function getWidth(){
 		$("body").addClass("bLeftBar");
 		$(".setLeftBar").removeClass("on");
 	}else{
-		$("body").removeClass("bLeftBar");
-		$(".setLeftBar").addClass("on");
+		$("body").removeClass("bLeftBar");		
+		$(".setLeftBar").addClass("on");			
 	}
+
+	getHeader()
+	getScroll()	
+
+}
+
+function getHeader(){		
+	if($("body").hasClass("fixtab")){
+		if($(".leftBar").css("display")=="block"){
+			if($(window).width()>=1280){
+				$(".lgui-table-header").width($(window).width()-300);
+			}			
+		}else{
+			if($(window).width()>=1280){
+				$(".lgui-table-header").width($(window).width()-100);
+			}
+			
+		}
+	}
+
+}
+
+function getScroll(){
+	if($("body").hasClass("fixtab")){
+		var defaultHeight=$(".lgui-table-header").height();
+		$(window).scroll(function(){
+			var s=$(window).scrollTop();
+			var h=$(".lgui-table-box").offset().top;
+			if(s>=h){
+				if($(window).width()>=1280){
+					$(".lgui-table-header").addClass("fixed");
+					$(".lgui-table-body").css("padding-top",defaultHeight);
+				}			
+			}else{
+				if($(window).width()>=1280){
+					$(".lgui-table-header").removeClass("fixed");
+					$(".lgui-table-body").removeAttr("style");
+				}	
+				
+			}
+		})
+	}
+	
 }
 
 //set left height
