@@ -57,16 +57,20 @@ $(function(){
 	})
 
 	//同时绑定多个
-	lay('.render-time').each(function(){
-	  laydate.render({
-	    elem: this
-	    ,trigger: 'click'
-	    , theme: 'lgblue'
-	  });
-	}); 
+	if($('.render-time').length>0){
+		lay('.render-time').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		  });
+		}); 
+	}
+	
 
 	//提示
-	$(".showTip").find('[title]').qtip({
+	if($(".showTip").length>0){
+		$(".showTip").find('[title]').qtip({
 		position: {
 			my: 'bottom center', //my:是指三角的位置
 			at: 'top center' //是在提示在组件的相对位置
@@ -75,6 +79,8 @@ $(function(){
 			classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
 		}
 	});
+	}
+	
 
 	//判断浏览器在1440以下
 	getWidth();
