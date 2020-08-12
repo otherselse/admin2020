@@ -81,9 +81,10 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 3px 0 0;position: relative;box-sizing: border-box;}
 .menuList.on{background: #2172F5;color:#fff;}
 .menuList:hover{background: #2172F5;}
-.menuList:before{position:absolute;width:100%;height:100%;content:'';color:#fff;}
+.menuList:before{position:absolute;width:100%;height:100%;content:'';color:#fff;left:0;}
 .menuList:hover:before{background:url(../images/index/lamp.png) center bottom  no-repeat;animation: breath 2s infinite ease-in-out alternate;-webkit-animation: breath 2s infinite ease-in-out alternate;-ms-animation: breath 2s infinite ease-in-out alternate;-moz-animation: breath 2s infinite ease-in-out alternate;}
 .menuText{position: relative;width:100%;display: inline-block;}
+.menuList:hover .menuText{color:#fff;}
 */@keyframes breath {
   0% {opacity: .2}
   70% {opacity: 1}
