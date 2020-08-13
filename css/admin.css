@@ -28,10 +28,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .lgui-table-header.fixed{position: fixed;top:0;z-index: 9}
 .lgui-table-min{overflow-x: auto;}
 
-.m1440 .rightBar{min-width: 1240px}
-.m1440 .topBar{min-width: 1440px}
-
-
+.minW .topBar{min-width: 1280px}
 
 .selectSingle a{color: #808080;display: inline-block;}
 .selectSingle a:hover{color: #1365e8;}
@@ -125,7 +122,7 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .noticeTip{height:37px;background:#FFF4F4;border:1px solid #EBD3D3;border-radius:3px;box-sizing: border-box;line-height: 37px;color: #FB2020}
 
 /*index*/
-.indexContent{padding:30px;overflow:hidden;box-sizing: border-box;min-width: 1440px;}
+.indexContent{padding:30px;overflow:hidden;box-sizing: border-box;min-width: 1280px;}
 .indexCont{overflow: hidden;}
 .indexContItem{height:322px;background:#fff;box-shadow:10px 0px 25px 0px rgba(238,241,246,1);border-radius:6px;width: 49.25%;margin-right:1.5%;float:left;margin-bottom: 20px}
 .indexContItem:nth-of-type(2n){margin-right: 0}
@@ -140,11 +137,11 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 /*bLeftBar 没有左侧菜单*/
 
 .bLeftBar .leftBar{display: none;}
-.bLeftBar .rightBar{left:0;min-width: 1440px;}
+.bLeftBar .rightBar{left:0;min-width: 1280px;}
 
 .m_first{width:120px}
 /*m_status 状态表示是手机状态下*/
-.m_status .topBar{min-width: 1440px;}
+.m_status .topBar{min-width: 1280px;}
 .m_status .f12{font-size: 16px !important}
 .m_status .f14{font-size: 16px !important}
 .m_status .nav{font-size:16px !important;}
@@ -155,20 +152,24 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
 .m_status .mDList{font-size: 20px;width:270px;margin-right: 0}
 .m_status .m_first{width:150px}
 .m_status .mDetailCont{line-height: 20px}
-.m_status .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 1440px;box-sizing: border-box;padding:0 20px;}
+.m_status .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 1280px;box-sizing: border-box;padding:0 20px;}
 .m_status .menuList{margin-right: 15px}
 .m_status .topBar.tc{text-align: left}
 .m_status .leftBar{display: none}
-.m_status .rightBar{position: inherit;min-width: 1440px;}
+.m_status .rightBar{position: inherit;min-width: 1280px;}
 .m_status .setLeftBar{display: none}
 .m_status .m_dn{display: none}
 .m_status .indexContItem{width: 100%;margin-right: 0}
 .m_status .mDListTitle{display: inline-block;width:30%;vertical-align: top;margin-top:8px;}
 .m_status .mDListCont{display: inline-block;width:68%;vertical-align: top;}
-
-
-/*pc 并且小于 1440px*/
-@media (max-width: 1440px) {
-	/*.pc_status .*/
+.m_status .m-tabLimitSCroll .ui-table {min-width: 1400px;}
+.m_status .m-tabLimitSCroll {
+    overflow-x: auto;
 }
 
+/*pc 并且小于 1280px*/
+
+
+@media (max-width: 1380px) {
+	.pc_status .my_name{display: none}
+}
