@@ -82,7 +82,8 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 /*menu*/
 .menu{line-height: 75px;display:inline-block;box-sizing: border-box;font-size: 16px}
-.menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 3px 0 0;position: relative;box-sizing: border-box;}
+.menuList{display: inline-block;color: #fff;padding:0 9px;margin:0 8px 0 0;position: relative;box-sizing: border-box;}
+.menuList:last-child{margin-right: 0}
 .menuList.on{background: #2172F5;color:#fff;}
 .menuList:hover{background: #2172F5;}
 .menuList:before{position:absolute;width:100%;height:100%;content:'';color:#fff;left:0;}
@@ -119,7 +120,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 /*bar*/
 .leftBar{width: 200px;box-shadow:10px 17px 20px 0px #EEF1F6;position:absolute;left:0;bottom:0;background:#FAFAFB;top:76px;transition: all 0.5s;-webkit-transition: all 0.5s;overflow-y: auto;padding-top:20px;}
 
-.menuItem{color:#282828;margin:0px 0 10px 30px;display: inline-block;}
+.menuItem{color:#282828;margin:0px 0 10px 20px;display: inline-block;}
 .menuItemText{display: inline-block;min-width: 100px;}
 .smenu{display: none}
 .open > .smenu{display: block;}
@@ -127,7 +128,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 .imenu-up{ width: 16px;height: 14px;background-position:-118px -18px;opacity: 0.4;filter:alpha(opacity=40);}
 .open .imenu-up{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);opacity: 1;filter:alpha(opacity=100);}
-.smlist{display: block;line-height: 40px;height: 40px;padding-left:50px;color:#282828;position: relative;}
+.smlist{display: block;line-height: 40px;height: 40px;padding-left:40px;color:#282828;position: relative;}
 .smlist.on{background:#d9e8ff;color:#1365E8;}
 .smlist.on:before{content:'';right:0;width: 4px;height: 40px;background:#3A9EFF;top:0;position: absolute;}
 .mulfolder{padding-bottom:20px;}
@@ -205,12 +206,14 @@ a.wh:hover{color:#fff;text-decoration: underline;}
  .m_pct9{width: 9%}
 }
 
-@media only screen and (max-width: 1440px) and (min-width: 1100px) {
-	.topBar{padding:0 0.5%;}
+
+
+@media only screen and (max-width: 1460px) and (min-width: 1100px) {
+	.topBar{padding:0 1%;}
 	.logoSvg svg{width: 120px;height: 50px;}
 	.logo{font-size: 18px}
 	.my_name{display: none}
-	.menuList{padding:0 3px;}
+	.menuList{padding:0 8px;}
 	.pct69{width: 60%}
 	.m_pct31{width: 35%}
 	.m_pct50{width: 50%}

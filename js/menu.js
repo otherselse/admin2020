@@ -144,7 +144,7 @@
 					
 				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
 					if(_myL>_ww){  //在屏幕右侧
-						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
+						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth();
 					}else{  //在屏幕左侧
 						var _w=0;
 					}
@@ -152,10 +152,14 @@
 					$(this).find(".mDetail").css("left",-_w)
 				}
 			}else{
-				
+				var _w=0
 				if(_myL>_ww){  //在屏幕右侧
-						var _w=0
-						_w=250-$(this).outerWidth(true);
+						if($(this).attr("datachild")>1){
+							_w=250-$(this).outerWidth();
+						}else{
+							_w=180-$(this).outerWidth();
+						}
+						
 					}else{  //在屏幕左侧
 						_w=0;
 				}
