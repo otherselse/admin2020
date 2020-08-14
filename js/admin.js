@@ -101,6 +101,38 @@ $(function(){
 	$(window).resize(function(){
 		getWidth();
 	})
+
+	//排序
+	$("body").on("click", ".sort-list", function () {
+		if ($(this).find("i").hasClass("down")) {
+			$(this).find("i").removeClass("down").addClass("up");
+		} else {
+			$(this).find("i").removeClass("up").addClass("down");
+		}
+	})
+
+	//tipclick 点击出现数据段
+	$('.tipclick').qtip({
+		show: { event: 'click' },
+		hide: 'unfocus',
+		content: {
+			text: function (event, api) {
+				return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+			}
+		},
+		position: {
+			viewport: $(window)
+		},
+		style: {
+			classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+		}
+	});
+	$("body").on("click", "#hideTip", function () {
+		$(".qtip").hide();
+	})
+
+	
+
 })
 
 
