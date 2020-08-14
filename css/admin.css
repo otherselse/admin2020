@@ -188,12 +188,41 @@ html,body{background: #F1F3F7;font-family: PingFang SC,Hiragino Sans GB,Microsof
     overflow-x: auto;
 }
 
-/*pc 并且小于 1280px*/
-
+/* login */
+.login_box{margin-top: 80px;box-sizing: border-box;}
 .login_l,.login_r{height: 100%;}
 .login_l{background: url('../images/login/BG.jpg') no-repeat top center;background-size: auto 100%;}
-.login_r>div{height: 100%;box-sizing: border-box;}
 .login_logo{width: 200px;height: 74px;background: url('../images/login/logo.png') no-repeat;display: inline-block;}
+.login_line{height: 50px;width: 1px;display: inline-block;margin-left:16px;background: #d9d9d9;margin-right: 15px;vertical-align: super;}
+.login_txt{display: inline-block;height: 74px;line-height: 74px;vertical-align: bottom;color: #282828;}
+.login_input .ui-input{width: 100%;height: 46px;line-height: 46px;}
+.ui-input[data-type='logo'] >input {border: 0;outline: 0;height: 46px;line-height: 46px;vertical-align: text-bottom;height: 31px;width: 100%;box-sizing: border-box;padding-left: 30px;}
+.icon-user,.icon-pas,.icon-yzma{display: inline-block;width:20px;height:20px;position: absolute;margin-top: -10px;top: 50%;}
+.icon-user{background: url('../images/login/Log_icon_adm.png') no-repeat center center;}
+.icon-pas{background: url('../images/login/Log_icon_PassW.png') no-repeat center center;}
+.icon-yzma{background: url('../images/login/Log_icon_yzma.png') no-repeat center center;}
+.yzma-input{padding-right: 110px;}
+.yzma_txt{position: absolute;right: 30px;height: 34px;line-height: 34px;}
+.ui-button.h46{height: 46px;line-height: 46px;}
+.ui-button.f16{font-size: 16px;}
+.bg-txt{position: absolute;right: 70px;bottom: 60px;}
+.login_cont{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.login_reg{margin-top: 170px;}
+.logo-white{position: absolute;
+  left: 50%;
+  transform: translateX(-177%);
+  top: 202px;
+background-image: url(../images/login/logo-white.png);
+background-repeat: no-repeat;
+width: 140px;
+height: 59px;
+animation: breath 2s infinite ease alternate;
+}
+/*pc 并且小于 1280px*/
 @media (max-width: 1380px) {
 	.pc_status .my_name{display: none}
 }
