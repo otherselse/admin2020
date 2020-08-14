@@ -104,7 +104,7 @@
 				for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
 					_menuStrV+='<a class="mDListShow" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}
-				_menuStrD+='<div class="mDListCont">'+_menuStrV+'</div></div>'
+				_menuStrD+='<div class="mDListCont trans">'+_menuStrV+'</div></div>'
 			}
 					 
 			_menuStr+=_menuStrD+'</div></div></span>'
@@ -119,22 +119,19 @@
 
 
 	$(function(){
-		if(!IsPC()){ //手机端
-			var logo=$(".logo").clone(true);
-			var topRight=$(".topRight").clone(true);
-			$(".m_top").append(logo).append(topRight);
-			$("body").addClass("m_status")
-		}else{
-			$("body").addClass("pc_status")
-		}
+		var logo=$(".logo").clone(true);
+		var topRight=$(".topRight").clone(true);
+		$(".m_top").append(logo).append(topRight);
 
 
 		
 
-		$("body").on("mouseover",".menuhook",function(){
-			if(IsPC()){
-				var _ww=$(window).width()/2;
-				var _myL=$(this).offset().left;
+		$("body").on("mouseenter",".menuhook",function(){
+			//console.log("enter")
+			var _ww=$(window).width()/2;
+			var _myL=$(this).offset().left;
+			if($(window).width()>1100){
+				
 				var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
 				//console.log(_index)
 
@@ -147,20 +144,32 @@
 					
 				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
 					if(_myL>_ww){  //在屏幕右侧
-						_w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
+						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth();
 					}else{  //在屏幕左侧
-						_w=0;
+						var _w=0;
 					}
 					
 					$(this).find(".mDetail").css("left",-_w)
 				}
 			}else{
-				$(this).find(".mDetail").css("left",0)
-			}
-			
-			$(this).find(".mDetail").show();
-		}).on("mouseout",".menuhook",function(){
-			//$(this).find(".mDetail").hide();
+				var _w=0
+				if(_myL>_ww){  //在屏幕右侧
+						if($(this).attr("datachild")>1){
+							_w=250-$(this).outerWidth();
+						}else{
+							_w=180-$(this).outerWidth();
+						}
+						
+					}else{  //在屏幕左侧
+						_w=0;
+				}
+				$(this).find(".mDetail").css("left",-_w)
+			}			
+			$(this).find(".mDetail").slideDown("fast")
+
+		}).on("mouseleave",".menuhook",function(){
+			$(this).find(".mDetail").hide();
+			//$(this).find(".mDetail").stop().slideUp("fast")
 		})
 })
 
