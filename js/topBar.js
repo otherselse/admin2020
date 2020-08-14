@@ -30,9 +30,9 @@
 	'		<a class="topLogoCont vm" href="##" ><img  src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></a>'+
 	'		<a href="##" class="wh ml5 my_name">hi,钢铁大王</a>'+
 	'		<span class="dib mr5 ml5 gbd">|</span>'+
-	'		<a href="##" class="admIcon iconAlumni vm"></a>'+
+	'		<a href="##" class="admIcon iconAlumni vm" title="通讯录"></a>'+
 	'		<span class="dib mr5 ml5 gbd">|</span>'+
-	'		<a href="##" class="admIcon iconExit vm"></a>'+
+	'		<a href="##" class="admIcon iconExit vm" title="退出登录"></a>'+
 	'	</span>'+
 	'</div>'
 		document.write(str1)

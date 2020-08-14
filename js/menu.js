@@ -155,17 +155,16 @@
 				
 				if(_myL>_ww){  //在屏幕右侧
 						var _w=0
-						console.log("right")
-						//_w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true);
+						_w=250-$(this).outerWidth(true);
 					}else{  //在屏幕左侧
 						_w=0;
 				}
-				$(this).find(".mDetail").css("left",_w)
+				$(this).find(".mDetail").css("left",-_w)
 			}			
 			$(this).find(".mDetail").slideDown("fast")
 
 		}).on("mouseleave",".menuhook",function(){
-			//$(this).find(".mDetail").hide();
+			$(this).find(".mDetail").hide();
 			//$(this).find(".mDetail").stop().slideUp("fast")
 		})
 })

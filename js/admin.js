@@ -11,10 +11,12 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("body").addClass("bLeftBar");
+			$(".leftBar").css("left","-200px")
 		
 		}else{
 			$(this).addClass("on");
 			$("body").removeClass("bLeftBar");	
+			$(".leftBar").css("left","0")
 		}
 		getHeader()	
 	})
@@ -71,14 +73,26 @@ $(function(){
 	//提示
 	if($(".showTip").length>0){
 		$(".showTip").find('[title]').qtip({
-		position: {
-			my: 'bottom center', //my:是指三角的位置
-			at: 'top center' //是在提示在组件的相对位置
-		},
-		style: {
-			classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-		}
-	});
+			position: {
+						viewport: $(window)
+					},
+			style: {
+				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			}
+		});
+	}
+
+
+	if($(".tiptop").length>0){ //提示显示在元素的上方
+		$('.tiptop').qtip({
+			position: {
+				my: 'bottom center', //my:是指三角的位置
+				at: 'top center' //是在提示在组件的相对位置
+			},
+			style: {
+				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			}
+		});
 	}
 	
 
@@ -95,9 +109,12 @@ function getWidth(){
 	if($(window).width()<1440){
 		$("body").addClass("bLeftBar");
 		$(".setLeftBar").removeClass("on");
+		$(".leftBar").css("left","-200px")	
+		
 	}else{
 		$("body").removeClass("bLeftBar");		
-		$(".setLeftBar").addClass("on");			
+		$(".setLeftBar").addClass("on");
+		$(".leftBar").css("left","0")
 	}
 
 	getHeader()
