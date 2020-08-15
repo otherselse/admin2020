@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>库存盘点表-物流管理-乐刚智能云系统</title>
+	<title>单据打印-物流管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	
 	
@@ -29,7 +29,7 @@
 		            <span class="dib pl5 pr5 ">/</span>
 		            物流管理
 		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">库存盘点登记</span>
+		            <span class="g28">单据打印</span>
 		        </div>
 		        <div class="r m_dn">
 	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -37,25 +37,9 @@
 	        </div>
 			<div class="ui-content ovh minH">
 				<div class="p20">
-					<div class="cl mb10 f12 ">
-						状态：<div class="dib selectSingle  mr40">
-	                            <a class="on" href="javscript:void(0)">全部</a>
-	                            <span class="pr5 pl5 ">|</span>
-	                            <a href="javscript:void(0)">已盘点</a>
-	                            <span class="pr5 pl5 ">|</span>
-	                            <a href="javscript:void(0)">未盘点</a>
-	                         </div>
-	                    是否差异：<div class="dib selectSingle">
-	                                    <a class="on" href="javscript:void(0)">全部</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">是</a>
-	                                    <span class="pr5 pl5 ">|</span>	 
-	                                    <a href="javscript:void(0)">否</a>                                   
-	                                </div>
-					</div>
-					<div class="mb10 f12">
-						区域：<span class="input-selSearch pct15 mr20">
-								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+					<div class="cl mb20 f12 bbe pb20">
+						常用单据：<span class="input-selSearch pct15 mr20">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择单据" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
 									<a href="javascript:void(0)" class="search-list db ell">上海</a>
@@ -65,11 +49,38 @@
 									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
 								</div>
 							</span>
-						仓库：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
-						盘点月份：<span class="ui-input pct15 mr20" data-type="time"><input type="text" placeholder="选择时间" class="render-month" readonly="" ></span>					
+							<button class="ui-button mr20" data-type="normal" type="button">查看</button>
+							<a href="" class="mr20">查看提单样单 > </a>
+							<a href="" class="mr20">查看加工单样单 > </a>
+					</div>
+					<div class="mb10 f12">
+						类型：<div class="dib selectSingle ">
+	                                    <a class="on" href="javscript:void(0)">提单</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">出库码单</a>	                                    
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">加工单</a>
+	                                     <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">运输指令单</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">短驳运输单</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">直购提单</a>	                                    
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">直购码单</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">对账函</a>
+	                                </div>
+					</div>
+					<div class="mb10 f12">
+						订单号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						合同号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						单位名称：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						申请时间段：<span class="ui-input tc f0 pct20  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" >
+					</span>				
 						
 					</div>
-					<div class="cl"><span class="ui-tip" data-type="blue">注：每月5号生成当月库存盘点数据，请各区域财务和物流在每月10号之前完成本区域当月所有仓库的库存盘点。</span></div>
 					<div class="tc mt20">
 	                    <button type="button" class="ui-button mr10">查询</button>
 	                    <button type="button" class="ui-button " data-type="clear">清空</button>

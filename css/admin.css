@@ -66,6 +66,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 .pct16{width: 16%}
 .pct22{width: 22%}
+.mb50{margin-bottom: 50px}
 
 .resource-table .title{background: #FAFAFA;text-align: left;padding-left: 10px;}
 .resource-table .cont{text-align: left;padding-left: 10px;color: #282828}
@@ -171,64 +172,11 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 
 
-
-/*mobile*/
-@media only screen and (max-width: 1100px) {
- .f12{font-size: 16px !important}
- .f14{font-size: 16px !important}
- .nav{font-size:16px !important;}
- 
- .topBar .logo, .topBar .topRight{display: none;}
- .mDetailCont{max-width:220px;padding:30px 15px;line-height: 20px}
- .mDList+.mDList{margin-top:20px;}
- .menu{font-size: 16px}
- .mDList{font-size:16px;width:220px;margin-right: 0}
- .m_first{width:150px}
- .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 980px;box-sizing: border-box;padding:0 20px;}
- .menuList{margin-right: 5px}
- .topBar.tc{text-align: left}
- .leftBar{display: none}
- .rightBar{position: inherit;/*min-width: 1280px*/;}
- .setLeftBar{display: none}
- .m_dn{display: none}
- .indexContItem{width: 100%;margin-right: 0}
- .mDListTitle{margin-top:8px;width: 30%;display: inline-block;vertical-align: top}
- .mDListCont{width: 70%;display: inline-block;}
- .m-tabLimitSCroll .ui-table {min-width: 1400px;}
- .m-tabLimitSCroll {overflow-x: auto;}
- .indexContent{width: auto}
- .pct69{width: 42%}
- .pct59{width: 40%}
- .m_db{display: block;width: 100%}
- .m_index2{text-indent: 2em;}
- .m_index0{text-indent: 0;}
- .m_pct31{width: 55%}
- .m_pct80{width: 80%}
- .m_vt{vertical-align: top}
- .m_pct50{width: 50%}
- .m_pct9{width: 9%}
- .m_mt10{margin-top:10px;}
-}
-
-
-/*pc 并且小于 1280px*/
+/*trans*/
+.trans_fixbot{position:fixed;background:#fafafa;width:100%;margin:0 auto;text-align:center;padding:10px;bottom:0}
 
 
 
-
-@media only screen and (max-width: 1460px) and (min-width: 1280px) {
-	.topBar{padding:0 2%;}
-	.logoSvg svg{width: 120px;height: 50px;}
-	.logo{font-size: 18px}
-	.my_name{display: none}
-	.menuList{padding:0 8px;}
-	.pct69{width: 60%}
-	.m_pct31{width: 35%}
-	.m_pct50{width: 50%}
-	.pc_index2{text-indent: 2em}
-	.pc_index0{text-indent: 0em}
-	.pc_mt10{margin-top:10px;}
-}
 
 /* login */
 .login_box{margin-top: 80px;box-sizing: border-box;}
@@ -329,6 +277,63 @@ a.wh:hover{color:#fff;text-decoration: underline;}
   70% {box-shadow: 0 3px 10px 0 rgba(47,167,255,0.3);}
   to {box-shadow: 0 3px 10px 0 rgba(47,167,255,0.07);}
 }
+
+
+/*mobile*/
+@media only screen and (max-width: 1100px) {
+ .f12{font-size: 16px !important}
+ .f14{font-size: 16px !important}
+ .nav{font-size:16px !important;}
+ 
+ .topBar .logo, .topBar .topRight{display: none;}
+ .mDetailCont{max-width:220px;padding:30px 15px;line-height: 20px}
+ .mDList+.mDList{margin-top:20px;}
+ .menu{font-size: 16px}
+ .mDList{font-size:16px;width:220px;margin-right: 0}
+ .m_first{width:150px}
+ .m_top{display: block;line-height:76px;height: 76px;background:url(../images/index/bg.png);min-width: 980px;box-sizing: border-box;padding:0 20px;}
+ .menuList{margin-right: 5px}
+ .topBar.tc{text-align: left}
+ .leftBar{display: none}
+ .rightBar{position: inherit;/*min-width: 1280px*/;}
+ .setLeftBar{display: none}
+ .m_dn{display: none}
+ .indexContItem{width: 100%;margin-right: 0}
+ .mDListTitle{margin-top:8px;width: 30%;display: inline-block;vertical-align: top}
+ .mDListCont{width: 70%;display: inline-block;}
+ .m-tabLimitSCroll .ui-table {min-width: 1400px;}
+ .m-tabLimitSCroll {overflow-x: auto;}
+ .indexContent{width: auto}
+ .pct69{width: 42%}
+ .pct59{width: 40%}
+ .m_db{display: block;width: 100%}
+ .m_index2{text-indent: 2em;}
+ .m_index0{text-indent: 0;}
+ .m_pct31{width: 55%}
+ .m_pct80{width: 80%}
+ .m_vt{vertical-align: top}
+ .m_pct50{width: 50%}
+ .m_pct9{width: 9%}
+ .m_mt10{margin-top:10px;}
+}
+
+
+/*pc 并且小于 1280px*/
+@media only screen and (max-width: 1460px) and (min-width: 1280px) {
+	.topBar{padding:0 2%;}
+	.logoSvg svg{width: 120px;height: 50px;}
+	.logo{font-size: 18px}
+	.my_name{display: none}
+	.menuList{padding:0 8px;}
+	.pct69{width: 60%}
+	.m_pct31{width: 35%}
+	.m_pct50{width: 50%}
+	.pc_index2{text-indent: 2em}
+	.pc_index0{text-indent: 0em}
+	.pc_mt10{margin-top:10px;}
+}
+
+
 @media only screen and (max-width: 1280px) and (min-width: 1100px) {
 	.topBar{padding:0 0.5%;}
 	.logoSvg svg{width: 120px;height: 50px;}

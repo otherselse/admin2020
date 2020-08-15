@@ -15,10 +15,13 @@ $(function(){
 		
 		}else{
 			$(this).addClass("on");
-			$("body").removeClass("bLeftBar");	
+			$("body").removeClass("bLeftBar");			
 			$(".leftBar").css("left","0")
 		}
-		getHeader()	
+
+		getHeader()		
+
+		
 	})
 
 	//不可复制的功能
@@ -162,19 +165,37 @@ function getWidth(){
 		$(".leftBar").css("left","0")
 	}
 
-	getHeader()
+	getHeader2()
 	getScroll()	
 
 }
 
-function getHeader(){		
+function getHeader(){	
+	//console.log($(".leftBar").css("left"))	
 	if($("body").hasClass("fixtab")){
-		if($(".leftBar").css("display")=="block"){
-			if($(window).width()>=1280){
+		if($(".leftBar").css("left")=="0px"){
+			if($(window).width()>=1440){
+				$(".lgui-table-header").width($(window).width()-100);
+			}			
+		}else{
+			if($(window).width()>=1440){
+				$(".lgui-table-header").width($(window).width()-300);
+			}
+			
+		}
+	}
+
+}
+
+function getHeader2(){	
+	console.log($(".leftBar").css("left"))	
+	if($("body").hasClass("fixtab")){
+		if($(".leftBar").css("left")=="0px"){
+			if($(window).width()>=1440){
 				$(".lgui-table-header").width($(window).width()-300);
 			}			
 		}else{
-			if($(window).width()>=1280){
+			if($(window).width()>=1440){
 				$(".lgui-table-header").width($(window).width()-100);
 			}
 			
