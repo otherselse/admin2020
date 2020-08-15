@@ -68,6 +68,17 @@ $(function(){
 		  });
 		}); 
 	}
+
+	if($('.render-month').length>0){
+		lay('.render-month').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,type:'month'
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		  });
+		}); 
+	}
 	
 
 	//提示

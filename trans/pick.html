@@ -84,7 +84,7 @@
 	                            <td>60646</td>
 	                            <td>王至于有限公司</td>
 	                            <td>之华</td>
-	                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+	                            <td><a href="javascript:void(0)" class="ui-button plr10" data-type="smallbbr" onclick="showTr(this)">审核</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="7">
@@ -205,6 +205,20 @@
 										  <p> 7.公司地址：中国（上海）自由贸易试验区西路路55号14层1445B室 邮政编码 ：200131 公司网址：www.lgsteel.com  </p>                                        
                                        
                                        </div>
+                                       <div class="ovh mb10 tl  f14">
+                                       		<div class="l pct20 g28 b">本提单已经需方审核无误</div>
+                                       		<div class="l pct80 tc">
+                                       			领单人：
+                                       			&emsp;&emsp;&emsp;发货人：
+                                       			&emsp;&emsp;&emsp;制单人：贝塔
+                                       			&emsp;&emsp;&emsp;打印日期：2020-07-31 10:18:27
+                                       		</div>
+                                       </div>
+
+                                       <div class="tc  mt20 mb20">
+	                                    	<button type="button" class="ui-button mr10">确认</button>
+	                                    	<button type="button" class="ui-button" data-type="clear">退回</button>
+	                                    </div>
 
 	                                    
 	                                </div>
@@ -217,7 +231,7 @@
 	                            <td>60646</td>
 	                            <td>王至于有限公司</td>
 	                            <td>之华</td>
-	                            <td><a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a></td>
+	                            <td><a href="javascript:void(0)" onclick="showTr(this)">查看</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="7">
@@ -323,7 +337,7 @@
 	                            <td>60646</td>
 	                            <td>王至于有限公司</td>
 	                            <td>之华</td>
-	                            <td><a href="javascript:void(0)" class="ui-button w86 link-up" data-type="smallbbr" onclick="showDiv_lrl1(this)">审核</a></td>
+	                            <td><a href="javascript:void(0)" class="ui-button plr10" data-type="smallbbr" onclick="showTr(this)">审核</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="7">
@@ -457,26 +471,10 @@
 		})
 
 
-		function showDiv_lrl(obj){
-			if($(obj).parents("tr").next(".hideTr").css("display")=="none"){
-                $(obj).parents("tr").next(".hideTr").show();
-                $(obj).text("收起").addClass("down");
-			}else{
-				$(obj).parents("tr").next(".hideTr").hide();
-                $(obj).text("查看").removeClass("down");
-			}
-		}
 
-		function showDiv_lrl1(obj){
-			if($(obj).parents("tr").next(".hideTr").css("display")=="none"){
-                $(obj).parents("tr").next(".hideTr").show();
-                $(obj).text("收起").addClass("down");
-			}else{
-				$(obj).parents("tr").next(".hideTr").hide();
-                $(obj).text("审核").removeClass("down");
-			}
+		function showTr(obj){
+			$(obj).parents("tr").next(".hideTr").toggle();
 		}
-
 
 		function showdiv(obj){
 			$(obj).parents(".hideTr").find('.httkxs').toggle();

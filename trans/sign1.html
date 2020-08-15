@@ -75,7 +75,7 @@
 					</div>
 
 					<div class="mb10 f0">
-						<span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;区域：<span class="input-selSearch pct69">
+						<span class="pct22 dib f12">&emsp;&emsp;&emsp;&emsp;区域：<span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
@@ -87,17 +87,19 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-						<span class="pct25 dib f12">&emsp;合同号：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-						<span class="pct25 dib f12">&emsp;提单号：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-					</div>
-					<div class="mb10 f0">
-						<span class="pct25 dib f12">&emsp;&emsp;单位名称：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-						<span class="pct25 dib f12 m_pct50">提货时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct22 dib f12">&emsp;订单号：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+						<span class="pct22 dib f12">&emsp;合同号：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+						<span class="pct30 dib f12 ">提货时间：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
 					</span></span>
-					<span class="pct25 dib f12 m_pct50 m_index2 m_mt10 pc_index2 pc_mt10">出库时间：<span class="ui-input tc f0 pct69  range m_index0 pc_index0" data-type="time">
+						
+					</div>
+					<div class="mb10 f0">
+						<span class="pct22 dib f12">&emsp;&emsp;单位名称：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+						<span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+						<span class="pct22 dib f12">&emsp;提单号：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+						
+					<span class="pct30 dib f12">出库时间：<span class="ui-input tc f0 pct69  range " data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
 					</span></span>
 					</div>
@@ -112,8 +114,8 @@
 	                <table class="ui-table tc f12 mt30" width="100%">
 	                    <thead>
 	                        <tr>
-	                            <th width="4%">序号</th>
-	                            <th width="8%">出库申请时间</th>
+	                            <th width="3%">序号</th>
+	                            <th width="7%">出库申请时间</th>
 	                            <th width="4%">订单号</th>
 	                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">金牌商家<i class="goldIcon icon-sort vm ml5 "></i></label></th>
 	                            <th width="5%">业务类型</th>
@@ -122,12 +124,12 @@
 	                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">提单号<i class="goldIcon icon-sort vm ml5 "></i></label></th>
 	                            <th width="5%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">提货时间<i class="goldIcon icon-sort vm ml5 "></i></label></th>	                            
 	                            <th width="5%">签收单位</th>
-	                            <th width="5%">签收人</th>
+	                            <th width="4%">签收人</th>
 	                            <th width="5%">签收时间</th>
-	                            <th width="5%">出库重量</th>
+	                            <th width="4%">出库重量</th>
 	                            <th width="5%">出库时间</th>
 	                            <th width="5%">操作人</th>
-	                            <th width="5%">操作</th>	                            
+	                            <th width="7%">操作</th>	                            
 	                        </tr>
 	                    </thead>
 	                    <tbody class="ui-thover">
@@ -148,7 +150,7 @@
 	                            <td>2020-07-24 13:20:13</td>
 	                            <td>李四</td>
 	                            <td>
-	                            	<a href="javascript:void(0)" class="f12 link-up g80" onclick="showDiv_lrl(this)">查看</a>
+	                            	<a href="javascript:void(0)" class="mr5" onclick="showDiv_lrl(this)">查看</a>
 	                            	<a href="javascript:void(0)" id="10001" class="ui-button tipclick" qtip-dom="dom1" data-type="smallbbr" onclick="setmyDom(this)">核查</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
@@ -288,11 +290,21 @@
 
 
 	<div class="dom1 f12" style="display:none">
-		<div class="radio  pb10">
-			<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
-						name="radio"></i>核查通过</label><br/>
-			<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
-						name="radio"></i>核查不通过</label>
+		<div class="pb10">
+			<div class="radio">
+				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio" onclick="setPassFlag(1)"></i>核查通过</label><br/>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio" onclick="setPassFlag(0)"></i>核查不通过</label>
+			</div>
+			<div class="radio dn mt10 pl20 cklxFee">
+				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>印章不清晰</label><br/>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>单据信息不完整</label>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>单据不能证明客户已签收</label>
+			</div>
 		</div>
 		<button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
 		<button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
@@ -327,6 +339,14 @@
 
 		function gotoClick(){
 			console.log(_tid)
+		}
+
+		function setPassFlag(f){
+			if(f){
+				$(".cklxFee").hide();
+			}else{
+				$(".cklxFee").show();
+			}
 		}
 		
 	</script>

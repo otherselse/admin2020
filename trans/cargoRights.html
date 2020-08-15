@@ -134,7 +134,7 @@
 	                            <td>PPC(01)-19000534</td>	                            
 	                            <td>46520</td>
 	                            <td>瓜子二手钢直卖网</td>
-	                            <td><a href="javascript:void(0)" class="ui-button w70" data-type="smallbbr" onclick="showDiv_lrl(this)">重量核实</a></td>
+	                            <td><a href="javascript:void(0)"  onclick="showDiv_lrl(this)" class="mr10">查看</a><a href="javascript:void(0)" id="10001" class="ui-button plr10 tipclick" data-type="smallbbr"  qtip-dom="dom1" onclick="setmyDom(this)">核查</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="9">
@@ -192,7 +192,7 @@
 	                            <td>PPC(01)-19000534</td>	                            
 	                            <td>46520</td>
 	                            <td>瓜子二手钢直卖网</td>
-	                            <td><a href="javascript:void(0)" class="ui-button w70" data-type="smallbbr" onclick="showDiv_lrl(this)">重量核实</a></td>
+	                            <td><a href="javascript:void(0)" class="ui-button plr10" data-type="smallbbr" onclick="showDiv_lrl(this)">重量核实</a></td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="9">
@@ -371,6 +371,26 @@
 
 
 
+<div class="dom1 f12" style="display:none">
+		<div class="pb10">
+			<div class="radio">
+				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio" onclick="setPassFlag(1)"></i>核查通过</label><br/>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio" onclick="setPassFlag(0)"></i>核查不通过</label>
+			</div>
+			<div class="radio dn mt10 pl20 cklxFee">
+				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>印章不清晰</label><br/>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>单据信息不完整</label>
+				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+						name="radio1"></i>单据不能证明客户已签收</label>
+			</div>
+		</div>
+		<button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+		<button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
+	</div>
 
 	
 	
@@ -393,6 +413,24 @@
 				$(obj).parents("tr").next(".hideTr").hide();
                 $(obj).text("重量核实").removeClass("down");
 			}*/
+		}
+
+			var _tid=''
+		function setmyDom(obj){
+			_tid=$(obj).attr("id")
+		}
+
+		function gotoClick(){
+			console.log(_tid)
+		}
+
+
+		function setPassFlag(f){
+			if(f){
+				$(".cklxFee").hide();
+			}else{
+				$(".cklxFee").show();
+			}
 		}
 		
 	</script>
