@@ -41,17 +41,25 @@
 						常用单据：<span class="input-selSearch pct15 mr20">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择单据" autocomplete="off" readonly="">
 								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">北京</a>
-									<a href="javascript:void(0)" class="search-list db ell">上海</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									<a href="javascript:void(0)" class="search-list db ell">车辆提货登记表</a>
+									<a href="javascript:void(0)" class="search-list db ell">车辆卸货登记表</a>
+									<a href="javascript:void(0)" class="search-list db ell">出库日报表</a>
+									<a href="javascript:void(0)" class="search-list db ell">出门证</a>
+									<a href="javascript:void(0)" class="search-list db ell">航车工日常点检表</a>
+									<a href="javascript:void(0)" class="search-list db ell">横切开平质量跟踪表</a>
+									<a href="javascript:void(0)" class="search-list db ell">机组交接班记录</a>
+									<a href="javascript:void(0)" class="search-list db ell">加工登记台帐</a>
+									<a href="javascript:void(0)" class="search-list db ell">进库日报表</a>
+									<a href="javascript:void(0)" class="search-list db ell">领料单</a>
+									<a href="javascript:void(0)" class="search-list db ell">木架订做单</a>
+									<a href="javascript:void(0)" class="search-list db ell">入库明细表</a>
+									<a href="javascript:void(0)" class="search-list db ell">收据</a>
+									<a href="javascript:void(0)" class="search-list db ell">纵剪质量跟踪表</a>
 								</div>
 							</span>
 							<button class="ui-button mr20" data-type="normal" type="button">查看</button>
-							<a href="" class="mr20">查看提单样单 > </a>
-							<a href="" class="mr20">查看加工单样单 > </a>
+							<a href="tdimageprint.html" target="_blank" class="mr20">查看提单样单 > </a>
+							<a href="jgdimageprint.html" target="_blank" class="mr20">查看加工单样单 > </a>
 					</div>
 					<div class="mb10 f12">
 						类型：<div class="dib selectSingle ">
@@ -76,8 +84,8 @@
 						订单号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
 						合同号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
 						单位名称：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
-						申请时间段：<span class="ui-input tc f0 pct20  range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" >
+						<span class="m_db m_mt10">申请时间段：<span class="ui-input tc f0 pct20  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ></span>
 					</span>				
 						
 					</div>
@@ -92,17 +100,12 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="5%">序号</th>
-		                            <th width="8%">区域</th>
-		                            <th width="10%">仓库</th>
-		                            <th width="10%">盘点月份</th>
-		                            <th width="10%">库存重量</th>
-		                            <th width="10%">实盘重量</th>
-		                            <th width="10%">差异总览</th>
-		                            <th width="9%">盘点人员</th>
-		                            <th width="10%">盘点状态</th>
-		                            <th width="10%">复核状态</th>
-		                            <th width="8%">操作</th>	                            
+		                            <th width="15%">时间</th>
+		                            <th width="10%">订单号</th>
+		                            <th width="20%">合同号</th>
+		                            <th width="15%">类型</th>
+		                            <th width="30%">单位名称</th>
+		                            <th width="10%">操作</th>	                            
 		                        </tr>
 		                    </thead>
 		                </table>
@@ -112,100 +115,78 @@
 							<table class="ui-table tc f12" width="100%">
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-		                            <td width="5%">1</td>
-		                            <td width="8%">成都</td>
-		                            <td width="10%">聚财库</td>
-		                            <td width="10%">2018年9月</td>
-		                            <td width="10%">30</td>
-		                            <td width="10%">30</td>
-		                            <td width="10%">0</td>
-		                            <td width="9%">之华</td>
-		                            <td width="10%">已盘点</td>
-		                            <td width="10%">待复核</td>
-		                            <td width="8%"><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td width="15%">2020-08-15</td>
+		                            <td width="10%">12345</td>
+		                            <td width="20%">STD(01)-20000731</td>
+		                            <td width="15%">提单</td>
+		                            <td width="30%"><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td width="10%"><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                        <tr>
-		                            <td>2</td>
-		                            <td>成都</td>
-		                            <td>聚财库</td>
-		                            <td>2018年9月</td>
-		                            <td>30</td>
-		                            <td>30</td>
-		                            <td>0</td>
-		                            <td>之华</td>
-		                            <td>已盘点</td>
-		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                        <tr>
-		                            <td>3</td>
-		                            <td>成都</td>
-		                            <td>聚财库</td>
-		                            <td>2018年9月</td>
-		                            <td>30</td>
-		                            <td>30</td>
-		                            <td>0</td>
-		                            <td>之华</td>
-		                            <td>已盘点</td>
-		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                        <tr>
-		                            <td>4</td>
-		                            <td>成都</td>
-		                            <td>聚财库</td>
-		                            <td>2018年9月</td>
-		                            <td>30</td>
-		                            <td>30</td>
-		                            <td>0</td>
-		                            <td>之华</td>
-		                            <td>已盘点</td>
-		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                        <tr>
-		                            <td>5</td>
-		                            <td>成都</td>
-		                            <td>聚财库</td>
-		                            <td>2018年9月</td>
-		                            <td>30</td>
-		                            <td>30</td>
-		                            <td>0</td>
-		                            <td>之华</td>
-		                            <td>已盘点</td>
-		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                        <tr>
-		                            <td>6</td>
-		                            <td>成都</td>
-		                            <td>聚财库</td>
-		                            <td>2018年9月</td>
-		                            <td>30</td>
-		                            <td>30</td>
-		                            <td>0</td>
-		                            <td>之华</td>
-		                            <td>已盘点</td>
-		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
+		                        </tr>
+		                        <tr>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
+		                        </tr>
+		                        <tr>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
+		                        </tr>
+		                        <tr>
+		                            <td>2020-08-16</td>
+		                            <td>12345</td>
+		                            <td>STD(01)-20000731</td>
+		                            <td>加工单</td>
+		                            <td><a href="javascript:void(0)" title="名称:周结论有限公司<br/>联系人:<br/>联系电话:/12365847965" class="tiptop">周结论有限公司</a></td>
+		                            <td><a href="javascript:void(0)">查看</a></td>
 		                        </tr>
 		                    </tbody>
-		                    <tfoot class="bgfa">
-		                    	<tr height="40">
-		                    		<td colspan="4">当前页合计</td>
-		                    		<td>库存重量:<span id="allWeight" numtype="personal">151.734</span></td>
-		                    		<td>实盘重量:<span id="allCheckWeight" numtype="personal">126.021</span></td>
-		                    		<td>差异重量:<span id="allDifWeight" numtype="personal">25.713</span></td>
-		                    		<td colspan="4"></td>
-		                    	</tr>
-		                    	<tr height="40">
-		                    		<td colspan="4">所有页合计</td>
-		                    		<td>4,433.349</td>
-		                    		<td>4,433.349</td>
-		                    		<td>4,433.349</td>
-		                    		<td colspan="4"></td>
-		                    	</tr>
-		                    </tfoot>
 		                </table>
 
 						</div>
@@ -233,21 +214,10 @@
 
 	<script>
 		$(function(){
-			$(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
 
-
-		function showLayer(){
-			layer.open({
-				type: 2,
-				title: '盘点明细',
-				shadeClose: true,
-				shade: 0.4,
-				area: ['80%', '80%'],
-				content: 'pdlist.html' //iframe的url
-			});
-		}
 		
 		
 	</script>

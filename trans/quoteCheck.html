@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>物流报价确认-物流管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            物流管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">物流报价确认</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+			<div class="ui-content ovh minH">				
+				<div class="p20">					
+					<div class="mb10 f12">
+						<span class="dib f12">
+							确认状态：<span class="single mr20">
+							<button type="button" class="ui-option mr5">未确认</button>
+							<button type="button" class="ui-option">已确认</button>
+							</span>
+						</span>
+						订单号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						起运地：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						<span class="m_db m_mt10">业务日期：<span class="ui-input tc f0 pct20  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off"></span>	</span>				
+						
+					</div>
+
+					<div class="tc mt20">
+	                    <button type="button" class="ui-button mr10">查询</button>
+	                    <button type="button" class="ui-button " data-type="clear">清空</button>
+	                </div>
+	                <!-- search end -->
+
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr>
+		                            <th width="9%" class="tl"><div class="pl20"><i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>订单号</div></th>
+		                            <th width="13%">委托时间</th>
+		                            <th width="15%" class="tl"><div class="pl20">起运地</div></th>
+		                            <th width="15%" class="tl"><div class="pl20">目的地</div></th>
+		                            <th width="8%">总重量</th>
+		                            <th width="10%">运输方式</th>
+		                            <th width="10%">单价</th>
+		                            <th width="10%">总金额(元)</th>
+		                            <th width="10%">操作</th>                            
+		                        </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%"  data-type="edit">
+		                    <tbody class="ui-thover">
+		                    	 <tr>
+		                            <td width="9%" class="tl"><div class="pl20"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>58469</div></td>
+		                            <td width="13%">2020-04-05  1:30:05</td>
+		                            <td width="15%" class="tl"><div class="pl20">中国邮政运输集团</div></td>
+		                            <td width="15%" class="tl"><div class="pl20">中国邮政运输集团</div></td>
+		                            <td width="8%">580</td>
+		                            <td width="10%">
+		                            	<span class="input-selSearch">
+									<input type="text" class="ui-input searchUp tc pct80" data-type="small" placeholder="请选择" autocomplete="off" readonly="">
+									<div class="search-cont tl">
+										<a href="javascript:void(0)" class="search-list db ell">整车</a>
+										<a href="javascript:void(0)" class="search-list db ell">配车</a>
+										<a href="javascript:void(0)" class="search-list db ell">包车</a>
+									</div>
+								</span>
+		                            </td>
+		                            <td width="10%"><input type="text" class="ui-input tc pct80" data-type="small" value="1205"></td>
+		                            <td width="10%"><input type="text" class="ui-input tc pct80" data-type="small" value="1205"></td>
+		                            <td width="10%"><a href="javascript:void(0)" onclick="showTrMore(this)"  class="ui-button plr10" data-type="smallbbr">确认</a></td>
+		                        </tr>
+		                        <tr class="hideTr dn">
+		                        	<td colspan="9">
+		                        		<div class="pl20 pr20">
+	                                    <div class="ovh mb10 tl g28 f14 b">运输信息</div>
+	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+											<tbody >
+												<tr class="resource-table">
+													<td class="title" width="13%">订单号</td>
+													<td width="37%" class="cont">60950</td>
+													<td class="title" width="13%">运输单号</td>
+													<td width="37%" class="cont">WDB(22)-20000232</td>
+												</tr>
+												<tr class="resource-table">
+													<td class="title">委托单位</td>
+													<td class="cont">上海乐刚供应链管理有限公司</td>
+													<td class="title">承运单位</td>
+													<td class="cont">简简单单企业</td>
+												</tr>
+												<tr class="resource-table">
+													<td class="title">委方电话</td>
+													<td class="cont">14565545684</td>
+													<td class="title">委托日期</td>
+													<td class="cont">2020-08-17 11:00:39&nbsp;</td>
+												</tr>
+												<tr class="resource-table">
+													<td class="title">到货仓库</td>
+													<td class="cont">山大王&nbsp;</td>
+													<td class="title">起始仓库</td>
+													<td class="cont">聚方库&nbsp;</td>
+												</tr>
+												<tr class="resource-table">
+													<td class="title">到货地址</td>
+													<td class="cont">四川成都市双流县254245</td>
+													<td class="title">起运地址</td>
+													<td class="cont">北京北京市东城区烦烦烦</td>
+												</tr>
+												<tr class="resource-table">
+													<td class="title">到货日期</td>
+													<td class="cont">2020-08-17</td>
+													<td class="title">起运日期</td>
+													<td class="cont">2020-08-17</td>
+												</tr>
+												<tr class="resource-table">
+												    <td class="title">运输方式</td>
+													<td class="cont">整车</td>
+													<td class="title">卸货方式</td>
+													<td class="cont">欠款业务</td>
+		 										</tr>												 
+											</tbody>
+										</table>
+
+										<div class="ovh mb10 tl g28 f14 b mt20">送货明细</div>
+	                                    <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+	                                        <thead>
+	                                            <tr>
+	                                                <th width="10%">序号</th>
+	                                                <th width="15%">品名</th>
+	                                                <th width="20%">规格</th>
+	                                                <th width="10%">钢厂</th>
+	                                                <th width="10%">牌号</th>
+	                                                <th width="10%">数量</th>
+	                                                <th width="10%">重量</th>
+	                                                <th width="15%">仓库</th>	                                                
+	                                            </tr>
+	                                        </thead>
+	                                        <tbody class="ui-thover">
+	                                            <tr>
+	                                                <td>1</td>
+	                                                <td>彩涂卷板</td>
+	                                                <td>11.000*800*C</td>
+	                                                <td>鞍钢</td>
+	                                                <td>Dx58661</td>
+	                                                <td>3</td>
+	                                                <td>3</td>
+	                                                <td>聚方库</td>
+	                                            </tr>
+	                                        </tbody>
+	                                        <tfoot>
+	                                            <tr class="bgfa">
+	                                                <td colspan="5">合计</td>
+	                                                <td>10</td>
+	                                                <td>4</td>
+	                                                <td></td>
+	                                            </tr>
+	                                        </tfoot>
+	                                    </table>                                    
+	            						<div class="mb10 tl mt10 mb10"><a href="javascript:void(0)" class="link-up" onclick="showdiv(this,'httkxs')">注意事项</a></div>
+	            						<div class="bdde p20 bgf1 lh24 dn httkxs tl">
+	            							1、本指令单为委托方与承运单位签订的运输协议，具有法律效力；<br>
+												2、运输要求：货物吨位、规格、牌号、送货时间、地点等以本指令单为准；<br>
+												3、承运单位务必保证货物的安全及完整性，如承运期间发生损失由承运单位赔付委托方，直接货损（按市场价计算）与因此造成的收货人损失赔偿费用与相应的其它费用；<br>
+												4、承运单位不得延误运输装运、到货时间，否则应承担赔偿费用；<br>
+												5、承运方必须在发货装车（装船）时帮助委托方检查所发货物的外观质量、数量、吨位、规格等情况，如有差错及时通知委托方，承运方接收货物后，造成的损失由承运方承担；<br>
+												6、如委托方有特殊装运要求，承运方有义务按照委托方要求办理，否则委托方可单方面撤回指令单，且有权追究承运人的违约责任与赔偿损失；<br>
+												7、遇雨雪天气，承运商应主动采取防范措施，包括但不限于加盖雨布，否则，由此造成的货物全部损失由承运方赔偿；<br>
+												8、当本指令单中的“卸货方式”一栏为“款到卸货”时，货物到达指定地点后应立即联系委托方，需在得到委托方经办人员短信确认同意后，方可进行卸货，不按要求操作造成的一切损失（包含但不限于货款、运输费用）由承运方承担，且委托方有权单方面解除合同并不予结算任何费用。<br>
+												9、承运单位接收委托方指令单后，委托方认为承运单位已经认同以上条款。
+										</div>
+	
+	                                    
+
+	                                    <div class="tc  mt20 mb20">
+	                                    	<button type="button" class="ui-button mr10">确认</button>
+	                                    </div>
+
+	                                </div>
+		                        	</td>
+		                        </tr>
+		                        <tr>
+		                            <td class="tl"><div class="pl20"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>58469</div></td>
+		                            <td >2020-04-05  1:30:05</td>
+		                            <td class="tl"><div class="pl20">中国邮政运输集团</div></td>
+		                            <td class="tl"><div class="pl20">中国邮政运输集团</div></td>
+		                            <td >580</td>
+		                            <td>
+		                            	<span class="input-selSearch">
+									<input type="text" class="ui-input searchUp tc pct80" data-type="small" placeholder="请选择" autocomplete="off" readonly="">
+									<div class="search-cont tl">
+										<a href="javascript:void(0)" class="search-list db ell">整车</a>
+										<a href="javascript:void(0)" class="search-list db ell">配车</a>
+										<a href="javascript:void(0)" class="search-list db ell">包车</a>
+									</div>
+								</span>
+		                            </td>
+		                            <td ><input type="text" class="ui-input tc pct80" data-type="small" value="1205"></td>
+		                            <td><input type="text" class="ui-input tc pct80" data-type="small" value="1205"></td>
+		                            <td ><a href="javascript:void(0)" onclick="showTrMore(this)"  class="ui-button plr10" data-type="smallbbr">确认</a></td>
+		                        </tr>
+		                       
+		                    </tbody>
+		                    <tfoot class="">
+		                    	<tr height="45">
+		                    		<td colspan="9">
+		                    			<div class="l pct7 mt5 pl10 pl20 tl"><i class="ui-checkbox goldIcon mr5 vm" ><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
+                                		<div class="l mt5">当前共选择(<span class="red">3</span>)条信息</div>
+		                    			<div class="r tr mr20">
+		                    				<button class="ui-button" type="button">提交</button>
+		                    			</div>
+		                    		</td>
+
+		                    	</tr>
+		                    </tfoot>
+		                </table>
+
+						</div>
+		                
+	            	</div>
+	                <!-- table end -->
+	                <script type="text/javascript" src="../js/pagelist.js"></script>
+
+
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+	<script>
+		$(function(){
+			$(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+
+		function showdiv(obj){
+			$(obj).parents(".hideTr").find('.httkxs').toggle();
+		}
+		
+		
+	</script>
+</body>
+</html>

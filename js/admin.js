@@ -155,6 +155,12 @@ $(function(){
 	})
 
 
+	//checkbox 多选
+	$(".checkbox").on("click", ".ui-checkbox", function () {
+		$(this).toggleClass("on")
+	})
+
+
 
 })
 
@@ -179,7 +185,6 @@ function getWidth(){
 
 
 function getHeader(){	
-	console.log($(".leftBar").css("left"))	
 	if($("body").hasClass("fixtab")){
 		if($(window).width()>=1440){
 			$(".lgui-table-header").width($(window).width()-300);
@@ -240,4 +245,35 @@ function showsMenu(obj){
 
 function hideTipCont(obj){
 	$(obj).parents(".noticeTip").slideUp()
+}
+
+
+// 用于显示订单详情
+function showStep(){
+	layer.open({
+		type: 2,
+		title: '订单详情',
+		shadeClose: true,
+		shade: 0.4,
+		area: ['80%', '80%'],
+		content: '../index/orderInfo.html' //iframe的url
+	});
+}
+
+//全选
+function setAll(obj) {
+	var myobj = $(obj).parents(".checkbox").find(".ui-checkbox").not(":disabled").not($(obj).parent('.ui-checkbox'));
+	if (obj.checked) {
+		myobj.addClass("on");
+		myobj.find(":checkbox").prop("checked", true);
+	} else {
+		myobj.removeClass("on");
+		myobj.find(":checkbox").prop("checked", false);
+	}
+
+}
+
+
+function showTrMore(obj){
+	$(obj).parents("tr").next(".hideTr").toggle();
 }
