@@ -143,7 +143,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 
 
-.rightBar{position:absolute;left:200px;top:76px;right:0;box-sizing: border-box;padding:0 30px;transition: all 0.5s;-webkit-transition: all 0.5s;}
+.rightBar{position:absolute;top:76px;right:0;box-sizing: border-box;padding:0 30px;transition: all 0.5s;-webkit-transition: all 0.5s;}
 .nav{font-size: 12px;padding:10px 0;color: #282828}
 
 /*notice*/
@@ -165,8 +165,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 
 
 /*bLeftBar 没有左侧菜单*/
-.bLeftBar .leftBar{left:-200px;}
-.bLeftBar .rightBar{left:0;}
+
 .m_first{width:120px}
 /*m_status 状态表示是手机状态下*/
 
@@ -279,7 +278,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 }
 
 
-/*mobile*/
+
 @media only screen and (max-width: 1100px) {
  .f12{font-size: 16px !important}
  .f14{font-size: 16px !important}
@@ -315,10 +314,31 @@ a.wh:hover{color:#fff;text-decoration: underline;}
  .m_pct50{width: 50%}
  .m_pct9{width: 9%}
  .m_mt10{margin-top:10px;}
+ .bLeftBar .leftBar{display: none;}
+ .rightBar{left:0;}
 }
 
+/*小于1280 就不显示左侧的菜单 */
+/*pc 并且小于 1280px 大于 1100px*/
+@media only screen and (max-width: 1280px) and (min-width: 1100px) {
+	.m_dn{display: none}
+	.topBar{padding:0 0.5%;}
+	.logoSvg svg{width: 120px;height: 50px;}
+	.logo{font-size: 18px}
+	.my_name{display: none}
+	.menuList{padding:0 1px;}
+	.pct69{width: 60%}
+	.m_pct31{width: 35%}
+	.m_pct50{width: 50%}
+	.pc_index2{text-indent: 2em}
+	.pc_index0{text-indent: 0em}
+	.pc_mt10{margin-top:10px;}
+	.bLeftBar .leftBar{display: none;}
+	.rightBar{left:0;}
+}
 
-/*pc 并且小于 1280px*/
+/*大于1280 显示左侧菜单*/
+/*pc 并且小于 1280px 大于1460 */
 @media only screen and (max-width: 1460px) and (min-width: 1280px) {
 	.topBar{padding:0 2%;}
 	.logoSvg svg{width: 120px;height: 50px;}
@@ -331,19 +351,13 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 	.pc_index2{text-indent: 2em}
 	.pc_index0{text-indent: 0em}
 	.pc_mt10{margin-top:10px;}
+	.rightBar{left:200px;}
+	.bLeftBar .leftBar{left:-200px;}
+	.bLeftBar .rightBar{left:0;}	
 }
 
-
-@media only screen and (max-width: 1280px) and (min-width: 1100px) {
-	.topBar{padding:0 0.5%;}
-	.logoSvg svg{width: 120px;height: 50px;}
-	.logo{font-size: 18px}
-	.my_name{display: none}
-	.menuList{padding:0 2px;}
-	.pct69{width: 60%}
-	.m_pct31{width: 35%}
-	.m_pct50{width: 50%}
-	.pc_index2{text-indent: 2em}
-	.pc_index0{text-indent: 0em}
-	.pc_mt10{margin-top:10px;}
+@media only screen and (min-width: 1460px) {
+	.rightBar{left:200px;}
+	.bLeftBar .leftBar{left:-200px;}
+	.bLeftBar .rightBar{left:0;}
 }

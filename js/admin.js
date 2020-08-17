@@ -7,22 +7,29 @@ $(function(){
 		setHeight();
 	});
 
+
+	//切换菜单栏，只有在1100以前显示
 	$(".setLeftBar").on("click",function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("body").addClass("bLeftBar");
-			$(".leftBar").css("left","-200px")
-		
+			$(".leftBar").css("left","-200px");
+			if($("body").hasClass("fixtab")){  //点击右侧切换按钮，固定滚动时，重新设置滚动头部的宽度
+				$(".lgui-table-header").width($(window).width()-100);
+			}		
 		}else{
 			$(this).addClass("on");
 			$("body").removeClass("bLeftBar");			
-			$(".leftBar").css("left","0")
-		}
-
-		getHeader()		
-
-		
+			$(".leftBar").css("left","0");
+			if($("body").hasClass("fixtab")){
+				$(".lgui-table-header").width($(window).width()-300);
+			}
+		}		
 	})
+
+
+
+
 
 	//不可复制的功能
 	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
@@ -152,7 +159,7 @@ $(function(){
 })
 
 
-
+// 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
 	if($(window).width()<1440){
 		$("body").addClass("bLeftBar");
@@ -165,44 +172,29 @@ function getWidth(){
 		$(".leftBar").css("left","0")
 	}
 
-	getHeader2()
+	getHeader()
 	getScroll()	
 
 }
 
+
 function getHeader(){	
-	//console.log($(".leftBar").css("left"))	
-	if($("body").hasClass("fixtab")){
-		if($(".leftBar").css("left")=="0px"){
-			if($(window).width()>=1440){
-				$(".lgui-table-header").width($(window).width()-100);
-			}			
-		}else{
-			if($(window).width()>=1440){
-				$(".lgui-table-header").width($(window).width()-300);
-			}
-			
-		}
-	}
-
-}
-
-function getHeader2(){	
 	console.log($(".leftBar").css("left"))	
 	if($("body").hasClass("fixtab")){
-		if($(".leftBar").css("left")=="0px"){
-			if($(window).width()>=1440){
-				$(".lgui-table-header").width($(window).width()-300);
-			}			
+		if($(window).width()>=1440){
+			$(".lgui-table-header").width($(window).width()-300);
 		}else{
-			if($(window).width()>=1440){
-				$(".lgui-table-header").width($(window).width()-100);
+			$(".lgui-table-header").width($(window).width()-100);
+			if($(window).width()<1280){
+				$(".lgui-table-header").removeClass("fixed");
+				$(".lgui-table-body").removeAttr("style");
 			}
-			
 		}
 	}
 
 }
+
+
 
 function getScroll(){
 	if($("body").hasClass("fixtab")){
