@@ -28,9 +28,9 @@
 
 			]
 		}
-		,{"title":"评审管理4",
+		,{"title":"财务管理",
 		 "menuList":[
-			 	{"bigM":"角色管理类4-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	{"bigM":"款项类","smallM":[{"mtitle":"收款","href":"../finance/gathering.html"},{"mtitle":"加工收款","href":"../finance/gatheringProc.html"},{"mtitle":"付款","href":"../finance/payment.html"},{"mtitle":"金牌商家账户充值","href":"../finance/gtGMoney.html"},{"mtitle":"出口退税","href":"../finance/settlementList.html"},{"mtitle":"支付结算","href":"../index/index.html"},{"mtitle":"银企直连指令查询","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
 
 

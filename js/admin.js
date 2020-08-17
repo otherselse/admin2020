@@ -160,7 +160,10 @@ $(function(){
 		$(this).toggleClass("on")
 	})
 
-
+	//千位分隔符
+	$(".numFormat").each(function(){
+		$(this).text(lgNumberUtil.numFormat($(this).text()))
+	})
 
 })
 
@@ -202,7 +205,7 @@ function getHeader(){
 
 
 function getScroll(){
-	if($("body").hasClass("fixtab")){
+	if($("body").hasClass("fixtab")&&$(".lgui-table-box").length>1){
 		var defaultHeight=$(".lgui-table-header").height();
 		$(window).scroll(function(){
 			var s=$(window).scrollTop();
