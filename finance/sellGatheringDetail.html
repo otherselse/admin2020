@@ -93,22 +93,40 @@
 							<tr class="resource-table">
 								<td class="title">核销类型：</td>
 								<td class="cont radio">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>人民币收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>美元收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>欧元收款</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('人民币','rmb')"></i>人民币收款</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('美元','my')"></i>美元收款</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('欧元','oy')"></i>欧元收款</label>
 								</td>
 								<td class="title">汇率：</td>
 								<td class="cont"><input type="text" class="ui-input pct40" value="" placeholder="请输入"  ></td>
 							</tr>
+							<tr class="resource-table accountType dn">
+							    <td class="title"><span id="accountT"></span>收款：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
+								<td class="title"></td>
+								<td class="cont"></td>
+							</tr>
 							<tr class="resource-table">
 								<td class="title">到款类别：</td>
 								<td class="cont radio" colspan="3">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>电子银行承兑汇票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>电汇</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>银行转账支票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>现金</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>转账</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('电子银行承兑汇票')" value="40010"></i>电子银行承兑汇票</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"   name="gatherCash.accountType" onclick="setValue('电汇')" value="4003"></i>电汇</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('银行转账支票')" value="4002"></i>银行转账支票</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('现金')" value="4001"></i>现金</label>
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('转账')" value="16024"></i>转账</label>
 								</td>
+							</tr>
+							<tr class="resource-table txfy_mainDiv dn">
+							    <td class="title">贴息费用：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
+								<td class="title">出票单位：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
+							</tr>
+							<tr class="resource-table txfy_mainDiv dn">
+							    <td class="title">汇票号码：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
+								<td class="title">汇票到期日：</td>
+								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
 							</tr>
 							<tr class="resource-table">
 							    <td class="title">合同号：</td>
@@ -124,7 +142,7 @@
 							</tr>
 							<tr class="resource-table">
 							    <td class="title">本合同核销金额(美元)：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>用余额支付合同金额</label></td>
+								<td class="cont checkbox"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>用余额支付合同金额</label></td>
 								<td class="title">银行费用：</td>
 								<td class="cont"><input type="text" class="ui-input pct40 " value="0" placeholder="请输入" ></td>
 							</tr>
@@ -134,7 +152,10 @@
 									<textarea  name="gatherCash.remark" class="ui-textarea pct80" rows="3" value=""></textarea>
 								</td>
 								<td class="title">附件上传：</td>
-								<td class="cont"><button class="ui-button" data-type="upfile" type="button">附件上传</button></td>
+								<td class="cont">
+									<button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
+									<span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+								</td>
 							</tr>												 
 						</tbody>
 					</table>
@@ -142,7 +163,7 @@
 					<div class="tc  mt20 mb20">
                     	<button type="button" class="ui-button mr10">提交</button>
                     	<button type="button" class="ui-button mr10">打印收据</button>
-                    	<button type="button" class="ui-button" data-type="clear">返回</button>
+                    	<button type="button" class="ui-button" data-type="clear" onclick="window.location='gathering.html'">返回</button>
                     </div>
 
 				</div>
@@ -168,6 +189,20 @@
 
 		})
 
+		function setAccountType(str,id){
+			$(".accountType").show();
+			$("#accountT").text(str);
+			$(".accountext").attr("id",id)
+		}
+
+		function setValue(str){
+			if(str.indexOf("汇票")>-1){
+				console.log(1)
+				$(".txfy_mainDiv").show();
+			}else{
+				$(".txfy_mainDiv").hide();
+			}
+		}
 
 		
 		
