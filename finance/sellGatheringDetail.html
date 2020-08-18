@@ -56,13 +56,37 @@
 							</tr>
 							<tr class="resource-table">
 								<td class="title">到款单号：</td>
-								<td class="cont"><input type="text" class="ui-input tc pct50" value=""></td>
+								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" ></td>
 								<td class="title">到款日期：</td>
-								<td class="cont"></td>
+								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
 							</tr>
 							<tr class="resource-table">
 								<td class="title">到款银行：</td>
-								<td class="cont"></td>
+								<td class="cont">
+									<select id="selfBank" class="ui-input pct80">
+							      		<option value="120908385010402">招商银行上海自贸试验区分行</option>
+							      		<option value="31001579511050023589">中国建设银行上海外高桥保税区支行</option>
+				                      <option value="1001018619100004070">中国工商银行上海兰谷路支行</option>
+							      		<option value="50131000343695476">上海农商银行上海自贸试验区分行</option>
+							      		<option value="122581022521">中国银行成都交大路支行</option>
+									   	<option value="651000832000027555">南充市商业银行成都金府支行</option>
+									   	<option value="12001785600052502539">中国建设银行天津滨海临空支行</option>
+									   	<option value="120908385010601">招商银行广州分行开发区支行</option>
+									   	<option value="381866004410">中国银行杭州滨江支行</option>
+									   	<option value="452067163976">中国银行上海市外高桥保税区支行</option>
+									   	<option value="450768072677">中国银行上海市外高桥保税区支行（美元户）</option>
+									   	<option value="31050110057900005899">中国建设银行股份有限公司上海自贸试验区分行（美元户）</option>
+				                        <option value="31050110057900005900">中国建设银行股份有限公司上海自贸试验区分行（欧元户）</option>
+									   	<option value="44001470047052500119">中国建设银行股份有限公司广州萝岗政务中心支行</option>
+				                      <option value="01259192111355">中国银行（香港美元户）</option>
+				                      <option value="01259192122223">中国银行（香港人民币户）</option>
+									   	<option value="现金账户">现金账户</option>
+									   	<option value="承兑账户">承兑账户</option>
+									   	<option value="2164 7010 0100 0518 94">兴业银行上海彭浦支行</option>
+				<!-- 					   	<option value="277881655546">中国银行天津融合广场支行</option>
+				 -->					   	<option value="1001233319005667868">中国工商银行上海宝山支行</option><option value="1001018619100004070" selected="selected">中国工商银行上海兰谷路支行</option><option value="金牌商家G2G账户">金牌商家G2G账户</option><option value="转账">转账</option><option value="446878560206">中国银行上海市友谊路支行</option><option value="1001279919005943746">工行自贸试验区外高桥保税区支行</option>
+							      </select>
+								</td>
 								<td class="title">到款账号：</td>
 								<td class="cont">1001018619100004070</td>
 							</tr>
@@ -74,7 +98,7 @@
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>欧元收款</label>
 								</td>
 								<td class="title">汇率：</td>
-								<td class="cont"><input type="text" class="ui-input tc pct50" value=""></td>
+								<td class="cont"><input type="text" class="ui-input pct40" value="" placeholder="请输入"  ></td>
 							</tr>
 							<tr class="resource-table">
 								<td class="title">到款类别：</td>
@@ -88,29 +112,38 @@
 							</tr>
 							<tr class="resource-table">
 							    <td class="title">合同号：</td>
-								<td class="cont"><a href="javascript:void(0)">SHLG20200817001</a></td>
+								<td class="cont"><a href="javascript:void(0)" onclick="showStep()">SHLG20200817001</a></td>
 								<td class="title">订单编号：</td>
 								<td class="cont">60957|E200817000010</td>
-								</tr>
-								<tr class="resource-table">
-							    <td class="title">合同号：</td>
-								<td class="cont"><a href="javascript:void(0)">SHLG20200817001</a></td>
-								<td class="title">订单编号：</td>
-								<td class="cont">60957|E200817000010</td>
-								</tr>
-								<tr class="resource-table">
-							    <td class="title">合同号：</td>
-								<td class="cont"><a href="javascript:void(0)">SHLG20200817001</a></td>
-								<td class="title">订单编号：</td>
-								<td class="cont">60957|E200817000010</td>
-								</tr>
-								<tr class="resource-table">
+							</tr>
+							<tr class="resource-table">
+							    <td class="title">合同金额(美元)：</td>
+								<td class="cont numFormat">10000</td>
+								<td class="title">已到款金额(美元)：</td>
+								<td class="cont">100000&emsp;银行费用总和：<span class="numFormat">0</span></td>
+							</tr>
+							<tr class="resource-table">
+							    <td class="title">本合同核销金额(美元)：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>用余额支付合同金额</label></td>
+								<td class="title">银行费用：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 " value="0" placeholder="请输入" ></td>
+							</tr>
+							<tr class="resource-table">
 							    <td class="title">备注说明：</td>
-								<td class="cont"><a href="javascript:void(0)">SHLG20200817001</a></td>
-								</tr>												 
+								<td class="cont">									
+									<textarea  name="gatherCash.remark" class="ui-textarea pct80" rows="3" value=""></textarea>
+								</td>
+								<td class="title">附件上传：</td>
+								<td class="cont"><button class="ui-button" data-type="upfile" type="button">附件上传</button></td>
+							</tr>												 
 						</tbody>
 					</table>
-
+					
+					<div class="tc  mt20 mb20">
+                    	<button type="button" class="ui-button mr10">提交</button>
+                    	<button type="button" class="ui-button mr10">打印收据</button>
+                    	<button type="button" class="ui-button" data-type="clear">返回</button>
+                    </div>
 
 				</div>
 			</div><!-- ui-content end -->

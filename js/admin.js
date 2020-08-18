@@ -205,7 +205,7 @@ function getHeader(){
 
 
 function getScroll(){
-	if($("body").hasClass("fixtab")&&$(".lgui-table-box").length>1){
+	if($("body").hasClass("fixtab")&&$(".lgui-table-box").length>0){
 		var defaultHeight=$(".lgui-table-header").height();
 		$(window).scroll(function(){
 			var s=$(window).scrollTop();
