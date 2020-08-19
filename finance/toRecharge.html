@@ -11,12 +11,12 @@
 	<title>充值</title>	
   <style>
     html,body{background: #fff}
-    
+
   </style>
 </head>
 <body class="showTip">
     <div class="p20">
-      <table class="ui-table tc f12 auto mt10 " width="100%">
+      <table class="ui-table tc f12 auto  " width="100%">
          <tbody>
 	            <tr class="resource-table">
 	            	<td class="title" width="20%">金牌商家：</td>
@@ -29,7 +29,7 @@
 	            <tr class="resource-table">
 	            	<td class="title">充值类型：</td>
 	            	<td class="cont">
-	            		<select id="billType" name="gtGMoneyMain.billType" class="ui-input">
+	            		<select id="billType" name="gtGMoneyMain.billType" class="ui-input pct80">
 				             <option value="10">无</option>
 				             <option value="8">短期活动</option>
 							 <option value="42">电话费</option>
@@ -44,19 +44,25 @@
 	            </tr>
 	             <tr class="resource-table">
 	            	<td class="title">充值金额：</td>
-	            	<td class="cont">元</td>
+	            	<td class="cont">
+	            		<span class="ui-input pct80" data-type="price"><input type="text" value="" placeholder="输入调整后价格"><span class="r">元</span></span>
+	            	</td>
 	            </tr>
 	            <tr class="resource-table">
 	            	<td class="title">充值账户：</td>
-	            	<td class="cont">元</td>
+	            	<td class="cont radio">
+	            		<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>乐财宝</label>
+	            		<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>G2G钱包</label>
+	            		<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>分红余额</label>
+	            	</td>
 	            </tr>
 	            <tr class="resource-table">
 	            	<td class="title">订单号：</td>
-	            	<td class="cont"></td>
+	            	<td class="cont"><input type="text" class="ui-input pct80" placeholder="请输入" autocomplete="off"></td>
 	            </tr>
 	            <tr class="resource-table">
 	            	<td class="title">备注：</td>
-	            	<td class="cont"></td>
+	            	<td class="cont"><textarea name="gatherCash.remark" class="ui-textarea pct80" rows="3" value="" placeholder="请填写"></textarea></td>
 	            </tr>
 	      </tbody>
 	  </table>
