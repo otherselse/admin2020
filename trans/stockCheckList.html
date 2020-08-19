@@ -109,9 +109,9 @@
 		                            <td width="10%">30</td>
 		                            <td width="10%">0</td>
 		                            <td width="9%">之华</td>
-		                            <td width="10%">已盘点</td>
-		                            <td width="10%">待复核</td>
-		                            <td width="8%"><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td width="10%" class="lred">未盘点</td>
+		                            <td width="10%">--</td>
+		                            <td width="8%"><a href="javascript:void(0)" onclick="unshowLayer(this)"  class="ui-button plr10" data-type="smallbbr">盘点</a></td>
 		                        </tr>
 		                        <tr>
 		                            <td>2</td>
@@ -137,7 +137,7 @@
 		                            <td>之华</td>
 		                            <td>已盘点</td>
 		                            <td>待复核</td>
-		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
+		                            <td><a href="javascript:void(0)" onclick="showLayer(this)" >查看</a></td>
 		                        </tr>
 		                        <tr>
 		                            <td>4</td>
@@ -162,7 +162,7 @@
 		                            <td>0</td>
 		                            <td>之华</td>
 		                            <td>已盘点</td>
-		                            <td>待复核</td>
+		                            <td><a href="javascript:void(0)" class="tiptop ui-icon-circles" title="操&ensp;作&ensp;人：瞿智强<br/>操作时间：2018-10-15 13:59:44<br/>操作类型：<span class='red'>未通过</span><br/>备&emsp;&emsp;注：313131231">未通过</a></td>
 		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
 		                        </tr>
 		                        <tr>
@@ -175,16 +175,16 @@
 		                            <td>0</td>
 		                            <td>之华</td>
 		                            <td>已盘点</td>
-		                            <td>待复核</td>
+		                            <td><a href="javascript:void(0)" class="tiptop ui-icon-circles" type="green" title="操&ensp;作&ensp;人：瞿智强<br/>操作时间：2018-10-15 13:59:44<br/>操作类型：<span class='green'>已通过</span><br/>备&emsp;&emsp;注：313131231">已通过</a></td>
 		                            <td><a href="javascript:void(0)" onclick="showLayer(this)">查看</a></td>
 		                        </tr>
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="40">
 		                    		<td colspan="4">当前页合计</td>
-		                    		<td>库存重量:<span id="allWeight" numtype="personal">151.734</span></td>
-		                    		<td>实盘重量:<span id="allCheckWeight" numtype="personal">126.021</span></td>
-		                    		<td>差异重量:<span id="allDifWeight" numtype="personal">25.713</span></td>
+		                    		<td><span id="allWeight" numtype="personal">151.734</span></td>
+		                    		<td><span id="allCheckWeight" numtype="personal">126.021</span></td>
+		                    		<td><span id="allDifWeight" numtype="personal">25.713</span></td>
 		                    		<td colspan="4"></td>
 		                    	</tr>
 		                    	<tr height="40">
@@ -235,6 +235,17 @@
 				shade: 0.4,
 				area: ['80%', '80%'],
 				content: 'pdlist.html' //iframe的url
+			});
+		}
+
+		function unshowLayer(){
+			layer.open({
+				type: 2,
+				title: '盘点明细',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'unpdlist.html' //iframe的url
 			});
 		}
 		

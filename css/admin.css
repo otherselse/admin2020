@@ -127,7 +127,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 /*bar*/
 .leftBar{width: 200px;box-shadow:10px 17px 20px 0px #EEF1F6;position:absolute;left:0;bottom:0;background:#FAFAFB;top:76px;transition: all 0.5s;-webkit-transition: all 0.5s;overflow-y: auto;padding-top:20px;}
 
-.menuItem{color:#282828;margin:0px 0 10px 20px;display: inline-block;}
+.menuItem{color:#282828;margin:0px 0 10px 20px;display:block;}
 .menuItemText{display: inline-block;min-width: 100px;}
 .smenu{display: none}
 .open > .smenu{display: block;}
@@ -290,12 +290,18 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 }
 
 
+/*弹框*/
+.isPc{font-size: 14px !important}
+.isPc .f12{font-size: 12px !important}
 
+
+/*mobile*/
 @media only screen and (max-width: 1100px) {
  .f12{font-size: 16px !important}
  .f14{font-size: 16px !important}
  .nav{font-size:16px !important;}
- 
+ .ui-button[data-type='smallbbr']{min-width: auto;}
+ .ui-button.plr10{padding:0 5px;}
  .topBar .logo, .topBar .topRight{display: none;}
  .mDetailCont{max-width:220px;padding:30px 15px;line-height: 20px}
  .mDList+.mDList{margin-top:20px;}
@@ -320,7 +326,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
  .m_db{display: block;width: 100%}
  .m_index2{text-indent: 2em;}
  .m_index0{text-indent: 0;}
- .m_pct31{width: 55%}
+ .m_pct31{width: 50%}
  .m_pct80{width: 80%}
  .m_vt{vertical-align: top}
  .m_pct50{width: 50%}
@@ -329,6 +335,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
  .bLeftBar .leftBar{display: none;}
  .rightBar{left:0;}
  .selectProcName{width: 86%}
+ .m_tc{text-align: center}
 }
 
 /*小于1280 就不显示左侧的菜单 */

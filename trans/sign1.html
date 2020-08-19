@@ -150,8 +150,9 @@
 	                            <td>2020-07-24 13:20:13</td>
 	                            <td>李四</td>
 	                            <td>
-	                            	<a href="javascript:void(0)" class="mr5" onclick="showDiv_lrl(this)">查看</a>
-	                            	<a href="javascript:void(0)" id="10001" class="ui-button tipclick" qtip-dom="dom1" data-type="smallbbr" onclick="setmyDom(this)">核查</a></td>
+	                            	<a href="javascript:void(0)" id="10001" class="tipclick" qtip-dom="dom1" onclick="setmyDom(this)">核查</a><span class="ml5 mr5 dib gd9">|</span>
+	                            	<a href="javascript:void(0)" class="g28" onclick="showTrMore(this)">查看</a>
+	                            	</td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="16">
@@ -322,15 +323,6 @@
 		})
 
 
-		function showDiv_lrl(obj){
-			if($(obj).parents("tr").next(".hideTr").css("display")=="none"){
-                $(obj).parents("tr").next(".hideTr").show();
-                $(obj).text("收起").addClass("down");
-			}else{
-				$(obj).parents("tr").next(".hideTr").hide();
-                $(obj).text("申请确认").removeClass("down");
-			}
-		}
 
 		var _tid=''
 		function setmyDom(obj){
