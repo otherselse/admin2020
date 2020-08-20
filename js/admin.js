@@ -5,6 +5,7 @@ $(function(){
 	})
 	$("body").on("mousewheel",function() {
 		setHeight();
+		getHeader();
 	});
 
 

@@ -56,13 +56,13 @@
 		                            <th width="5%">序号</th>
 		                            <th width="10%">时间</th>
 		                            <th width="8%">金牌商家编号</th>
-		                            <th width="8%">金牌商家</th>
+		                            <th width="6%">金牌商家</th>
 		                            <th width="7%">账号</th>
 		                            <th width="10%">手机号码</th> 
 		                            <th width="7%">所属地区</th>
 		                            <th width="8%">系统充值余额</th>  
 		                            <th width="8%">个人充值余额</th>
-		                            <th width="7%">税金</th> 
+		                            <th width="9%">税金</th> 
 		                            <th width="8%">G2G总额</th>
 		                            <th width="14%">操作</th>                          
 		                        </tr>
@@ -76,15 +76,15 @@
 		                    	 <tr><td width="5%">1</td>
 		                            <td width="10%">2020-04-05  1:30:05</td>
 		                            <td width="8%">13233</th>
-		                            <td width="8%">李四</td>
+		                            <td width="6%">李四</td>
 		                            <td width="7%">fenghh</td>
 		                            <td width="10%">15221566431</td> 
 		                            <td width="7%">天津</td>
 		                            <td width="8%"><div class="pr10 bkall numFormat tr">22122330</div></td>  
 		                            <td width="8%" ><div class="pr10 bkall numFormat tr">12330</div></td>
-		                            <td width="7%" ><div class="pr10 bkall numFormat tr">12330</div></td> 
+		                            <td width="9%" ><div class="pr10 bkall numFormat tr">12330</div></td> 
 		                            <td width="8%"><div class="pr10 bkall numFormat tr">12330</div></td>
-		                            <td width="14%"><a href="javscript:void(0)" onclick="toCharge()">充值</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">冻结</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">解冻</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="g28" onclick="showTrMore(this)">查看</a></td>
+		                            <td width="14%"><a href="javscript:void(0)" onclick="toCharge()">充值</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="toLock()">冻结</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="toLock()">解冻</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="g28" onclick="showTrMore(this)">查看</a></td>
 		                        </tr>
 		                        <tr class="hideTr dn">
 		                        	<td colspan="12">
@@ -242,7 +242,7 @@
 		                            <td><div class="pr10 bkall numFormat tr">122330</div></td>
 		                            <td><div class="pr10 bkall numFormat tr">12330</div></td> 
 		                            <td><div class="pr10 bkall numFormat tr">122330</div></td>
-		                            <td><a href="javscript:void(0)">充值</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">冻结</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">解冻</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="g28">查看</a></td>
+		                            <td><a href="javscript:void(0)" onclick="toCharge()">充值</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="toLock()">冻结</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="toLock()">解冻</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" class="g28" onclick="showTrMore(this)">查看</a></td>
 		                        </tr>		                       
 		                    </tbody>
 		                    <tfoot>
@@ -316,6 +316,17 @@
 				shade: 0.4,
 				area: ['600px', '500px'],
 				content: 'toRecharge.html' //iframe的url
+			});
+		}
+
+		function toLock(){
+			layer.open({
+				type: 2,
+				title: '冻结',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['600px', '400px'],
+				content: 'toLock.html' //iframe的url
 			});
 		}
 		
