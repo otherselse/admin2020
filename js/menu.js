@@ -31,10 +31,9 @@
 		,{"title":"财务管理",
 		 "menuList":[
 			 	{"bigM":"款项类","smallM":[{"mtitle":"收款","href":"../finance/gathering.html"},{"mtitle":"加工收款","href":"../finance/gatheringProc.html"},{"mtitle":"付款","href":"../finance/payment.html"},{"mtitle":"金牌商家账户充值","href":"../finance/gtGMoney.html"},{"mtitle":"出口退税","href":"../finance/settlementList.html"},{"mtitle":"支付结算","href":"../index/index.html"},{"mtitle":"银企直连指令查询","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-
-
-
+			 	,{"bigM":"发票类","smallM":[{"mtitle":"开票","href":"../finance/invoiceQuery.html"},{"mtitle":"加工开票","href":"../finance/newToOutputInvoiceProcList.html"},{"mtitle":"采购发票登记","href":"../finance/getInvoice.html"},{"mtitle":"费用收票登记","href":"../finance/getInvoiceDepot.html"},{"mtitle":"报销发票登记","href":"../index/index.html"},{"mtitle":"应收票据备查蒲","href":"../index/index.html"}]}	
+			 	,{"bigM":"表单类","smallM":[{"mtitle":"收付款记录","href":"../index/index.html"},{"mtitle":"库存暂估","href":"../index/index.html"},{"mtitle":"出库审核记录","href":"../index/index.html"},{"mtitle":"往来账","href":"../index/index.html"},{"mtitle":"银行收支情况","href":"../index/index.html"},{"mtitle":"订单提出","href":"../index/index.html"}]}
+			 	,{"bigM":"操作类","smallM":[{"mtitle":"资金日报录入","href":"../index/index.html"},{"mtitle":"经营报表录入","href":"../index/index.html"},{"mtitle":"收据","href":"../index/index.html"},{"mtitle":"汇兑管理","href":"../index/index.html"},{"mtitle":"优惠券管理","href":"../index/index.html"},{"mtitle":"乐付宝账号管理","href":"../index/index.html"}]}	
 			]
 		}
 		,{"title":"单据管理",
@@ -182,17 +181,3 @@
 })
 
 
-function IsPC() {
-    var userAgentInfo = navigator.userAgent;
-    var Agents = ["Android", "iPhone",
-                "SymbianOS", "Windows Phone",
-                "iPad", "iPod"];
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-            break;
-        }
-    }
-    return flag;
-}

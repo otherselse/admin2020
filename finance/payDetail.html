@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>收款-财务管理-乐刚智能云系统</title>
+	<title>付款-财务管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	
 	
@@ -30,38 +30,49 @@
 		            <span class="dib pl5 pr5 ">/</span>
 		            财务管理
 		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">收款</span>
+		            <span class="g28">付款</span>
 		        </div>
 		        <div class="r m_dn">
 	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 	        	</div>
 	        </div>
+	        <div class="ui-tab3">
+				<a href="payment.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">贸易复核</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="searchPayCash.html" class="ui-tab3-list rel"><span class="ui-tab3-text">费用支出付款</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="otherPay.html" class="ui-tab3-list rel"><span class="ui-tab3-text">其他收支</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
 			<div class="ui-content ovh minH">
-				<div class="bbe lh50 pl20"><a href="gathering.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>		
+				<div class="bbe lh50 pl20"><a href="payment.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>		
 				<div class="p20 f12">
-					<div class="">销售收款 (金牌商家:<span class="g28">尹相春</span>) </div>
+					<div class="">
+						<span class="dib pct15">申请人:<span class="g28">尹相春</span></span>
+						<span class="dib pct15">订单累计收款:<span class="g28 numFormat">122345678</span></span>
+						<span class="dib pct15">订单累计付款:<span class="g28 numFormat">122345678</span></span>
+						<span class="dib pct15">订单余额:<span class="g28 numFormat">122345678</span></span>
+						<span class="dib pct15">订单号:<span class="g28 ">122345678</span></span>
+					</div>
 					<table class="ui-table tc f12 auto mt10 " width="100%">
 						<tbody>
 							<tr class="resource-table">
-								<td class="title" width="13%">付款单位：</td>
+								<td class="title" width="13%">收款单位：</td>
 								<td width="37%" class="cont">简简单单企业</td>
 								<td class="title" width="13%">账户余额：</td>
-								<td width="37%" class="cont"><span class="numFormat">1232332232</span>(客户余额)</td>
+								<td width="37%" class="cont"><span class="numFormat">1232332232</span>(单位)</td>
 							</tr>
 							<tr class="resource-table">
-								<td class="title">付款银行：</td>
+								<td class="title">收款银行：</td>
 								<td class="cont">中国银行</td>
 								<td class="title">付款账号：</td>
 								<td class="cont">65214568565486</td>
 							</tr>
 							<tr class="resource-table">
-								<td class="title">到款单号：</td>
+								<td class="title">收款银行归属地（所在城市）：</td>
 								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" ></td>
-								<td class="title">到款日期：</td>
+								<td class="title">付款日期：</td>
 								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
 							</tr>
 							<tr class="resource-table">
-								<td class="title">到款银行：</td>
+								<td class="title">付款银行：</td>
 								<td class="cont">
 									<select id="selfBank" class="ui-input pct80">
 							      		<option value="120908385010402">招商银行上海自贸试验区分行</option>
@@ -87,64 +98,62 @@
 				 -->					   	<option value="1001233319005667868">中国工商银行上海宝山支行</option><option value="1001018619100004070" selected="selected">中国工商银行上海兰谷路支行</option><option value="金牌商家G2G账户">金牌商家G2G账户</option><option value="转账">转账</option><option value="446878560206">中国银行上海市友谊路支行</option><option value="1001279919005943746">工行自贸试验区外高桥保税区支行</option>
 							      </select>
 								</td>
-								<td class="title">到款账号：</td>
+								<td class="title">付款账号：</td>
 								<td class="cont">1001018619100004070</td>
 							</tr>
-							<tr class="resource-table">
-								<td class="title">核销类型：</td>
-								<td class="cont radio">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('人民币','rmb')"></i>人民币收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('美元','my')"></i>美元收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('欧元','oy')"></i>欧元收款</label>
-								</td>
-								<td class="title">汇率：</td>
-								<td class="cont"><input type="text" class="ui-input pct40" value="" placeholder="请输入"  ></td>
-							</tr>
-							<tr class="resource-table accountType dn">
-							    <td class="title"><span id="accountT"></span>收款：</td>
+							<tr class="resource-table txfy_mainDiv dn">
+							    <td class="title">付款金额：</td>
 								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
 								<td class="title"></td>
 								<td class="cont"></td>
-							</tr>
+							</tr>						
+
 							<tr class="resource-table">
-								<td class="title">到款类别：</td>
-								<td class="cont radio" colspan="3">
+								<td class="title">付款类别：</td>
+								<td class="cont radio" >
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('电子银行承兑汇票')" value="40010"></i>电子银行承兑汇票</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"   name="gatherCash.accountType" onclick="setValue('电汇')" value="4003"></i>电汇</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('银行转账支票')" value="4002"></i>银行转账支票</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('现金')" value="4001"></i>现金</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('转账')" value="16024"></i>转账</label>
 								</td>
+								<td class="title">代付款证明：</td>
+								<td class="cont"></td>
 							</tr>
-							<tr class="resource-table txfy_mainDiv dn">
-							    <td class="title">贴息费用：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-								<td class="title">出票单位：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-							</tr>
-							<tr class="resource-table txfy_mainDiv dn">
-							    <td class="title">汇票号码：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-								<td class="title">汇票到期日：</td>
-								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
+							
+							
+							<tr class="resource-table">
+							    <td class="title">申请单号：</td>
+								<td class="cont">上海制裁有限公司200255</td>
+								<td class="title">付款申请类别：</td>
+								<td class="cont">仓库费用付款申请</td>
 							</tr>
 							<tr class="resource-table">
-							    <td class="title">合同号：</td>
-								<td class="cont"><a href="javascript:void(0)" onclick="showStep()">SHLG20200817001</a></td>
-								<td class="title">订单编号：</td>
-								<td class="cont">60957|E200817000010</td>
-							</tr>
-							<tr class="resource-table">
-							    <td class="title">合同金额(美元)：</td>
+							    <td class="title">应付金额：</td>
 								<td class="cont numFormat">10000</td>
-								<td class="title">已到款金额(美元)：</td>
-								<td class="cont">100000&emsp;银行费用总和：<span class="numFormat">0</span></td>
+								<td class="title">订单总收款金额：</td>
+								<td class="cont"><span class="numFormat">0</span></td>
 							</tr>
 							<tr class="resource-table">
-							    <td class="title">本合同核销金额(美元)：</td>
-								<td class="cont checkbox"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>用余额支付合同金额</label></td>
-								<td class="title">银行费用：</td>
+							    <td class="title">核销金额：</td>
 								<td class="cont"><input type="text" class="ui-input pct40 " value="0" placeholder="请输入" ></td>
+								<td class="title">订单总付款金额：</td>
+								<td class="cont"><input type="text" class="ui-input pct40 " value="0" placeholder="请输入" ></td>
+							</tr>
+							<tr class="resource-table">
+							    <td class="title">金额处理：</td>
+								<td class="cont checkbox">
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>结清</label>
+									<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>合并记账</label>
+								</td>
+								<td class="title"></td>
+								<td class="cont"></td>
+							</tr>
+							<tr class="resource-table">
+							    <td class="title">是否使用G2G钱包：</td>
+								<td class="cont">否</td>
+								<td class="title">G2G账户可用余额：</td>
+								<td class="cont"><span class="numFormat">0</span></td>
 							</tr>
 							<tr class="resource-table">
 							    <td class="title">备注说明：</td>
@@ -162,8 +171,7 @@
 					
 					<div class="tc  mt20 mb20">
                     	<button type="button" class="ui-button mr10">提交</button>
-                    	<button type="button" class="ui-button mr10">打印收据</button>
-                    	<button type="button" class="ui-button" data-type="clear" onclick="window.location='gathering.html'">返回</button>
+                    	<button type="button" class="ui-button" data-type="clear" onclick="window.location='payment.html'">返回</button>
                     </div>
 
 				</div>
@@ -185,7 +193,7 @@
 
 	<script>
 		$(function(){
-			$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
 

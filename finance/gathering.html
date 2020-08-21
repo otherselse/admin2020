@@ -93,7 +93,7 @@
 		                            <td width="10%">销售合同收款</td>
 		                            <td width="10%" class="numFormat">500000</td>
 		                            <td width="10%"><a class="tiptop" title="订单累计收款金额">0</a></td>
-		                            <td width="17%"><a href="sellGatheringDetail.html">收款</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">结束</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">承兑汇票收回</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" class="g28">历史</a></td>
+		                            <td width="17%"><a href="sellGatheringDetail.html">收款</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="closeGather()">结束</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="gatherBankBill()">承兑汇票收回</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" class="g28" onclick="hisGather()">历史</a></td>
 		                        </tr>
 		                        <tr><td>2</td>
 		                            <td>2020-04-05  1:30:05</td>
@@ -104,7 +104,7 @@
 		                            <td>销售合同收款</td>
 		                            <td class="numFormat">500000</td>
 		                            <td><a class="tiptop numFormat" title="订单累计收款金额">34545450</a></td>
-		                            <td><a href="javascript:void(0)">收款</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">结束</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)">承兑汇票收回</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" class="g28">历史</a></td>
+		                            <td><a href="sellGatheringDetail.html">收款</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="closeGather()">结束</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="gatherBankBill()">承兑汇票收回</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" class="g28" onclick="hisGather()">历史</a></td>
 		                        </tr>
 		                       
 		                    </tbody>
@@ -142,6 +142,33 @@
 
 		})
 
+		function gatherBankBill(){
+			layer.open({
+				type: 2,
+				title: '承兑汇票收回',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'gatherbankBill.html' //iframe的url
+			});
+		}
+
+		function hisGather(){
+			layer.open({
+				type: 2,
+				title: '收款记录',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'gatherLog.html' //iframe的url
+			});
+		}
+
+		function closeGather(){
+			if(confirm("是否完成并关闭该收款？")){
+
+			}
+		}
 
 		
 		

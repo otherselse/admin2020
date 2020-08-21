@@ -14,7 +14,7 @@
 	
 	
 </head>
-<body class="showTip fixtab">
+<body class="showTip">
 	<script type="text/javascript" src="../js/topBar.js"></script>	
 	<!-- 头部菜单 -->
 	<script type="text/javascript" src="../js/menu.js"></script>
@@ -144,60 +144,108 @@
 
 	                <!-- search end -->
 
-					<div class="lgui-table-box mt30 checkbox">
-						<div class="lgui-table-header">
+						<div class="lgui-table-body mt30 checkbox">
 							<table class="ui-table tc f12 " width="100%">
-		                    <thead>
+								<thead>
 		                        <tr>
-		                            <th width="5%"></th>
-		                            <th width="12%">时间</th>
-		                            <th width="5%">订单号</th>
-		                            <th width="8%">订单类型</th>
-		                            <th width="10%">业务类型</th>
-		                            <th width="15%" class="tl"><div class="pl10">单位名称</div></th>
-		                            <th width="10%">收款类型</th>
-		                            <th width="10%">合同金额</th>
-		                            <th width="10%">已收款金额</th>
-		                            <th width="15%">操作</th>                            
+		                            <th width="12%" class="tl"><div class="pl10"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/货主单位</div></th>
+		                            <th width="12%" class="tl"><div class="pl10"><label class="sort-list dib poi">单据号<i class="goldIcon icon-sort vm ml5"></i></label></div></th>
+		                            <th width="8%"><label class="sort-list dib poi">业务日期<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="8%">费用类型</th>
+		                            <th width="8%"><label class="sort-list dib poi">重量<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="8%" ><label class="sort-list dib poi">单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="8%"><label class="sort-list dib poi">业务金额<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="8%"><label class="sort-list dib poi">应收金额<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="12%"  class="tl"><div class="pl10">付款单位</div></th>
+		                            <th width="12%"  class="tl"><div class="pl10">加盟公司</div></th>
 		                        </tr>
 		                    </thead>
-		                </table>
-
-						</div>
-						<div class="lgui-table-body mt-1">
-							<table class="ui-table tc f12 " width="100%">
 		                    <tbody class="ui-thover">
-		                    	 <tr><td width="5%">1</td>
-		                            <td width="12%">2020-04-05  1:30:05</td>
-		                            <td width="5%">1233</th>
-		                            <td width="8%">定购</td>
-		                            <td width="10%">欠款业务</td>
-		                            <td width="15%" class="tl"><div class="pl10"><a href="javascript:void(0)" title="名称:上海市爱尚有限公司<br/>联系人:唐宇捷" class="tiptop">上海市爱尚有限公司</a></div></td>
-		                            <td width="10%">销售合同收款</td>
-		                            <td width="10%" class="numFormat">500000</td>
-		                            <td width="10%"><a class="tiptop" title="订单累计收款金额">0</a></td>
-		                            <td width="15%"><a href="javascript:void(0)">收款</a><span class="ml5 mr5 dib gd9">|</span><a  class="ui-button  tipclick mr10" data-type="smallbbr" href="javascript:void(0)">结束</a><a  class="ui-button  tipclick plr10 mr10" data-type="smallbbr" href="javascript:void(0)">承兑汇票收回</a><a>历史</a></td>
+		                        <tr><td class="tl"><div class="pl10"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>中国邮政运输集团</div></td>
+		                            <td class="tl"><div class="pl10">BDE(22)-20000044</div></td>
+		                            <td>2020-04-05</th>
+		                            <td>加班费</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
+									<td class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
 		                        </tr>
-		                        <tr><td>2</td>
-		                            <td>2020-04-05  1:30:05</td>
-		                            <td>1233</th>
-		                            <td>定购</td>
-		                            <td>欠款业务</td>
-		                            <td class="tl"><div class="pl10"><a href="javascript:void(0)" title="名称:上海市爱尚有限公司<br/>联系人:唐宇捷" class="tiptop">上海市爱尚有限公司</a></div></td>
-		                            <td>销售合同收款</td>
-		                            <td class="numFormat">500000</td>
-		                            <td><a class="tiptop numFormat" title="订单累计收款金额">34545450</a></td>
-		                            <td><a>收款</a><a>结束</a><a>承兑汇票收回</a><a>历史</a></td>
-		                        </tr>
-		                       
+		                        <tr><td class="tl"><div class="pl10"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>中国邮政运输集团</div></td>
+		                            <td class="tl"><div class="pl10"><span class="green mr2">开票中</span>BDE(22)-20000044</div></td>
+		                            <td>2020-04-05</th>
+		                            <td>加班费</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td>25.36</td>
+		                            <td class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
+									<td class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
+		                        </tr>		                       
 		                    </tbody>
+		                    <tfoot>
+		                    	<tr height="45">
+		                    		<td colspan="10" class="tl">
+		                    			<span class="pl10 pr20"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</span>
+                                		<span class="">当前共选择(<span class="red">3</span>)条信息</span>
+                                		<span class="ml20">业务金额合计(元)：<span class="red numFormat" >3000</span>元</span>
+                            
+		                    		</td>
+		                    	</tr>
+		                    </tfoot>
 
 		                </table>
-
-						</div>
-		                
-	            	</div>
 	                <!-- table end -->
+
+					<table class="ui-table tc f12 auto mt20" width="100%">
+				        <tbody>
+				          <tr class="resource-table">
+				            <td class="title" width="13%">收款方式：</td>
+				            <td width="37%" class="cont radio">
+				            	<input type="hidden" value="" id="collection_pay" />
+				            	<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setPay(0)"></i>扫码支付</label>
+				                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setPay(1)"></i>余额支付</label>
+				            </td>
+				            <td class="title" width="13%">结算单位：</td>
+				            <td width="37%" class="cont">
+				            	<span class="input-selSearch pct50">
+									<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
+									<div class="search-cont" >
+										<a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+				            </td>
+				          </tr>
+				          <tr class="resource-table">
+				                <td class="title"><span class="red">*</span>应收款金额：</td>
+				                <td class="cont">￥<span class="numFormat">11111.55</span></td>
+				                <td class="title"><span class="red">*</span>实收款金额：</td>
+				                <td class="cont">￥<span class="numFormat">1233233</span></td>
+				          </tr>
+				          <tr class="resource-table dn account_bal">
+				                <td class="title">账户余额：</td>
+				                <td class="cont">￥<span class="numFormat">11111.55</span></td>
+				                <td class="title">账户充值：</td>
+				                <td class="cont"><button class="ui-button" data-type="normal" type="button" onclick="advanceCharge()">预付款充值</button></td>
+				          </tr>
+				          <tr class="resource-table">
+				                <td class="title">结算说明：</td>
+				                <td class="cont" colspan="3">
+				                	<textarea name="gatherCash.remark" class="ui-textarea pct95" rows="3" value="" placeholder="请填写"></textarea>
+				                </td>
+				          </tr>
+				        </tbody>
+				      </table>
+				      <div class="tc  mt20 mb20">
+                    	<button type="button" class="ui-button" onclick="goNext()">确认收款</button>
+                    </div>
+
 	                <script type="text/javascript" src="../js/pagelist.js"></script>
 
 
@@ -208,7 +256,49 @@
 
 
 
-
+	<div class="dn" id="yfkshow">
+		<table class="ui-table tc f12 auto mt10" width="96%">
+		        <tbody>
+		          <tr class="resource-table">
+		            <td class="title" width="20%">收款方式：</td>
+		            <td width="80%" class="cont">
+		            	<input type="hidden" value="0" id="collection_pay">
+		            	<label class=""><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" checked=""></i>扫码支付</label>
+		            </td>
+				 </tr>
+				 <tr class="resource-table">
+		            <td class="title">充值单位：</td>
+		            <td class="cont ">
+		            	<span class="input-selSearch pct80">
+						<input type="text" class="ui-input searchUp pct100" placeholder="输入助记码或汉字搜索" autocomplete="off">
+						<div class="search-cont" >
+							<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+						</div>
+					</span>
+		            </td>
+		        </tr>
+		        <tr class="resource-table">
+		            <td class="title">充值金额：</td>
+		            <td class="cont "><span class="ui-input pct80" data-type="price"><span class="dib f16 vm">￥</span><input type="text" value="" placeholder="请输入" class="pct80"><span class="r">元</span></span></td>
+		        </tr>
+		        <tr class="resource-table">
+		            <td class="title">充值说明：</td>
+		            <td class="cont ">
+		            	<textarea  class="ui-textarea pct95" rows="3" value="" placeholder="请填写"></textarea>
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+		<div class="tc  mt20 mb20">
+        	<button type="button" class="ui-button mr10 w90">确定</button>
+        	<button type="button" class="ui-button w90" data-type="clear" id="ye_payClose">取消</button>
+        </div>
+	</div>
 
 	
 	
@@ -248,6 +338,50 @@
 			}
 		}
 
+
+		function goNext(){ //用于静态页面展示
+			if($("#collection_pay").val()=='0'){  //扫码支付
+				
+				layer.open({
+					type: 2,
+					title: '付款确认单',
+					shadeClose: false,
+					shade: 0.4,
+					area: ['80%', '80%'],
+					content: 'wxScan.html' //iframe的url
+				});
+
+			}else if($("#collection_pay").val()=='1'){ //余额
+				
+			}else{
+				layer.alert('请选择收款方式');
+				return;
+			}
+			
+		}
+
+		function setPay(flag){ //用于展示
+			$("#collection_pay").val(flag);
+			if(flag==0){
+				$(".account_bal").hide();
+			}else if(flag==1){
+				$(".account_bal").show();
+			}
+		}
+
+		function advanceCharge(){
+			var ipage=layer.open({
+					type: 1,
+					title: '预付款充值',
+					shadeClose: false,
+					shade: 0.4,
+					area: ['500px', '400px'],
+					content: $('#yfkshow')
+				});
+			$("#ye_payClose").on("click",function(){
+				layer.close(ipage);
+			})
+		}
 		
 		
 	</script>
