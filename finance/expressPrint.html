@@ -48,28 +48,28 @@
 				<div class="p20 f12">
 					<div class="mb10 f0">
 						<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
-						<span class="pct25 dib f12">发票单位：<span class="input-selSearch pct69">
-								<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off" readonly="">
+						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12">&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12">&emsp;&emsp;单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						
+					</div>
+					<div class="mb10 f0">
+						<span class="pct25 dib f12">快递单号：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
+						<span class="pct25 dib f12">快递公司：<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">北京</a>
-									<a href="javascript:void(0)" class="search-list db ell">上海</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									<a href="javascript:void(0)" class="search-list db ell">中通快递</a>
+									<a href="javascript:void(0)" class="search-list db ell">顺丰快递</a>
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct25 dib f12">是否已打印：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
 						</span>
-						<span class="pct25 dib f12">区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>	
-					</div>
-					<div class="mb10 f0">
-						<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
-						<span class="pct25 dib f12">发票单位：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off">
-						</span>
-						<span class="pct25 dib f12 m_pct31">发票开具日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct25 dib f12 m_pct31 m_mt10">队列生成时间：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>
 					</div>	
@@ -87,17 +87,18 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="6%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div></th>
-		                            <th width="15%" class="tl"><div class="pl10">发票单位名称</div></th>  
-		                            <th width="6%">费用类型</th>
-		                            <th width="8%">发票名称</th>
-		                            <th width="8%">发票号</th> 
-		                            <th width="12%">已开票不含税金额</th>
-		                            <th width="11%">已开票销项税额</th>
-		                            <th width="10%">已开票金额</th>
-		                            <th width="10%">开票开具日期</th>
-		                            <th width="7%">开票人</th>
-		                            <th width="7%">快递方式</th>
+		                            <th width="10%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</div></th>
+		                            <th width="15%" class="tl"><div class="pl10">单位名称</div></th>  
+		                            <th width="6%">联系人</th>
+		                            <th width="13%" class="tl"><div class="pl10 ">联系地址</div></th>
+		                            <th width="8%">电话</th> 
+		                            <th width="6%">快递公司</th>
+		                            <th width="6%">金牌商家</th>
+		                            <th width="8%">联系方式</th>
+		                            <th width="8%">队列生成时间</th>
+		                            <th width="7%">快递单号</th>
+		                            <th width="7%">发票号</th>
+									<th width="6%">操作</th>
 		                        </tr>
 		                    </thead>
 		                </table>
@@ -107,56 +108,44 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-		                            <td width="6%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>1</div></td>
+		                            <td width="10%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>51119</div></td>
 		                            <td width="15%" class="tl"><div class="pl10">融金在线资本管理（青岛）有限公司</div></td>  
-		                            <td width="6%">加工费用</td>
-		                            <td width="8%">仓储发票</td>
-		                            <td width="8%">111111</td> 
-		                            <td width="12%" class="numFormat">4111111</td>
-		                            <td width="11%" class="numFormat">3434</td>
-		                            <td width="10%" class="numFormat">3434</td>
-		                            <td width="10%">2020-11-20 11:11：11</td>
-		                            <td width="7%">王家伟</td>
-		                            <td width="7%">上门取件</td>
+		                            <td width="6%">李四</td>
+		                            <td width="13%" class="tl"><div class="pl10 ">上海市马陆镇白银路新城金郡88弄12号楼1402 </div></td>
+		                            <td width="8%" class="bkall">13012345678</td> 
+		                            <td width="6%">中通快递</td>
+		                            <td width="6%">吴伟涛</td>
+		                            <td width="8%" class="bkall">13012345678</td>
+		                            <td width="8%">2020-11-20 11:11：11</td>
+		                            <td width="7%">123123</td>
+		                            <td width="7%">1233</td>
+		                            <td width="6%"><a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">打印</a></td>
 		                        </tr>
 		                        <tr>
-		                           <td class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>1</div></td>
-		                            <td  class="tl"><div class="pl10">融金在线资本管理（青岛）有限公司</div></td>  
-		                            <td >加工费用</td>
-		                            <td >仓储发票</td>
-		                            <td >111111</td> 
-		                            <td class="numFormat">4111111</td>
-		                            <td class="numFormat">3434</td>
-		                            <td class="numFormat">3434</td>
+		                           <td class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>51119</div></td>
+		                            <td class="tl"><div class="pl10">融金在线资本管理（青岛）有限公司</div></td>  
+		                            <td >李四</td>
+		                            <td class="tl"><div class="pl10 ">上海市马陆镇白银路新城金郡88弄12号楼1402 </div></td>
+		                            <td class="bkall">13012345678</td> 
+		                            <td >中通快递</td>
+		                            <td >吴伟涛</td>
+		                            <td class="bkall">13012345678</td>
 		                            <td >2020-11-20 11:11：11</td>
-		                            <td >王家伟</td>
-		                            <td >上门取件</td>
+		                            <td >123123</td>
+		                            <td >1233</td>
+		                            <td ><a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">打印</a></td>
 		                        </tr>
 
 		                    </tbody>
 		                    <tfoot>
 		                    	<tr height="45">
-		                    		<td colspan="11">
-		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    </span>
+		                    		<td colspan="12">
+		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</span>
 		                    			<span class="r mr10">
-		                    				<button class="ui-button mr10 plr10"  type="button">导出凭证</button>
-		                    				<button class="ui-button plr10 mr10" data-type="normal" type="button">取消凭证</button>
+		                    				<button class="ui-button mr10 plr10"  type="button">导出快递单</button>
+		                    				<button class="ui-button plr10 mr10" type="button">批量打印</button>
 		                    			</span>
 		                    		</td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="5">当页合计</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">936</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td colspan="4"> </td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="5">所有页汇总</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td class="numFormat">945456</td>
-		                    		<td colspan="4"> </td>
 		                    	</tr>
 
 		                    </tfoot>
@@ -176,7 +165,13 @@
 
 
 
-
+	<div class="dom1 dn">
+		<div class="pb10">
+			<div class="mb10"><i class="admIcon icondoubt vm mr5"></i>是否确认推送到快递管家?</div>
+			<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
+			<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
+		</div>
+	</div>
 
 	
 	
