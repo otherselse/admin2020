@@ -36,12 +36,20 @@
 			 	,{"bigM":"操作类","smallM":[{"mtitle":"资金日报录入","href":"../index/index.html"},{"mtitle":"经营报表录入","href":"../index/index.html"},{"mtitle":"收据","href":"../index/index.html"},{"mtitle":"汇兑管理","href":"../index/index.html"},{"mtitle":"优惠券管理","href":"../index/index.html"},{"mtitle":"乐付宝账号管理","href":"../index/index.html"}]}	
 			]
 		}
-		,{"title":"评审管理5",
+		,{"title":"单据管理",
 		 "menuList":[
-			 	{"bigM":"角色管理类5-1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	 ,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+				 {"bigM":"单据管理","smallM":[
+				 {"mtitle":"担保函上传","href":"../documents/guaranteeUpload.html"},
+				 {"mtitle":"承诺函上传","href":""},
+				 {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
+				 {"mtitle":"外贸单据上传","href":"../documents/commitmentUpload.html"},
+				 {"mtitle":"国际快递办理","href":"../index/index.html"},
+				 {"mtitle":"函件管理","href":"../index/index.html"}
+				]
+				}
+			 	// ,{"bigM":"角色管理类2","smallM":[{"mtitle":"进仓通知单上传","href":"../index/index.html"},{"mtitle":"信用正本书上传","href":"../index/index.html"}]}	
+			 	//  ,{"bigM":"角色管理类3","smallM":[{"mtitle":"外贸单据上传","href":"../index/index.html"},{"mtitle":"外贸单据制作","href":"../index/index.html"}]}
+			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"国际快递办理","href":"../index/index.html"},{"mtitle":"函件管理","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 
 
 			]
