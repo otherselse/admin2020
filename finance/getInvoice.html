@@ -71,17 +71,17 @@
 		                    <thead>
 		                        <tr>
 		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
-		                            <th width="6%">金牌商家</th>
+		                            <th width="5%">金牌商家</th>
 		                            <th width="10%" class="tl"><div class="pl5">采购合同号</div></th>  	                            
 		                            <th width="10%" class="tl"><div class="pl5">采购单位</div></th>
-		                            <th width="6%">单位评审等级</th>
+		                            <th width="7%">单位评审等级</th>
 		                            <th width="6%">品名</th> 
 		                            <th width="6%">规格</th>
-		                            <th width="6%">结算重量</th>
-		                            <th width="6%">采购单价</th>
-		                            <th width="6%">结算单价</th>
+		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算重量<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">采购单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
 		                            <th width="6%">结算不含税单价</th>
-		                            <th width="6%">结算金额</th>
+		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算金额<i class="goldIcon icon-sort vm ml5"></i></label></th>
 		                            <th width="6%">已收票金额</th>
 		                            <th width="6%">未收票金额</th>
 		                            <th width="6%">本次收票金额</th>
@@ -91,26 +91,89 @@
 
 						</div>
 						<div class="lgui-table-body mt-1">
-							<table class="ui-table tc f12 " width="100%" >
+							<table class="ui-table tc f12 " width="100%"  data-type="edit">
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-		                            <th width="8%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</th>
-		                            <th width="6%">李冬梅</th>
-		                            <th width="10%" class="tl"><div class="pl5">DDC(22)-20000407</div></th>  	                            
-		                            <th width="10%" class="tl"><div class="pl5">上海好好有限公司</div></th>
-		                            <th width="6%">武林盟主（1级）</th>
-		                            <th width="6%">中厚板</th> 
-		                            <th width="6%">18.000*2200*C</th>
-		                            <th width="6%">11</th>
-		                            <th width="6%">3.42</th>
-		                            <th width="6%">12223.33</th>
-		                            <th width="6%">12223.33</th>
-		                            <th width="6%">13226.55</th>
-		                            <th width="6%">0</th>
-		                            <th width="6%">13226.55</th>
-		                            <th width="6%"><input type="text" class="ui-input pct80" /></th>
+		                            <td width="8%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
+		                            <td width="5%">李冬梅</td>
+		                            <td width="10%" class="tl"><div class="pl5 bkall">DDC(22)-20000407</div></td>  	                            
+		                            <td width="10%" class="tl"><div class="pl5">上海好好有限公司</div></td>
+		                            <td width="7%">武林盟主（1级）</td>
+		                            <td width="6%">中厚板</td> 
+		                            <td width="6%" class="bkall">18.000*2200*C</td>
+		                            <td width="6%">11</td>
+		                            <td width="6%">3.42</td>
+		                            <td width="6%" class="numFormat">12223.33</td>
+		                            <td width="6%" class="numFormat">12223.33</td>
+		                            <td width="6%" class="numFormat">13226.55</td>
+		                            <td width="6%" class="numFormat">0</td>
+		                            <td width="6%" class="numFormat">13226.55</td>
+		                            <td width="6%"><input type="text" class="ui-input pct80" /></td>
+		                        </tr>
+		                         <tr>
+		                            <td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
+		                            <td >李冬梅</td>
+		                            <td class="tl"><div class="pl5 bkall">DDC(22)-20000407</div></td>  	                            
+		                            <td class="tl"><div class="pl5">上海好好有限公司</div></td>
+		                            <td >武林盟主（1级）</td>
+		                            <td >中厚板</td> 
+		                            <td class="bkall">18.000*2200*C</td>
+		                            <td >11</td>
+		                            <td >3.42</td>
+		                            <td class="numFormat">12223.33</td>
+		                            <td class="numFormat">12223.33</td>
+		                            <td class="numFormat">13226.55</td>
+		                            <td class="numFormat">0</td>
+		                            <td class="numFormat">13226.55</td>
+		                            <td ><input type="text" class="ui-input pct80" /></td>
 		                        </tr>
 		                    </tbody>
+		                    <tfoot>
+		                    	<tr height="45">
+		                    		<td colspan="15" class="tl pt10 pb10 bgwh">
+		                    			<div class="dib pct8 tc">
+		                    				<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号
+		                    			</div>
+		                    			开票总吨数：<input type="text" class="ui-input pct8 mr15" />
+		                    			开票总金额：<input type="text" class="ui-input pct8 mr15" />
+		                    			开票日期：<span class="ui-input pct8 mr15" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
+		                    			税率：<span class="ui-input pct5 mr15" data-type="price"><input type="text" value="" placeholder="" class="pct80"><span class="r pct20">%</span></span>
+		                    			发票编号：<input type="text" class="ui-input pct8 mr15" />
+		                    			<button class="ui-button " data-type="upfile" type="button">附件上传</button>
+		                    			<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1">查看</a>
+		                    			<button type="button" class="ui-button w90">确认</button>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td colspan="15" class="tl pt10 pb10 bgwh">
+		                    			<div class="l pct10 pl10">未开票金额区域总计：</div>
+		                    			<div class="l pct85">
+		                    				自贸区：<span class="red numFormat mr20">3234244.00</span>
+		                    				南厅：<span class="red numFormat mr20">3234244.00</span>
+		                    				上海：<span class="red numFormat mr20">3234244.00</span>
+		                    				宁波：<span class="red numFormat mr20">3234244.00</span>
+		                    				杭州：<span class="red numFormat mr20">3234244.00</span>
+		                    				成都：<span class="red numFormat mr20">3234244.00</span>
+		                    				无锡：<span class="red numFormat mr20">3234244.00</span>
+		                    				济南：<span class="red numFormat mr20">3234244.00</span>
+		                    				合肥：<span class="red numFormat mr20">3234244.00</span>
+		                    				武汉：<span class="red numFormat mr20">3234244.00</span>
+		                    				天津：<span class="red numFormat mr20">3234244.00</span>
+		                    				苏州：<span class="red numFormat mr20">3234244.00</span>
+		                    				广州：<span class="red numFormat mr20">3234244.00</span>
+		                    				自贸区上海：<span class="red numFormat mr20">3234244.00</span>
+		                    				南京：<span class="red numFormat mr20">3234244.00</span>
+		                    				上海(外贸)：<span class="red numFormat mr20">3234244.00</span>
+		                    			</div>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td colspan="15" class="tl pt10 pb10 bgwh">
+		                    			<div class="l pct10 pl10">未开票金额所有总计：</div>
+		                    			<span class="red numFormat mr20">3234244.00</span>
+		                    		</td>
+		                    	</tr>
+		                    </tfoot>
 		                    
 		                </table>		                
 	            	</div>
@@ -127,7 +190,11 @@
 
 
 
-
+	<div class="dom1 dn">
+		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
+		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
+		<div class="tc mt10"><button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button></div>
+	</div>
 
 	
 	
