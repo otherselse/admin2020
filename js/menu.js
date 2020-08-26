@@ -42,7 +42,8 @@
 				 {"mtitle":"担保函上传","href":"../documents/guaranteeUpload.html"},
 				 {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html"},
 				 {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
-				 {"mtitle":"外贸单据上传","href":""},
+				 {"mtitle":"外贸单据上传","href":"../documents/foreignUpload.html"},
+				 {"mtitle":"外贸单据制作","href":"../documents/foreignMaking.html"},
 				 {"mtitle":"国际快递办理","href":"../index/index.html"},
 				 {"mtitle":"函件管理","href":"../index/index.html"}
 				]

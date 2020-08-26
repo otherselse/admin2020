@@ -105,7 +105,7 @@
                                 <th width="10%">打印时间</th>
                                 <th width="10%">上传时间</th>
                                 <th width="10%">上件人</th>
-                                <th width="15%">操作</th>
+                                <th width="15%" colspan="2">操作</th>
                             </tr>
                         </thead>
                     </table>
@@ -129,18 +129,23 @@
                                 </td>
                                 <td class="pct10">是</td>
                                 <td class="pct10">2020-04-05 12:30:28</td>
+                                <td class="pct10">2020-04-05 12:30:28</td>
                                 <td class="pct10">张三三</td>
-                                <td class="pct10 colorW">未上传</td>
-                                <td class="pct15">
+                                <td class="pct8">
                                     <a href="http://116.228.150.225:6889/LgAdmin/lc/lettercommitPrint.action?lettercommit.id=A249BE7C92471634E05371001FAC94F0"
                                         target="_blank">打印</a>
+                                        <a href="javascript:void(0)">|</a>
+                                    
                                     <a href="javascript:void(0)" onclick="showTrMore(this)">执行</a>
+                                </td>
+
+                                <td class="pct7">
                                     <a href="javascript:void(0)" onclick="showLayer(this)">历史记录</a>
                                 </td>
                             </tr>
                             <!-- 点击执行显示 -->
                             <tr class="hideTr dn">
-                                <td colspan="10">
+                                <td colspan="11">
                                     <div class="pl20 pr20">
                                         <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
                                             <tbody>

@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>外贸单据上传-单据管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        element.style {
+            background: #fff;
+        }
+    </style>
 </head>
 
 <body class='showTip'>
@@ -40,11 +45,11 @@
                 <div class="lh84  fix">
                     <div class="cl mb30 f12">
                         订单号：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-	                    单位名称：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-	                    金牌商家：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-	                    <button type="button" class="ui-button mr10">查询</button>
-	                    <button type="button" class="ui-button" data-type="clear">清空</button>
-					</div>
+                        单位名称：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        金牌商家：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        <button type="button" class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    </div>
                 </div>
             </div>
 
@@ -56,17 +61,17 @@
                         <thead>
                             <tr>
                                 <th width="4%">序号</th>
-                                <th width="15%">订单号</th>
-                                <th width="6%">单位名称</th>
-                                <th width="10%">金牌商家</th>
-                                <th width="10%">最后装运日期</th>
-                                <th width="10%">报关单</th>
-                                <th width="10%">清关单</th>
-                                <th width="10%">装箱单</th>
-                                <th width="10%">商业发票</th>
-                                <th width="10%">其他单据</th>
-                                <th width="10%">提单</th>
-                                <th width="15%">操作</th>
+                                <th width="6%">订单号</th>
+                                <th width="12%">单位名称</th>
+                                <th width="5%">金牌商家</th>
+                                <th width="12%">最后装运日期</th>
+                                <th width="7%">报关单</th>
+                                <th width="7%">清关单</th>
+                                <th width="7%">装箱单</th>
+                                <th width="7%">商业发票</th>
+                                <th width="7%">其他单据</th>
+                                <th width="6%">提单</th>
+                                <th width="10%">操作</th>
                             </tr>
                         </thead>
                     </table>
@@ -76,41 +81,66 @@
                         <tbody class="ui-thover">
                             <tr class="pct100">
                                 <td class="pct4">1</td>
-                                <td class="pct15">2020-04-05 12:30:28</td>
-                                <td class="pct6">59862</td>
-                                <td class="pct10">中国邮政运输集团</td>
-                                <td class="pct10">
-                                    <a href="javascript:void(0)" data-type="smallbbr" id="toView1">查看图片</a>
-                                    <div class="selectDiv f12">
-                                        <div class="mt5">信用证草本.jpg</div>
-                                        <div class="mt5">信用证草本.jpg</div>
-                                        <div class="mt5">信用证草本.jpg</div>
-                                        <div class="mt5">信用证草本.jpg</div>
-                                        <div class="mt5">信用证草本.jpg</div>
-                                    </div>
-                                </td>
-                                <td class="pct10"><span>查看图片</span></td>
-                                <td class="pct10">张三三</td>
-                                <td class="pct10">销售合同信用证</td>
-                                <td class="pct10 colorW">未上传</td>
-                                <td class="pct15">
-                                    <a href="javascript:void(0)">上传正本</a>
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">意见查看</a>
+                                <td class="pct6">60940</td>
+                                <td class="pct12">治愈客户有限公司</td>
+                                <td class="pct5">以乡村</td>
+                                <td class="pct12">2020-18-29</td>
+                                <td class="pct7"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct7"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct7"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct7"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct7"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct6"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+                                <td class="pct10"><a href="javascript:void(0)" onclick="showLayer(this)">上传</a>
                                 </td>
                             </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn pct100">
+                                <td colspan="12">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="15%"><span class="sInfos">提单信息</span></th>
+                                                    <th width="15%">审核状态</th>
+                                                    <th width="15%">上传人</th>
+                                                    <th width="15%">上传时间</th>
+                                                    <th width="15%">实际出口日期</th>
+                                                    <th width="25%">报关申报日期</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                            target="_blank">pexels-photo-3876394.jpeg</a></td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
                         </tbody>
                     </table>
                 </div>
+                </tr>
+                </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
-
-            <!-- table end -->
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-            <div class="mb20"></div>
         </div>
+        <div class="mb20"></div>
+    </div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
@@ -150,21 +180,20 @@
             }
         });
 
-        function showdiv(obj){
-			$(obj).parents(".hideTr").find('.httkxs').toggle();
-		}
+        function showdiv(obj) {
+            $(obj).parents(".hideTr").find('.httkxs').toggle();
+        }
 
-        $(function(){
-            $("#toView1").click(function(e){
-                var xx = e.originalEvent.x || e.originalEvent.layerX || 0; 
-                var yy = e.originalEvent.y || e.originalEvent.layerY || 0; 
-                console.log(xx + '---' + yy);
-                $(this).next().css({
-                    left:"37%",
-                    top:yy-55
-                });
-            })
-        });
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '附件上传',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['600px', '400px'],
+                content: 'toForeignUpload.html' //iframe的url
+            });
+        }
     </script>
 </body>
 

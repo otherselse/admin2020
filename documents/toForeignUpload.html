@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>外贸单据上传-上传</title>
+    <style>
+        .ui-tab5-list {
+            color: #676767FF;
+            font-size: 14px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+        }
+
+        body,html{
+            overflow:-Scroll;
+            overflow-y:hidden;
+            overflow-x:hidden
+        }
+    </style>
+</head>
+
+<body class="showTip bgwh">
+    <div class="ui-tab5 bgwh">
+        <a href="javascript:void(0)" class="ui-tab5-list on ml20">相关单</a>
+        <a href="javascript:void(0)" class="ui-tab5-list">清关单</a>
+        <a href="javascript:void(0)" class="ui-tab5-list">装箱单</a>
+        <a href="javascript:void(0)" class="ui-tab5-list">商业发票</a>
+        <a href="javascript:void(0)" class="ui-tab5-list">其他单票</a>
+        <a href="javascript:void(0)" class="ui-tab5-list">提单</a>
+    </div>
+    <div class="lgui-table-box bgwh">
+        <div class="lgui-table-header pct100 bgwh auto h100">
+            <table class="tr fs12 pct100 mt20" style="border-spacing:0px 10px;" width="100%">
+                <tbody>
+                    <tr>
+                        <td class="pct30 ml-20">实际出口日期：</td>
+                        <td class="pct70 tl mb10">
+                            <span class="ui-input tc f0 range" data-type="time">
+                                <input type="text" placeholder="开始时间" class="render-time " readonly="">
+                                <span class="dib pct5 tc">-</span>
+                                <input type="text" placeholder="结束时间" class="render-time " readonly="">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>相关申报日期：</td>
+                        <td class="tl">
+                            <span class="ui-input tc f0 range" data-type="time">
+                                <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
+                                <span class="dib pct5 tc">-</span>
+                                <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 报关单 -->
+                    <tr class="0 uplad">
+                        <td class="vt">
+                            请上传报关单：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 清关单 -->
+                    <tr class="1 dn uplad">
+                        <td class="vt">
+                            请上传清关单：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 装箱单 -->
+                    <tr class="2 dn uplad">
+                        <td class="vt">
+                            请上传装箱单：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 商业发票 -->
+                    <tr class="3 dn uplad">
+                        <td class="vt">
+                            请上传商业发票：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <!-- 其他单据 -->
+                    <tr class="4 dn uplad">
+                        <td class="vt">
+                            请上传其他单据：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                     <!--提单 -->
+                    <tr class="5 dn uplad">
+                        <td class="vt">
+                            请上传提单：
+                        </td>
+                        <td class="tl ">
+                            <span class="dib">
+                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传(<3MB)</button><br>
+                                <span class="ui-files vm mt10"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                                <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
+                                        class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
+                                        href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="tc mt30">
+                <button type="button" class="mr10 ui-button">提交</button>
+                <button type="button" class="ui-button " data-type="clear">退回</button>
+            </div>
+            <div style="background: #fff;height: 65px;">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script>
+
+        //时间范围
+        laydate.render({
+            elem: '#time1'
+            , range: true
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , value: '2020-06-04      -      2020-06-08'
+
+            , change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+
+        var time01 = laydate.render({
+            elem: '#time01'
+            , theme: 'lgblue'
+            , btns: ['clear', 'confirm']
+            , trigger: 'click'
+            , done: function (value, date) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,
+                    date: date.date,
+                }
+                time02.config.min = myobj
+                time02.config.value = myobj
+
+            }
+        });
+
+      $(function(){
+        $('.ui-tab5-list').click(function(){
+            $('.ui-tab5-list').removeClass("on");
+            $(this).addClass('on');
+            $('.uplad').addClass("dn");
+            $('.'+$(this).index()).removeClass("dn");
+        });
+      })
+    </script>
+</body>
+
+</html>
