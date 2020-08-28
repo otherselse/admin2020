@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>进仓通知单上传-历史记录</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow:-Scroll;
+            overflow-y:hidden;
+            overflow-x:hidden
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <div style="background: #fff;height: 100%; width: 100%;">
+        <br><br>
+        <div class="lgui-table-box">
+            <div class="lgui-table-header pct100">
+                <table class="tr fs12 pct100 ui-table" style="border-spacing:0px 15px;" width="100%">
+                    <tr class="0 uplad">
+                        <td class="vt">
+                            函件类型：
+                        </td>
+                        <td class="tl ">
+                            <span class="input-selSearch pct80">
+                                <input type="text" class="ui-input searchUp pct100" id="correspondence" placeholder="请选择函件类型" autocomplete="off"
+                                    readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">保证函(金牌商家对供应商)</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">承诺函(供应商)</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            订单号：
+                        </td>
+                        <td class="tl ">
+                            <input type="text" class="ui-input pct80" placeholder="请输入订单号">
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="" colspan="2">
+                            <button type="button" class="mr10 ui-button">查询</button>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            <div style="width: 100%;height: 100px;border:1px solid"></div>
+                            <span class="radio">
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            备注：
+                        </td>
+                        <td class="tl ">
+                            <textarea class="ui-textarea pct100" rows="1"></textarea>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            <span class="ui-tip" data-type="normal">
+                                「该函件可多个订单合并生成，各订单号以‘,’相连」
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            <button type="button" class="mr10 ui-button">预览</button>
+                            <button type="button" class="ui-button " data-type="clear">退回</button>
+                            <button type="button" class="ui-button " data-type="clear">取消</button>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+         var start = laydate.render({
+            elem: '#time2',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+            }
+        })
+
+        $(".search-cont a").click(function(){
+            let val = $(".correspondence").val();
+            if(val == "保证函(金牌商家对供应商)" || val == "承诺函(供应商)"){
+
+            }
+        });
+    </script>
+</body>
+
+</html>
