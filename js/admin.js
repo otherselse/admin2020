@@ -194,6 +194,12 @@ $(function(){
 	  $("body").addClass("isPc")
 	}
 
+
+
+	$(".selectSingle").find("a").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+
 	
 
 })
