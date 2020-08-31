@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>外贸单据制作-单据管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body class='showTip'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                单据管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">外贸单据制作</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        
+        <div class=" fix f12 bgwh">
+            <div class="ml20 mr20">
+                <div class="fix">
+                    <div class="cl lh84 f12">
+                        是否提交：<div class="dib selectSingle mr20">
+                            <a class="on" href="javscript:void(0)">是</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">否</a>
+                        </div>
+                        订单号：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        金牌商家：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        单位名称：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+
+                        <button type="button" class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- search end -->
+
+            <div class="lgui-table-box ml20 mr20  bgwh ui-content ovh minH">
+                <div class="lgui-table-header pct100">
+                    <table class="ui-table tc f12  pct100" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="10%">序号</th>
+                                <th width="15%">订单号</th>
+                                <th width="30%">金牌商家</th>
+                                <th width="35%">单位名称</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="lgui-table-body pct100">
+                    <table class="ui-table tc f12" width="100%">
+                        <tbody class="ui-thover">
+                            <tr class="pct100">
+                                <td class="pct10">1</td>
+                                <td class="pct15">59862</td>
+                                <td class="pct30">以乡村</td>
+                                <td class="pct35">治愈客户有限集团</td>
+                                <td class="pct10">
+                                    <a href="toForeignMaking.html">制作单据</a>
+                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn">
+                                <td colspan="9">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3">已生成单据列表</th>
+                                                </tr>
+                                                <tr>
+                                                    <th width="33.3%">单据类型</th>
+                                                    <th width="33.3%">制作时间</th>
+                                                    <th width="33.3%">制作人</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td>--------</td>
+                                                    <td>2019-04-23 15:48:53</td>
+                                                    <td>李思思</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+            <!-- 审核通过查看 -->
+            <div class="qtip-content" id="qtip-12-content" aria-atomic="true">
+                <div class="f12 bld8 pl10 dom3 dn" style="visibility: visible;">
+                    <div class="g28 ui-audit"><span>审核</span> <span class="g1b ml15">审核通过</span></div>
+                    <div class="lh20 mt5 mb30">
+                        <div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+                        <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
+                        <div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+                    </div>
+                    <div class="g28 ui-audit"><span>复核</span> <span class="red ml15">审核未通过</span></div>
+                    <div class="lh20 mt5">
+                        <div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+                        <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span
+                                class="g67">付款金额与收款金额数目不符，请核对账单明细，重新提交申请。</span></div>
+                        <div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 审核不通过查看 -->
+            <div class="qtip-content" id="qtip-12-content" aria-atomic="true">
+                <div class="f12 bld8 pl10 dom4 dn" style="visibility: visible;">
+                    <div class="g28 ui-audit"><span>审核</span> <span class="g1b ml15">审核通过</span></div>
+                    <div class="lh20 mt5 mb30">
+                        <div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+                        <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
+                        <div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+                    </div>
+                    <div class="g28 ui-audit"><span>复核</span> <span class="red ml15">审核未通过</span></div>
+                    <div class="lh20 mt5">
+                        <div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+                        <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span
+                                class="g67">付款金额与收款金额数目不符，请核对账单明细，重新提交申请。</span></div>
+                        <div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb20"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+        })
+    </script>
+    <script>
+        //时间范围
+        laydate.render({
+            elem: '#time1'
+            , range: true
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , value: '2020-06-04      -      2020-06-08'
+
+            , change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+
+        var time01 = laydate.render({
+            elem: '#time01'
+            , theme: 'lgblue'
+            , btns: ['clear', 'confirm']
+            , trigger: 'click'
+            , done: function (value, date) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,
+                    date: date.date,
+                }
+                time02.config.min = myobj
+                time02.config.value = myobj
+
+            }
+        });
+
+        function showdiv(obj) {
+            $(obj).parents(".hideTr").find('.httkxs').toggle();
+        }
+
+        //tipclick 点击出现数据段
+        $('.tipclick').qtip({
+            show: { event: 'click' },
+            hide: 'unfocus',
+            content: {
+                text: function (event, api) {
+                    return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                }
+            },
+            position: {
+                my: 'bottom center',
+                at: 'top center'
+            },
+            // position: {
+            //     viewport: $(window)
+            // },
+            style: {
+                classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+            }
+        });
+
+        $("body").on("click", "#hideTip", function () {
+            $(".qtip").hide();
+        })
+        var start = laydate.render({
+            elem: '#time2',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+                // var myobj = {
+                // 	year: date.year,
+                // 	month: date.month - 1,//关键
+                // 	date: date.date
+                // };
+                // end.config.value = value;
+                // end.config.min = myobj;
+
+            }
+        })
+        var start = laydate.render({
+            elem: '#time3',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+                // var myobj = {
+                // 	year: date.year,
+                // 	month: date.month - 1,//关键
+                // 	date: date.date
+                // };
+                // end.config.value = value;
+                // end.config.min = myobj;
+
+            }
+        })
+    </script>
+</body>
+
+</html>

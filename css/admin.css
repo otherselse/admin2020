@@ -465,8 +465,8 @@ a.wh:hover{color:#fff;text-decoration: underline;}
   border-radius:4px;
   z-index: 1;
   overflow:auto;
-  position: absolute;
-  display: none;
+  /* position: absolute;
+  display: none; */
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
@@ -502,6 +502,17 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 .dfc{
   display: flex;
   align-items:center
+}
+
+.daj{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dj{
+  display: flex;
+  justify-content: center;
 }
 
 .dfj{
@@ -563,17 +574,16 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 }
 
 .colorW{ /* 未上传颜色 */
-  color: #08CB94FF;
+  background: #08CB94FF;
 }
 .colorS{ /* 审核中颜色 */
-  color: #686868FF;
+  background: #1365E8FF;
 }
 .colorY{ /* 已上传颜色 */
-  color: #CCCCCCFF;
+  background: #CCCCCCFF;
 }
-
 .colorWt{ /* 未通过颜色 */
-  color: #FB2020FF;
+  background: #FB2020FF;
 }
 
 .pct5{
@@ -595,4 +605,58 @@ a.wh:hover{color:#fff;text-decoration: underline;}
   width: 8%;
 }
 
+.fs12{
+  color: #686868FF;
+  font-size:12px;
+}
 
+
+.h100{
+  height:100%;
+}
+
+.imgIcon{
+  background: url(../images/documnts/xz10.png);
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}
+.imgIcon:hover{
+  opacity: 1; 
+}
+
+.rad{
+  width:6px;
+  height:6px;
+  border-radius:3px;
+}
+
+.fs20{
+  font-family:Microsoft YaHei;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.col_282828FF{
+  color: #282828FF;
+}
+
+.xzhj{
+  background: url(../images/documnts/z1.png) no-repeat;
+  height: 70px;
+  width: 100%;
+  background-size: 100% 100%;
+  box-shadow:0px 8px 10px 0px #ebf0f7;
+  border-radius: 3px;
+}
+
+.xzhj-button{
+  width:140px;
+  height:30px;
+  border:1px solid rgba(19, 101, 232, 1);
+  border-radius:3px;
+  font-size:14px;
+  font-family:Microsoft YaHei;
+  font-weight:400;
+  color:rgba(19,101,232,1);
+}

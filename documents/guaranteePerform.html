@@ -35,10 +35,10 @@
             </div>
         </div>
         <div class="bgwh">
-            <div class="lh50 bor-bottom">
+            <div class="lh50 pl20 bor-bottom">
                 <div class="dfc" href="">
-                    <img class="ml20 mr10" src="../images/documnts/xz5.png" alt="">
-                    <a href="javascript:history.back(-1)" class="g0">返回上一层</a>
+                    <i class="leftArrow mr10" ></i>
+                    <a href="javascript:history.back(-1)" class="g0">返回上一级</a>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
-                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">身份证照样本</a>
+                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">担保函照样本</a>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)"
                                             class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
                                             href="#"></a></span>
@@ -140,7 +140,7 @@
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
-                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">身份证照样本</a>
+                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">保证人照样本</a>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)"
                                             class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
                                             href="#"></a></span>
@@ -164,7 +164,7 @@
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
-                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">身份证照样本</a>
+                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">核保人照样本</a>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)"
                                             class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
                                             href="#"></a></span>
@@ -188,7 +188,7 @@
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
-                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">身份证照样本</a>
+                                        title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">合照样本查看</a>
                                     <span class="ui-files ml10 vm"><a href="javascript:void(0)"
                                             class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
                                             href="#"></a></span>
@@ -514,7 +514,7 @@
                                 <span class="dib pl20">
                                     <span class="checkbox">
                                         <label class="mr20">
-                                            <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <i class="ui-checkbox goldIcon v-3 mr2 on">
                                                 <input type="checkbox" class="checkbox-opacity" name="checkbox">
                                             </i>规格
                                         </label>
@@ -524,12 +524,12 @@
                                             </i>欠款/款到卸货
                                         </label>
                                         <label class="mr20">
-                                            <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <i class="ui-checkbox goldIcon v-3 mr2 on">
                                                 <input type="checkbox" class="checkbox-opacity" name="checkbox">
                                             </i>外贸
                                         </label>
                                         <label class="mr20">
-                                            <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <i class="ui-checkbox goldIcon v-3 mr2 on">
                                                 <input type="checkbox" class="checkbox-opacity" name="checkbox">
                                             </i>快速备/任你押
                                         </label>
@@ -583,12 +583,12 @@
                         </tr>
                         <tr class="">
                             <td class="bgfa" width="10%">
-                                <span class="pt5 dib pl20">自有房产</span>
+                                <span class="pt5 dib pl20">自有房产：</span>
                             </td>
                             <td width="40%">
                                 <span class="dib pl20">
                                     <span class="radio">
-                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" checked name="radio"></i>是</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity"  name="radio"></i>是</label>
                                         <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
                                     </span>
                                     <span class="pt5 dib ml20">产权必须在本人名下</span>
@@ -600,14 +600,128 @@
                             <td width="40%">
                                 <span class="dib pl10 pct100">
                                     <span class="input-selSearch pct100">
-                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入逾期情况" value="520" autocomplete="off">
-                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入逾期情况" value="无" autocomplete="off">
+                                        <input type="text" class="ui-input pct20 borNone" placeholder="请输入面积" value="520" autocomplete="off">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入所在地" autocomplete="off">
                                     </span>
                                 </span>
                             </td>
                         </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">自有房产：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl20">
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity"  name="radio"></i>是</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                    <span class="pt5 dib ml20">产权必须在本人名下</span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">车辆型号：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct20 borNone" placeholder="请输入车辆类型" value="大型重卡车" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">精神面貌：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl20">
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>好</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>一般</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>差</label>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">表达表述：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl20">
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>好</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>一般</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>差</label>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">全职/兼职：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl20">
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>全职</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>兼职</label>
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">是否在运营中心办公：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl20">
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">电子邮箱：</span>
+                            </td>
+                            <td width="90%" colspan="3">
+                                <span class="dib pl20">
+                                   985866422@qq.com
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">家庭情况：</span>
+                            </td>
+                            <td width="90%" colspan="3">
+                                <span class="dib pl20 pct100 pr20">
+                                    <textarea class="ui-textarea pct98" placeholder="请填写" rows="2"></textarea>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">综合评价：</span>
+                            </td>
+                            <td width="90%" colspan="3">
+                                <span class="dib pl20 pct100 pr20">
+                                    <textarea class="ui-textarea pct98" placeholder="请填写" rows="2"></textarea>
+                                </span>
+                                <div class="pt5 cl ml20">
+                                    <span class="ui-tip"
+                                        data-type="normal">注意：从业务能力、风险意识和风险承担能力等方面进行分析评价。 拷贝</span>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+
+                <div class="tc mt30">
+                    <button class="ui-button mr10" data-type="normal" type="button">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <div class="mt20">&nbsp;</div>
             </div>
         </div>
 
