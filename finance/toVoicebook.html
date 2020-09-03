@@ -55,17 +55,13 @@
 						<button type="button" class="ui-button mr5">查询</button>
 						<a class="ui-button" data-type="clear"><i class="admIcon icon-luru vm mr5"></i><span class="blue">录入票据</span></a>
 					</div>
-
-
-	          
-
 	                <!-- search end -->
 
-					<div class="m-tabLimitSCroll mt30 checkbox">
+				<div class="m-tabLimitSCroll mt30 checkbox">
 						<table class="ui-table tc f12 " width="100%">
 							<thead>
 		                        <tr>
-									<th width="3%">\</th>
+									<th width="3%" rowspan="2">选择</th>
 									<th width="4%" rowspan="2">收票日期</th>
 									<th width="4%" rowspan="2">收回凭证号</th>
 									<th colspan="8">票据基本情况</th>
@@ -78,7 +74,6 @@
 									<th width="4%" rowspan="2">操作</th>
 								</tr>
 								<tr>
-									<th width="3%">选择</th>
 									<th width="4%">票据号码</th>
 									<th width="4%">出票人名称</th>
 									<th width="4%">出票日</th>
@@ -102,7 +97,7 @@
 		                    	 <tr>
 									<td>
 										<input type="hidden" id="isExportSaleA9E98CB337581B1DE05371001FAC230B" value="A9E98CB337581B1DE05371001FAC230B">
-										<input type="checkbox" name="ids" value="A9E98CB337581B1DE05371001FAC230B">
+										<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="ids"></i>
 									</td>
 									<td>2020-05-26</td>
 									<td>2020.5转账3146</td>
@@ -132,8 +127,23 @@
 									</td>
 								</tr>
 		                    </tbody>
-		                   
-		                </table>		                
+		                   <tfoot class="bgfa" >
+		                   		<tr height="45">
+		                   			<td >
+		                   				<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+		                   			</td>
+		                   			<td colspan="2" class="tl">
+		                   				&emsp;全选
+		                   			</td>
+		                   			<td colspan="21" class="tr">
+		                   				<button type="button" class="ui-button w90 mr5">签收电票</button>
+		                   				<button type="button" class="ui-button w90 mr5">背书电票</button>
+		                   				<button type="button" class="ui-button w90 mr5">汇票贴现</button>
+		                   				<button type="button" class="ui-button w90 mr20">到期托收</button>
+		                   			</td>
+		                   		</tr>
+		                   </tfoot>
+		                </table>     
 	                
 	            </div><!-- table end -->
 	            
@@ -141,7 +151,6 @@
 
 
 
-				</div>
 
 				</div>
 			</div><!-- ui-content end -->
