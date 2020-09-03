@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>采购发票登记-财务管理-乐刚智能云系统</title>
+	<title>费用收票登记-财务管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	
 	
@@ -30,48 +30,47 @@
 		            <span class="dib pl5 pr5 ">/</span>
 		            财务管理
 		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">采购发票登记</span>
+		            <span class="g28">费用收票登记</span>
 		        </div>
 		        <div class="r m_dn">
 	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 	        	</div>
 	        </div>
 	        <div class="ui-tab3">
-				<a href="getInvoice.html" class="ui-tab3-list rel "><span class="ui-tab3-text">采购发票登记</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="voiceList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">发票交接和清票</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="inVoiceList.html" class="ui-tab3-list rel "><span class="ui-tab3-text">收票明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="getInvoiceLineHZ.html" class="ui-tab3-list rel "><span class="ui-tab3-text">收票汇总明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
-				<a href="voiceClearList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">清票/反清票记录表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="getInvoiceDepot.html" class="ui-tab3-list rel "><span class="ui-tab3-text">仓库发票登记</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="depotVoiceList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">发票交接和清票</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="inVoiceListFee.html" class="ui-tab3-list rel "><span class="ui-tab3-text">收票明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="voiceClearListFee.html" class="ui-tab3-list rel"><span class="ui-tab3-text">清票/反清票记录表</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct25 dib f12">供货单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12">仓库单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
 						<span class="pct25 dib f12">合同号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
 					</div>	
 
 
 	                <div class="f0 mb20">
-	                	<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 	                	<span class="pct50 dib f12">
-	                		合同类型：<span class="single mr40">
+	                		运输发票：<span class="single ">
 	                            <input type="hidden" value="">
-	                            <button type="button" class="ui-option mr5">直购</button>
-	                            <button type="button" class="ui-option mr5">定购</button>
-	                            <button type="button" class="ui-option ">外贸</button>
+	                            <button type="button" class="ui-option mr5">加工发票</button>
+	                            <button type="button" class="ui-option mr5">仓库发票</button>
+	                            <button type="button" class="ui-option mr5">订舱发票</button>
+	                            <button type="button" class="ui-option ">办公费用发票</button>
 	                        </span>
 	                        
 	                	</span>	
 	                	<div class="dib selectSingle f12">
-	                        	&emsp;&emsp;选项：
-                                <a class="on" href="javscript:void(0)">快递到家</a>
+	                        	&emsp;选项：
+                                <a class="on" href="javscript:void(0)">未清票</a>
                                 <span class="pr5 pl5 ">|</span>
-                                <a href="javscript:void(0)">上门取件</a>                                                                  
+                                <a href="javscript:void(0)">已清票</a>                                                                  
 	                        </div>					
 	                </div>
 	                <div class="tc">
@@ -88,20 +87,20 @@
 		                        <tr>
 		                            <th width="6%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
 		                            <th width="8%">合同号</th>
-		                            <th width="5%" >合同类型</th>  	                            
-		                            <th width="8%" >供货单位</th>
-		                            <th width="5%">合同金额</th>
-		                            <th width="6%">结算重量</th> 
-		                            <th width="6%">结算金额</th>
+		                            <th width="5%" >仓库单位</th>  	                            
+		                            <th width="8%" >付款单位</th>
+		                            <th width="5%">结算重量</th>
+		                            <th width="6%">结算金额</th> 
 		                            <th width="6%">已收票金额</th>
 		                            <th width="6%">未收票金额</th>
 		                            <th width="6%">已收票不含税金额</th>
 		                            <th width="6%">已收票进项税额</th>
-		                            <th width="6%">未收票不含税金额</th>
-		                            <th width="6%">未收票进项税额</th>
-		                            <th width="5%">金牌商家</th>
-		                            <th width="5%">交接人</th>
-		                            <th width="5%">交接时间</th>
+		                            <th width="6%">金牌商家</th>
+		                            <th width="6%">交接人</th>
+		                            <th width="6%">交接时间</th>
+		                            <th width="5%">登票人</th>
+		                            <th width="5%">发票类型</th>
+		                            <th width="5%">登票时间</th>
 		                            <th width="5%">操作</th>
 		                        </tr>
 		                    </thead>
@@ -114,20 +113,20 @@
 		                    	 <tr>
 		                            <td width="6%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
 		                            <td width="8%" class="bkall">DDC(22)-20001546</td>
-		                            <td width="5%" >定购</td>  	                            
-		                            <td width="8%" ><a href="javascript:void(0)" title="名称:乐乐集团有限公司公司好<br/>联系人:发的<br/>联系电话:13371858101" class="tiptop">乐乐集团有限公司公司好</a></td>
-		                            <td width="5%" class="numFormat bkall">1232131323</td>
-		                            <td width="6%">122.000</td> 
+		                            <td width="5%" >乐乐集团有限公司公司好</td>  	                            
+		                            <td width="8%" >乐乐集团有限公司公司好</td>
+		                            <td width="5%" >122.000</td>
+		                            <td width="6%" class="numFormat bkall">1232131323</td> 
 		                            <td width="6%" class="numFormat bkall">1232131323</td>
 		                            <td width="6%" class="numFormat bkall">1232131323</td>
 		                            <td width="6%" class="numFormat bkall">1232131323</td>
 		                            <td width="6%" class="numFormat bkall">1232131323</td>
-		                            <td width="6%" class="numFormat bkall">1232131323</td>
-		                            <td width="6%" class="numFormat bkall">1232131323</td>
-		                            <td width="6%" class="numFormat bkall">1232131323</td>
+		                            <td width="6%">李四</td>
+		                            <td width="6%" ><a href="javascript:void(0)" class="ui-button" data-type="smallbbr" onclick="updateUser(this)">交接</a></td>
+		                            <td width="6%" >2020-1-11</td>
 		                            <td width="5%">李四</td>
-		                            <td width="5%"><a href="javascript:void(0)" class="ui-button" data-type="smallbbr" onclick="updateUser(this)">交接</a></td>
-		                            <td width="5%">2020-1-11</td>
+		                            <td width="5%">仓库发票单专用发票</td>
+		                            <td width="5%">2020-1-11 11:11:11</td>
 		                            <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
 		                        </tr>
 		                        <tr class="hideTr dn">
@@ -141,11 +140,9 @@
 	              	                         <tbody>
 	              	                         	<tr class="resource-table">
 	                                            	<td class="title" width="10%">发票编号：</td>
-	                                            	<td width="40%" class="cont"><input type="text" class="ui-input pct80" autocomplete="off" readonly="" value="12323"></td>
+	                                            	<td width="40%" class="cont">1232332</td>
 	                                            	<td class="title" width="10%">开票日期：</td>
-	                                            	<td width="40%" class="cont">
-	                                            		<span class="ui-input pct80" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
-	                                            	</td>
+	                                            	<td width="40%" class="cont">2020-1-11  11:11:11</td>
 	                                            </tr>
 	                                            <tr class="resource-table">
 	                                            	<td class="title">税率：</td>
@@ -158,42 +155,15 @@
 	                                           
 	                                          </tbody>
 	                                      	</table>
-		                        			<table class="ui-table tc f12 auto showShadow mb10 mt-1" width="100%">
-													<thead>
-														<tr>
-															<th width="10%">品名</th>
-															<th width="10%">规格</th>
-															<th width="10%">结算重量</th>
-															<th width="10%">结算单价</th>
-															<th width="10%">结算金额</th>
-															<th width="10%">已开票金额</th>
-														</tr>
-														</thead><tbody class="ui-thover">
-															<tr>
-																<td>镀铝板材</td>
-																<td>6000*1325*C</td>
-																<td>12</td>
-																<td>12</td>
-																<td>12</td>
-																<td>12</td>
-															</tr>
-														</tbody>
-												</table>
 
 		                        			<div class="ovh mb10 tl f14 mt30 g28 b">是否清票</div>
 		                        			<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
 	              	                         <tbody>
-	              	                         	<tr class="resource-table">
-	                                            	<td class="title" width="10%">采购补差金额：</td>
-	                                            	<td width="40%" class="cont">￥30</td>
-	                                            	<td class="title" width="10%">实际未开票金额：</td>
-	                                            	<td width="40%" class="cont">￥30</td>
-	                                            </tr>
 	                                            <tr class="resource-table">
-	                                            	<td class="title">备注：</td>
-	                                            	<td colspan="3" class="cont">
+	                                            	<td class="title" width="10%">备注：</td>
+	                                            	<td class="cont" width="90%">
 	                                            		<textarea class="ui-textarea pct98 mb10" rows="3" value="" placeholder="请输入"></textarea>
-	                                            		<button class="ui-button" data-type="small" type="button">提交</button>
+	                                            		<button class="ui-button" data-type="small" type="button">清票</button>
 	                                            	</td>
 	                                            </tr>
 	                                          </tbody>
@@ -212,34 +182,15 @@
 		                    		</td>
 		                    	</tr>
 		                    	<tr height="40">
-		                    		<td colspan="4">
-		                    			当前页合计：
-		                    		</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td colspan="4"></td>
+		                    		<td colspan="17">
+		                    			当前页合计:  已开票金额合计:<span class="red mr20">￥ 20.20</span>未开票金额合计：<span class="red ">￥ 0</span>
+		                    		</td>		                    		
 		                    	</tr>
 		                    	<tr height="40">
-		                    		<td colspan="4">
-		                    			所有页合计：
+		                    		<td colspan="17">
+		                    			 所有页合计:  已开票金额合计:<span class="red mr20">￥ 20.2</span>未开票金额合计：<span class="red ">￥ 0</span>
 		                    		</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td class="numFormat bkall">1232131323</td>
-		                    		<td colspan="4"></td>
+		                    		
 		                    	</tr>
 		                    	
 		                    </tfoot>
@@ -259,11 +210,7 @@
 
 
 
-	<div class="dom1 dn">
-		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
-		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
-		<div class="tc mt10"><button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button></div>
-	</div>
+
 
 	
 	
@@ -276,7 +223,7 @@
 
 	<script>
 		$(function(){
-			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
 		
