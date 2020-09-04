@@ -200,7 +200,13 @@ $(function(){
 				$(this).addClass("on").siblings().removeClass("on");
 			})
 
-	
+	//selectProcName 展开收起 以及是否显示展开
+	if($(".selectProcName").height()>24){
+		$(".selectProcName").height(24);
+		$("#jgs_scroll").show();
+	}else{
+		$("#jgs_scroll").hide();
+	}
 
 })
 
@@ -317,3 +323,13 @@ function setAll(obj) {
 function showTrMore(obj){
 	$(obj).parents("tr").next(".hideTr").toggle();
 }
+
+function setOpen(obj) {
+			if($(".selectProcName").height()>24){
+				$(".selectProcName").height(24);
+				$(obj).text("展开");
+			}else{
+				$(".selectProcName").height("auto");
+				$(obj).text("收起");
+			}
+		}

@@ -209,23 +209,23 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 .invoiceMsg{height: 155px;box-sizing: border-box;border: 1px solid  #E6E6E6;}
 .invoiceCorpMsg{height: 102px;box-sizing: border-box;overflow-y: auto;}
 .invoiceCorpMsg::-webkit-scrollbar {width:6px;height:4px;}
-.invoiceCorpMsg::-webkit-scrollbar-track-piece {background-color:transparent;margin:-spx;}
+.invoiceCorpMsg::-webkit-scrollbar-track-piece {background-color:transparent;margin:0;}
 .invoiceCorpMsg::-webkit-scrollbar-thumb{background:#D8D8D8 ;border-radius:2px;}
 .invoiceCorpMsg::-webkit-scrollbar-thumb:vertical:hover{background:#bbb;}
 .invoiceCorpMsg::-webkit-scrollbar-thumb:horizontal:hover{background:#bbb }
 .invoiceCorpMsg-item{width: 100%;height:34px ;box-sizing: border-box;line-height: 34px;}
 .invoiceCorpMsg-item.on,.invoiceCorpMsg-item:hover{background: #F0F6FF;}
-.icon-check{width: 16px;height:16px;background: url('../images/finance/icon-check.png') no-repeat;display: inline-block;position: relative;
-}
+.icon-check{width: 16px;height:16px;background: url('../images/finance/icon-check.png') no-repeat;display: inline-block;position: relative;}
 .icon-stop{width: 16px;height:16px;background: url('../images/finance/icon-stop.png') no-repeat;display: inline-block;position: relative;}
 .icon-check.on{background: url('../images/finance/icon-checked.png') no-repeat;}
-
-.icon-add::before{
-    content: "";display: inline-block;width: 16px;height: 16px;background: url('../images/finance/icon-add.png') no-repeat;vertical-align: -3px;margin-right: 5px;
-}
+.icon-add::before{content: "";display: inline-block;width: 16px;height: 16px;background: url('../images/finance/icon-add.png') no-repeat;vertical-align: -3px;margin-right: 5px;}
 .invoice{box-sizing: border-box;}
 .pct8{width: 8%}
 .icon-luru{width: 15px;height: 15px;background-position: -568px -18px;}
+.busi-tabdiv{max-height: 296px;overflow-y:auto;}
+.file-opacity{position: absolute;left:0;top:0;right:0;bottom:0;width: 100%;height: 100%;opacity: 0}
+.editInput,.editTr .editTxt{display: none}
+.editTr .editInput{display: inline-block;}
 
 /*address*/
 .orderaddr.w270{width: 270px}
@@ -384,6 +384,7 @@ a.wh:hover{color:#fff;text-decoration: underline;}
  .mDListCont{width: 70%;display: inline-block;}
  .m-tabLimitSCroll .ui-table {min-width: 1400px;}
  .m-tabLimitSCroll {overflow-x: auto;}
+ .m-tabLimitSCroll .ui-tab3{min-width: 1400px;}
  .indexContent{width: auto}
  .pct69{width: 42%}
  .pct59{width: 40%}
@@ -420,6 +421,8 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 	.bLeftBar .leftBar{display: none;}
 	.rightBar{left:0;}
 	.m_mt10{margin-top: 10px}
+	 .m-tabLimitSCroll {overflow-x: auto;}
+ .m-tabLimitSCroll .ui-tab3{min-width: 1400px;}
 }
 
 /*大于1280 显示左侧菜单*/
@@ -439,7 +442,9 @@ a.wh:hover{color:#fff;text-decoration: underline;}
 	.rightBar{left:200px;}
 	.bLeftBar .leftBar{left:-200px;}
 	.bLeftBar .rightBar{left:0;}
-	.m_mt10{margin-top: 10px}	
+	.m_mt10{margin-top: 10px}
+	.m-tabLimitSCroll {overflow-x: auto;}
+ 	.m-tabLimitSCroll .ui-tab3{min-width: 1400px;}	
 }
 
 @media only screen and (min-width: 1460px) {
