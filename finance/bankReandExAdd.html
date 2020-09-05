@@ -40,7 +40,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="addtitleBg mb20 tc">
-						<a href="newprocVoice.html" class="addNewPage">银行收支录入</a>
+						<a href="javascript:void(0)" onclick="addBankEx()" class="addNewPage">银行收支录入</a>
 					</div>
 					<div class="mb10 f0">
 						<span class="pct22 dib f12">银行账户：<span class="input-selSearch pct59">
@@ -65,55 +65,23 @@
 						</span>
 						<span class="pct22 dib f12">金额：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct25 dib f12">收()付款：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
-					</div>	
-
-
-	                <div class="f0 mb10">
-	                	<span class="pct25 dib f12">收付款类型：<span class="input-selSearch pct69">
-								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">全部</a>
-									<a href="javascript:void(0)" class="search-list db ell">金牌商家提现付款队列</a>
-									<a href="javascript:void(0)" class="search-list db ell">广州</a>
-									<a href="javascript:void(0)" class="search-list db ell">宁波</a>
-									<a href="javascript:void(0)" class="search-list db ell">天津</a>
-									<a href="javascript:void(0)" class="search-list db ell">无锡</a>
-									<a href="javascript:void(0)" class="search-list db ell">常熟</a>
-									<a href="javascript:void(0)" class="search-list db ell">成都</a>
-								</div>
-							</span>
-	                	</span>
-	                	<span class="pct25 dib f12">
-	                		是否导出凭证：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
-	                	</span>
-	                	<span class="pct25 dib f12">
-	                		是否代付：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
-	                	</span>
-	                	<span class="pct25 dib f12">
-	                		银行收支金额：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额不为0</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额为0</label>
-	                	</span>									
-	                </div>
-	                <div class="f0">
-	                	<span class="dib f12 pct50">
-	                		&emsp;&emsp;&emsp;状态：<span class="single ">
-	                            <input type="hidden" value="">
-	                            <button type="button" class="ui-option mr5">全部</button>
-	                            <button type="button" class="ui-option mr5">有效</button>
-	                            <button type="button" class="ui-option ">无效</button>
-	                        </span>
-
-	                	</span>
-	                	<span class="dib f12 pct50">
+						<span class="dib f12 pct30">
 	                		收（付）款时间段：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 					</span>
 	                	</span>
-	                	
+					</div>	
+
+	                <div class="f0 mb10">
+	                	<span class="dib f12 mr40">
+	                		款项类型：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>收款</label>
+						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>付款</label>
+	                	</span>
+	                	<span class="dib f12">
+	                		是否导出凭证：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+	                	</span>								
 	                </div>
 	                <div class="mt20 tc">
 	                	<button type="button" class="ui-button ">查询</button>
@@ -127,18 +95,18 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
-		                            <th width="12%" class="tl"><div class="pl5">收付款方式</div></th> 
-		                            <th width="10%" class="tl"><div class="pl5">单位名称</div></th>                             
-		                            <th width="9%">收款核销金额</th>
-		                            <th width="9%">付款核销金额</th>
-		                            <th width="9%">银行收支金额</th> 
-		                            <th width="7%">入账日期</th>
-		                            <th width="7%">处理时间</th>
-		                            <th width="10%">登记前账户余额</th>
+		                            <th width="6%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>选择</th>
+		                            <th width="14%" class="tl"><div class="pl5">银行账户</div></th> 
+		                            <th width="10%">银行账号</th>                             
+		                            <th width="9%">交易单位</th>
+		                            <th width="9%">收款金额</th>
+		                            <th width="9%">付款金额</th> 
+		                            <th width="7%">交易日期</th>
+		                            <th width="7%">余额</th>
+		                            <th width="6%">费用类型</th>
 		                            <th width="6%">操作员</th>
-		                            <th width="8%">是否已导出凭证</th>
-		                            <th width="5%">操作</th>
+		                            <th width="12%">备注</th>
+		                            <th width="5%">是否导出</th>
 		                            
 		                        </tr>
 		                    </thead>
@@ -149,43 +117,43 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-		                            <td width="8%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
-		                            <td width="10%" class="tl"><div class="pl5">DDC(22)-20001510</div></td>
-		                            <td width="12%" class="tl"><div class="pl5">哈尔滨申达物资经销有限公司</div></td>
-		                            <td width="9%" class="numFormat">123323</td>
+		                            <td width="6%"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>1</td>
+		                            <td width="14%" class="tl"><div class="pl5">哈尔滨申达物资经销有限公司</div></td>
+		                            <td width="10%" class="bkall">1001233319005667868</td>
+		                            <td width="9%">中国邮政运输集团</td>
 		                            <td width="9%" class="numFormat">111.000</td> 
-		                            <td width="9%"  class="numFormat">10101.00</td>
-		                            <td width="7%">101.00</td>
-		                            <td width="7%">2020-01-11</td>
-		                            <td width="10%" class="numFormat">10101.00</td>
+		                            <td width="9%" class="numFormat">10101.00</td>
+		                            <td width="7%">2020-01-11 11:11:11</td>
+		                            <td width="7%" class="numFormat">233</td>
+		                            <td width="6%">加工收款</td>
 		                            <td width="6%">李四</td>
-		                            <td width="8%">是</td>
-		                            <td width="5%"><a href="paymentGatherDetail.html">查看</a></td>
+		                            <td width="12%">备注</td>
+		                            <td width="5%">是</td>
 		                        </tr>
 		                         <tr>
-		                            <td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
-		                            <td class="tl"><div class="pl5">DDC(22)-20001510</div></td>
+		                            <td ><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>2</td>
 		                            <td class="tl"><div class="pl5">哈尔滨申达物资经销有限公司</div></td>
-		                            <td class="numFormat">111.000</td> 
+		                            <td class="bkall">1001233319005667868</td>
+		                            <td >中国邮政运输集团</td> 
 		                            <td class="numFormat">10101.00</td>
 		                            <td class="numFormat">101.00</td>
-		                            <td >11.00</td>
-		                            <td >2020-01-11</td>
-		                            <td class="numFormat">10101.00 </td>
+		                            <td >2020-01-11 11:11:11</td>
+		                            <td class="numFormat">233</td>
+		                            <td >加工收款</td>
 		                            <td >李冬梅</td>
+		                            <td >备注</td>
 		                            <td >是</td>
-		                            <td ><a href="paymentGatherDetail.html">查看</a></td>
 		                        </tr>
 		                    </tbody>
 		                    <tfoot>
 		                    	<tr height="45">
-		                    		<td  class="tc pt10 pb10 ">
-		                    			<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
-		                    		</td>
-		                    		<td colspan="8">合计：收款核销金额：<span class="red mr20 numFormat">234434</span>付款核销金额：<span class="red mr20 numFormat">234434</span>银行收支金额：<span class="red  numFormat">234434</span></td>
-		                    		<td colspan="3">
-		                    			<button type="button" class="ui-button w90 mr5">导出</button>
-		                    			<button type="button" class="ui-button w90" data-type="normal">取消导出</button>
+		                    		<td  class="" colspan="12">
+		                    			<div class="l mt5" style="width: 6%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div><div class="l ml10 mt5"> 当前共选择(2)条信息</div>
+		                    			<div class="r mr20">
+		                    				<button type="button" class="ui-button  mr5">导出</button>
+		                    				<button type="button" class="ui-button " data-type="normal">取消导出</button>
+		                    			</div>
+
 		                    		</td>
 		                    	</tr>
 
@@ -206,11 +174,6 @@
 
 
 
-	<div class="dom1 dn">
-		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
-		<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
-		<div class="tc mt10"><button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button></div>
-	</div>
 
 	
 	
@@ -227,6 +190,19 @@
 
 		})
 		
+
+		function addBankEx(){
+			layer.open({
+				type: 2,
+				title: '银行收支录入',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['1000px', '360px'],
+				content: 'addBankEx.html' //iframe的url
+			});
+		}
+
+
 
 
 		
