@@ -72,10 +72,11 @@
                                 <td class="pct10">1</td>
                                 <td class="pct15">59862</td>
                                 <td class="pct25">以乡村</td>
-                                <td class="pct30">治愈客户有限集团</td>
+                                <td class="pct30"><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">治愈客户有限集团</a></td>
                                 <td class="pct20">
                                     <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                    <a href="javascript:void(0)" onclick="showLayer()">编辑进仓信息</a>
+                                    <span class="dib p2 gd9">|</span>
+                                    <a href="javascript:void(0)" onclick="showLayer()">编辑</a>
                                 </td>
                             </tr>
                             <!-- 点击执行显示 -->
@@ -113,10 +114,11 @@
                                 <td class="pct10">1</td>
                                 <td class="pct15">59862</td>
                                 <td class="pct25">以乡村</td>
-                                <td class="pct30">治愈客户有限集团</td>
+                                <td class="pct30"><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">治愈客户有限集团</a></td>
                                 <td class="pct20">
-                                    <a href="javascript:void(0)">未上传进仓通知单</a>
-                                    <a href="javascript:void(0)" onclick="showLayer()">编辑进仓信息</a>
+                                    <span class="red">未上传</span>
+                                    <span class="dib p2 gd9">|</span>
+                                    <a href="javascript:void(0)" onclick="showLayer()">编辑</a>
                                 </td>
                             </tr>
                             
@@ -135,7 +137,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
-            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
     </script>
@@ -182,7 +184,7 @@
                 title: '进仓通知单上传',
                 shadeClose: true,
                 shade: 0.4,
-                area: ['32%', '50%'],
+                area: ['600px', '45%'],
                 content: 'toWarehouseUpload.html' //iframe的url
             });
         }

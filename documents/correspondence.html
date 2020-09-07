@@ -118,7 +118,109 @@
                                 <td class="pct8">
                                     <span class="daj">
                                         <a href="javascript:void(0)" onclick="to()">查看</a>
-                                        <span class="ml5 mr5">|</span>
+                                        <span class="dib p2 gd9">|</span>
+                                        <a href="javascript:void(0)"
+                                            onclick="showTrMore(this),showDiv_lrlHide(this)">备注</a>
+                                    </span>
+                                </td>
+                                <td class="pct7">
+                                    <a href="javascript:void(0)" onclick="showDiv_lrl(this)">上传</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn">
+                                <td colspan="10">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="33.3%">操作人</th>
+                                                    <th width="33.3%">操作时间</th>
+                                                    <th width="33.3%">备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td>李思思</td>
+                                                    <td>2019-04-23 15:48:53</td>
+                                                    <td>sqsqdwqdqwdqwdqdqqwwd</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="">
+                                                <tr>
+                                                    <td class="bgfa">备注：</td>
+                                                    <td colspan="2">
+                                                        <span class="dib pct100">
+                                                            <textarea class="ui-textarea tl pct98 borNone"
+                                                                placeholder="请填写备注"
+                                                                rows="2">C:0.42-0.50%；Si:0.17-0.37%；Mn:0.50-0.80%;；P:0.035%；S:≤0.035%；Ni:≤0.25%；Fe:≥98.01% 等</textarea>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <button type="button" class="ui-button mr10">添加备注</button>
+                                                        <button type="button" class="ui-button " data-type="clear"
+                                                            onclick="showTrMore(this)">取消</button>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr1 dn">
+                                <td colspan="10">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <tbody class="ui-thover">
+                                                <tr class="resource-table">
+                                                    <td class="vt bgfa" width="10%">
+                                                        <span class="pt5 dib pl10">附件上传：</span></td>
+                                                    <td width="90%" class="tl" colspan="3">
+                                                        <div class="pl10 pr5">
+                                                            <button type="button" class="ui-button mr10 vm w120"
+                                                                data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                            <button type="button" class="ui-button mr10 vm"
+                                                                data-type="upfile" onclick="upfile()">常规上传</button>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <button type="button" class="ui-button mr10">上传</button>
+                                                        <button type="button" class="ui-button " data-type="clear"
+                                                            onclick="showTrMore(this)">取消</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                            <tr>
+                                <td class="pct6">1</td>
+                                <td class="pct10">
+                                    <a href="javascript:void(0)" onclick="showStep()">59862</a>
+                                </td>
+                                <td class="pct10">李思思</td>
+                                <td class="pct15">阿里巴巴钢铁投资集团</td>
+                                <td class="pct12">保证函</td>
+                                <td class="pct12">2020-07-22</td>
+                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
+                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
+                                <td class="pct8">
+                                    <span class="daj">
                                         <a href="javascript:void(0)"
                                             onclick="showTrMore(this),showDiv_lrlHide(this)">备注</a>
                                     </span>
@@ -226,7 +328,7 @@
 
     <script>
         $(function () {
-            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
     </script>
@@ -282,7 +384,7 @@
                 title: '函件制作',
                 shadeClose: true,
                 shade: 0.4,
-                area: ['35%', '53%'],
+                area: ['600px', '40%'],
                 content: 'letterToMake.html' //iframe的url
             });
         }

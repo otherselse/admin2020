@@ -17,9 +17,9 @@
             height: 100%;
             margin: 0px;
             padding: 0px;
-            overflow:-Scroll;
-            overflow-y:hidden;
-            overflow-x:hidden
+            overflow: -Scroll;
+            overflow-y: hidden;
+            overflow-x: hidden
         }
     </style>
 </head>
@@ -36,8 +36,8 @@
                         </td>
                         <td class="tl" width="80%">
                             <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" id="correspondence" placeholder="请选择函件类型" autocomplete="off"
-                                    readonly="">
+                                <input type="text" class="ui-input searchUp pct100" id="correspondence"
+                                    placeholder="请选择函件类型" autocomplete="off" readonly="">
                                 <div class="search-cont">
                                     <a href="javascript:void(0)" class="search-list db ell">北京</a>
                                     <a href="javascript:void(0)" class="search-list db ell">上海</a>
@@ -66,8 +66,10 @@
                         <td colspan="2" class="tc">
                             <div style="height: 80px;border:1px solid" class="pct80 auto"></div>
                             <span class="radio dib mt5">
-                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
                             </span>
                         </td>
                     </tr>
@@ -86,16 +88,14 @@
                             </span>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="tc" colspan="2">
-                            <button type="button" class="mr10 ui-button">预览</button>
-                            <button type="button" class="mr10 ui-button" data-type="clear">退回</button>
-                            <button type="button" class="ui-button " data-type="clear">取消</button>
-                        </td>
-                    </tr>
                 </table>
             </div>
-            <div class="mb20"></div>
+            <br><br>
+            <div class="tc">
+                <button type="button" class="mr10 ui-button">预览</button>
+                <button type="button" class="mr10 ui-button" data-type="clear">退回</button>
+                <button type="button" class="ui-button " data-type="clear">取消</button>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
@@ -103,7 +103,12 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
-         var start = laydate.render({
+        $(function () {
+            $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+    </script>
+    <script>
+        var start = laydate.render({
             elem: '#time2',
             theme: 'lgblue',
             trigger: 'click',
@@ -114,22 +119,22 @@
             }
         })
 
-        $(".search-cont a").click(function(){
+        $(".search-cont a").click(function () {
             let val = $(this).html();
             console.log(val)
-            if(val == "保证函(金牌商家对供应商)" || val == "承诺函(供应商)"){
+            if (val == "保证函(金牌商家对供应商)" || val == "承诺函(供应商)") {
                 $(".1,.3").removeClass("dn")
-            }else{
+            } else {
                 $(".1,.2,.3").addClass("dn")
             }
         });
 
-        function select(){
+        function select() {
             let orderNumber = $(".orderNumber").val();
-            if(orderNumber){
+            if (orderNumber) {
                 $(".2").removeClass("dn")
                 $(".2").addClass("dd")
-            }else{
+            } else {
                 alert("请输入订单号")
             }
         }
