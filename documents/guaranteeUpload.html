@@ -16,6 +16,12 @@
         .qtip {
             max-width: 680px;
         }
+
+        @media only screen and (max-width: 1100px) {
+            .m_index2 {
+                text-indent: 0em;
+            }
+        }
     </style>
 </head>
 
@@ -43,7 +49,8 @@
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="mb10 f0 mt20 ml20 mr20">
                 <div class="mb10 f0">
-                    <span class="pct22 dib f12">办理区域：<span class="input-selSearch pct59">
+                    <span class="pct22 dib f12">办理区域：
+                        <span class=" input-selSearch pct59">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -58,8 +65,9 @@
                     </span>
                     <span class="pct22 dib f12">&emsp;金牌商家：<input type="text" class="ui-input pct59"
                             placeholder="请输入"></span>
-                    <span class="pct22 dib f12">客户单位：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
-                    <span class="pct30 dib f12">申请时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+                    <span class="pct22 dib f12">客户单位：<input type="text" class=" ui-input pct59"
+                            placeholder="请输入"></span>
+                    <span class="pct30 dib f12">申请时间：<span class=" ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                 class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                 class="render-time pct45" readonly="">
@@ -67,7 +75,7 @@
 
                 </div>
                 <div class="mt10 mb20 f0">
-                    <span class="dib f12 m_db m_index2 pct22">
+                    <span class="dib mb10 f12 m_db m_index2 mr55">
                         上传状态：
                         <div class="dib selectSingle m_index0 m_pct80 m_vt">
                             <a class="on" href="javscript:void(0)">全部</a>
@@ -78,7 +86,7 @@
                         </div>
                     </span>
                     <span class="dib f12 m_db m_index2">
-                        &nbsp;&nbsp;&nbsp;担保类别：
+                        担保类别：
                         <div class="dib selectSingle m_index0 m_pct80 m_vt">
                             <a class="on" href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
@@ -168,28 +176,28 @@
                             </tr>
                             <!-- 点击执行显示 -->
                             <tr class="hideTr dn">
-	                            <td colspan="9">
-	                                <div class="pl20 pr20">
-	                                	<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-	                                        <thead>
-	                                            <tr>
-	                                                <th width="10%">序号</th>
-	                                                <th width="30%">审批人</th>
-	                                                <th width="30%">审批时间</th>
-													<th width="30%">审批理由</th>
-	                                            </tr>
-	                                        </thead>
-	                                        <tbody class="ui-thover">
-	                                            <tr>
-	                                                <td>1</td>
-	                                                <td>李思思</td>
-	                                                <td>2019-04-23 15:48:53</td>
-	                                                <td>不同意申请。</td>
-	                                            </tr>
-	                                        </tbody>
-	                                    </table>
-	                                </div>
-	                            </td>
+                                <td colspan="9">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="10%">序号</th>
+                                                    <th width="30%">审批人</th>
+                                                    <th width="30%">审批时间</th>
+                                                    <th width="30%">审批理由</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>李思思</td>
+                                                    <td>2019-04-23 15:48:53</td>
+                                                    <td>不同意申请。</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
                             </tr><!-- 隐藏内容end -->
                             <tr class="pct100">
                                 <td class="pct5">1</td>
@@ -208,6 +216,7 @@
                                 <td class="pct15">
                                     <a href="http://116.228.150.225:6889/LgAdmin/applyPrice/toView.action?id=007DCC40509F5353ED1813DDA3800250"
                                         target="_blank">查看</a>
+                                    <span class="dib p2 gd9">|</span>
                                     <a href="javascript:void(0)" onclick="showTrMore(this)">退回</a>
                                     <span class="dib p2 gd9">|</span>
                                     <a href="toEditUpload.html">重新上传</a>
@@ -219,29 +228,29 @@
                             </tr>
                             <!-- 点击执行显示 -->
                             <tr class="hideTr dn">
-	                            <td colspan="9">
-	                                <div class="pl20 pr20">
-	                                	<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-	                                        <thead>
-	                                            <tr>
-	                                                <th width="10%">序号</th>
-	                                                <th width="30%">审批人</th>
-	                                                <th width="30%">审批时间</th>
-													<th width="30%">审批理由</th>
-	                                            </tr>
-	                                        </thead>
-	                                        <tbody class="ui-thover">
-	                                            <tr>
-	                                                <td>1</td>
-	                                                <td>李思思</td>
-	                                                <td>2019-04-23 15:48:53</td>
-	                                                <td>不同意申请。</td>
-	                                            </tr>
-	                                        </tbody>
-	                                    </table>
-	                                </div>
-	                            </td>
-	                        </tr><!-- 隐藏内容end -->
+                                <td colspan="9">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="10%">序号</th>
+                                                    <th width="30%">审批人</th>
+                                                    <th width="30%">审批时间</th>
+                                                    <th width="30%">审批理由</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>李思思</td>
+                                                    <td>2019-04-23 15:48:53</td>
+                                                    <td>不同意申请。</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
                         </tbody>
                     </table>
                 </div>
