@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>订单提成-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">订单提成</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="ui-tab3">
+				<a href="view3.html" class="ui-tab3-list rel "><span class="ui-tab3-text">贸易订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitReform.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">月度分红</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="procOrderCommission.html" class="ui-tab3-list rel "><span class="ui-tab3-text">加工订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="profitReform.html" class="ui-tab3-list rel"><span class="ui-tab3-text">分红跟踪表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitIncome.html" class="ui-tab3-list rel"><span class="ui-tab3-text">劳务报酬个税申报</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">				
+				<div class="p20 f12">
+					<div class="mb10 f0">
+						<span class="pct22 dib f12">
+							区域：<span class="input-selSearch pct59">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+									<a href="javascript:void(0)" class="search-list db ell">广州</a>
+									<a href="javascript:void(0)" class="search-list db ell">宁波</a>
+									<a href="javascript:void(0)" class="search-list db ell">天津</a>
+									<a href="javascript:void(0)" class="search-list db ell">无锡</a>
+									<a href="javascript:void(0)" class="search-list db ell">常熟</a>
+									<a href="javascript:void(0)" class="search-list db ell">成都</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct22 dib f12">分红月份：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+
+						<span class="dib f12 radio">是否有效：
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有效</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>无效</label>
+						</span>
+					</div>
+					<div class="mb10">					
+							金牌商家类型：<span class="dib  single mr40">
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">内贸合伙式</a>
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">外贸合伙式</a>
+                  			<a class="ui-option mr5 tc" href="javscript:void(0)">加盟式</a>
+						</span>
+						<button type="button" class="ui-button">查询</button>
+					</div>
+
+	                <!-- search end -->
+					
+					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                    	<tr class="fixTr">
+						          <th width="3%" rowspan="2">序号</th>
+						          <th width="4%" rowspan="2">区域</th>
+						          <th width="4%" rowspan="2">金牌商家</th>
+						          <th width="4%" rowspan="2">金牌商家类型</th>
+						          <th width="4%" rowspan="2">有效/无效</th>
+						          <th width="4%" rowspan="2">分红月份</th>
+						          <th width="4%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('profitMoney',this)">税前毛利<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="profitMoney"></i></label>
+						          </th>
+						          <th width="4%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('addRate',this)">增值税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="addRate"></i></label>
+						          </th>
+						          <th width="4%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('elseRate',this)">附加税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="elseRate"></i></label>
+						          </th>
+						          <th width="4%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('printRate',this)">印花税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="printRate"></i></label>
+						          </th>
+						           <th width="5%" rowspan="2">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('personRate',this)">个人所得税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="personRate"></i></label>
+						           </th>
+						           <th width="4%" rowspan="2">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('wagepersonalrate',this)">工资个税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="wagepersonalrate"></i></label>
+						           </th>
+						           <th width="4%" rowspan="2">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('realRate',this)">实扣个税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="realRate"></i></label>
+						           </th>
+						          <th width="5%" rowspan="2">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('companyRate',this)">企业所得税<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="companyRate"></i></label>
+						          </th>
+						          <th width="5%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('capitalMoney',this)">资金占用<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="capitalMoney"></i></label>
+						          </th>
+						          <th width="5%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('profit',this)">税后毛利<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="profit"></i></label>
+						           </th>
+						          <th width="5%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('grossType',this)">适用分红比例<i class="goldIcon icon-sort vm ml5"  data="grossType" id="profitMoney"></i></label>
+						          </th>
+						           <th width="16%" colspan="4">
+						              业务拓展费用
+						          </th>
+						          <th width="5%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('payGross',this)">预计分红<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="payGrossN"></i></label>
+						          </th>
+						          <th width="5%" rowspan="2">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('payGross',this)">实际分红<i class="goldIcon icon-sort vm ml5"  data="orderBy" id="payGross"></i></label>
+						          </th>
+						          <th width="5%" rowspan="2">备注</th>
+						         
+						  </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	<tr>
+							  		<td width="3%" align="center">1</td>
+							  		<td width="4%" align="center">上海</td>
+							  		<td width="4%" align="center">卢头像</td>
+							  		<td width="4%" align="center">
+							  		   内贸合伙式
+							  		   
+							  		   
+							  		</td>
+							  		<td width="4%" align="center">有效</td>
+							  		<td width="4%" align="center">2020-03</td>
+							  		<td width="4%" align="center">250.0</td>
+							  		<td width="4%" align="center">28.76</td>
+							  		<td width="4%" align="center">1.73</td>
+							  		<td width="4%" align="center">4.32</td>
+							  		<td width="5%" align="center">1.29</td>
+							  		<td width="4%" align="center">0.0</td>
+							  		<td width="4%" align="center">0.0</td>
+							  		<td width="5%" align="center">0</td>
+							  		<td width="5%" align="center">0.0</td>
+							  		<td width="5%" align="center">213.9</td>
+							  		<td width="5%" align="center">20%</td>
+							  		<td width="4%" align="center">0.0</td>
+							  		<td width="4%" align="center">0.0</td>
+							  		<td width="4%" align="center">
+							  		    
+									    否
+							  		</td>
+							  		<td width="4%" align="center">0.0</td>
+							  		<td width="5%" align="center">41.75</td>
+							  		<td width="5%" align="center">41.75</td>
+							  		<td width="5%" align="center">--
+									   
+									</td>
+							  </tr>		                    	
+		                    </tbody>
+		                    <tfoot class="bgfa">
+		                    	<tr height="40">
+									<td  colspan="6">当前页合计：</td>
+									<td  class="numFormat bkall">2183201.29</td>
+									<td  class="numFormat bkall">252262.43</td>
+									<td  class="numFormat bkall">15135.72</td>
+									<td  class="numFormat bkall">2601.6</td>
+									<td  class="numForma bkallt">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">13.15</td>
+									<td  class="numFormat bkall">1886,392.7</td>
+									<td >--</td>
+									<td  class="numFormat bkall">526494.86</td>
+									<td  class="numFormat bkall">0</td>
+									<td >--</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">351527.15</td>
+									<td  class="numFormat bkall">351527.15</td>
+									<td >--</td>
+							    </tr>
+		                    	<tr height="40">
+									<td  colspan="6">所有页合计：</td>
+									<td  class="numFormat bkall">1893632.62</td>
+									<td  class="numFormat bkall">265055.2</td>
+									<td  class="numFormat bkall">15903.21</td>
+									<td  class="numFormat bkall">3860.49</td>
+									<td  class="numFormat bkall">28089.36</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">194.13</td>
+									<td  class="numFormat bkall">1580,724.36</td>
+									<td >--</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">0</td>
+									<td >--</td>
+									<td  class="numFormat bkall">0</td>
+									<td  class="numFormat bkall">178458.51</td>
+									<td  class="numFormat bkall">178458.51</td>
+									<td >--</td>
+							    </tr>
+		                    	
+		                    </tfoot>
+		                    
+		                </table>		                
+	            	</div>
+	                
+	            </div><!-- table end -->
+	            
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+		
+
+
+
+	</script>
+</body>
+</html>

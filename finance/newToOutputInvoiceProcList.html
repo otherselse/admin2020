@@ -113,8 +113,8 @@
 					</div>
 
 	                <div class="tc  mt20 mb20">
-						<button type="button" class="ui-button mr10">查询</button>
-	                    <button type="button" class="ui-button mr10" data-type="clear">清空</button>
+						<button type="button" class="ui-button ">查询</button>
+	                    <!-- <button type="button" class="ui-button mr10" data-type="clear">清空</button> -->
 	                </div>
 
 	                <!-- search end -->
@@ -245,7 +245,7 @@
 		                            <td><a href="javascript:void(0)" onclick="showTrMoreOn(this)">查看</a></td>
 		                        </tr>                                           
 		                    </tbody>
-		                    <tfoot>
+		                    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td colspan="15">
 		                    			<span class="l pt5 pct6"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</span>
@@ -299,26 +299,12 @@
 		$(function(){
 			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
-			//selectProcName 展开收起 以及是否显示展开
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$("#jgs_scroll").show();
-			}else{
-				$("#jgs_scroll").hide();
-			}
+		
 
 
 		})
 		
-		function setOpen(obj) {
-			if($(".selectProcName").height()>24){
-				$(".selectProcName").height(24);
-				$(obj).text("展开");
-			}else{
-				$(".selectProcName").height("auto");
-				$(obj).text("收起");
-			}
-		}
+
 
 
 		function layerTSum(){

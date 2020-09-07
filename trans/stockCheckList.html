@@ -71,8 +71,7 @@
 					</div>
 					<div class="cl"><span class="ui-tip" data-type="blue">注：每月5号生成当月库存盘点数据，请各区域财务和物流在每月10号之前完成本区域当月所有仓库的库存盘点。</span></div>
 					<div class="tc mt20">
-	                    <button type="button" class="ui-button mr10">查询</button>
-	                    <button type="button" class="ui-button " data-type="clear">清空</button>
+	                    <button type="button" class="ui-button">查询</button>
 	                </div>
 	                <!-- search end -->
 
@@ -181,18 +180,18 @@
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="40">
-		                    		<td colspan="4">当前页合计</td>
-		                    		<td><span id="allWeight" numtype="personal">151.734</span></td>
-		                    		<td><span id="allCheckWeight" numtype="personal">126.021</span></td>
-		                    		<td><span id="allDifWeight" numtype="personal">25.713</span></td>
-		                    		<td colspan="4"></td>
+		                    		<td colspan="11">
+		                    			当前页合计：库存重量：<span id="allWeight" class="numFormat red mr20">151.734</span>
+		                    			实盘重量：<span id="allCheckWeight" class="numFormat red mr20">126.021</span>
+		                    			差异总览<span id="allDifWeight" class="numFormat red">25.713</span>
+		                    		</td>
 		                    	</tr>
 		                    	<tr height="40">
-		                    		<td colspan="4">所有页合计</td>
-		                    		<td>4,433.349</td>
-		                    		<td>4,433.349</td>
-		                    		<td>4,433.349</td>
-		                    		<td colspan="4"></td>
+		                    		<td colspan="11">
+		                    			所有页合计：库存重量：<span id="allWeight" class="numFormat red mr20">151.734</span>
+		                    			实盘重量：<span id="allCheckWeight" class="numFormat red mr20">126.021</span>
+		                    			差异总览<span id="allDifWeight" class="numFormat red">25.713</span>
+		                    		</td>
 		                    	</tr>
 		                    </tfoot>
 		                </table>
@@ -219,6 +218,7 @@
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
 	<script>
 		$(function(){

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>往来账-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">往来账</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="m-tabLimitSCroll scrollbar">
+		        <div class="ui-tab3">
+					<a href="saleBuss.html" class="ui-tab3-list rel "><span class="ui-tab3-text">销售业务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="businessBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售业务余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="saleFinBuss.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售财务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="workBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售往来余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="purBuss.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购业务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="purBusinessBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购业务余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="purFinBuss.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购财务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
+					<a href="purWorkBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购往来余额表</span><i class="goldIcon ui-tab3-dot"></i></a>				
+					<a href="etterOfInquiry.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">询证函</span><i class="goldIcon ui-tab3-dot"></i></a>
+				</div>
+			</div>
+			<div class="ui-content ovh minH">				
+				<div class="p20 f12">
+					<div class="mb10 f0">
+						<span class="pct20 dib f12">区域：<span class="input-selSearch pct59">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" readonly="" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell ">无</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+								</div>
+							</span></span>
+						<span class="pct20 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct20 dib f12">被审计单位：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct20 dib f12">会计科目：<span class="input-selSearch pct59">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" readonly="" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell ">无</a>
+									<a href="javascript:void(0)" class="search-list db ell">其他应付款</a>
+									<a href="javascript:void(0)" class="search-list db ell">其他应收款</a>					
+									<a href="javascript:void(0)" class="search-list db ell">预付款项</a>
+									<a href="javascript:void(0)" class="search-list db ell">应付账款</a>
+									<a href="javascript:void(0)" class="search-list db ell">应收账款</a>
+									<a href="javascript:void(0)" class="search-list db ell">预收款项</a>
+									<a href="javascript:void(0)" class="search-list db ell">其他应收款</a>
+									<a href="javascript:void(0)" class="search-list db ell">预收账款</a>
+								</div>
+							</span></span>
+
+						<span class="dib f12 radio">
+							是否回函：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>					
+
+					</div>
+		
+
+	                <div class="tc  mt20 mb20">
+						<button type="button" class="ui-button mr5">查询</button>
+						<a class="ui-button" data-type="clear" href="addInquiry.html"><i class="admIcon icon-luru vm mr5"></i><span class="blue">增加</span></a>
+	                </div>
+
+	                <!-- search end -->
+
+					<div class="lgui-table-box mt30">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr>
+		                            <th width="3%">序号</th>
+		                            <th width="14%" class="tl"><div class="pl10">销售单位</div></th>
+		                            <th width="6%">金牌商家</th>
+		                            <th width="4%">区域</th>
+		                            <th width="8%">会计科目</th>		                            
+		                            <th width="8%">被审计单位联系人</th> 
+		                            <th width="10%">被审计单位联系方式</th>
+		                            <th width="17%">被审计单位地址</th>  
+		                            <th width="8%">函证金额</th>
+		                            <th width="5%">是否回函</th> 
+		                            <th width="17%">操作</th>
+
+		                        </tr>
+		                    </thead>
+		                </table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	 <tr><td width="3%">1</td>
+		                            <td width="14%" class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
+		                            <td width="6%">李四</td>
+		                            <td width="4%">上海</td>
+		                            <td width="8%">其他应付款</td>		                            
+		                            <td width="8%"><span class="editTxt">江疏影</span><input type="text" class="tc ui-input pct90 editInput" value="江疏影" /></td> 
+		                            <td width="10%"><span class="editTxt">18812345678</span><input type="text" class="tc ui-input pct90 editInput" value="18812345678" /></td>
+		                            <td width="17%"><span class="editTxt">安徽芜湖市镜湖区按时大大所</span><input type="text" class="tc ui-input pct90 editInput" value="安徽芜湖市镜湖区按时大大所" /></td>  
+		                            <td width="8%" class="numFormat">500000000</td>
+		                            <td width="5%">是</td> 
+		                            <td width="17%">
+		                            	<a href="javascript:void(0)" onclick="editText(this)" class="editBut">编辑</a>
+		                            	<a href="javascript:void(0)" onclick="saveText(this)" class="editSave dn">保存</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">询证</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">回函</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">删除</a>
+		                            </td>
+		                        </tr>
+		                        <tr><td>2</td>
+		                            <td class="tl"><div class="pl10">上海市爱尚有限公司</div></td>
+		                            <td >李四</td>
+		                            <td >上海</td>
+		                            <td >其他应付款</td>		                            
+		                            <td ><span class="editTxt">江疏影</span><input type="text" class="tc ui-input pct90 editInput" value="江疏影" /></td> 
+		                            <td ><span class="editTxt">18812345678</span><input type="text" class="tc ui-input pct90 editInput" value="18812345678" /></td>
+		                            <td ><span class="editTxt">安徽芜湖市镜湖区按时大大所</span><input type="text" class="tc ui-input pct90 editInput" value="安徽芜湖市镜湖区按时大大所" /></td>  
+		                            <td class="numFormat">500000000</td>
+		                            <td >是</td> 
+		                            <td >
+		                            	<a href="javascript:void(0)" onclick="editText(this)" class="editBut">编辑</a>
+		                            	<a href="javascript:void(0)" onclick="saveText(this)" class="editSave dn">保存</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">询证</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">回函</a>
+		                            	<span class="ml5 mr5 dib gd9">|</span>
+		                            	<a href="javascript:void(0)">删除</a>
+		                            </td>
+		                        </tr>                      
+		                    </tbody>		                   
+		                </table>		                
+	            	</div>
+	                
+	            </div><!-- table end -->
+	            
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+		
+		function editText(obj){
+			$(obj).parents("tr").addClass("editTr");
+			$(obj).next(".editSave").show();
+			$(obj).hide();
+		}
+
+		function saveText(obj){
+			$(obj).parents("tr").removeClass("editTr");
+			$(obj).prev(".editBut").show();
+			$(obj).hide();
+		}
+
+		
+	</script>
+</body>
+</html>
