@@ -13,7 +13,11 @@
     <title>信用证正本上传-单据管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <style>
-        td .qtip-lg .qtip-content {
+        /* .qtip-lg .qtip-content {
+            padding: 0px;
+        } */
+
+        .qtip-lep0 .qtip-content {
             padding: 0px;
         }
 
@@ -68,36 +72,36 @@
                             <input type="text" placeholder="开始时间   -    结束时间" id="time1" readonly=""
                                 class="ui-input pct20" lay-key="1">
                         </span>
+                    </div>
+                    <div class="mt20 tc">
                         <button type="button" class="ui-button mr10">查询</button>
                         <button type="button" class="ui-button" data-type="clear">清空</button>
                     </div>
-                    <div class="cl f12 mb5 tr">
-                        <span class="dib">
-                            <span class="daj">
-                                <span class="daj mr20">
-                                    <span class="dib rad colorW mr2"></span>
-                                    <span>未上传</span>
-                                </span>
-                                <span class="daj mr20">
-                                    <span class="dib rad colorS mr2"></span>
-                                    <span>审核中</span>
-                                </span>
-                                <span class="daj mr20">
-                                    <span class="dib rad colorWt mr2"></span>
-                                    <span>未通过</span>
-                                </span>
-                                <span class="daj">
-                                    <span class="dib rad colorY mr2"></span>
-                                    <span>已通过</span>
-                                </span>
-                            </span>
-                        </span>
-                    </div>
                 </div>
             </div>
-
+            <div class="cl f12 mt30 mb15 mr20 tr">
+                <span class="dib">
+                    <span class="daj">
+                        <span class="daj mr20">
+                            <span class="dib rad colorW mr2"></span>
+                            <span>未上传</span>
+                        </span>
+                        <span class="daj mr20">
+                            <span class="dib rad colorS mr2"></span>
+                            <span>审核中</span>
+                        </span>
+                        <span class="daj mr20">
+                            <span class="dib rad colorWt mr2"></span>
+                            <span>未通过</span>
+                        </span>
+                        <span class="daj">
+                            <span class="dib rad colorY mr2"></span>
+                            <span>已通过</span>
+                        </span>
+                    </span>
+                </span>
+            </div>
             <!-- search end -->
-
             <div class="lgui-table-box ml20 mr20  bgwh ui-content ovh minH">
                 <div class="lgui-table-header pct100">
                     <table class="ui-table tc f12  pct100" width="100%">
@@ -126,44 +130,18 @@
                                 <td class="pct6">59862</td>
                                 <td class="pct10">中国邮政运输集团</td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom12" data-hasqtip="15"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom12 dn" style="visibility: visible;">
-                                            <div class="selectDiv pb5 f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom13" data-hasqtip="15"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom13 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">张三三</td>
                                 <td class="pct10">销售合同信用证</td>
@@ -235,44 +213,18 @@
                                 <td class="pct6">59862</td>
                                 <td class="pct10">中国邮政运输集团</td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom14" data-hasqtip="15"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom14 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom15" data-hasqtip="15"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom15 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">张三三</td>
                                 <td class="pct10">销售合同信用证</td>
@@ -343,44 +295,18 @@
                                 <td class="pct6">59862</td>
                                 <td class="pct10">中国邮政运输集团</td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom16" data-hasqtip="16"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="16" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom16 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom17" data-hasqtip="17"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="17" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom17 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">张三三</td>
                                 <td class="pct10">销售合同信用证</td>
@@ -454,44 +380,19 @@
                                 <td class="pct6">59862</td>
                                 <td class="pct10">中国邮政运输集团</td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom18" data-hasqtip="18"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="18" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom18 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom19" data-hasqtip="19"
-                                        data-type="smallbbr">
+                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+                                        data-hasqtip="19" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
-                                    <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                        <div class="f12 pl5 dom19 dn" style="visibility: visible;">
-                                            <div class="selectDiv f12">
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                                <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td class="pct10">张三三</td>
                                 <td class="pct10">销售合同信用证</td>
@@ -527,7 +428,6 @@
                                                                     class="g80">组件1111组件</a><a
                                                                     class="icon-sdel goldIcon vm ml5"
                                                                     href="#"></a></span>
-
                                                         </span>
                                                     </td>
                                                     <td class="bgfa" width="11%">
@@ -617,6 +517,17 @@
                     </div>
                 </div>
             </div>
+            <div class="f12 dom18 dn">
+                <div class="selectDiv f12">
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                    <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
+                </div>
+            </div>
             <div class="mb20"></div>
         </div>
     </div>
@@ -627,7 +538,48 @@
     <script>
         $(function () {
             $(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
+                },
+            });
 
+            $(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
         })
     </script>
     <script>
@@ -667,27 +619,7 @@
             $(obj).parents(".hideTr").find('.httkxs').toggle();
         }
 
-        //tipclick 点击出现数据段
-        $('.tipclick').qtip({
-            show: { event: 'click' },
-            hide: 'unfocus',
-            content: {
-                text: function (event, api) {
-                    return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                }
-            },
-            position: {
-                my: 'bottom center',
-                at: 'top center'
-            },
-            // position: {
-            //     viewport: $(window)
-            // },
-            style: {
-                classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
-            },
-           
-        });
+
 
         $("body").on("click", "#hideTip", function () {
             $(".qtip").hide();

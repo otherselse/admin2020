@@ -43,8 +43,7 @@
         <div class=" fix f12 bgwh ui-content ovh minH">
             <div class="mb10 f0 mt20  mr20">
                 <div class="mb10 f0">
-                    <span class="pct22 dib f12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 核保人区域：<span
-                            class="input-selSearch pct59">
+                    <span class="pct30 dib f12 ml20">核保人区域：<span class="input-selSearch pct59">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -57,9 +56,9 @@
                             </div>
                         </span>
                     </span>
-                    <span class="pct22 dib f12">&emsp;核保人：<input type="text" class="ui-input pct59"
+                    <span class="pct30 dib f12">&emsp;核保人：<input type="text" class="ui-input pct59"
                             placeholder="请输入"></span>
-                    <span class="pct22 dib f12">联系方式：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+
                     <span class="pct30 dib f12">核保日期：<span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                 class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
@@ -67,24 +66,26 @@
                         </span></span></span>
 
                 </div>
+
                 <div class="mb20 f0">
-                    <span class="pct22 dib f12">&emsp;&emsp;身份证号码：<input type="text" class="ui-input pct59 mb10"
+
+                    <span class="pct30 dib f12 ml20">身份证号码：<input type="text" class="ui-input pct59 mb10"
                             placeholder="请输入"></span>
-                    <span class="dib f12 m_db m_index2">
+                    <span class="pct30 dib f12">联系方式：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+                    <span class="dib pct35 f12 m_db m_index2">
                         上传状态：
                         <div class="dib selectSingle m_index0 m_pct80 m_vt">
                             <a class="on" href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
                             <a href="javscript:void(0)">未上传</a>
                             <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">以上传</a>
+                            <a href="javscript:void(0)">已上传</a>
                         </div>
                     </span>
 
                 </div>
                 <div class="tc">
-                    <button type="button" class="ui-button mr10">提交</button>
-                    <button class="ui-button mr10" data-type="normal" type="button">查询</button>
+                    <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
             </div>
@@ -98,31 +99,29 @@
 
             <!-- search end -->
             <div class="lgui-table-box ml20 mr20">
-                <div class="lgui-table-header pct100">
-                    <table class="ui-table tc f12" width="100%">
+                <div class="lgui-table-body mt-1">
+                    <table  class="ui-table table-cw tc f12" width="100%">
                         <thead>
                             <tr>
-                                <th width="5%">序号</th>
+                                <th width="4%">序号</th>
                                 <th width="5%">区域</th>
-                                <th width="10%">核保人</th>
+                                <th width="8%">核保人</th>
                                 <th width="10%">联系方式</th>
                                 <th width="15%">核保期限</th>
-                                <th width="7%">是否超期</th>
+                                <th width="5%">是否超期</th>
                                 <th width="10%">打印时间</th>
                                 <th width="10%">上传时间</th>
-                                <th width="5%">上件人</th>
-                                <th width="23%" colspan="2">操作</th>
+                                <th width="8%">上件人</th>
+                                <th width="25%" colspan="2">操作</th>
                             </tr>
                         </thead>
                     </table>
-                </div>
-                <div class="lgui-table-body mt-1">
-                    <table class="ui-table tc f12" width="100%">
+                    <table class="ui-table table-cw tc f12" width="100%">
                         <tbody class="ui-thover">
                             <tr>
-                                <td width="5%">1</td>
+                                <td width="4%">1</td>
                                 <td width="5%">上海</td>
-                                <td width="10%">李思思</td>
+                                <td width="8%">李思思</td>
                                 <td width="10%">15865247856</td>
                                 <td width="15%">
                                     <div class="dfc dfj">
@@ -133,11 +132,11 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td width="7%"><span class="red">是</span> </td>
+                                <td width="5%"><span class="red">是</span> </td>
                                 <td width="10%">2020-04-05 12:30:28</td>
                                 <td width="10%">2020-04-05 12:30:28</td>
-                                <td width="5%">张三三</td>
-                                <td width="16%">
+                                <td width="8%">张三三</td>
+                                <td width="17%">
                                     <a href="http://116.228.150.225:6889/LgAdmin/lc/lettercommitPrint.action?lettercommit.id=A249BE7C92471634E05371001FAC94F0"
                                         target="_blank">打印</a>
                                     <span class="dib p2 gd9">|</span>
@@ -145,7 +144,7 @@
                                     <span class="dib p2 gd9">|</span>
                                     <a href="javascript:void(0)" onclick="showDiv_lrl(this)">查看</a>
                                 </td>
-                                <td width="7%">
+                                <td width="8%">
                                     <a href="javascript:void(0)" onclick="showLayer(this)">历史记录</a>
                                 </td>
                             </tr>
@@ -186,7 +185,7 @@
                                                         <span class="pt5 dib pl20">核保期限：</span>
                                                     </td>
                                                     <td width="37%">
-                                                        <span class="ui-input tc f0 pct90 borNone range ml10"
+                                                        <span class="ui-input tc f0 pct95 borNone range ml10"
                                                             data-type="time">
                                                             <input type="text" placeholder="开始时间"
                                                                 class="render-time pct45" readonly="">
@@ -317,7 +316,7 @@
                                                         <span class="pt5 dib pl20">核保期限：</span>
                                                     </td>
                                                     <td width="37%">
-                                                        <span class="ui-input tc f0 pct90 borNone range ml10"
+                                                        <span class="ui-input tc f0 pct95 borNone range ml10"
                                                             data-type="time">
                                                             <input type="text" placeholder="开始时间" value="2012-12-21"
                                                                 class=" pct45" readonly="">
@@ -330,46 +329,75 @@
                                                 <tr class="resource-table">
                                                     <td class="vt bgfa" width="13%">
                                                         <span class="pt5 dib pl20">身份证扫描件上传：</span></td>
-                                                    <td width="37%">
-                                                        <div class="pl20">
-                                                            <a href="javascript:void(0)"
-                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    <td width="90%" colspan="3">
+                                                        <div class="pl10 pr5">
+                                                            <button type="button" class="ui-button mr10 vm w120"
+                                                                data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                            <button type="button" class="ui-button mr10 vm"
+                                                                data-type="upfile" onclick="upfile()">常规上传</button>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+
+                                                            <div class="pt5 cl">
+                                                                <span class="ui-tip"
+                                                                    data-type="normal">身份证正反面复印于一张纸上，金牌商家签字、摁手印并书写日期。</span>
+                                                            </div>
                                                         </div>
-                                                    </td>
-                                                    <td width="50%" colspan="2">
-                                                        <span class="dib pl20">
-                                                            身份证正反面复印于一张纸上，金牌商家签字、摁手印并书写日期。
-                                                        </span>
                                                     </td>
                                                 </tr>
                                                 <tr class="resource-table">
-                                                    <td class="vt bgfa" width="13%">
-                                                        <span class="pt5 dib pl20">承诺函扫描件上传：</span></td>
-                                                    <td width="37%">
-                                                        <div class="pl20">
-                                                            <a href="javascript:void(0)"
-                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    <td class="vt bgfa" width="13%"><span
+                                                            class="pt5 dib pl20">承诺函扫描件上传：</span></td>
+                                                    <td width="90%" colspan="3">
+                                                        <div class="pl10 pr5">
+                                                            <button type="button" class="ui-button mr10 vm w120"
+                                                                data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                            <button type="button" class="ui-button mr10 vm"
+                                                                data-type="upfile" onclick="upfile()">常规上传</button>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+
+                                                            <div class="pt5 cl">
+                                                                <span class="ui-tip" data-type="normal">核保人签字。</span>
+                                                            </div>
                                                         </div>
-                                                    </td>
-                                                    <td width="50%" colspan="2">
-                                                        <span class="dib pl20">
-                                                            核保人签字
-                                                        </span>
                                                     </td>
                                                 </tr>
                                                 <tr class="resource-table">
                                                     <td class="vt bgfa" width="13%"><span
                                                             class="pt5 dib pl20">签订现场照片：</span></td>
-                                                    <td width="37%">
-                                                        <div class="pl20">
-                                                            <a href="javascript:void(0)"
-                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    <td width="90%" colspan="3">
+                                                        <div class="pl10 pr5">
+                                                            <button type="button" class="ui-button mr10 vm w120"
+                                                                data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                            <button type="button" class="ui-button mr10 vm"
+                                                                data-type="upfile" onclick="upfile()">常规上传</button>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                    class="g80">组件1111组件</a><a
+                                                                    class="icon-sdel goldIcon vm ml5"
+                                                                    href="#"></a></span>
+
+                                                            <div class="pt5 cl">
+                                                                <span class="ui-tip"
+                                                                    data-type="normal">核保人签字照片，要求出现核保人正脸，放大可看清保证函内容，且有水印拍摄时间（上传最少一张）。</span>
+                                                            </div>
                                                         </div>
-                                                    </td>
-                                                    <td width="50%" colspan="2">
-                                                        <span class="dib pl20">
-                                                            核保人签字照片，要求出现核保人正脸，放大可看清保证函内容，且有水印拍摄时间。上传最少一张
-                                                        </span>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -656,7 +684,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 
-    
+
     <script>
         $(function () {
             $(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位

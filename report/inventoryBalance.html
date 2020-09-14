@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>第三方支付结算跟踪表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+</head>
+
+<body class="showTip ">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">第三方支付结算跟踪表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3">
+            <a href="shouldAdvance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">应收、预收跟踪表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="shouldBePrepaid.html" class="ui-tab3-list rel"><span class="ui-tab3-text">应付、预付跟踪表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="inventoryBalance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">库存结余金额表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table width="100%" class="mt5">
+                    <tr>
+                        <td width="28%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="28%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">订单号：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="28%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">区域：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入区域" autocomplete="off">
+                            </span>
+                        </td>
+                        <td >
+                            <span class="input-selSearch pct100">
+                                <span class="dib">是否开提单：</span>
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="mt20 mb20 tc">
+                                <button type="button" class="ui-button mr10">查询</button>
+                                <button type="button" class="ui-button " data-type="clear">清空</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="4%">序号</th>
+                            <th width="6%">区域</th>
+                            <th width="6%">订单号</th>
+                            <th width="6%">金牌商家</th>
+                            <th width="8%">入库类型</th>
+                            <th width="8%">品名</th>
+                            <th width="8%">规格</th>
+                            <th width="8%">钢厂</th>
+                            <th width="8%">牌号</th>
+                            <th width="8%">数量</th>
+                            <th width="8%">是否开提单</th>
+                            <th width="8%">采购单价</th>
+                            <th width="8%">重量</th>
+                            <th width="6%">库存金额</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="4%">1</td>
+                            <td width="6%">上海</td>
+                            <td width="6%">61133</td>
+                            <td width="6%">徐河若</td>
+                            <td width="8%">库存销售入库</td>
+                            <td width="8%">镀铝板材</td>
+                            <td width="8%">11.000*800*C</td>
+                            <td width="8%">兆顺</td>
+                            <td width="8%">SA1E</td>
+                            <td width="8%">1</td>
+                            <td width="8%">否</td>
+                            <td width="8%">2,000</td>
+                            <td width="8%">10</td>
+                            <td width="6%">20,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="">
+                        <tr height="45">
+                            <td colspan="12">当页合计</td>
+                            <td>130</td>
+                            <td>252,600</td>
+                        </tr>
+                        <tr height="45">
+                            <td colspan="12">所有汇总</td>
+                            <td>262,459.1104</td>
+                            <td>741,803,575.28</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: 'G2G收益记录明细',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['960px', '80%'],
+                content: 'G2GearningsRecord.html' //iframe的url
+            });
+        }
+
+    </script>
+</body>
+
+</html>

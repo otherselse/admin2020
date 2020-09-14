@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
     <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
         mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
@@ -43,20 +44,19 @@
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer(this)" class="dib xzhj-button daj">
+                    <a href="javascript:void(0)" onclick="showLayer('函件制作','letterToMake.html')"
+                        class="dib xzhj-button daj">
                         <span class="dib mr10">新增函数</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
                     </a>
                 </div>
             </div>
-            <div class="mb20 f0 mt30 ml10 mr20">
+            <div class="mb20 f0 mt30 ml20 mr20">
                 <div class="mb10 f0">
-                    <span class="pct22 dib f12">&emsp;订单号：<input type="text" class="ui-input pct59"
+                    <span class="pct22 dib f12">&nbsp;&nbsp;&nbsp;订单号：<input type="text" class="ui-input pct59"
                             placeholder="请输入"></span>
-                    <span class="pct22 dib f12">&emsp;金牌商家：<input type="text" class="ui-input pct59"
-                            placeholder="请输入"></span>
-                    <span class="pct22 dib f12">&emsp;客户单位：<input type="text" class="ui-input pct59"
-                            placeholder="请输入"></span>
+                    <span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+                    <span class="pct22 dib f12">客户单位：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
                     <span class="pct22 dib f12">函件类型：<span class="input-selSearch pct59">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
@@ -72,59 +72,126 @@
                     </span>
                 </div>
             </div>
-            <div class="tc">
+            <div class="ml20">
+                <span class="pct22 dib f12">订单状态：<span class="input-selSearch pct59">
+                        <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                            readonly="">
+                        <div class="search-cont">
+                            <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                            <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                        </div>
+                    </span>
+                </span>
+                是否超时：
+                <span class="radio pct20">
+                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                class="radio-opacity " name="radio"></i>是</label>
+                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                name="radio"></i>否</label>
+                </span>
+            </div>
+            <div class="tc mt20">
                 <button type="button" class="ui-button mr10">查询</button>
                 <button type="button" class="ui-button " data-type="clear">清空</button>
             </div>
             <!-- search end -->
             <div class="lgui-table-box ml20 mt30 mr20">
-                <div class="lgui-table-header pct100">
-                    <table class="ui-table tc f12  pct100" width="100%">
+                <div class="lgui-table-body">
+                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
                         <thead>
                             <tr>
-                                <th width="6%">序号</th>
-                                <th width="10%">订单号</th>
-                                <th width="10%">金牌商家</th>
-                                <th width="15%">企业名称</th>
-                                <th width="12%">函件类型</th>
-                                <th width="12%">申请时间</th>
-                                <th width="10%">函件</th>
-                                <th width="10%">附件</th>
-                                <th width="15%" colspan="2">
-                                    <span class="dj">
-                                        <span class="mr5">操作</span>
-                                        <a href="javascript:void(0)" title="保证函、承诺函、借条不需流程审批"
-                                            class="tiptop goldIcon icon-info "></a>
+                                <th width="6%">
+                                    <i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
+                                            name="checkbox" onclick="setAll(this)"></i>序号
+                                </th>
+                                <th width="5%">订单号</th>
+                                <th width="5%">金牌商家</th>
+                                <th width="17%">
+                                    <span class="df">
+                                        <span class="ml20 mr10">企业名称</span><a href="javascript:void(0)"
+                                            class="goldIcon icon-info tiptop" oldtitle="...." title="包含客户单位和供货商单位"></a>
                                     </span>
                                 </th>
+                                <th width="7%">应收款日期</th>
+                                <th width="4%">超期天数</th>
+                                <th width="7%">延期至</th>
+                                <th width="12%" class="tl">
+                                    <span class="ml20">延期原因</span>
+                                </th>
+                                <th width="8%">催款函</th>
+                                <th width="8%">起诉通知函</th>
+                                <th width="6%">其他函件</th>
+                                <th width="6%">订单状态</th>
+                                <th width="8%">订单原件/传真件</th>
                             </tr>
                         </thead>
-                    </table>
-                </div>
-                <div class="lgui-table-body">
-                    <table class="ui-table tc f12" width="100%">
                         <tbody class="ui-thover">
                             <tr>
-                                <td class="pct6">1</td>
-                                <td class="pct10">
+                                <td>
+                                    <i class="ui-checkbox goldIcon ml20">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span class="ml5">1</span>
+                                </td>
+                                <td>
                                     <a href="javascript:void(0)" onclick="showStep()">59862</a>
                                 </td>
-                                <td class="pct10">李思思</td>
-                                <td class="pct15">阿里巴巴钢铁投资集团</td>
-                                <td class="pct12">保证函</td>
-                                <td class="pct12">2020-07-22</td>
-                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
-                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
-                                <td class="pct8">
+                                <td><a href="">李思思</a></td>
+                                <td class="tl">
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib k-bon mr5">客</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清帝国产业集团</span>
+                                    </div>
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib g-bon mr5">供</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清saqxdqcxqdqwdqdwdc112sqqcxwcq帝国产业集团</span>
+                                    </div>
+                                </td>
+                                <td>2020-07-22</td>
+                                <td>0</td>
+                                <td>2020-07-22</td>
+                                <td class="tl">
+                                    <span title="加工质量问题加工质量问题加工质量问题加工质量问题"
+                                        class="g68 ml20 tiptop zxx_text_b">加工质量问题加工质量问题加工质量问题加工质量问题</span></td>
+                                <td>
                                     <span class="daj">
-                                        <a href="javascript:void(0)" onclick="to()">查看</a>
-                                        <span class="dib p2 gd9">|</span>
-                                        <a href="javascript:void(0)"
-                                            onclick="showTrMore(this),showDiv_lrlHide(this)">备注</a>
+                                        <span class="daj tipclick g68" qtip-dom="dom2">
+                                            <span class="dib rad colorW mr5"></span>
+                                            <span>已发送</span>
+                                        </span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom17"
+                                            data-hasqtip="15">></a>
                                     </span>
                                 </td>
-                                <td class="pct7">
-                                    <a href="javascript:void(0)" onclick="showDiv_lrl(this)">上传</a>
+                                <td>
+                                    <span class="daj tipclick g68" qtip-dom="dom2">
+                                        <span class="daj">
+                                            <span class="dib rad colorW mr5"></span>
+                                            <span>已发送</span>
+                                        </span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom17"
+                                            data-hasqtip="15">></a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1">1/3</a>
+                                    </span>
+                                    <a href="javascript:void(0)"
+                                        onclick="showLayer('其他函件详','corresManagement.html')">查看</a>
+                                </td>
+                                <td>
+                                    正常
+                                    <a href="javascript:void" class="tipclick" qtip-dom="dom3">变更</a>
+                                </td>
+                                <td>
+                                    1/3  <a href="javascript:void(0)"
+                                        onclick="showLayer('单原件/传真件','aFacsimile.html')">上传</a>
                                 </td>
                             </tr>
                             <!-- 点击执行显示 -->
@@ -209,108 +276,136 @@
                                 </td>
                             </tr><!-- 隐藏内容end -->
                             <tr>
-                                <td class="pct6">1</td>
-                                <td class="pct10">
+                                <td>
+                                    <i class="ui-checkbox goldIcon ml20">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span class="ml5">1</span>
+                                </td>
+                                <td>
                                     <a href="javascript:void(0)" onclick="showStep()">59862</a>
                                 </td>
-                                <td class="pct10">李思思</td>
-                                <td class="pct15">阿里巴巴钢铁投资集团</td>
-                                <td class="pct12">保证函</td>
-                                <td class="pct12">2020-07-22</td>
-                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
-                                <td class="pct10"><a href="javascript:void(0)" class="ui-files vm">跟信用证本上传一样</a></td>
-                                <td class="pct8">
+                                <td><a href="">李思思</a></td>
+                                <td class="tl">
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib k-bon mr5">客</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清帝国产业集团</span>
+                                    </div>
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib g-bon mr5">供</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清saqxdqcxqdqwdqdwdc112sqqcxwcq帝国产业集团</span>
+                                    </div>
+                                </td>
+                                <td>2020-07-22</td>
+                                <td>0</td>
+                                <td>2020-07-22</td>
+                                <td class="tl">
+                                    <span title="加工质量问题加工质量问题加工质量问题加工质量问题"
+                                        class="g68 ml20 tiptop vm zxx_text_b">加工质量问题加工质量问题加工质量问题加工质量问题</span></td>
+                                <td>
                                     <span class="daj">
-                                        <a href="javascript:void(0)"
-                                            onclick="showTrMore(this),showDiv_lrlHide(this)">备注</a>
+                                        <span class="daj tipclick g68" qtip-dom="dom2">
+                                            <span class="dib rad colorWt mr5"></span>
+                                            <span>制作中</span>
+                                        </span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom17"
+                                            data-hasqtip="15">></a>
                                     </span>
                                 </td>
-                                <td class="pct7">
-                                    <a href="javascript:void(0)" onclick="showDiv_lrl(this)">上传</a>
+                                <td>
+                                    <span class="daj">
+                                        <span class="daj tipclick g68" qtip-dom="dom2">
+                                            <span class="dib rad colorWt mr5"></span>
+                                            <span>制作中</span>
+                                        </span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom17"
+                                            data-hasqtip="15">></a>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1">1/3</a>
+                                    </span>
+                                    <a href="javascript:void(0)"
+                                        onclick="showLayer('其他函件详情','corresManagement.html')">查看</a>
+                                </td>
+                                <td>
+                                    正常
+                                    <a href="javascript:void" class="tipclick" qtip-dom="dom3">变更</a>
+                                </td>
+                                <td>
+                                    1/3  <a href="javascript:void(0)"
+                                        onclick="showLayer('单原件/传真件','aFacsimile.html')">上传</a>
                                 </td>
                             </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th width="33.3%">操作人</th>
-                                                    <th width="33.3%">操作时间</th>
-                                                    <th width="33.3%">备注</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>李思思</td>
-                                                    <td>2019-04-23 15:48:53</td>
-                                                    <td>sqsqdwqdqwdqwdqdqqwwd</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot class="">
-                                                <tr>
-                                                    <td class="bgfa">备注：</td>
-                                                    <td colspan="2">
-                                                        <span class="dib pct100">
-                                                            <textarea class="ui-textarea tl pct98 borNone"
-                                                                placeholder="请填写备注"
-                                                                rows="2">C:0.42-0.50%；Si:0.17-0.37%；Mn:0.50-0.80%;；P:0.035%；S:≤0.035%；Ni:≤0.25%；Fe:≥98.01% 等</textarea>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3">
-                                                        <button type="button" class="ui-button mr10">添加备注</button>
-                                                        <button type="button" class="ui-button " data-type="clear"
-                                                            onclick="showTrMore(this)">取消</button>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                            <tr>
+                                <td>
+                                    <i class="ui-checkbox goldIcon ml20">
+                                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                                    <span class="ml5">1</span>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showStep()">59862</a>
+                                </td>
+                                <td><a href="">李思思</a></td>
+                                <td class="tl">
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib k-bon mr5">客</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清帝国产业集团</span>
+                                    </div>
+                                    <div class="ml20 mb5 dac">
+                                        <span class="dib g-bon mr5">供</span>
+                                        <span class="tiptop g68 zxx_text_b"
+                                            title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清saqxdqcxqdqwdqdwdc112sqqcxwcq帝国产业集团</span>
                                     </div>
                                 </td>
-                            </tr><!-- 隐藏内容end -->
-
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr1 dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <tbody class="ui-thover">
-                                                <tr class="resource-table">
-                                                    <td class="vt bgfa" width="10%">
-                                                        <span class="pt5 dib pl10">附件上传：</span></td>
-                                                    <td width="90%" class="tl" colspan="3">
-                                                        <div class="pl10 pr5">
-                                                            <button type="button" class="ui-button mr10 vm w120"
-                                                                data-type="upfile" onclick="upfile()">高拍仪上传</button>
-                                                            <button type="button" class="ui-button mr10 vm"
-                                                                data-type="upfile" onclick="upfile()">常规上传</button>
-                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                                    class="g80">组件1111组件</a><a
-                                                                    class="icon-sdel goldIcon vm ml5"
-                                                                    href="#"></a></span>
-                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                                    class="g80">组件1111组件</a><a
-                                                                    class="icon-sdel goldIcon vm ml5"
-                                                                    href="#"></a></span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3">
-                                                        <button type="button" class="ui-button mr10">上传</button>
-                                                        <button type="button" class="ui-button " data-type="clear"
-                                                            onclick="showTrMore(this)">取消</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <td>2020-07-22</td>
+                                <td>0</td>
+                                <td>2020-07-22</td>
+                                <td class="tl">
+                                    <span title="加工质量问题加工质量问题加工质量问题加工质量问题"
+                                        class="g68 ml20 tiptop vm zxx_text_b">加工质量问题加工质量问题加工质量问题加工质量问题</span></td>
+                                <td>未发送</td>
+                                <td>未发送</td>
+                                <td>
+                                    <span>
+                                        <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1">1/3</a>
+                                    </span>
+                                    <a href="">查看</a>
                                 </td>
-                            </tr><!-- 隐藏内容end -->
+                                <td>
+                                    正常
+                                    <a href="javascript:void" class="tipclick" qtip-dom="dom3">变更</a>
+                                </td>
+                                <td>
+                                    1/3  <a href="javascript:void(0)"
+                                        onclick="showLayer('单原件/传真件','aFacsimile.html')">上传</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bgfa">
+                            <tr height="45">
+                                <td colspan="13" class="borNone">
+                                    <span class="dajs">
+                                        <span class="">
+                                            <i class="ui-checkbox goldIcon ml20">
+                                                <input type="checkbox" class="checkbox-opacity" name="checkbox"
+                                                    onclick="setAll(this)"></i>
+                                            <span class="ml5">全选</span>
+                                            <span class="ml30 dib">当前共选择(<span class="red">3</span>)条信息</span>
+                                        </span>
 
+                                        <span class="df">
+                                            <button type="button" class="ui-button mr10" onclick=""
+                                                data-type="normal">催款函发送</button>
+                                            <button type="button" class="ui-button mr5">起诉通知函发送</button>
+                                        </span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tfoot>
                         </tbody>
                     </table>
                 </div>
@@ -319,29 +414,153 @@
             <script type="text/javascript" src="../js/pagelist.js"></script>
             <div class="mb20"></div>
         </div>
-
+    </div>
+    <div class="dom1 dn">
+        <table class="checkbox">
+            <tr>
+                <td>
+                    <i class="ui-checkbox goldIcon">
+                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                    <span class="ml5">销售合同</span>
+                </td>
+                <td>
+                    <i class="ui-checkbox goldIcon ml10 on">
+                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                    <span class="ml5">对账函</span>
+                </td>
+                <td>
+                    <i class="ui-checkbox goldIcon ml10">
+                        <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+                    <span class="ml5">签收单</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="dom2 dn" style="width: 300px;">
+        <table cellspacing="0" width="84%">
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib mb10">催款函件：</span>
+                </td>
+                <td width="70%">
+                    <a href="javascript:void(0)" title="组件1qdqwdqddqdwq111.jpg"
+                        class="mb10 tiptop ui-files vm zxx_text">组件1qdqwdqddqdwq111.jpg</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib">快递单号：</span>
+                </td>
+                <td width="70%">
+                    <input type="text" class="dn ui-input ml5" placeholder="请输入"></span>
+                    <span title="ddddddddddaaawdqdaaaadddd.jpg"
+                        class="g68 tiptop zxx_text dib ml5 lh30">ddddddddddaaawdqdaaaadddd</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tc">
+                    <a href="javasrcipt:void(0)" class="" onclick="Modify(this)">修改</a>
+                    <a href="" class="ml10">查看</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="dom3 dn" style="width: 300px;">
+        <table cellspacing="0" width="84%">
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib mb10">订单状态：</span>
+                </td>
+                <td width="70%">
+                    <span class="input-selSearch pct90 mb10">
+                        <input type="text" class="pct100 ui-input searchUp" placeholder="请选择" style="height: 20px;" autocomplete="off">
+                        <div class="search-cont pct100">
+                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                        </div>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib mb10">备注：</span>
+                </td>
+                <td width="70%">
+                    <input type="text" class="ui-input pct90 mb10" style="height: 20px;" placeholder="请输入"></span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib mb10">延期至：</span>
+                </td>
+                <td width="70%">
+                    <span class="ui-input ui-input mb10 pct90" style="height: 20px;" data-type="time">
+                        <input type="text" placeholder="" style="height: 20px;" id="time5" readonly="" lay-key="12">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" class="tc">
+                    <span class="dib">延期原因：</span>
+                </td>
+                <td width="70%">
+                    <span class="input-selSearch pct90 mb10">
+                        <input type="text" class="pct100 ui-input searchUp" placeholder="请选择" style="height: 20px;" autocomplete="off">
+                        <div class="search-cont pct100 zx1">
+                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                        </div>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tl">
+                    <button type="button" class="ui-button mt10 mr20" data-type="small" onclick="gotoClick()">确认</button>
+                    <button type="button" class="ui-button mt10" data-type="clears" id="hideTip">取消</button>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
     <script>
         $(function () {
             $(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //  viewport: $(window)
+                // },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
         })
     </script>
     <script>
-        $(".showTip").find('[title]').qtip({
-            position: {
-                my: 'bottom center', //my:是指三角的位置
-                at: 'top center' //是在提示在组件的相对位置
-            },
-            style: {
-                classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-            }
-        });
         //时间范围
         laydate.render({
             elem: '#time1'
@@ -357,12 +576,28 @@
             }
         });
 
+        var start = laydate.render({
+            elem: '#time5'
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , min: '2020-07-01'
+            , done: function (value, date, endDate) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,//关键
+                    date: date.date
+                };
+                endtime.config.max = myobj;
+            }
+
+        })
+
         var time01 = laydate.render({
             elem: '#time01'
             , theme: 'lgblue'
             , btns: ['clear', 'confirm']
             , trigger: 'click'
-            , done: function (value, date) {
+            , done: function (value, date, even) {
                 var myobj = {
                     year: date.year,
                     month: date.month - 1,
@@ -370,6 +605,7 @@
                 }
                 time02.config.min = myobj
                 time02.config.value = myobj
+                event.stopPropagation();
             }
         });
 
@@ -377,15 +613,27 @@
             $(obj).parents(".hideTr").find('.httkxs').toggle();
         }
 
-        function showLayer() {
+        function showLayer(name, url) {
             layer.open({
                 type: 2,
-                title: '函件制作',
+                title: name,
                 shadeClose: true,
                 shade: 0.4,
                 area: ['600px', '40%'],
-                content: 'letterToMake.html' //iframe的url
+                content: url //iframe的url
             });
+        }
+        function Modify(obj) {
+            var $span = $(obj).parents("tr").prev("tr").find("td").next("td").find("span");
+            if ($span.css("display") == "block") {
+                $span.prev("input").removeClass("dn");
+                $span.css("display", "none");
+                $(obj).text("保存");
+            } else {
+                $span.prev("input").addClass("dn");
+                $span.css("display", "block");
+                $(obj).text("修改");
+            }
         }
 
         function showDiv_lrl(obj) {
@@ -398,10 +646,11 @@
         }
 
         //点击查看字 传入关键字
-        function to(text){
+        function to(text) {
             // 显示提示或者去审批管理-用印审批
             alert("保证函、承诺函、借条不需流程审批");
         }
+
     </script>
 </body>
 

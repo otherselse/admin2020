@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>进仓通知单上传-编辑</title>
+    <title>函件管理-订单原件/传真件</title>
     <style>
         html,
         body {
+            background: #fff;
             height: 100%;
             margin: 0px;
             padding: 0px;
@@ -24,54 +25,62 @@
 </head>
 
 <body class="showTip">
-    <div style="background: #fff;height: 100%; width: 100%;">
+    <div>
         <div class="lgui-table-box">
             <div class="lgui-table-header pct100">
                 <table class="tr fs12 pct100" style="border-spacing:0px 20px;" width="100%">
                     <tr class="0 uplad">
                         <td class="">
-                            请上传报关单：
+                            销售合同原件/传真件：
                         </td>
-                        <td class="tl ">
+                        <td class="tl">
                             <span class="dib dac">
-                                <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                                <button type="button" class="ui-button vm" data-type="upfile"
                                     onclick="upfile()">附件上传</button>
-                                    <br>
-                                <span class="ui-files vm "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                    <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            签收单原件/传真件：
+                        </td>
+                        <td class="tl">
+                            <span class="dib dac">
+                                <button type="button" class="ui-button  vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                <br>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80 ">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
                                         class="icon-sdel goldIcon vm ml5" href="#"></a></span>
                             </span>
                         </td>
                     </tr>
                     <tr class="0 uplad">
                         <td class="">
-                            收货单位：
+                            对账函原件/传真件：
                         </td>
-                        <td class="tl ">
-                            <input type="text" class="ui-input pct80" placeholder="请输入收货单位">
-                        </td>
-                    </tr>
-                    <tr class="0 uplad">
-                        <td class="">
-                            收货地址：
-                        </td>
-                        <td class="tl ">
-                            <input type="text" class="ui-input pct80" placeholder="请输入收货地址">
-                        </td>
-                    </tr>
-                    <tr class="0 uplad">
-                        <td class="">
-                            预计到达日期：
-                        </td>
-                        <td class="tl ">
-                            <span class="ui-input pct80 " data-type="time"><input type="text" placeholder="选择预计到达日期"
-                                    id="time2" readonly=""></span>
+                        <td class="tl">
+                            <span class="dib dac">
+                                <button type="button" class="ui-button vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                            </span>
                         </td>
                     </tr>
                 </table>
             </div>
-            <div class="tc mt30">
-                <button type="button" class="mr10 ui-button">提交</button>
-                <button type="button" class="ui-button " data-type="clear">退回</button>
+            <div class="tc mb20">
+                <button type="button" class="mr10 ui-button">确认</button>
+                <button type="button" class="ui-button " data-type="clear">取消</button>
             </div>
         </div>
     </div>
@@ -95,7 +104,6 @@
                 // };
                 // end.config.value = value;
                 // end.config.min = myobj;
-
             }
         })
     </script>
