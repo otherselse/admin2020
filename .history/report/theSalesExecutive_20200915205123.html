@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>订单统计表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+
+</head>
+
+<body class="showTip ">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">订单统计表</span>
+
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3 ">
+            <a href="grossProfitDetail.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">订单统计表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="ui-content ovh minH">
+            <div class="ui-tab4 mt20 pl20">
+                <a href="theSalesExecutive.html" class="ui-tab4-list on mb10">销售执行进度表</a>
+                <a href="procurementExecution.html" class="ui-tab4-list mb10">采购执行进度表</a>
+                <a href="theInventoryTable.html" class="ui-tab4-list mb10">库存表</a>
+                <a href="customerSettlementUnit.html" class="ui-tab4-list mb10">20170401客户结算单位收入一致表</a>
+                <a href="costDetail.html" class="ui-tab4-list mb10">费用明细表</a>
+                <a href="inter-temporalData.html" class="ui-tab4-list mb10">跨期数据差异表</a>
+                <a href="foreignTradeOrderAudit.html" class="ui-tab4-list mb10">外贸订单审计用表</a>
+                <a href="auditingAndFinance.html" class="ui-tab4-list mb10">审计与财务口径收入和成本的对比表</a>
+            </div>
+            <div class="p20 f12">
+                <table class="ui-table tc f12 auto  mt10" width="100%">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">库存销售类型：</td>
+                            <td class="cont" width="37%">
+                                <span class="dib selectSingle dac">
+                                    <a class=" on" href="javscript:void(0)">快速备</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">任你押</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">自营</a>
+                                </span>
+                            </td>
+                            <td class="title" width="13%">订单类型：</td>
+                            <td class="cont" width="37%">
+                                <span class="dib selectSingle dac">
+                                    <a class=" on" href="javscript:void(0)">直购</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">订购</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">库存销售</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">寄售</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">业务类型：</td>
+                            <td class="cont" width="37%">
+                                <span class="dib selectSingle dac">
+                                    <a class=" on" href="javscript:void(0)">现款业务</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">款到卸货</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">欠款业务</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">外贸</a>
+                                </span>
+                            </td>
+                            <td class="title" width="13%">是否有未付款：</td>
+                            <td class="cont" width="37%">
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客户名称：</span>
+                                <input type="text" class="ui-input pct50" placeholder="请输入客户名称" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct50" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：</span>
+                                <input type="text" class="ui-input pct50" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">费用收票日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">出库日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">预签约日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">销售收票日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">收款日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">应收款日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">采购收票日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">业务日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">&nbsp;&nbsp;&nbsp;收货日期：</span>
+                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="mt10 mb30 tc">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="2%">序号</th>
+                            <th width="2%">订单号</th>
+                            <th width="3%">订单日期</th>
+                            <th width="3%">金牌商家</th>
+                            <th width="3%">金牌商家类型</th>
+                            <th width="3%">业务类型</th>
+                            <th width="3%">订单类型</th>
+                            <th width="3%">库存销售类型</th>
+                            <th width="3%">分红比例</th>
+                            <th width="3%">客户名称</th>
+                            <th width="3%">销售结算重量</th>
+                            <th width="3%">销售结算金额</th>
+                            <th width="3%">加工费</th>
+                            <th width="3%">短驳费</th>
+                            <th width="3%">仓库费</th>
+                            <th width="3%">运输费</th>
+                            <th width="3%">库存销售成本</th>
+                            <th width="3%">关联订单</th>
+                            <th width="3%">G2G金额</th>
+                            <th width="2%">税金</th>
+                            <th width="3%">资金占用利息</th>
+                            <th width="2%">应分红金额</th>
+                            <th width="3%">
+                                <lable class="jpsj_Sort" onclick="setOrderCol('x.outhate',this)">出库日期<i data="orderBy"
+                                        id="Ix.outhate" class=""></i></lable>
+                            </th>
+                            <th width="3%">入库金额</th>
+                            <th width="3%">预签收日期</th>
+                            <th width="3%">
+                                <lable class="jpsj_Sort" onclick="setOrderCol('x.gethate',this)">收货日期<i data="orderBy"
+                                        id="Ix.gethate" class=""></i></lable>
+                            </th>
+                            <th width="3%">开票金额</th>
+                            <th width="3%">开票差异</th>
+                            <th width="3%">销售开票日期</th>
+                            <th width="3%">采购收票日期</th>
+                            <th width="3%">费用收票日期</th>
+                            <th width="3%">应收款日期</th>
+                            <th width="3%">收款日期</th>
+                            <th width="3%">已收款金额</th>
+                            <th width="2%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="2%">1</td>
+                            <td width="2%"><a href="javascript:detail('61177')" title="点击查看订单详情"><span
+                                        class="redm">61177</span></a>
+                            </td>
+                            <td width="3%">2020-09-15</td>
+                            <td width="3%">赵自立</td>
+                            <td width="3%">业务型合伙式金牌商家</td>
+                            <td width="3%">
+                                现款业务
+                            </td>
+                            <td width="3%">定购</td>
+                            <td width="3%"></td>
+                            <td width="3%"></td>
+                            <td width="3%">
+                                <a href="javascript:void(0)" title=" 上海海洋大学"><span class="redm">
+                                        上海海洋大学</span>
+                                </a>
+                            </td>
+                            <td width="3%">
+                                <span>0</span>/吨
+                            </td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%"><a href="javascript:void(0)" title="">
+                                    <span class="redm">
+                                        --
+                                    </span>
+                                </a></td>
+                            <td width="3%">0</td>
+                            <td width="3%">
+                                <span>0</span>
+                            </td>
+                            <td width="3%">0</td>
+                            <td width="3%">
+                                <span>0</span>
+                            </td>
+                            <td width="3%">--</td>
+                            <td width="3%">0</td>
+                            <td width="3%">--</td>
+                            <td width="3%">--</td>
+                            <td width="3%">0</td>
+                            <td width="3%">0</td>
+                            <td width="3%">--</td>
+                            <td width="3%">--</td>
+                            <td width="3%">--</td>
+                            <td width="3%">2020-09-15</td>
+                            <td width="3%">--</td>
+                            <td width="3%">0</td>
+                            <td width="2%">
+                                <a href="/LgFront/sellReviewAction_esContractLgAdmin.action?orderID=61177"
+                                    target="_blank" title="" class="redm">打印</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="">
+                        <tr height="45">
+                            <td colspan="10">当前页合计：</td>
+                            <td>10</td>
+                            <td>20,000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>--</td>
+                            <td>3,000</td>
+                            <td>--</td>
+                            <td>0</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>15,000</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>0</td>
+                            <td>20,000</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>39,000</td>
+                            <td></td>
+                        </tr>
+                        <tr height="45">
+                            <td colspan="10">所有页合计：</td>
+                            <td>380,759.566</td>
+                            <td>2,873,624,941.33</td>
+                            <td>37,348,382.34</td>
+                            <td>15,628,215.41</td>
+                            <td>269,415.31</td>
+                            <td>11,896,675.28</td>
+                            <td>-127,654,569.85</td>
+                            <td>--</td>
+                            <td>91,734,166.22</td>
+                            <td>--</td>
+                            <td>3,132,217,471.44</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>1,324,159,689.8057</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>17,282,262.38</td>
+                            <td>2,856,341,154</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>570,274,495.19</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+
+    </script>
+</body>
+
+</html>
