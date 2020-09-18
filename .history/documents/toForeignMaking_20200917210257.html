@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <title>外贸单制作(制作单据)-单据管理-乐刚智能云系统</title>
+</head>
+
+<body class='showTip'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga dac">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                单据管理
+                <span class="dib pl5 pr5">/</span>
+                <a href="javascript:history.back(-1)" class="gga">外贸单据制作</a>
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">制作单据</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="bgwh">
+            <div class="lh50 pl20 bor-bottom">
+                <a class="dfc" href="javascript:history.back(-1)">
+                    <img class=" mr10" src="../images/documnts/xz5.png" alt="">
+                    <span class="g0">返回上一级</span>
+                </a>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="javascript:void(0)" class="ui-tab4-list on ml20 mr10">报关单制作</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ">商业发票制作</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list">申报要素制作</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list">装箱单制作</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list">尾款发票制作</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list">订舱委托书制作</a>
+                </div>
+            </div>
+            <!-- 报关单制作 -->
+            <div class="pl20 0 pr20 zz">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">报关单资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">报关单（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">出口口岸：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入出口口岸" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">运输方式：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入运输方式"
+                                            value="江海运输" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">境内货源地：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入境内货源地"
+                                            value="" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">件数：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入件数" value="1"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">包装种类：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入包装种类" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">毛重(公斤)：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入件数" value="1"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">净重(公斤)：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入境内货源地"
+                                            value="" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">合同协议号：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入件数"
+                                            value="SHLG20200819001" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">结汇方式：</span>
+                            </td>
+                            <td width="90%" colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入结汇方式" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="lgui-table-box checkbox">
+                        <div class="lgui-table-header">
+                            <table class="ui-table tc f12 " width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="10%" class="tl">
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5 pct20"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"></i>
+                                                <span class="dib">选择</span>
+                                            </div>
+                                        </th>
+                                        <th width="15%" class="">
+                                            <div class="pl20">商品编号</div>
+                                        </th>
+                                        <th width="20%">商品名称、规模型号</th>
+                                        <th width="15%">数量及单位</th>
+                                        <th width="11%">最终目的国(地区)</th>
+                                        <th width="8%">单价</th>
+                                        <th width="8%">总价</th>
+                                        <th width="5%">币制</th>
+                                        <th width="8%">征免</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="lgui-table-body mt-1">
+                            <table class="ui-table tc f12 " width="100%">
+                                <tbody class="ui-thover">
+                                    <tr>
+                                        <td width="10%" class="tc pct10">
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
+                                                        class="checkbox-opacity tc" name="checkbox"></i></div>
+                                        </td>
+                                        <td width="15%" class="">
+                                            <span class="ui-input" data-type="price">
+                                                <input type="text" class="tc pct60" value="" placeholder="请输入商品编号">
+                                            </span>
+                                        </td>
+                                        <td width="20%">
+                                            冷轧卷板AUTOMOBILE BEAM STEEL COIL
+                                            10.000*800*C
+                                        </td>
+                                        <td width="15%">
+                                            <span class="ui-input dac pct 80" data-type="price">
+                                                <input type="text" class="tc pct60" value="" placeholder="请输入数量">
+                                                <span class="pct40">MT</span>
+                                            </span>
+                                        </td>
+                                        <td width="11%">AMERICA</td>
+                                        <td width="8%">
+                                            <span class="ui-input pct80" data-type="price">
+                                                <input type="text" class="pct100 tc" value="0.0" placeholder="请输入单价">
+                                            </span>
+                                        </td>
+                                        <td width="8%">
+                                            <span class="ui-input pct80" data-type="price">
+                                                <input type="text" class="pct100 tc" value="0.0" placeholder="请输入总价">
+                                            </span>
+                                        </td>
+                                        <td width="5%">美元</td>
+                                        <td width="8%">照章征税</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="">
+                                    <tr height="45">
+                                        <td class="tl" style="border:none">
+                                            <span class=" mt5 dac dib pl20 tl">
+                                                <i class="ui-checkbox goldIcon mr5 vm pct20"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"
+                                                        onclick="setAll(this)"></i>
+                                                <span class="">全选</span>
+                                            </span>
+                                        </td>
+                                        <td class="tl" colspan="2" style="border:none">
+                                            <span class="mt5 dib">当前共选择(<span class="red">3</span>)条信息</span>
+                                        </td>
+                                        <td colspan="6" class="tl" style="border:none">
+                                            <span class="mt5 mr20 dib">
+                                                数量：<span class="red">126.988</span></span>
+                                            <span class="mt5  dib">
+                                                总价：<span class="red">2699.6</span></span>
+
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+            <!-- 商业发票制作 -->
+            <div class="pl20 1 pr20 zz dn">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">商业发票资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">商业发票（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr class="">
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">DATE：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="ui-input pct40 ml10" data-type="time"><input type="text"
+                                            placeholder="请选择" id="time2" readonly=""></span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">ORIGIN：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="CHINA" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">INVOICE NO：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="SHLG20200721003" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">SHIPPING MARK：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入N/M" value="N"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="lgui-table-box checkbox">
+                        <div class="lgui-table-header">
+                            <table class="ui-table tc f12 " width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="10%" class="tl">
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5 pct20"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"></i>
+                                                <span class="dib">选择</span>
+                                            </div>
+                                        </th>
+                                        <th width="15%" class="tc">
+                                            <span class="input-selSearch pct80">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                       >DESCRIPTION</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        >PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="7%">GRADE</th>
+                                        <th width="8%">SIZE(MM)</th>
+                                        <th width="20%">
+                                            UNIT PRICE
+                                            <span class="input-selSearch pct30">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="USD/MT" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        class="search-list db ell" >USD/MT</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                    >RMB/MT</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="15%">NET WEIGHT MTS</th>
+                                        <th width="20%">TOTAL AMOUNT
+                                            <span class="input-selSearch pct30">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="USD" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        >USD</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell" >RMB</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                        <div class="lgui-table-body mt-1">
+                            <table class="ui-table tc f12 " width="100%">
+                                <tbody class="ui-thover">
+                                    <tr>
+                                        <td class="tc" width="10%">
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
+                                                        class="checkbox-opacity tc" name="checkbox"></i></div>
+                                        </td>
+                                        <td class="tc pct15">
+                                            <span class="input-selSearch pct90">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        >镀铝板材</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        >PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td width="7%">JAH270C</td>
+                                        <td width="8%">11.000*800*C</td>
+                                        <td class="pct20">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="10.0" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td class="pct15">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="5.0" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td class="pct20">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="25869.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="">
+                                    <tr height="45">
+                                        <td class="tl" style="border:none">
+                                            <span class=" mt5  dib pl20 tl"><i
+                                                    class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"
+                                                        onclick="setAll(this)"></i>
+                                                <span class="dib">全选</span>
+                                            </span>
+                                        </td>
+                                        <td class="tl" colspan="2" style="border:none">
+                                            <span class="mt5 dib">当前共选择(<span class="red">3</span>)条信息</span>
+                                        </td>
+                                        <td colspan="3" style="border:none">
+                                            <!-- <span class="mt5 mr20 dib">
+                                                TOTAL：<span class="red">98.7</span></span> -->
+                                            <span class="mt5  dib">
+                                                TOTAL AMOUNT：<span class="red">269.88</span></span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+
+                    </div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+            <!-- 申请要素制作 -->
+            <div class="pl20 2 pr20 zz dn">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">申报要素资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">申报要素（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr class="">
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">产品编码：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="input-selSearch pct100">
+                                    <input type="text" class="ui-input pct40 borNone" placeholder="请输入商品编码" value=""
+                                        autocomplete="off">
+                                </span>
+                            </td>
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">商品描述：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="input-selSearch pct100">
+                                    <input type="text" class="ui-input pct40 borNone" placeholder="请输入商品描述" value=""
+                                        autocomplete="off">
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="lgui-table-box checkbox">
+                        <div class="lgui-table-header">
+                            <table class="ui-table tc f12 " width="100%">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <span class="dib col_282828FF f14">申报要素</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="lgui-table-body mt-1">
+                            <table class="ui-table  f12  auto tl " width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="bgfa" width="13%">
+                                            <span class="pt5 dib pl20">品名：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入品名" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="bgfa" width="13%">
+                                            <span class="pt5 dib pl20">形状：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入形状" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">材质：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入材质" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">加工方法：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入加工方法" value="1" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">成分含量：</span>
+                                        </td>
+                                        <td width="90%" colspan="3">
+                                            <span class="dib pl10 pct100">
+                                                <textarea class="ui-textarea tl pct98 borNone" placeholder="请填写成分含量"
+                                                    rows="2">C:0.42-0.50%；Si:0.17-0.37%；Mn:0.50-0.80%;；P:0.035%；S:≤0.035%；Ni:≤0.25%；Fe:≥98.01% 等</textarea>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">涂层种类：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入涂层种类" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">涂层厚度：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入涂层厚度" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">GTIN：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                                        value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">CAS：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                                        value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">规格：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入规格" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">级别：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入级别" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">钢号：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入钢号" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">种类记号：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入种类记号" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">成交方式：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入成交方式" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">经营单位：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入经营单位" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">品牌类型：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入品牌类型" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">品牌：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入品牌" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">用途：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入用途" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">型号：</span>
+                                        </td>
+                                        <td width="40%">
+                                            <span class="dib pl10 pct100">
+                                                <span class="input-selSearch pct100">
+                                                    <input type="text" class="ui-input pct40 borNone"
+                                                        placeholder="请输入型号" value="" autocomplete="off">
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt bgfa" width="13%">
+                                            <span class="pt5 dib pl20">备注：</span>
+                                        </td>
+                                        <td width="90%" colspan="3">
+                                            <span class="dib pl10 pct100">
+                                                <textarea class="ui-textarea tl pct98 borNone" placeholder="请填写备注"
+                                                    rows="2"></textarea>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+            <!--装箱单制作 -->
+            <div class="pl20 3 pr20 zz dn">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">装箱单资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">装箱单（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr class="">
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">DATE：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="ui-input ui-input pct40 ml10" data-type="time"
+                                        small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
+                                            value="2020-07-20" lay-key="11"></span>
+                                </span>
+                            </td>
+                            <td class="bgfa" width="13%">
+                                <span class="pt5 dib pl20">INVOICE NO：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="SHLG20200819001" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">SHIPPING MARK：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入N/M" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">ORIGIN：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="CHINA" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="13%">
+                                <span class="pt5 dib pl20">LOADING PORT：</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="lgui-table-box checkbox">
+                       
+                        <div class="lgui-table-body mt-1">
+                            <table class="ui-table tc f12 table-cw" width="100%">
+                                <thead>
+                                    <tr class="100%">
+                                        <th width="10%" class="tl">
+                                            <span class=" mt5  dib pl20 tl"><i
+                                                    class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"></i>
+                                                <span class="dib">选择</span>
+                                            </span>
+                                        </th>
+                                        <th width="4%" class="">
+                                            <span class="dib">ITEM</span>
+                                        </th>
+                                        <th width="9%" class="tc">
+                                            <span class="input-selSearch pct80">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        title="DESCRIPTION" class="tiptop">DESCRIPTION</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="PRODUCT NAME" class="tiptop">PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="5%"><span class="dib">GRADE</span></th>
+                                        <th width="9%">SIZE<span class="dib">&&</span>DETAILS</th>
+                                        <th width="9%"><span class="dib">NET </span> WEIGHT</th>
+                                        <th width="10%"><span class="dib">GROSS </span>WEIGHT<span>(MTS)</span></th>
+                                        <th width="9%">QUANTITY<span class="dib">(PCS)</span></th>
+                                        <th width="10%"><span class="dib">LENGTH</span> <span>METER</span><span>/PC</span></th>
+                                        <th width="17%">
+                                            <span class="dib">QUANTITY</span>
+                                            <span class="input-selSearch pct50">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="PACKAGES" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="PACKAGES" class="tiptop">PACKAGES</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        title="COILS" class="tiptop">COILS</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        title="BUNDLES" class="tiptop">BUNDLES</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="8%"><span class="dib">PCS/</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ui-thover">
+                                    <tr>
+                                        <td class="tc pct10" width="10%">
+                                            <span class=" mt5  dib pl20 tl"><i
+                                                    class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"></i>
+                                            </span>
+                                        </td>
+                                        <td width="4%"><span class="dib">1</span></td>
+                                        <td class="tc" width="9%">
+                                            <span class="input-selSearch pct90">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)"
+                                                        class="search-list db ell active">镀铝板材</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell">PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td width="5%"><span class="dib">JAH270C</span></td>
+                                        <td width="9%"><span class="dib">11.000*800*C</span></td>
+                                        <td width="9%">
+                                            <span class="dib">11.0</span>
+                                        </td>
+                                        <td width="10%">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="5.0" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td width="9%">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="25869.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td width="10%">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="2.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td width="17%">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="269.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td width="8%">
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="258.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="">
+                                    <tr height="45">
+                                        <td class="tl" style="border:none">
+                                            <span class=" mt5  dib pl20 tl"><i
+                                                    class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"
+                                                        onclick="setAll(this)"></i>
+                                                <span class="dib">全选</span>
+                                            </span>
+                                        </td>
+                                        <td class="tl" style="border:none" colspan="2">
+                                            <span class="mt5 dib">当前共选择(<span class="red">3</span>)条信息</span>
+                                        </td>
+                                        <td colspan="8" style="border:none">
+                                            <!-- <span class="mt5 mr20 dib">
+                                                TOTAL：<span class="red">98.7</span></span> -->
+                                            <span class="mt5  dib">
+                                                TOTAL AMOUNT：<span class="red">269.88</span></span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+            <!-- 尾款发票制作 -->
+            <div class="pl20 4 pr20 zz dn">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">尾款发票资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">尾款发票（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">DATE：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="ui-input ui-input  pct40 ml10" data-type="time">
+                                        <input type="text" placeholder="" id="time5" readonly="" lay-key="12">
+                                    </span>
+                            </td>
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">ORIGIN：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="CHINA" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">INVOICE NO：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="SHLG20200721003" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">SHIPPING MARK：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入N/M" value="N"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">DOWN PAYMENT：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="SHLG20200721003" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">BALANCE：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="lgui-table-box checkbox">
+                        <div class="lgui-table-body mt-1">
+                            <table class="ui-table tc f12 table-cw" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th width="10%" class="tl">
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5 "><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"></i>
+                                                选择
+                                            </div>
+                                        </th>
+                                        <th width="15%" class="tc">
+                                            <span class="input-selSearch pct80">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="DESCRIPTION" class="tiptop">DESCRIPTION</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        title="PRODUCT" class="tiptop">PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="9%">GRADE</th>
+                                        <th width="9%">SIZE(MM)</th>
+                                        <th width="20%">
+                                            UNIT PRICE
+                                            <span class="input-selSearch pct30">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="USD/MT" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="USB/MT" class="tiptop">USD/MT</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="RMB/MT" class="tiptop">RMB/MT</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th width="12%">NET WEIGHT MTS</th>
+                                        <th width="20%">TOTAL AMOUNT
+                                            <span class="input-selSearch pct30">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="USD" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="USB" class="tiptop">USD</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell" title="RMB"
+                                                        class="tiptop">RMB</a>
+                                                </div>
+                                            </span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="ui-thover">
+                                    <tr>
+                                        <td>
+                                            <div class="pl20">
+                                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
+                                                        class="checkbox-opacity tc" name="checkbox"></i></div>
+                                        </td>
+                                        <td>
+                                            <span class="input-selSearch pct90">
+                                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                                    value="DESCRIPTION" autocomplete="off">
+                                                <div class="search-cont pct100 tl">
+                                                    <a href="javascript:void(0)" class="search-list db ell active"
+                                                        title="镀铝板材" class="tiptop">镀铝板材</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell"
+                                                        title="PRODUCT" class="tiptop">PRODUCT
+                                                        NAME</a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td>JAH270C</td>
+                                        <td>11.000*800*C</td>
+                                        <td>
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="48" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                        <td class="">
+                                            11.0
+                                        </td>
+                                        <td>
+                                            <span class="ui-input pct70" data-type="price">
+                                                <input type="text" class="pct100 tc" value="539.69" placeholder="请输入">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="">
+                                    <tr height="45">
+                                        <td class="tl" style="border:none">
+                                            <span class=" mt5  dib pl20 tl"><i
+                                                    class="ui-checkbox goldIcon mr5 vm"><input type="checkbox"
+                                                        class="checkbox-opacity" name="checkbox"
+                                                        onclick="setAll(this)"></i>全选
+                                            </span>
+                                        </td>
+                                        <td class="tl" style="border:none" colspan="2">
+                                            <span class="mt5 dib">当前共选择(<span class="red">3</span>)条信息</span>
+                                        </td>
+                                        <td colspan="3" style="border:none">
+                                            <span class="mt5 mr20 dib">
+                                                TOTAL BALANCE SAY：<span class="red">98.7</span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+
+                    </div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+            <!-- 订舱委托书制作 -->
+            <div class="pl20 5 pr20 zz dn">
+                <div class="fs20 col_282828FF mt30">
+                    <span class="dib mr20">订舱委托书资料由</span>
+                    <span class="dib mr20">李四四</span>
+                    <span class="dib">提交</span>
+                </div>
+                <div class="mt30">
+                    <span class="dib col_282828FF f12">订舱委托书（订单号：<span>60655</span>）资料信息</span>
+                    <!-- <span class="dib"></span> -->
+                </div>
+                <table class="ui-table  f12  auto tl  mt10" width="100%">
+                    <tbody>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">发货人：</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入发货人"
+                                            value="SHANGHAI LEGANG SUPPLY CHAIN CO.,LTD. ON BEHALF OF 简简单单企业"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">通知人：</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入通知人"
+                                            value="SHANGHAI LEGANG SUPPLY CHAIN CO.,LTD. ON BEHALF OF 简简单单企业"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">收货人公司名称：</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入收货人公司名称"
+                                            value="简简单单企业" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="bgfa" width="10%">
+                                <span class="pt5 dib pl20">收货人公司地址：</span>
+                            </td>
+                            <td colspan="3">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="四川成都市双流县15648" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">联系人：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入联系人"
+                                            value="以乡村" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">邮箱：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入邮箱" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">电话：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入电话号码"
+                                            value="122212121212" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">目的港：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入"
+                                            value="EFG,ABCD" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">出口船期：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="ui-input ui-input pct40 ml10" data-type="time"
+                                        small-type="small"><input type="text" placeholder="时间" class="render-time"
+                                            readonly="" lay-key="8"></span></span>
+
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">箱型：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入电话号码" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">唛头：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入N/M" value="N"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">货物品名：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入货物品名" value=""
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">毛重：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入毛重" value="23"
+                                            autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">委托方：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入委托方"
+                                            value="上海乐刚供应链股份有限公司" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">受托方：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="dib pl10 pct100">
+                                    <span class="input-selSearch pct100">
+                                        <input type="text" class="ui-input pct40 borNone" placeholder="请输入受托方"
+                                            value="23" autocomplete="off">
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="vt bgfa" width="10%">
+                                <span class="pt5 dib pl20">联系人(受托方)：</span>
+                            </td>
+                            <td width="40%">
+                                <span class="input-selSearch ml20 pct50">
+                                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                        value="DESCRIPTION" autocomplete="off">
+                                    <div class="search-cont pct100 tl">
+                                        <a href="javascript:void(0)" class="search-list db ell active">上海大大大公司</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">上海嫁衣人物公司</a>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="tc mt30">
+                        <button class="ui-button mr10" data-type="normal" type="button">提交</button>
+                        <button type="button" class="ui-button " data-type="clear">返回</button>
+                    </div>
+                    <div class="mt20">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script>
+        $(function () {
+            $(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+        })
+    </script>
+    <script>
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+        //时间范围
+        laydate.render({
+            elem: '#time1'
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , value: '2020-06-04      -      2020-06-08'
+
+            , change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+
+        var time01 = laydate.render({
+            elem: '#time01'
+            , theme: 'lgblue'
+            , btns: ['clear', 'confirm']
+            , trigger: 'click'
+            , done: function (value, date) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,
+                    date: date.date,
+                }
+                time02.config.min = myobj
+                time02.config.value = myobj
+
+            }
+        });
+
+        function showdiv(obj) {
+            $(obj).parents(".hideTr").find('.httkxs').toggle();
+        }
+
+        var start = laydate.render({
+            elem: '#time2',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+                // var myobj = {
+                // 	year: date.year,
+                // 	month: date.month - 1,//关键
+                // 	date: date.date
+                // };
+                // end.config.value = value;
+                // end.config.min = myobj;
+
+            }
+        })
+
+        var start = laydate.render({
+            elem: '#time3',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+                // var myobj = {
+                // 	year: date.year,
+                // 	month: date.month - 1,//关键
+                // 	date: date.date
+                // };
+                // end.config.value = value;
+                // end.config.min = myobj;
+
+            }
+        })
+
+        var start = laydate.render({
+            elem: '#time5'
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , min: '2020-07-01'
+            , done: function (value, date, endDate) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,//关键
+                    date: date.date
+                };
+                endtime.config.max = myobj;
+            }
+
+        })
+
+        $(function () {
+            $('.ui-tab4-list').click(function () {
+                $('.ui-tab4-list').removeClass("on");
+                $(this).addClass('on');
+                $('.zz').addClass("dn");
+                $('.' + $(this).index()).removeClass("dn");
+            });
+        })
+    </script>
+</body>
+
+</html>

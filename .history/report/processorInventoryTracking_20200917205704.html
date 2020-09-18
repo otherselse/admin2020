@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>加工商盘点跟踪表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">加工商盘点跟踪表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">加工商：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入加工商" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">仓库：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入仓库" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">盘点月份：</span>
+                                <span class="dib pct70">
+                                    <span class="ui-input ui-input pct100 ml10" data-type="time"
+                                        small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
+                                            value="2020-07-20" lay-key="11"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">盘点起始时间：</span>
+                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="mt10 mb30 tc">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="3%">序号</th>
+                            <th width="8%">加工商</th>
+                            <th width="6%">盘点月份</th>
+                            <th width="6%">盘点仓库</th>
+                            <th width="6%">账面数量</th>
+                            <th width="6%">实盘数量</th>
+                            <th width="6%">差异数量</th>
+                            <th width="6%">账面重量</th>
+                            <th width="6%">实盘重量</th>
+                            <th width="7%">差异重量</th>
+                            <th width="6%">盘点起始时间</th>
+                            <th width="6%">盘点结束日期</th>
+                            <th width="6%">盘点用时</th>
+                            <th width="5%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td>1</td>
+                            <td>上海华冶钢材加工有限公司</td>
+                            <td>2018-03-18</td>
+                            <td>华冶A区</td>
+                            <td>45490.5</td>
+                            <td>32449.1</td>
+                            <td>13041.4</td>
+                            <td>32848.0617</td>
+                            <td>28911.937</td>
+                            <td>3936.1247</td>
+                            <td>2018-03-18</td>
+                            <td>2018-03-21 19:27:58.0</td>
+                            <td>79h</td>
+                            <td class="tablebtdb blue"><a href="procCheckLine。.html" target="_blank">查看</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(4).addClass("open").find(".smlist ").eq(10).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+    </script>
+</body>
+
+</html>

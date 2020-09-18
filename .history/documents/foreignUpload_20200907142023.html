@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>外贸单据上传-单据管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        element.style {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body class='showTip'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                单据管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">外贸单据上传</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class=" fix f12 bgwh ui-content ovh minH">
+            <div class="ml20 mr20">
+                <div class="lh84  fix">
+                    <div class="cl mb30 f12">
+                        订单号：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        单位名称：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        金牌商家：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
+                        <button type="button" class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- search end -->
+
+            <div class="lgui-table-box ml20 mr20">
+                <div class="lgui-table-header pct100">
+                    <table class="ui-table tc f12  pct100" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="4%">序号</th>
+                                <th width="6%">订单号</th>
+                                <th width="12%">单位名称</th>
+                                <th width="10%">金牌商家</th>
+                                <th width="12%">最后装运日期</th>
+                                <th width="6%">报关单</th>
+                                <th width="6%">清关单</th>
+                                <th width="6%">装箱单</th>
+                                <th width="6%">商业发票</th>
+                                <th width="6%">其他单据</th>
+                                <th width="6%">提单</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="lgui-table-body pct100">
+                    <table class="ui-table tc f12" width="100%">
+                        <tbody class="ui-thover">
+                            <tr class="pct100">
+                                <td width="4%">1</td>
+                                <td width="6%">60940</td>
+                                <td width="12%">治愈客户有限公司</td>
+                                <td width="10%">以乡村</td>
+                                <td width="12%">2020-18-29</td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,0)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,1)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,2)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,3)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,4)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,5)">查看</a></td>
+                                <td width="10%"><a href="javascript:void(0)" onclick="showLayer(this)">上传</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn pct100">
+                                <td colspan="12">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="15%"><span class="sInfos">提单信息</span></th>
+                                                    <th width="15%">审核状态</th>
+                                                    <th width="15%">上传人</th>
+                                                    <th width="15%">上传时间</th>
+                                                    <th width="15%">实际出口日期</th>
+                                                    <th width="25%">报关申报日期</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                            target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                        </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                        target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                    </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                        target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                    </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                        target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                    </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                        target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                    </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody class="ui-thover dn">
+                                                <tr>
+                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
+                                                        target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+                                                    </td>
+                                                    <td>审核通过</td>
+                                                    <td>李四四</td>
+                                                    <td>2020-08-13 15:40:33</td>
+                                                    <td>2020-08-13</td>
+                                                    <td>2020-08-13</td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                        </tbody>
+                    </table>
+                </div>
+                </tr>
+                </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+        <div class="mb20"></div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+        })
+    </script>
+    <script>
+        //时间范围
+        laydate.render({
+            elem: '#time1'
+            , range: true
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , value: '2020-06-04      -      2020-06-08'
+
+            , change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+
+        var time01 = laydate.render({
+            elem: '#time01'
+            , theme: 'lgblue'
+            , btns: ['clear', 'confirm']
+            , trigger: 'click'
+            , done: function (value, date) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,
+                    date: date.date,
+                }
+                time02.config.min = myobj
+                time02.config.value = myobj
+
+            }
+        });
+
+        function showdiv(obj) {
+            $(obj).parents(".hideTr").find('.httkxs').toggle();
+        }
+
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '附件上传',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['600px', '40%'],
+                content: 'toForeignUpload.html' //iframe的url
+            });
+        }
+
+
+        function showTbody(obj,index){
+            $(obj).parents("tr").next(".hideTr").find("tbody").addClass("dn");
+            $(obj).parents("tr").next(".hideTr").find("tbody:eq("+index+")").removeClass("dn");
+        }
+    </script>
+</body>
+
+</html>
