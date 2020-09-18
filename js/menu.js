@@ -32,52 +32,46 @@
 		 "menuList":[
 			 	{"bigM":"款项类","smallM":[{"mtitle":"收款","href":"../finance/gathering.html"},{"mtitle":"加工收款","href":"../finance/gatheringProc.html"},{"mtitle":"付款","href":"../finance/payment.html"},{"mtitle":"金牌商家账户充值","href":"../finance/gtGMoney.html"},{"mtitle":"出口退税","href":"../finance/settlementList.html"},{"mtitle":"支付结算","href":"../index/index.html"},{"mtitle":"银企直连指令查询","href":"../index/index.html"}]}
 			 	,{"bigM":"发票类","smallM":[{"mtitle":"开票","href":"../finance/invoiceQuery.html"},{"mtitle":"加工开票","href":"../finance/newToOutputInvoiceProcList.html"},{"mtitle":"采购发票登记","href":"../finance/getInvoice.html"},{"mtitle":"费用收票登记","href":"../finance/getInvoiceDepot.html"},{"mtitle":"报销发票登记","href":"../finance/applyBusFeeList.html"},{"mtitle":"应收票据备查簿","href":"../finance/toVoicebook.html"}]}	
-			 	,{"bigM":"表单类","smallM":[{"mtitle":"收付款记录","href":"../finance/cashList.html"},{"mtitle":"库存暂估","href":"../index/index.html"},{"mtitle":"出库审核记录","href":"../index/index.html"},{"mtitle":"往来账","href":"../index/index.html"},{"mtitle":"银行收支情况","href":"../index/index.html"},{"mtitle":"订单提出","href":"../index/index.html"}]}
+			 	,{"bigM":"表单类","smallM":[{"mtitle":"收付款记录","href":"../finance/cashList.html"},{"mtitle":"库存暂估","href":"../finance/preStock.html"},{"mtitle":"出库审核记录","href":"../finance/outLog.html"},{"mtitle":"往来账","href":"../finance/saleBuss.html"},{"mtitle":"银行收支情况","href":"../finance/bankReandExAdd.html"},{"mtitle":"订单提成","href":"../finance/view3.html"}]}
 			 	,{"bigM":"操作类","smallM":[{"mtitle":"资金日报录入","href":"../index/index.html"},{"mtitle":"经营报表录入","href":"../index/index.html"},{"mtitle":"收据","href":"../index/index.html"},{"mtitle":"汇兑管理","href":"../index/index.html"},{"mtitle":"优惠券管理","href":"../index/index.html"},{"mtitle":"乐付宝账号管理","href":"../index/index.html"}]}	
 			]
 		}
+		,{"title":"审批管理",
+		 "menuList":[
+			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			]
+		}
+		,{"title":"审批管理",
+		 "menuList":[
+			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
+			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+			]
+		}
+		,{"title":"报表管理",
+		 "menuList":[
+			 	{"bigM":"订单类","smallM":[{"mtitle":"备货跟踪表","href":"../report/readyForTheTrack.html"},{"mtitle":"订单执行情况表","href":"../report/tradeOrder.html"},{"mtitle":"订单执行进度跟踪表","href":"../report/orderFulfillment.html"},{"mtitle":"订单统计表","href":"../report/theSalesExecutive.html"},{"mtitle":"库存明细表","href":"../report/inventory.html"},{"mtitle":"出入库跟踪表","href":"../report/summary.html"},{"mtitle":"寄售跟踪表","href":"../index/index.html"},{"mtitle":"商互通管理","href":"../report/eachOther.html"},{"mtitle":"外贸订单跟踪表","href":"../report/theForeignTradeOrder.html"},{"mtitle":"寄预售跟踪表","href":"../report/openToBooking.html"},{"mtitle":"老系统订单统计表","href":"../report/salesExecutionProgress.html"}]}
+			 	,{"bigM":"报表类","smallM":[{"mtitle":"采购明细表","href":"../finance/invoiceQuery.html"},{"mtitle":"超期库存跟踪表","href":"../report/beyondThe.html"},{"mtitle":"贸易盘点跟踪表","href":"../finance/getInvoice.html"},{"mtitle":"自营管理","href":"../finance/getInvoiceDepot.html"},{"mtitle":"单位评审统计表","href":"../index/index.html"},{"mtitle":"区域客户统计表","href":"../index/index.html"},{"mtitle":"客户分配跟踪表","href":"../index/index.html"},{"mtitle":"创业帮跟踪表","href":"../report/businessHelpSum.html"},{"mtitle":"金牌商家业务跟踪","href":"../report/goldMerchants.html"},{"mtitle":"运输排行表","href":"../index/index.html"}]}	
+			 	,{"bigM":"分析类","smallM":[{"mtitle":"经营报表","href":"../report/businessReport.html"},{"mtitle":"新经营报表","href":"../index/index.html"},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"},{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html"},{"mtitle":"资金日报表","href":"../report/cashJournal.html"},{"mtitle":"运营分析表","href":"../index/index.html"}]}
+				,{"bigM":"项款类","smallM":[{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html"},{"mtitle":"G2G统计表","href":"../index/index.html"},{"mtitle":"资金跟踪表","href":"../report/shouldAdvance.html"},{"mtitle":"待付款跟踪表","href":"../index/index.html"},{"mtitle":"佣金回访表","href":"../report/commission.html"},{"mtitle":"红利明细表","href":"../report/bonusDetails.html"},{"mtitle":"第三方支付结算跟踪表","href":"../report/settlementTracking.html"},{"mtitle":"在线支付使用跟踪表","href":"../index/index.html"},{"mtitle":"金牌商家备货管理","href":"../index/index.html"},{"mtitle":"交易明细表","href":"../index/index.html"},{"mtitle":"收支明細表","href":"../report/paymentDetails.html"}]}	
+				,{"bigM":"加工类","smallM":[{"mtitle":"加工商库存","href":"../index/index.html"},{"mtitle":"加工商收入情况表","href":"../index/index.html"},{"mtitle":"加工收款统计表","href":"../report/processingPayment.html"},{"mtitle":"加工商毛利表","href":"../index/index.html"},{"mtitle":"加工商废料收入","href":"../index/index.html"},{"mtitle":"加工商出入库报表","href":"../index/index.html"},{"mtitle":"生产-线人员效益统计表","href":"../index/index.html"},{"mtitle":"加工商付款明细表","href":"../report/paymentList.html"},{"mtitle":"加工商收款明细表","href":"../report/processorReceipt.html"},{"mtitle":"加工商分红明细","href":"../index/index.html"},{"mtitle":"加工商盘点跟踪表","href":"../index/index.html"}]}	
+			]
+		}
 		,{"title":"单据管理",
-		 "menuList":[
-				 {"bigM":"单据管理","smallM":[
-				 {"mtitle":"担保函上传","href":"../documents/guaranteeUpload.html"},
-				 {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html"},
-				 {"mtitle":"进仓通知单上传","href":'../documents/warehouse.html'},
-				 {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
-				 {"mtitle":"外贸单据上传","href":"../documents/foreignUpload.html"},
-				 {"mtitle":"外贸单据制作","href":"../documents/foreignMaking.html"},
-				 {"mtitle":"国际快递办理","href":"../documents/courier.html"},
-				 {"mtitle":"函件管理","href":"../documents/correspondence.html"}
-				]
-				}
-			 	// ,{"bigM":"角色管理类2","smallM":[{"mtitle":"进仓通知单上传","href":"../index/index.html"},{"mtitle":"信用正本书上传","href":"../index/index.html"}]}	
-			 	//  ,{"bigM":"角色管理类3","smallM":[{"mtitle":"外贸单据上传","href":"../index/index.html"},{"mtitle":"外贸单据制作","href":"../index/index.html"}]}
-			 	// ,{"bigM":"角色管理类3","smallM":[{"mtitle":"国际快递办理","href":"../index/index.html"},{"mtitle":"函件管理","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-
-
-			]
-		}
-	,{"title":"审批管理",
-		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			]
-		}
-		,{"title":"审批管理",
-		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-
-
-			]
-		}
-		,{"title":"审批管理",
-		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
-			]
-		}
+		"menuList":[
+				{"bigM":"单据管理","smallM":[
+				{"mtitle":"担保函上传","href":"../documents/guaranteeUpload.html"},
+				{"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html"},
+				{"mtitle":"进仓通知单上传","href":'../documents/warehouse.html'},
+				{"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
+				{"mtitle":"外贸单据上传","href":"../documents/foreignUpload.html"},
+				{"mtitle":"外贸单据制作","href":"../documents/foreignMaking.html"},
+				{"mtitle":"国际快递办理","href":"../documents/courier.html"},
+				{"mtitle":"函件管理","href":"../documents/correspondence.html"}
+			   ]
+			   }
+		   ]
+	   }
 		,{"title":"审批管理",
 		 "menuList":[
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}

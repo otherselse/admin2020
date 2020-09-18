@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>函件管理-订单原件/传真件</title>
+    <style>
+        html,
+        body {
+            background: #fff;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: -Scroll;
+            /* overflow-y: hidden; */
+            overflow-x: hidden
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <div>
+        <div class="lgui-table-box">
+            <div class="lgui-table-header pct100">
+                <table class="tr fs12 pct100" style="border-spacing:0px 20px;" width="100%">
+                    <tr class="0 uplad">
+                        <td class="">
+                            销售合同原件/传真件：
+                        </td>
+                        <td class="tl">
+                            <span class="dib dac">
+                                <button type="button" class="ui-button vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                    <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            签收单原件/传真件：
+                        </td>
+                        <td class="tl">
+                            <span class="dib dac">
+                                <button type="button" class="ui-button  vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                <br>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80 ">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="0 uplad">
+                        <td class="">
+                            对账函原件/传真件：
+                        </td>
+                        <td class="tl">
+                            <span class="dib dac">
+                                <button type="button" class="ui-button vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                <span class="ui-files vm ml10 "><a href="javascript:void(0)" class="g80">组件111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tc mb20">
+                <button type="button" class="mr10 ui-button">确认</button>
+                <button type="button" class="ui-button " data-type="clear">取消</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        var start = laydate.render({
+            elem: '#time2',
+            theme: 'lgblue',
+            trigger: 'click',
+            btns: ['clear', 'confirm'],
+            min: 0,
+            done: function (value, date) {
+                getTotal()
+                // var myobj = {
+                // 	year: date.year,
+                // 	month: date.month - 1,//关键
+                // 	date: date.date
+                // };
+                // end.config.value = value;
+                // end.config.min = myobj;
+            }
+        })
+    </script>
+</body>
+
+</html>

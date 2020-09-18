@@ -9,40 +9,36 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>进仓通知单上传-历史记录</title>
+    <title>进仓通知单上传-编辑</title>
     <style>
         html,
         body {
             height: 100%;
             margin: 0px;
             padding: 0px;
-            overflow:-Scroll;
-            overflow-y:hidden;
-            overflow-x:hidden
+            overflow: -Scroll;
+            /* overflow-y: hidden; */
+            overflow-x: hidden
         }
     </style>
 </head>
 
 <body class="showTip">
     <div style="background: #fff;height: 100%; width: 100%;">
-        <br><br>
         <div class="lgui-table-box">
             <div class="lgui-table-header pct100">
-                <table class="tr fs12 pct100" style="border-spacing:0px 15px;" width="100%">
+                <table class="tr fs12 pct100" style="border-spacing:0px 20px;" width="100%">
                     <tr class="0 uplad">
-                        <td class="vt">
+                        <td class="">
                             请上传报关单：
                         </td>
                         <td class="tl ">
-                            <span class="dib">
-                                <button type="button" class="ui-button mr10 pct50 vm" data-type="upfile"
-                                    onclick="upfile()">附件上传(<3MB)</button><br>
-                                        <span class="ui-files vm mt10"><a href="javascript:void(0)"
-                                                class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                href="#"></a></span>
-                                        <span class="ui-files ml10 mt10 vm"><a href="javascript:void(0)"
-                                                class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                href="#"></a></span>
+                            <span class="dib dac">
+                                <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                                    onclick="upfile()">附件上传</button>
+                                    <br>
+                                <span class="ui-files vm "><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
                             </span>
                         </td>
                     </tr>
@@ -84,7 +80,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
-         var start = laydate.render({
+        var start = laydate.render({
             elem: '#time2',
             theme: 'lgblue',
             trigger: 'click',

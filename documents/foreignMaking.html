@@ -38,19 +38,20 @@
         <div class=" fix f12 bgwh">
             <div class="ml20 mr20">
                 <div class="fix">
-                    <div class="cl lh84 f12">
-                        是否提交：<div class="dib selectSingle mr20">
-                            <a class="on" href="javscript:void(0)">是</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">否</a>
-                        </div>
-                        订单号：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-                        金牌商家：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-                        单位名称：<input type="text" class="ui-input pct16 mr20 m_pct9" placeholder="请输入">
-
-                        <button type="button" class="ui-button mr10">查询</button>
-                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    <div class="cl f12">
+                        是否提交：
+                        <span class="radio pct20">
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                        订单号：<input type="text" class="ui-input pct20 mr20 m_pct9" placeholder="请输入">
+                        金牌商家：<input type="text" class="ui-input pct20 mr20 m_pct9" placeholder="请输入">
+                        单位名称：<input type="text" class="ui-input pct20 mr20 m_pct9" placeholder="请输入">
                     </div>
+                </div>
+                <div class="tc mb30">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
             </div>
 
@@ -63,9 +64,9 @@
                             <tr>
                                 <th width="10%">序号</th>
                                 <th width="15%">订单号</th>
-                                <th width="30%">金牌商家</th>
-                                <th width="35%">单位名称</th>
-                                <th width="10%">操作</th>
+                                <th width="25%">金牌商家</th>
+                                <th width="30%">单位名称</th>
+                                <th width="20%">操作</th>
                             </tr>
                         </thead>
                     </table>
@@ -76,10 +77,11 @@
                             <tr class="pct100">
                                 <td class="pct10">1</td>
                                 <td class="pct15">59862</td>
-                                <td class="pct30">以乡村</td>
-                                <td class="pct35">治愈客户有限集团</td>
-                                <td class="pct10">
+                                <td class="pct25">以乡村</td>
+                                <td class="pct30">治愈客户有限集团</td>
+                                <td class="pct20">
                                     <a href="toForeignMaking.html">制作单据</a>
+                                    <span class="dib p2 gd9">|</span>
                                     <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
                                 </td>
                             </tr>
@@ -87,11 +89,9 @@
                             <tr class="hideTr dn">
                                 <td colspan="9">
                                     <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                        <h2 class="sp-yg  mt30 mb20 tl">已生成单据列表哦</h2>
+                                        <table class="ui-table tc f12 auto showShadow mt-1" width="100%">
                                             <thead>
-                                                <tr>
-                                                    <th colspan="3">已生成单据列表</th>
-                                                </tr>
                                                 <tr>
                                                     <th width="33.3%">单据类型</th>
                                                     <th width="33.3%">制作时间</th>
@@ -160,7 +160,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script>
         $(function () {
-            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
     </script>
