@@ -19,11 +19,15 @@
             background: #fff;
             min-width: auto;
         }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
     </style>
 
 </head>
 
-<body class="showTip ">
+<body class="showTip report">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -46,21 +50,63 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
+                <table class="ui-table tc f12 auto  mt10" width="100%">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">加工商：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectProcName selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">全部</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">上海加工运输有限责任公司</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                                </div>
+                                <a class="dib vt pt2" href="javscript:void(0)" onclick="setOpen(this)"
+                                    id="jgs_scroll">展开</a>
+                            </td>
+                            <td class="title" width="13%">
+                                收支类型：
+                            </td>
+                            <td>
+                                <span class="input-selSearch pct100 dac ml10">
+                                    <span class="dib selectSingle dac">
+                                        <a class=" on" href="javscript:void(0)">超期未收款</a>
+                                        <span class="pr5  pl5 ">|</span>
+                                        <a class="" href="javscript:void(0)">魏热帮</a>
+                                        <span class="pr5  pl5 ">|</span>
+                                        <a class="" href="javscript:void(0)">鲍帮</a>
+                                        <span class="pr5  pl5 ">|</span>
+                                        <a class="" href="javscript:void(0)">互帮</a>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 <table width="100%" class="mt5">
                     <tr>
-                        <td width="25%">
+                        <td width="33.3%">
                             <span class="input-selSearch pct100 mb10">
                                 <span class="dib">单位名称：</span>
                                 <input type="text" class="ui-input pct70" placeholder="请输入单位名称" autocomplete="off">
                             </span>
                         </td>
-                        <td width="25%">
+                        <td width="33.3%">
                             <span class="input-selSearch pct100 mb10">
                                 <span class="dib">收支银行：</span>
                                 <input type="text" class="ui-input pct70" placeholder="请输入收支银行" autocomplete="off">
                             </span>
                         </td>
-                        <td width="25%">
+                        <td width="33.3%">
                             <span class="input-selSearch pct100 mb10">
                                 <span class="dib">入账日期：</span>
                                 <span class="ui-input tc f0 pct70  range" data-type="time">
@@ -68,57 +114,6 @@
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
                                 </span></span>
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100 dac mb10">
-                                <span class="dib">收支类型：</span>
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">超期未收款</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">互帮</a>
-                                </span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <span class="input-selSearch pct100 dac">
-                                <span class="dib">收支类型：</span>
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">超期未收款</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">互帮</a>
-                                    <a class=" on" href="javscript:void(0)">超期未收款</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">互帮</a>
-                                    <a class=" on" href="javscript:void(0)">超期未收款</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">互帮</a>
-                                    <a class=" on" href="javscript:void(0)">超期未收款</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">互帮</a>
-                                </span>
                             </span>
                         </td>
                     </tr>
@@ -132,7 +127,7 @@
                     </tr>
                 </table>
 
-                <table class="ui-table tc f12 checkbox " width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr class="n19-Title">
                             <th width="4%" class="cent">
@@ -168,8 +163,7 @@
                             <td oldtitle="优惠券支付" aria-describedby="ui-tooltip-1">优惠券支付</td>
                             <td>
                                 <!--有无明细按钮-->
-                                <a href="javascript:void(0)" onclick="showLayer(this)"
-                                    class="db pct100 tr">
+                                <a href="javascript:void(0)" onclick="showLayer(this)" class="db pct100 tr">
                                     <span class="dib mr10 c08">-1,624.50</span>
                                     <span class="dib mr10 mx-bon">明细</span>
                                 </a>
@@ -178,18 +172,23 @@
                                 -1,416.710
                             </td>
                             <td title="">
-                                --
+                                <span class="ml10 dib g68 zxx_text_b" title="银行" class="tiptop">银行</span>
                             </td>
                             <td>2020-09-10 20:24:57</td>
                             <td>朱柒柒</td>
-                            <td oldtitle="前台结算  拆包费用其他费用 :28.5 吨">
-                                前台结算 拆包费用其他费用 :28.5 吨
+                            <td class="">
+                                <span class="ml10 dib g68 zxx_text_b" title="前台结算  拆包费用其他费用 :28.5 吨" class="tiptop">前台结算
+                                    拆包费用其他费用 :28.5 吨</span>
                             </td>
                             <td class="cent">
                                 否
                             </td>
                             <td class="cent" 0="">
-                                <a href="">查看</a>
+                                <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15"
+                                    data-type="smallbbr">
+                                    <span class="dib imgIcon"></span>&nbsp;
+                                    <span class="lh16 f14 dib vt">3</span>
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -209,8 +208,7 @@
                             <td oldtitle="优惠券支付" aria-describedby="ui-tooltip-1">优惠券支付</td>
                             <td>
                                 <!--有无明细按钮-->
-                                <a href="javascript:void(0)" onclick="showLayer(this)"
-                                    class="db pct100 tr">
+                                <a href="javascript:void(0)" onclick="showLayer(this)" class="db pct100 tr">
                                     <span class="dib mr10 red">-1,624.50</span>
                                     <span class="dib mr10 mx-bon">明细</span>
                                 </a>
@@ -219,25 +217,32 @@
                                 -1,416.710
                             </td>
                             <td title="">
-                                --
+                                <span class="ml10 dib g68 zxx_text_b" title="银行" class="tiptop">银行</span>
                             </td>
                             <td>2020-09-10 20:24:57</td>
                             <td>朱柒柒</td>
-                            <td oldtitle="前台结算  拆包费用其他费用 :28.5 吨">
-                                前台结算 拆包费用其他费用 :28.5 吨
+                            <td>
+                                <span class="ml10 dib g68 zxx_text_b" title="前台结算  拆包费用其他费用 :28.5 吨" class="tiptop">前台结算
+                                    拆包费用其他费用 :28.5 吨</span>
                             </td>
                             <td class="cent">
                                 --
                             </td>
                             <td class="cent" 0="">
-                                --
+                                <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15"
+                                    data-type="smallbbr">
+                                    <span class="dib imgIcon"></span>&nbsp;
+                                    <span class="lh16 f14 dib vt">3</span>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
                     <tfoot class="bgfa">
                         <tr height="45">
-                            <td colspan="15">
-                                <span class="l pct6 mt5"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</span>
+                            <td colspan="12">
+                                <span class="l pct6 mt5"><i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                            class="checkbox-opacity" name="checkbox"
+                                            onclick="setAll(this)"></i>全选</span>
                                 <span class="l mt5">当前共选择(<span class="red">3</span>)条信息</span>
                                 <span class="r mr10">
                                     <button class="ui-button mr10" type="button">导出凭证</button>
@@ -246,11 +251,12 @@
                             </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="12" class="tc" >
+                            <td colspan="12" class="tc">
                                 <div class="cent cl mt10 mb10">
-                                    所有页面总计   收款：<span class="red">+9,081.85</span>   系统结算：<span class="red">+0.00</span>   
+                                    所有页面总计   收款：<span class="red">+9,081.85</span>   系统结算：<span
+                                        class="red">+0.00</span>   
                                     支付：<span class="g08">-
-                                    22,592.87
+                                        22,592.87
                                     </span>
                                        余料款充值：<span class="red">+0.00
                                     </span>
@@ -265,6 +271,19 @@
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
 
+    <!-- 查看图片 -->
+    <div class="f12 dom18 dn">
+        <div class="selectDiv f12">
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -274,6 +293,36 @@
     <script>
         $(function () {
             $(".mulfolder").eq(4).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            $(".showTip").find('[title]').qtip({
+                position: {
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
         })
 
         function showDiv_lrl(obj) {
