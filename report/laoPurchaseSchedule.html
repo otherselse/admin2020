@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>待付款跟踪表-报表管理-乐刚智能云系统</title>
+    <title>交易明细-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -22,10 +22,6 @@
 
         .qtip-lep0 .qtip-content {
             padding: 0px;
-        }
-
-        .qtip {
-            min-width: 800px;
         }
     </style>
 
@@ -46,40 +42,55 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">待付款跟踪表</span>
+                <span class="g28">交易明细</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
 
+        <div class="ui-tab3 ">
+            <a href="salesBreakdown.html" class="ui-tab3-list rel"><span class="ui-tab3-text">挂牌资源</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="laoPurchaseSchedule.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">定价参数</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <table class="ui-table tc f12 auto" width="100%">
                     <tbody>
                         <tr class="resource-table">
-                            <td class="title" width="13%">操作类型：</td>
+                            <td class="title" width="13%">业务类型：</td>
                             <td width="37%" class="tl">
                                 <div class="dib selectSingle gc ml10">
-                                    <a href="javscript:void(0)" class="on">外贸</a>
+                                    <a href="javscript:void(0)" class="on">全部</a>
                                     <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">寄售</a>
+                                    <a href="javscript:void(0)">乔碧萝</a>
                                     <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">快速备</a>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
                                     <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)" class="on">任你押</a>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
                                     <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">现款业务李</a>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
                                 </div>
                             </td>
-                            <td class="title" width="13%">是否付款完成：</td>
-                            <td>
-                                <span class="radio">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
+                            <td class="title" width="13%">区域：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">全部</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -99,20 +110,16 @@
                             </span>
                         </td>
                         <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">采购日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
+                            <span class="input-selSearch pct100">
+                                <span class="dib">供应商：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入供应商" autocomplete="off">
                             </span>
                         </td>
                     </tr>
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
-                                <span class="dib">交货日期：</span>
+                                <span class="dib">合同日期：</span>
                                 <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
@@ -126,89 +133,117 @@
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc mt20 f12 checkbox table-cw" width="100%" data-type="edit">
+
+                <table class="ui-table mt20 tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
-                            <th width="5%">序号</th>
-                            <th width="7%">订单号</th>
-                            <th width="7%">金牌商家</th>
-                            <th width="7%">采购合同号</th>
-                            <th width="7%">操作类型</th>
-                            <th width="11%">单位名称</th>
-                            <th width="7%">
+                            <th width="3%">序号</th>
+                            <th width="4%">区域</th>
+                            <th width="5%">金牌商家</th>
+                            <th width="5%">订单号</th>
+                            <th width="6%">采购合同号</th>
+                            <th width="5%">业务类型</th>
+                            <th width="8%">供应商名称</th>
+                            <th width="5%">合同日期</th>
+                            <th width="5%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     合同重量<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="7%">
+                            <th width="5%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     合同金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="7%">
+                            <th width="5%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     已付款金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="7%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    入库重量<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    入库金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    交货时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    付款倒计时<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
+                            <th width="5%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     待付款金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    入库金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    出库重量<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    补差金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    结算总金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    已收票金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    未收票金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">销售订单</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
-                            <td width="5%">1</td>
-                            <td width="7%"><a href="javascript:void(0)" onclick="showStep()" class="redm">61215</a></td>
-                            <td width="7%">唐宇捷</td>
-                            <td width="7%">DDC(22)-20001669</td>
-                            <td width="7%">现款业务</td>
-                            <td width="11%">上海市爱尚Travel有限公司</td>
-                            <td width="7%">22</td>
-                            <td width="7%">44,000</td>
-                            <td width="7%">0</td>
-                            <td width="7%">22</td>
-                            <td width="7%">44,000</td>
-                            <td width="7%">2020-09-17</td>
-                            <td width="7%">0</td>
-                            <td width="7%">44,000</td>
+                            <td>1</td>
+                            <td>上海</td>
+                            <td>之华</td>
+                            <td>61221</td>
+                            <td>DDC(22)-20001671</td>
+                            <td>现款业务</td>
+                            <td>王至于有限公司</td>
+                            <td>2020-09-18</td>
+                            <td>10</td>
+                            <td>1,000</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <a href="javascript:void(0)" title="">
+                                    <span class="redm">-- </span>
+                                </a>
+                            </td>
                         </tr>
+
                     </tbody>
-                    <tfoot>
+                    <tfoot class="">
                         <tr height="45">
-                            <td colspan="6">当前页合计：</td>
-                            <td>98</td>
-                            <td>87,500</td>
-                            <td>0</td>
-                            <td>37</td>
-                            <td>45,500</td>
+                            <td colspan="8">合计：</td>
+                            <td><span id="s_conWeight">98.00</span></td>
+                            <td><span id="s_conMoney">90500.00</span></td>
+                            <td><span id="s_payMoney">0</span></td>
+                            <td><span id="s_inWeight">47.00</span></td>
+                            <td><span id="s_inMoney">49500.00</span></td>
+                            <td><span id="s_outWeight">36.70</span></td>
+                            <td><span id="s_difMoney">0</span></td>
+                            <td><span id="s_balanceMoney">49500.00</span></td>
+                            <td><span id="s_voiceMoney">0</span></td>
+                            <td><span id="s_noVoiceMoney">49500.00</span></td>
                             <td>--</td>
-                            <td>0</td>
-                            <td>87,500</td>
                         </tr>
                         <tr height="45">
-                            <td colspan="6">所有页合计：</td>
-                            <td>874,401.042</td>
-                            <td>2,141,819,924.13</td>
-                            <td>407,109,556.87</td>
-                            <td>626,226.606</td>
-                            <td>1,625,120,003.82</td>
+                            <td colspan="8">所有页合计：</td>
+                            <td>865,183.246</td>
+                            <td>2,116,621,384.120344</td>
+                            <td>407,655,804.96</td>
+                            <td>589,462.598</td>
+                            <td>1,517,089,655.81</td>
+                            <td>322,515.27</td>
+                            <td>4,027,751.07</td>
+                            <td>1,521,117,406.88</td>
+                            <td>7,657,621,599.97</td>
+                            <td>-6,135,912,054.11</td>
                             <td>--</td>
-                            <td>0</td>
-                            <td>1,802,055,471.55</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -226,7 +261,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(9).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //myTipclick-p0 点击出现数据段没有内边距
             $('.myTipclick-p0').qtip({
                 show: { event: 'click' },
@@ -237,7 +272,7 @@
                     }
                 },
                 position: {
-                    my: 'top left',
+                    my: 'top center',
                     at: 'bottom center'
                 },
                 // position: {
