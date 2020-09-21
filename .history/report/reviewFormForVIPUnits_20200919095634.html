@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>交易明细-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">交易明细</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table class="ui-table tc f12 auto" width="100%">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">区域：</td>
+                            <td width="87%" colspan="2" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">全部</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">单位名称：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入单位名称" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">订单号：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="tc mt10 mb30">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="fixTr">
+                            <th width="7%">序号</th>
+                            <th width="7%">区域</th>
+                            <th width="11%">金牌商家</th>
+                            <th width="8%">订单号</th>
+                            <th width="17%">客户名称</th>
+                            <th width="16%">联系方式</th>
+                            <th width="8%">合同重量</th>
+                            <th width="8%">合同金额</th>
+                            <th width="8%">使用时间</th>
+                            <th width="9%">在线支付银行</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="7%">1</td>
+                            <td width="7%">上海</td>
+                            <td width="11%">唐一菲</td>
+                            <td width="8%">36305</td>
+                            <td width="17%">上海江川集团有限公司</td>
+                            <td width="16%">上官雨莹-11117169876</td>
+                            <td width="8%">29.896</td>
+                            <td width="8%">165,922.8</td>
+                            <td width="8%">2017-05-12 17:09:29</td>
+                            <td width="9%"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+    </script>
+</body>
+
+</html>

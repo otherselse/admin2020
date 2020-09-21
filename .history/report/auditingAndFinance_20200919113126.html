@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>订单统计表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">订单统计表</span>
+
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3 ">
+            <a href="grossProfitDetail.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">订单统计表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="ui-content ovh minH">
+            <div class="ui-tab4 mt20 pl20">
+                <a href="theSalesExecutive.html" class="ui-tab4-list mb10">销售执行进度表</a>
+                <a href="procurementExecution.html" class="ui-tab4-list mb10">采购执行进度表</a>
+                <a href="theInventoryTable.html" class="ui-tab4-list mb10">库存表</a>
+                <a href="customerSettlementUnit.html" class="ui-tab4-list mb10">20170401客户结算单位收入一致表</a>
+                <a href="costDetail.html" class="ui-tab4-list mb10">费用明细表</a>
+                <a href="inter-temporalData.html" class="ui-tab4-list mb10">跨期数据差异表</a>
+                <a href="foreignTradeOrderAudit.html" class="ui-tab4-list mb10">外贸订单审计用表</a>
+                <a href="auditingAndFinance.html" class="ui-tab4-list mb10 on">审计与财务口径收入和成本的对比表</a>
+            </div>
+            <div class="pl20 pr20 f12">
+                <div class="lh84 bgwh dac">
+                    <span class="ml20 input-selSearch pct25 dac">
+                        <span class="dib">资金情况日期：</span>
+                        <span class="dib pct70">
+                            <span class="ui-input ui-input pct100 ml10" data-type="time" small-type="small"><input
+                                    type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
+                                    lay-key="11"></span>
+                        </span>
+                    </span>
+                    <button class="ml20 ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+
+                <div class="p20 mt20 bgwh">
+                    <h2 class="sp-yg mt10 mb10">审计与财务数据对比 — 收入</h2>
+                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
+                        <!-- <thead> -->
+                            <tr class="bfa" height="40">
+                                <th>项目</th>
+                                <th>审计数据</th>
+                                <th>财务数据</th>
+                                <th>差异(审计-财务)</th>
+                            </tr>
+                        <!-- </thead> -->
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td>内贸收入</td>
+                                <td>65,259.25</td>
+                                <td>15110</td>
+                                <td>252124</td>
+                            </tr>
+                            <tr>
+                                <td>外贸收入</td>
+                                <td>7,867.83</td>
+                                <td>11212212</td>
+                                <td>1121424</td>
+                            </tr>
+                            <tr>
+                                <td>加工收入</td>
+                                <td>7,867.83</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td>合计</td>
+                                <td>7,867.83</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="p20 mt20 bgwh">
+                    <h2 class="sp-yg mt10 mb10">G2G情况表(万元)</h2>
+                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
+                        <!-- <thead> -->
+                            <tr class="bfa" height="40">
+                                <th colspan="2">项目</th>
+                                <th>金额</th>
+                                <th>人数</th>
+                            </tr>
+                        <!-- </thead> -->
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td rowspan="4">G2G跟踪表</td>
+                                <td>G2G余额</td>
+                                <td>150</td>
+                                <td>254</td>
+                            </tr>
+                            <tr>
+                                <td>新手体验</td>
+                                <td>150</td>
+                                <td>254</td>
+                            </tr>
+                            <tr>
+                                <td>共享通</td>
+                                <td>150</td>
+                                <td>254</td>
+                            </tr>
+                            <tr>
+                                <td>融享通</td>
+                                <td>150</td>
+                                <td>254</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td colspan="2">合计</td>
+                                <td>7,867.83</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="p20 mt20 bgwh">
+                    <h2 class="sp-yg mt10 mb10">备货占用资金情况(万元)</h2>
+                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
+                        <!-- <thead> -->
+                            <tr class="bfa" height="40">
+                                <th width="15%">区域</th>
+                                <th width="15%">已付款金额</th>
+                                <th width="15%">销售收款金额</th>
+                                <th width="15%">G2G冻结金额</th>
+                                <th width="12%">自己占用</th>
+                                <th width="28%">备注</th>
+                            </tr>
+                        <!-- </thead> -->
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td>广州</td>
+                                <td>862,128</td>
+                                <td>1221.81</td>
+                                <td>128912.11</td>
+                                <td>1e309</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>广州</td>
+                                <td>862,128</td>
+                                <td>1221.81</td>
+                                <td>128912.11</td>
+                                <td>1e309</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td>合计</td>
+                                <td>7,867.83</td>
+                                <td>7,867.83</td>
+                                <td>7,867.83</td>
+                                <td>150</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                
+                <div class="p20 mt20 bgwh">
+                    <h2 class="sp-yg mt10 mb10">贸易订单欠款业务情况表(万元)</h2>
+                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
+                        <!-- <thead> -->
+                            <tr class="bfa" height="40">
+                                <th width="15%">区域</th>
+                                <th width="19%">欠款业务</th>
+                                <th width="19%">其中：超期</th>
+                                <th width="19%">诉讼中</th>
+                                <th width="28%">备注</th>
+                            </tr>
+                        <!-- </thead> -->
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td>广州</td>
+                                <td>862,128</td>
+                                <td>1221.81</td>
+                                <td>128912.11</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>广州</td>
+                                <td>862,128</td>
+                                <td>1221.81</td>
+                                <td>128912.11</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td>合计</td>
+                                <td>7,867.83</td>
+                                <td>7,867.83</td>
+                                <td>7,867.83</td>
+                                <td>--</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="p20 mt20 bgwh">
+                    <h2 class="sp-yg mt10 mb10">加工订单加工业务情况(万元)</h2>
+                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
+                        <!-- <thead> -->
+                            <tr class="bfa" height="40">
+                                <th width="20%">区域</th>
+                                <th width="25%">欠款业务</th>
+                                <th width="25%">其中：超期</th>
+                                <th width="30%">备注</th>
+                            </tr>
+                        <!-- </thead> -->
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td>广州</td>
+                                <td>862,128</td>
+                                <td>128912.11</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>广州</td>
+                                <td>1221.81</td>
+                                <td>128912.11</td>
+                                <td style="padding:0px;">
+                                    <div class="dac pct100">
+                                        <span class="tl ml10 pct80 x">
+                                            <span class="zxx_text_90 pct100">的小青年从去年长清区趁年轻你去年从去年从去年吵吵闹闹</span>
+                                        </span>
+                                        <span class="tl ml10 pct80 dn b">
+                                            <span class="pct100">
+                                                <input type="text" class="ui-input pct90"  placeholder="请输入" autocomplete="off">
+                                            </span>
+                                        </span>
+                                        <span class=" pct20 upImg" onclick="xg(this)"></span>
+                                        <span class=" pct20 bcImg dn" onclick="bc(this)"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td>合计</td>
+                                <td>7,867.83</td>
+                                <td>7,867.83</td>
+                                <td>--</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+    </script>
+</body>
+
+</html>

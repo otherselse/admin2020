@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>运营分析表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">运营分析表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-tab3 ">
+            <a href="goldMerchantMarketing.html" class="ui-tab3-list rel on"><span
+                    class="ui-tab3-text">金牌商家营销汇总表</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="supplierTransaction.html" class="ui-tab3-list rel"><span class="ui-tab3-text">供应商交易汇总表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="customerTransactions.html" class="ui-tab3-list rel"><span class="ui-tab3-text">客户交易汇总表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table class="ui-table tc f12 auto" width="100%">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">业务类型：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">现款业务</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">卸到付款</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
+                            </td>
+                            <td class="title" width="13%">金牌商家类型：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">现款业务</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">卸到付款</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="resource-table">
+                            <td class="title" width="13%">回访情况：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">现款业务</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">卸到付款</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
+                            </td>
+                            <td class="title" width="13%">状态：</td>
+                            <td width="37%" class="tl">
+                                <div class="dib selectSingle gc ml10">
+                                    <a href="javscript:void(0)" class="on">正常</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">关注</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">异常</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;&emsp;地区：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入地区" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;毛利率区间：</span>
+                                <span class="ui-input pct70" data-type="section">
+                                    <input type="text" placeholder="">~
+                                    <input type="text" placeholder="">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">订单日期：</span>
+                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                        <td class="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">注册时间：</span>
+                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                        <td class="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">分红发放时间：</span>
+                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="tc mt10 mb30">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="fixTr">
+                            <th width="4%">序号</th>
+                            <th width="5%">金牌商家</th>
+                            <th width="5%">金牌商家类型</th>
+                            <th width="5%">地区</th>
+                            <th width="3%">订单数</th>
+                            <th width="4%">超期订单数</th>
+                            <th width="4%">平均超期天数</th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    累计分红(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">合作客户数</th>
+                            <th width="5%">回访情况</th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    出库总重量(t)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    销售总额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    采购总额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">库存销售成本</th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    预估税前毛利(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    平均税前毛利率(定购)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    平均溢价比率(备货)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">评价</th>
+                            <th width="4%">评价原因</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="4%">1</td>
+                            <td width="5%">
+                                <a href="businessInformation.html" class="tiptop" title="点击查看金牌商家信息"> 袁大海</a>
+                            </td>
+                            <td width="5%">合伙式</td>
+                            <td width="5%">自贸区</td>
+                            <td width="3%">2</td>
+                            <td width="4%">0</td>
+                            <td width="4%">0</td>
+                            <td width="5%">120,214.77</td>
+                            <td width="5%">2</td>
+                            <td width="5%" class="tablebtdb"></td>
+                            <td width="6%">994.13</td>
+                            <td width="7%">2,215,412.68</td>
+                            <td width="7%">2,024,757.08</td>
+                            <td width="5%">-2,024,757.08</td>
+                            <td width="7%">2,202,547.75</td>
+                            <td width="7%">0.994193</td>
+                            <td width="7%">0.000000</td>
+                            <td width="4%">正常</td>
+                            <td width="4%">
+                                <a id="i2560" href="javascript:void(0)" onclick="showTrMore(this)">
+                                    <span class="redm">查看</span></a></td>
+                        </tr>
+                        <tr>
+                            <td width="4%">2</td>
+                            <td width="5%">
+                                <a href="businessInformation.html" class="tiptop" title="点击查看金牌商家信息">宋丽</a>
+                            </td>
+                            <td width="5%">
+                                <a href="javascript:void(0)" onclick="showLayer()" title="点击查看转换记录"
+                                    aria-describedby="tiptop ui-tooltip-1">业务型合伙式金牌商家</a>
+                            </td>
+                            <td width="5%">杭州</td>
+                            <td width="3%">6</td>
+                            <td width="4%">5</td>
+                            <td width="4%">1,197</td>
+                            <td width="5%">59,565.35</td>
+                            <td width="5%">2</td>
+                            <td width="5%" class="tablebtdb"></td>
+                            <td width="6%">97.5</td>
+                            <td width="7%">302,710</td>
+                            <td width="7%">192,500</td>
+                            <td width="5%">0</td>
+                            <td width="7%">107,617.5</td>
+                            <td width="7%">0.323874</td>
+                            <td width="7%">0.000000</td>
+                            <td width="4%">正常</td>
+                            <td width="4%">
+                                <a id="i7444" href="javascript:void(0)" onclick="showTrMore(this)">
+                                    <span class="redm">查看</span></a></td>
+                        </tr>
+                        <!-- 开始隐藏 -->
+                        <tr class="hideTr dn">
+                            <td colspan="19">
+                                <div class="pl20 pr20">
+                                    <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
+                                        <thead>
+                                            <tr class="tc">
+                                                <th width="14%">单位状态</th>
+                                                <th width="16%">回访人</th>
+                                                <th width="17%">回访时间</th>
+                                                <th width="53%">原因</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="resource-table tc">
+                                                <td width="14%">单位状态</td>
+                                                <td width="16%">回访人</td>
+                                                <td width="17%">回访时间</td>
+                                                <td width="53%">原因</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                               <td colspan="4">
+                                                    <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">担保人责任：</span>
+                                                </td>
+                                                <td>
+                                                    <span class="radio">
+                                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>选择二</label>
+                                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>选择三</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">备注：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <textarea class="ui-textarea pct80 ml10" rows="1"></textarea>
+                                                </td>
+                                               </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="tc  mt20 mb20">
+                                        <button type="button" class="ui-button mr10">确定</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '加盟方式转换记录',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['960px', '80%'],
+                content: 'joinModeConversionRecords.html' //iframe的url
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>佣金回访表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">佣金回访表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class=" fix f12 bgwh ui-content ovh minH">
+            <div class="mb10 f0 mt20 ml20 mr20">
+                <div class="f0">
+                    <span class="pct30 dib f12">订单号：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+                    <span class="pct30 dib f12">收款单位：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+                    <span class="pct30 dib f12">
+                        <span class="dib">回访情况：</span>
+                        <span class="dib selectSingle">
+                            <input type="hidden">
+                            <a class="mb10 on" href="javscript:void(0)">全部</a>
+                            <span class="pr5 mb10 pl5 ">|</span>
+                            <a class="mb10" href="javscript:void(0)">已回访</a>
+                            <span class="pr5 mb10 pl5 ">|</span>
+                            <a class="mb10" href="javscript:void(0)">未回访</a>
+                        </span>
+                    </span>
+                </div>
+                <div class="mb20 mt20 tc f0">
+                    <button class="ui-button mr10" data-type="normal" type="button">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+            </div>
+            <!-- search end -->
+            <div class="lgui-table-box ml20 mr20">
+                <div class="lgui-table-body mt-1">
+                    <table class="ui-table tc f12" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="5%">订单号</th>
+                                <th width="14%">收款单位</th>
+                                <th width="15%">收款单位地址</th>
+                                <th width="8%">收款业务联系人</th>
+                                <th width="9%">收款人联系电话</th>
+                                <th width="10%">收款银行</th>
+                                <th width="8%">收款银行账号</th>
+                                <th width="12%">收款银行地址</th>
+                                <th width="7%">Swift Code </th>
+                                <th width="6%">回访状态</th>
+                                <th width="6%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr>
+                                <td>57148</td>
+                                <td>鞍山道</td>
+                                <td>鞍山道</td>
+                                <td>鞍山道</td>
+                                <td>13042299565</td>
+                                <td>按时</td>
+                                <td>101010101010101010</td>
+                                <td>阿阿斯顿</td>
+                                <td>啊实打实大</td>
+                                <td>已回访</td>
+                                <td class="tablebtdb blue">
+                                    <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
+                                        data-hasqtip="17">回访</a>
+                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+                                </td>
+                            </tr>
+                            <!-- 隐藏 -->
+                            <tr class="hideTr dn">
+                                <td colspan="22">
+                                    <div class="lgui-table-body mt-1">
+                                        <table class="ui-table tc f12" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="25%" class="tablebth3">操作人</th>
+                                                    <th width="31%" class="tablebth3">操作时间</th>
+                                                    <th width="44%" class="tablebth3">回访内容</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="ui-thover">
+                                                <tr>
+                                                    <td class="tablebtdb">李四四</td>
+                                                    <td class="tablebtdb">2020-05-18 10:45:45.0</td>
+                                                    <td class="tablebtdb">undefined</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tablebtdb">李四四</td>
+                                                    <td class="tablebtdb">2020-03-06 13:38:08.0</td>
+                                                    <td class="tablebtdb">属实：佣金商经核查信息属实，允许提交付款申请</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- table end -->
+            <script type="text/javascript" src="../js/pagelist.js"></script>
+            <div class="mb20"></div>
+        </div>
+    </div><!-- rightBar end -->
+
+    <div class="dom1 f12" style="display:none;min-width: 180px">
+        <span class="ui-tip auto mb10">属实：佣金商经核查信息属实，允许提交付款申请</span>
+        <span class="ui-tip auto mb20">不属实：佣金商经核查信息不属实，不允许提交付款申请</span>
+        <div class="pb20">
+            是否回访：
+            <span class="radio">
+                <label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio" onclick="setPassFlag(1)"></i>属实</label>
+                <label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio" onclick="setPassFlag(0)"></i>不属实</label>
+            </span>
+        </div>
+        <button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+        <button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".qj").click(function () {
+                $('#qj').click()
+                // $("#qj").trigger("focus");
+            })
+        })		
+    </script>
+</body>
+
+</html>
