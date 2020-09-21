@@ -9,17 +9,16 @@
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 	<title>我要去评审-评审管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-	
-	
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+	<link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
-<body>
+<body class="showTip">
 	<script type="text/javascript" src="../js/topBar.js"></script>	
 	<!-- 头部菜单 -->
 	<script type="text/javascript" src="../js/menu.js"></script>
 	<script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
 	<script type="text/javascript" src="../js/leftBar.js"></script>	
 	<!-- 左侧菜单 -->
-	
 
 	<div class="rightBar">
 		<div class="nav ovh">
@@ -35,9 +34,93 @@
 	        	</div>
         </div>
 		<div class="ui-content minH">
-			<div class="bbe"><span class="ui-content-t">标题类型:加了autoHeight 无最小高度</span> </div>
 			<div class="p20">
-				<div class="bgfa p20">content</div>
+				<div class="cl mb10 f12 ">
+					评审状态：<span class="single mr20">
+						<input type="hidden">
+						<button type="button" class="ui-option mr5">全部</button>
+						<button type="button" class="ui-option mr5">未分配</button>
+						<button type="button" class="ui-option">已分配</button>
+					</span>
+					<span class="m_db m_mt10">
+						评审类型：<div class="dib selectSingle  mr40">
+									<a class="on" href="javascript:void(0)">全部</a>
+									<span>|</span>
+									<a href="javascript:void(0)">VIP客户评审</a>
+									<span>|</span>
+									<a href="javascript:void(0)">供应商评审</a>
+									<span>|</span>
+									<a href="javascript:void(0)">承运商评审</a>
+									<span>|</span>
+									<a href="javascript:void(0)">加工商评审</a>
+									<span>|</span>
+									<a href="javascript:void(0)">仓库评审</a>
+								</div>
+					</span>
+				</div>
+				<div class="cl f12 ">
+					单位名称：<input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+					分配人：<input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+					申请时间段：<span class="ui-input tc f0 pct16  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+					</span>
+				</div>
+				<div class="tc mt20">
+					<button type="button" class="ui-button mr20">查询</button>
+					<button type="button" class="ui-button" data-type="clear">清空</button>
+				</div>
+				<table class="ui-table tc f12 mt30" width="100%">
+					<thead>
+						<tr>
+							<th width="5%">序号</th> 
+							<th width="15%"><div class="pl20 tl">评审类型</div> </th>
+							<th width="15%"><div class="pl20 tl">单位名称</div></th>
+							<th width="20%"><div class="pl20 tl">联系信息</div></th>
+							<th width="15%">申请时间</th>
+							<th width="15%">状态</th>
+							<th width="15%">操作</th>
+						</tr>
+					</thead>
+					<tbody class="ui-thover">
+						<tr>
+							<td>1</td>
+							<td><div class="pl20 tl">加工商评审</div> </td>
+							<td><div class="pl20 tl">中国邮政运输集团</div></td>
+							<td><div class="pl20 tl">北京北京市西城区北京北京市西城区<br>钢铁侠：11199991111</div></td>
+							<td>2020-04-05</td>
+							<td>已分配李四四</td>
+							<td><span class="gc">欠款业务</span></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><div class="pl20 tl">加工商评审</div> </td>
+							<td><div class="pl20 tl">中国邮政运输集团</div></td>
+							<td><div class="pl20 tl">北京北京市西城区北京北京市西城区<br>钢铁侠：11199991111</div></td>
+							<td>2020-04-05</td>
+							<td>已分配李四四</td>
+							<td><span  class="red poi hoverRed tipclick" qtip-dom="applicant"  onclick="returnToApplicant()">退回申请人</span></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><div class="pl20 tl">加工商评审</div> </td>
+							<td><div class="pl20 tl">中国邮政运输集团</div></td>
+							<td><div class="pl20 tl">北京北京市西城区北京北京市西城区<br>钢铁侠：11199991111</div></td>
+							<td>2020-04-05</td>
+							<td>已分配李四四</td>
+							<td><a href="javascript:void(0)" class="hoverBlue">我要去评审</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><div class="pl20 tl">加工商评审</div> </td>
+							<td><div class="pl20 tl">中国邮政运输集团</div></td>
+							<td><div class="pl20 tl">北京北京市西城区北京北京市西城区<br>钢铁侠：11199991111</div></td>
+							<td>2020-04-05</td>
+							<td>已分配李四四</td>
+							<td><span class="gc">已分配评审</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<script type="text/javascript" src="../js/pagelist.js"></script>
 			</div>
 		</div>
 	</div>
@@ -45,17 +128,27 @@
 
 
 
+	<div class="applicant dn">
+		<div class="g68"><i class="admIcon icondoubt vsb"></i> 确定退回申请人？</div>
+		<div class="mt25">
+			<button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+			<button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
+		</div>
+	</div>
 
 
 	
 	
 	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script>
 		$(function(){
 			$(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-			
 		})
-		
+	 function returnToApplicant(){
+
+	 } 
 	</script>
 </body>
 </html>
