@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>贸易订单-报表管理-乐刚智能云系统</title>
+    <title>订单执行情况表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -38,7 +38,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">贸易订单</span>
+                <span class="g28">订单执行情况表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -55,18 +55,8 @@
                 <table class="ui-table tc f12 auto  mt10" width="100%">
                     <tbody>
                         <tr class="resource-table">
-                            <td class="title" width="13%">单据回收情况：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class="mb10 on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">已放弃</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">未放弃</a>
-                                </div>
-                            </td>
                             <td class="title" width="13%">金牌商家类型：</td>
-                            <td class="cont" width="37%">
+                            <td class="cont" width="87%" colspan="3">
                                 <div class="dib selectSingle dac">
                                     <a class="mb10 on" href="javscript:void(0)">全部</a>
                                     <span class="pr5 mb10 pl5 ">|</span>
@@ -81,6 +71,16 @@
                             </td>
                         </tr>
                         <tr class="resource-table">
+                            <td class="title" width="13%">单据回收情况：</td>
+                            <td class="cont" width="37%">
+                                <div class="dib selectSingle dac">
+                                    <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">已放弃</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">未放弃</a>
+                                </div>
+                            </td>
                             <td class="title" width="13%">操作类型：</td>
                             <td class="cont" width="37%">
                                 <div class="dib selectSingle dac">
@@ -93,15 +93,6 @@
                                     <span class="pr5 mb10 pl5 ">|</span>
                                     <a class="mb10" href="javscript:void(0)">寄售</a>
                                 </div>
-                            </td>
-                            <td class="title" width="13%">是否已执行：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
                             </td>
                         </tr>
                         <tr class="resource-table">
@@ -166,6 +157,15 @@
                         </tr>
                         <tr class="resource-table">
                             <td class="title" width="13%">是否代付：</td>
+                            <td class="cont" width="37%">
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                            </td>
+                            <td class="title" width="13%">是否已执行：</td>
                             <td class="cont" width="37%">
                                 <span class="radio ml5">
                                     <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
@@ -262,7 +262,7 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <div class="mt20 mb20 tc">
+                            <div class="mt15 mb30 tc">
                                 <button type="button" class="ui-button mr10">查询</button>
                                 <button type="button" class="ui-button " data-type="clear">清空</button>
                             </div>
@@ -270,7 +270,7 @@
                     </tr>
                 </table>
 
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="2%">序号</th>
@@ -343,7 +343,7 @@
                             <td width="3%">2020-09-08</td>
                             <td width="3%">
                                 <a href="javascript:void(0)" title="订单金额:&nbsp;1000<br>订单重量:&nbsp;10<br>点击查看订单详情"
-                                    class="tiptop">61109</a>
+                                    class="tiptop" onclick="showStep()">61109</a>
                             </td>
                             <td width="3%">
                                 <a href="javascript:void(0)"
@@ -402,6 +402,7 @@
                                 <a href="javascript:void(0)" title="是否已经提交开票申请" class="tiptop">否</a>
                             </td>
                         </tr>
+                        <!-- 开始隐藏 -->
                         <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
