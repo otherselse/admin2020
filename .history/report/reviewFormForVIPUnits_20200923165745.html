@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>vip单位审评表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">vip单位审评表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">单位名称：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入单位名称" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">现场评审人员：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入现场评审人员" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 dac ">
+                                <span class="dib">评审状态：</span>
+                                &nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择评审状态"
+                                    autocomplete="off" readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <div class="tc mt10 mb30">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="fixTr">
+                            <th width="3%">序号</th>
+                            <th width="5%">评审区域</th>
+                            <th width="10%">单位名称</th>
+                            <th width="5%">联系人</th>
+                            <th width="5%">联系电话</th>
+                            <th width="9%">评审通过日期</th>
+                            <th width="9%">评审到期日期</th>
+                            <th width="6%">交易量</th>
+                            <th width="5%">评审状态</th>
+                            <th width="5%">实缴金额(万元)</th>
+                            <th width="4%">G2G充值比例</th>
+                            <th width="5%">授信额度(万元)</th>
+                            <th width="5%">关联单位</th>
+                            <th width="4%">账期</th>
+                            <th width="5%">评审详情</th>
+                            <th width="5%">现场评审人员</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td>1</td>
+                            <td>上海</td>
+                            <td>上海vip客户股份有限公司</td>
+                            <td>vip客户</td>
+                            <td>17787856462</td>
+                            <td>2020-09-17</td>
+                            <td>2020-12-17</td>
+                            <td>0</td>
+                            <td>
+                                有效
+                            </td>
+                            <td>22000</td>
+                            <td>0.00%</td>
+                            <td title="点击查看额度使用详情" class="tiptop"><a  href="javascript:void(0)">60184</a></td>
+                            <td title=""><a href="javascript:void(0)">无</a></td>
+                            <td>90</td>
+                            <td>
+                                <!-- 跳转评审管理-单位评审 -->
+                                <a href="/LgAdmin/saleReviewAction_applySale.action?applySale.id=AF7C924763DF2C80E05371001FACA241">查看</a>
+                            </td>
+                            <td>徐河若</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(11).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
+        })
+
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '授信额度使用详情（上海vip客户股份有限公司）',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['600px', '700px'],
+                content: 'colist.html' //iframe的url
+            });
+        }
+    </script>
+</body>
+
+</html>

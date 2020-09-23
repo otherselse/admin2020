@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>G2G统计表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">G2G统计表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3 ">
+            <a href="G2GTab.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G统计表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GTrackingTable.html" class="ui-tab3-list rel "><span class="ui-tab3-text">G2G跟踪表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="regularG2GDataStatistics.html" class="ui-tab3-list rel "><span
+                    class="ui-tab3-text">定期G2G数据统计表</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GGraph.html" class="ui-tab3-list rel  on"><span class="ui-tab3-text">G2G曲线图</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="ui-tab4 mt20 pl20">
+                <a href="theSalesExecutive.html" class="ui-tab4-list on mb10">2015年</a>
+                <a href="procurementExecution.html" class="ui-tab4-list mb10">2016年</a>
+                <a href="theInventoryTable.html" class="ui-tab4-list mb10">2017年</a>
+                <a href="customerSettlementUnit.html" class="ui-tab4-list mb10">2018年</a>
+                <a href="costDetail.html" class="ui-tab4-list mb10">2019年</a>
+                <a href="inter-temporalData.html" class="ui-tab4-list mb10">2020年</a>
+            </div>
+            <div class="p20 f12">
+                <div class="fix">
+                    <p class="f26 tc mb30" style="color: #595959;">产值走势</p>
+                    <div id="cz" style="height: 400px;width:100%" class="l"></div>
+                    <!-- <div class="fl w17 mt10 l lh30 borR" style="width: 14%;">
+                        <span class="ruC">入库产值：同比+100%</span><br>
+                        <span class="ruJ">加工产值：同比+100%</span><br>
+                        <span class="ruk">出库产值：同比+0% </span>
+                    </div> -->
+                </div><!-- 产值走势指数结束 -->
+
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+        })
+    </script>
+    <script type="text/javascript">
+
+        
+	 var gtgArr1=[];
+	 var gtgArr2=[];
+	 var gtgArr3=[];
+	 var gtgArr4=[];
+	 var gtgArr5=[];
+	var gtGMoneyMainLogYe=jQuery.parseJSON('[{"createDate":"2016/12/31","selfMoney":"2268723219.5376","sumIintegral":0,"mark":0},{"createDate":"2016/12/30","selfMoney":"2268267977.0486","sumIintegral":0,"mark":0},{"createDate":"2016/12/29","selfMoney":"2267822113.8886","sumIintegral":0,"mark":0},{"createDate":"2016/12/28","selfMoney":"2268834766.0086","sumIintegral":0,"mark":0},{"createDate":"2016/12/27","selfMoney":"2268377375.0686","sumIintegral":0,"mark":0},{"createDate":"2016/12/26","selfMoney":"2267953658.3786","sumIintegral":0,"mark":0},{"createDate":"2016/12/25","selfMoney":"2267500159.6286","sumIintegral":0,"mark":0},{"createDate":"2016/12/24","selfMoney":"2267046751.5386","sumIintegral":0,"mark":0},{"createDate":"2016/12/23","selfMoney":"2266594533.8786","sumIintegral":0,"mark":0},{"createDate":"2016/12/22","selfMoney":"2266141608.6686","sumIintegral":0,"mark":0},{"createDate":"2016/12/21","selfMoney":"2265723638.2486","sumIintegral":0,"mark":0},{"createDate":"2016/12/20","selfMoney":"2265452110.1986","sumIintegral":0,"mark":0},{"createDate":"2016/12/19","selfMoney":"2264748775.7086","sumIintegral":0,"mark":0},{"createDate":"2016/12/18","selfMoney":"2264279896.8986","sumIintegral":0,"mark":0},{"createDate":"2016/12/17","selfMoney":"2263827131.6686","sumIintegral":0,"mark":0},{"createDate":"2016/12/16","selfMoney":"2263373616.6786","sumIintegral":0,"mark":0},{"createDate":"2016/12/15","selfMoney":"2260987355.2186","sumIintegral":0,"mark":0},{"createDate":"2016/12/14","selfMoney":"2260535248.3486","sumIintegral":0,"mark":0},{"createDate":"2016/12/13","selfMoney":"2260096200.0886","sumIintegral":0,"mark":0},{"createDate":"2016/12/12","selfMoney":"2259716506.9886","sumIintegral":0,"mark":0},{"createDate":"2016/12/11","selfMoney":"2259303246.5286","sumIintegral":0,"mark":0},{"createDate":"2016/12/10","selfMoney":"2258851476.4186","sumIintegral":0,"mark":0},{"createDate":"2016/12/09","selfMoney":"2258399796.6486","sumIintegral":0,"mark":0},{"createDate":"2016/12/08","selfMoney":"2257948207.1986","sumIintegral":0,"mark":0},{"createDate":"2016/12/07","selfMoney":"2257496708.0486","sumIintegral":0,"mark":0},{"createDate":"2016/12/06","selfMoney":"2257213772.7486","sumIintegral":0,"mark":0},{"createDate":"2016/12/05","selfMoney":"2257057096.2586","sumIintegral":0,"mark":0},{"createDate":"2016/12/04","selfMoney":"2256605775.3486","sumIintegral":0,"mark":0},{"createDate":"2016/12/03","selfMoney":"2256154544.6486","sumIintegral":0,"mark":0},{"createDate":"2016/12/02","selfMoney":"2255703404.1786","sumIintegral":0,"mark":0},{"createDate":"2016/12/01","selfMoney":"2255252298.5986","sumIintegral":0,"mark":0},{"createDate":"2016/11/30","selfMoney":"2254801262.1886","sumIintegral":0,"mark":0},{"createDate":"2016/11/29","selfMoney":"2254391374.7086","sumIintegral":0,"mark":0},{"createDate":"2016/11/28","selfMoney":"2253940586.8086","sumIintegral":0,"mark":0},{"createDate":"2016/11/27","selfMoney":"2253603371.3686","sumIintegral":0,"mark":0},{"createDate":"2016/11/26","selfMoney":"2253152741.0386","sumIintegral":0,"mark":0},{"createDate":"2016/11/25","selfMoney":"2252702200.7986","sumIintegral":0,"mark":0},{"createDate":"2016/11/24","selfMoney":"2252251750.6386","sumIintegral":0,"mark":0},{"createDate":"2016/11/23","selfMoney":"2251803794.9786","sumIintegral":0,"mark":0},{"createDate":"2016/11/22","selfMoney":"2254522634.4486","sumIintegral":0,"mark":0},{"createDate":"2016/11/21","selfMoney":"2254198453.0286","sumIintegral":0,"mark":0},{"createDate":"2016/11/20","selfMoney":"4490464638.5086","sumIintegral":0,"mark":0},{"createDate":"2016/11/19","selfMoney":"4489566725.3686","sumIintegral":0,"mark":0},{"createDate":"2016/11/18","selfMoney":"4488394046.7586","sumIintegral":0,"mark":0},{"createDate":"2016/11/17","selfMoney":"4487530540.8586","sumIintegral":0,"mark":0},{"createDate":"2016/11/16","selfMoney":"4486633711.9686","sumIintegral":0,"mark":0},{"createDate":"2016/11/15","selfMoney":"3985925574.6286","sumIintegral":0,"mark":0},{"createDate":"2016/11/14","selfMoney":"3985128549.1086","sumIintegral":0,"mark":0},{"createDate":"2016/11/13","selfMoney":"3984331683.0086","sumIintegral":0,"mark":0},{"createDate":"2016/11/12","selfMoney":"3983534976.2186","sumIintegral":0,"mark":0},{"createDate":"2016/11/11","selfMoney":"3982738428.7286","sumIintegral":0,"mark":0},{"createDate":"2016/11/10","selfMoney":"3981941157.0986","sumIintegral":0,"mark":0},{"createDate":"2016/11/09","selfMoney":"3981144893.0386","sumIintegral":0,"mark":0},{"createDate":"2016/11/08","selfMoney":"3979232423.6186","sumIintegral":0,"mark":0},{"createDate":"2016/11/07","selfMoney":"3978449519.5786","sumIintegral":0,"mark":0},{"createDate":"2016/11/06","selfMoney":"3977603998.9486","sumIintegral":0,"mark":0},{"createDate":"2016/11/05","selfMoney":"3976808637.4186","sumIintegral":0,"mark":0},{"createDate":"2016/11/04","selfMoney":"3976013434.9386","sumIintegral":0,"mark":0},{"createDate":"2016/11/03","selfMoney":"3975216650.0286","sumIintegral":0,"mark":0},{"createDate":"2016/11/02","selfMoney":"3974421765.8586","sumIintegral":0,"mark":0},{"createDate":"2016/11/01","selfMoney":"3973654486.7486","sumIintegral":0,"mark":0},{"createDate":"2016/10/31","selfMoney":"3972896184.5986","sumIintegral":0,"mark":0},{"createDate":"2016/10/30","selfMoney":"3972082592.3186","sumIintegral":0,"mark":0},{"createDate":"2016/10/29","selfMoney":"3971288334.8486","sumIintegral":0,"mark":0},{"createDate":"2016/10/28","selfMoney":"3970494236.1686","sumIintegral":0,"mark":0},{"createDate":"2016/10/27","selfMoney":"3969682035.4486","sumIintegral":0,"mark":0},{"createDate":"2016/10/26","selfMoney":"3968898774.8986","sumIintegral":0,"mark":0},{"createDate":"2016/10/25","selfMoney":"3968098403.3886","sumIintegral":0,"mark":0},{"createDate":"2016/10/24","selfMoney":"3967274948.5786","sumIintegral":0,"mark":0},{"createDate":"2016/10/23","selfMoney":"3966458156.3986","sumIintegral":0,"mark":0},{"createDate":"2016/10/22","selfMoney":"3965665023.5686","sumIintegral":0,"mark":0},{"createDate":"2016/10/21","selfMoney":"3964872049.3286","sumIintegral":0,"mark":0},{"createDate":"2016/10/20","selfMoney":"3964110261.9186","sumIintegral":0,"mark":0},{"createDate":"2016/10/19","selfMoney":"3963332377.6086","sumIintegral":0,"mark":0},{"createDate":"2016/10/18","selfMoney":"3962478630.6586","sumIintegral":0,"mark":0},{"createDate":"2016/10/17","selfMoney":"3961806115.4186","sumIintegral":0,"mark":0},{"createDate":"2016/10/16","selfMoney":"3961073750.8486","sumIintegral":0,"mark":0},{"createDate":"2016/10/15","selfMoney":"3960281694.6886","sumIintegral":0,"mark":0},{"createDate":"2016/10/14","selfMoney":"3959489796.9086","sumIintegral":0,"mark":0},{"createDate":"2016/10/13","selfMoney":"3958728051.4686","sumIintegral":0,"mark":0},{"createDate":"2016/10/12","selfMoney":"3957876466.3486","sumIintegral":0,"mark":0},{"createDate":"2016/10/11","selfMoney":"4974832105.1816","sumIintegral":0,"mark":0},{"createDate":"2016/10/10","selfMoney":"4972932184.8516","sumIintegral":0,"mark":0},{"createDate":"2016/10/09","selfMoney":"3955431049.9016","sumIintegral":0,"mark":0},{"createDate":"2016/10/08","selfMoney":"502899.55","sumIintegral":0,"mark":0},{"createDate":"2016/10/07","selfMoney":"8124001500.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/06","selfMoney":"8124001455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/05","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/04","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/03","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/02","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/10/01","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/09/30","selfMoney":"8123816455.8816","sumIintegral":0,"mark":0},{"createDate":"2016/09/29","selfMoney":"4118465593.9616","sumIintegral":0,"mark":0},{"createDate":"2016/09/28","selfMoney":"318662116.4","sumIintegral":0,"mark":0},{"createDate":"2016/09/27","selfMoney":"218495277.4","sumIintegral":0,"mark":0},{"createDate":"2016/09/26","selfMoney":"218545377.4","sumIintegral":0,"mark":0},{"createDate":"2016/09/25","selfMoney":"218689641.7","sumIintegral":0,"mark":0},{"createDate":"2016/09/24","selfMoney":"218689641.7","sumIintegral":0,"mark":0},{"createDate":"2016/09/23","selfMoney":"218689741.7","sumIintegral":0,"mark":0},{"createDate":"2016/09/22","selfMoney":"218465741.7","sumIintegral":0,"mark":0},{"createDate":"2016/09/21","selfMoney":"217624007.14","sumIintegral":0,"mark":0},{"createDate":"2016/09/20","selfMoney":"217344298.64","sumIintegral":0,"mark":0},{"createDate":"2016/09/19","selfMoney":"217269421.64","sumIintegral":0,"mark":0},{"createDate":"2016/09/18","selfMoney":"217309421.17","sumIintegral":0,"mark":0},{"createDate":"2016/09/17","selfMoney":"217345069.17","sumIintegral":0,"mark":0},{"createDate":"2016/09/16","selfMoney":"217345069.17","sumIintegral":0,"mark":0},{"createDate":"2016/09/15","selfMoney":"217350697.17","sumIintegral":0,"mark":0},{"createDate":"2016/09/14","selfMoney":"217350697.17","sumIintegral":0,"mark":0},{"createDate":"2016/09/13","selfMoney":"217365527.67","sumIintegral":0,"mark":0},{"createDate":"2016/09/12","selfMoney":"217371088.67","sumIintegral":0,"mark":0},{"createDate":"2016/09/11","selfMoney":"248689055.07","sumIintegral":0,"mark":0},{"createDate":"2016/09/10","selfMoney":"248689055.07","sumIintegral":0,"mark":0},{"createDate":"2016/09/09","selfMoney":"248831122.16","sumIintegral":0,"mark":0},{"createDate":"2016/09/08","selfMoney":"136089055.72","sumIintegral":0,"mark":0},{"createDate":"2016/09/07","selfMoney":"136228920.92","sumIintegral":0,"mark":0},{"createDate":"2016/09/06","selfMoney":"116655960.92","sumIintegral":0,"mark":0},{"createDate":"2016/09/05","selfMoney":"115440914.92","sumIintegral":0,"mark":0},{"createDate":"2016/09/02","selfMoney":"139772273.8975","sumIintegral":0,"mark":0}]');
+	var gtGMoneyMainLogXszx=jQuery.parseJSON('[]');
+	var gtGMoneyMainLogGxt=jQuery.parseJSON('[]');
+	var gtGMoneyMainLogRxt=jQuery.parseJSON('[]'); 
+	var gtGMoneyMainLogAll=jQuery.parseJSON('[{"createDate":"2016/12/31","selfMoney":"2268723219.5376","mark":0},{"createDate":"2016/12/30","selfMoney":"2268267977.0486","mark":0},{"createDate":"2016/12/29","selfMoney":"2267822113.8886","mark":0},{"createDate":"2016/12/28","selfMoney":"2268834766.0086","mark":0},{"createDate":"2016/12/27","selfMoney":"2268377375.0686","mark":0},{"createDate":"2016/12/26","selfMoney":"2267953658.3786","mark":0},{"createDate":"2016/12/25","selfMoney":"2267500159.6286","mark":0},{"createDate":"2016/12/24","selfMoney":"2267046751.5386","mark":0},{"createDate":"2016/12/23","selfMoney":"2266594533.8786","mark":0},{"createDate":"2016/12/22","selfMoney":"2266141608.6686","mark":0},{"createDate":"2016/12/21","selfMoney":"2265723638.2486","mark":0},{"createDate":"2016/12/20","selfMoney":"2265452110.1986","mark":0},{"createDate":"2016/12/19","selfMoney":"2264748775.7086","mark":0},{"createDate":"2016/12/18","selfMoney":"2264279896.8986","mark":0},{"createDate":"2016/12/17","selfMoney":"2263827131.6686","mark":0},{"createDate":"2016/12/16","selfMoney":"2263373616.6786","mark":0},{"createDate":"2016/12/15","selfMoney":"2260987355.2186","mark":0},{"createDate":"2016/12/14","selfMoney":"2260535248.3486","mark":0},{"createDate":"2016/12/13","selfMoney":"2260096200.0886","mark":0},{"createDate":"2016/12/12","selfMoney":"2259716506.9886","mark":0},{"createDate":"2016/12/11","selfMoney":"2259303246.5286","mark":0},{"createDate":"2016/12/10","selfMoney":"2258851476.4186","mark":0},{"createDate":"2016/12/09","selfMoney":"2258399796.6486","mark":0},{"createDate":"2016/12/08","selfMoney":"2257948207.1986","mark":0},{"createDate":"2016/12/07","selfMoney":"2257496708.0486","mark":0},{"createDate":"2016/12/06","selfMoney":"2257213772.7486","mark":0},{"createDate":"2016/12/05","selfMoney":"2257057096.2586","mark":0},{"createDate":"2016/12/04","selfMoney":"2256605775.3486","mark":0},{"createDate":"2016/12/03","selfMoney":"2256154544.6486","mark":0},{"createDate":"2016/12/02","selfMoney":"2255703404.1786","mark":0},{"createDate":"2016/12/01","selfMoney":"2255252298.5986","mark":0},{"createDate":"2016/11/30","selfMoney":"2254801262.1886","mark":0},{"createDate":"2016/11/29","selfMoney":"2254391374.7086","mark":0},{"createDate":"2016/11/28","selfMoney":"2253940586.8086","mark":0},{"createDate":"2016/11/27","selfMoney":"2253603371.3686","mark":0},{"createDate":"2016/11/26","selfMoney":"2253152741.0386","mark":0},{"createDate":"2016/11/25","selfMoney":"2252702200.7986","mark":0},{"createDate":"2016/11/24","selfMoney":"2252251750.6386","mark":0},{"createDate":"2016/11/23","selfMoney":"2251803794.9786","mark":0},{"createDate":"2016/11/22","selfMoney":"2254522634.4486","mark":0},{"createDate":"2016/11/21","selfMoney":"2254198453.0286","mark":0},{"createDate":"2016/11/20","selfMoney":"4490464638.5086","mark":0},{"createDate":"2016/11/19","selfMoney":"4489566725.3686","mark":0},{"createDate":"2016/11/18","selfMoney":"4488394046.7586","mark":0},{"createDate":"2016/11/17","selfMoney":"4487530540.8586","mark":0},{"createDate":"2016/11/16","selfMoney":"4486633711.9686","mark":0},{"createDate":"2016/11/15","selfMoney":"3985925574.6286","mark":0},{"createDate":"2016/11/14","selfMoney":"3985128549.1086","mark":0},{"createDate":"2016/11/13","selfMoney":"3984331683.0086","mark":0},{"createDate":"2016/11/12","selfMoney":"3983534976.2186","mark":0},{"createDate":"2016/11/11","selfMoney":"3982738428.7286","mark":0},{"createDate":"2016/11/10","selfMoney":"3981941157.0986","mark":0},{"createDate":"2016/11/09","selfMoney":"3981144893.0386","mark":0},{"createDate":"2016/11/08","selfMoney":"3979232423.6186","mark":0},{"createDate":"2016/11/07","selfMoney":"3978449519.5786","mark":0},{"createDate":"2016/11/06","selfMoney":"3977603998.9486","mark":0},{"createDate":"2016/11/05","selfMoney":"3976808637.4186","mark":0},{"createDate":"2016/11/04","selfMoney":"3976013434.9386","mark":0},{"createDate":"2016/11/03","selfMoney":"3975216650.0286","mark":0},{"createDate":"2016/11/02","selfMoney":"3974421765.8586","mark":0},{"createDate":"2016/11/01","selfMoney":"3973654486.7486","mark":0},{"createDate":"2016/10/31","selfMoney":"3972896184.5986","mark":0},{"createDate":"2016/10/30","selfMoney":"3972082592.3186","mark":0},{"createDate":"2016/10/29","selfMoney":"3971288334.8486","mark":0},{"createDate":"2016/10/28","selfMoney":"3970494236.1686","mark":0},{"createDate":"2016/10/27","selfMoney":"3969682035.4486","mark":0},{"createDate":"2016/10/26","selfMoney":"3968898774.8986","mark":0},{"createDate":"2016/10/25","selfMoney":"3968098403.3886","mark":0},{"createDate":"2016/10/24","selfMoney":"3967274948.5786","mark":0},{"createDate":"2016/10/23","selfMoney":"3966458156.3986","mark":0},{"createDate":"2016/10/22","selfMoney":"3965665023.5686","mark":0},{"createDate":"2016/10/21","selfMoney":"3964872049.3286","mark":0},{"createDate":"2016/10/20","selfMoney":"3964110261.9186","mark":0},{"createDate":"2016/10/19","selfMoney":"3963332377.6086","mark":0},{"createDate":"2016/10/18","selfMoney":"3962478630.6586","mark":0},{"createDate":"2016/10/17","selfMoney":"3961806115.4186","mark":0},{"createDate":"2016/10/16","selfMoney":"3961073750.8486","mark":0},{"createDate":"2016/10/15","selfMoney":"3960281694.6886","mark":0},{"createDate":"2016/10/14","selfMoney":"3959489796.9086","mark":0},{"createDate":"2016/10/13","selfMoney":"3958728051.4686","mark":0},{"createDate":"2016/10/12","selfMoney":"3957876466.3486","mark":0},{"createDate":"2016/10/11","selfMoney":"4974832105.1816","mark":0},{"createDate":"2016/10/10","selfMoney":"4972932184.8516","mark":0},{"createDate":"2016/10/09","selfMoney":"3955431049.9016","mark":0},{"createDate":"2016/10/08","selfMoney":"502899.55","mark":0},{"createDate":"2016/10/07","selfMoney":"8124001500.8816","mark":0},{"createDate":"2016/10/06","selfMoney":"8124001455.8816","mark":0},{"createDate":"2016/10/05","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/10/04","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/10/03","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/10/02","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/10/01","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/09/30","selfMoney":"8123816455.8816","mark":0},{"createDate":"2016/09/29","selfMoney":"4118465593.9616","mark":0},{"createDate":"2016/09/28","selfMoney":"318662116.4","mark":0},{"createDate":"2016/09/27","selfMoney":"218495277.4","mark":0},{"createDate":"2016/09/26","selfMoney":"218545377.4","mark":0},{"createDate":"2016/09/25","selfMoney":"218689641.7","mark":0},{"createDate":"2016/09/24","selfMoney":"218689641.7","mark":0},{"createDate":"2016/09/23","selfMoney":"218689741.7","mark":0},{"createDate":"2016/09/22","selfMoney":"218465741.7","mark":0},{"createDate":"2016/09/21","selfMoney":"217624007.14","mark":0},{"createDate":"2016/09/20","selfMoney":"217344298.64","mark":0},{"createDate":"2016/09/19","selfMoney":"217269421.64","mark":0},{"createDate":"2016/09/18","selfMoney":"217309421.17","mark":0},{"createDate":"2016/09/17","selfMoney":"217345069.17","mark":0},{"createDate":"2016/09/16","selfMoney":"217345069.17","mark":0},{"createDate":"2016/09/15","selfMoney":"217350697.17","mark":0},{"createDate":"2016/09/14","selfMoney":"217350697.17","mark":0},{"createDate":"2016/09/13","selfMoney":"217365527.67","mark":0},{"createDate":"2016/09/12","selfMoney":"217371088.67","mark":0},{"createDate":"2016/09/11","selfMoney":"248689055.07","mark":0},{"createDate":"2016/09/10","selfMoney":"248689055.07","mark":0},{"createDate":"2016/09/09","selfMoney":"248831122.16","mark":0},{"createDate":"2016/09/08","selfMoney":"136089055.72","mark":0},{"createDate":"2016/09/07","selfMoney":"136228920.92","mark":0},{"createDate":"2016/09/06","selfMoney":"116655960.92","mark":0},{"createDate":"2016/09/05","selfMoney":"115440914.92","mark":0},{"createDate":"2016/09/02","selfMoney":"139772273.8975","mark":0}]'); 
+	if(!gtGMoneyMainLogYe){
+		gtGMoneyMainLogYe = '';
+		}
+	for(var i=0; i<gtGMoneyMainLogYe.length;i++){
+		 var priceYe=gtGMoneyMainLogYe[i];
+		 var createDateYe=priceYe["createDate"] ;
+		 var selfMoneyYe=priceYe["selfMoney"] ;
+		 gtgArr1[i]=[new Date(createDateYe).getTime(),Number(selfMoneyYe)]
+	}
+	if(!gtGMoneyMainLogXszx){
+		gtGMoneyMainLogXszx = '';
+		}
+	for(var i=0; i<gtGMoneyMainLogXszx.length;i++){
+		 var priceXszx=gtGMoneyMainLogXszx[i];
+		 var createDateXszx=priceXszx["bizDate"] ;
+		 var selfMoneyXszx=priceXszx["selfMoney"] ;
+		 gtgArr2[i]=[new Date(createDateXszx).getTime(),Number(selfMoneyXszx)]
+	}
+	if(!gtGMoneyMainLogGxt){
+		gtGMoneyMainLogGxt = '';
+		}
+	for(var i=0; i<gtGMoneyMainLogGxt.length;i++){
+		 var priceGxt=gtGMoneyMainLogGxt[i];
+		 var createDateGxt=priceGxt["bizDate"] ;
+		 var selfMoneyGxt=priceGxt["selfMoney"] ;
+		 gtgArr3[i]=[new Date(createDateGxt).getTime(),Number(selfMoneyGxt)]
+	}
+	if(!gtGMoneyMainLogRxt){
+		gtGMoneyMainLogRxt = '';
+		}
+	for(var i=0; i<gtGMoneyMainLogRxt.length;i++){
+		 var priceRxt=gtGMoneyMainLogRxt[i];
+		 var createDateRxt=priceRxt["bizDate"] ;
+		 var selfMoneyRxt=priceRxt["selfMoney"] ;
+		 gtgArr4[i]=[new Date(createDateRxt).getTime(),Number(selfMoneyRxt)]
+	}
+	if(!gtGMoneyMainLogAll){
+		gtGMoneyMainLogAll = '';
+		}
+	for(var i=0; i<gtGMoneyMainLogAll.length;i++){
+		 var priceAll=gtGMoneyMainLogAll[i];
+		 var createDateAll=priceAll["createDate"] ;
+		 var selfMoneyAll=priceAll["selfMoney"] ;
+		 gtgArr5[i]=[new Date(createDateAll).getTime(),Number(selfMoneyAll)]
+	} 
+		//定义数据
+		var g2g={
+			t:'2016',
+			data:{
+				arr1:gtgArr1,
+				arr2:gtgArr2,
+				arr3:gtgArr3,
+				arr4:gtgArr4,
+				arr5:gtgArr5
+			}
+        }
+        console.log(g2g.data.arr1)
+
+        // // 图表配置
+        // var options = {
+        // 	 global: {
+        //   		 useUTC: false //关闭UTC
+       	// 	},
+		//     title: {
+		//         text: g2g.t+'年G2G统计表'
+		//     },
+		//     colors: ['#1abc9c', '#ffa501', '#07aefc', '#bc96ff', '#f46361'],
+		//     xAxis: {
+		// 				type: "datetime",
+		// 				labels: {
+		// 					style: {
+		// 						color: '#000',
+		// 						fontSize:'12px'
+		// 					},
+		// 					formatter: function () {
+		// 						return Highcharts.dateFormat('%m/%d', this.value);
+		// 					}			        	  
+		// 				},
+		// 				tickInterval: 30 * 24 * 3600 * 1000
+		// 			},
+		//     yAxis: {
+		//         title: {
+		//             text: null,
+		//             gridLineWidth:1
+		//         },
+		//         labels: {  
+		// 			formatter: function () {
+		// 						return this.value/10000+"万元"
+		// 					}
+							
+		// 				}
+		//     },
+		//     legend: {
+		//         layout: 'vertical',
+		//         align: 'right',
+		//         verticalAlign: 'middle'
+		//     },
+		//     plotOptions: {
+		//         series: {
+		//             label: {
+		//                 connectorAllowed: false
+		//             }
+		//         }
+		//     },
+		//     series: [{
+		//         name: '乐财宝',
+		//         data: g2g.data.arr1
+		//     }, {
+		//         name: '新手体验',
+		//         data: g2g.data.arr2
+		//     }, {
+		//         name: '共享通',
+		//         data: g2g.data.arr3
+		//     }, {
+		//         name: '融享通',
+		//         data: g2g.data.arr4
+		//     }, {
+		//         name: '投资总额',
+		//         data: g2g.data.arr5
+		//     }],
+		//     tooltip: {
+		// 				formatter: function() {
+		// 					return '<b>' +  Highcharts.dateFormat('%Y/%m/%d', this.key) + '</b><br> '+this.series.name+': ' + Highcharts.numberFormat(this.y, 2, ".", ",")+"元";
+		// 				}
+		// 			}		
+		// }
+        // var chart = Highcharts.chart('container', options);
+    
+
+
+
+        var dom = document.getElementById("cz");
+        var czChart = echarts.init(dom);
+        var app = {};
+        option1 = null;
+        option1 = {
+            color: ['#1abc9c', '#ffa501', '#07aefc','#bc96ff','#f46361'],
+            title: {
+                text: '',
+                // x:'center',
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                // top: '2%',
+                left: '3%',
+                right: '4%',
+                bottom: '8%',
+                containLabel: true
+            },
+            toolbox: {
+                // top:'-5%',
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ["2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09"],
+            },
+            legend: {
+                data: ['乐财宝', '新手体验', '共享通','融享通','投资总额'],
+                x: 'center',
+                y: 'bottom',
+                itemGap: 40,
+            },
+            yAxis: {
+                type: 'value',
+                xAxis: 0
+            },
+            series: [
+                {
+                    name: '乐财宝',
+                    type: 'line',
+                    stack: '总量',
+                    data: g2g.data.arr1,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#1abc9c'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '新手体验',
+                    type: 'line',
+                    stack: '总量',
+                    data: g2g.data.arr2,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#ffa501'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '共享通',
+                    type: 'line',
+                    stack: '总量',
+                    data: g2g.data.arr3,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#07aefc'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '融享通',
+                    type: 'line',
+                    stack: '总量',
+                    data: g2g.data.arr4,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#bc96ff'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '投资总额',
+                    type: 'line',
+                    stack: '总量',
+                    data: g2g.data.arr5,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#f46361'
+                            }
+                        }
+                    },
+                },
+            ]
+        };
+        ;
+        if (option1 && typeof option1 === "object") {
+            czChart.setOption(option1, true);
+        }
+
+        window.onresize = function () {
+            czChart.resize();
+        }
+
+    </script>
+
+</body>
+
+</html>

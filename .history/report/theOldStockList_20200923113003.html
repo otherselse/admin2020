@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>老系统订单统计表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+        .ui-input[data-type='time'][small-type="small"]>input {
+    line-height: 22px;
+}
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">老系统订单统计表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3 ">
+            <a href="salesExecutionProgress.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售执行进度表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="procurementExecutionSchedule.html" class="ui-tab3-list rel "><span
+                    class="ui-tab3-text">采购执行进度表</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="theOldStockList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">库存表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">订单号：</span>
+                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="dib pl10 mr20 pct100">
+                                <span class="dib">库存日期：</span>
+                                <span class="ui-input ui-input pct70 ml10" data-type="time" small-type="small"><input
+                                        type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
+                                        lay-key="11"></span>
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="ui-table tc mt20 f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="fixTr">
+                            <th width="5%">序号</th>
+                            <th width="8%">订单号</th>
+                            <th width="8%">品名</th>
+                            <th width="8%">规格</th>
+                            <th width="10%">仓库</th>
+                            <th width="10%">供应商</th>
+                            <th width="10%">采购单价</th>
+                            <th width="15%">销售客户</th>
+                            <th width="10%">入库时间</th>
+                            <th width="8%">库存重量</th>
+                            <th width="8%">库存金额</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="5%">1</td>
+                            <td width="8%">
+                                <a href="javascript:void(0)" title="点击查看订单详情"><span class="redm tiptop">24925</span></a>
+                            </td>
+                            <td width="8%">品名</td>
+                            <td width="8%">规格</td>
+                            <td width="10%">仓库</td>
+                            <td width="10%">供应商</td>
+                            <td width="10%">采购单价</td>
+                            <td width="15%">销售客户</td>
+                            <td width="10%">入库时间</td>
+                            <td width="8%">库存重量</td>
+                            <td width="8%">库存金额</td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="15">
+                                <div class="pl20 pr20">
+                                    <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th width="20%">状态</th>
+                                                <th width="20%">操作人</th>
+                                                <th width="30%">操作时间</th>
+                                                <th width="30%">备注</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>已备注</td>
+                                                <td>董江</td>
+                                                <td>2016-11-09 10:01:19</td>
+                                                <td>ssf归地方1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="ui-table tc f12 auto  mt10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td class="title" width="13%">业务类型：</td>
+                                                <td width="37%" class="tl">
+                                                    <span class="input-selSearch pct80 ml10">
+                                                        <span class="input-selSearch pct100 dac">
+                                                            &nbsp;<input type="text" class="ui-input searchUp pct80"
+                                                                placeholder="请选择区域" autocomplete="off" readonly="">
+                                                            <div class="search-cont tl">
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell ">全部</a>
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell">选择选择2</a>
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell">选择选择3</a>
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell">选择选择5</a>
+                                                                <a href="javascript:void(0)"
+                                                                    class="search-list db ell">选择选择6</a>
+                                                            </div>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td class="title" width="13%">备注：</td>
+                                                <td width="37%" class="tl">
+                                                    <textarea class="ui-textarea  ml10 pct80" rows="1"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="tc mt20 mb20">
+                                        <button type="button" class="ui-button mr10">提交</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="">
+                        <tr height="45">
+                            <td colspan="11">
+                                <span class="dib">合计：</span>
+                                <span class="dib">库存总量：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">库存金额：</span>
+                                <span class="dib red">986</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(10).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+    </script>
+</body>
+
+</html>

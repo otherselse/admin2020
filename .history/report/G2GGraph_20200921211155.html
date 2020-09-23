@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>G2G统计表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">G2G统计表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3 ">
+            <a href="G2GTab.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G统计表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GTrackingTable.html" class="ui-tab3-list rel "><span class="ui-tab3-text">G2G跟踪表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="regularG2GDataStatistics.html" class="ui-tab3-list rel "><span
+                    class="ui-tab3-text">定期G2G数据统计表</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GGraph.html" class="ui-tab3-list rel  on"><span class="ui-tab3-text">G2G曲线图</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="ui-tab4 mt20 pl20">
+                <a href="theSalesExecutive.html" class="ui-tab4-list on mb10">2015年</a>
+                <a href="procurementExecution.html" class="ui-tab4-list mb10">2016年</a>
+                <a href="theInventoryTable.html" class="ui-tab4-list mb10">2017年</a>
+                <a href="customerSettlementUnit.html" class="ui-tab4-list mb10">2018年</a>
+                <a href="costDetail.html" class="ui-tab4-list mb10">2019年</a>
+                <a href="inter-temporalData.html" class="ui-tab4-list mb10">2020年</a>
+            </div>
+            <div class="p20 f12">
+                <div class="fix">
+                    <!-- <p class="f26 tc mb30" style="color: #595959;">产值走势</p> -->
+                    <div id="cz" style="height: 400px;width:100%" class="l"></div>
+                    <!-- <div class="fl w17 mt10 l lh30 borR" style="width: 14%;">
+                        <span class="ruC">入库产值：同比+100%</span><br>
+                        <span class="ruJ">加工产值：同比+100%</span><br>
+                        <span class="ruk">出库产值：同比+0% </span>
+                    </div> -->
+                </div><!-- 产值走势指数结束 -->
+
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+    </script>
+    <script type="text/javascript">
+        var gtgArr1=[];
+        var gtgArr2=[];
+        var gtgArr3=[];
+        var gtgArr4=[];
+        var gtgArr5=[];
+       var gtGMoneyMainLogYe=jQuery.parseJSON('[{"createDate":"2018/10/05","selfMoney":"10156.16","sumIintegral":0,"mark":0},{"createDate":"2018/09/12","selfMoney":"92000","sumIintegral":0,"mark":0},{"createDate":"2018/09/03","selfMoney":"10002","sumIintegral":0,"mark":0},{"createDate":"2018/09/01","selfMoney":"10020","sumIintegral":0,"mark":0},{"createDate":"2018/08/30","selfMoney":"100004.04","sumIintegral":0,"mark":0},{"createDate":"2018/08/23","selfMoney":"1963683.88","sumIintegral":0,"mark":0},{"createDate":"2018/08/22","selfMoney":"101183131.78","sumIintegral":0,"mark":0},{"createDate":"2018/08/20","selfMoney":"305531.32","sumIintegral":0,"mark":0},{"createDate":"2018/08/16","selfMoney":"11310.68","sumIintegral":0,"mark":0},{"createDate":"2018/08/13","selfMoney":"113338.64","sumIintegral":0,"mark":0},{"createDate":"2018/07/27","selfMoney":"1031947.36","sumIintegral":0,"mark":0},{"createDate":"2018/07/14","selfMoney":"10046.28","sumIintegral":0,"mark":0},{"createDate":"2018/07/08","selfMoney":"10046.09","sumIintegral":0,"mark":0},{"createDate":"2018/06/26","selfMoney":"98888.04","sumIintegral":0,"mark":0},{"createDate":"2018/06/04","selfMoney":"15999.78","sumIintegral":0,"mark":0},{"createDate":"2018/06/03","selfMoney":"79998900","sumIintegral":0,"mark":0},{"createDate":"2018/05/17","selfMoney":"11169778039","sumIintegral":0,"mark":0},{"createDate":"2018/05/16","selfMoney":"11167567384","sumIintegral":0,"mark":0},{"createDate":"2018/05/15","selfMoney":"11165403128","sumIintegral":0,"mark":0},{"createDate":"2018/05/14","selfMoney":"11163177639","sumIintegral":0,"mark":0},{"createDate":"2018/05/13","selfMoney":"11161014122","sumIintegral":0,"mark":0},{"createDate":"2018/05/12","selfMoney":"11158784364","sumIintegral":0,"mark":0},{"createDate":"2018/05/11","selfMoney":"11156554355","sumIintegral":0,"mark":0},{"createDate":"2018/05/10","selfMoney":"4488867020","sumIintegral":0,"mark":0},{"createDate":"2018/05/09","selfMoney":"4488018493","sumIintegral":0,"mark":0},{"createDate":"2018/05/08","selfMoney":"4487606494","sumIintegral":0,"mark":0},{"createDate":"2018/05/07","selfMoney":"4486845509","sumIintegral":0,"mark":0},{"createDate":"2018/05/06","selfMoney":"4495782087","sumIintegral":0,"mark":0},{"createDate":"2018/05/05","selfMoney":"4494883911","sumIintegral":0,"mark":0},{"createDate":"2018/05/04","selfMoney":"4483954472","sumIintegral":0,"mark":0},{"createDate":"2018/05/03","selfMoney":"4383681035","sumIintegral":0,"mark":0},{"createDate":"2018/05/02","selfMoney":"4382801130","sumIintegral":0,"mark":0},{"createDate":"2018/05/01","selfMoney":"4381925825","sumIintegral":0,"mark":0},{"createDate":"2018/04/30","selfMoney":"4381050014","sumIintegral":0,"mark":0},{"createDate":"2018/04/29","selfMoney":"4380174389","sumIintegral":0,"mark":0},{"createDate":"2018/04/28","selfMoney":"4379298925","sumIintegral":0,"mark":0},{"createDate":"2018/04/27","selfMoney":"3297529448","sumIintegral":0,"mark":0},{"createDate":"2018/04/26","selfMoney":"2408093006","sumIintegral":0,"mark":0},{"createDate":"2018/04/25","selfMoney":"2407902537","sumIintegral":0,"mark":0},{"createDate":"2018/04/24","selfMoney":"2407734598","sumIintegral":0,"mark":0},{"createDate":"2018/04/23","selfMoney":"2418311296","sumIintegral":0,"mark":0},{"createDate":"2018/04/22","selfMoney":"2417864132","sumIintegral":0,"mark":0},{"createDate":"2018/04/21","selfMoney":"2417417051","sumIintegral":0,"mark":0},{"createDate":"2018/04/20","selfMoney":"2416969861","sumIintegral":0,"mark":0},{"createDate":"2018/04/19","selfMoney":"2416538582","sumIintegral":0,"mark":0},{"createDate":"2018/04/18","selfMoney":"2416102258","sumIintegral":0,"mark":0},{"createDate":"2018/04/17","selfMoney":"2415749909","sumIintegral":0,"mark":0},{"createDate":"2018/04/16","selfMoney":"2415308244","sumIintegral":0,"mark":0},{"createDate":"2018/04/15","selfMoney":"2414863873","sumIintegral":0,"mark":0},{"createDate":"2018/04/14","selfMoney":"2414415791","sumIintegral":0,"mark":0},{"createDate":"2018/04/13","selfMoney":"2413967796","sumIintegral":0,"mark":0},{"createDate":"2018/04/12","selfMoney":"3634476660","sumIintegral":0,"mark":0},{"createDate":"2018/04/11","selfMoney":"3633774552","sumIintegral":0,"mark":0}]');
+       var gtGMoneyMainLogXszx=jQuery.parseJSON('[{"bizDate":"2018/07/02","selfMoney":"1000","mark":0},{"bizDate":"2018/07/01","selfMoney":"1000","mark":0},{"bizDate":"2018/06/30","selfMoney":"1000","mark":0},{"bizDate":"2018/06/29","selfMoney":"1000","mark":0},{"bizDate":"2018/06/28","selfMoney":"1000","mark":0},{"bizDate":"2018/06/27","selfMoney":"1000","mark":0},{"bizDate":"2018/06/26","selfMoney":"1000","mark":0},{"bizDate":"2018/05/04","selfMoney":"10000000","mark":0},{"bizDate":"2018/05/03","selfMoney":"10000000","mark":0},{"bizDate":"2018/05/02","selfMoney":"10000000","mark":0},{"bizDate":"2018/05/01","selfMoney":"10000000","mark":0},{"bizDate":"2018/04/30","selfMoney":"10000000","mark":0},{"bizDate":"2018/04/29","selfMoney":"10000000","mark":0},{"bizDate":"2018/04/28","selfMoney":"10000000","mark":0}]');
+       var gtGMoneyMainLogGxt=jQuery.parseJSON('[{"bizDate":"2018/10/04","selfMoney":"20000","mark":0},{"bizDate":"2018/10/03","selfMoney":"20000","mark":0},{"bizDate":"2018/10/02","selfMoney":"20000","mark":0},{"bizDate":"2018/10/01","selfMoney":"20000","mark":0},{"bizDate":"2018/09/30","selfMoney":"20000","mark":0},{"bizDate":"2018/09/29","selfMoney":"20000","mark":0},{"bizDate":"2018/09/28","selfMoney":"20000","mark":0},{"bizDate":"2018/09/27","selfMoney":"20000","mark":0},{"bizDate":"2018/09/26","selfMoney":"20000","mark":0},{"bizDate":"2018/09/25","selfMoney":"20000","mark":0},{"bizDate":"2018/09/22","selfMoney":"20000","mark":0},{"bizDate":"2018/09/21","selfMoney":"20000","mark":0},{"bizDate":"2018/09/20","selfMoney":"20000","mark":0},{"bizDate":"2018/09/19","selfMoney":"20000","mark":0},{"bizDate":"2018/09/18","selfMoney":"20000","mark":0},{"bizDate":"2018/09/17","selfMoney":"20000","mark":0},{"bizDate":"2018/09/16","selfMoney":"20000","mark":0},{"bizDate":"2018/09/15","selfMoney":"20000","mark":0},{"bizDate":"2018/09/14","selfMoney":"20000","mark":0},{"bizDate":"2018/09/13","selfMoney":"20000","mark":0},{"bizDate":"2018/09/12","selfMoney":"20000","mark":0},{"bizDate":"2018/09/11","selfMoney":"20000","mark":0},{"bizDate":"2018/09/10","selfMoney":"20000","mark":0},{"bizDate":"2018/09/09","selfMoney":"20000","mark":0},{"bizDate":"2018/09/08","selfMoney":"20000","mark":0},{"bizDate":"2018/09/07","selfMoney":"20000","mark":0},{"bizDate":"2018/09/06","selfMoney":"20000","mark":0},{"bizDate":"2018/09/05","selfMoney":"20000","mark":0},{"bizDate":"2018/07/13","selfMoney":"10000","mark":0},{"bizDate":"2018/07/12","selfMoney":"10000","mark":0},{"bizDate":"2018/07/11","selfMoney":"10000","mark":0},{"bizDate":"2018/07/10","selfMoney":"10000","mark":0},{"bizDate":"2018/07/09","selfMoney":"10000","mark":0},{"bizDate":"2018/07/08","selfMoney":"10000","mark":0},{"bizDate":"2018/07/07","selfMoney":"20000","mark":0},{"bizDate":"2018/07/06","selfMoney":"20000","mark":0},{"bizDate":"2018/07/05","selfMoney":"20000","mark":0},{"bizDate":"2018/07/04","selfMoney":"20000","mark":0},{"bizDate":"2018/07/03","selfMoney":"20000","mark":0},{"bizDate":"2018/07/02","selfMoney":"20000","mark":0},{"bizDate":"2018/07/01","selfMoney":"20000","mark":0},{"bizDate":"2018/06/30","selfMoney":"20000","mark":0},{"bizDate":"2018/06/29","selfMoney":"20000","mark":0},{"bizDate":"2018/06/28","selfMoney":"20000","mark":0},{"bizDate":"2018/06/27","selfMoney":"20000","mark":0},{"bizDate":"2018/06/26","selfMoney":"20000","mark":0},{"bizDate":"2018/06/04","selfMoney":"720389820","mark":0},{"bizDate":"2018/06/03","selfMoney":"720389820","mark":0},{"bizDate":"2018/05/17","selfMoney":"25221200","mark":0},{"bizDate":"2018/05/16","selfMoney":"25221200","mark":0},{"bizDate":"2018/05/15","selfMoney":"25221200","mark":0},{"bizDate":"2018/05/14","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/13","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/12","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/11","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/10","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/09","selfMoney":"25132312","mark":0},{"bizDate":"2018/05/08","selfMoney":"25012312","mark":0},{"bizDate":"2018/05/07","selfMoney":"25012312","mark":0},{"bizDate":"2018/05/06","selfMoney":"25012312","mark":0},{"bizDate":"2018/05/05","selfMoney":"25012312","mark":0},{"bizDate":"2018/05/04","selfMoney":"25032312","mark":0},{"bizDate":"2018/05/03","selfMoney":"25032312","mark":0},{"bizDate":"2018/05/02","selfMoney":"25042312","mark":0},{"bizDate":"2018/05/01","selfMoney":"25042312","mark":0},{"bizDate":"2018/04/30","selfMoney":"25042312","mark":0},{"bizDate":"2018/04/29","selfMoney":"25042312","mark":0},{"bizDate":"2018/04/28","selfMoney":"10042312","mark":0},{"bizDate":"2018/04/27","selfMoney":"30000","mark":0},{"bizDate":"2018/04/26","selfMoney":"30000","mark":0},{"bizDate":"2018/04/25","selfMoney":"30000","mark":0},{"bizDate":"2018/04/24","selfMoney":"30000","mark":0},{"bizDate":"2018/04/23","selfMoney":"30000","mark":0},{"bizDate":"2018/04/22","selfMoney":"30000","mark":0},{"bizDate":"2018/04/21","selfMoney":"30000","mark":0},{"bizDate":"2018/04/20","selfMoney":"30000","mark":0},{"bizDate":"2018/04/19","selfMoney":"30000","mark":0},{"bizDate":"2018/04/18","selfMoney":"30000","mark":0},{"bizDate":"2018/04/17","selfMoney":"30000","mark":0},{"bizDate":"2018/04/16","selfMoney":"30000","mark":0},{"bizDate":"2018/04/15","selfMoney":"30000","mark":0},{"bizDate":"2018/04/14","selfMoney":"30000","mark":0},{"bizDate":"2018/04/13","selfMoney":"30000","mark":0},{"bizDate":"2018/04/12","selfMoney":"30000","mark":0},{"bizDate":"2018/04/11","selfMoney":"30000","mark":0}]');
+       var gtGMoneyMainLogRxt=jQuery.parseJSON('[{"bizDate":"2018/11/06","selfMoney":"10000","mark":0},{"bizDate":"2018/11/05","selfMoney":"10000","mark":0},{"bizDate":"2018/11/04","selfMoney":"10000","mark":0},{"bizDate":"2018/11/03","selfMoney":"10000","mark":0},{"bizDate":"2018/11/02","selfMoney":"10000","mark":0},{"bizDate":"2018/11/01","selfMoney":"10000","mark":0},{"bizDate":"2018/10/31","selfMoney":"10000","mark":0},{"bizDate":"2018/10/30","selfMoney":"10000","mark":0},{"bizDate":"2018/10/29","selfMoney":"10000","mark":0},{"bizDate":"2018/10/28","selfMoney":"10000","mark":0},{"bizDate":"2018/10/27","selfMoney":"10000","mark":0},{"bizDate":"2018/10/26","selfMoney":"10000","mark":0},{"bizDate":"2018/10/25","selfMoney":"10000","mark":0},{"bizDate":"2018/10/24","selfMoney":"10000","mark":0},{"bizDate":"2018/10/23","selfMoney":"10000","mark":0},{"bizDate":"2018/10/22","selfMoney":"10000","mark":0},{"bizDate":"2018/10/21","selfMoney":"10000","mark":0},{"bizDate":"2018/10/20","selfMoney":"10000","mark":0},{"bizDate":"2018/10/19","selfMoney":"10000","mark":0},{"bizDate":"2018/10/18","selfMoney":"10000","mark":0},{"bizDate":"2018/10/17","selfMoney":"10000","mark":0},{"bizDate":"2018/10/16","selfMoney":"10000","mark":0},{"bizDate":"2018/10/15","selfMoney":"10000","mark":0},{"bizDate":"2018/10/14","selfMoney":"10000","mark":0},{"bizDate":"2018/10/13","selfMoney":"10000","mark":0},{"bizDate":"2018/10/12","selfMoney":"10000","mark":0},{"bizDate":"2018/10/11","selfMoney":"10000","mark":0},{"bizDate":"2018/10/10","selfMoney":"10000","mark":0},{"bizDate":"2018/10/09","selfMoney":"10000","mark":0},{"bizDate":"2018/10/08","selfMoney":"10000","mark":0},{"bizDate":"2018/10/07","selfMoney":"10000","mark":0},{"bizDate":"2018/10/06","selfMoney":"10000","mark":0},{"bizDate":"2018/10/05","selfMoney":"10000","mark":0},{"bizDate":"2018/10/04","selfMoney":"10000","mark":0},{"bizDate":"2018/10/03","selfMoney":"10000","mark":0},{"bizDate":"2018/10/02","selfMoney":"10000","mark":0},{"bizDate":"2018/10/01","selfMoney":"10000","mark":0},{"bizDate":"2018/09/30","selfMoney":"10000","mark":0},{"bizDate":"2018/09/29","selfMoney":"10000","mark":0},{"bizDate":"2018/09/28","selfMoney":"10000","mark":0},{"bizDate":"2018/09/27","selfMoney":"10000","mark":0},{"bizDate":"2018/09/26","selfMoney":"10000","mark":0},{"bizDate":"2018/09/25","selfMoney":"10000","mark":0},{"bizDate":"2018/09/22","selfMoney":"10000","mark":0},{"bizDate":"2018/09/21","selfMoney":"10000","mark":0},{"bizDate":"2018/09/20","selfMoney":"10000","mark":0},{"bizDate":"2018/09/19","selfMoney":"10000","mark":0},{"bizDate":"2018/09/18","selfMoney":"10000","mark":0},{"bizDate":"2018/09/17","selfMoney":"10000","mark":0},{"bizDate":"2018/09/16","selfMoney":"10000","mark":0},{"bizDate":"2018/09/15","selfMoney":"10000","mark":0},{"bizDate":"2018/09/14","selfMoney":"10000","mark":0},{"bizDate":"2018/09/13","selfMoney":"10000","mark":0},{"bizDate":"2018/09/12","selfMoney":"10000","mark":0},{"bizDate":"2018/09/11","selfMoney":"10000","mark":0},{"bizDate":"2018/09/10","selfMoney":"10000","mark":0},{"bizDate":"2018/09/09","selfMoney":"10000","mark":0},{"bizDate":"2018/09/08","selfMoney":"10000","mark":0},{"bizDate":"2018/09/07","selfMoney":"10000","mark":0},{"bizDate":"2018/09/06","selfMoney":"10000","mark":0},{"bizDate":"2018/09/05","selfMoney":"10000","mark":0},{"bizDate":"2018/08/22","selfMoney":"1900000","mark":0},{"bizDate":"2018/08/21","selfMoney":"101900000","mark":0},{"bizDate":"2018/08/20","selfMoney":"101900000","mark":0},{"bizDate":"2018/08/19","selfMoney":"102210000","mark":0},{"bizDate":"2018/08/18","selfMoney":"102210000","mark":0},{"bizDate":"2018/08/17","selfMoney":"102210000","mark":0},{"bizDate":"2018/08/16","selfMoney":"102210000","mark":0},{"bizDate":"2018/08/15","selfMoney":"102221111","mark":0},{"bizDate":"2018/08/14","selfMoney":"102221111","mark":0},{"bizDate":"2018/08/13","selfMoney":"102221111","mark":0},{"bizDate":"2018/08/12","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/11","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/10","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/09","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/08","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/07","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/06","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/05","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/04","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/03","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/02","selfMoney":"102354444","mark":0},{"bizDate":"2018/08/01","selfMoney":"102354444","mark":0},{"bizDate":"2018/07/31","selfMoney":"102354444","mark":0},{"bizDate":"2018/07/30","selfMoney":"102354444","mark":0},{"bizDate":"2018/07/29","selfMoney":"102354444","mark":0},{"bizDate":"2018/07/28","selfMoney":"102354444","mark":0},{"bizDate":"2018/07/27","selfMoney":"117354444","mark":0},{"bizDate":"2018/07/26","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/25","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/24","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/23","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/22","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/21","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/20","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/19","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/18","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/17","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/16","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/15","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/14","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/13","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/12","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/11","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/10","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/09","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/08","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/07","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/06","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/05","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/04","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/03","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/02","selfMoney":"119354444","mark":0},{"bizDate":"2018/07/01","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/30","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/29","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/28","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/27","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/26","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/04","selfMoney":"119354444","mark":0},{"bizDate":"2018/06/03","selfMoney":"119354444","mark":0},{"bizDate":"2018/05/17","selfMoney":"17133333","mark":0},{"bizDate":"2018/05/16","selfMoney":"17133333","mark":0},{"bizDate":"2018/05/15","selfMoney":"17133333","mark":0},{"bizDate":"2018/05/14","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/13","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/12","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/11","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/10","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/09","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/08","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/07","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/06","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/05","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/04","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/03","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/02","selfMoney":"17000000","mark":0},{"bizDate":"2018/05/01","selfMoney":"17000000","mark":0},{"bizDate":"2018/04/30","selfMoney":"17000000","mark":0},{"bizDate":"2018/04/29","selfMoney":"17000000","mark":0},{"bizDate":"2018/04/28","selfMoney":"2000000","mark":0}]'); 
+       var gtGMoneyMainLogAll=jQuery.parseJSON('[{"createDate":"2018/11/06","selfMoney":"10000","mark":0},{"createDate":"2018/11/05","selfMoney":"10000","mark":0},{"createDate":"2018/11/04","selfMoney":"10000","mark":0},{"createDate":"2018/11/03","selfMoney":"10000","mark":0},{"createDate":"2018/11/02","selfMoney":"10000","mark":0},{"createDate":"2018/11/01","selfMoney":"10000","mark":0},{"createDate":"2018/10/31","selfMoney":"10000","mark":0},{"createDate":"2018/10/30","selfMoney":"10000","mark":0},{"createDate":"2018/10/29","selfMoney":"10000","mark":0},{"createDate":"2018/10/28","selfMoney":"10000","mark":0},{"createDate":"2018/10/27","selfMoney":"10000","mark":0},{"createDate":"2018/10/26","selfMoney":"10000","mark":0},{"createDate":"2018/10/25","selfMoney":"10000","mark":0},{"createDate":"2018/10/24","selfMoney":"10000","mark":0},{"createDate":"2018/10/23","selfMoney":"10000","mark":0},{"createDate":"2018/10/22","selfMoney":"10000","mark":0},{"createDate":"2018/10/21","selfMoney":"10000","mark":0},{"createDate":"2018/10/20","selfMoney":"10000","mark":0},{"createDate":"2018/10/19","selfMoney":"10000","mark":0},{"createDate":"2018/10/18","selfMoney":"10000","mark":0},{"createDate":"2018/10/17","selfMoney":"10000","mark":0},{"createDate":"2018/10/16","selfMoney":"10000","mark":0},{"createDate":"2018/10/15","selfMoney":"10000","mark":0},{"createDate":"2018/10/14","selfMoney":"10000","mark":0},{"createDate":"2018/10/13","selfMoney":"10000","mark":0},{"createDate":"2018/10/12","selfMoney":"10000","mark":0},{"createDate":"2018/10/11","selfMoney":"10000","mark":0},{"createDate":"2018/10/10","selfMoney":"10000","mark":0},{"createDate":"2018/10/09","selfMoney":"10000","mark":0},{"createDate":"2018/10/08","selfMoney":"10000","mark":0},{"createDate":"2018/10/07","selfMoney":"10000","mark":0},{"createDate":"2018/10/06","selfMoney":"10000","mark":0},{"createDate":"2018/10/05","selfMoney":"20156.16","mark":0},{"createDate":"2018/10/04","selfMoney":"30000","mark":0},{"createDate":"2018/10/03","selfMoney":"30000","mark":0},{"createDate":"2018/10/02","selfMoney":"30000","mark":0},{"createDate":"2018/10/01","selfMoney":"30000","mark":0},{"createDate":"2018/09/30","selfMoney":"30000","mark":0},{"createDate":"2018/09/29","selfMoney":"30000","mark":0},{"createDate":"2018/09/28","selfMoney":"30000","mark":0},{"createDate":"2018/09/27","selfMoney":"30000","mark":0},{"createDate":"2018/09/26","selfMoney":"30000","mark":0},{"createDate":"2018/09/25","selfMoney":"30000","mark":0},{"createDate":"2018/09/22","selfMoney":"30000","mark":0},{"createDate":"2018/09/21","selfMoney":"30000","mark":0},{"createDate":"2018/09/20","selfMoney":"30000","mark":0},{"createDate":"2018/09/19","selfMoney":"30000","mark":0},{"createDate":"2018/09/18","selfMoney":"30000","mark":0},{"createDate":"2018/09/17","selfMoney":"30000","mark":0},{"createDate":"2018/09/16","selfMoney":"30000","mark":0},{"createDate":"2018/09/15","selfMoney":"30000","mark":0},{"createDate":"2018/09/14","selfMoney":"30000","mark":0},{"createDate":"2018/09/13","selfMoney":"30000","mark":0},{"createDate":"2018/09/12","selfMoney":"122000","mark":0},{"createDate":"2018/09/11","selfMoney":"30000","mark":0},{"createDate":"2018/09/10","selfMoney":"30000","mark":0},{"createDate":"2018/09/09","selfMoney":"30000","mark":0},{"createDate":"2018/09/08","selfMoney":"30000","mark":0},{"createDate":"2018/09/07","selfMoney":"30000","mark":0},{"createDate":"2018/09/06","selfMoney":"30000","mark":0},{"createDate":"2018/09/05","selfMoney":"30000","mark":0},{"createDate":"2018/09/03","selfMoney":"10002","mark":0},{"createDate":"2018/09/01","selfMoney":"10020","mark":0},{"createDate":"2018/08/30","selfMoney":"100004.04","mark":0},{"createDate":"2018/08/23","selfMoney":"1963683.88","mark":0},{"createDate":"2018/08/22","selfMoney":"103083131.78","mark":0},{"createDate":"2018/08/21","selfMoney":"101900000","mark":0},{"createDate":"2018/08/20","selfMoney":"102205531.32","mark":0},{"createDate":"2018/08/19","selfMoney":"102210000","mark":0},{"createDate":"2018/08/18","selfMoney":"102210000","mark":0},{"createDate":"2018/08/17","selfMoney":"102210000","mark":0},{"createDate":"2018/08/16","selfMoney":"102221310.68","mark":0},{"createDate":"2018/08/15","selfMoney":"102221111","mark":0},{"createDate":"2018/08/14","selfMoney":"102221111","mark":0},{"createDate":"2018/08/13","selfMoney":"102334449.64","mark":0},{"createDate":"2018/08/12","selfMoney":"102354444","mark":0},{"createDate":"2018/08/11","selfMoney":"102354444","mark":0},{"createDate":"2018/08/10","selfMoney":"102354444","mark":0},{"createDate":"2018/08/09","selfMoney":"102354444","mark":0},{"createDate":"2018/08/08","selfMoney":"102354444","mark":0},{"createDate":"2018/08/07","selfMoney":"102354444","mark":0},{"createDate":"2018/08/06","selfMoney":"102354444","mark":0},{"createDate":"2018/08/05","selfMoney":"102354444","mark":0},{"createDate":"2018/08/04","selfMoney":"102354444","mark":0},{"createDate":"2018/08/03","selfMoney":"102354444","mark":0},{"createDate":"2018/08/02","selfMoney":"102354444","mark":0},{"createDate":"2018/08/01","selfMoney":"102354444","mark":0},{"createDate":"2018/07/31","selfMoney":"102354444","mark":0},{"createDate":"2018/07/30","selfMoney":"102354444","mark":0},{"createDate":"2018/07/29","selfMoney":"102354444","mark":0},{"createDate":"2018/07/28","selfMoney":"102354444","mark":0},{"createDate":"2018/07/27","selfMoney":"118386391.36","mark":0},{"createDate":"2018/07/26","selfMoney":"119354444","mark":0},{"createDate":"2018/07/25","selfMoney":"119354444","mark":0},{"createDate":"2018/07/24","selfMoney":"119354444","mark":0},{"createDate":"2018/07/23","selfMoney":"119354444","mark":0},{"createDate":"2018/07/22","selfMoney":"119354444","mark":0},{"createDate":"2018/07/21","selfMoney":"119354444","mark":0},{"createDate":"2018/07/20","selfMoney":"119354444","mark":0},{"createDate":"2018/07/19","selfMoney":"119354444","mark":0},{"createDate":"2018/07/18","selfMoney":"119354444","mark":0},{"createDate":"2018/07/17","selfMoney":"119354444","mark":0},{"createDate":"2018/07/16","selfMoney":"119354444","mark":0},{"createDate":"2018/07/15","selfMoney":"119354444","mark":0},{"createDate":"2018/07/14","selfMoney":"119364490.28","mark":0},{"createDate":"2018/07/13","selfMoney":"119364444","mark":0},{"createDate":"2018/07/12","selfMoney":"119364444","mark":0},{"createDate":"2018/07/11","selfMoney":"119364444","mark":0},{"createDate":"2018/07/10","selfMoney":"119364444","mark":0},{"createDate":"2018/07/09","selfMoney":"119364444","mark":0},{"createDate":"2018/07/08","selfMoney":"119374490.09","mark":0},{"createDate":"2018/07/07","selfMoney":"119374444","mark":0},{"createDate":"2018/07/06","selfMoney":"119374444","mark":0},{"createDate":"2018/07/05","selfMoney":"119374444","mark":0},{"createDate":"2018/07/04","selfMoney":"119374444","mark":0},{"createDate":"2018/07/03","selfMoney":"119374444","mark":0},{"createDate":"2018/07/02","selfMoney":"119375444","mark":0},{"createDate":"2018/07/01","selfMoney":"119375444","mark":0},{"createDate":"2018/06/30","selfMoney":"119375444","mark":0},{"createDate":"2018/06/29","selfMoney":"119375444","mark":0},{"createDate":"2018/06/28","selfMoney":"119375444","mark":0},{"createDate":"2018/06/27","selfMoney":"119375444","mark":0},{"createDate":"2018/06/26","selfMoney":"119474332.04","mark":0},{"createDate":"2018/06/04","selfMoney":"839760263.78","mark":0},{"createDate":"2018/06/03","selfMoney":"919743164","mark":0},{"createDate":"2018/05/17","selfMoney":"11212132572","mark":0},{"createDate":"2018/05/16","selfMoney":"11209921917","mark":0},{"createDate":"2018/05/15","selfMoney":"11207757661","mark":0},{"createDate":"2018/05/14","selfMoney":"11205309951","mark":0},{"createDate":"2018/05/13","selfMoney":"11203146434","mark":0},{"createDate":"2018/05/12","selfMoney":"11200916676","mark":0},{"createDate":"2018/05/11","selfMoney":"11198686667","mark":0},{"createDate":"2018/05/10","selfMoney":"4530999332","mark":0},{"createDate":"2018/05/09","selfMoney":"4530150805","mark":0},{"createDate":"2018/05/08","selfMoney":"4529618806","mark":0},{"createDate":"2018/05/07","selfMoney":"4528857821","mark":0},{"createDate":"2018/05/06","selfMoney":"4537794399","mark":0},{"createDate":"2018/05/05","selfMoney":"4536896223","mark":0},{"createDate":"2018/05/04","selfMoney":"4535986784","mark":0},{"createDate":"2018/05/03","selfMoney":"4435713347","mark":0},{"createDate":"2018/05/02","selfMoney":"4434843442","mark":0},{"createDate":"2018/05/01","selfMoney":"4433968137","mark":0},{"createDate":"2018/04/30","selfMoney":"4433092326","mark":0},{"createDate":"2018/04/29","selfMoney":"4432216701","mark":0},{"createDate":"2018/04/28","selfMoney":"4401341237","mark":0},{"createDate":"2018/04/27","selfMoney":"3297559448","mark":0},{"createDate":"2018/04/26","selfMoney":"2408123006","mark":0},{"createDate":"2018/04/25","selfMoney":"2407932537","mark":0},{"createDate":"2018/04/24","selfMoney":"2407764598","mark":0},{"createDate":"2018/04/23","selfMoney":"2418341296","mark":0},{"createDate":"2018/04/22","selfMoney":"2417894132","mark":0},{"createDate":"2018/04/21","selfMoney":"2417447051","mark":0},{"createDate":"2018/04/20","selfMoney":"2416999861","mark":0},{"createDate":"2018/04/19","selfMoney":"2416568582","mark":0},{"createDate":"2018/04/18","selfMoney":"2416132258","mark":0},{"createDate":"2018/04/17","selfMoney":"2415779909","mark":0},{"createDate":"2018/04/16","selfMoney":"2415338244","mark":0},{"createDate":"2018/04/15","selfMoney":"2414893873","mark":0},{"createDate":"2018/04/14","selfMoney":"2414445791","mark":0},{"createDate":"2018/04/13","selfMoney":"2413997796","mark":0},{"createDate":"2018/04/12","selfMoney":"3634506660","mark":0},{"createDate":"2018/04/11","selfMoney":"3633804552","mark":0}]'); 
+       if(!gtGMoneyMainLogYe){
+           gtGMoneyMainLogYe = '';
+           }
+       for(var i=0; i<gtGMoneyMainLogYe.length;i++){
+            var priceYe=gtGMoneyMainLogYe[i];
+            var createDateYe=priceYe["createDate"] ;
+            var selfMoneyYe=priceYe["selfMoney"] ;
+            gtgArr1[i]=[new Date(createDateYe).getTime(),Number(selfMoneyYe)]
+       }
+       if(!gtGMoneyMainLogXszx){
+           gtGMoneyMainLogXszx = '';
+           }
+       for(var i=0; i<gtGMoneyMainLogXszx.length;i++){
+            var priceXszx=gtGMoneyMainLogXszx[i];
+            var createDateXszx=priceXszx["bizDate"] ;
+            var selfMoneyXszx=priceXszx["selfMoney"] ;
+            gtgArr2[i]=[new Date(createDateXszx).getTime(),Number(selfMoneyXszx)]
+       }
+       if(!gtGMoneyMainLogGxt){
+           gtGMoneyMainLogGxt = '';
+           }
+       for(var i=0; i<gtGMoneyMainLogGxt.length;i++){
+            var priceGxt=gtGMoneyMainLogGxt[i];
+            var createDateGxt=priceGxt["bizDate"] ;
+            var selfMoneyGxt=priceGxt["selfMoney"] ;
+            gtgArr3[i]=[new Date(createDateGxt).getTime(),Number(selfMoneyGxt)]
+       }
+       if(!gtGMoneyMainLogRxt){
+           gtGMoneyMainLogRxt = '';
+           }
+       for(var i=0; i<gtGMoneyMainLogRxt.length;i++){
+            var priceRxt=gtGMoneyMainLogRxt[i];
+            var createDateRxt=priceRxt["bizDate"] ;
+            var selfMoneyRxt=priceRxt["selfMoney"] ;
+            gtgArr4[i]=[new Date(createDateRxt).getTime(),Number(selfMoneyRxt)]
+       }
+       if(!gtGMoneyMainLogAll){
+           gtGMoneyMainLogAll = '';
+           }
+       for(var i=0; i<gtGMoneyMainLogAll.length;i++){
+            var priceAll=gtGMoneyMainLogAll[i];
+            var createDateAll=priceAll["createDate"] ;
+            var selfMoneyAll=priceAll["selfMoney"] ;
+            gtgArr5[i]=[new Date(createDateAll).getTime(),Number(selfMoneyAll)]
+       } 
+           //定义数据
+           var g2g={
+               t:'2018',
+               data:{
+                   arr1:gtgArr1,
+                   arr2:gtgArr2,
+                   arr3:gtgArr3,
+                   arr4:gtgArr4,
+                   arr5:gtgArr5
+               }
+           }
+   
+           // 图表配置
+           var options = {
+                global: {
+                      useUTC: false //关闭UTC
+                  },
+               title: {
+                   text: g2g.t+'年G2G统计表'
+               },
+               colors: ['#1abc9c', '#ffa501', '#07aefc', '#bc96ff', '#f46361'],
+               xAxis: {
+                           type: "datetime",
+                           labels: {
+                               style: {
+                                   color: '#000',
+                                   fontSize:'12px'
+                               },
+                               formatter: function () {
+                                   return Highcharts.dateFormat('%m/%d', this.value);
+                               }			        	  
+                           },
+                           tickInterval: 30 * 24 * 3600 * 1000
+                       },
+               yAxis: {
+                   title: {
+                       text: null,
+                       gridLineWidth:1
+                   },
+                   labels: {  
+                       formatter: function () {
+                                   return this.value/10000+"万元"
+                               }
+                               
+                           }
+               },
+               legend: {
+                   layout: 'vertical',
+                   align: 'right',
+                   verticalAlign: 'middle'
+               },
+               plotOptions: {
+                   series: {
+                       label: {
+                           connectorAllowed: false
+                       }
+                   }
+               },
+               series: [{
+                   name: '乐财宝',
+                   data: g2g.data.arr1
+               }, {
+                   name: '新手体验',
+                   data: g2g.data.arr2
+               }, {
+                   name: '共享通',
+                   data: g2g.data.arr3
+               }, {
+                   name: '融享通',
+                   data: g2g.data.arr4
+               }, {
+                   name: '投资总额',
+                   data: g2g.data.arr5
+               }],
+               tooltip: {
+                           formatter: function() {
+                               return '<b>' +  Highcharts.dateFormat('%Y/%m/%d', this.key) + '</b><br> '+this.series.name+': ' + Highcharts.numberFormat(this.y, 2, ".", ",")+"元";
+                           }
+                       }		
+           }
+           var chart = Highcharts.chart('container', options);
+       </script>
+    <script type="text/javascript">
+    
+        var gtArr1 = [];
+        var gtArr2 = [];
+        var gtArr3 = [];
+        var gtArr4 = [];
+        var gtArr5 = [];
+        //定义数据
+        var time = ["2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09"]
+
+
+        var dom = document.getElementById("cz");
+        var czChart = echarts.init(dom);
+        var app = {};
+        option1 = null;
+        option1 = {
+            color: ['#1abc9c', '#ffa501', '#07aefc', '#bc96ff', '#f46361'],
+            title: {
+                text: '2016年G2G统计表',
+                // x:'center',
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                // top: '2%',
+                left: '3%',
+                right: '4%',
+                bottom: '8%',
+                containLabel: true
+            },
+            toolbox: {
+                // top:'-5%',
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: time,
+            },
+            legend: {
+                data: ['乐财宝', '新手体验', '共享通', '融享通', '投资总额'],
+                x: 'center',
+                y: 'bottom',
+                itemGap: 40,
+            },
+            yAxis: {
+                type: 'value',
+                xAxis: 0
+            },
+            series: [
+                {
+                    name: '乐财宝',
+                    type: 'line',
+                    stack: '总量',
+                    data: gtArr1,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#1abc9c'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '新手体验',
+                    type: 'line',
+                    stack: '总量',
+                    data: gtArr2,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#ffa501'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '共享通',
+                    type: 'line',
+                    stack: '总量',
+                    data: gtArr3,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#07aefc'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '融享通',
+                    type: 'line',
+                    stack: '总量',
+                    data: gtArr4,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#bc96ff'
+                            }
+                        }
+                    },
+                },
+                {
+                    name: '投资总额',
+                    type: 'line',
+                    stack: '总量',
+                    data: gtArr5,
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: '#f46361'
+                            }
+                        }
+                    },
+                },
+            ]
+        };
+        ;
+        if (option1 && typeof option1 === "object") {
+            czChart.setOption(option1, true);
+        }
+
+        window.onresize = function () {
+            czChart.resize();
+        }
+
+    </script>
+
+</body>
+
+</html>
