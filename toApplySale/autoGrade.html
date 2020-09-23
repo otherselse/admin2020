@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>单位评审-评审管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+</head>
+
+<body class="showTip">
+
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                评审管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">评审</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./supplierApply.html" class="ui-tab4-list ml20 mr10">承运商申请表</a>
+                    <a href="./supplierlocale.html" class="ui-tab4-list ">现场资料审核</a>
+                    <a href="./supplierlocale.html" class="ui-tab4-list">现场资料审核</a>
+                    <a href="./autoGrade.html" class="ui-tab4-list on">自动打分</a>
+                    <a href="./review.html" class="ui-tab4-list">供应商评审</a>
+
+                </div>
+            </div>
+            <div class="p20">
+                <div class="blue f20">上海钢铁买家公司</div>
+                <div class="g28 b mt30">1、企业基本概况</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%">上市公司：</td>
+                            <td width="35%">
+                                <span class="radio" val="是否上市">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="5"></i>是
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>否
+                                    </label>
+                                </span>
+                            </td>
+                            <td width="15%">人员数量：</td>
+                            <td width="35%">
+                                <span class="radio" val="人员数量">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="1"></i>50人一下
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>50-100人
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="3"></i>100人及以上
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>法人高管稳定性：</td>
+                            <td>
+                                <span class="radio" val="法人高管稳定性">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="1"></i>3年内有变更
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>3年内无变更
+                                    </label>
+                                </span>
+                            </td>
+                            <td>进出口收发人：</td>
+                            <td>
+                                <span class="radio" val="进出口收发人">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>成立年限：</td>
+                            <td>
+                                <span class="radio" val="成立年限">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="-10"></i>2年以内
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="5"></i>2-4年
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="10"></i>4-6年
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="15"></i>6-10年
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="20"></i>10年以上
+                                    </label>
+                                </span>
+                            </td>
+                            <td>实缴资本：</td>
+                            <td>
+                                RMB <input type="text" class="ui-input" placeholder="请填写">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g28 b mt30">2、现场状况</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%">现场评审：</td>
+                            <td width="35%">
+                                <span class="radio" val="现场评审">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="-10"></i>未评审
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>已评审
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>已免除
+                                    </label>
+                                </span>
+                            </td>
+                            <td width="15%">货物摆放整齐度：</td>
+                            <td width="35%">
+                                <span class="radio" val="货物摆放整齐度">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>杂乱
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>一般
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="3"></i>整洁
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>办公环境：</td>
+                            <td>
+                                <span class="radio" val="办公环境">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>杂乱
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>一般
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="3"></i>整洁
+                                    </label>
+                                </span>
+
+                            </td>
+                            <td>出镜人数：</td>
+                            <td>
+                                <span class="radio" val="出镜人数">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="1"></i>0-10人
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>10-20人
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="3"></i>20人以上
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有无门禁：</td>
+                            <td>
+                                <span class="radio" val="有无门禁">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                            <td>公司抬头：</td>
+                            <td>
+                                <span class="radio" val="公司抬头">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="4"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g28 b mt30">3、信用风险信息</div>
+                <table class="ui-table pl20 f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%" class="bgfa">税务信用等级：</td>
+                            <td width="85%" colspan="8" class="g28">
+                                <span class="radio" val="税务信用等级">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="2"></i>A
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="1"></i>B
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%" rowspan="4" class="bgfa">风险信息：</td>
+                            <td width="10%" class="bgfa">被执行人信息：</td>
+                            <td width="10%" class="g28">
+                                <span class="radio" val="被执行人信息">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"
+                                                veto="y"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"
+                                                veto="n"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                            <td width="12%" class="bgfa">司法拍卖(条)：</td>
+                            <td width="10%" class="g28"><input type="text" class="ui-input pct80" t="4"
+                                    autocomplete="off" placeholder="请填写"></td>
+                            <td width="12%" class="bgfa">行政处罚(条)：</td>
+                            <td width="10%" class="g28"><input type="text" class="ui-input pct80" t="1"
+                                    autocomplete="off" placeholder="请填写"></td>
+                            <td width="12%" class="bgfa">股权出质(条)：</td>
+                            <td width="10%" class="g28"><input type="text" class="ui-input pct80" t="2"
+                                    autocomplete="off" placeholder="请填写"></td>
+                        </tr>
+                        <tr>
+                            <td class="bgfa">动产抵押(条)：</td>
+                            <td class="g28"><input type="text" class="ui-input pct80" t="7" autocomplete="off"
+                                    placeholder="请填写"></td>
+                            <td class="bgfa">不动产/土地抵押(条)：</td>
+                            <td class="g28"><input type="text" class="ui-input pct80" t="8" autocomplete="off"
+                                    placeholder="请填写"></td>
+                            <td class="bgfa">有效抵押金额(万)：</td>
+                            <td class="g28" colspan="3"><input type="text" class="ui-input pct80" t="9"
+                                    autocomplete="off" placeholder="请填写"></td>
+                        </tr>
+                        <tr>
+                            <td class="bgfa">被告案件信息(条)：</td>
+                            <td class="g28"><input type="text" class="ui-input pct80" t="5" autocomplete="off"
+                                    placeholder="请填写"></td>
+                            <td class="bgfa">被告未结涉案金额(万)：</td>
+                            <td class="g28" colspan="5">RMB<input type="text" class="ui-input" t="6" autocomplete="off"
+                                    placeholder="请填写"></td>
+                        </tr>
+                        <tr>
+                            <td class="bgfa">风险详情描述：</td>
+                            <td class="g28" colspan="7"><textarea placeholder="请填写" class="ui-textarea pct90"
+                                    id="riskDesc"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g28 b mt30">4、加分项</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%">企业性质：</td>
+                            <td width="35%">
+                                <span class="radio" val="企业性质">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="10"></i>国企
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>民营
+                                    </label>
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="10"></i>钢厂
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>其他
+                                    </label>
+                                </span>
+                            </td>
+                            <td width="15%">自有仓库/厂房/办公室：</td>
+                            <td width="35%">
+                                <span class="radio" val="自有仓库/厂房/办公室">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="10"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>自有生产实体：</td>
+                            <td>
+                                <span class="radio" val="自有生产实体">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="10"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                            <td>是否被担保：</td>
+                            <td>
+                                <span class="radio" val="是否被担保">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="15"></i>有
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>无
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g28 b mt30">5、历史合作情况</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%">采购合同版本：</td>
+                            <td width="35%">
+                                <span class="radio" val="采购合同版本">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>合格
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="-20"></i>不合格
+                                    </label>
+                                </span>
+                            </td>
+                            <td width="15%">存在诉讼订单：</td>
+                            <td width="35%">
+                                <span class="radio" val="存在诉讼订单">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="-20"></i>是
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio" val="0"></i>否
+                                    </label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>延迟交货3天以上订单(笔)：</td>
+                            <td>
+                                <input type="text" class="ui-input" t="13" placeholder="请填写">
+                            </td>
+                            <td>延迟交货7天以上订单</td>
+                            <td>
+                                <input type="text" class="ui-input" t="12" placeholder="请填写">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>存在质量异议订单(笔)：</td>
+                            <td>
+                                <input type="text" class="ui-input" t="14" placeholder="请填写">
+                            </td>
+                            <td>延迟交货7天以上订单(笔)：</td>
+                            <td>
+                                <input type="text" class="ui-input" t="11" placeholder="请填写">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tc mt20">
+                    <button class="ui-button mr20" data-type="normal" type="button" onclick="preCalScore()">自动计算得分</button>
+                </div>
+                <div class="ui-tip noIcon mt20 pct100" data-type="blue">
+                  <span class="b f14 g28 mr20">最终得分</span> 
+                  根据对该单位各项信息的综合评估，评审打分为（<span id="totalScore"></span>）分，供应商等级为（<span id="grade"></span> ）级，充值G2G比例为（<span id="gtgPercent"></span>）%。 
+                </div>
+                <div class="mt20 tc"><button class="ui-button" type="button">提交</button></div>
+                <div class="mt30 b g28">打分记录</div>
+                <div class="mt30 ml50 nodeLine f12">
+                    <div class="ui-audit f12 pl10"><span class="mr2 g28">1节点</span><span>打分结果</span></div>
+                    <div class="ui-auditBox mt10 ml10 ">
+                        评审打分为（84.00）分，供应商等级为（2）级， 充值G2G比例为（0）%。
+                    </div>
+                    <div class="ui-audit f12 pl10"><span class="mr2 g28">2节点</span><span>打分结果</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        评审打分为（84.00）分，供应商等级为（2）级， 充值G2G比例为（0）%。
+                    </div>
+                    <div class="ui-audit f12 pl10"><span class="mr2 g28">3节点</span><span>打分结果</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        评审打分为（84.00）分，供应商等级为（2）级， 充值G2G比例为（0）%。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //提示
+            if ($(".showTip").length > 0) {
+                $(".showTip").find('[title]').qtip({
+                    position: {
+                        my: 'top left', //my:是指三角的位置
+                        at: 'bottom left' //是在提示在组件的相对位置
+                    },
+                    style: {
+                        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                    }
+                });
+            }
+        })
+        function prev() {
+            window.history.back(-1)
+        }
+
+    </script>
+</body>
+
+</html>
