@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <title>Document</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <style>
+        html,
+        body {
+            background: #fff;
+        }
+    </style>
+
+</head>
+
+<body class="isPc">
+    <div class="p20">
+        <div class="ui-tab5">
+            <a href="./orderAction_order.html" class="ui-tab5-list">订单信息</a>
+            <a href="./orderAction_price.html" class="ui-tab5-list">综合报价</a>
+            <a href="./orderAction_sale.html" class="ui-tab5-list">销售合同</a>
+            <a href="./orderAction_purContract.html" class="ui-tab5-list">采购合同</a>
+            <a href="./orderAction_shortContract.html" class="ui-tab5-list">短驳合同</a>
+            <a href="./orderAction_procContract.html" class="ui-tab5-list">加工合同</a>
+            <a href="./orderAction_tranContract.html" class="ui-tab5-list">运输合同</a>
+            <a href="./orderAction_finance.html" class="ui-tab5-list on">财务信息</a>
+            <a href="./orderAction_stockSale.html" class="ui-tab5-list">库存销售</a>
+        </div>
+        <table class="ui-table mt15 pct100 tc f12">
+            <thead>
+                <tr>
+                    <th width="5%">序号</th>
+                    <th width="9%">品名</th>
+                    <th width="9%">规格</th>
+                    <th width="9%">牌号</th>
+                    <th width="9%">钢厂</th>
+                    <th width="9%">重量</th>
+                    <th width="12%">库存来源订单</th>
+                    <th width="9%">采购单价</th>
+                    <th width="9%">采购金额</th>
+                    <th width="11%">库存来源合同号</th>
+                    <th width="9%">入库时间</th>
+                </tr>
+            </thead>
+            <tbody class="ui-thover">
+                <tr>
+                    <td>1</td>
+                    <td>STC(22)-20000475</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="bgfa">
+                    <td colspan="5" height="40">合计：</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".ui-tab5").on("click", ".ui-tab5-list", function () {
+                $(this).addClass("on").siblings(".ui-tab5-list").removeClass("on")
+            })
+        })
+    </script>
+</body>
+
+</html>
