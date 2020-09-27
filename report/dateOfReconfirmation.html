@@ -19,6 +19,10 @@
             background: #fff;
             min-width: auto;
         }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
     </style>
 
 </head>
@@ -49,30 +53,22 @@
                     class="goldIcon ui-tab3-dot"></i></a>
             <a href="dateOfReconfirmation.html" class="ui-tab3-list rel on"><span
                     class="ui-tab3-text">重新确认最后装运日期记录表</span><i class="goldIcon ui-tab3-dot"></i></a>
-        </div>monthlyFundReview
+        </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table width="100%" class="mt5">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                        <td class="tl">
-                            <div class="ml20 tc">
-                                <button class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </div>
-                        </td>
-                </table>
+                <div class="mb10 mt10 f0">
+                    <span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct25">
+                        <button class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button " data-type="clear">清空</button>
+                    </span>
+                </div>
+
                 <table class="ui-table tc f12 table-cw mt30" width="100%" data-type="edit">
                     <thead>
                         <tr>
@@ -95,24 +91,11 @@
                             <td>2019-06-24 </td>
                             <td>2019-06-27</td>
                             <td>
-                                <a href="javascript:void(0)" class="tipclick cliImg" qtip-dom="dom16" data-hasqtip="16"
+                                <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15"
                                     data-type="smallbbr">
                                     <span class="dib imgIcon"></span>&nbsp;
                                     <span class="lh16 f14 dib vt">3</span>
                                 </a>
-                                <div class="qtip-content" style="padding: 0px;" aria-atomic="true">
-                                    <div class="f12 pl5 dom16 dn" style="visibility: visible;">
-                                        <div class="selectDiv f12">
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                            <div class="mt5 tc"><a href="">信用证草本.jpg</a></div>
-                                        </div>
-                                    </div>
-                                </div>
                             </td>
                             <td>asasdasda</td>
                         </tr>
@@ -124,6 +107,19 @@
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
 
+    <!-- 查看图片 -->
+    <div class="f12 dom18 dn">
+        <div class="selectDiv f12">
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -133,23 +129,27 @@
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(8).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
-
     </script>
 </body>
 

@@ -8,9 +8,9 @@
 		}
 		,{"title":"审批管理",
 		 "menuList":[
-			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../index/index.html"},{"mtitle":"备货采购合同审批","href":"../index/index.html"},{"mtitle":"运输合同审批","href":"../index/index.html"},{"mtitle":"加工仓储协议审批","href":"../index/index.html"},{"mtitle":"退货入库审批单据","href":"../index/index.html"},{"mtitle":"售后审批","href":"../index/index.html"}
+			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../index/index.html"}
 			 	]}
-			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../index/index.html"},{"mtitle":"风险保证金审核","href":"../index/index.html"},{"mtitle":"租赁分红审批","href":"../index/index.html"}
+			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../index/index.html"},{"mtitle":"风险保证金审核","href":"../index/index.html"},{"mtitle":"租赁分红审批","href":"../index/index.html"}
 			 	]}
 			 	,{"bigM":"加工类","smallM":[{"mtitle":"付款类申请审批","href":"../index/index.html"},{"mtitle":"金牌商家缴费审批","href":"../index/index.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"}
 			 	]}

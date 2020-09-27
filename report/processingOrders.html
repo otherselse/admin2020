@@ -30,7 +30,6 @@
     <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
     <script type="text/javascript" src="../js/leftBar.js"></script>
     <!-- 左侧菜单 -->
-
     <div class="rightBar">
         <div class="nav ovh">
             <div class="l gga">
@@ -57,36 +56,39 @@
                         <tr class="resource-table">
                             <td class="title" width="13%">是否超期：</td>
                             <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class="mb10 on" href="javscript:void(0)">是</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">否</a>
-                                </div>
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
                             </td>
                             <td class="title" width="13%">是否结算：</td>
                             <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class="mb10 on" href="javscript:void(0)">是</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">否</a>
-                                </div>
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
                             </td>
                         </tr>
                         <tr class="resource-table">
                             <td class="title" width="13%">是否控货：</td>
                             <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class="mb10 on" href="javscript:void(0)">是</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">否</a>
-                                </div>
+                                <span class="radio ml5">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>是</label>
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>否</label>
+                                </span>
                             </td>
                             <td class="title" width="13%">结算方式：</td>
                             <td class="cont" width="37%">
                                 <div class="dib selectSingle dac">
-                                    <a class="mb10 on" href="javscript:void(0)">有货月结</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">现结</a>
+                                    <a class=" on" href="javscript:void(0)">有货月结</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">现结</a>
                                 </div>
                             </td>
                         </tr>
@@ -122,64 +124,39 @@
                     </tbody>
                 </table>
 
-                <table width="100%" class="mt5" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入区域" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">客户名称：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入单位名称" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">业务日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span></span>
-                            </span>
-                        </td>
-                        <td width="33.3%%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">应收款日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="mt15 mb30 tc">
-                                <button type="button" class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="mb10 mt10 f0">
+                    <span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">&emsp;&emsp;&emsp;区域：<input type="text" class="ui-input pct69"
+                            placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12"> 客户名称：<input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                </div>
+                <div class="mb10 f0">
+                    <span class="pct25 dib f12">业务日期：<span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <span class="pct25 dib f12">应收款日期：<span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+
+                <div class="mt20 mb30 tc">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
 
                 <table class="ui-table tc f12 checkbox" width="100%" data-type="edit">
                     <thead>
@@ -236,9 +213,9 @@
                         </tr>
                         <!-- 开始隐藏 -->
                         <tr class="hideTr dn">
-                            <td colspan="28">
+                            <td colspan="19">
                                 <div class="pl20 pr20">
-                                    <table class="ui-table  f12  auto  mt10 mb10" width="100%">
+                                    <table class="ui-table  f12  auto  mt10 " width="100%">
                                         <thead>
                                             <tr>
                                                 <th width="25%">金牌商家超期说明</th>
@@ -307,46 +284,30 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td>合计：</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>113.884</td>
-                            <td>8,828.41</td>
-                            <td>0</td>
-                            <td>8,828.41</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td class="blue">&nbsp;</td>
+                            <td colspan="19">
+                                <span class="dib">合计：</span>
+                                <span class="dib">重量：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">产值金额：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">已收金额：</span>
+                                <span class="dib red">25,000</span>
+                                <span class="dib">未收金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td>总合计：</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>113.884</td>
-                            <td>8,828.41</td>
-                            <td>0</td>
-                            <td>8,828.41</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td class="blue">&nbsp;</td>
+                            <td colspan="19">
+                                <span class="dib">合计：</span>
+                                <span class="dib">重量：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">产值金额：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">已收金额：</span>
+                                <span class="dib red">25,000</span>
+                                <span class="dib">未收金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

@@ -51,38 +51,30 @@
             </div>
         </div>
         <div class="ui-content ovh minH">
-            <div class="lh50 pl20 bor-bottom">
+            <div class="lh50 pl20 bor-bottom df">
                 <a class="dfc" href="javascript:history.back(-1)">
                     <img class=" mr10" src="../images/documnts/xz5.png" alt="">
                     <span class="g0">返回上一级</span>
                 </a>
+                <div style="flex: 1;"></div>
             </div>
             <div class="p20 f12">
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">捆包号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入捆包号" autocomplete="off">
-                            </span>
-                        </td>
-                        <td colspan="2">
-                            <span class="input-selSearch">
-                                <span class="dib">是否存在差异：</span>
-                                <span class="radio">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </span>
-                            <span class="dib">
-                                <button type="button" class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
+                <div>
+                    <span class="dib pct25">
+                        捆包号：<input type="text" class="ui-input pct69" placeholder="请输入捆包号" autocomplete="off">
+                    </span>
+                    <span class="dib pct25 mr20">
+                        是否存在差异：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+
                 <table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
@@ -121,8 +113,8 @@
                                 <a href="javascript:void(0)" onclick="showTrMore(this)">修改</a>
                             </td>
                         </tr>
-                          <!-- 点击执行显示 -->
-                          <tr class="hideTr dn">
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
                             <td colspan="14">
                                 <div class="pl20 pr20">
                                     <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
@@ -148,9 +140,9 @@
                                             <tr class="resource-table">
                                                 <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">状态：</span>
                                                 </td>
-                                                <td width="87%">
+                                                <td width="37%">
                                                     <span class="df">
-                                                        <span class="ml10 input-selSearch pct30 dac ">
+                                                        <span class="ml10 input-selSearch pct69 dac ">
                                                             <input type="text" class="ui-input searchUp pct100"
                                                                 placeholder="请选择状态" autocomplete="off" readonly="">
                                                             <div class="search-cont">
@@ -170,11 +162,9 @@
                                                         </span>
                                                     </span>
                                                 </td>
-                                            </tr>
-                                            <tr class="resource-table">
                                                 <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">备注：</span>
                                                 </td>
-                                                <td width="87%">
+                                                <td width="37%">
                                                     <textarea class="ml10 ui-textarea pct90" rows="1"></textarea>
                                                 </td>
                                             </tr>
@@ -202,7 +192,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(4).addClass("open").find(".smlist ").eq(10).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(2).addClass("on");  	// 静态页面定位使用，开发使用title等定位
             //myTipclick-p0 点击出现数据段没有内边距
             $('.myTipclick-p0').qtip({
                 show: { event: 'click' },
@@ -225,20 +215,6 @@
             });
         })
 
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
         setTime4();
         var endtime = '', starttime = '';
         function setTime4() {

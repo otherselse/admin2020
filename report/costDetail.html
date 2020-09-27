@@ -19,6 +19,11 @@
             background: #fff;
             min-width: auto;
         }
+
+        .ui-input[data-type='time'][small-type="small"] {
+            height: 30px;
+            line-height: 30px;
+        }
     </style>
 
 </head>
@@ -84,28 +89,28 @@
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">&emsp;&emsp;单位名称：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入单位名称" autocomplete="off">
+                                <span class="dib">单位名称：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入单位名称" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">客户名称：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入客户名称" autocomplete="off">
+                                <span class="dib">&emsp;&emsp;客户名称：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入客户名称" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">&emsp;订单号：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入订单号" autocomplete="off">
+                                <span class="dib">&emsp;&emsp;&emsp;订单号：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
                             </span>
                         </td>
                     </tr>
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
-                                <span class="dib">费用合同时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="dib">付款时间：</span>
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -116,8 +121,8 @@
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
-                                <span class="dib">付款时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="dib">费用合同时间：</span>
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -126,37 +131,37 @@
                                         name="checkbox"></i>无
                             </span>
                         </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">费用合同时间：</span>
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>无
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">登记时间：</span>
-                                <span class="ui-input ui-input pct50 mr5" data-type="time" small-type="small"><input
+                                <span class="ui-input ui-input pct69 " data-type="time" small-type="small"><input
                                         type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
                                         lay-key="11"></span>
                                 <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
                                         name="checkbox"></i>无
                             </span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">费用合同时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
-                                <i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
-                                        name="checkbox"></i>无
-                            </span>
+                        <td colspan="2">
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
                         </td>
                     </tr>
                 </table>
-                <div class="mt10 mb30 tc">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
-                </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                <table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="3%">序号</th>
@@ -224,7 +229,7 @@
                         <tr>
                             <td width="3%">1</td>
                             <td width="5%">
-                                <a href="javascript:detail('61177')" title="点击查看订单详情" class="tiptop"><span
+                                <a href="javascript:void(0)" onclick="showStep()" title="点击查看订单详情" class="tiptop"><span
                                         class="redm">61177</span></a>
                             </td>
                             <td width="5%">仓储</td>
@@ -246,32 +251,34 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="6">当前页合计：</td>
-                            <td><span id="s_conWeight" numtype="personal">122.00</span></td>
-                            <td><span id="s_signWeight" numtype="personal">112.00</span></td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td><span id="s_conMoney" numtype="personal">2,012.00</span></td>
-                            <td><span id="s_signMoney" numtype="personal">1,912.00</span></td>
-                            <td><span id="s_payMoney" numtype="personal">0</span></td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                            <td colspan="17">
+                                <span class="dib">当页合计：</span>
+                                <span class="dib">合同吨数：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">结算吨数：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">合同金额：</span>
+                                <span class="dib red">25,000</span>
+                                <span class="dib">结算金额：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">付款金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="6">所有页合计：</td>
-                            <td numtype="formatMoney">1,032,008.277</td>
-                            <td numtype="formatMoney">1,594,371.969</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td numtype="formatMoney">97,682,849.3589</td>
-                            <td numtype="formatMoney">72,242,120.961712</td>
-                            <td numtype="formatMoney">1,343,741.193132</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                            <td colspan="17">
+                                <span class="dib">当页合计：</span>
+                                <span class="dib">合同吨数：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">结算吨数：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">合同金额：</span>
+                                <span class="dib red">25,000</span>
+                                <span class="dib">结算金额：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">付款金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

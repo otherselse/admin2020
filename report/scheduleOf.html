@@ -56,100 +56,77 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
+                <table class="ui-table tc f12 auto" width="100%">
                     <tbody>
                         <tr class="resource-table">
-                            <td class="title" width="13%">入库类型：</td>
-                            <td class="cont" width="37%" colspan="3">
+                            <td class="title" width="10%">入库类型：</td>
+                            <td class="cont" width="23.3%" colspan="3">
                                 <div class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">商户通入库</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">定购入库</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">备货入库</a>
+                                    <a class="mb10 on" href="javscript:void(0)">商户通入库</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">定购入库</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">备货入库</a>
                                 </div>
                             </td>
-                            <td class="title" width="13%">出库类型：</td>
-                            <td class="cont" width="37%" colspan="3">
+                            <td class="title" width="10%">出库类型：</td>
+                            <td class="cont" width="23.3%" colspan="3">
                                 <div class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">运输出库</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">商户通出库</a>
+                                    <a class="mb10 on" href="javscript:void(0)">运输出库</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">商户通出库</a>
                                 </div>
                             </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">提货状态：</td>
-                            <td class="cont" width="37%">
+                            <td class="title" width="10%">提货状态：</td>
+                            <td class="cont" width="23.3%">
                                 <span class="radio ml5">
                                     <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
+                                                class="radio-opacity" name="radio"></i>已提货未出库</label>
                                     <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
+                                                class="radio-opacity" name="radio"></i>其他</label>
                                 </span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <table width="100%" class="mt5">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;仓库：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入区仓库" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">入库日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span></span>
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">出库日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span></span>
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">库存日期：</span>
-                                <span class="ui-input pct70 mr20" data-type="time"><input type="text" placeholder="选择时间"
-                                        class="render-month" readonly=""></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="mt20 mb20 tc">
-                                <button type="button" class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="ml10 mb10 mt10 f0">
+                    <span class="pct25 dib f12">
+                        金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">
+                        &emsp;&emsp;仓库：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">
+                        订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">
+                        入库日期：<span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+                <div class="ml10 mb10 f0">
+                    <span class="pct25 dib f12">出库日期：<span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <span class="pct25 dib f12">库存日期：<span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+
+                    <span class="pct50 dib f12">
+                        <button type="button" class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button " data-type="clear">清空</button>
+                    </span>
+                    </span>
+                </div>
 
                 <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
                     <thead>
@@ -212,58 +189,28 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td>当前页合计：</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>154.000</td>
-                            <td>154.000</td>
-                            <td>--</td>
-                            <td>384,000.000</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                            <td colspan="25">
+                                
+                                <span class="dib">当前页合计：</span>
+                                <span class="dib">重量：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">出库重量：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td>所有页合计：</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>808,365.72</td>
-                            <td>808,501.344</td>
-                            <td>--</td>
-                            <td>2,209,561,504.54</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
+                            <td colspan="25">
+                                
+                                <span class="dib">所有页合计：</span>
+                                <span class="dib">重量：</span>
+                                <span class="dib red">986</span>
+                                <span class="dib">出库重量：</span>
+                                <span class="dib red">548</span>
+                                <span class="dib">金额：</span>
+                                <span class="dib red">25,000</span>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

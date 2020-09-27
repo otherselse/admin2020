@@ -1,4 +1,55 @@
 report 单据管理 （订单号跳转点击事件 onclick="showStep()"）
+    <div class="mb10 f0">
+        <span class="pct25 dib f12">&emsp;订单状态：<input type="text" class="ui-input pct69" placeholder="请输入"
+                autocomplete="off">
+        </span>
+        <span class="pct25 dib f12">应收款日期：<span class="ui-input f0 pct69 range" data-type="time">
+                <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                    autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                    placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+            </span>
+        </span>
+    </div>
+
+    style="border-collapse:separate; border-spacing:0px 10px;"
+    
+    <a class="mb10 on" href="javscript:void(0)">全部</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">魏热帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">鲍帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">互帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">哈哈帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">菲菲帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">魏热帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">鲍帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">互帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">哈哈帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+    <span class="pr5 mb10 pl5 ">|</span>
+    <a class="mb10" href="javscript:void(0)">菲菲帮</a>
+
+    <td colspan="23">
+        当前页面合计： 申请入库重量:<span class="red mr20">10</span>
+        已确认重量:<span class="red mr20">1.000</span>
+        采购金额:<span class="red mr20">1.000</span>
+        浮动比例:<span class="red mr20">1.000</span>
+        调价价差:<span class="red mr20">1.000</span>
+        市场价差:<span class="red mr20">1.000</span>
+        销售价差:<span class="red mr20">1.000</span>
+        盈亏浮动比例:<span class="red mr20">1.000</span>
+    </td>
+
     创业帮跟踪表
         businessHelpSum.html 帮会成员汇总
             businessHelpSingle.html 下一级
@@ -10,9 +61,11 @@ report 单据管理 （订单号跳转点击事件 onclick="showStep()"）
         inventory.html 库存明细表
         inventoryRecord.html 库存记录表
     寄预售跟踪表
-        openToBooking.html 寄预售跟踪表
+        openToBooking.html 寄售
+        openToBookingTo.html 预售
     超期库存跟踪表
         beyondThe.html
+
     备货跟踪表
         readyForTheTrack.html 备贷汇总表
             toReadyForTheTrack.html 表头配置
@@ -24,11 +77,14 @@ report 单据管理 （订单号跳转点击事件 onclick="showStep()"）
         businessQuarter.html 经营报表季度表
         businessYears.html 经营报表年度表
         businessSum.html 区域汇总表
+            featureItemZone.html 贸易合计
         businessMonthSum.html 月度汇总表
     佣金回访表
         commission.html 佣金回访表
     订单执行情况表
         tradeOrder.html 贸易订单
+            reviewTheDetails.html 评审详情
+                detailsSelect.html 查看
         processingOrders.html 加工订单
     毛利明细表
         grossProfitDetail.html 内贸毛利表
@@ -143,6 +199,7 @@ report 单据管理 （订单号跳转点击事件 onclick="showStep()"）
         regionalCustomerStatistics.html 区域客户统计表
     客户分配跟踪表
         customerAssignmentTracking.html 客户分配跟踪表
+            selectGoldMerchants.html 选择金牌商家
     交易明细 
         salesBreakdown.html 销售明细表
         laoPurchaseSchedule.html 采购明细表

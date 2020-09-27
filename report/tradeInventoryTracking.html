@@ -23,6 +23,11 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
+        .ui-input[data-type='time'][small-type="small"] {
+            height: 30px;
+            line-height: 30px;
+        }
     </style>
 
 </head>
@@ -49,37 +54,31 @@
             </div>
         </div>
         <div class="ui-content ovh minH">
-            <div class="p20 f12">
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+            <div class="pl20 pr20 pt10 f12">
+                <table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
                     <tr>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">加工商：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入加工商" autocomplete="off">
+                                加工商：<input type="text" class="ui-input pct69" placeholder="请输入加工商" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">仓库：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入仓库" autocomplete="off">
+                               仓库：<input type="text" class="ui-input pct69" placeholder="请输入仓库" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
-                                <span class="dib">盘点月份：</span>
-                                <span class="dib pct70">
+                                盘点月份：<span class="dib pct69">
                                     <span class="ui-input ui-input pct100 ml10" data-type="time"
                                         small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
                                             value="2020-07-20" lay-key="11"></span>
                                 </span>
                             </span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100 ">
-                                <span class="dib">盘点起始时间：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                盘点起始时间：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -167,21 +166,7 @@
                 },
             });
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
+       
         setTime4();
         var endtime = '', starttime = '';
         function setTime4() {

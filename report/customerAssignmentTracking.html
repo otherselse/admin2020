@@ -50,70 +50,64 @@
         </div>
 
         <div class="ui-content ovh minH">
-            <div class="p20 f12">
-                <table class="ui-table tc f12 auto" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">区域：</td>
-                            <td width="37%" class="tl">
-                                <div class="dib selectSingle gc ml10">
-                                    <a href="javscript:void(0)" class="on">全部</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)" class="on">外贸</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">寄售</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">快速备</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)" class="on">任你押</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">现款业务李</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">业务日期：</td>
-                            <td width="37%" class="tl">
-                                <span class="radio">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="pl20 pr20 pt10 f12">
                 <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
                     <tr>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">单位名称：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入单位名称" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入单位名称" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">业务日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
                                 </span>
                             </span>
                         </td>
+                        <td width="25%">
+                            是否分配：<span class="radio">
+                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>是</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>否</label>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            &emsp;&emsp;区域：<span class="selectSingle ">
+                                <a href="javscript:void(0)" class="on">全部</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="on">外贸</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">寄售</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">快速备</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="on">任你押</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">现款业务李</a>
+                            </span>
+                        </td>
+                        <td colspan="2">
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
+                        </td>
                     </tr>
                 </table>
 
-                <div class="tc mt10 mb30">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
-                </div>
-                <table class="ui-table tc  f12 checkbox table-cw" width="100%" data-type="edit">
+                <table class="ui-table tc mt20 f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="5%">序号</th>
@@ -151,10 +145,11 @@
                             <td width="6%">成秋霞</td>
                             <td width="13%">
                                 <span class="dib zxx_text_overflow g68 tc tiptop" title="南审润园供应链有限公司">南审润园供应链有限公司</span>
-                                
+
                             </td>
                             <td width="8%" class="tc">
-                                <span class="dib zxx_text_overflow g68 tc tiptop" title="客户单位备货业务,客户单位任你押业务,款到卸货,欠款业务,现款业务">客户单位备货业务,客户单位任你押业务,款到卸货,欠款业务,现款业务</span>
+                                <span class="dib zxx_text_overflow g68 tc tiptop"
+                                    title="客户单位备货业务,客户单位任你押业务,款到卸货,欠款业务,现款业务">客户单位备货业务,客户单位任你押业务,款到卸货,欠款业务,现款业务</span>
                             </td>
                             <td width="6%">成秋小霞</td>
                             <td width="8%">13901390138</td>
@@ -165,8 +160,7 @@
                             <td width="8%"></td>
                             <td width="6%" id="createUser_0"></td>
                             <td width="8%" class="tablebtdb redm">
-                                <a id="href1" href="javascript:void(0);"
-                                    onclick="chooseBest1(1,1,'','11',11,'0');">分配</a>
+                                <a id="href1" href="javascript:void(0);" onclick="showLayer(this)">分配</a>
                                 <a id="href2" style="display: none" href="javascript:void(0);"
                                     onclick="sureAssign('76620','9831','0');">确定</a>
                                 <a id="href3" style="display: none" href="javascript:void(0);"
@@ -185,7 +179,6 @@
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
     <script>
         $(function () {
@@ -212,20 +205,6 @@
             });
         })
 
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
         setTime4();
         var endtime = '', starttime = '';
         function setTime4() {
@@ -246,7 +225,16 @@
             });
             //$("#time5").removeAttr("lay-key");
         }
-
+        function showLayer() {
+                layer.open({
+                    type: 2,
+                    title: '选择接收金牌商家',
+                    shadeClose: true,
+                    shade: 0.4,
+                    area: ['960px', '700px'],
+                    content: 'selectGoldMerchants.html' //iframe的url
+                });
+            }
     </script>
 </body>
 

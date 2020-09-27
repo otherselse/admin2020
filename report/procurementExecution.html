@@ -130,19 +130,19 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">供应商名称：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入供应商名称" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入供应商名称" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">&nbsp;&nbsp;&nbsp;订单号：</span>
-                                <input type="text" class="ui-input pct50" placeholder="请输入订单号" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
                             </span>
                         </td>
                     </tr>
@@ -150,7 +150,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">入库日期：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -162,7 +162,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">&nbsp;&nbsp;&nbsp;收票日期：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -174,7 +174,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">付款时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -188,7 +188,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">收货时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -200,7 +200,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">&nbsp;&nbsp;&nbsp;出库时间：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -212,7 +212,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">订单日期：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -224,19 +224,20 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">采购日期：</span>
-                                <span class="ui-input tc f0 pct50 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
                                 </span>
                             </span>
                         </td>
+                        <td colspan="2">
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
+                        </td>
                     </tr>
                 </table>
-                <div class="mt10 mb30 tc">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
-                </div>
+
                 <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
@@ -295,32 +296,34 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="8">当前页合计：</td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td><span></span></td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td><span></span></td>
+                            <td colspan="20">
+                                <div class="df tl pl20">
+                                    <div>当前页合计：</div>
+                                    <div>
+                                        入库重量:<span class="red mr20">10</span>
+                                        入库金额:<span class="red mr20">1.000</span>
+                                        资金占用利息:<span class="red mr20">1.000</span>
+                                        售票金额:<span class="red mr20">1.000</span>
+                                        售票差异:<span class="red mr20">1.000</span>
+                                        已付款金额:<span class="red mr20">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="8">所有页合计：</td>
-                            <td>315910.038</td>
-                            <td>1003097980.42</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>6433339423.5 </td>
-                            <td>6042702456.26</td>
-                            <td>-5039604546.6</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>406869474.87</td>
+                            <td colspan="20">
+                                <div class="df tl pl20">
+                                    <div>所有页合计：</div>
+                                    <div>
+                                        入库重量:<span class="red mr20">10</span>
+                                        入库金额:<span class="red mr20">1.000</span>
+                                        资金占用利息:<span class="red mr20">1.000</span>
+                                        售票金额:<span class="red mr20">1.000</span>
+                                        售票差异:<span class="red mr20">1.000</span>
+                                        已付款金额:<span class="red mr20">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

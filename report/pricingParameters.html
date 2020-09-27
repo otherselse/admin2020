@@ -42,7 +42,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">加工商出入库报表</span>
+                <span class="g28">自营管理</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -56,25 +56,25 @@
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content ovh minH">
-            <div class="p20 f12">
+            <div class="pr20 pl20 pt10 f12">
                 <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">金牌商家区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家区域" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家区域" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">品名：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入品名" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入品名" autocomplete="off">
                             </span>
                         </td>
                     </tr>
@@ -191,9 +191,9 @@
                     </tbody>
                     <tfoot>
                         <tr height="45">
-                            <td colspan="13" class="tc">
+                            <td colspan="13" class="tr">
                                 <button type="button" class="ui-button mr20 "
-                                onclick="window.location='paymentApplication.html'">批量锁定</button>
+                                onclick="alert('请选择需要调整的定价参数!')">批量锁定</button>
                             <button type="button" class="ui-button pl10 pr10 ">批量解锁</button>
                             </td>
                         </tr>
@@ -213,7 +213,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(4).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //myTipclick-p0 点击出现数据段没有内边距
             $('.myTipclick-p0').qtip({
                 show: { event: 'click' },

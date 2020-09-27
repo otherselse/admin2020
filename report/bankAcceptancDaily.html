@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>贸易订单-报表管理-乐刚智能云系统</title>
+    <title>资金日报表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -18,6 +18,10 @@
         .ui-optionNo {
             background: #fff;
             min-width: auto;
+        }
+        .ui-input[data-type='time'][small-type="small"] {
+            height: 30px;
+            line-height: 30px;
         }
     </style>
 
@@ -39,8 +43,8 @@
                 报表管理
                 <span class="dib pl5 pr5">/</span>
                 <span class="g28">资金日报表</span>
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">银行承兑汇日报</span>
+                <!-- <span class="dib pl5 pr5">/</span>
+                <span class="g28">银行承兑汇日报</span> -->
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -155,22 +159,6 @@
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
-
         setTime4();
         var endtime = '', starttime = '';
         function setTime4() {
