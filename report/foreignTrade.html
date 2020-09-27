@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>差异调整-报表管理-乐刚智能云系统</title>
+    <title>毛利明细表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -38,7 +38,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">差异调整</span>
+                <span class="g28">毛利明细表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -58,18 +58,18 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table width="100%" class="mt5">
+                <table width="100%">
                     <tr>
                         <td width="25%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">金牌商家区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家区域" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家区域" autocomplete="off">
                             </span>
                         </td>
                         <td width="25%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">出库日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -77,36 +77,32 @@
                             </span>
                         </td>
                         <td width="25%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
                         <td width="25%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
                             </span>
                         </td>
                     </tr>
                     <tr>
                         <td width="25%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 mt10">
                                 <span class="dib">订单结算日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
                                 </span></span>
                             </span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td colspan="8">
-                            <div class="mt20 mb20 tc">
-                                <button type="button" class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </div>
+                        <td colspan="3">
+                            <button type="button" class="ui-button mr10 mt10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
                         </td>
                     </tr>
                 </table>
@@ -172,42 +168,52 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="5">当前页合计:</td>
-                            <td>262,041.56</td>
-                            <td>541.9</td>
-                            <td>124,133.13</td>
-                            <td>16</td>
-                            <td>70.06</td>
-                            <td>0</td>
-                            <td>611</td>
-                            <td>220</td>
-                            <td>100</td>
-                            <td>60</td>
-                            <td>1,077.06</td>
-                            <td>0</td>
-                            <td>113,291.74</td>
-                            <td>24,081.53</td>
-                            <td>0</td>
-                            <td></td>
+                            <td colspan="21">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">当前页合计：</div>
+                                    <div class="tl">
+                                        出库金额:<span class="red mr10">10</span>
+                                        退税金额:<span class="red mr10">1.000</span>
+                                        入库金额:<span class="red mr10">1.000</span>
+                                        订舱人民币:<span class="red mr10">1.000</span>
+                                        订舱美元:<span class="red mr10">1.000</span>
+                                        佣金:<span class="red mr10">1.000</span>
+                                        进仓费:<span class="red mr10">1.000</span>
+                                        加工费:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓库费:<span class="red mr10">1.000</span>
+                                        合计:<span class="red mr10">1.000</span>
+                                        资金占用利息:<span class="red mr10">1.000</span>
+                                        税金:<span class="red mr10">1.000</span>
+                                        毛利小计:<span class="red mr10">1.000</span>
+                                        事后差异调整:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="5">所有页合计:</td>
-                            <td>30,146,114.65</td>
-                            <td>3,175,961.08</td>
-                            <td>13,107,414.51</td>
-                            <td>9,966.75</td>
-                            <td>53,739.69</td>
-                            <td>213,099</td>
-                            <td>246,779.87</td>
-                            <td>84,683.35</td>
-                            <td>28,457.96</td>
-                            <td>8,230</td>
-                            <td>728,567.62</td>
-                            <td>371,912.22</td>
-                            <td>13,051,749.6</td>
-                            <td>6,154,517.54</td>
-                            <td>371,912.22</td>
-                            <td></td>
+                            <td colspan="21">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">所有页合计：</div>
+                                    <div class="tl">
+                                        出库金额:<span class="red mr10">10</span>
+                                        退税金额:<span class="red mr10">1.000</span>
+                                        入库金额:<span class="red mr10">1.000</span>
+                                        订舱人民币:<span class="red mr10">1.000</span>
+                                        订舱美元:<span class="red mr10">1.000</span>
+                                        佣金:<span class="red mr10">1.000</span>
+                                        进仓费:<span class="red mr10">1.000</span>
+                                        加工费:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓库费:<span class="red mr10">1.000</span>
+                                        合计:<span class="red mr10">1.000</span>
+                                        资金占用利息:<span class="red mr10">1.000</span>
+                                        税金:<span class="red mr10">1.000</span>
+                                        毛利小计:<span class="red mr10">1.000</span>
+                                        事后差异调整:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

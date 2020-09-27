@@ -23,6 +23,10 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
+        .ui-input[data-type='section'] {
+            min-width: 0px;
+        }
     </style>
 
 </head>
@@ -59,76 +63,77 @@
         </div>
 
         <div class="ui-content ovh minH">
-            <div class="p20 f12">
-                <table class="ui-table tc f12 auto" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">业务类型：</td>
-                            <td width="37%" class="tl">
-                                <div class="dib selectSingle gc ml10">
-                                    <a href="javscript:void(0)" class="on">现款业务</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">卸到付款</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">评价状态：</td>
-                            <td width="37%" class="tl">
-                                <div class="dib selectSingle gc ml10">
-                                    <a href="javscript:void(0)" class="on">现款业务</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">卸到付款</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变</a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+            <div class="pl20 pr20 pt10 f12">
+                <table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
                     <tr>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">客户名称：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入客户名称" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入客户名称" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
+                        <td width="25%">
                             <span class="input-selSearch pct100">
                                 <span class="dib">毛利率区间：</span>
-                                <span class="ui-input pct70" data-type="section">
-                                    <input type="text" placeholder="">~
-                                    <input type="text" placeholder="">
+                                <span class="ui-input pct69" data-type="section">
+                                    <input type="text" placeholder="">~<input type="text" placeholder="">
                                 </span>
                             </span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td class="33.3%">
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">地区：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入地区" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">订单日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
+                                <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
                                 </span>
                             </span>
                         </td>
-                        <td>
-                            <button type="button" class="ui-button mr10">查询</button>
-                            <button type="button" class="ui-button " data-type="clear">清空</button>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="df">
+                                <div>业务类型：</div>
+                                <div class="dib selectSingle gc">
+                                    <a href="javscript:void(0)" class="on">现款业务</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">卸到付款</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">乔碧萝变</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div class="df">
+                                <div style="min-width: 50px;">评价状态：</div>
+                                <div class="dib selectSingle gc">
+                                    <a href="javscript:void(0)" class="on">正常</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">关注</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">异常</a>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>
+
+                <div class="tc mb30 mt10">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+
                 <table class="ui-table tc mt30 f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
@@ -227,27 +232,42 @@
                                                 <td class="vt bgfa" width="13%">
                                                     <span class="pt5 dib pl10">备注：</span>
                                                 </td>
-                                                <td colspan="3">
+                                                <td colspan colspan="3">
                                                     <div class="pl20 pr20">
                                                         <textarea class="ui-textarea pct100 " rows="1"></textarea>
                                                     </div>
                                                 </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="tc  mt20 mb20">
+                                        <button type="button" class="ui-button mr10">确定</button>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
-                        </tfoot>
+                    </tbody>
+                    <tfoot>
+                        <tr height="45">
+                            <td colspan="19">
+                                当前页合计：出库总重量:<span class="dib mr10 red">31e3123</span>
+                                销售总额:<span class="dib mr10 red">31e3123</span>
+                                预估税前毛利:<span class="dib mr10 red">31e3123</span>
+                            </td>
+                        </tr>
+                        <tr height="45">
+                            <td colspan="19">
+                                所有页合计：出库总重量:<span class="dib mr10 red">31e3123</span>
+                                销售总额:<span class="dib mr10 red">31e3123</span>
+                                预估税前毛利:<span class="dib mr10 red">31e3123</span>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
-                <div class="tc  mt20 mb20">
-                    <button type="button" class="ui-button mr10">确定</button>
-                </div>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-            <!-- table end -->
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-        </div>
-    </div><!-- ui-content end -->
+        </div><!-- ui-content end -->
     </div><!-- rightBar end -->
 
     <script type="text/javascript" src="../js/admin.js"></script>
@@ -258,7 +278,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //myTipclick-p0 点击出现数据段没有内边距
             $('.myTipclick-p0').qtip({
                 show: { event: 'click' },

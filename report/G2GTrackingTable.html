@@ -55,7 +55,7 @@
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content ovh minH">
-            <div class="p20 f12">
+            <div class="pl20 pr20 pt10 f12">
                 <table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
                     <tr>
                         <td width="33.3%">
@@ -74,7 +74,7 @@
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox table-cw mt20" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="8%" rowspan="2">日期</th>
@@ -94,7 +94,6 @@
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     总收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th rowspan="2">操作</th>
                         </tr>
                         <tr>
                             <th width="6%">
@@ -151,7 +150,7 @@
                         <tr>
                             <td>2017-04-14</td>
                             <td>2069787868.65</td>
-                            <td>42</td>
+                            <td> <a href="javascript:void(0)" onclick="showLayer()">42</a></td>
                             <td>413957.41</td>
                             <td>135000</td>
                             <td>5</td>
@@ -165,21 +164,28 @@
                             <td>2072102485.7619</td>
                             <td>8</td>
                             <td>414576.71</td>
-                            <td>
-                                <a href="javascript:void(0)" onclick="showLayer()">查看人员</a>
-                            </td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr height="45">
-                            <td colspan="11"></td>
-                            <td colspan="3"><strong>当前页收益汇总:</strong></td>
-                            <td colspan="3"><strong>3969688.08</strong></td>
+                            <td colspan="16">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">当前页收益汇总：</div>
+                                    <div class="">
+                                        总收益:<span class="red mr10">225102485.09</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="11"></td>
-                            <td colspan="3"><strong>所有页收益汇总:</strong></td>
-                            <td colspan="3"><strong>225102485.09</strong></td>
+                            <td colspan="16">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">所有页收益汇总：</div>
+                                    <div class="">
+                                        总收益:<span class="red mr10">3969688.08</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -208,21 +214,7 @@
                 }
             });
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
+   
         setTime4();
         var endtime = '', starttime = '';
         function setTime4() {

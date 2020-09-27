@@ -46,19 +46,91 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">乐刚收款：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">否</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">是</a>
+                <table class="ui-table tc f12 auto" width="100%">
+                <table width="100%">
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100 mb5">
+                                <span class="input-selSearch pct100 dac">
+                                    <span class="dib">交款单位：</span>
+                                    &nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择区域"
+                                        autocomplete="off" readonly="">
+                                    <div class="search-cont">
+                                        <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                    </div>
+                                </span>
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">交款单位：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入收款单位" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">收款日期：</span>
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span></span>
+                            </span>
+                        </td>
+                        <td width="25%">
+                            乐刚收款：<span class="radio">
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>是</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>否</label>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="df mt5">
+                                <div class="min-w60 mt2">&emsp;加工商：</div>
+                                <div class="dib selectProcName selectSingle gc">
+                                    <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">鲍帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">互帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">哈哈帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">菲菲帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">鲍帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">互帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">哈哈帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">菲菲帮</a>
                                 </div>
-                            </td>
-                            <td class="title" width="13%">收款方式：</td>
-                            <td class="cont" width="37%">
+                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)"
+                                    id="jgs_scroll">展开</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="df mt5">
+                                <div class="mt5 min-w60">收款方式：</div>
                                 <div class="dib selectSingle dac">
                                     <a class=" on" href="javscript:void(0)">银收</a>
                                     <span class="pr5  pl5 ">|</span>
@@ -76,86 +148,14 @@
                                     <span class="pr5  pl5 ">|</span>
                                     <a class="" href="javscript:void(0)">码头禁用</a>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">加工商：</td>
-                            <td class="cont" width="87%" colspan="3">
-                                <div class="dib selectProcName selectSingle gc">
-                                    <a href="javscript:void(0)" class="on">全部</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">上海加工运输有限责任公司</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">上海加工运输有限责任公司</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">上海加工运输有限责任公司</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                </div>
-                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)"
-                                    id="jgs_scroll">展开</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="mt5">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="input-selSearch pct100 dac">
-                                    <span class="dib">交款单位：</span>
-                                    &nbsp;<input type="text" class="ui-input searchUp pct80" placeholder="请选择区域"
-                                        autocomplete="off" readonly="">
-                                    <div class="search-cont">
-                                        <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">交款单位：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入收款单位" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">收款日期：</span>
-                                <span class="ui-input tc f0 pct35  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span></span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="mt20 mb20 tc">
-                                <button type="button" class="ui-button mr10">查询</button>
+                                <button type="button" class="ml20 ui-button mr10">查询</button>
                                 <button type="button" class="ui-button " data-type="clear">清空</button>
                             </div>
                         </td>
                     </tr>
                 </table>
 
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
+                <table class="ui-table tc mt30 f12 checkbox" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="6%">序号</th>
@@ -184,14 +184,8 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td class="tablebtdb " colspan="3">总计</td>
-                            <td class="tablebtdb "></td>
-                            <td class="tablebtdb "></td>
-                            <td class="tablebtdb ">31,674.72</td>
-                            <td class="tablebtdb "></td>
-                            <td class="tablebtdb "></td>
-                            <td class="tablebtdb "></td>
-                       </tr>
+                            <td colspan="9">总计：乐刚收款: <span class="red">12452</span></td>
+                        </tr>
                     </tfoot>
                 </table>
                 <!-- table end -->

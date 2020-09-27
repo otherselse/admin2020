@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>红利明细表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-
+    <style>
+        .min-itel {
+            width: 16px;
+            height: 16px;
+            background-size: 100% 100%;
+            line-height: 10px;
+        }
+    </style>
 </head>
 
 <body class="showTip report">
@@ -23,7 +30,6 @@
     <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
     <script type="text/javascript" src="../js/leftBar.js"></script>
     <!-- 左侧菜单 -->
-
 
     <div class="rightBar">
         <div class="nav ovh">
@@ -47,8 +53,10 @@
 
         <div class=" fix f12 bgwh ui-content ovh minH">
             <div class="mb10 f0 mt20  mr20">
-                <div class="mb10 f0">
-                    <span class="pct25 dib f12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单类型：<span class="input-selSearch pct59">
+                <div class="mb10 f0 ml20">
+                    <span class="pct25 dib f12">金牌商家区域：<input type="text" class="ui-input pct69"
+                            placeholder="请输入"></span>
+                    <span class="pct25 dib f12">订单类型：<span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -61,69 +69,70 @@
                             </div>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct59"
+                    <span class="pct25 dib f12">&emsp;&emsp;金牌商家：<input type="text" class="ui-input pct69"
                             placeholder="请输入"></span>
-                    <span class="pct25 dib f12">金牌商家区域：<input type="text" class="ui-input pct59"
-                            placeholder="请输入"></span>
-                    <span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
                 </div>
 
-                <div class="mb10  f0">
-                    <span class="dib ml20 pct20 f12 m_db m_index2">
-                        是否允许结算：
-                        <span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity on" name="radio"></i>全部</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>允许</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>禁止</label>
-                        </span>
+                <div class="mb10 ml20 f0">
+                    <span class="dib pct33 f12 ">
+                        <div class="df">
+                            <div>是否允许结算：</div>
+                            <div class="radio">
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity on" name="radio"></i>全部</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>允许</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>禁止</label>
+                            </div>
+                        </div>
                     </span>
-                    <span class="dib pct25 ml20 f12 m_db m_index2">
-                        &nbsp;&nbsp;是否已核算红利：
-                        <span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity on" name="radio"></i>全部</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
+                    <span class="dib pct33 f12 ">
+                        <div class="df">
+                            <div>是否已核算红利：</div>
+                            <div class="radio">
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity on" name="radio"></i>全部</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>是</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>否</label>
+                            </div>
+                        </div>
                     </span>
-                    <span class="pct30 ml20 dib f12">红利核算操作日期：<span class="ui-input tc f0 pct69  range"
-                            data-type="time">
+                    <span class="pct33  dib f12">红利核算操作日期：<span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                 class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                 class="render-time pct45" readonly="">
-                        </span></span></span>
-
+                        </span>
+                    </span>
                 </div>
                 <div class="mb10  f0">
-                    <span class="dib ml20 pct80 f12 m_db m_index2">
-                        订单日期：
-                        <span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity on" name="radio"></i>不限</label>
+                    <span class="dib ml20 pct100 f12 dac">
+                        订单日期：<span class="radio timeOn">
+                            <label class="mr20 "><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity " name="radio"></i>不限</label>
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                         class="radio-opacity" name="radio"></i>今天</label>
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                         class="radio-opacity" name="radio"></i>本周</label>
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                         class="radio-opacity" name="radio"></i>本月</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity qj" name="radio"></i>日期区间</label>
+                            <label class="qj"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity " name="radio"></i>日期区间</label>
                         </span>
-                        <span class="dib ml5 pct40 f12" id="qj"><span class="ui-input tc f0 pct69  range" data-type="time">
-                                <input type="text" placeholder="开始时间" class="render-time pct45"  readonly="">
+                        <div class="ml5 f12 dn" id="qj">
+                            <span class="ui-input f0 pct80  range" data-type="time">
+                                <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
                                 <span class="dib pct5 tc">-</span>
                                 <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
                             </span>
-                        </span>
+                        </div>
                     </span>
                 </div>
-                <div class="tc">
-                    <button class="ui-button mr10" data-type="normal" type="button">查询</button>
+                <div class="tc mt20 mb30">
+                    <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
             </div>
@@ -137,8 +146,12 @@
                                 <th width="4%">金牌商家</th>
                                 <th width="4%">订单号</th>
                                 <th width="5%">业务日期</th>
-                                <th width="4%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">已收款<i class="goldIcon icon-sort vm ml5 down"></i></label></th>
-                                <th width="4%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">已付款<i class="goldIcon icon-sort vm ml5 down"></i></label></th>
+                                <th width="4%"><label class="sort-list dib poi"
+                                        onclick="setOrderCol('a.inDate',this)">已收款<i
+                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
+                                <th width="4%"><label class="sort-list dib poi"
+                                        onclick="setOrderCol('a.inDate',this)">已付款<i
+                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
                                 <th width="4%">订单类型</th>
                                 <th width="4%">物流付款</th>
                                 <th width="4%">实提量</th>
@@ -148,39 +161,54 @@
                                 <th width="4%">税金</th>
                                 <th width="4%">商互通成本</th>
                                 <th width="4%">商互通收入</th>
-                                <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">毛利金额<i class="goldIcon icon-sort vm ml5 down"></i></label></th>
+                                <th width="6%"><label class="sort-list dib poi"
+                                        onclick="setOrderCol('a.inDate',this)">毛利金额<i
+                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
                                 <th width="4%">余卷重量</th>
                                 <th width="4%">G2G金额</th>
                                 <th width="4%">是否允许核算红利</th>
                                 <th width="4%">是否已核算红利</th>
-                                <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">金牌商家分红<i class="goldIcon icon-sort vm ml5 down"></i></label></th>
-                                <th width="5%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">乐刚分红<i class="goldIcon icon-sort vm ml5 down"></i></label></th>
+                                <th width="6%"><label class="sort-list dib poi"
+                                        onclick="setOrderCol('a.inDate',this)">金牌商家分红<i
+                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
+                                <th width="5%"><label class="sort-list dib poi"
+                                        onclick="setOrderCol('a.inDate',this)">乐刚分红<i
+                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
                                 <th width="4%">第三方分红</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td widtd="3%">上海</td>
+                                <td width="3%">
+                                    <a class="daj f12" onclick="showTrMore(this)" href="javascript:void(0)">
+                                        <img class="" src="../images/report/you.png" alt="">
+                                        <span class="g0">上海</span>
+                                    </a>
+                                </td>
                                 <td widtd="4%">志华</td>
                                 <td widtd="4%">61081</td>
                                 <td widtd="4%">2020-09-5</td>
-                                <td widtd="4%">0</td>
-                                <td widtd="4%">0</td>
+                                <td widtd="4%"><a href="javascript:void(0)" title="销售收款登记金额：0.0" class="tiptop">0.0</a>
+                                </td>
+                                <td widtd="4%"><a href="javascript:void(0)" title="采购付款登记金额：0.0" class="tiptop">0.0</a>
+                                </td>
                                 <td widtd="4%">现款业务</td>
                                 <td widtd="5%">0</td>
                                 <td widtd="4%">0</td>
                                 <td widtd="5%">0</td>
                                 <td widtd="5%">0</td>
                                 <td widtd="5%">0</td>
-                                <td widtd="4%"><a href="javascript:void(0)" oldtitle="增值税:&nbsp;230.09<br/>附加税:&nbsp;13.81<br/>
+                                <td widtd="4%"><a href="javascript:void(0)" title="增值税:&nbsp;230.09<br/>附加税:&nbsp;13.81<br/>
                                     印花税:&nbsp;11.15<br/>企业所得税:&nbsp;0<br/>
                                     个人所得税:&nbsp;188.99 <br/>
                                     " aria-describedby="ui-tooltip-1">
-                                              <span class="redm">444.04</span>
-                                          </a></td>
+                                        <span class="tiptop">444.04</span>
+                                    </a></td>
                                 <td widtd="4%">0</td>
                                 <td widtd="4%">0</td>
-                                <td widtd="6%"><a href="">0</a> </td>
+                                <td widtd="6%"><a href="javascript:void(0)"
+                                        title="名称:上海vip客户股份有限公司<br/>联系人:<br/>联系电话:<br/>毛利：-37.17" class="tiptop">0</a>
+                                </td>
                                 <td widtd="4%">0</td>
                                 <td widtd="4%">0</td>
                                 <td widtd="4%">禁止</td>
@@ -190,144 +218,479 @@
                                 <td widtd="4%">0</td>
                             </tr>
                             <tr class="hideTr dn">
-	                            <td colspan="7">
-	                                <div class="pl20 pr20">
-	                                    <div class="ovh mb10 tl g28 f14 b">上海乐刚供应链股份有限公司提货单</div>
-	                                     <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
-	              	                         <tbody>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" width="10%">货主：</td>
-	                                            	<td width="40%" class="cont">上海乐刚供应链股份有限公司</td>
-	                                            	<td class="title" width="10%">提单号：</td>
-	                                            	<td width="40%" class="cont">STD(01)-20000654</td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >提货车号：</td>
-	                                            	<td width="40%" class="cont">沪123456</td>
-	                                            	<td class="title" >提货仓库：</td>
-	                                            	<td width="40%" class="cont">聚方库</td>
-	                                            </tr>
-	                                            
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >提货人：</td>
-	                                            	<td width="40%" class="cont">李四</td>
-	                                            	<td class="title" >提货地址：</td>
-	                                            	<td width="40%" class="cont">北京北京市东城区烦烦烦</td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >提货人电话：</td>
-	                                            	<td width="40%" class="cont">建设银行</td>
-	                                            	<td class="title" >仓库电话：</td>
-	                                            	<td width="40%" class="cont">11111</td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >身份证号码：</td>
-	                                            	<td width="40%" class="cont">11111</td>
-	                                            	<td class="title" >费用类型：</td>
-	                                            	<td width="40%" class="cont">供方统结</td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >签章：</td>
-	                                            	<td width="40%" class="cont vt" height="190">
-	                                            		<div style="position:relative;">
-													      <div style="position:absolute;" id="imgDiv">
-													      <img src="http://resource.lgsteel.cn/gm/public/lg_delivery.png" style="width: 187px"></div>
-													      <div style="position:absolute;text-align:center;width:180px;top: 80px">上海乐刚供应链股份有限公司电子印章签章处</div>
-													   </div>
-	                                            	</td>
-	                                            	<td class="title" >提货期限：</td>
-	                                            	<td width="40%" class="cont">2020-07-31 至 2020-07-31</td>
-	                                            </tr>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" >备注：</td>
-	                                            	<td class="cont" colspan="3">
-	                                            		---
-	                                            	</td>
-	                                            </tr>
-	                                        </tbody>
-	                                    </table>
-	                                    <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-	                                        <thead>
-	                                            <tr>
-	                                                <th width="10%">品名</th>
-	                                                <th width="10%">规格</th>
-	                                                <th width="10%">牌号</th>
-	                                                <th width="10%">钢厂</th>
-	                                                <th width="10%">捆包号</th>
-	                                                <th width="10%">预提量(吨)</th>
-	                                                <th width="10%">实提量(吨)</th>	                                                
-	                                            </tr>
-	                                        </thead>
-	                                        <tbody class="ui-thover">
-	                                            <tr>
-	                                                <td>彩涂卷板</td>
-	                                                <td>11.000*800*C</td>
-	                                                <td>Dx58661</td>
-	                                                <td>聚方库</td>
-	                                                <td>1233</td>
-	                                                <td>1233</td>
-	                                                <td>1233</td>
-	                                            </tr>
-	                                        </tbody>
-	                                        <tfoot>
-	                                        	<tr class="bgfa">
-	                                        		<td colspan="5">合计</td>
-	                                        		<td>11.000</td>
-	                                        		<td>111.000</td>
-	                                        	</tr>
-	                                        	<tr >
-	                                        		<td>备注</td>
-	                                        		<td colspan="6" class="tl">
-	                                        			<div class="pl10">-----</div>
-	                                        		</td>
-	                                        	</tr>
-	                                            <tr >
-	                                            	<td>注意<br/>事项</td>
-	                                                <td colspan="6" >
-	                                                	<div class="pl10 pr10 ovh lh24 tl">
-	                                                		1、本提单须盖“上海乐刚供应链股份有限公司发货专用章”有效 。 <br/>
-	                                                		2、提货时请当场确认所提货物与本提单是否相符，并当场确认货物的外观、表面质量、重量及规格等，如有异议，请当场向仓库提出且确认，否则本公司概不承担相关责任。<br/>
-	                                                		3、未经本公司同意不得提前、超量发货及变更提货地点。<br/>
-	                                                		4、仓库应严格按照本提单注明的库存管理号及捆包号发货。<br/>
-	                                                		5、其他注意事项详见提单下面的提货须知。
-	                                                	</div>
+                                <td colspan="23">
+                                    <!-- 销售 -->
+                                    <div class="pl5 pr20">
+                                        <div class="df mt10 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">销售</span>
+                                            </a>
+                                            <div class="dib mr10 ml10 sp-Bg min-itel"></div>
+                                            <span class="dib mr20 g08">已结算</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto " width="100%">
+                                                <tbody>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">客户名称：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">客户类型：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">客户账户余额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">合同号：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">合同重量(吨)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">合同金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">结算重量(吨)：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">结算金额(元)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">收款金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">已收款金额(元)：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">实提重量(吨)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">开票金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="tl mt10">
+                                                <a href="javascript:void(0)" onclick="show(this)" class="cp">产品要求<span
+                                                        class="dib">&nbsp;></span></a>
+                                            </div>
+                                            <table class="ui-table ui-table mt5 tc f12 auto dn" width="100%"
+                                                data-type="edit">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="15%">品名</th>
+                                                        <th width="10%">规格</th>
+                                                        <th width="9%">牌号</th>
+                                                        <th width="9%">数量</th>
+                                                        <th width="9%">合同重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="16%">钢厂</th>
+                                                        <th width="11%">销售单价</th>
+                                                        <th width="11%">出库重量</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
 
-	                                                </td>
-	                                            </tr>
-	                                        </tfoot>
-	                                    </table>
-	                                   
-	                                    <div class="mb10 tl mt10 mb10"><a href="javascript:void(0)" class="link-up" onclick="showdiv(this,'httkxs')">提货须知</a></div>
-	                                   <div class="bdde pl20 pr20 pb20 pt15 lh24 dn httkxs tl">
-                                      	  <p>1.本提单在规定提货期限内，用户必须将货提完。如逾期提货须凭此单到本公司重新办理提货手续并收取5元/吨的手续费。</p>
-										  <p> 2.提货前请与仓库电话联系，如不联系，由此造成的损失由提货单位承担。</p>
-										  <p> 3.因本公司原因造成无法在有效期内提货的，经储运部门确认签字后，本提单有效期顺延。</p>
-										  <p> 4.因仓库原因造成无法提货的，请有关仓库在提单上注意原因，并签字确认，同时本提单提货期顺延。</p>
-										  <p> 5.提货时必须出示提货人身份证或其他有效证件，由仓库确认并记录下该有效证件上的姓名和号码，才能提货。</p>
-										  <p> 6.本公司代办铁路、水路、陆路一条龙运输服务，并代办分卷、开板、纵剪等业务，价格合理。</p>
-										  <p> 7.公司地址：中国（上海）自由贸易试验区西路路55号14层1445B室 邮政编码 ：200131 公司网址：www.lgsteel.com  </p>                                        
-                                       
-                                       </div>
-                                       <div class="ovh mb10 tl  f14">
-                                       		<div class="l pct20 g28 b">本提单已经需方审核无误</div>
-                                       		<div class="l pct80 tc">
-                                       			领单人：
-                                       			&emsp;&emsp;&emsp;发货人：
-                                       			&emsp;&emsp;&emsp;制单人：贝塔
-                                       			&emsp;&emsp;&emsp;打印日期：2020-07-31 10:18:27
-                                       		</div>
-                                       </div>
-
-                                       <div class="tc  mt20 mb20">
-	                                    	<button type="button" class="ui-button mr10">确认</button>
-	                                    	<button type="button" class="ui-button" data-type="clear">退回</button>
-	                                    </div>
-
-	                                    
-	                                </div>
-	                            </td>
-	                        </tr><!-- 隐藏内容end -->
+                                                    <tr class="bgwh">
+                                                        <td>镀铝板材</td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>1</td>
+                                                        <td>10</td>
+                                                        <td>过磅</td>
+                                                        <td>包钢</td>
+                                                        <td>200</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 采购 -->
+                                    <div class="pl5 mt20 pr20">
+                                        <div class="df mt20 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">采购</span>
+                                            </a>
+                                            <div class="dib mr10 ml10 lh18 min-itel tc sh-Bg ">
+                                                <span class="sh-Bg-H dib" style="width: 8px;"></span>
+                                            </div>
+                                            <span class="dib mr20 red">未结算</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto" width="100%">
+                                                <tbody>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">客户名称：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">客户类型：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">客户账户余额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">合同号：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">合同重量(吨)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">合同金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">结算重量(吨)：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">结算金额(元)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">收款金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title" width="13.3%">已收款金额(元)：</td>
+                                                        <td class="cont" width="20%">2133</td>
+                                                        <td class="title" width="13.3%">实提重量(吨)：</td>
+                                                        <td class="cont" width="20%">2029</td>
+                                                        <td class="title" width="13.3%">开票金额(元)：</td>
+                                                        <td class="cont" width="20%">-06</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="tl mt10">
+                                                <a href="javascript:void(0)" onclick="show(this)" class="cp">采购明细<span
+                                                        class="dib">&nbsp;></span></a>
+                                            </div>
+                                            <table class="ui-table ui-table mt5 tc f12 auto dn" width="100%"
+                                                data-type="edit">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="15%">品名</th>
+                                                        <th width="10%">规格</th>
+                                                        <th width="9%">牌号</th>
+                                                        <th width="9%">数量</th>
+                                                        <th width="9%">合同重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="16%">钢厂</th>
+                                                        <th width="11%">销售单价</th>
+                                                        <th width="11%">出库重量</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bgwh">
+                                                        <td>镀铝板材</td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>1</td>
+                                                        <td>10</td>
+                                                        <td>过磅</td>
+                                                        <td>包钢</td>
+                                                        <td>200</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 加工 -->
+                                    <div class="pl5 mt20 pr20">
+                                        <div class="df mt20 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">加工</span>
+                                            </a>
+                                            <div class="dib mr10 ml10 lh18 min-itel tc sh-Bg ">
+                                                <span class="sh-Bg-H dib" style="width: 8px;"></span>
+                                            </div>
+                                            <span class="dib mr20 red">未结算</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto" width="100%"
+                                                data-type="edit">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="15%">投料</th>
+                                                        <th width="15%">规格</th>
+                                                        <th width="15%">牌号</th>
+                                                        <th width="10%">重量</th>
+                                                        <th width="10%">余卷重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="10%">钢厂</th>
+                                                        <th width="15%">仓库</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="resource-table bgwh">
+                                                        <td>
+                                                            <a class="daj f12" onclick="showTrMore(this)"
+                                                                href="javascript:void(0)">
+                                                                <img class="" src="../images/report/you.png" alt="">
+                                                                <span class="g0">镀铝板材</span>
+                                                            </a>
+                                                        </td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>10</td>
+                                                        <td></td>
+                                                        <td>过磅</td>
+                                                        <td>包钢</td>
+                                                        <td>山大王</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="p20">
+                                                <table class="ui-table ui-table mt5 tc f12 auto" width="100%"
+                                                    data-type="edit">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="15%">成品</th>
+                                                            <th width="15%">规格</th>
+                                                            <th width="15%">牌号</th>
+                                                            <th width="10%">数量</th>
+                                                            <th width="10%">重量</th>
+                                                            <th width="10%">结算重量</th>
+                                                            <th width="10%">计量方式</th>
+                                                            <th width="15%">加工单价</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bgwh">
+                                                            <td>
+                                                                <a class="daj f12" onclick="showTrMore(this)"
+                                                                    href="javascript:void(0)">
+                                                                    <img class="" src="../images/report/you.png" alt="">
+                                                                    <span class="g0">镀铝板材</span>
+                                                                </a>
+                                                            </td>
+                                                            <td>11.000*800*C</td>
+                                                            <td>SPCC</td>
+                                                            <td>1</td>
+                                                            <td>10</td>
+                                                            <td>过磅</td>
+                                                            <td>包钢</td>
+                                                            <td>200</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 短驳 -->
+                                    <div class="pl5 mt20 pr20">
+                                        <div class="df mt20 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">短驳</span>
+                                            </a>
+                                            <img class="mr10 ml10 min-itel" src="../images/report/tc659.png" />
+                                            <span class="dib mr20">暂无</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="6%">序号</th>
+                                                        <th width="20%">成品</th>
+                                                        <th width="14%">规格</th>
+                                                        <th width="15%">牌号</th>
+                                                        <th width="10%">数量</th>
+                                                        <th width="10%">重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="15%">运输单价</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bghw">
+                                                        <td>1</td>
+                                                        <td>镀铝板材</td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>1</td>
+                                                        <td>10</td>
+                                                        <td>过磅</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 运输 -->
+                                    <div class="pl5 mt20 pr20">
+                                        <div class="df mt20 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">运输</span>
+                                            </a>
+                                            <img class="mr10 ml10 min-itel" src="../images/report/tc659.png" />
+                                            <span class="dib mr20">暂无</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="6%">序号</th>
+                                                        <th width="20%">成品</th>
+                                                        <th width="14%">规格</th>
+                                                        <th width="15%">牌号</th>
+                                                        <th width="10%">数量</th>
+                                                        <th width="10%">重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="15%">运输单价</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bghw">
+                                                        <td>1</td>
+                                                        <td>镀铝板材</td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>1</td>
+                                                        <td>10</td>
+                                                        <td>过磅</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 仓库 -->
+                                    <div class="pl5 mt20 pr20">
+                                        <div class="df mt20 mb10">
+                                            <a class="dfc f12" onclick="show(this)" href="javascript:void(0)">
+                                                <img class="mr10" src="../images/report/you.png" alt="">
+                                                <span class="g0">仓库</span>
+                                            </a>
+                                            <img class="mr10 ml10 min-itel" src="../images/report/tc659.png" />
+                                            <span class="dib mr20">暂无</span>
+                                            <div style="flex: 1;"></div>
+                                        </div>
+                                        <div class="dn">
+                                            <table class="ui-table ui-table mt5 tc f12 auto" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="6%">序号</th>
+                                                        <th width="20%">成品</th>
+                                                        <th width="14%">规格</th>
+                                                        <th width="15%">牌号</th>
+                                                        <th width="10%">数量</th>
+                                                        <th width="10%">重量</th>
+                                                        <th width="10%">计量方式</th>
+                                                        <th width="15%">运输单价</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bghw">
+                                                        <td>1</td>
+                                                        <td>镀铝板材</td>
+                                                        <td>11.000*800*C</td>
+                                                        <td>SPCC</td>
+                                                        <td>1</td>
+                                                        <td>10</td>
+                                                        <td>过磅</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="pl5">
+                                        <div class="dac mt20 mb10">
+                                            <div class="dib mr10 sp-Bg min-itel"></div>
+                                            <span class="dib mr10 g08">已结算</span>
+                                            <span class="g28">毛利(元)：</span><span class="red">13212</span>
+                                            <a href="javascript:void(0)" class="ml5 mr10 goldIcon tiptop icon-info"
+                                                title="毛利=销售结算金额-（采购结算金额+加工费+短驳费+物流费+费用）-资金占用利息-税金"></a>
+                                            <span class="g28">毛利率：</span><span class="red">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="pl5 pr5">
+                                        <div class="pt20 tl pl30 bgwh" style="height: 70px; border-radius:3px;">
+                                            <div class="mt2">
+                                                <span class="g28">销售结算金额：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">采购款：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">&emsp;&emsp;运输费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">&emsp;&emsp;加工费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">&emsp;短驳费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">仓库费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">&emsp;库存：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">银行费用：</span>
+                                                <span class="red mr20">10000</span>
+                                            </div>
+                                            <div class="mt10">
+                                                <span class="g28">资金占用利息：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">招待费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">国际快递费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">原产地证费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">普票税费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">贴息费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">差旅费：</span>
+                                                <span class="red mr20">10000</span>
+                                                <span class="g28">咨询分红：</span>
+                                                <span class="red mr20">10000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tl pl5">
+                                        <span class="ui-tip mt10 mb10">提示：有库存的请尽快处理否则不得提成 (未处理库存 0 吨)</span>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
                         </tbody>
+                        <tfoot>
+                            <tr height="45">
+                                <td colspan="23">
+                                    <div class="daj">
+                                        销售已收款:<span class="red mr10">160,000</span>;采购已付款:<span
+                                            class="red mr10">0</span>;物流结算付款:<span class="red mr10">0</span>;
+                                        销售实提重量：<span class="red mr10">10</span>;销售收款金额：<span
+                                            class="red mr10">20,000</span>
+                                        ;采购付款金额：<span class="red mr10">117,500</span>;物流付款金额：<span
+                                            class="red mr10">312</span>
+                                        ;毛利金额：<span class="red mr10">-98,507.93</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr height="45">
+                                <td colspan="23">
+                                    <div class="daj">
+                                        <div>当前页合计：</div>
+                                        <div>
+                                            已收款:<span class="red mr10">160,000</span>;已付款:<span
+                                                class="red mr10">0</span>;毛利金额:<span class="red mr10">-98,507.93</span>;
+                                            G2G金额：<span col>3,300</span>
+                                            金牌商家分红：<span class="red mr10">0</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr height="45">
+                                <td colspan="23">
+                                    <div class="daj">
+                                        <div>所有页合计：</div>
+                                        <div>
+                                            已收款:<span class="red mr10">1,860,323,487.72</span>已付款:<span
+                                                class="red mr10">699,054,554.62</span>毛利金额:<span
+                                                class="red mr10">-87,785,041,676.47</span>
+                                            G2G金额：<span class="red mr10">508,099,816.55</span>
+                                            金牌商家分红：<span class="red mr10">12,011,128.53</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -347,11 +710,56 @@
     <script>
         $(function () {
             $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            $(".qj").click(function () {
-                $('#qj').click()
-                // $("#qj").trigger("focus");
-            })
-        })		
+
+            $(".timeOn label").click(function () {
+                if ($(this).attr("class").indexOf("qj") < 0) {
+                    $("#qj").addClass("dn")
+                } else {
+                    $("#qj").removeClass("dn")
+                }
+            });
+            $(".showTip").find('[title]').qtip({
+                position: {
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+
+            $(".cp").click(function () {
+                if ($(this).find("span").attr("class").indexOf("t_deg90") < 0) {
+                    $(this).find("span").addClass("t_deg90");
+                    $(this).parents("div").next("table").removeClass("dn");
+                } else {
+                    $(this).find("span").removeClass("t_deg90");
+                    $(this).parents("div").next("table").addClass("dn");
+                }
+            });
+        })
+
+        function showTrMore(obj) {
+            $(obj).parents("tr").next(".hideTr").toggle();
+            if ($(obj).find("img").attr("class").indexOf("t_deg90") < 0) {
+                $(obj).find("img").addClass("t_deg90");
+            } else {
+                $(obj).find("img").removeClass("t_deg90");
+            }
+        }
+
+        function show(obj) {
+            if ($(obj).find("img").attr("class").indexOf("t_deg90") < 0) {
+                $(obj).find("img").addClass("t_deg90");
+                $(obj).parents(".df").next("div").removeClass("dn");
+            } else {
+                $(obj).find("img").removeClass("t_deg90");
+                $(obj).parents(".df").next("div").addClass("dn");
+            }
+
+        }
+
+
     </script>
 </body>
 

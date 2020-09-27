@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>差异调整-报表管理-乐刚智能云系统</title>
+    <title>毛利明细表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -38,7 +38,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">差异调整</span>
+                <span class="g28">毛利明细表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -58,18 +58,18 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table width="100%" class="mt5">
+                <table width="100%">
                     <tr>
                         <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入区域" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入区域" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">统计时间：</span>
-                                <span class="ui-input pct70 mr20" data-type="time"><input type="text" placeholder="选择时间"
+                                <span class="ui-input pct69 mr20" data-type="time"><input type="text" placeholder="选择时间"
                                         class="render-month" readonly=""></span>
                             </span>
                         </td>
@@ -87,7 +87,7 @@
                     </tr>
                     <tr>
                         <td colspan="8">
-                            <div class="mt20 mb20 tc">
+                            <div class="mt20 mb30 tc">
                                 <button type="button" class="ui-button mr10">查询</button>
                                 <button type="button" class="ui-button " data-type="clear">清空</button>
                             </div>
@@ -95,7 +95,7 @@
                     </tr>
                 </table>
 
-                <table class="ui-table tc f12 checkbox mt20 table-cw" width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="3%">序号</th>
@@ -152,46 +152,58 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="4">当前页合计:</td>
-                            <td>25,500,988.39</td>
-                            <td>23,024,172.52</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>64,596,009.73</td>
-                            <td>-70,326,569.28</td>
-                            <td>323,914.27</td>
-                            <td>22,674.02</td>
-                            <td>14,524.4</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>623.22</td>
-                            <td>10,578.064</td>
+                            <td colspan="22">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">当前页合计：</div>
+                                    <div class="tl">
+                                        内贸收入:<span class="red mr10">10</span>
+                                        内贸成本:<span class="red mr10">1.000</span>
+                                        运输费:<span class="red mr10">1.000</span>
+                                        加工费:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓储费:<span class="red mr10">1.000</span>
+                                        运输对账补差:<span class="red mr10">1.000</span>
+                                        加工对账补差:<span class="red mr10">1.000</span>
+                                        短驳对账补差:<span class="red mr10">1.000</span>
+                                        资金占用利息:<span class="red mr10">1.000</span>
+                                        预计税前毛利:<span class="red mr10">1.000</span>
+                                        增值税:<span class="red mr10">1.000</span>
+                                        附加税:<span class="red mr10">1.000</span>
+                                        印花税:<span class="red mr10">1.000</span>
+                                        企业所得税:<span class="red mr10">1.000</span>
+                                        个人所得税:<span class="red mr10">1.000</span>
+                                        加盟分红:<span class="red mr10">1.000</span>
+                                        合伙分红:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="4">所有页合计:</td>
-                            <td>25,858,077,512.41</td>
-                            <td>801,760,699.41</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>119,001,083.46</td>
-                            <td>24,892,740,221.05</td>
-                            <td>3,634,044,685.77</td>
-                            <td>254,383,128.02</td>
-                            <td>6,837,980.01</td>
-                            <td>5,276,104,757.51</td>
-                            <td>5,064,979,772</td>
-                            <td>225,966,905.83</td>
-                            <td>97,652.063</td>
+                            <td colspan="22">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">所有页合计：</div>
+                                    <div class="tl">
+                                        内贸收入:<span class="red mr10">10</span>
+                                        内贸成本:<span class="red mr10">1.000</span>
+                                        运输费:<span class="red mr10">1.000</span>
+                                        加工费:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓储费:<span class="red mr10">1.000</span>
+                                        运输对账补差:<span class="red mr10">1.000</span>
+                                        加工对账补差:<span class="red mr10">1.000</span>
+                                        短驳对账补差:<span class="red mr10">1.000</span>
+                                        资金占用利息:<span class="red mr10">1.000</span>
+                                        预计税前毛利:<span class="red mr10">1.000</span>
+                                        增值税:<span class="red mr10">1.000</span>
+                                        附加税:<span class="red mr10">1.000</span>
+                                        印花税:<span class="red mr10">1.000</span>
+                                        企业所得税:<span class="red mr10">1.000</span>
+                                        个人所得税:<span class="red mr10">1.000</span>
+                                        加盟分红:<span class="red mr10">1.000</span>
+                                        合伙分红:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

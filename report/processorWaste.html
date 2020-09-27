@@ -50,13 +50,37 @@
             </div>
         </div>
         <div class="ui-content ovh minH">
-            <div class="pl20 pr20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">加工商：</td>
-                            <td colspan="3" class="tl">
-                                <div class="dib selectProcName selectSingle gc ml10">
+            <div class="pl20 pt10 pr20 f12">
+                <table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;收货单位：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入收货单位" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">废料名称：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入废料名称" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="33.3%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">出库日期：</span>
+                                <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="df">
+                                <div class="mt5">加盟加工商：</div>
+                                 <div class="dib selectProcName selectSingle gc">
                                     <a href="javscript:void(0)" class="on">全部</a>
                                     <span class="pr5 pl5 ">|</span>
                                     <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -78,35 +102,8 @@
                                     <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
                                     <span class="pr5 pl5 ">|</span>
                                 </div>
-                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)"
-                                    id="jgs_scroll">展开</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">收货单位：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入收货单位" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">废料名称：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入废料名称" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">出库日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
-                            </span>
+                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+                            </div>
                         </td>
                     </tr>
                 </table>

@@ -20,7 +20,6 @@
             min-width: auto;
         }
     </style>
-
 </head>
 
 <body class="showTip report">
@@ -44,19 +43,95 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-        <div class="ui-tab3 ">
-            <a href="grossProfitDetail.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">加工商库存</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-
         <div class="ui-content ovh minH">
-            <div class="pl20 pr20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">加工商：</td>
-                            <td colspan="3" class="tl">
-                                <div class="dib selectProcName selectSingle gc ml10">
+            <div class="pl20 pr20 pt10 f12">
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">销售单价：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入销售单价" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">货主单位：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入货主单位" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">捆包号：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输捆包号" autocomplete="off">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;&emsp;品名：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入品名" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;&emsp;钢厂：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入钢厂" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;&emsp;规格：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入规格" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;牌号：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入牌号" autocomplete="off">
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;&emsp;仓库：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入仓库" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">入库日期：</span>
+                                <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                        class="render-time pct45" readonly="">
+                                </span>
+                            </span>
+                        </td>
+                        <td colspan="2">
+                            货物状态：<span class="dib selectSingle">
+                                <a class=" on" href="javscript:void(0)">全部</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">加工中</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">挂牌中</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">提货中</a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                                <span class="dib vt mt5">&emsp;加工商：</span>
+                                <span class="dib selectProcName selectSingle gc">
                                     <a href="javscript:void(0)" class="on">全部</a>
                                     <span class="pr5 pl5 ">|</span>
                                     <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -77,104 +152,13 @@
                                     <span class="pr5 pl5 ">|</span>
                                     <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
                                     <span class="pr5 pl5 ">|</span>
-                                </div>
+                                </span>
                                 <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)"
                                     id="jgs_scroll">展开</a>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">货物状态：</td>
-                            <td class="cont" width="87%" colspan="3">
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">加工中</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">挂牌中</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">提货中</a>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">品名：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入品名" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">&emsp;钢厂：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入钢厂" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">货主单位：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入货主单位" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">规则：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入规则" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">&emsp;牌号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入牌号" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">销售单价：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入销售单价" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">仓库：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入仓库" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">捆包号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输捆包号" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">入库日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
-                            </span>
                         </td>
                     </tr>
                 </table>
-                <div class="mt10 mb30 tc">
+                <div class="mb30 tc">
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
@@ -227,42 +211,26 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="2">当前页合计:</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>10</td>
-                            <td>71.5</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td colspan="19">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">当前页合计：</div>
+                                    <div class="tl">
+                                        数量:<span class="red mr10">1.000</span>
+                                        重量:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="2">所有页合计:</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>22,814,754.11</td>
-                            <td>473,722.947</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td colspan="19">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">所有页合计：</div>
+                                    <div class="tl">
+                                        数量:<span class="red mr10">1.000</span>
+                                        重量:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
