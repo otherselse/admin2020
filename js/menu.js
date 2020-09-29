@@ -1,7 +1,7 @@
 	var menu_Data=[
 		{"title":"评审管理",
 		 "menuList":[
-			 	{"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../toApplySale/toPersonList.html"},{"mtitle":"单位评审","href":"../toApplySale/adminIndexListNew.html"},{"mtitle":"实名注册审批","href":"../index/index.html"},{"mtitle":"加工主账号评审","href":"../index/index.html"},{"mtitle":"公司信息评审","href":"../index/index.html"},{"mtitle":"质保书评审","href":"../index/index.html"},{"mtitle":"单位预审","href":"../index/index.html"},{"mtitle":"SAAS用户审核","href":"../index/index.html"},{"mtitle":"主账号移交记录","href":"../index/index.html"}
+			 	{"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../toApplySale/toPersonList.html"},{"mtitle":"单位评审","href":"../toApplySale/adminIndexListNew.html"},{"mtitle":"实名注册审批","href":"../toApplySale/real-nameRegistration.html"},{"mtitle":"加工主账号评审","href":"../toApplySale/mainProcessingAccount.html"},{"mtitle":"公司信息评审","href":"../toApplySale/companyInformationReview.html"},{"mtitle":"质保书评审","href":"../toApplySale/reviewOfWarranty.html"},{"mtitle":"单位预审","href":"../toApplySale/unitBudget.html"},{"mtitle":"SAAS用户审核","href":"../toApplySale/SASSTheUserAudit.html"},{"mtitle":"主账号移交记录","href":"../toApplySale/masterAccountTransferRecord.html"}
 			 	]}
 
 			]
