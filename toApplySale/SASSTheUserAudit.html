@@ -535,7 +535,7 @@
                                                     <span class="pt5 dib pl10">选择适用系统：</span>
                                                 </td>
                                                 <td width="37%">
-                                                    <span class="dib checkbox ml10">
+                                                    <span class="checkbox ml10">
                                                         <label class="mr20"><i
                                                                 class="ui-checkbox on goldIcon v-3 mr2"><input
                                                                     type="checkbox" class="checkbox-opacity"
@@ -605,10 +605,9 @@
             });
 
             //checkbox 多选
-            $(".checkbox").on("click", ".ui-checkbox", function () {
-                $(this).toggleClass("on");
-                alert(1)
-            })
+            $(".checkbox label").click(function(){
+                $(this).find("i").toggleClass("on");
+            });
         })
 
         function show(obj) {

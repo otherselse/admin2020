@@ -36,16 +36,21 @@
 			 	,{"bigM":"操作类","smallM":[{"mtitle":"资金日报录入","href":"../index/index.html"},{"mtitle":"经营报表录入","href":"../index/index.html"},{"mtitle":"收据","href":"../index/index.html"},{"mtitle":"汇兑管理","href":"../index/index.html"},{"mtitle":"优惠券管理","href":"../index/index.html"},{"mtitle":"乐付宝账号管理","href":"../index/index.html"}]}	
 			]
 		}
-		,{"title":"审批管理",
-		 "menuList":[
-			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
-			]
-		}
+		
 		,{"title":"审批管理",
 		 "menuList":[
 			 	{"bigM":"角色管理类1","smallM":[{"mtitle":"角色管理类small1","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}
 			 	,{"bigM":"角色管理类2","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
 			 	,{"bigM":"角色管理类3","smallM":[{"mtitle":"角色管理类small2","href":"../index/index.html"},{"mtitle":"角色管理类small2","href":"../index/index.html"}]}	
+			]
+		}
+		,{"title":"统计管理",
+		 "menuList":[
+			 	{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../report/orderFulfillment.html"},{"mtitle":"双发积分统计","href":"../report/theSalesExecutive.html"},{"mtitle":"商城交易量统计","href":"../report/inventory.html"},{"mtitle":"用户点击量统计","href":"../report/summary.html"},{"mtitle":"金牌商家信息","href":"../report/shippingTrackingForm.html"}]}
+			 	,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../report/purchaseSchedule.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易盘点跟踪表","href":"../report/tradeInventoryTracking.html"},{"mtitle":"自营管理","href":"../report/forResources.html"},{"mtitle":"单位评审统计表","href":"../report/unitReviewStatistics.html"},{"mtitle":"区域客户统计表","href":"../report/regionalCustomerStatistics.html"},{"mtitle":"客户分配跟踪表","href":"../report/customerAssignmentTracking.html"},{"mtitle":"创业帮跟踪表","href":"../report/businessHelpSum.html"},{"mtitle":"金牌商家业务跟踪","href":"../report/goldMerchants.html"},{"mtitle":"运输排行表","href":"../report/transportationSchedule.html"},{"mtitle":"运输统计表","href":"../report/transportStatistics.html"} ,{"mtitle":"VIP单位评审表","href":"../report/reviewFormForVIPUnits.html"} ]}	
+				//  {"mtitle":"新经营报表","href":"../index/index.html"},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"}, 
+				,{"bigM":"款项类","smallM":[{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html"},{"mtitle":"G2G统计表","href":"../report/G2GTab.html"},{"mtitle":"资金跟踪表","href":"../report/shouldAdvance.html"},{"mtitle":"待付款跟踪表","href":"../report/paymentTrackingForm.html"},{"mtitle":"佣金回访表","href":"../report/commission.html"},{"mtitle":"红利明细表","href":"../report/bonusDetails.html"},{"mtitle":"第三方支付结算跟踪表","href":"../report/settlementTracking.html"},{"mtitle":"在线支付使用跟踪表","href":"../report/onlinePaymentUsageTracking.html"},{"mtitle":"金牌商家备货金管理","href":"../report/goldMerchantsStockUp.html"},{"mtitle":"交易明细表","href":"../report/salesBreakdown.html"},{"mtitle":"收支明細表","href":"../report/paymentDetails.html"}]}	
+				,{"bigM":"加工类","smallM":[{"mtitle":"加工商库存","href":"../report/processorInventory.html"},{"mtitle":"加工商收入情况表","href":"../report/processorIncome.html"},{"mtitle":"加工收款统计表","href":"../report/processingPayment.html"},{"mtitle":"加工商毛利表","href":"../report/grossMarginForProcessors.html"},{"mtitle":"加工商废料收入","href":"../report/processorWaste.html"},{"mtitle":"加工商出入库报表","href":"../report/processingInventoryRecords.html"},{"mtitle":"生产一线人员效益统计表","href":"../report/theProductionLine.html"},{"mtitle":"加工商付款明细表","href":"../report/paymentList.html"},{"mtitle":"加工商收款明细表","href":"../report/processorReceipt.html"},{"mtitle":"加工商分红明细","href":"../report/processorBonusDetails.html"},{"mtitle":"加工商盘点跟踪表","href":"../report/processorInventoryTracking.html"}]}	
 			]
 		}
 		,{"title":"报表管理",

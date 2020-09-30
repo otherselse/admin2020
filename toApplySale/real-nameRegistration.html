@@ -51,8 +51,8 @@
         <div class="ui-tab3">
             <a href="real-nameRegistration.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">实名注册审批</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="thePrimaryAccount.html" class="ui-tab3-list rel"><span
-                    class="ui-tab3-text">主账号审批</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="thePrimaryAccount.html" class="ui-tab3-list rel"><span class="ui-tab3-text">主账号审批</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
         </div>
 
         <div class="ui-content minH">
@@ -60,7 +60,7 @@
                 <div class="cl mb10 dac f12 ">
                     审核状态：<span class="single mr20">
                         <input type="hidden">
-                        <button type="button" class="ui-option mr5">待评审</button>
+                        <button type="button" class="ui-option mr5 on" id="ht">待评审</button>
                         <button type="button" class="ui-option mr5">审核通过</button>
                         <button type="button" class="ui-option mr5">审核不通过</button>
                         <button type="button" class="ui-option mr5">盖章确认</button>
@@ -103,8 +103,7 @@
 
                 <table class="ui-table tc f12 mt30" width="100%">
                     <thead>
-                        <!-- 待评审状态表头 -->
-                        <tr>
+                        <!-- <tr>
                             <th width="6%">序号</th>
                             <th width="10%">申请时间</th>
                             <th width="23%">单位名称</th>
@@ -112,18 +111,20 @@
                             <th width="9%">审核状态</th>
                             <th width="7%">授权书回收</th>
                             <th width="10%">操作</th>
-                        </tr>
+                        </tr> -->
                         <!-- 其他评审状态表头 -->
-                        <tr class="dn">
-                            <td width="5%">序号</td>
-                            <td width="8%">申请时间</td>
-                            <td width="10%">单位名称</td>
-                            <td width="8%">申请账号</td>
-                            <td width="8%">审核状态</td>
-                            <td width="8%">审核人</td>
-                            <td width="15%">审核时间</td>
-                            <td width="7%">授权书回收</td>
-                            <td width="5%">操作</td>
+                        <tr class="">
+                            <th width="5%">序号</th>
+                            <th width="8%">申请时间</th>
+                            <th width="10%">单位名称</th>
+                            <th width="8%">申请账号</th>
+                            <th width="8%">审核状态</th>
+                            <!-- 待评审状态不显示这个两列 -->
+                            <th width="8%" class='sr'>审核人</th>
+                            <th width="15%" class='st'>审核时间</th>
+
+                            <th width="7%">授权书回收</th>
+                            <th width="5%">操作</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover">
@@ -132,37 +133,1069 @@
                             <td>2020-09-22 20:13:13</td>
                             <td>我是测试公司名称</td>
                             <td>12232323232</td>
-                            <td>待审核<span></span></td>
+                            <td><span class="blue">待审核</span></td>
+                            <!-- 待评审状态不显示这个两列 -->
+                            <td>--</td>
+                            <td>--</td>
                             <td><span class="red">否</span></td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue">审核<span
-                                        class="ml2 dib t_deg90 b">></span></a>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看</a>
                             </td>
                         </tr>
+                        <!-- 待审核开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <!-- <div class="g28 f14 mt20 b tl mb10">延期申请</div> -->
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">单位名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业性质：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">外资</a>
+                                                        <a class="" href="javscript:void(0)">民营</a>
+                                                        <a class="" href="javscript:void(0)">国企</a>
+                                                        <a class="" href="javscript:void(0)">合资</a>
+                                                    </div>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户分类：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">终端客户</a>
+                                                        <a class="" href="javscript:void(0)">中间商</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">固定电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">修真号码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司证件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">实名认证授权书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">联系人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业代理人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">企业代理人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">代理人身份证号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">代理人身份证附件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">金牌商家：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户备注：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">开票资料或开户证明：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10"></span>
+                                                </td>
+                                                <td width="37%">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批意见：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="radio pl10">
+                                                        <label class="mr20" onclick="clickPermit(this,'1')"><i
+                                                                class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                                    class="radio-opacity" name="radio"></i> 审核通过</label>
+                                                        <label class="mr20" onclick="clickPermit(this,'2')"><i
+                                                                class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                                    class="radio-opacity" name="radio"></i>审核不通过</label>
+                                                        <span class="pl5 pr5">|</span>
+                                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input
+                                                                    type="radio" class="radio-opacity"
+                                                                    name="radio"></i>通过实名验证</label>
+                                                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input
+                                                                    type="radio" class="radio-opacity"
+                                                                    name="radio"></i>未通过是认证</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批备注：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="tc  mt20 mb20">
+                                        <button type="button" class="ui-button mr10">提交</button>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+
                         <tr height="50px">
                             <td>1</td>
                             <td>2020-09-22 20:13:13</td>
                             <td>我是测试公司名称</td>
                             <td>12232323232</td>
-                            <td>待审核<span></span></td>
-                            <td><span>是</span></td>
+                            <td><span class="blue">审核通过</span></td>
+                            <!-- 待评审状态不显示这个两列 -->
+                            <td>--</td>
+                            <td>--</td>
+                            <td><span class="red">否</span></td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue">查看<span
-                                        class="ml2 dib t_deg90 b">></span></a>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看</a>
                             </td>
                         </tr>
+                        <!-- 审核通过开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <!-- <div class="g28 f14 mt20 b tl mb10">延期申请</div> -->
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">单位名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业性质：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">外资</a>
+                                                        <a class="" href="javscript:void(0)">民营</a>
+                                                        <a class="" href="javscript:void(0)">国企</a>
+                                                        <a class="" href="javscript:void(0)">合资</a>
+                                                    </div>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户分类：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">终端客户</a>
+                                                        <a class="" href="javscript:void(0)">中间商</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">固定电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">修真号码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司证件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">实名认证授权书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">联系人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业代理人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">企业代理人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">代理人身份证号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">代理人身份证附件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">金牌商家：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户备注：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">开票资料或开户证明：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10"></span>
+                                                </td>
+                                                <td width="37%">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审核意见：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="tc">
+                                                        同意申请。
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">授权书是否回收：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="dac pl10">
+                                                        <div class="pct70">
+                                                            <div class="mb10">
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 是</label>
+                                                                <span class=" dib">
+                                                                    <button type="button" class="ui-button mr10 vm w120"
+                                                                        data-type="upfile"
+                                                                        onclick="upfile()">高拍仪上传</button>
+                                                                    <button type="button" class="ui-button mr10 vm"
+                                                                        data-type="upfile"
+                                                                        onclick="upfile()">常规上传</button>
+                                                                    <span class="ui-files ml10 vm"><a
+                                                                            href="javascript:void(0)"
+                                                                            class="g80">组件1111组件</a><a
+                                                                            class="icon-sdel goldIcon vm ml5"
+                                                                            href="#"></a></span>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 否</label>
+                                                                <span class="input-selSearch pct40">
+                                                                    <input type="text" class="pct69 ui-input searchUp"
+                                                                        placeholder="占位符" autocomplete="off">
+                                                                    <div class="search-cont pct69">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell active">选择选择1</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择2</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择3</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择5</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择6</a>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="ui-button mr10">提交</button>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">客户现场授权证明：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="ml10 dib">
+                                                        <button type="button" class="ui-button mr10 vm w120"
+                                                            data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                        <button type="button" class="ui-button mr10 vm"
+                                                            data-type="upfile" onclick="upfile()">常规上传</button>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">添加备注：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"
+                                                            placeholder="最多500字"></textarea>
+                                                    </div>
+                                                    <div class="tc mt10">
+                                                        <button type="button" class="ui-button mr10">添加备注</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">备注信息：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+
                         <tr height="50px">
                             <td>1</td>
                             <td>2020-09-22 20:13:13</td>
                             <td>我是测试公司名称</td>
                             <td>12232323232</td>
-                            <td>待审核<span></span></td>
-                            <td><span>是</span></td>
+                            <td><span class="blue">审核不通过</span></td>
+                            <!-- 待评审状态不显示这个两列 -->
+                            <td>--</td>
+                            <td>--</td>
+                            <td><span class="red">否</span></td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue">回收<span
-                                        class="ml2 dib t_deg90 b">></span></a>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看</a>
                             </td>
                         </tr>
+                        <!-- 审核不通过开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <!-- <div class="g28 f14 mt20 b tl mb10">延期申请</div> -->
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">单位名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内<span
+                                                            class="red dib ml5">(自动)</span></span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业性质：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">外资</a>
+                                                        <a class="" href="javscript:void(0)">民营</a>
+                                                        <a class="" href="javscript:void(0)">国企</a>
+                                                        <a class="" href="javscript:void(0)">合资</a>
+                                                    </div>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户分类：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">终端客户</a>
+                                                        <a class="" href="javscript:void(0)">中间商</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">固定电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">修真号码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司证件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">实名认证授权书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">联系人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业代理人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">企业代理人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">代理人身份证号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">代理人身份证附件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">金牌商家：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户备注：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">开票资料或开户证明：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10"></span>
+                                                </td>
+                                                <td width="37%">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审核意见：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="tc">
+                                                        同意申请。
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>2020-09-22 20:13:13</td>
+                            <td>我是测试公司名称</td>
+                            <td>12232323232</td>
+                            <td><span class="blue">审核通过</span></td>
+                            <!-- 待评审状态不显示这个两列 -->
+                            <td>--</td>
+                            <td>--</td>
+                            <td><span class="red">否</span></td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看</a>
+                                <a href="javascript:void(0)" onclick="seal(1)">已盖章</a>
+                            </td>
+                        </tr>
+                        <!-- 审核通过开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <!-- <div class="g28 f14 mt20 b tl mb10">延期申请</div> -->
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">单位名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%" class="pl10">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业性质：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">外资</a>
+                                                        <a class="" href="javscript:void(0)">民营</a>
+                                                        <a class="" href="javscript:void(0)">国企</a>
+                                                        <a class="" href="javscript:void(0)">合资</a>
+                                                    </div>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户分类：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 dib selectSingle dac">
+                                                        <a class=" on" href="javscript:void(0)">终端客户</a>
+                                                        <a class="" href="javscript:void(0)">中间商</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">固定电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">修真号码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司证件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">实名认证授权书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">联系人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业代理人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">企业代理人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">11132113424124</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">代理人身份证号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">代理人身份证附件：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">金牌商家：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10">客户备注：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%"><span
+                                                        class="pt5 dib pl10">开票资料或开户证明：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="ml10 dib">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl10"></span>
+                                                </td>
+                                                <td width="37%">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审核意见：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="tc">
+                                                        同意申请。
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">授权书是否回收：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="dac pl10">
+                                                        <div class="pct70">
+                                                            <div class="mb10">
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 是</label>
+                                                                <span class=" dib">
+                                                                    <button type="button" class="ui-button mr10 vm w120"
+                                                                        data-type="upfile"
+                                                                        onclick="upfile()">高拍仪上传</button>
+                                                                    <button type="button" class="ui-button mr10 vm"
+                                                                        data-type="upfile"
+                                                                        onclick="upfile()">常规上传</button>
+                                                                    <span class="ui-files ml10 vm"><a
+                                                                            href="javascript:void(0)"
+                                                                            class="g80">组件1111组件</a><a
+                                                                            class="icon-sdel goldIcon vm ml5"
+                                                                            href="#"></a></span>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 否</label>
+                                                                <span class="input-selSearch pct40">
+                                                                    <input type="text" class="pct69 ui-input searchUp"
+                                                                        placeholder="占位符" autocomplete="off">
+                                                                    <div class="search-cont pct69">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell active">选择选择1</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择2</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择3</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择5</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择6</a>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="ui-button mr10">提交</button>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">客户现场授权证明：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="ml10 dib">
+                                                        <button type="button" class="ui-button mr10 vm w120"
+                                                            data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                        <button type="button" class="ui-button mr10 vm"
+                                                            data-type="upfile" onclick="upfile()">常规上传</button>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">添加备注：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"
+                                                            placeholder="最多500字"></textarea>
+                                                    </div>
+                                                    <div class="tc mt10">
+                                                        <button type="button" class="ui-button mr10">添加备注</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">备注信息：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
                     </tbody>
                 </table>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
@@ -198,7 +1231,7 @@
     <script>
         $(function () {
             $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            
+
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -223,9 +1256,36 @@
             });
 
         })
-        function returnToApplicant() {
 
-        } 
+        //选择单选
+        // $(".single").on("click", ".ui-option", function () {
+        //     if ($(this).attr("id") == "ht") {
+        //         $(".sr,.st").addClass("dn");
+        //     }else{
+        //         $(".sr,.st").removeClass("dn");
+        //     }
+        //     $(this).addClass("on").siblings("button").removeClass("on");
+        // })
+        function seal(val) {
+            if (val == 1) {
+                alert("授权书是否未盖章？");
+            }else{
+                alert("授权书是否已盖章？")
+            }
+        }
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("审核通过。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("审核不通过。");
+            }
+        }
+
     </script>
 </body>
 
