@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>加工仓储协议审批-审批管理-乐刚智能云系统</title>
+    <title>退货入库审批单据-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -30,9 +30,9 @@
             <div class="l gga">
                 <a href="../index/index.html" class="gga">首页</a>
                 <span class="dib gga pl5 pr5">/</span>
-                评审管理
+                审批管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">评审</span>
+                <span class="g28">退货入库审批</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -43,20 +43,20 @@
             </div>
             <div class="lh84 bor-bottom">
                 <div class="ui-tab4">
-                    <a href="./querySignDetail.html" class="ui-tab4-list ml20 mr10">合同明细</a>
-                    <a href="./querySignDetailRecord.html" class="ui-tab4-list ">确认记录</a>
-                    <a href="./signVerdict.html" class="ui-tab4-list on">审批意见</a>
+                    <a href="./saleBackFilePermitDetail.html" class="ui-tab4-list on ml20">审批意见</a>
                 </div>
             </div>
             <div class="p20">
                 <div>
-                    <span class="f14 g28">加工仓储协议评审意见</span>
+                    <span class="f14 g28">销售退货入库评审意见</span>
                 </div>
                 <table class="ui-table f12 pct100 row mt15">
                     <tbody>
                         <tr>
-                            <td width="20%">审核</td>
-                            <td width="80%">1节点</td>
+                            <td width="20%">退货入库附件:</td>
+                            <td width="80%">
+                                <a href="javascript:void(0)" class="ui-files  vm">组件1111.jpg</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>审批意见</td>
@@ -97,9 +97,6 @@
     </div>
     <!-- rightBar -->
 
-    <a jef="http://lgsteel.com/default/indexShowAllNotice.html" target="_blank" 
-    style="background: url(http://resource.lgsteel.cn/mainSite/images/mylg/banner/seekPerson_mylg1.jpg?v=2) center top no-repeat;" class="lgBanner"></a>
-
 
 
 
@@ -110,7 +107,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script>
         $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
         function prev() {

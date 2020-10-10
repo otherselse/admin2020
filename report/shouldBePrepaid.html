@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>第三方支付结算跟踪表-报表管理-乐刚智能云系统</title>
+    <title>资金跟踪表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -37,7 +37,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">第三方支付结算跟踪表</span>
+                <span class="g28">资金跟踪表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -53,19 +53,37 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">状态：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">应收</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">预收</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">业务类型：</td>
-                            <td class="cont" width="37%">
+                <table width="100%">
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">供应商名称：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入客户名称" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">金牌商家：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">区域：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入区域" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">订单号：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="df mt10">
+                                <div>业务类型：</div>
                                 <div class="dib selectSingle dac">
                                     <a class=" on" href="javscript:void(0)">现款业务</a>
                                     <span class="pr5  pl5 ">|</span>
@@ -75,48 +93,29 @@
                                     <span class="pr5  pl5 ">|</span>
                                     <a class="" href="javscript:void(0)">外贸业务</a>
                                 </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table width="100%" class="mt5">
-                    <tr>
-                        <td width="25%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">供应商名称：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入客户名称" autocomplete="off">
-                            </span>
+                            </div>
                         </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入区域" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
-                            </span>
+                        <td>
+                            <div class="df mt10">
+                                <div>状态：</div>
+                                <div class="dib selectSingle dac">
+                                    <a class=" on" href="javscript:void(0)">应收</a>
+                                    <span class="pr5  pl5 ">|</span>
+                                    <a class="" href="javscript:void(0)">预收</a>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <div class="mt20 mb20 tc">
+                            <div class="mt20 mb30 tc">
                                 <button type="button" class="ui-button mr10">查询</button>
                                 <button type="button" class="ui-button " data-type="clear">清空</button>
                             </div>
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="4%">序号</th>
@@ -153,22 +152,34 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="7">当页合计</td>
-                            <td>148</td>
-                            <td>304,600</td>
-                            <td>0</td>
-                            <td>90</td>
-                            <td>177,600</td>
-                            <td>-177,600</td>
+                            <td colspan="13">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">当前页合计：</div>
+                                    <div class="tl">
+                                        合同重量:<span class="red mr10">10</span>
+                                        合同金额:<span class="red mr10">1.000</span>
+                                        已付款金额:<span class="red mr10">1.000</span>
+                                        入库重量:<span class="red mr10">1.000</span>
+                                        结算金额:<span class="red mr10">1.000</span>
+                                        应付金额:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="7">所有汇总</td>
-                            <td>874,094.242</td>
-                            <td>2,141,444,612.13</td>
-                            <td>407,074,556.87</td>
-                            <td>626,061.806</td>
-                            <td>1,624,827,252.82</td>
-                            <td>-1,217,752,695.95</td>
+                            <td colspan="13">
+                                <div class="daj">
+                                    <div style="min-width: 80px;">所有页合计：</div>
+                                    <div class="tl">
+                                        合同重量:<span class="red mr10">10</span>
+                                        合同金额:<span class="red mr10">1.000</span>
+                                        已付款金额:<span class="red mr10">1.000</span>
+                                        入库重量:<span class="red mr10">1.000</span>
+                                        结算金额:<span class="red mr10">1.000</span>
+                                        应付金额:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

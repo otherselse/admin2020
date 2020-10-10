@@ -46,13 +46,43 @@
         </div>
 
         <div class="ui-content ovh minH">
-            <div class="pl20 pr20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">加盟加工商：</td>
-                            <td colspan="3" class="tl">
-                                <div class="dib selectProcName selectSingle gc ml10">
+            <div class="pl20 mt10 pr20 f12">
+                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
+                    <tr>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">&emsp;金牌商家：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">货主单位：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入货主单位" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100">
+                                <span class="dib">单据号：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入单据号" autocomplete="off">
+                            </span>
+                        </td>
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">入库日期：</span>
+                                <span class="dib pct69">
+                                    <span class="ui-input ui-input pct100" data-type="time" small-type="small"><input
+                                            type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
+                                            lay-key="11"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="df">
+                                <div class="mt5">加盟加工商：</div>
+                                 <div class="dib selectProcName selectSingle gc">
                                     <a href="javscript:void(0)" class="on">全部</a>
                                     <span class="pr5 pl5 ">|</span>
                                     <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -74,59 +104,21 @@
                                     <a href="javscript:void(0)">乔碧萝变变变加工厂</a>
                                     <span class="pr5 pl5 ">|</span>
                                 </div>
-                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)"
-                                    id="jgs_scroll">展开</a>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">费用类型：</td>
-                            <td class="cont" width="87%" colspan="3">
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">加工中</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">挂牌中</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">提货中</a>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">货主单位：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入货主单位" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">单据号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入单据号" autocomplete="off">
-                            </span>
+                                <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib">入库日期：</span>
-                                <span class="dib pct70">
-                                    <span class="ui-input ui-input pct100" data-type="time" small-type="small"><input
-                                            type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
-                                            lay-key="11"></span>
-                                </span>
+                        <td colspan="4">
+                            &emsp;费用类型：<span class="dib selectSingle mr20">
+                                <a class=" on" href="javscript:void(0)">全部</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">加工中</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">挂牌中</a>
+                                <span class="pr5  pl5 ">|</span>
+                                <a class="" href="javscript:void(0)">提货中</a>
                             </span>
-                        </td>
-                        <td>
                             <button type="button" class="ui-button mr10">查询</button>
                             <button type="button" class="ui-button " data-type="clear">清空</button>
                         </td>
@@ -182,25 +174,23 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td>总计</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>&nbsp;</td>
-
+                            <td colspan="21">
+                                <div class="daj">
+                                    <div style="min-width: 50px;">总计：</div>
+                                    <div class="tl">
+                                        重量:<span class="red mr10">10</span>
+                                        业务金额:<span class="red mr10">1.000</span>
+                                        辅料费:<span class="red mr10">10</span>
+                                        佣金:<span class="red mr10">1.000</span>
+                                        运费:<span class="red mr10">10</span>
+                                        委外加工费:<span class="red mr10">1.000</span>
+                                        维修费:<span class="red mr10">10</span>
+                                        电费:<span class="red mr10">1.000</span>
+                                        水费:<span class="red mr10">10</span>
+                                        毛利:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>

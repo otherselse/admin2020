@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>贸易订单-报表管理-乐刚智能云系统</title>
+    <title>毛利明细表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -38,7 +38,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">贸易订单</span>
+                <span class="g28">毛利明细表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -58,7 +58,7 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
+                <table class="ui-table tc f12 auto" width="100%">
                     <tbody>
                         <tr class="resource-table">
                             <td class="title" width="13%">出库类型：</td>
@@ -121,32 +121,30 @@
                         </tr>
                     </tbody>
                 </table>
-                <table width="100%" class="mt5">
+                <table width="100%" class="mt10">
                     <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;金牌商家区域：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家区域" autocomplete="off">
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
+                                <span class="dib">金牌商家区域：</span>
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家区域" autocomplete="off">
                             </span>
                         </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">订单号：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入订单号" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
                             </span>
                         </td>
-                    </tr>
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100 mb5">
+                        <td width="25%">
+                            <span class="input-selSearch pct100 ">
                                 <span class="dib">出库日期：</span>
-                                <span class="ui-input tc f0 pct70  range" data-type="time">
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
@@ -155,15 +153,22 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            <div class="mt20 mb20 tc">
+                        <td colspan="4">
+                            <div class="tc mt20 mb10">
                                 <button type="button" class="ui-button mr10">查询</button>
                                 <button type="button" class="ui-button " data-type="clear">清空</button>
                             </div>
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc f12 checkbox mt20 table-cw" width="100%" data-type="edit">
+                <div class="df mb5">
+                    <div style="flex: 1;"></div>
+                    <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
+                        表头配置
+                        <img src="../images//report/sl1.png" class="mr5" alt="">
+                    </a>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="3%">序号</th>
@@ -201,7 +206,7 @@
                         <tr>
                             <td width="3%">1</td>
                             <td width="3%">自营备货</td>
-                            <td width="4%"><a href="javascript:detail('56581')">56581</a></td>
+                            <td width="4%"><a href="javascript:void(0)" onclick="showStep()">56581</a></td>
                             <td width="4%">运输出库</td>
                             <td width="4%">赵自立</td>
                             <td width="4%">上海</td>
@@ -213,7 +218,7 @@
                             <td width="4%">30,180</td>
                             <td width="3%">0</td>
                             <td width="3%">0</td>
-                            <td width="3%"><a href="javascript:detail('56581')">56581</a></td>
+                            <td width="3%"><a href="javascript:void(0)" onclick="showStep()">56581</a></td>
                             <td width="3%">定购入库</td>
                             <td width="3%">20,000</td>
                             <td width="3%">20,000</td>
@@ -232,52 +237,52 @@
                     </tbody>
                     <tfoot class="">
                         <tr height="45">
-                            <td colspan="8">当前页合计:</td>
-                            <td>51.1</td>
-                            <td></td>
-                            <td></td>
-                            <td>209,637.18</td>
-                            <td>134</td>
-                            <td>0</td>
-                            <td></td>
-                            <td></td>
-                            <td>162,950</td>
-                            <td>162,950</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>46,553.18</td>
-                            <td>24,745.5</td>
-                            <td>6,421.13</td>
-                            <td>96.38</td>
-                            <td>385.28</td>
-                            <td>7,930.08</td>
-                            <td>21,807.68</td>
-                            <td>--</td>
-                            <td>16,341.28</td>
+                            <td colspan="29">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">当前页合计：</div>
+                                    <div class="tl">
+                                        出库重量:<span class="red mr10">10</span>
+                                        销售金额:<span class="red mr10">1.000</span>
+                                        运输费:<span class="red mr10">1.000</span>
+                                        采购金额:<span class="red mr10">1.000</span>
+                                        原始成本金额:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓储费:<span class="red mr10">1.000</span>
+                                        预计税前毛利金额:<span class="red mr10">1.000</span>
+                                        税金:<span class="red mr10">1.000</span>
+                                        增值税:<span class="red mr10">1.000</span>
+                                        印花金:<span class="red mr10">1.000</span>
+                                        附加税:<span class="red mr10">1.000</span>
+                                        个税:<span class="red mr10">1.000</span>
+                                        预计税后毛利:<span class="red mr10">1.000</span>
+                                        预计分红:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr height="45">
-                            <td colspan="8">所有页合计:</td>
-                            <td>105,930.276</td>
-                            <td></td>
-                            <td></td>
-                            <td>444,375,392.44</td>
-                            <td>1,435,375.79</td>
-                            <td>703,985.41</td>
-                            <td></td>
-                            <td></td>
-                            <td>274,051,641.04</td>
-                            <td>245,540,238.23</td>
-                            <td>37,920</td>
-                            <td>823,979.73</td>
-                            <td>167,322,490.47</td>
-                            <td>91,024,989.98</td>
-                            <td>23,697,535.38</td>
-                            <td>185,666.14</td>
-                            <td>1,435,361.94</td>
-                            <td>29,202,854.14</td>
-                            <td>76,297,500.49</td>
-                            <td>--</td>
-                            <td>12,235,291.726</td>
+                            <td colspan="29">
+                                <div class="df pl20">
+                                    <div style="min-width: 80px;">所有页合计：</div>
+                                    <div class="tl">
+                                        出库重量:<span class="red mr10">10</span>
+                                        销售金额:<span class="red mr10">1.000</span>
+                                        运输费:<span class="red mr10">1.000</span>
+                                        采购金额:<span class="red mr10">1.000</span>
+                                        原始成本金额:<span class="red mr10">1.000</span>
+                                        短驳费:<span class="red mr10">1.000</span>
+                                        仓储费:<span class="red mr10">1.000</span>
+                                        预计税前毛利金额:<span class="red mr10">1.000</span>
+                                        税金:<span class="red mr10">1.000</span>
+                                        增值税:<span class="red mr10">1.000</span>
+                                        印花金:<span class="red mr10">1.000</span>
+                                        附加税:<span class="red mr10">1.000</span>
+                                        个税:<span class="red mr10">1.000</span>
+                                        预计税后毛利:<span class="red mr10">1.000</span>
+                                        预计分红:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -312,6 +317,17 @@
             $(this).parents(".mySingle").find("span").removeClass("sbOn")
             $(this).addClass("sbOn")
         });
+
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '表头配置',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['600px', '48%'],
+                content: 'toReadyForTheTrack.html' //iframe的url
+            });
+        }
 
     </script>
 </body>

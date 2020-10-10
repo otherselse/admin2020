@@ -19,6 +19,11 @@
             background: #fff;
             min-width: auto;
         }
+
+        .ui-input[data-type='time'][small-type="small"] {
+            height: 30px;
+            line-height: 30px;
+        }
     </style>
 </head>
 
@@ -46,23 +51,20 @@
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <div class="dac mb20">
-                    <span class="input-selSearch pct30 mb5">
+                    <span class="input-selSearch pct25">
                         <span class="dib">银行名称：</span>
-                        <input type="text" class="ui-input pct70" placeholder="请输入银行名称" autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入银行名称" autocomplete="off">
                     </span>
-                    <span class="input-selSearch pct30 mb5">
+                    <span class="input-selSearch pct25">
                         <span class="dib">时间：</span>
-                        <span class="ui-input ui-input pct40 ml10" data-type="time" small-type="small"><input
+                        <span class="ui-input ui-input pct69 ml10" data-type="time" small-type="small"><input
                                 type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
                                 placeholder="请选择时间" lay-key="11"></span>
                     </span>
-
-                    <div class="tc">
-                        <button type="button" class="ui-button mr10">查询</button>
-                        <button type="button" class="ui-button " data-type="clear">清空</button>
-                    </div>
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox mt40" width="100%" data-type="edit">
+                <table class="ui-table tc f12 checkbox mt30" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="6%">序号</th>
@@ -106,21 +108,6 @@
         $(function () {
             $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(10).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
 
         function showLayer() {
             layer.open({

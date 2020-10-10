@@ -73,13 +73,13 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">加盟公司：</span>
-                                <input type="text" class="ui-input pct70" placeholder="请输入金牌商家" autocomplete="off">
+                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
                             </span>
                         </td>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 dac">
                                 <span class="dib">资金日报日期：</span>
-                                <span class="dib pct70">
+                                <span class="dib pct69">
                                     <span class="ui-input ui-input pct100 ml10" data-type="time"
                                         small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
                                             value="2020-07-20" lay-key="11"></span>
@@ -89,7 +89,7 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
                                 <span class="dib">月份：</span>
-                                <span class="ui-input pct70" data-type="time"><input type="text" placeholder="选择时间"
+                                <span class="ui-input pct69" data-type="time"><input type="text" placeholder="选择时间"
                                         class="render-month" readonly=""></span>
                             </span>
                         </td>
@@ -125,11 +125,17 @@
                     </tbody>
                     <tfoot>
                         <tr height="45">
-                            <td colspan="2">合计</td>
-                            <td>31,911,225.38</td>
-                            <td>-24,390,690</td>
-                            <td>0</td>
-                            <td>-8,536,176.31</td>
+                            <td colspan="9">
+                                <div class="daj">
+                                    <div style="min-width: 50px;">合计：</div>
+                                    <div class="tl">
+                                        上月余额:<span class="red mr10">10</span>
+                                        当月收支:<span class="red mr10">1.000</span>
+                                        当月关联往来收支:<span class="red mr10">1.000</span>
+                                        合计:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -147,23 +153,8 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
-
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
-
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
-
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
 
         setTime4();
         var endtime = '', starttime = '';

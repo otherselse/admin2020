@@ -32,7 +32,6 @@
     <script type="text/javascript" src="../js/leftBar.js"></script>
     <!-- 左侧菜单 -->
 
-
     <div class="rightBar">
         <div class="nav ovh">
             <div class="l gga">
@@ -47,41 +46,14 @@
             </div>
         </div>
         <div class="ui-tab3">
-            <a href="readyForTheTrack.html" class="ui-tab3-list rel "><span class="ui-tab3-text">备贷汇总表</span><i
+            <a href="readyForTheTrack.html" class="ui-tab3-list rel "><span class="ui-tab3-text">备货汇总表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="readyForTheTrackList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">备贷明细表</span><i
+            <a href="readyForTheTrackList.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">备货明细表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto " width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">备货类型：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle">
-                                    <a class="on" href="javscript:void(0)">金牌商家备注</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">客户单位备注</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">金牌商家任你押</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">客户单位任你押</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">销售状态：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>未销售</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>已销售</label>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="mb10 mt10 f0">
+                <div class="mb10 f0">
                     <span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入"
                             autocomplete="off">
                     </span>
@@ -106,36 +78,37 @@
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
+                    <span class="pct50 dib f12">
+                        <div class="df">
+                            <div style="min-width: 70px;">备货类型：</div>
+                            <div class="dib selectSingle pct90">
+                                <a class="on" href="javscript:void(0)">金牌商家备注</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">客户单位备注</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">金牌商家任你押</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">客户单位任你押</a>
+                            </div>
+                        </div>
 
-                    <!-- <span class="pct25 dib f12">
-                        销售状态：
-                        <span class="radio ml5">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>未销售</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>已销售</label>
-                        </span>
                     </span>
-                    -->
+
                 </div>
-                <!-- <div class="mb10 mt10 f0">
-                    <span class="pct75 dib f12">
-                        备货类型：
-                        <div class="dib selectSingle pct90">
-                            <a class="on" href="javscript:void(0)">金牌商家备注</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">客户单位备注</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">金牌商家任你押</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">客户单位任你押</a>
+                <div class="mb10 mt10 f0">
+                    <span class="pct100 dib f12">
+                        <div class="dac">
+                            <div>销售状态：</div>
+                            <div class="radio ml5">
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>未销售</label>
+                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>已销售</label>
+                            </div>
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
                         </div>
                     </span>
-                 
-                </div> -->
-                <div class="tc mt20">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
                 <table class="ui-table tc f12 checkbox mt30" width="100%" data-type="edit">
                     <thead>

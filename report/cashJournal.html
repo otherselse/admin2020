@@ -19,7 +19,7 @@
             background: #fff;
             min-width: auto;
         }
-        
+
         .ui-input[data-type='time'][small-type="small"] {
             height: 30px;
             line-height: 30px;
@@ -69,7 +69,7 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table width="100%" class="mt5">
+                <table  width="100%">
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
@@ -134,15 +134,20 @@
                     </tbody>
                     <tfoot>
                         <tr height="45">
-                            <td colspan="2">合计</td>
-                            <td>85,891.02</td>
-                            <td>123,244</td>
-                            <td>12,324,624</td>
-                            <td>0</td>
-                            <td>-12,115,488.98</td>
-                            <td>12,312</td>
-                            <td>12,127,800.98</td>
-                            <td></td>
+                            <td colspan="10">
+                                <div class="daj">
+                                    <div style="min-width: 50px;">合计：</div>
+                                    <div class="tl">
+                                        上海现金余额:<span class="red mr10">10</span>
+                                        当日现金收入:<span class="red mr10">1.000</span>
+                                        当日现金支出:<span class="red mr10">1.000</span>
+                                        关联往来收支:<span class="red mr10">1.000</span>
+                                        当日现金余额:<span class="red mr10">1.000</span>
+                                        库存现金盘点余额:<span class="red mr10">1.000</span>
+                                        差异额:<span class="red mr10">1.000</span>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
@@ -160,7 +165,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
         setTime4();

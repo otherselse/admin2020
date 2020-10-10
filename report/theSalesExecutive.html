@@ -45,10 +45,10 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-        <div class="ui-tab3 ">
+        <!-- <div class="ui-tab3 ">
             <a href="grossProfitDetail.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">订单统计表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-        </div>
+        </div> -->
 
         <div class="ui-content ovh minH">
             <div class="ui-tab4 mt20 pl20">
@@ -62,78 +62,29 @@
                 <a href="auditingAndFinance.html" class="ui-tab4-list mb10">审计与财务口径收入和成本的对比表</a>
             </div>
             <div class="pl20 pr20 f12">
-                <table class="ui-table tc f12 auto  mt10" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">库存销售类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">快速备</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">任你押</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">自营</a>
-                                </span>
-                            </td>
-                            <td class="title" width="13%">订单类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">直购</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">订购</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">库存销售</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">寄售</a>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">业务类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="dib selectSingle dac">
-                                    <a class=" on" href="javscript:void(0)">现款业务</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">款到卸货</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">欠款业务</a>
-                                    <span class="pr5  pl5 ">|</span>
-                                    <a class="" href="javscript:void(0)">外贸</a>
-                                </span>
-                            </td>
-                            <td class="title" width="13%">开票差异：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div>
+                    <span class="dib pct25">
+                        &emsp;&emsp;&emsp;客户名称： <input type="text" class="ui-input pct69" placeholder="请输入客户名称" autocomplete="off">
+                    </span>
+
+                    <span class="dib pct25">
+                        &emsp;&emsp;金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+                    </span>
+
+                    <span class="dib pct25">
+                        &emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入订单号"
+                            autocomplete="off">
+                    </span>
+                    <span class="dib pct22">
+                        开票差异：<span class="radio ml5">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                </div>
                 <table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客户名称：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入客户名称" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">金牌商家：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="33.3%">
-                            <span class="input-selSearch pct100">
-                                <span class="dib">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                    </tr>
                     <tr>
                         <td width="33.3%">
                             <span class="input-selSearch pct100 ">
@@ -244,10 +195,61 @@
                             </span>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <div class="df">
+                                <div>库存销售类型：</div>
+                                <div class="selectSingle">
+                                    <a class=" on" href="javscript:void(0)">快速备</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">任你押</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">自营</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="df">
+                                <div>订单类型：</div>
+                                <span class="selectSingle">
+                                    <a class="mb10 on" href="javscript:void(0)">直购</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">订购</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">库存销售</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">寄售</a>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="df">
+                                <div>&emsp;业务类型：</div>
+                                <span class="selectSingle">
+                                    <a class="mb10 on" href="javscript:void(0)">现款业务</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">款到卸货</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">欠款业务</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">外贸</a>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="tc">
+                            <button type="button" class="ui-button mr10">查询</button>
+                            <button type="button" class="ui-button " data-type="clear">清空</button>
+                        </td>
+                    </tr>
                 </table>
-                <div class="mt10 mb30 tc">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                <div class="df mb5">
+                    <div style="flex: 1;"></div>
+                    <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
+                        表头配置
+                        <img src="../images//report/sl1.png" class="mr5" alt="">
+                    </a>
                 </div>
                 <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
@@ -433,6 +435,17 @@
             $(this).parents(".mySingle").find("span").removeClass("sbOn")
             $(this).addClass("sbOn")
         });
+
+        function showLayer() {
+            layer.open({
+                type: 2,
+                title: '表头配置',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['600px', '48%'],
+                content: 'toReadyForTheTrack.html' //iframe的url
+            });
+        }
 
     </script>
 </body>

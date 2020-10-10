@@ -71,7 +71,7 @@
                 <div class="lh84 bgwh dac">
                     <span class="ml20 input-selSearch pct25 dac">
                         <span class="dib">资金情况日期：</span>
-                        <span class="dib pct70">
+                        <span class="dib pct69">
                             <span class="ui-input ui-input pct100 ml10" data-type="time" small-type="small"><input
                                     type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
                                     lay-key="11"></span>
@@ -86,14 +86,14 @@
                     <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
                         <!-- <thead> -->
                         <tr class="bfa" height="40">
-                            <th class="cent">公司/科目 </th>
-                            <th>应收</th>
-                            <th>应付</th>
-                            <th>货币资金</th>
-                            <th>应收退税款</th>
-                            <th>银行借款</th>
-                            <th>G2G金额</th>
-                            <th>净现金流</th>
+                            <th class="cent" width="20%">公司/科目 </th>
+                            <th width="10%">应收</th>
+                            <th width="10%">应付</th>
+                            <th width="12%">货币资金</th>
+                            <th width="12%">应收退税款</th>
+                            <th width="12%">银行借款</th>
+                            <th width="12%">G2G金额</th>
+                            <th width="12%">净现金流</th>
                         </tr>
                         <!-- </thead> -->
                         <tbody class="ui-thover bgwh">
@@ -141,14 +141,20 @@
                         </tbody>
                         <tfoot>
                             <tr height="45">
-                                <td class="cent">总计</td>
-                                <td>12,558.37</td>
-                                <td>0.00</td>
-                                <td>0.00</td>
-                                <td>0.00</td>
-                                <td>490.00</td>
-                                <td class="">238,675.38</td>
-                                <td>-,226,117.06</td>
+                                <td colspan="8">
+                                    <div class="daj">
+                                        <div style="min-width: 50px;">合计：</div>
+                                        <div class="tl">
+                                            应收:<span class="red mr10">10</span>
+                                            应付:<span class="red mr10">1.000</span>
+                                            货币资金:<span class="red mr10">1.000</span>
+                                            应收退税款:<span class="red mr10">1.000</span>
+                                            银行借款:<span class="red mr10">1.000</span>
+                                            G2G金额:<span class="red mr10">1.000</span>
+                                            净现金流:<span class="red mr10">1.000</span>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </tfoot>
                     </table>
@@ -166,7 +172,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
         setTime4();
