@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>SASS用户审核-评审管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+        
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                评审管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">SASS用户审核</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-content minH">
+            <div class="p20">
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct100">
+                        评审状态：<span class="single mr20">
+                            <input type="hidden">
+                            <button type="button" class="ui-option mr5 on" onclick="tableShow(1)">待评审</button>
+                            <button type="button" class="ui-option mr5" onclick="tableShow(2)">已审核</button>
+                        </span>
+                    </span>
+                </div>
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct25">
+                        公司名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        联系人：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        联系电话：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        申请时间：<span class="ui-input pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                </div>
+                <div class="tc f12">
+                    <button type="button" class="ui-button mr20">查询</button>
+                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+
+                <table class="ui-table tc mt30 f12" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="5%">序号</th>
+                            <th width="8%">申请公司</th>
+                            <th width="10%">申请日期</th>
+                            <th width="8%">联系人</th>
+                            <th width="8%">联系电话</th>
+                            <th width="8%">申请模块</th>
+                            <th width="5%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>马冬梅</td>
+                            <td>2020-09-03 </td>
+                            <td>ss</td>
+                            <td>12312421321</td>
+                            <td>加工云</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">审核<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 审核开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司简称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司代码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人姓名：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司传真：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">E-mail：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">登录密码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司ID：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">选择适用系统：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="sp-yg tl mt30 mb10 dac">审核信息</h2>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批意见：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <span class="dib ml10">
+                                                        <span class="radio">
+                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i
+                                                                    class="ui-radio goldIcon v-3 mr2"><input
+                                                                        type="radio" class="radio-opacity"
+                                                                        name="radio"></i> 审核通过</label>
+                                                            <label class="" onclick="clickPermit(this,'2')"><i
+                                                                    class="ui-radio goldIcon v-3 mr2"><input
+                                                                        type="radio" class="radio-opacity"
+                                                                        name="radio"></i>审核不通过</label>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批备注：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="tc  mt20 mb20">
+                                        <button type="button" class="ui-button mr20">提交</button>
+                                        <button type="button" class="ui-button" data-type="clear">取消</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>马冬梅</td>
+                            <td>2020-09-03 </td>
+                            <td>ss</td>
+                            <td>12312421321</td>
+                            <td>加工云</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 查看开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <table class="ui-table checkbox f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司简称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司代码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人姓名：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司传真：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100"
+                                                            value="11343342343">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">E-mail：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100"
+                                                            value="11343342343">
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100"
+                                                            value="11343342343">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10 pr10">
+                                                        <button type="button" class="ui-button mr10 vm w120"
+                                                            data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                        <button type="button" class="ui-button mr10 vm"
+                                                            data-type="upfile" onclick="upfile()">常规上传</button>
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="ml10 pr10">
+                                                        <input type="text" class="ui-input borNone pct100"
+                                                            value="11343342343">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">登录密码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司ID：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">选择适用系统：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="checkbox ml10">
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox on goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>交易云</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>加工云</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>管理云</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>云商城</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="tc mt20 mb20">
+                                        <button type="button" class="ui-button mr20">修改</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+    <div class="dom1 dn">
+        请审批人员认真查看附件内容，以附件为参考依据进行审批。
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+
+            //checkbox 多选
+            $(".checkbox label").click(function(){
+                $(this).find("i").toggleClass("on");
+            });
+        })
+
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("审核通过。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("审核不通过。");
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

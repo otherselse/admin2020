@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>自有资金记录-自有资金记录汇总-统计管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                统计管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">自有资金记录汇总</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3">
+            <a href="ownCapitalRecord.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">自有资金记录</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="scheduleOfOwnFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GAccountTrackingTable.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G账户跟踪表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="scheduleOfOwnNewFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细新表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="demeritScoreSheet.html" class="ui-tab3-list rel"><span class="ui-tab3-text">扣分记录明细表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="G2GDailyTotalsTable.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G每日总额汇总表</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content minH">
+            <div class="f12 p20">
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct25">
+                        金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        提成类型：<span class="radio">
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>零售</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>加工</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        是否超期：<span class="radio">
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>超期</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>不超期</label>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="tc mt20">
+                    <button type="button" class="ui-button mr20">查询</button>
+                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+
+                <table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="3%">序号</th>
+                            <th width="3%">金牌商家</th>
+                            <th width="3%">金牌商家编号</th>
+                            <th width="3%">开店区域</th>
+                            <th width="3%">所属地区</th>
+                            <th width="3%">提成类型</th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    系统充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    个人充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    系统充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    个人充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    其它转入<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    其它转出<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    提现<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    G2G总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    G2G钱包<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    乐财宝<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    G2G可用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    G2G占用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+
+                                <lable class="jpsj_Sort" onclick="setOrderCol('x.outhate',this)"><i data="orderBy"
+                                    id="Ix.outhate" class=""></i></lable>
+                            </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    风险金余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="3%">新手体验</th>
+                            <th width="3%">共享通</th>
+                            <th width="3%">融享通</th>
+                            <th width="3%">未到期收益</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr class="bgwh">
+                            <td width="3%">1</td>
+                            <td width="3%">江小白</td>
+                            <td width="3%">11232</td>
+                            <td width="3%">上海</td>
+                            <td width="3%">上海</td>
+                            <td width="3%">零售</td>
+                            <td width="6%">0.00</td>
+                            <td width="6%">0.00</td>
+                            <td width="6%">0.00</td>
+                            <td width="6%">0.00</td>
+                            <td width="4%">0.00</td>
+                            <td width="4%">0.00</td>
+                            <td width="4%">0.00</td>
+                            <td width="6%">0.00</td>
+                            <td width="4%">0.00</td>
+                            <td width="4%">0.00</td>
+                            <td width="6%">0.00</td>
+                            <td width="5%">0.00</td>
+                            <td width="5%">0.00</td>
+                            <td width="5%">0.00</td>
+                            <td width="3%">0.00</td>
+                            <td width="3%">0.00</td>
+                            <td width="3%">0.00</td>
+                            <td width="3%">0.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr height="45">
+                            <td colspan="6">本页合计</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr height="45">
+                            <td colspan="6">汇总合计</td>
+                            <td>7,981,350,219.53</td>
+                            <td>34,072,679,049.06</td>
+                            <td>2,147,785,373.94</td>
+                            <td>205,791,582,220.27</td>
+                            <td>2,144,547.20</td>
+                            <td>949,745.94</td>
+                            <td>1,522,609,656.20</td>
+                            <td>11,675,673,666.08</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>10,436,120,175.20</td>
+                            <td>495,312,222.36</td>
+                            <td>-59,838,151.52</td>
+                            <td>3,347,333.97</td>
+                            <td>227,398.00</td>
+                            <td>769,900,573.98</td>
+                            <td>23,689,111.00</td>
+                            <td>715,002.11</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+    <div class="dom1 dn">
+        请审批人员认真查看附件内容，以附件为参考依据进行审批。
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+        })
+
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("同意申请。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("不同意申请。");
+            }
+        }
+
+        function show(obj) {
+            if ($(obj).find("img").attr("class").indexOf("t_deg90") < 0) {
+                $(obj).find("img").addClass("t_deg90");
+                $(obj).parents(".df").next("div").removeClass("dn");
+            } else {
+                $(obj).find("img").removeClass("t_deg90");
+                $(obj).parents(".df").next("div").addClass("dn");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

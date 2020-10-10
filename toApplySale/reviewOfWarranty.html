@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>质保书评审-评审管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                评审管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">质保书评审</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-content minH">
+            <div class="p20">
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct100">
+                        评审状态：<span class="single mr20">
+                            <input type="hidden">
+                            <button type="button" class="ui-option mr5 on" onclick="tableShow(1)">待评审</button>
+                            <button type="button" class="ui-option mr5" onclick="tableShow(2)">已评审</button>
+                        </span>
+                    </span>
+                </div>
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct25">
+                        &emsp;&emsp;品名：<input type="text" class="ui-input pct69 mr20" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        牌号：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        钢厂：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        规格：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                </div>
+                <div class="cl dac f12">
+                    <span class="dib pct25">
+                        &emsp;申请人：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib">
+                        <button type="button" class="ui-button mr20">查询</button>
+                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    </span>
+                </div>
+
+                <table class="ui-table tc mt30 f12" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">序号</th>
+                            <th width="20%">申请时间</th>
+                            <th width="25%">申请人信息</th>
+                            <th width="20%">状态</th>
+                            <th width="15%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>2020-09-03 </td>
+                            <td>上海陆陆科技有限公司<span class="red"></span></td>
+                            <td>待审核</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">评审<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 待审核开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <h2 class="sp-yg tl mt10 mb10">
+                                        质保书信息
+                                    </h2>
+                                    <table class="ui-table f12 auto tc mt10" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" width="7%">重量（kg）</th>
+                                                <th width="10%" rowspan="2">卷/捆号</th>
+                                                <th colspan="11">化学成分（熔炼分析）%</th>
+                                                <th colspan="3">拉伸试验</th>
+                                                <th width="8%" rowspan="2">0℃冲击功 <br> Akv（J）</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="3%">C</th>
+                                                <th width="3%">Si</th>
+                                                <th width="3%">Mn</th>
+                                                <th width="3%">P</th>
+                                                <th width="3%">S</th>
+                                                <th width="3%">V</th>
+                                                <th width="3%">Nb</th>
+                                                <th width="3%">Al</th>
+                                                <th width="3%">Ti</th>
+                                                <th width="3%">Cr</th>
+                                                <th width="3%">Ni</th>
+                                                <th width="6%">屈服Y.S.<br> Mpa</th>
+                                                <th width="6%">抗拉T.S<br> Mpa.</th>
+                                                <th width="6%">伸长EL %</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="5">111</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>111</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="ui-table f12 auto tl mt20" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">钢厂<span class="red">(公司全称)</span>：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <span class="dib ml10">
+                                                        宝钢
+                                                    </span>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">产品名称：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        热轧卷板
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">牌号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        JAH270C
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">规格(mm*mm*mm)：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        1111
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">申请人：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        10142414
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">冶炼炉号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        1111112121
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">批号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">合同号：</span>
+                                                </td>
+                                                <td>
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">执行标准：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">证明书编号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">生产许可证：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">生产日期：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        2017.02.10
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">评审上传附件：</span>
+                                                </td>
+                                                <td colspan="5">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h2 class="sp-yg tl mt30 mb10 dac">
+                                        审批意见<a href="javascript:void(0)" class="ml5 goldIcon icon-info tipclick" qtip-dom="dom1" ></a>
+                                    </h2>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批意见：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <span class="dib ml10">
+                                                        <span class="radio">
+                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i
+                                                                    class="ui-radio goldIcon v-3 mr2"><input
+                                                                        type="radio" class="radio-opacity"
+                                                                        name="radio"></i> 同意申请</label>
+                                                            <label class="" onclick="clickPermit(this,'2')"><i
+                                                                    class="ui-radio goldIcon v-3 mr2"><input
+                                                                        type="radio" class="radio-opacity"
+                                                                        name="radio"></i>不同意申请</label>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批备注：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="tc  mt20 mb20">
+                                        <button type="button" class="ui-button mr20">提交</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>2020-09-03 </td>
+                            <td>上海陆陆科技有限公司<span class="red"></span></td>
+                            <td>审核完成</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+
+                        <!-- 审核完成开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <h2 class="sp-yg tl mt10 mb10">
+                                        质保书信息
+                                    </h2>
+                                    <table class="ui-table f12 auto tc mt10" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" width="7%">重量（kg）</th>
+                                                <th width="10%" rowspan="2">卷/捆号</th>
+                                                <th colspan="11">化学成分（熔炼分析）%</th>
+                                                <th colspan="3">拉伸试验</th>
+                                                <th width="8%" rowspan="2">0℃冲击功 <br> Akv（J）</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="3%">C</th>
+                                                <th width="3%">Si</th>
+                                                <th width="3%">Mn</th>
+                                                <th width="3%">P</th>
+                                                <th width="3%">S</th>
+                                                <th width="3%">V</th>
+                                                <th width="3%">Nb</th>
+                                                <th width="3%">Al</th>
+                                                <th width="3%">Ti</th>
+                                                <th width="3%">Cr</th>
+                                                <th width="3%">Ni</th>
+                                                <th width="6%">屈服Y.S.<br> Mpa</th>
+                                                <th width="6%">抗拉T.S<br> Mpa.</th>
+                                                <th width="6%">伸长EL %</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="5">111</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>111</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="ui-table f12 auto tl mt20" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">钢厂<span class="red">(公司全称)</span>：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <span class="dib ml10">
+                                                        宝钢
+                                                    </span>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">产品名称：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        热轧卷板
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">牌号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        JAH270C
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">规格(mm*mm*mm)：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        1111
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">申请人：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        10142414
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">冶炼炉号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        1111112121
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">批号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">合同号：</span>
+                                                </td>
+                                                <td>
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">执行标准：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">证明书编号：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        11
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">生产许可证：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+
+                                                    </div>
+                                                </td>
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">生产日期：</span>
+                                                </td>
+                                                <td width="13.3%">
+                                                    <div class="pl10 pr10">
+                                                        2017.02.10
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">评审上传附件：</span>
+                                                </td>
+                                                <td colspan="5">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h2 class="sp-yg tl mt30 mb10 dac">
+                                        审批意见<a href="javascript:void(0)" class="ml5 goldIcon icon-info tipclick" qtip-dom="dom1" ></a>
+                                    </h2>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批意见：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <span class="dib ml10">
+                                                        <label><i class="ui-radio goldIcon v-3 mr2 on"><input
+                                                                    type="radio" class="radio-opacity"
+                                                                    name="radio"></i>同意申请</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="10%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">本人审批备注：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" readonly
+                                                            rows="2">已查看，本人表示同意申请</textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+                    </tbody>
+                </table>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+    <div class="dom1 dn">
+        请审批人员认真查看附件内容，以附件为参考依据进行审批。
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+        })
+
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("同意申请。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("不同意申请。");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

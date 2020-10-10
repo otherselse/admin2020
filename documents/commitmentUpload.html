@@ -33,13 +33,18 @@
                 <span class="dib pl5 pr5 ">/</span>
                 单据管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">承诺函上传</span>
+                <span class="g28">担保函/承诺函上传</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-
+        <div class="ui-tab3">
+            <a href="guaranteeUpload.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保函上传</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="commitmentUpload.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">承诺函上传</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
         <div class=" fix f12 bgwh ui-content ovh minH">
             <div class="mb10 f0 mt20  mr20">
                 <div class="mb10 f0">
@@ -687,7 +692,7 @@
 
     <script>
         $(function () {
-            $(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
     </script>
     <script>
@@ -735,7 +740,7 @@
         function showDiv_lrlHide(obj) {
             $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
         }
-
+        
         function showLayer() {
             layer.open({
                 type: 2,
