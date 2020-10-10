@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <title>Document</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <style>
+        html,
+        body {
+            background: #fff;
+        }
+    </style>
+
+</head>
+
+<body class="isPc">
+    <div class="p20">
+        <div class="ui-tab5">
+            <a href="./orderAction_order.html" class="ui-tab5-list">订单信息</a>
+            <a href="./orderAction_price.html" class="ui-tab5-list on">综合报价</a>
+            <a href="./orderAction_sale.html" class="ui-tab5-list">销售合同</a>
+            <a href="./orderAction_purContract.html" class="ui-tab5-list">采购合同</a>
+            <a href="./orderAction_shortContract.html" class="ui-tab5-list">短驳合同</a>
+            <a href="./orderAction_procContract.html" class="ui-tab5-list">加工合同</a>
+            <a href="./orderAction_tranContract.html" class="ui-tab5-list">运输合同</a>
+            <a href="./orderAction_finance.html" class="ui-tab5-list">财务信息</a>
+            <a href="./orderAction_stockSale.html" class="ui-tab5-list">库存销售</a>
+        </div>
+      
+     
+      
+        <table class="ui-table mt15 pct100 tc f12">
+            <thead>
+                <tr>
+                    <th width="9%">品名</th>
+                    <th width="10%">规格</th>
+                    <th width="9%">牌号</th>
+                    <th width="9%">重量(吨)</th>
+                    <th width="9%">销售单价</th>
+                    <th width="9%">采购单价</th>
+                    <th width="9%">加工单价</th>
+                    <th width="9%">运输单价</th>
+                    <th width="9%">短驳单价</th>
+                    <th width="9%">费用单价</th>
+                    <th width="9%">佣金单价</th>
+                </tr>
+            </thead>
+            <tbody class="ui-thover">
+                <tr>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                    <td>镀铝板材</td>
+                </tr>
+            </tbody>
+        </table>
+          
+        <table class="ui-table mt20 pct100 tc f12">
+            <thead>
+                <tr>
+                    <th width="9%">销售总额(元)</th>
+                    <th width="10%">采购款(元)</th>
+                    <th width="9%">加工费(元)</th>
+                    <th width="9%">短驳费(元)</th>
+                    <th width="9%">运输费(元)</th>
+                    <th width="9%">佣金费(元)</th>
+                    <th width="9%">其他费用(元)</th>
+                    <th width="9%">毛利金额(元)</th>
+                    <th width="9%">利息(元)</th>
+                    <th width="9%">预估毛利(元)</th>
+                    <th width="9%">毛利率</th>
+                </tr>
+            </thead>
+            <tbody class="ui-thover">
+                <tr>
+                    <td>170000</td>
+                    <td>136000</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>19.30%</td>
+                </tr>
+            </tbody>
+        </table>
+        <span class="ui-tip pct100 mt10">温馨提示: 1.如有余料，请尽快处理，否则影响提成！ 2.以上毛利计算均取值合同金额，具体以实际情况为准!</span>
+
+
+
+    </div>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".ui-tab5").on("click", ".ui-tab5-list", function () {
+                $(this).addClass("on").siblings(".ui-tab5-list").removeClass("on")
+            })
+        })
+    </script>
+</body>
+
+</html>

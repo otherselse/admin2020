@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <title>Document</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <style>
+        html,
+        body {
+            background: #fff;
+        }
+    </style>
+
+</head>
+
+<body class="isPc showTip">
+    <div class="p20">
+        <div class="ui-tab5">
+            <a href="./orderAction_order.html" class="ui-tab5-list">订单信息</a>
+            <a href="./orderAction_price.html" class="ui-tab5-list">综合报价</a>
+            <a href="./orderAction_sale.html" class="ui-tab5-list">销售合同</a>
+            <a href="./orderAction_purContract.html" class="ui-tab5-list">采购合同</a>
+            <a href="./orderAction_shortContract.html" class="ui-tab5-list on">短驳合同</a>
+            <a href="./orderAction_procContract.html" class="ui-tab5-list">加工合同</a>
+            <a href="./orderAction_tranContract.html" class="ui-tab5-list">运输合同</a>
+            <a href="./orderAction_finance.html" class="ui-tab5-list">财务信息</a>
+            <a href="./orderAction_stockSale.html" class="ui-tab5-list">库存销售</a>
+        </div>
+     
+      <h1 class="red">采购合同、短驳合同、加工合同、运输合同页面样式同销售合同</h1>  
+      
+
+
+    </div>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".ui-tab5").on("click", ".ui-tab5-list", function () {
+                $(this).addClass("on").siblings(".ui-tab5-list").removeClass("on")
+            })
+            if ($(".showTip").length > 0) {
+                $(".showTip").find('[title]').qtip({
+                    position: {
+                        my: 'bottom center', //my:是指三角的位置
+                        at: 'top center' //是在提示在组件的相对位置
+                    },
+                    style: {
+                        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                    }
+                });
+            }
+        })
+    </script>
+</body>
+
+</html>

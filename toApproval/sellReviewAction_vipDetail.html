@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>销售合同审批-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://reso    urce.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                审批管理
+                <span class="dib gga pl5 pr5">/</span>
+                销售合同审批
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">评审</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./sellReview.html" class="ui-tab4-list ml20 mr10">合同详情</a>
+                    <a href="./sellReviewAction_vipList.html" class="ui-tab4-list on">VIP客户评审记录</a>
+                    <a href="./sellReviewAction_guarantee.html" class="ui-tab4-list">担保函记录</a>
+                    <a href="./sellReviewAction_permit.html" class="ui-tab4-list">销售合同评审</a>
+                </div>
+            </div>
+            <div class="p20">
+                <div><span class="b g28">历史VIP客户评审表</span></div>
+                <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this,'sqjb')"><i class="toggle_l vm mr10"></i>基本信息</a></div>
+                <div id="sqjb" class="dn mt15">
+                    <table class="ui-table row f12 pct100">
+                        <tbody>
+                            <tr>
+                                <td>注册类型：</td>
+                                <td colspan="3">欠款业务</td>
+                            </tr>
+                            <tr>
+                                <td width="15%">单位名称：</td>
+                                <td width="35%">测试有限公司</td>
+                                <td width="15%">联系人：</td>
+                                <td width="35%">张三</td>
+                            </tr>
+                            <tr>
+                                <td>注册地址：</td>
+                                <td>上海市宝山区锦乐路</td>
+                                <td>职务：</td>
+                                <td>--</td>
+                            </tr>
+                            <tr>
+                                <td>联系地址：</td>
+                                <td>上海市宝山区锦乐路</td>
+                                <td>手机号码：</td>
+                                <td>15012345678</td>
+                            </tr>
+                            <tr>
+                                <td>办公电话：</td>
+                                <td>021-888888</td>
+                                <td>客户传真号：</td>
+                                <td>021-888888</td>
+                            </tr>
+                            <tr>
+                                <td>注册资金：</td>
+                                <td>1000000  万元</td>
+                                <td>银行账号：</td>
+                                <td>98562457</td>
+                            </tr>
+                            <tr>
+                                <td>税务登记证号：</td>
+                                <td>123456415012345656</td>
+                                <td>开户银行：</td>
+                                <td>中国建设银行</td>
+                            </tr>
+                            <tr>
+                                <td>网址：</td>
+                                <td colspan="3">--</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt30"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this,'sqxx')"><i class="toggle_l vm mr10"></i>企业信息</a></div>
+                <div id="sqxx" class="dn mt15">
+                    <table class="ui-table row f12 pct100">
+                        <tbody>
+                            <tr>
+                                <td width="15%">行业分类：</td>
+                                <td width="35%">钢结构/建筑</td>
+                                <td width="15%">销售渠道：</td>
+                                <td width="35%">国内外销售结合</td>
+                            </tr>
+                            <tr>
+                                <td>土地性质：</td>
+                                <td>租用</td>
+                                <td>土地面积：</td>
+                                <td>5000-10000 平方米</td>
+                            </tr>
+                            <tr>
+                                <td>厂房性质：</td>
+                                <td>上海市宝山区锦乐路</td>
+                                <td>厂房面积：</td>
+                                <td>15012345678</td>
+                            </tr>
+                            <tr>
+                                <td>企业性质：</td>
+                                <td>021-888888</td>
+                                <td>出资方式：</td>
+                                <td>021-888888</td>
+                            </tr>
+                            <tr>
+                                <td>该公司人员数量：</td>
+                                <td>一线工人数2人 &emsp;&emsp;办公职能数2人	</td>
+                                <td>用料品类:</td>
+                                <td>98562457</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt30"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this,'sqzyye')"><i class="toggle_l vm mr10"></i>主营业务、产品及原料需求</a></div>
+                <div id="sqzyye" class="dn mt15">
+                    <table class="ui-table tc  f12 pct100">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>原材料品类</th>
+                                <th>原材料规格</th>
+                                <th>加工方式</th>
+                                <th>主营产品</th>
+                                <th>月用量（吨）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt30"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this,'sqhz')"><i class="toggle_l vm mr10"></i>合作信息</a></div>
+                <div id="sqhz" class="dn mt15">
+                    <table class="ui-table pl20 f12 pct100">
+                        <tbody>
+                            <tr>
+                                <td width="15%" class="bgfa">最近一年销售额</td>
+                                <td width="35%" class="g28">钢结构/建筑</td>
+                                <td width="15%" class="bgfa">建立关系时间</td>
+                                <td width="35%" class="g28">钢结构/建筑</td>
+                            </tr>
+                            <tr>
+                                <td class="bgfa">最近三个月总销售额</td>
+                                <td class="g28">钢结构/建筑</td>
+                                <td class="bgfa">采购周期</td>
+                                <td class="g28">钢结构/建筑</td>
+                            </tr>
+                            <tr>
+                                <td class="bgfa">最近三个月采购量</td>
+                                <td class="g28">钢结构/建筑</td>
+                                <td class="bgfa">结算方式</td>
+                                <td class="g28">钢结构/建筑</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="bgfa">欠款账期</td>
+                                <td class="g28">钢结构/建筑</td>
+                            </tr>
+                            <tr>
+                                <td class="bgfa">现有供应商名称</td>
+                                <td class="g28"></td>
+                                <td class="bgfa">习惯性付款时间</td>
+                                <td class="g28">钢结构/建筑</td>
+                            </tr>
+                            <tr>
+                                <td class="bgfa">是否签订年度协议</td>
+                                <td class="g28" colspan="3">
+                                    <span class="radio mr20">
+                                        <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                    <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bgfa">是否提供担保</td>
+                                <td class="g28">
+                                    <span class="radio mr15">
+                                        <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                    <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                                </td>
+                               
+                                <td class="red" colspan="2">
+                                    如需要担保，请提供个人担保或单位担保的资料：<br>
+                                    1.个人担保：担保人身份证件、个人房产证件、担保函；<br>
+                                    2.单位担保：需要上传担保单位四证、土地及厂房产权证明、担保函
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt30"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this,'sqzs')"><i class="toggle_l vm mr10"></i>证件</a></div>
+                <div id="sqzs" class="dn mt15">
+                    <table class="ui-table row f12 pct100">
+                        <tbody>
+                            <tr>
+                                <td width="10%">是否为外商投资</td>
+                                <td width="40%">
+                                    <div>
+                                        <span class="radio mr20">
+                                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                        </span>
+                                        <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                                    </div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">如是外商需提供外商企业的标准证书</span>
+                                    </div>
+                                </td>
+                                <td width="10%">评审附件</td>
+                                <td width="40%">
+                                    <div><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">A.营业执照副本 B.税务登记证 C.企业组织机构代码证 D.银行开户许可证</span>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>土地厂房产权证</td>
+                                <td>
+                                    <div><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">如土地厂房为自有请上传土地厂房的产权证明</span>
+                                    </div>
+                                </td>
+                                <td>信贷关系相关附件</td>
+                                <td>
+                                    <div><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">A.建立信贷关系申请书 B.建立信贷关系契约 C.借款申请书 D.借款人股东同意借款的决议 E.个人资信查询授权书</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>各类财务表表附件</td>
+                                <td>
+                                    <div><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">A.验资报告，公司章程复印件 B.近三年年报及最新月度的财务报表 C.近6个月企业主要结算银行对账单复印件、纳税证明复印件、税控单 D.最近6个月企业水电费发票复印件</span>
+                                    </div>
+                                </td>
+                                <td>各类财务表表附件</td>
+                                <td>
+                                    <div><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+                                    <div>
+                                        <span class="ui-tip" data-type="normal">A.法定代表人身份证 B.贷款卡复印件 C.所有股东（含法人股东）身份证复印件</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt30">
+                    <span class="g28 b mr5">现场资料</span>由<span class="g28 b mr5 ml5">赵子立</span>上传
+                </div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="15%">生产繁忙情况：</td>
+                            <td width="35%">--</td>
+                            <td width="15%">机器设备新旧程度：</td>
+                            <td width="35%">--</td>
+                        </tr>
+                        <tr>
+                            <td>厂房利用情况：</td>
+                            <td>--</td>
+                            <td>库存情况：</td>
+                            <td>成品库存<span class="red">--</span>吨，原材料库存<span class="red">--</span>吨，</td>
+                        </tr>
+                        <tr>
+                            <td>机器设备状况：</td>
+                            <td>--</td>
+                            <td>生产现场的整洁度：</td>
+                            <td>整洁</td>
+                        </tr>
+                        <tr>
+                            <td>客户分类：</td>
+                            <td>--</td>
+                            <td>有无关联企业：</td>
+                            <td>无</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="g28 mt30">
+                    <span class="b">VIP客户评审意见</span>
+                </div>
+                <div class="mt30 ml50 nodeLine f12">
+                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green"> 
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
+                    <div class="g28 ui-audit f12 pl10 mt10"><span>2节点</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tc mt30">
+                    <button class="ui-button" data-type="bigclear" type="button">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+ 
+        })
+        function prev() {
+            window.history.back(-1)
+        }
+        function showdiv(obj,id){
+         $(obj).find(".toggle_l").toggleClass("on")
+        $("#"+id).toggle()
+	}
+
+    </script>
+</body>
+
+</html>
