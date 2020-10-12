@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>经营报告表-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+    </style>
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                报表管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">经营报告表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3">
+            <a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">基础数据</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <div class="ui-tab4 bor-bottom pb20">
+                    <a href="domesticTrade.html" class="ui-tab4-list on">内贸</a>
+                    <a href="theForeignTrade.html" class="ui-tab4-list">外贸</a>
+                    <a href="processing.html" class="ui-tab4-list">加工</a>
+                    <a href="cost.html" class="ui-tab4-list">费用</a>
+                </div>
+                <div class="mt20 mb30 dac">
+                    订单结算日期：<span class="ui-input tc f0 pct25 range" data-type="time">
+                        <input type="text" placeholder="开始时间" id="test" class="render-time pct45" readonly=""><span
+                            class="dib pct5 tc">-</span>
+                        <input type="text" id="test1" placeholder="结束时间" class="render-time pct45" readonly="">
+                    </span>
+                    <button type="button" class="ui-button ml20">查询</button>
+                </div>
+
+                <table class="ui-table tr f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="14.28%" style="padding: 0px;">
+                                <span class="leBie">类别</span>
+                                <div class="xie"></div>
+                                <span class="quYu">区域</span>
+                            </th>
+                            <th width="14.28%"><span class="pr20">成都</span></th>
+                            <th width="14.28%"><span class="pr20">广州</span></th>
+                            <th width="14.28%"><span class="pr20">杭州</span></th>
+                            <th width="14.28%"><span class="pr20">上海</span></th>
+                            <th width="14.28%"><span class="pr20">天津</span></th>
+                            <th width="14.28%"><span class="pr20">合计</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <!-- 每月收入额 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">每月收入额<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">贸易类收入</span>
+                                                <a href="javascript:void(0)" class="ml5 goldIcon tiptop icon-info"
+                                                    title="不含税！（2018-05-01之前除以1.17,之后除以1.16，2019.4.1之后除以1.13）"></a>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">
+                                                政府补贴收入
+                                            </span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">逻辑收入</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">退税收入</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">租贷租金</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">
+                                                租贷水电费收入
+                                            </span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">利息收入</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">其他收入(含违约金)</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 每月成本额 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">每月成本额<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">贸易成本</span>
+                                                <a href="javascript:void(0)" class="ml5 goldIcon tiptop icon-info"
+                                                    title="不含税！（2018-05-01之前除以1.17,之后除以1.16，2019.4.1之后除以1.13）
+                                                    "></a>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">其他成本</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 税金及附加 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">税金及附加<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">附加税</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">印花税</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 营业费用 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">营业费用<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">运费</span>
+                                                <a href="javascript:void(0)" class="ml5 goldIcon tiptop icon-info"
+                                                    title="不含税！（2018-05-01之前除以1.11，之后除以1.1，2019.4.1之后除以1.09）"></a>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">加工费</span>
+                                                <a href="javascript:void(0)" class="ml5 goldIcon tiptop icon-info"
+                                                    title="不含税！（2018-05-01之前除以1.17,之后除以1.16，2019.4.1之后除以1.13）"></a>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">仓储费</span>
+                                                <a href="javascript:void(0)" class="ml5 goldIcon tiptop icon-info"
+                                                    title="不含税！（除以1.06）"></a>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">出库费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">吊费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">商检费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">代理费(佣金)</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">包干费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">港杂费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">报关费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 分红 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">分红</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+
+                        <!-- 管理费用 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">管理费用<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">业务人员基本工资</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">业务人员社保</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">业务人员公积金</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">业务人员通讯录</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">业务人员差旅费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">业务人员招待费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">推广费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员基本工资</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员社保</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员公积金</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员通讯费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员差旅费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">职能人员招待费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">后勤人员开支</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">公司通讯费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">业务费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">汽车费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">保险费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">水电费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">办公费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">修理费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">食堂费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">诉讼费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">聘请中介机构费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">交通补贴</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">租贷费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">固定资产折旧费</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">无形资产推销</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">待摊费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">房产税及土地使用税</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">其他支出(包括福利费、残疾人保证金)</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">研发费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 财务费用 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">财务费用<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">利息支出</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">银行手续费</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">还贷款</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">信用证贴现费用</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">汇兑损益</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <span class="dib pct100 tl pl5">其他</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 投资收益 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">投资收益</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+
+                        <!-- 营业外收支 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">营业外收支</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 利润总额 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">利润总额</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 企业所得税 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">企业所得税</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 会计净利润 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">会计净利润</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+
+                        <!-- 折旧摊销总计 -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook" onclick="showTrMore(this)">折旧摊销总计<img
+                                        class="ml5" src="../images//statistical/l-down.png" width="10px" height="5px"
+                                        alt=""></span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class="menuhook blue pr20" onclick="showTrMore(this)">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 点击执行显示 -->
+                        <tr class="hideTr dn">
+                            <td colspan="7" style="padding: 0px;">
+                                <table class="ui-table tr f12 auto showShadow mt-1 " width="100%" data-type="edit">
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">固定资产折旧</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">无形资产摊销</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="14.28%">
+                                            <div class="dac">
+                                                <span class="dib tl pl5">长期待摊费用</span>
+                                            </div>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">525525</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">535211</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">34314343</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">13414</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">12321</span>
+                                        </td>
+                                        <td width="14.28%">
+                                            <span class="pr20">14134</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- 隐藏内容end -->
+
+                        <!-- 净利润(不含摊销折旧费) -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">净利润(不含摊销折旧费)</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+                        <!-- 本月销售量(加工量) -->
+                        <tr>
+                            <td width="14.28%">
+                                <span class="dib pct100 tl pl5 dac menuhook">本月销售量(加工量)</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">525525</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">535211</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">34314343</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">13414</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">12321</span>
+                            </td>
+                            <td width="14.28%">
+                                <span class=" pr20">14134</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        var minTime = $("#test").val();
+        $(function () {
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+
+        var date = new Date();
+
+        var year = date.getFullYear();
+
+        var month = date.getMonth() + 1;
+        //日期选择器
+        laydate.render({
+            elem: '#test'
+            , type: 'month' //默认，可不填
+            // ,min: '2017-1-1'
+            , max: year + "-" + month
+        });
+
+        //日期选择器
+        laydate.render({
+            elem: '#test1'
+            , type: 'month' //默认，可不填
+            // , min: minTime
+            , max: year + "-" + month
+        });
+
+
+    </script>
+</body>
+
+</html>
