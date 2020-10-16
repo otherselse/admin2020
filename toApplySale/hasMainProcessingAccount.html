@@ -51,7 +51,8 @@
                         <a href="mainProcessingAccount.html">
                             <button type="button" class="ui-option mr5">待评审</button>
                         </a>
-                        <a href="hasMainProcessingAccount.html"><button type="button" class="ui-option mr5 on">已审核</button></a>
+                        <a href="hasMainProcessingAccount.html"><button type="button"
+                                class="ui-option mr5 on">已审核</button></a>
                     </span>
                     </span>
                     <span class="dib pct25">
@@ -72,13 +73,16 @@
                 <table class="ui-table tc f12" width="100%">
                     <thead>
                         <tr class="fixTr">
-							<th width="11%">序号</th>
-							<th width="16%">申请时间</th>
-							<th width="25%">公司名称</th>
-							<th width="16%">申请账号</th>
-							<th width="19%">申请人</th>
-							<th width="13%">操作</th>
-						</tr>
+                            <th width="5%">序号</th>
+                            <th width="11%">申请时间</th>
+                            <th width="17%">公司名称</th>
+                            <th width="10%">申请账号</th>
+                            <th width="13%">申请人</th>
+                            <th width="8%">审批人</th>
+                            <th width="12%">审批时间</th>
+                            <th width="10%">审批结果</th>
+                            <th width="9%">操作</th>
+                        </tr>
                     </thead>
                     <tbody class="ui-thover">
                         <tr height="50px">
@@ -244,7 +248,7 @@
                             </td>
                         </tr>
                         <!-- 审批不通过开始 -->
-                        <tr class="hideTr dn">
+                           <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
                                     <h2 class="sp-yg tl mt10 mb10">基本信息</h2>
@@ -334,15 +338,9 @@
                                                 </td>
                                                 <td width="50%">
                                                     <span class="dib ml10">
-                                                        <span class="radio">
-                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i
-                                                                    class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i> 同意申请</label>
-                                                            <label class="" onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i>不同意申请</label>
-                                                        </span>
+                                                        <label><i class="ui-radio goldIcon v-3 mr2 on"><input
+                                                                    type="radio" class="radio-opacity"
+                                                                    name="radio"></i>不同意申请</label>
                                                     </span>
                                                 </td>
                                                 <td width="37%" rowspan="2">
@@ -362,15 +360,13 @@
                                                 </td>
                                                 <td width="50%">
                                                     <div class="pl10 pr10">
-                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
+                                                        <textarea class="ui-textarea pct100" readonly
+                                                            rows="2">已查看，本人表示不同意申请</textarea>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="tc  mt20 mb20">
-                                        <button type="button" class="ui-button mr10">提交</button>
-                                    </div>
                                 </div>
                             </td>
                         </tr>

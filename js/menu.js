@@ -35,13 +35,13 @@ var menu_Data=[
 		]
 	}	
 	,{"title":"统计管理",
-	 "menuList":[
-			 {"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../report/orderFulfillment.html"},{"mtitle":"双发积分统计","href":"../report/theSalesExecutive.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../report/shippingTrackingForm.html"}]}
-			 ,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../report/purchaseSchedule.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../report/forResources.html"}]}	
-			,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../report/commission.html"}]}	
-			,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../report/processorInventory.html"},{"mtitle":"余料款充值记录汇总","href":"../report/processorIncome.html"}]}	
-		]
-	}
+	"menuList":[
+			{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"}]}
+			,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../statistical/statisticalProcessing.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../statistical/statisticsOfGoldMerchants.html"}]}	
+		   ,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../statistical/theReportSummary.html"}]}	
+		   ,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../statistical/managementStaffing.html"},{"mtitle":"余料款充值记录汇总","href":"../statistical/remainingMaterialModel.html"}]}	
+	   ]
+   }
 	,{"title":"报表管理",
 	"menuList":[
 			{"bigM":"订单类","smallM":[{"mtitle":"备货跟踪表","href":"../report/readyForTheTrack.html"},{"mtitle":"订单执行情况表","href":"../report/tradeOrder.html"},{"mtitle":"订单执行进度跟踪表","href":"../report/orderFulfillment.html","hide":true},{"mtitle":"订单统计表","href":"../report/theSalesExecutive.html"},{"mtitle":"库存明细表","href":"../report/inventory.html"},{"mtitle":"出入库跟踪表","href":"../report/summary.html"},{"mtitle":"寄售跟踪表","href":"../report/shippingTrackingForm.html","hide":true},{"mtitle":"商互通管理","href":"../report/eachOther.html"},{"mtitle":"外贸订单跟踪表","href":"../report/theForeignTradeOrder.html"},{"mtitle":"寄预售跟踪表","href":"../report/openToBooking.html","hide":true},{"mtitle":"老系统订单统计表","href":"../report/salesExecutionProgress.html","hide":true}]}
@@ -57,7 +57,7 @@ var menu_Data=[
    "menuList":[
 		   {"bigM":"单据管理","smallM":[
 		   {"mtitle":"担保函/承诺函上传","href":"../documents/guaranteeUpload.html"},
-		   {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html","hide":true},
+		//    {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html","hide":true},
 		   {"mtitle":"进仓通知单上传","href":'../documents/warehouse.html'},
 		   {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
 		   {"mtitle":"外贸单据上传","href":"../documents/foreignUpload.html"},
