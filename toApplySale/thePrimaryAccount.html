@@ -122,7 +122,7 @@
                             <td>12232323232(主批)</td>
                             <td>---</td>
                             <td>---</td>
-                            <td><span class="blue">审核通过</span></td>
+                            <td><span class="blue">审核不通过</span></td>
                             <td>是</td>
                             <td>
                                 <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">查看
@@ -308,9 +308,12 @@
 
                                     <table class="ui-table f12 auto tc mt10 mb10" width="100%">
                                         <tbody>
-                                            <tr class="resource-table">
-                                                <td width="100%" class="bgfa">
-                                                    <span class="f14 g0">该申请由主账号审核</span>
+                                            <tr >
+                                                <td class="vt bgfa" width="20%">
+                                                    <span class="pt5 dib pl10">主账号审核：</span>
+                                                </td>
+                                                <td width="100%" class="bgwh">
+                                                    <span class="ml10 pct100 tl dib">不同意申请,主账号审批不同意</span>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -327,7 +330,7 @@
                             <td>12232323232</td>
                             <td>--</td>
                             <td>--</td>
-                            <td><span class="blue">审核不通过</span></td>
+                            <td><span class="blue">审核通过</span></td>
                             <td><span class="red">否</span></td>
                             <td>
                                 <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">审核
@@ -335,7 +338,7 @@
                                 </a>
                             </td>
                         </tr>
-                        <!-- 审核不通过开始 -->
+                        <!-- 审核通过开始 -->
                         <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
@@ -346,8 +349,7 @@
                                                 <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">单位名称：</span>
                                                 </td>
                                                 <td width="37%">
-                                                    <span class="ml10 dib">北京好奇心哦期限内<span
-                                                            class="red dib ml5">(自动)</span></span>
+                                                    <span class="ml10 dib">北京好奇心哦期限内</span>
                                                 </td>
                                                 <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">公司税号：</span>
                                                 </td>
@@ -370,6 +372,7 @@
                                             <tr class="resource-table">
                                                 <td class="vt bgfa" width="13%"><span class="pt5 dib pl10">企业性质：</span>
                                                 </td>
+                                                <!--  -->
                                                 <td width="37%">
                                                     <div class="ml10 dib selectProcName dac">
                                                         <span class="xx">外资</span>
@@ -519,8 +522,103 @@
                                                     <span class="pt5 dib pl10">审核意见：</span>
                                                 </td>
                                                 <td width="80%">
-                                                    <div class="tc">
-                                                        同意申请。
+                                                    <div class="pl10 tl">
+                                                        同意申请
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">授权书是否回收：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="dac pl10">
+                                                        <div class="pct70">
+                                                            <div class="mb10">
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 是</label>
+                                                                <span class=" dib">
+                                                                    <button type="button" class="ui-button mr10 vm"
+                                                                        data-type="upfile"
+                                                                        onclick="upfile()">常规上传</button>
+                                                                    <span class="ui-files ml10 vm"><a
+                                                                            href="javascript:void(0)"
+                                                                            class="g80">组件1111组件</a><a
+                                                                            class="icon-sdel goldIcon vm ml5"
+                                                                            href="#"></a></span>
+                                                                </span>
+                                                            </div>
+                                                            <div>
+                                                                <label class="mr20"><i
+                                                                        class="ui-radio goldIcon v-3 mr2"><input
+                                                                            type="radio" class="radio-opacity"
+                                                                            name="radio"></i> 否</label>
+                                                                <span class="input-selSearch pct40">
+                                                                    <input type="text" class="pct69 ui-input searchUp"
+                                                                        placeholder="占位符" autocomplete="off">
+                                                                    <div class="search-cont pct69">
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell active">选择选择1</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择2</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择3</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择5</a>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="search-list db ell">选择选择6</a>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="ui-button mr10">提交</button>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">客户现场授权证明：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <span class="ml10 dib">
+                                                        <button type="button" class="ui-button mr10 vm"
+                                                            data-type="upfile" onclick="upfile()">常规上传</button>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                        <span class="ui-files ml10 vm"><a href="javascript:void(0)"
+                                                                class="g80">组件1111组件</a><a
+                                                                class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">添加备注：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+                                                        <textarea class="ui-textarea pct100" rows="2"
+                                                            placeholder="最多500字"></textarea>
+                                                    </div>
+                                                    <div class="tc mt10">
+                                                        <button type="button" class="ui-button mr10">添加备注</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="20%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">备注信息：</span>
+                                                </td>
+                                                <td width="80%">
+                                                    <div class="pl10 pr10">
+
                                                     </div>
                                                 </td>
                                             </tr>

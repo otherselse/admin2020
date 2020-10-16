@@ -42,21 +42,16 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-
-        <div class="ui-tab3">
-            <a href="mainProcessingAccount.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待审核账号</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="hasMainProcessingAccount.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已审核账号</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-
+        
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl mb10 dac f12 ">
                     审核状态：<span class="single mr20">
                         <input type="hidden">
-                        <button type="button" class="ui-option mr5 on">待评审</button>
-                        <button type="button" class="ui-option mr5">已审核</button>
+                        <a href="mainProcessingAccount.html">
+                            <button type="button" class="ui-option mr5 on">待评审</button>
+                        </a>
+                        <a href="hasMainProcessingAccount.html"><button type="button" class="ui-option mr5">已审核</button></a>
                     </span>
                     <span class="dib pct25">
                         公司名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
@@ -346,7 +341,8 @@
                                                                     class="ui-radio goldIcon v-3 mr2"><input
                                                                         type="radio" class="radio-opacity"
                                                                         name="radio"></i> 同意申请</label>
-                                                            <label class="" onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input
+                                                            <label class="" onclick="clickPermit(this,'2')"><i
+                                                                    class="ui-radio goldIcon v-3 mr2"><input
                                                                         type="radio" class="radio-opacity"
                                                                         name="radio"></i>不同意申请</label>
                                                         </span>

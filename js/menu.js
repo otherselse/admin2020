@@ -68,49 +68,49 @@ var menu_Data = [
 				"bigM": "订单类", "smallM": [
 					{ "mtitle": "备货跟踪表", "href": "../report/readyForTheTrack.html" },
 					{ "mtitle": "订单执行情况表", "href": "../report/tradeOrder.html" }
-					/*,{"mtitle":"订单执行进度跟踪表","href":"../report/orderFulfillment.html","hide":true}*/,
+					,{"mtitle":"订单执行进度跟踪表","href":"../report/orderFulfillment.html","hide":true},
 					{ "mtitle": "订单统计表", "href": "../report/theSalesExecutive.html" },
 					{ "mtitle": "库存明细表", "href": "../report/inventory.html" },
-					{ "mtitle": "出入库跟踪表", "href": "../report/summary.html" }/*,{"mtitle":"寄售跟踪表","href":"../report/shippingTrackingForm.html","hide":true}*/,
+					{ "mtitle": "出入库跟踪表", "href": "../report/summary.html" },{"mtitle":"寄售跟踪表","href":"../report/shippingTrackingForm.html","hide":true},
 					{ "mtitle": "商互通管理", "href": "../report/eachOther.html" },
-					{ "mtitle": "外贸订单跟踪表", "href": "../report/theForeignTradeOrder.html" },/*{"mtitle":"寄预售跟踪表","href":"../report/openToBooking.html","hide":true},{"mtitle":"老系统订单统计表","href":"../report/salesExecutionProgress.html","hide":true}*/
+					{ "mtitle": "外贸订单跟踪表", "href": "../report/theForeignTradeOrder.html" },{"mtitle":"寄预售跟踪表","href":"../report/openToBooking.html","hide":true},{"mtitle":"老系统订单统计表","href":"../report/salesExecutionProgress.html","hide":true}
 				]
 			}
 			, {
 				"bigM": "报表类", "smallM": [
 					{ "mtitle": "采购明细表", "href": "../report/purchaseSchedule.html" }
-					/*,{"mtitle":"超期库存跟踪表","href":"../report/beyondThe.html","hide":true}*/,
+					,{"mtitle":"超期库存跟踪表","href":"../report/beyondThe.html","hide":true},
 					{ "mtitle": "贸易盘点跟踪表", "href": "../report/tradeInventoryTracking.html" },
 					{ "mtitle": "加工商盘点跟踪表", "href": "../report/processorInventoryTracking.html" },
 					{ "mtitle": "自营管理", "href": "../report/forResources.html" },
-					/*,{"mtitle":"单位评审统计表","href":"../report/unitReviewStatistics.html","hide":true},
+					,{"mtitle":"单位评审统计表","href":"../report/unitReviewStatistics.html","hide":true},
 					{"mtitle":"区域客户统计表","href":"../report/regionalCustomerStatistics.html","hide":true},
-					{"mtitle":"客户分配跟踪表","href":"../report/customerAssignmentTracking.html","hide":true},*/
+					{"mtitle":"客户分配跟踪表","href":"../report/customerAssignmentTracking.html","hide":true},
 					{ "mtitle": "创业帮跟踪表", "href": "../report/businessHelpSum.html" },
 					{ "mtitle": "金牌商家业务跟踪", "href": "../report/goldMerchants.html" },
 					{ "mtitle": "运输排行表", "href": "../report/transportationSchedule.html" },
-					/*{"mtitle":"运输统计表","href":"../report/transportStatistics.html","hide":true} ,*/
+					{"mtitle":"运输统计表","href":"../report/transportStatistics.html","hide":true} ,
 					{ "mtitle": "VIP单位评审表", "href": "../report/reviewFormForVIPUnits.html" }]
 			}
 			//  {"mtitle":"新经营报表","href":"../index/index.html"},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"}, 
 			, { "bigM": "分析类", "smallM": [
 				{ "mtitle": "经营报表", "href": "../report/businessReport.html" },
-				/*{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html","hide":true},*/
+				{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html","hide":true},
 				{ "mtitle": "经营报告表", "href": "../report/domesticTrade.html" },
-				/*{"mtitle":"资金日报表","href":"../report/cashJournal.html","hide":true},
-				{"mtitle":"运营分析表","href":"../report/goldMerchantMarketing.html","hide":true},*/
+				{"mtitle":"资金日报表","href":"../report/cashJournal.html","hide":true},
+				{"mtitle":"运营分析表","href":"../report/goldMerchantMarketing.html","hide":true},
 				{ "mtitle": "毛利明细表", "href": "../report/grossProfitDetail.html" }] 
 			}
 			, { "bigM": "款项类", "smallM": [{ "mtitle": "G2G统计表", "href": "../report/G2GTab.html" },
 			 { "mtitle": "资金跟踪表", "href": "../report/shouldAdvance.html" },
-			 /*,{"mtitle":"待付款跟踪表","href":"../report/paymentTrackingForm.html","hide":true},
+			 ,{"mtitle":"待付款跟踪表","href":"../report/paymentTrackingForm.html","hide":true},
 			 {"mtitle":"佣金回访表","href":"../report/commission.html","hide":true}
 			 ,{"mtitle":"红利明细表","href":"../report/bonusDetails.html","hide":true},
 			 {"mtitle":"第三方支付结算跟踪表","href":"../report/settlementTracking.html","hide":true},
-			 {"mtitle":"在线支付使用跟踪表","href":"../report/onlinePaymentUsageTracking.html","hide":true}*/
+			 {"mtitle":"在线支付使用跟踪表","href":"../report/onlinePaymentUsageTracking.html","hide":true},
 			  { "mtitle": "金牌商家备货金管理", "href": "../report/goldMerchantsStockUp.html" },
-			  /*{"mtitle":"交易明细表","href":"../report/salesBreakdown.html","hide":true},
-			{"mtitle":"收支明細表","href":"../report/paymentDetails.html","hide":true}*/] }
+			  {"mtitle":"交易明细表","href":"../report/salesBreakdown.html","hide":true},
+			{"mtitle":"收支明細表","href":"../report/paymentDetails.html","hide":true}] }
 			, { "bigM": "资金流", "smallM": [
 				{ "mtitle": "第三方支付结算跟踪表", "href": "../report/settlementTracking.html" },
 				 { "mtitle": "资金日报表", "href": "../report/shouldAdvance.html" }]
@@ -122,9 +122,9 @@ var menu_Data = [
 				 { "mtitle": "加工商毛利表", "href": "../report/grossMarginForProcessors.html" },
 				  { "mtitle": "加工商废料收入", "href": "../report/processorWaste.html" }, 
 				  { "mtitle": "加工商出入库报表", "href": "../report/processingInventoryRecords.html" },
-				  /*{"mtitle":"生产一线人员效益统计表","href":"../report/theProductionLine.html","hide":true}*/
-				  { "mtitle": "加工商付款明细表", "href": "../report/paymentList.html" },
-				  /*,{"mtitle":"加工商收款明细表","href":"../report/processorReceipt.html","hide":true}*/ 
+				  {"mtitle":"生产一线人员效益统计表","href":"../report/theProductionLine.html","hide":true},
+				  { "mtitle": "加工商付款明细表", "href": "../report/paymentList.html" }
+				  ,{"mtitle":"加工商收款明细表","href":"../report/processorReceipt.html","hide":true} ,
 				  { "mtitle": "加工商分红明细", "href": "../report/processorBonusDetails.html" },
 				] }
 		]
@@ -144,23 +144,56 @@ var menu_Data = [
 					{ "mtitle": "函件管理", "href": "../documents/correspondence.html" }
 				]
 			}
-			_menuStr+=_menuStrA+'</div></div></div></span>'
-		}else{
-			var w=(160+50)*l-50
-			_menuStr+='<span class="menuList menuhook " dataChild="'+l+'">'+
-				 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont" style="width:'+w+'px">'
-			var _menuStrD='';
-			for(var j=0;j<menu_Data[i].menuList.length;j++){
-				_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
-				var _menuStrV='';
-				for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
-					console.log(menu_Data[i].menuList[j].smallM[v].href)
-					if(menu_Data[i].menuList[j].smallM[v].hide){
-						_menuStrV+='<a class="mDListShow" style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
-					}else{
-						_menuStrV+='<a class="mDListShow" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
-					}
-					
+		]
+	}
+	, {
+		"title": "信息管理",
+		"menuList": [
+			{ "bigM": "基础信息", "smallM": [{ "mtitle": "毛利要求及资金占用设置", "href": "../index/index.html" }, { "mtitle": "市场定价管理", "href": "../index/index.html" }, { "mtitle": "编码维护", "href": "../index/index.html" }, { "mtitle": "资本中心信息维护", "href": "../index/index.html" }, { "mtitle": "短信配置维护", "href": "../index/index.html" }, { "mtitle": "资源中英文匹配", "href": "../index/index.html" }] }
+			, { "bigM": "客户相关", "smallM": [{ "mtitle": "仓库信息维护", "href": "../index/index.html" }, { "mtitle": "单位账户信息维护", "href": "../index/index.html" }, { "mtitle": "乐刚云用户配置表", "href": "../index/index.html" }, { "mtitle": "运营定价管理", "href": "../index/index.html" }] }
+			, { "bigM": "前台信息类", "smallM": [{ "mtitle": "月度冠军维护", "href": "../index/index.html" }, { "mtitle": "月度目标量维护", "href": "../index/index.html" }, { "mtitle": "神供搜信息维护", "href": "../index/index.html" }, { "mtitle": "乐刚广告维护", "href": "../index/index.html" }, { "mtitle": "外贸网站管理", "href": "../index/index.html" }, { "mtitle": "外贸询价表", "href": "../index/index.html" }, { "mtitle": "外贸产品维护", "href": "../index/index.html" }] }
+			, { "bigM": "加工类", "smallM": [{ "mtitle": "加工资源定价管理", "href": "../index/index.html" }, { "mtitle": "加工核价管理", "href": "../index/index.html" }, { "mtitle": "统一核价标准", "href": "../index/index.html" }, { "mtitle": "资源信息维护", "href": "../index/index.html" }, { "mtitle": "钢品城维护", "href": "../index/index.html" }] }
+		]
+	}
+
+	, {
+		"title": "权限管理",
+		"menuList": [
+			{ "bigM": "角色管理类", "smallM": [{ "mtitle": "管理员注册管理", "href": "../index/index.html" }, { "mtitle": "系统分类角色管理", "href": "../index/index.html" }, { "mtitle": "系统角色人员管理", "href": "../index/index.html" }, { "mtitle": "系统角色菜单管理", "href": "../index/index.html" }, { "mtitle": "加工主账号菜单管理", "href": "../index/index.html" }] }
+			, { "bigM": "流程审批类", "smallM": [{ "mtitle": "流程节点管理", "href": "../index/index.html" }, { "mtitle": "流程节点人员管理", "href": "../index/index.html" }] }
+			, { "bigM": "系统菜单类", "smallM": [{ "mtitle": "操作查看权限", "href": "../index/index.html" }, { "mtitle": "业绩考核权限", "href": "../index/index.html" }] }
+			, { "bigM": "人员信息类", "smallM": [{ "mtitle": "账户信息管理", "href": "../index/index.html" }] }
+
+
+		]
+	}
+
+]
+
+var _menuStr = ''
+for (var i = 0; i < menu_Data.length; i++) {
+	var l = menu_Data[i].menuList.length;
+	if (l == 1) {   //只有一个菜单的情况下
+		_menuStr += '<span class="menuList menuhook" dataChild="1">' +
+			'<span class="menuText">' + menu_Data[i].title + '</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
+		var _menuStrA = ''
+		for (var a = 0; a < menu_Data[i].menuList[0].smallM.length; a++) {
+			_menuStrA += '<a class="mDListShow" href="' + menu_Data[i].menuList[0].smallM[a].href + '">' + menu_Data[i].menuList[0].smallM[a].mtitle + '</a>'
+		}
+		_menuStr += _menuStrA + '</div></div></div></span>'
+	} else {
+		var w = (160 + 50) * l - 50
+		_menuStr += '<span class="menuList menuhook " dataChild="' + l + '">' +
+			'<span class="menuText">' + menu_Data[i].title + '</span><div class="mDetail"><div class="mDetailCont" style="width:' + w + 'px">'
+		var _menuStrD = '';
+		for (var j = 0; j < menu_Data[i].menuList.length; j++) {
+			_menuStrD += '<div class="mDList"><div class="mDListTitle">' + menu_Data[i].menuList[j].bigM + '</div>'
+			var _menuStrV = '';
+			for (var v = 0; v < menu_Data[i].menuList[j].smallM.length; v++) {
+				if (menu_Data[i].menuList[j].smallM[v].hide) {
+					_menuStrV += '<a class="mDListShow" style="display:none" href="' + menu_Data[i].menuList[j].smallM[v].href + '">' + menu_Data[i].menuList[j].smallM[v].mtitle + '</a>'
+				} else {
+					_menuStrV += '<a class="mDListShow" href="' + menu_Data[i].menuList[j].smallM[v].href + '">' + menu_Data[i].menuList[j].smallM[v].mtitle + '</a>'
 				}
 
 			}
@@ -183,7 +216,6 @@ $(function () {
 	$(".m_top").append(logo).append(topRight);
 
 
-<<<<<<< HEAD
 
 
 	$("body").on("mouseenter", ".menuhook", function () {
@@ -200,29 +232,6 @@ $(function () {
 					$(this).find(".mDetail").css("left", -($(this).find(".mDetailCont").outerWidth(true) - $(this).outerWidth(true)))
 				} else {
 					$(this).find(".mDetail").css("left", _ww - _myL - $(this).find(".mDetailCont").outerWidth(true) / 2);
-=======
-		$("body").on("mouseenter",".menuhook",function(){
-			//console.log("enter")
-			var _ww=$(window).width()/2;
-			var _myL=$(this).offset().left;
-			if($(window).width()>1100){
-				var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
-				//console.log(_index)
-
-				if($(this).attr("datachild")>="4"){
-					if(_index>7){
-							$(this).find(".mDetail").css("left",-($(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true)))
-					}else{
-						$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
-					}
-				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
-					if(_myL>_ww){  //在屏幕右侧
-						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth();
-					}else{  //在屏幕左侧
-						var _w=0;
-					}
-					$(this).find(".mDetail").css("left",-_w)
->>>>>>> 3901cf745aba76eb4a243e130e43a1802f553bc5
 				}
 
 			} else if ($(this).attr("datachild") == "2" || $(this).attr("datachild") == "3") {

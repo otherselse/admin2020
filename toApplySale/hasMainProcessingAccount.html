@@ -43,20 +43,16 @@
             </div>
         </div>
 
-        <div class="ui-tab3">
-            <a href="mainProcessingAccount.html" class="ui-tab3-list rel"><span class="ui-tab3-text">待审核账号</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="hasMainProcessingAccount.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">已审核账号</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl mb10 dac f12 ">
                     审核状态：<span class="single mr20">
                         <input type="hidden">
-                        <button type="button" class="ui-option mr5 on">待评审</button>
-                        <button type="button" class="ui-option mr5">已审核</button>
+                        <a href="mainProcessingAccount.html">
+                            <button type="button" class="ui-option mr5">待评审</button>
+                        </a>
+                        <a href="hasMainProcessingAccount.html"><button type="button" class="ui-option mr5 on">已审核</button></a>
+                    </span>
                     </span>
                     <span class="dib pct25">
                         公司名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
@@ -75,17 +71,14 @@
                 </div>
                 <table class="ui-table tc f12" width="100%">
                     <thead>
-                        <tr>
-                            <th width="8%">序号</th>
-                            <th width="10%">申请时间</th>
-                            <th width="22%">公司名称</th>
-                            <th width="10%">申请账号</th>
-                            <th width="10%">申请人</th>
-                            <th width="10%">审批人</th>
-                            <th width="10%">审批时间</th>
-                            <th width="10%">审批结果</th>
-                            <th width="10%">操作</th>
-                        </tr>
+                        <tr class="fixTr">
+							<th width="11%">序号</th>
+							<th width="16%">申请时间</th>
+							<th width="25%">公司名称</th>
+							<th width="16%">申请账号</th>
+							<th width="19%">申请人</th>
+							<th width="13%">操作</th>
+						</tr>
                     </thead>
                     <tbody class="ui-thover">
                         <tr height="50px">
