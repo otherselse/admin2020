@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>金牌商家信息表-统计管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                统计管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">金牌商家信息表</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-content minH">
+            <div class="f12 p20">
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct25">
+                        金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        跟踪人：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        注册时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                </div>
+                <div class="df ">
+                    <span class="dib pct25">
+                        账号状态：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 正常</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>停用</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        在职：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="dib pct50 df">
+                        <div>类型：</div>
+                        <div class="dib selectSingle dac">
+                            <a class="mb10 on" href="javscript:void(0)">加盟式</a>
+                            <span class="pr5 mb10 pl5 ">|</span>
+                            <a class="mb10" href="javscript:void(0)">合伙式-业务型</a>
+                            <span class="pr5 mb10 pl5 ">|</span>
+                            <a class="mb10" href="javscript:void(0)">合伙式-综合型</a>
+                        </div>
+                    </span>
+                </div>
+                <div class="df ">
+                    <span class="dib dac f12 pct50">
+                        分红模式：<span class="dib dac pct69">
+                            <span class="ui-input-x mr10 pct40">
+                                <span class="pct40 ui-inputbut  brd9 tc">底薪</span>
+                                <input type="text" class="pct60 tc f12">
+                            </span>
+                            <span class="ui-input pct50" data-type="price">
+                                <span class="red dib pct20 vm">分红</span>
+                                <input type="text" value="" class="pct69" placeholder="输入分红">%
+                            </span>
+                        </span>
+                    </span>
+                    <span class="pct50 dib">
+                        <button type="button" class="ui-button mr20">查询</button>
+                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                    </span>
+                </div>
+                <div class="tc mt20 f12">
+
+                </div>
+                <table class="ui-table tc mt30 f12" width="100%">
+                    <thead>
+                        <tr class="fixTr">
+                            <th width="4%">序号</th>
+                            <th width="5%">金牌商家</th>
+                            <th width="8%">注册时间</th>
+                            <th width="9%">类型</th>
+                            <th width="8%">入职推荐人</th>
+                            <th width="8%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    累计交易量(T)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <lable class="jpsj_Sort" onclick="setOrderCol('a.orderSum',this)"><i data="orderBy"
+                                        id="Ia.orderSum" class=""></i>
+                                </lable>
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    交易订单数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    累计分红(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="6%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    合作客户数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="5%">帐号管理</th>
+                            <th width="6%">平台获利</th>
+                            <th width="6%">预计获利</th>
+                            <th width="7%">无效开始时间</th>
+                            <th width="5%">跟踪人</th>
+                            <th width="5%">评审得分</th>
+                            <th width="6%">评审详情</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <!-- 跳转的是报表管理里面的金牌商家注册信息 -->
+                                <a href="../report/businessInformation.html" title="点击查看注册信息"><span
+                                        class="redm tiptop">詹姆斯</span></a>
+                            </td>
+                            <td>2020-07-29</td>
+                            <td>
+                                加盟式金牌商家
+                            </td>
+                            <td>赵自立</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>正常</td>
+                            <td> 0</td>
+                            <td> 0</td>
+                            <td>
+                                --
+                                <a href="javascript:void(0)" class="blue ml5" onclick="showTrMore(this)">| 详情</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="blue"
+                                    href="../statistical/sdcoreOfGoldMerchants.html">查看</a>
+                            </td>
+                        </tr>
+                        <tr class="hideTr dn">
+                            <td colspan="18">
+                                <div class="p20">
+                                    <table class="ui-table  tc f12 auto" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th width="10%">序号</th>
+                                                <th width="15%">考核状态</th>
+                                                <th width="20%">开始时间</th>
+                                                <th width="15%">当时平台获利</th>
+                                                <th width="20%">结束时间</th>
+                                                <th width="15%">当时平台获利</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2019-02-21 14:45:08</td>
+                                                <td>李四四</td>
+                                                <td>123566</td>
+                                                <td>111</td>
+                                                <td>123677</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr><!-- 隐藏内容end -->
+                    </tbody>
+                </table>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+    <div class="dom1 dn">
+        请审批人员认真查看附件内容，以附件为参考依据进行审批。
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(6).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+
+        })
+
+
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("同意申请。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("不同意申请。");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

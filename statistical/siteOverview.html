@@ -59,7 +59,7 @@
                 <div class="mb10 f14 g28">流量统计</div>
                 <div class="cl mb10 dac f12">
                     <span class="mt5 dib">时间段分类：</span>
-                    <span class="single ">
+                    <span class="single my">
                         <input type="hidden">
                         <button type="button" class="ui-option mr5 on m_mb10">今日</button>
                         <button type="button" class="ui-option mr5 m_mb10">最近一周</button>
@@ -209,7 +209,7 @@
                 }
             });
 
-            $(".single button").click(function () {
+            $(".my button").click(function () {
                 if ($(this).attr("class").indexOf("qj") < 0) {
                     $("#qj").addClass("dn")
                 } else {

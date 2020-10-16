@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>加工统计-统计管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                统计管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">加工统计</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+
+        <div class="ui-content f12 minH">
+            <div class="p20">
+                <div class="mb10  df">
+                    <span class="mt5 dib">查询时段：</span>
+                    <span class="single ">
+                        <input type="hidden">
+                        <button type="button" class="ui-option mr5 on m_mb10">今日</button>
+                        <button type="button" class="ui-option mr5 m_mb10">本周</button>
+                        <button type="button" class="ui-option mr5 m_mb10">本月</button>
+                        <button type="button" class="ui-option mr5 m_mb10">本年</button>
+                        <button type="button" class="qj ui-option mr5 m_mb10">自定义</button>
+                    </span>
+                    <span class="f1 ml5 f12 dn " id="qj">
+                        <span class="ui-input tc f0 pct49  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                </div>
+                <div class="dac ">
+                    <div>结算方式：</div>
+                    <div class="dib selectSingle dac">
+                        <a class=" on" href="javscript:void(0)">全部</a>
+                        <span class="pr5  pl5 ">|</span>
+                        <a class="" href="javscript:void(0)">结算</a>
+                        <span class="pr5  pl5 ">|</span>
+                        <a class="" href="javscript:void(0)">未结算</a>
+                    </div>
+                    <button type="button" class="ui-button mr20 ml20">查询</button>
+                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+
+                <div class="mb10 f14 g28 mt20">今日销采量统计</div>
+                <table class="ui-table tc f12" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="n17-Ttitle2" id="saleSumWeeks">
+                            <th width="5%">排名</th>
+                            <th width="17%">加工商</th>
+                            <th width="8%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    入库量(吨)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="9%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    入库产值(元)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="9%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    出库量(吨)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="9%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    出库产值(元)<span class="dib xia ml5"></span>
+                                </span>
+                                <span class="dib xia ml5"></span>
+                            </th>
+                            <th width="8%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    加工量(吨)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="9%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    加工产值(元)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="9%" class="f14  n17-bbb ">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    废料收入(元)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                            <th width="8%">
+                                <span class="menuhook" onclick="setUp(this)">
+                                    总产值(元)<span class="dib xia ml5"></span>
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bgwh" class="ui-thover">
+                        <tr>
+                            <td>
+                                <img src="../images/statistical/tc18.png" width="30" height="25" alt="">
+                            </td>
+                            <td>上海华冶钢材加工有限公司</td>
+                            <td ><span >130</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >104</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >600</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >612</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/statistical/tc19.png" width="30" height="25" alt="">
+                            </td>
+                            <td >上海华冶钢材加工有限公司</td>
+                            <td ><span >130</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >104</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >600</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >612</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../images/statistical/tc20.png" width="30" height="25" alt="">
+                            </td>
+                            <td >上海华冶钢材加工有限公司</td>
+                            <td ><span >130</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >104</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >600</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >612</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr height="45" class="bgwh">
+                            <td colspan="2">
+                                汇总：
+                            </td>
+                            <td ><span >130</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >104</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >12</span><br>
+                                <span class=" tiptop c14bb menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >600</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                            <td ><span >0</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 0%">+0%</span>
+                            </td>
+                            <td ><span >612</span><br>
+                                <span class=" tiptop red menuhook" title="同期环比 100%">+100%</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+    <div class="dom1 dn">
+        请审批人员认真查看附件内容，以附件为参考依据进行审批。
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+
+            $(".single button").click(function () {
+                if ($(this).attr("class").indexOf("qj") < 0) {
+                    $("#qj").addClass("dn")
+                } else {
+                    $("#qj").removeClass("dn")
+                }
+            });
+        })
+
+        function show(obj) {
+            $(obj).find("span").toggleClass("t_deg90");
+            $(obj).toggleClass("on");
+        }
+
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents("tbody").find("textarea").val("同意申请。");
+            } else {
+                $(obj).parents("tbody").find("textarea").val("不同意申请。");
+            }
+        }
+
+        function setUp(obj) {
+            $(obj).find("span").toggleClass("on");
+        }
+    </script>
+</body>
+
+</html>

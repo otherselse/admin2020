@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>承若涵上传-历史记录</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <script src="http://116.228.150.225:6889/js/highcharts/highcharts.js"></script>
 </head>
 
 <body class="showTip">
-    <div class="lgui-table-box ml20 mt20 mr20">
-        <div class="lgui-table-header pct100">
+    <div class="lgui-table-box  mt20 ">
+        <div id="container" style="height:400px" data-highcharts-chart="0"></div>
+        <div class="lgui-table-header pct100" style="position: fixed;bottom:10px;">
             <table class="ui-table tc f12  pct100" width="100%">
                 <thead>
                     <tr>
@@ -87,10 +89,6 @@
             </table>
         </div>
     </div>
-    <div class="trans_fixbot ovh bte" style="padding-bottom: 25px;">
-        <!-- table end -->
-        <script type="text/javascript" src="../js/pagelist.js"></script>
-    </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -98,5 +96,150 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
 </body>
+<script>
+    var arr = jQuery.parseJSON('[{"time":"2/15","num":123456.0},{"time":"2/16","num":123466.0},{"time":"2/17","num":123566.0}]');
+
+    var month = jQuery.parseJSON('"2019-2"');
+    //var myMonthData=[{"rate":675.11},{"rate":555.11},{"rate":665.11}];//后台传的月数据
+    var myMonthData = arr;
+    var myFunction = {
+        init: function () {
+            myFunction.getDays();
+            //myFunction.turnArr();
+        },
+        turnArr: function () {
+            for (var j = 0, len = arr.length; j < len; j++) {
+                console.log(arr[j][0]);
+                var num = arr[j][0] / 1000;
+                arr[j][0] = num;
+            }
+        },
+        getDays: function () {
+            var mydate = month;
+            if (mydate != "") {
+                var day = mydate.split("-");
+                var days = new Date(day[0], day[1], 0).getDate();
+
+                myFunction.creteTable(days);
+                myFunction.updateTable(myMonthData, days);
+            }
+        },
+        creteTable: function (time) { //创建 table
+            var str = '<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="tableml" id="monthTable"><thead><tr id="mydate"><th width="5%">日期</th>';
+            var th = '', td = '';
+            for (var i = 1; i <= time * 1; i++) {
+                th += '<th width="3%">' + i + '</th>';
+                td += "<td>/</td>";
+            }
+            str += th + "</thead><tbody><tr id='myrate'><td>当日缺口（单位：万）</td>" + td + "</td></tr></tbody></table>";
+            $("#everyDate").html(str);
+        },
+        updateTable: function (myMonthData, time) { //根据数据更新table
+            var myrate = $("#myrate");
+            for (var i = 0; i < myMonthData.length; i++) {
+                if (myMonthData[i].rate != '') {
+                    var dd = (myMonthData[i].time).split("/")[1] * 1;
+                    for (var j = 1; j <= time * 1; j++) {
+                        if (dd == j) {
+                            $("#myrate").find("td").eq(j).html(((myMonthData[i].num * 1) / 10000).toFixed(1));
+                            //$("#myrate").find("td").eq(i+1).html(((myMonthData[i].num*1)/10000).toFixed(1));
+                            break;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+
+    }
+    $(function () {
+
+        //没有反应 重新提交下
+        //定义数据
+        var arr = [{ "time": '1/1', "num": 10000 }, { "time": '1/2', "num": 11000 }, { "time": '01/03', "num": 11300 }, { "time": '01/04', "num": 10150 }, { "time": '01/05', "num": 11080 }, { "time": '01/06', "num": 26000 }, { "time": '01/07', "num": 20500 }, { "time": '01/08', "num": 20000 }, { "time": '01/09', "num": 21000 }, { "time": '01/10', "num": 21300 }, { "time": '01/11', "num": 21050 }, { "time": '01/12', "num": 21080 }]
+        var month = "2";
+
+
+        var mytime = [], quantity = []
+        for (var i = 0; i < arr.length; i++) {
+            mytime[i] = arr[i].time;
+            quantity[i] = arr[i].num;
+        }
+        setChart(month, mytime, quantity);
+        myFunction.init();
+
+
+    })
+
+
+    function setChart(name, time, arr) {
+        Highcharts.chart('container', {
+            title: {
+                text: name + "月份进销缺口值折线图"
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                //type: 'datetime', //用于间隔很重要
+                lineWidth: 1,
+                lineColor: "#ccc",
+                gridLineWidth: 1,
+                labels: {
+                    style: {
+                        color: '#000',
+                        fontSize: '12px'
+                    }
+
+                },
+                categories: time
+            },
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    style: { color: '#000' },
+                    formatter: function () {
+                        return (this.value / 10000).toFixed(2) + '万';
+                        //return Highcharts.numberFormat(this.value/10000,0)+'万';
+                    }
+                },
+                lineWidth: 1,
+                gridLineWidth: 1,
+                lineColor: "#ccc",
+                minorGridLineWidth: 0,
+                gridLineWidth: 1,
+                alternateGridColor: null
+            },
+            plotOptions: {
+                spline: {
+                    lineWidth: 2,
+                    states: {
+                        hover: {
+                            lineWidth: 2
+                        }
+                    },
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br> ' + this.series.name + ': ' + (this.y / 10000).toFixed(2) + "万元";
+                }
+            },
+            series: [{
+                name: "进销缺口值",
+                data: arr
+            }]
+        }); //chart end
+    }
+
+</script>
 
 </html>

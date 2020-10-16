@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>公司信息评审-评审管理-乐刚智能云系统</title>
+    <title>公司信息评估-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -36,7 +36,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 评审管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">加工主账号评审</span>
+                <span class="g28">公司信息评估</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -50,7 +50,7 @@
                         单位名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        单位类型：<span class="input-selSearch pct69">
+                        评审类型：<span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
                             <div class="search-cont pct69">
                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -63,18 +63,18 @@
                         </span>
                     </span>
                     <span class="dib pct25">
-                        状态：<span class="radio">
-                            <label class="mr10"><i class="on ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>已经评审</label>
-                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-                                        name="radio"></i>未评审</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
                         申请日期：<span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        状态：<span class="radio">
+                            <label class="mr10"><i class="on ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>已评审</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                        name="radio"></i>未评审</label>
                         </span>
                     </span>
                 </div>
@@ -109,11 +109,14 @@
                         <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
-                                    <h2 class="sp-yg tl mt10 mb10 dac">
-                                        公司信息<a href="javascript:void(0)" class="ml5 goldIcon icon-info tiptop"
-                                            title="<div style='width:300px;'>评审要点：需要出具企业三证和工商名称变更通知书</div>"></a>
-                                        <div class="f1"></div>
-                                    </h2>
+                                    <div>
+                                        <h2 class="sp-yg l tl mt10 mb10">
+                                            公司信息
+                                        </h2>
+                                        <div class="r">
+                                            <span class="ui-tip">评审要点：需要出具企业三证和工商名称变更通知书</span>
+                                        </div>
+                                    </div>
                                     <table class="ui-table f12 auto tl mt10 mb10" width="100%">
                                         <tbody>
                                             <tr class="resource-table">
@@ -284,15 +287,489 @@
                             <td>2020-09-03 </td>
                             <td>上海陆陆科技有限公司<span class="red"></span></td>
                             <td>公司名称变更</td>
-                            <td>审核完成</td>
+                            <td>审核通过<span class="red">自动</span></td>
                             <td>
                                 <a href="javascript:void(0)" class="hoverBlue"
-                                    onclick="showTrMore(this),show(this)">评审<span class="ml2 dib b">></span></a>
+                                    onclick="showTrMore(this),show(this)">查看<span class="ml2 dib b">></span></a>
                             </td>
                         </tr>
+                        <!-- 已评审-审核通过开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <div class="">
+                                        <h2 class="sp-yg tl mt10 l mb10">公司信息</h2>
+                                        <span class="ui-tip r">评审要点：需要出具企业三证和工商名称变更通知书</span>
+                                    </div>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    1万千瓦多所群多群无多群无多无多
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">变更后：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        JAH270C
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        都气歪带我去吃请我吃
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        5311
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">传真号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%" colspan="3">
+                                                    <div class="pl10 pr10">
+                                                        111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">更改后税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        1111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司变更通知书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="sp-yg tl mt30 mb10">审批意见</h2>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审批人：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <span class="dib ml10">
+                                                       王阿纪委
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审批意见：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <div class="pl10 pr10">
+                                                       <span class="red">[审核通过]</span>已查看，本人表示同意申请。（2010-11-21 09:21:21）
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>2020-09-03 </td>
+                            <td>上海陆陆科技有限公司<span class="red"></span></td>
+                            <td>公司名称变更</td>
+                            <td>审核不通过</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 已评审-审核不通过开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <div class="">
+                                        <h2 class="sp-yg tl mt10 l mb10">公司信息</h2>
+                                        <span class="ui-tip r">评审要点：需要出具企业三证和工商名称变更通知书</span>
+                                    </div>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    1万千瓦多所群多群无多群无多无多
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">变更后：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        JAH270C
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        都气歪带我去吃请我吃
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        5311
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">传真号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%" colspan="3">
+                                                    <div class="pl10 pr10">
+                                                        111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">更改后税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        1111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司变更通知书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="sp-yg tl mt30 mb10">审批意见</h2>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审批人：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <span class="dib ml10">
+                                                       王阿纪委
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">审批意见：</span>
+                                                </td>
+                                                <td width="87%">
+                                                    <div class="pl10 pr10">
+                                                       <span class="red">[审核不通过]</span>已查看，本人表示不同意申请。（2010-11-21 09:21:21）
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>2020-09-03 </td>
+                            <td>上海陆陆科技有限公司<span class="red"></span></td>
+                            <td>公司名称变更</td>
+                            <td>退回</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">查看<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 已评审-退回开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <div class="">
+                                        <h2 class="sp-yg tl mt10 l mb10">公司信息</h2>
+                                        <span class="ui-tip r">评审要点：需要出具企业三证和工商名称变更通知书</span>
+                                    </div>
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    1万千瓦多所群多群无多群无多无多
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">变更后：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        JAH270C
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        都气歪带我去吃请我吃
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        5311
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">传真号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%" colspan="3">
+                                                    <div class="pl10 pr10">
+                                                        111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        建设银行
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">更改后税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        1111111
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司变更通知书：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <div class="pl10 pr10">
+                                                        <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="sp-yg tl mt30 mb10">审批意见</h2>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 结束 -->
+
 
                         <!-- 审核完成开始 -->
-                        <tr class="hideTr dn">
+                        <!-- <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
                                     <h2 class="sp-yg tl mt10 mb10">基本信息</h2>
@@ -402,7 +879,7 @@
                                     </table>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                         <!-- 结束 -->
                     </tbody>
                 </table>
