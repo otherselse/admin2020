@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>租赁分红审批-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
+        id="layuicss-layer">
+</head>
+
+<body class="showTip">
+
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                审批管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">租赁分红审批</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏<a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="p20">
+                <div class="mb10 f12">
+                    <div class="dib mr40">
+                        <span class="searchLable">审批状态：</span>
+                        <div class="dib selectSingle">
+                            <a href="javascript:void(0)" href="javascript:void(0)">不限</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">待审批</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">已审批</a>
+                        </div>
+                    </div>
+                    <span class="dib f12  m_pct31">
+                        <span class="searchLable">申请时间：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off">
+                            <span class="dib pct5 tc">-</span>
+                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+                                autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+                <div class=" f12">
+                    <span class="searchLable dib vt">申请公司：</span>
+                    <div class="dib selectSingle selectProcName ">
+                        <a href="javascript:void(0)" href="javascript:void(0)">不限</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁交易</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">asfdas</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">安徽东岭实业有限公司</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁加工集团</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁加工集团</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁加工集团</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁加工集团</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">上海钢铁加工集团</a>
+                    </div>
+                </div>
+                <div class="tc mt20">
+                    <button type="button" class="ui-button">查询</button>
+                </div>
+                <div class="lgui-table-box mt30">
+                    <div class="lgui-table-header">
+                        <table class="ui-table f12 pct100">
+                            <thead>
+                                <tr>
+                                    <th width="14%">申请单号</th>
+                                    <th width="13%">申请公司</th>
+                                    <th width="18%">费用项目</th>
+                                    <th width="10%">分红金额</th>
+                                    <th width="16%">申请日期</th>
+                                    <th width="10%">审核状态</th>
+                                    <th width="9%">发票</th>
+                                    <th width="10%">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="lgui-table-body mt-1">
+                        <table class="ui-table tc f12" width="100%">
+                            <tbody class="ui-thover">
+                                <tr class="openTr">
+                                    <td width="14%"><a href="javascript:void(0);"
+                                            onclick="openDetail()">JGSFH202009290021</a></td>
+                                    <td width="13%">上海华冶钢材加工有限公司</td>
+                                    <td width="18%">租赁分红</td>
+                                    <td width="10%" numtype="formatMoney">8,500</td>
+                                    <td width="16%">2020-09-30 10:10:31</td>
+                                    <td width="10%">已审核</td>
+                                    <td width="9%"><a href="javascript:void(0);" onclick="looktick()">查看</a></td>
+                                    <td width="10%"><a href="javascript:void(0);" class="blue"
+                                            onclick="openDetails(this)">查看</a>
+                                    </td>
+                                </tr>
+                                <tr class="hideTr dn">
+                                    <td colspan="8" class="istd">
+                                        <div class="auto" style="width: 98%;">
+                                            <div class="ui-tab2 " data-type="2">
+                                                <span class="ui-tab2-line" style="left:0;"></span>
+                                                <div class="ui-tab2-cont">
+                                                    <a href="javascript:void(0)" class="ui-tab2-list on"
+                                                        id="apply1">申请明细</a>
+                                                    <a href="javascript:void(0)" class="ui-tab2-list" id="msg1">审批意见</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="ui-table auto mt15 istable"  width="98% ">
+                                            <thead>
+                                                <tr>
+                                                    <th width="20%">申请单号</th>
+                                                    <th width="20%">申请公司</th>
+                                                    <th width="40%">费用项目</th>
+                                                    <th width="20%">结算金额</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>JGSFH202009290021</td>
+                                                    <td>上海华冶钢材加工有限公司</td>
+                                                    <td>其他费用</td>
+                                                    <td numtype="personal">8,500</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <form>
+                                            <table class="ui-table f12 auto row mt15 istable dn tl" style="width: 98%;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="15%">审核</td>
+                                                        <td width="85%">1节点</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>审批意见</td>
+                                                        <td><span class="red">[审核通过]</span>系统自动审批 2020-09-24 11:37:29</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>本人审批意见</td>
+                                                        <td>
+                                                            <span class="radio">
+                                                                <label class="mr15">
+                                                                    <i class="ui-radio goldIcon v-3 mr2 on">
+                                                                        <input type="radio" class="radio-opacity" name="radio">
+                                                                    </i>同意申请
+                                                                </label>
+                                                                <label>
+                                                                    <i class="ui-radio goldIcon v-3 mr2">
+                                                                        <input type="radio" class="radio-opacity" name="radio">
+                                                                    </i>不同意申请
+                                                                </label>
+                                                            </span>
+                                                        </td>
+                            
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="vt">本人审批备注</td>
+                                                        <td>
+                                                            <textarea class="pct98 ui-textarea" cols="30" rows="6"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- table end -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(6).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //tab2 菜单移动
+            $(".ui-tab2").find(".ui-tab2-list").on("click", function () {
+                var tab2index = Number($(this).parents(".ui-tab2").find(".ui-tab2-list").index($(this))) * 90 + "px";
+                $(this).parents(".ui-tab2").find(".ui-tab2-line").stop().animate({ "left": tab2index })
+                $(this).addClass("on").siblings().removeClass("on");
+                $(this).parents(".istd").find(".istable").hide();
+                $(this).parents(".istd").find(".istable").eq($(this).index()).show();
+            })
+        })
+        function openDetail() {
+            layer.open({
+                type: 2,
+                title: "加工商分红申请明细",
+                shadeClose: true,
+                area: ['1000px', '550px'],
+                content: "./procBonusApplyAction_searchProcBonusApplyDetailList.html"
+            });
+        }
+        //展开明细
+        function openDetails(obj) {
+            $(obj).parents(".openTr").next("tr").toggle()
+        }
+
+
+
+    </script>
+</body>
+
+</html>

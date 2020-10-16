@@ -8,11 +8,11 @@
 		}
 		,{"title":"审批管理",
 		 "menuList":[
-			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../toApproval/procBonusApplyAction_procAfterProcessList.html"}
+			 	{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList1.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../toApproval/procBonusApplyAction_procAfterProcessList.html"}
 			 	]}
-			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"..//toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"金牌商家提现审批","href":"../index/index.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../index/index.html"},{"mtitle":"风险保证金审核","href":"../index/index.html"},{"mtitle":"租赁分红审批","href":"../index/index.html"}
+			 	,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"金牌商家提现审批","href":"../toApproval/withDraw.html"},{"mtitle":"客户退款审批","href":"../index/index.html"},{"mtitle":"承兑汇票审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"风险保证金审核","href":"../toApproval/fxjPermitList.html"},{"mtitle":"租赁分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"}
 			 	]}
-			 	,{"bigM":"加工类","smallM":[{"mtitle":"加工商分红审批","href":"../index/index.html"},{"mtitle":"加工商提成审核","href":"../index/index.html"},{"mtitle":"加工积分提取审批","href":"../index/index.html"},{"mtitle":"加工客户库存核对","href":"../index/index.html"}
+			 	,{"bigM":"加工类","smallM":[{"mtitle":"加工商分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"},{"mtitle":"加工商提成审核","href":"../toApproval/procBonusApplyAction_procBonusApplyN.html"},{"mtitle":"积分提取审批","href":"../toApproval/adminIndexAction_procIntegralPermit.html"},{"mtitle":"加工客户库存核对","href":"../toApproval/applyprintAction_toApplyStockList.html"}
 			 	]}
 			 	,{"bigM":"外贸类","smallM":[{"mtitle":"订舱审批","href":"../index/index.html"},{"mtitle":"信用证审批","href":"../index/index.html"},{"mtitle":"产地证办理审批","href":"../index/index.html"},{"mtitle":"提单信息评审","href":"../index/index.html"},{"mtitle":"外贸单据审批","href":"../index/index.html"}
 			 	]}
@@ -36,10 +36,11 @@
 		}	
 		,{"title":"统计管理",
 		 "menuList":[
-			 	{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../index/index.html"},{"mtitle":"VIP专享资源汇总","href":"../index/index.html"},{"mtitle":"乐刚云使用统计","href":"../index/index.html"},{"mtitle":"双发积分统计","href":"../index/index.html"},{"mtitle":"商城交易量统计","href":"../index/index.html"},{"mtitle":"用户点击量统计","href":"../index/index.html"},{"mtitle":"金牌商家信息表","href":"../index/index.html"}]}
-			 	,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../index/index.html"},{"mtitle":"销采量统计","href":"../index/index.html"},{"mtitle":"贸易金牌商家统计","href":"../index/index.html"},{"mtitle":"加工金牌商家统计","href":"../index/index.html"}]}
-			 	,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../index/index.html"},{"mtitle":"自有资金记录汇总","href":"../index/index.html"},{"mtitle":"资金占用利息汇总","href":"../index/index.html"},{"mtitle":"进销缺口统计","href":"../index/index.html"},{"mtitle":"经营报表费用录入汇总","href":"../index/index.html"}]}
-			 	,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../index/index.html"},{"mtitle":"余料款充值记录汇总","href":"../index/index.html"}]}
+			 	{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../report/orderFulfillment.html"},{"mtitle":"双发积分统计","href":"../report/theSalesExecutive.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../report/shippingTrackingForm.html"}]}
+			 	,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../report/purchaseSchedule.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../report/forResources.html"}]}	
+				//  {"mtitle":"新经营报表","href":"../index/index.html"},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"}, 
+				,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../report/commission.html"}]}	
+				,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../report/processorInventory.html"},{"mtitle":"余料款充值记录汇总","href":"../report/processorIncome.html"}]}	
 			]
 		}
 		,{"title":"报表管理",
@@ -72,7 +73,7 @@
 		 "menuList":[
 			 	{"bigM":"基础信息","smallM":[{"mtitle":"毛利要求及资金占用设置","href":"../index/index.html"},{"mtitle":"市场定价管理","href":"../index/index.html"},{"mtitle":"编码维护","href":"../index/index.html"},{"mtitle":"资本中心信息维护","href":"../index/index.html"},{"mtitle":"短信配置维护","href":"../index/index.html"},{"mtitle":"资源中英文匹配","href":"../index/index.html"}]}
 			 	,{"bigM":"客户相关","smallM":[{"mtitle":"仓库信息维护","href":"../index/index.html"},{"mtitle":"单位账户信息维护","href":"../index/index.html"},{"mtitle":"乐刚云用户配置表","href":"../index/index.html"},{"mtitle":"运营定价管理","href":"../index/index.html"}]}	
-			 	,{"bigM":"前台信息类","smallM":[{"mtitle":"月度冠军维护","href":"../index/index.html"},{"mtitle":"月度目标量维护","href":"../index/index.html"},{"mtitle":"神供搜信息维护","href":"../index/index.html"},{"mtitle":"乐刚广告维护","href":"../index/index.html"},{"mtitle":"外贸网站管理","href":"../index/index.html"},{"mtitle":"外贸询价表","href":"../index/index.html"},{"mtitle":"外贸产品维护","href":"../index/index.html"}]}	
+			 	,{"bigM":"前台信息类","smallM":[{"mtitle":"月度冠军维护","href":"../index/index.html"},{"mtitle":"月度目标量维护","href":"../index/index.html"},{"mtitle":"乐搜信息维护","href":"../index/index.html"},{"mtitle":"乐刚广告维护","href":"../index/index.html"},{"mtitle":"外贸网站管理","href":"../index/index.html"},{"mtitle":"外贸询价表","href":"../index/index.html"},{"mtitle":"外贸产品维护","href":"../index/index.html"}]}	
 			 	,{"bigM":"加工类","smallM":[{"mtitle":"加工资源定价管理","href":"../index/index.html"},{"mtitle":"加工核价管理","href":"../index/index.html"},{"mtitle":"统一核价标准","href":"../index/index.html"},{"mtitle":"资源信息维护","href":"../index/index.html"},{"mtitle":"钢品城维护","href":"../index/index.html"}]}	
 			]
 		}
@@ -110,6 +111,7 @@
 				_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
 				var _menuStrV='';
 				for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
+					console.log(menu_Data[i].menuList[j].smallM[v].href)
 					if(menu_Data[i].menuList[j].smallM[v].hide){
 						_menuStrV+='<a class="mDListShow" style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 					}else{
@@ -143,7 +145,6 @@
 			var _ww=$(window).width()/2;
 			var _myL=$(this).offset().left;
 			if($(window).width()>1100){
-				
 				var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
 				//console.log(_index)
 
@@ -153,14 +154,12 @@
 					}else{
 						$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
 					}
-					
 				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
 					if(_myL>_ww){  //在屏幕右侧
 						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth();
 					}else{  //在屏幕左侧
 						var _w=0;
 					}
-					
 					$(this).find(".mDetail").css("left",-_w)
 				}
 			}else{

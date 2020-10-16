@@ -28,9 +28,12 @@
 		'	<a class="menuItem" href="javascript:void(0)" onclick="showsMenu(this)"><i class="admIcon vm mr2 leftbarIcon type'+i+'"></i><span class="menuItemText">'+myarr[i].bigM+'</span><i class="imenu-up admIcon vm"></i></a><div class="smenu">';
 			var s_mymenustr='';
 			for(var j=0;j<myarr[i].smallM.length;j++){
-				s_mymenustr+='<a class="smlist ell" href="'+myarr[i].smallM[j].href+'">'+myarr[i].smallM[j].mtitle+'</a>' 
+				if(myarr[i].smallM[j].hide){
+					s_mymenustr+='<a class="smlist ell" href="'+myarr[i].smallM[j].href+'" style="display:none">'+myarr[i].smallM[j].mtitle+'</a>' 
+				}else{
+					s_mymenustr+='<a class="smlist ell" href="'+myarr[i].smallM[j].href+'">'+myarr[i].smallM[j].mtitle+'</a>' 
+				}
 			}
-			
 			m_all+=m_mymenustr+s_mymenustr+'</div></div>';
 		}
 		var menu_str='<div class="leftBar scrollbar">'+mysearch+m_all+'</div>'
