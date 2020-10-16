@@ -144,23 +144,56 @@ var menu_Data = [
 					{ "mtitle": "函件管理", "href": "../documents/correspondence.html" }
 				]
 			}
-			_menuStr+=_menuStrA+'</div></div></div></span>'
-		}else{
-			var w=(160+50)*l-50
-			_menuStr+='<span class="menuList menuhook " dataChild="'+l+'">'+
-				 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont" style="width:'+w+'px">'
-			var _menuStrD='';
-			for(var j=0;j<menu_Data[i].menuList.length;j++){
-				_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
-				var _menuStrV='';
-				for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
-					console.log(menu_Data[i].menuList[j].smallM[v].href)
-					if(menu_Data[i].menuList[j].smallM[v].hide){
-						_menuStrV+='<a class="mDListShow" style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
-					}else{
-						_menuStrV+='<a class="mDListShow" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
-					}
-					
+		]
+	}
+	, {
+		"title": "信息管理",
+		"menuList": [
+			{ "bigM": "基础信息", "smallM": [{ "mtitle": "毛利要求及资金占用设置", "href": "../index/index.html" }, { "mtitle": "市场定价管理", "href": "../index/index.html" }, { "mtitle": "编码维护", "href": "../index/index.html" }, { "mtitle": "资本中心信息维护", "href": "../index/index.html" }, { "mtitle": "短信配置维护", "href": "../index/index.html" }, { "mtitle": "资源中英文匹配", "href": "../index/index.html" }] }
+			, { "bigM": "客户相关", "smallM": [{ "mtitle": "仓库信息维护", "href": "../index/index.html" }, { "mtitle": "单位账户信息维护", "href": "../index/index.html" }, { "mtitle": "乐刚云用户配置表", "href": "../index/index.html" }, { "mtitle": "运营定价管理", "href": "../index/index.html" }] }
+			, { "bigM": "前台信息类", "smallM": [{ "mtitle": "月度冠军维护", "href": "../index/index.html" }, { "mtitle": "月度目标量维护", "href": "../index/index.html" }, { "mtitle": "神供搜信息维护", "href": "../index/index.html" }, { "mtitle": "乐刚广告维护", "href": "../index/index.html" }, { "mtitle": "外贸网站管理", "href": "../index/index.html" }, { "mtitle": "外贸询价表", "href": "../index/index.html" }, { "mtitle": "外贸产品维护", "href": "../index/index.html" }] }
+			, { "bigM": "加工类", "smallM": [{ "mtitle": "加工资源定价管理", "href": "../index/index.html" }, { "mtitle": "加工核价管理", "href": "../index/index.html" }, { "mtitle": "统一核价标准", "href": "../index/index.html" }, { "mtitle": "资源信息维护", "href": "../index/index.html" }, { "mtitle": "钢品城维护", "href": "../index/index.html" }] }
+		]
+	}
+
+	, {
+		"title": "权限管理",
+		"menuList": [
+			{ "bigM": "角色管理类", "smallM": [{ "mtitle": "管理员注册管理", "href": "../index/index.html" }, { "mtitle": "系统分类角色管理", "href": "../index/index.html" }, { "mtitle": "系统角色人员管理", "href": "../index/index.html" }, { "mtitle": "系统角色菜单管理", "href": "../index/index.html" }, { "mtitle": "加工主账号菜单管理", "href": "../index/index.html" }] }
+			, { "bigM": "流程审批类", "smallM": [{ "mtitle": "流程节点管理", "href": "../index/index.html" }, { "mtitle": "流程节点人员管理", "href": "../index/index.html" }] }
+			, { "bigM": "系统菜单类", "smallM": [{ "mtitle": "操作查看权限", "href": "../index/index.html" }, { "mtitle": "业绩考核权限", "href": "../index/index.html" }] }
+			, { "bigM": "人员信息类", "smallM": [{ "mtitle": "账户信息管理", "href": "../index/index.html" }] }
+
+
+		]
+	}
+
+]
+
+var _menuStr = ''
+for (var i = 0; i < menu_Data.length; i++) {
+	var l = menu_Data[i].menuList.length;
+	if (l == 1) {   //只有一个菜单的情况下
+		_menuStr += '<span class="menuList menuhook" dataChild="1">' +
+			'<span class="menuText">' + menu_Data[i].title + '</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
+		var _menuStrA = ''
+		for (var a = 0; a < menu_Data[i].menuList[0].smallM.length; a++) {
+			_menuStrA += '<a class="mDListShow" href="' + menu_Data[i].menuList[0].smallM[a].href + '">' + menu_Data[i].menuList[0].smallM[a].mtitle + '</a>'
+		}
+		_menuStr += _menuStrA + '</div></div></div></span>'
+	} else {
+		var w = (160 + 50) * l - 50
+		_menuStr += '<span class="menuList menuhook " dataChild="' + l + '">' +
+			'<span class="menuText">' + menu_Data[i].title + '</span><div class="mDetail"><div class="mDetailCont" style="width:' + w + 'px">'
+		var _menuStrD = '';
+		for (var j = 0; j < menu_Data[i].menuList.length; j++) {
+			_menuStrD += '<div class="mDList"><div class="mDListTitle">' + menu_Data[i].menuList[j].bigM + '</div>'
+			var _menuStrV = '';
+			for (var v = 0; v < menu_Data[i].menuList[j].smallM.length; v++) {
+				if (menu_Data[i].menuList[j].smallM[v].hide) {
+					_menuStrV += '<a class="mDListShow" style="display:none" href="' + menu_Data[i].menuList[j].smallM[v].href + '">' + menu_Data[i].menuList[j].smallM[v].mtitle + '</a>'
+				} else {
+					_menuStrV += '<a class="mDListShow" href="' + menu_Data[i].menuList[j].smallM[v].href + '">' + menu_Data[i].menuList[j].smallM[v].mtitle + '</a>'
 				}
 
 			}
@@ -183,7 +216,6 @@ $(function () {
 	$(".m_top").append(logo).append(topRight);
 
 
-<<<<<<< HEAD
 
 
 	$("body").on("mouseenter", ".menuhook", function () {
@@ -200,29 +232,6 @@ $(function () {
 					$(this).find(".mDetail").css("left", -($(this).find(".mDetailCont").outerWidth(true) - $(this).outerWidth(true)))
 				} else {
 					$(this).find(".mDetail").css("left", _ww - _myL - $(this).find(".mDetailCont").outerWidth(true) / 2);
-=======
-		$("body").on("mouseenter",".menuhook",function(){
-			//console.log("enter")
-			var _ww=$(window).width()/2;
-			var _myL=$(this).offset().left;
-			if($(window).width()>1100){
-				var _index=$(this).parents(".menuConfig").find(".menuhook").index($(this));
-				//console.log(_index)
-
-				if($(this).attr("datachild")>="4"){
-					if(_index>7){
-							$(this).find(".mDetail").css("left",-($(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth(true)))
-					}else{
-						$(this).find(".mDetail").css("left",_ww-_myL-$(this).find(".mDetailCont").outerWidth(true)/2);
-					}
-				}else if($(this).attr("datachild")=="2"||$(this).attr("datachild")=="3"){
-					if(_myL>_ww){  //在屏幕右侧
-						var _w=$(this).find(".mDetailCont").outerWidth(true)-$(this).outerWidth();
-					}else{  //在屏幕左侧
-						var _w=0;
-					}
-					$(this).find(".mDetail").css("left",-_w)
->>>>>>> 3901cf745aba76eb4a243e130e43a1802f553bc5
 				}
 
 			} else if ($(this).attr("datachild") == "2" || $(this).attr("datachild") == "3") {
