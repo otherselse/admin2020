@@ -154,6 +154,46 @@
                         <p>9、承运单位接收我方指令单后，我司认为承运单位已经认同以上条款；</p>
                     </div>
                 </div>
+                <table class="ui-table row f12 tl mt15 pct100">
+                    <tbody>
+                        <tr>
+                            <td width="15%">物流部签发人：</td>
+                            <td width="35%">上海东明金属制品有限公司</td>
+                            <td width="15%">运输单位签章：</td>
+                            <td width="35%">上海东明金属制品有限公司</td>
+                        </tr>
+                        <tr>
+                            <td>金牌商家：</td>
+                            <td>重庆市地级市县级市</td>
+                            <td>联系人：</td>
+                            <td>东明3号</td>
+                        </tr>
+                        <tr>
+                            <td>金牌商家电话：</td>
+                            <td>2017-04-19 00:00:00</td>
+                            <td>收货联系人：</td>
+                            <td>2017-04-19 11:08:25</td>
+                        </tr>
+                        <tr>
+                            <td>收货人电话：</td>
+                            <td colspan="3">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt30 b g28 f14">评审意见</div>
+                <div class="mt30  nodeLine f12">
+                    <div>
+                        <div class="dib vt green"> 
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40">2019-12-30  13:23:12</span></div>
+                        </div>
+                    </div>
+                    <div class="ui-auditBox mt10 ml40 pct100">
+                        <span class="mr40">审批：李思思</span>审批意见：同意申请
+                      </div>
+                </div>
                 <div class="tc mt20">
                     <button class="ui-button" data-type="bigclear" type="button">退回</button>
                 </div>
@@ -186,12 +226,8 @@
             window.history.back(-1)
         }
         function showdiv(targetid, objN) {
-            var target = document.getElementById(targetid);
-            if (target.style.display == "block") {
-                target.style.display = "none";
-            } else {
-                target.style.display = "block";
-            }
+            $("#"+targetid).toggle()
+            
         }
     </script>
 </body>

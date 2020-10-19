@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>资金日报表-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
+        id="layuicss-layer">
+</head>
+
+<body class="showTip">
+
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                审批管理
+                <span class="dib gga pl5 pr5">/</span>
+                资金日报表
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">查看</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content ">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="p20">
+                <table class="ui-table pct100 f12 row">
+                    <tbody>
+                        <tr>
+                            <td>加盟公司：</td>
+                            <td>上海乐刚供应链股份有限公司</td>
+                            <td>资金日报日期：</td>
+                            <td>2020-06-29</td>
+                            <td>申请日期：</td>
+                            <td>2020-06-29 14:36:32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-content  mt20">
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20 on">当日收入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">当日支出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">库存盘点</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">银行账户余额</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">预测资金流入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">预测资金流出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">资金情况汇总</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml20">审批意见</a>
+                </div>
+            </div>
+            <div class="p20">
+                <div class="b f14 g28">
+                    当日收入
+                </div>
+                <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
+                            class="toggle_l vm mr10"></i>现金部分</a></div>
+                <table class="ui-table row f12 pct100 mt15 dn">
+                    <tbody>
+                        <tr>
+                            <td width="10%">内贸类收入：</td>
+                            <td width="10%">582,635</td>
+                            <td width="10%">外贸类收入：</td>
+                            <td width="10%">382,635</td>
+                            <td width="10%">加工类收入：</td>
+                            <td width="10%">462,635</td>
+                            <td width="10%">前期应收款：</td>
+                            <td width="10%">752,635</td>
+                            <td width="10%">加工类收入：</td>
+                            <td width="10%">462,635</td>
+                        </tr>
+                        <tr>
+                            <td>租赁租金：</td>
+                            <td>92,635</td>
+                            <td>利息收入：</td>
+                            <td>92,635</td>
+                            <td>出口退税：</td>
+                            <td>92,635</td>
+                            <td>废料收入：</td>
+                            <td>92,635</td>
+                            <td>押金/食堂收入：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>提现：</td>
+                            <td>92,635</td>
+                            <td>关联往来：</td>
+                            <td>92,635</td>
+                            <td>其他收入：</td>
+                            <td>92,635</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
+                            class="toggle_l vm mr10"></i>银行部分</a></div>
+                <table class="ui-table row f12 pct100 mt15 dn">
+                    <tbody>
+                        <tr>
+                            <td width="10%">内贸类收入：</td>
+                            <td width="10%">582,635</td>
+                            <td width="10%">外贸类收入：</td>
+                            <td width="10%">382,635</td>
+                            <td width="10%">加工类收入：</td>
+                            <td width="10%">462,635</td>
+                            <td width="10%">前期应收款：</td>
+                            <td width="10%">752,635</td>
+                            <td width="10%">加工类收入：</td>
+                            <td width="10%">462,635</td>
+                        </tr>
+                        <tr>
+                            <td>租赁租金：</td>
+                            <td>92,635</td>
+                            <td>利息收入：</td>
+                            <td>92,635</td>
+                            <td>出口退税：</td>
+                            <td>92,635</td>
+                            <td>废料收入：</td>
+                            <td>92,635</td>
+                            <td>押金/食堂收入：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>提现：</td>
+                            <td>92,635</td>
+                            <td>关联往来：</td>
+                            <td>92,635</td>
+                            <td>银行承兑汇票：</td>
+                            <td>--</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-content mt20">
+            <div class="p20">
+                <div class="b f14 g28">当日支出</div>
+                <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
+                            class="toggle_l vm mr10"></i>现金部分</a></div>
+                <table class="ui-table row f12 pct100 mt15 dn">
+                    <tbody>
+                        <tr>
+                            <td width="10%">内贸采购成本：</td>
+                            <td width="10%">582,635</td>
+                            <td width="10%">外贸采购成本：</td>
+                            <td width="10%">382,635</td>
+                            <td width="10%">营业费用：</td>
+                            <td width="10%">462,635</td>
+                            <td width="10%">直接材料：</td>
+                            <td width="10%">752,635</td>
+                            <td width="10%">制造费用(含维修费)：</td>
+                            <td width="10%">462,635</td>
+                        </tr>
+                        <tr>
+                            <td>设备购置：</td>
+                            <td>92,635</td>
+                            <td>金牌商家红利：</td>
+                            <td>92,635</td>
+                            <td>金牌商家积分：</td>
+                            <td>92,635</td>
+                            <td>人员工资：</td>
+                            <td>92,635</td>
+                            <td>社保：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>公积金：</td>
+                            <td>92,635</td>
+                            <td>通讯费：</td>
+                            <td>92,635</td>
+                            <td>差旅费：</td>
+                            <td>92,635</td>
+                            <td>办公费：</td>
+                            <td>1231</td>
+                            <td>业务招待费：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>水电费：</td>
+                            <td>92,635</td>
+                            <td>税费支出：</td>
+                            <td>92,635</td>
+                            <td>推广费：</td>
+                            <td>92,635</td>
+                            <td>诉讼费：</td>
+                            <td>1231</td>
+                            <td>中介费：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>物业费：</td>
+                            <td>92,635</td>
+                            <td>汽车费：</td>
+                            <td>92,635</td>
+                            <td>工程款：</td>
+                            <td>92,635</td>
+                            <td>食堂费用：</td>
+                            <td>1231</td>
+                            <td>工伤支出：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>财务费用：</td>
+                            <td>92,635</td>
+                            <td>存现：</td>
+                            <td>92,635</td>
+                            <td>关联往来：</td>
+                            <td>92,635</td>
+                            <td>其他支出：</td>
+                            <td>1231</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
+                            class="toggle_l vm mr10"></i>银行部分</a></div>
+                <table class="ui-table row f12 pct100 mt15 dn">
+                    <tbody>
+                        <tr>
+                            <td width="10%">内贸采购成本：</td>
+                            <td width="10%">582,635</td>
+                            <td width="10%">外贸采购成本：</td>
+                            <td width="10%">382,635</td>
+                            <td width="10%">营业费用：</td>
+                            <td width="10%">462,635</td>
+                            <td width="10%">直接材料：</td>
+                            <td width="10%">752,635</td>
+                            <td width="10%">制造费用(含维修费)：</td>
+                            <td width="10%">462,635</td>
+                        </tr>
+                        <tr>
+                            <td>设备购置：</td>
+                            <td>92,635</td>
+                            <td>金牌商家红利：</td>
+                            <td>92,635</td>
+                            <td>金牌商家积分：</td>
+                            <td>92,635</td>
+                            <td>人员工资：</td>
+                            <td>92,635</td>
+                            <td>社保：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>公积金：</td>
+                            <td>92,635</td>
+                            <td>通讯费：</td>
+                            <td>92,635</td>
+                            <td>差旅费：</td>
+                            <td>92,635</td>
+                            <td>办公费：</td>
+                            <td>1231</td>
+                            <td>业务招待费：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>水电费：</td>
+                            <td>92,635</td>
+                            <td>税费支出：</td>
+                            <td>92,635</td>
+                            <td>推广费：</td>
+                            <td>92,635</td>
+                            <td>诉讼费：</td>
+                            <td>1231</td>
+                            <td>中介费：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>物业费：</td>
+                            <td>92,635</td>
+                            <td>汽车费：</td>
+                            <td>92,635</td>
+                            <td>工程款：</td>
+                            <td>92,635</td>
+                            <td>食堂费用：</td>
+                            <td>1231</td>
+                            <td>工伤支出：</td>
+                            <td>1231</td>
+                        </tr>
+                        <tr>
+                            <td>财务费用：</td>
+                            <td>92,635</td>
+                            <td>其他支出：</td>
+                            <td>92,635</td>
+                            <td>汇兑损益：</td>
+                            <td>92,635</td>
+                            <td>提现：</td>
+                            <td>1231</td>
+                            <td>关联往来：</td>
+                            <td>12321</td>
+                        </tr>
+                        <tr>
+                            <td>银行承兑汇票：</td>
+                            <td colspan="9">92,635</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-content  mt20">
+            <div class="p20">
+                <div class="b f14 g28">库存盘点</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="20%">内贸采购成本：</td>
+                            <td width="30%">582,635</td>
+                            <td width="20%">营业费用：</td>
+                            <td width="30%">462,635</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="b f14 g28 mt30">银行账户余额</div>
+                <table class="ui-table row f12 pct100 mt15">
+                    <tbody>
+                        <tr>
+                            <td width="20%">兴业银行上海彭浦支行(美元户）：</td>
+                            <td width="30%">582,635</td>
+                            <td width="20%">兴业银行上海彭浦支行：</td>
+                            <td width="30%">462,635</td>
+                        </tr>
+                        <tr>
+                            <td>招商银行上海自贸试验区分行：</td>
+                            <td>92,635</td>
+                            <td>中国银行上海市外高桥保税区支行(美元户）：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>中国银行上海市外高桥保税区支行：</td>
+                            <td>92,635</td>
+                            <td>上海农商银行上海自贸试验区分行：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>建行上海外高桥保税区支行：</td>
+                            <td>92,635</td>
+                            <td>中国银行(香港)：</td>
+                            <td>92,635</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行上海宝山支行：</td>
+                            <td colspan="3">92,635</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="b f14 g28 mt30">预测资金流入</div>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="12%">日期</th>
+                            <th width="12%">内贸收入</th>
+                            <th width="12%">外贸收入</th>
+                            <th width="12%">加工收入</th>
+                            <th width="14%">租赁/仓储收入</th>
+                            <th width="14%">应退税金收入</th>
+                            <th width="12%">其他</th>
+                            <th width="12%">合计</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020-06-04</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="b f14 g28 mt30">预测资金流出</div>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="12%">日期</th>
+                            <th width="12%">贸易采购付款</th>
+                            <th width="10%">工资</th>
+                            <th width="10%">工程款</th>
+                            <th width="10%">税金</th>
+                            <th width="10%">财务费用</th>
+                            <th width="12%">行政费用</th>
+                            <th width="12%">其他</th>
+                            <th width="12%">合计</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020-06-04</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-content  mt20">
+            <div class="p20">
+                <div class="b f14 g28">资金情况汇总</div>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="12%">上日现金余额</th>
+                            <th width="12%">当日现金收入</th>
+                            <th width="12%">当日现金支出</th>
+                            <th width="12%">关联往来收支</th>
+                            <th width="14%">当日现金余额</th>
+                            <th width="14%">库存现金盘点余额</th>
+                            <th width="12%">差异额</th>
+                            <th width="12%">差异原因</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6582,635</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>测试测试原</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="12%">上日银行余额</th>
+                            <th width="12%">当日现金收入</th>
+                            <th width="12%">当日现金支出</th>
+                            <th width="12%">关联往来收支</th>
+                            <th width="14%">当日现金余额</th>
+                            <th width="14%">银行账户余额</th>
+                            <th width="12%">差异额</th>
+                            <th width="12%">差异原因</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6582,635</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>测试测试原</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="14%">上日银行承兑余额</th>
+                            <th width="15%">当日收取银行承兑金额</th>
+                            <th width="15%">当日支付银行承兑金额</th>
+                            <th width="14%">当日银行承兑余额</th>
+                            <th width="14%">库存银行承兑余额</th>
+                            <th width="14%">差异额</th>
+                            <th width="14%">差异原因</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6582,635</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>测试测试原</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="14%">上日余额</th>
+                            <th width="15%">当日收支</th>
+                            <th width="15%">关联往来收支</th>
+                            <th width="14%">合计</th>
+                            <th width="14%">预计收入</th>
+                            <th width="14%">预计支出</th>
+                            <th width="14%">预计余额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6582,635</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="ui-table  f12 pct100 mt15 tc">
+                    <thead>
+                        <tr>
+                            <th width="14%">流动资金</th>
+                            <th width="15%">G2G金额</th>
+                            <th width="15%">第三方资金</th>
+                            <th width="14%">资金占用</th>
+                            <th width="14%">贸易占比</th>
+                            <th width="14%">加工占比</th>
+                            <th width="14%">可用余额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6582,635</td>
+                            <td>582,635</td>
+                            <td>582,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>462,635</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-content  mt20">
+            <div class="p20">
+                <div class="b f14 g28">审批意见</div>
+                <div class="mt30 ml50 nodeLine f12">
+                    <div class="g28 ui-audit f12 pl10"><span>复核意见</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批人：</span>张三<span class="pl40"> 审批时间：</span>2019-12-30
+                                13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
+                    <div class="g28 ui-audit f12 pl10 mt10"><span>审批意见</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批人：</span>张三<span class="pl40"> 审批时间：</span>2019-12-30
+                                13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tc mt20">
+                    <button class="ui-button" type="button" data-type="bigclear">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $('#step1').on('click', function () {
+                layer.open({
+                    type: 2,
+                    title: '订单详情',
+                    shadeClose: true, //开启点击遮罩关闭层
+                    area: ['1000px', '600px'],
+                    offset: ['50px', ''],
+                    content: './orderAction_order.html'
+                });
+            });
+        })
+        function prev() {
+            window.history.back(-1)
+        }
+        function showdiv(obj) {
+            $(obj).find(".toggle_l").toggleClass("on")
+            $(obj).parent().next().toggle()
+        }
+    </script>
+</body>
+
+</html>

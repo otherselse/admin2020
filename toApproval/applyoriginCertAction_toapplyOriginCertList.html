@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>加工仓储协议审批-审批管理-乐刚智能云系统</title>
+    <title>产地证办理审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -32,7 +32,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 审批管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">销售合同审批</span>
+                <span class="g28">产地证办理审批</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -41,26 +41,16 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl f12 mb10">
-                    合同状态：
+                    <span class="searchLable">是否评审：</span>
                     <div class="dib selectSingle mr40">
-                        <a class="on" href="javscript:void(0)">全部</a>
+                        <a href="javscript:void(0)" class="on">已审批</a>
                         <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)" class="">待审批</a>
-                        <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)" class="">生效中</a>
-                        <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)" class="">已过期</a>
+                        <a href="javscript:void(0)">未审批</a>
                     </div>
-
-                    单位名称: <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
-
-                  
-                        申请日期：
-                        <span class="ui-input tc f0 pct20 range" data-type="time">
-                            <input type="text" placeholder="开始日期" class="render-time pct45" readonly="">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""></span>
-                    
+                    <span class="searchLable">单位名称：</span>
+                    <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
+                    <span class="searchLable">订单号：</span>
+                    <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
                 </div>
                 <div class="tc mt20">
                     <button type="button" class="ui-button mr20">查询</button>
@@ -69,32 +59,24 @@
                 <table class="ui-table tc f12 mt30" width="100%">
                     <thead>
                         <tr>
-                            <th width="5%">序号</th>
-                            <th width="15%">
-                                <div class="pl20 tl">单位名称</div>
-                            </th>
-                            <th width="12%">合同号</th>
-                            <th width="12%">申请时间</th>
-                            <th width="12%">合同截止日期</th>
-                            <th width="12%">结算方式</th>
-                            <th width="13%">付款期限</th>
-                            <th width="11%">合同状态</th>
-                            <th width="8%">操作</th>
+                            <th width="108">序号</th>
+                            <th width="139">申请时间</th>
+                            <th width="172">订单号</th>
+                            <th width="139">金牌商家</th>
+                            <th width="172">评审类型</th>
+                            <th width="156">状态</th>
+                            <th width="141">操作</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover">
                         <tr>
-                            <td>1</td>
-                            <td>
-                                <div class="pl20 tl">中国邮政运输集团</div>
-                            </td>
-                            <td>STC(22)-20001333</td>
-                            <td>2020-04-05</td>
-                            <td>2020-04-05</td>
-                            <td>有货月结</td>
-                            <td>每月22日付清上月费用</td>
-                            <td>已过期</td>
-                            <td><a href="./querySignDetail.html">查看</a></td>
+                            <td width="108">1</td>
+                            <td width="139">2020-05-25 10:46:45</td>
+                            <td width="172">59795</td>
+                            <td width="139">杨兴旺</td>
+                            <td width="172">原产地证办理评审</td>
+                            <td width="156">在2节点</td>
+                            <td width="141"><a href="applyoriginCertAction_applyOriginCertAudit.html">评审</a> </td>
                         </tr>
 
                     </tbody>
@@ -115,7 +97,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script>
         $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
 
