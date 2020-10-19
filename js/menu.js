@@ -34,13 +34,13 @@ var menu_Data=[
 		]
 	}
 	,{"title":"统计管理",
-	 "menuList":[
-			 {"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../report/orderFulfillment.html"},{"mtitle":"双发积分统计","href":"../report/theSalesExecutive.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../report/shippingTrackingForm.html"}]}
-			 ,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../report/purchaseSchedule.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../report/forResources.html"}]}	
-			,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../report/commission.html"}]}	
-			,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../report/processorInventory.html"},{"mtitle":"余料款充值记录汇总","href":"../report/processorIncome.html"}]}	
-		]
-	}
+	"menuList":[
+			{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"}]}
+			,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../statistical/statisticalProcessing.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../statistical/statisticsOfGoldMerchants.html"}]}	
+		   ,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../statistical/theReportSummary.html"}]}	
+		   ,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../statistical/managementStaffing.html"},{"mtitle":"余料款充值记录汇总","href":"../statistical/remainingMaterialModel.html"}]}	
+	   ]
+   }
 	,{"title":"报表管理",
 	"menuList":[
 			{"bigM":"订单类","smallM":[{"mtitle":"备货跟踪表","href":"../report/readyForTheTrack.html"},{"mtitle":"订单执行情况表","href":"../report/tradeOrder.html"},{"mtitle":"订单执行进度跟踪表","href":"../report/orderFulfillment.html","hide":true},{"mtitle":"订单统计表","href":"../report/theSalesExecutive.html"},{"mtitle":"库存明细表","href":"../report/inventory.html"},{"mtitle":"出入库跟踪表","href":"../report/summary.html"},{"mtitle":"寄售跟踪表","href":"../report/shippingTrackingForm.html","hide":true},{"mtitle":"商互通管理","href":"../report/eachOther.html"},{"mtitle":"外贸订单跟踪表","href":"../report/theForeignTradeOrder.html"},{"mtitle":"寄预售跟踪表","href":"../report/openToBooking.html","hide":true},{"mtitle":"老系统订单统计表","href":"../report/salesExecutionProgress.html","hide":true}]}
@@ -48,7 +48,7 @@ var menu_Data=[
 		   //  {"mtitle":"新经营报表","href":"../index/index.html"},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"}, 
 			,{"bigM":"分析类","smallM":[{"mtitle":"经营报表","href":"../report/businessReport.html"},{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html","hide":true},{"mtitle":"经营报告表","href":"../report/domesticTrade.html"},{"mtitle":"资金日报表","href":"../report/cashJournal.html","hide":true},{"mtitle":"运营分析表","href":"../report/goldMerchantMarketing.html","hide":true},{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html"}]}
 		   ,{"bigM":"款项类","smallM":[{"mtitle":"G2G统计表","href":"../report/G2GTab.html"},{"mtitle":"资金跟踪表","href":"../report/shouldAdvance.html"},{"mtitle":"待付款跟踪表","href":"../report/paymentTrackingForm.html","hide":true},{"mtitle":"佣金回访表","href":"../report/commission.html","hide":true},{"mtitle":"红利明细表","href":"../report/bonusDetails.html","hide":true},{"mtitle":"第三方支付结算跟踪表","href":"../report/settlementTracking.html","hide":true},{"mtitle":"在线支付使用跟踪表","href":"../report/onlinePaymentUsageTracking.html","hide":true},{"mtitle":"金牌商家备货金管理","href":"../report/goldMerchantsStockUp.html"},{"mtitle":"交易明细表","href":"../report/salesBreakdown.html","hide":true},{"mtitle":"收支明細表","href":"../report/paymentDetails.html","hide":true}]}	
-		   ,{"bigM":"资金流","smallM":[{"mtitle":"第三方支付结算跟踪表","href":"../report/G2GTab.html"},{"mtitle":"资金日报表","href":"../report/shouldAdvance.html"}]}	
+		   ,{"bigM":"资金流","smallM":[{"mtitle":"第三方支付结算跟踪表","href":"../report/settlementTracking.html"},{"mtitle":"资金日报表","href":"../report/cashJournal.html"}]}	
 		   ,{"bigM":"加工类","smallM":[{"mtitle":"加工商库存","href":"../report/processorInventory.html"},{"mtitle":"加工商收入情况表","href":"../report/processorIncome.html"},{"mtitle":"加工收款统计表","href":"../report/processingPayment.html"},{"mtitle":"加工商毛利表","href":"../report/grossMarginForProcessors.html"},{"mtitle":"加工商废料收入","href":"../report/processorWaste.html"},{"mtitle":"加工商出入库报表","href":"../report/processingInventoryRecords.html"},{"mtitle":"生产一线人员效益统计表","href":"../report/theProductionLine.html","hide":true},{"mtitle":"加工商付款明细表","href":"../report/paymentList.html"},{"mtitle":"加工商收款明细表","href":"../report/processorReceipt.html","hide":true},{"mtitle":"加工商分红明细","href":"../report/processorBonusDetails.html"},{"mtitle":"加工商盘点跟踪表","href":"../report/processorInventoryTracking.html","hide":true}]}	
 	   ]
    }
@@ -56,7 +56,7 @@ var menu_Data=[
    "menuList":[
 		   {"bigM":"单据管理","smallM":[
 		   {"mtitle":"担保函/承诺函上传","href":"../documents/guaranteeUpload.html"},
-		   {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html","hide":true},
+		//    {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html","hide":true},
 		   {"mtitle":"进仓通知单上传","href":'../documents/warehouse.html'},
 		   {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},
 		   {"mtitle":"外贸单据上传","href":"../documents/foreignUpload.html"},
