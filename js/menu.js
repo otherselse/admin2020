@@ -3,7 +3,6 @@ var menu_Data=[
 	 "menuList":[
 			 {"bigM":"评审管理","smallM":[{"mtitle":"我要去评审","href":"../toApplySale/toPersonList.html"},{"mtitle":"单位评审","href":"../toApplySale/adminIndexListNew.html"},{"mtitle":"实名注册审批","href":"../toApplySale/real-nameRegistration.html"},{"mtitle":"加工主账号评审","href":"../toApplySale/mainProcessingAccount.html"},{"mtitle":"公司信息评审","href":"../toApplySale/companyInformationReview.html"},{"mtitle":"质保书评审","href":"../toApplySale/reviewOfWarranty.html"},{"mtitle":"单位预审","href":"../toApplySale/unitBudget.html"},{"mtitle":"SAAS用户审核","href":"../toApplySale/SASSTheUserAudit.html"},{"mtitle":"主账号移交记录","href":"../toApplySale/masterAccountTransferRecord.html"}
 			 ]}
-
 		]
 	}
 	,{"title":"审批管理",
@@ -14,9 +13,9 @@ var menu_Data=[
 			 ]}
 			 ,{"bigM":"加工类","smallM":[{"mtitle":"加工商分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"},{"mtitle":"加工商提成审核","href":"../toApproval/procBonusApplyAction_procBonusApplyN.html"},{"mtitle":"积分提取审批","href":"../toApproval/adminIndexAction_procIntegralPermit.html"},{"mtitle":"加工客户库存核对","href":"../toApproval/applyprintAction_toApplyStockList.html"}
 			 ]}
-			 ,{"bigM":"外贸类","smallM":[{"mtitle":"订舱审批","href":"../index/index.html"},{"mtitle":"信用证审批","href":"../index/index.html"},{"mtitle":"产地证办理审批","href":"../index/index.html"},{"mtitle":"提单信息评审","href":"../index/index.html"},{"mtitle":"外贸单据审批","href":"../index/index.html"}
+			 ,{"bigM":"外贸类","smallM":[{"mtitle":"订舱审批","href":"../toApproval/enBookdepotAction_selectBookDepot.html"},{"mtitle":"信用证审批","href":"../toApproval/letterAction_letterList.html"},{"mtitle":"产地证办理审批","href":"../toApproval/applyoriginCertAction_toapplyOriginCertList.html"},{"mtitle":"提单信息评审","href":"../toApproval/applyoriginCertAction_toapplyOriginCertList.html"},{"mtitle":"外贸单据审批","href":"../toApproval/letterAction_letterList.html"}
 			 ]}
-			 ,{"bigM":"其他","smallM":[{"mtitle":"资金日报审批","href":"../index/index.html"},{"mtitle":"金牌商家担保审批","href":"../index/index.html"},{"mtitle":"自营定价审批","href":"../index/index.html"},{"mtitle":"用印审批","href":"../index/index.html"}
+			 ,{"bigM":"其他","smallM":[{"mtitle":"资金日报审批","href":"../toApproval/adminIndexAction_capitalList.html"},{"mtitle":"金牌商家担保审批","href":"../toApproval/applyGuaranteeList.html"},{"mtitle":"自营定价审批","href":"../index/index.html"},{"mtitle":"用印审批","href":"../index/index.html"}
 			 ]}
 		]
 	}
@@ -33,7 +32,7 @@ var menu_Data=[
 			 ,{"bigM":"表单类","smallM":[{"mtitle":"收付款记录","href":"../finance/cashList.html"},{"mtitle":"库存暂估","href":"../finance/preStock.html"},{"mtitle":"出库审核记录","href":"../finance/outLog.html"},{"mtitle":"往来账","href":"../finance/saleBuss.html"},{"mtitle":"银行收支情况","href":"../finance/bankReandExAdd.html"},{"mtitle":"订单提成","href":"../finance/view3.html"}]}
 			 ,{"bigM":"操作类","smallM":[{"mtitle":"资金日报录入","href":"../index/index.html"},{"mtitle":"经营报表录入","href":"../index/index.html"},{"mtitle":"收据","href":"../index/index.html"},{"mtitle":"汇兑管理","href":"../index/index.html"},{"mtitle":"优惠券管理","href":"../index/index.html"},{"mtitle":"乐付宝账号管理","href":"../index/index.html"},{"mtitle":"锁汇业务办理","href":"../index/index.html"}]}	
 		]
-	}	
+	}
 	,{"title":"统计管理",
 	"menuList":[
 			{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"},{"mtitle":"加工积分G2G收益汇总表","href":"../statistical/G2GGainsFromProcessing.html"}]}
@@ -82,7 +81,7 @@ var menu_Data=[
 			 {"bigM":"角色管理类","smallM":[{"mtitle":"管理员注册管理","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"系统分类角色管理","href":"../index/index.html"},{"mtitle":"系统角色人员管理","href":"../index/index.html"},{"mtitle":"系统角色菜单管理","href":"../index/index.html"},{"mtitle":"加工主账号菜单管理","href":"../index/index.html"}]}
 			 ,{"bigM":"流程审批类","smallM":[{"mtitle":"流程节点管理","href":"../index/index.html"},{"mtitle":"流程节点人员管理","href":"../index/index.html"}]}	
 			 ,{"bigM":"系统菜单类","smallM":[{"mtitle":"操作查看权限","href":"../index/index.html"},{"mtitle":"业绩考核权限","href":"../index/index.html"}]}
-			 ,{"bigM":"人员信息类","smallM":[{"mtitle":"账户信息管理","href":"../index/index.html"}]}	
+			 ,{"bigM":"人员信息类","smallM":[{"mtitle":"账户信息管理","href":"../index/index.html"}]}
 		]
 	}
 
@@ -135,7 +134,6 @@ $(function(){
 	$(".m_top").append(logo).append(topRight);
 
 
-	
 
 	$("body").on("mouseenter",".menuhook",function(){
 		//console.log("enter")
@@ -167,12 +165,11 @@ $(function(){
 					}else{
 						_w=180-$(this).outerWidth();
 					}
-					
 				}else{  //在屏幕左侧
 					_w=0;
 			}
 			$(this).find(".mDetail").css("left",-_w)
-		}			
+		}
 		$(this).find(".mDetail").slideDown("fast")
 
 	}).on("mouseleave",".menuhook",function(){
