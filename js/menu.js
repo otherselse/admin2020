@@ -36,7 +36,7 @@ var menu_Data=[
 	}	
 	,{"title":"统计管理",
 	"menuList":[
-			{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"}]}
+			{"bigM":"统计汇总类","smallM":[{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享志愿汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"},{"mtitle":"加工积分G2G收益汇总表","href":"../statistical/G2GGainsFromProcessing.html"}]}
 			,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../statistical/statisticalProcessing.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../statistical/statisticsOfGoldMerchants.html"}]}	
 		   ,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../statistical/theReportSummary.html"}]}	
 		   ,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../statistical/managementStaffing.html"},{"mtitle":"余料款充值记录汇总","href":"../statistical/remainingMaterialModel.html"}]}	
@@ -70,21 +70,19 @@ var menu_Data=[
   }
 	,{"title":"信息管理",
 	 "menuList":[
-			 {"bigM":"基础信息","smallM":[{"mtitle":"毛利要求及资金占用设置","href":"../index/index.html"},{"mtitle":"市场定价管理","href":"../index/index.html"},{"mtitle":"编码维护","href":"../index/index.html"},{"mtitle":"资本中心信息维护","href":"../index/index.html"},{"mtitle":"短信配置维护","href":"../index/index.html"},{"mtitle":"资源中英文匹配","href":"../index/index.html"}]}
-			 ,{"bigM":"客户相关","smallM":[{"mtitle":"仓库信息维护","href":"../index/index.html"},{"mtitle":"单位账户信息维护","href":"../index/index.html"},{"mtitle":"乐刚云用户配置表","href":"../index/index.html"},{"mtitle":"运营定价管理","href":"../index/index.html"}]}	
-			 ,{"bigM":"前台信息类","smallM":[{"mtitle":"月度冠军维护","href":"../index/index.html"},{"mtitle":"月度目标量维护","href":"../index/index.html"},{"mtitle":"乐搜信息维护","href":"../index/index.html"},{"mtitle":"乐刚广告维护","href":"../index/index.html"},{"mtitle":"外贸网站管理","href":"../index/index.html"},{"mtitle":"外贸询价表","href":"../index/index.html"},{"mtitle":"外贸产品维护","href":"../index/index.html"}]}	
+			 {"bigM":"基础信息","smallM":[{"mtitle":"毛利要求及资金占用设置","href":"../InformationChanges/grossMarginMoney.html"},{"mtitle":"市场定价管理","href":"../InformationChanges/marketPricing.html"},{"mtitle":"编码维护","href":"../InformationChanges/taxCodeMaintenance.html"},{"mtitle":"资本中心信息维护","href":"../InformationChanges/theCapitalMaintenance.html"},{"mtitle":"短信配置维护","href":"../InformationChanges/SMSMaintenance.html"},{"mtitle":"资源中英文匹配","href":"../InformationChanges/chineseAndEnglishMatching.html"}]}
+			 ,{"bigM":"客户相关","smallM":[{"mtitle":"仓库信息维护","href":"../InformationChanges/warehouseMaintenance.html"},{"mtitle":"单位账户信息维护","href":"../index/index.html"},{"mtitle":"乐刚云用户配置表","href":"../InformationChanges/legangCloudUserConfiguration.html"},{"mtitle":"运营定价管理","href":"../InformationChanges/operationalPricingManagement.html"}]}	
+			 ,{"bigM":"前台信息类","smallM":[{"mtitle":"月度冠军维护","href":"../InformationChanges/monthlyChampionMaintenance.html"},{"mtitle":"月度目标量维护","href":"../InformationChanges/monthlyTargetVolumeMaintenance.html"},{"mtitle":"乐搜信息维护","href":"../InformationChanges/godIsForSearcAndMaintenance.html"},{"mtitle":"乐刚广告维护","href":"../InformationChanges/leGangAdvertisingMaintenance.html"},{"mtitle":"外贸网站管理","href":"../InformationChanges/theForeignTrademaintenance.html"},{"mtitle":"外贸询价表","href":"../index/index.html"},{"mtitle":"外贸产品维护","href":"../index/index.html"}]}	
 			 ,{"bigM":"加工类","smallM":[{"mtitle":"加工资源定价管理","href":"../index/index.html"},{"mtitle":"加工核价管理","href":"../index/index.html"},{"mtitle":"统一核价标准","href":"../index/index.html"},{"mtitle":"资源信息维护","href":"../index/index.html"},{"mtitle":"钢品城维护","href":"../index/index.html"}]}	
 		]
 	}
 
 	,{"title":"权限管理",
 	 "menuList":[
-			 {"bigM":"角色管理类","smallM":[{"mtitle":"管理员注册管理","href":"../index/index.html"},{"mtitle":"系统分类角色管理","href":"../index/index.html"},{"mtitle":"系统角色人员管理","href":"../index/index.html"},{"mtitle":"系统角色菜单管理","href":"../index/index.html"},{"mtitle":"加工主账号菜单管理","href":"../index/index.html"}]}
+			 {"bigM":"角色管理类","smallM":[{"mtitle":"管理员注册管理","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"系统分类角色管理","href":"../index/index.html"},{"mtitle":"系统角色人员管理","href":"../index/index.html"},{"mtitle":"系统角色菜单管理","href":"../index/index.html"},{"mtitle":"加工主账号菜单管理","href":"../index/index.html"}]}
 			 ,{"bigM":"流程审批类","smallM":[{"mtitle":"流程节点管理","href":"../index/index.html"},{"mtitle":"流程节点人员管理","href":"../index/index.html"}]}	
 			 ,{"bigM":"系统菜单类","smallM":[{"mtitle":"操作查看权限","href":"../index/index.html"},{"mtitle":"业绩考核权限","href":"../index/index.html"}]}
 			 ,{"bigM":"人员信息类","smallM":[{"mtitle":"账户信息管理","href":"../index/index.html"}]}	
-					 
-
 		]
 	}
 
