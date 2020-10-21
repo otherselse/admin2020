@@ -15,7 +15,7 @@ var menu_Data=[
 			 ]}
 			 ,{"bigM":"外贸类","smallM":[{"mtitle":"订舱审批","href":"../toApproval/enBookdepotAction_selectBookDepot.html"},{"mtitle":"信用证审批","href":"../toApproval/letterAction_letterList.html"},{"mtitle":"产地证办理审批","href":"../toApproval/applyoriginCertAction_toapplyOriginCertList.html"},{"mtitle":"提单信息评审","href":"../toApproval/applyoriginCertAction_toapplyOriginCertList.html"},{"mtitle":"外贸单据审批","href":"../toApproval/letterAction_letterList.html"}
 			 ]}
-			 ,{"bigM":"其他","smallM":[{"mtitle":"资金日报审批","href":"../toApproval/adminIndexAction_capitalList.html"},{"mtitle":"金牌商家担保审批","href":"../toApproval/applyGuaranteeList.html"},{"mtitle":"自营定价审批","href":"../index/index.html"},{"mtitle":"用印审批","href":"../index/index.html"}
+			 ,{"bigM":"其他","smallM":[{"mtitle":"资金日报审批","href":"../toApproval/adminIndexAction_capitalList.html"},{"mtitle":"金牌商家担保审批","href":"../toApproval/applyGuaranteeList.html"},{"mtitle":"自营定价审批","href":"../toApproval/applyPrice.html"},{"mtitle":"用印审批","href":"../toApproval/applyprintAction_toApplyPrintList.html"}
 			 ]}
 		]
 	}

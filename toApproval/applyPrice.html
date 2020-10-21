@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>自营定价审批-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
+        id="layuicss-layer">
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                审批管理
+                <span class="dib  pl5 pr5">/</span>
+                <span class="g28">自营定价审批</span>
+
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="p20">
+                <div class="cl f0 mb10">
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">品名：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">牌号：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">钢厂：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                </div>
+                <div class="cl f0 mb10">
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">规格：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">仓库：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="f12 dib pct25">
+                        <span class="searchLable">区域：</span>
+                        <input type="text" class="ui-input pct69  mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                </div>
+                <div class="cl f0 mb10 ">
+                    <span class="dib f12">
+                        <span class="searchLable">审核状态：</span>
+                        <div class="dib selectSingle">
+                            <a class="on" href="javscript:void(0)">待审核</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">审核通过</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">审核退回</a>
+                        </div>
+                    </span>
+                </div>
+
+                <div class="tc">
+                    <button type="button" class="ui-button">查询</button>
+                </div>
+                <div class="lgui-table-box mt30">
+                    <div class="lgui-table-header">
+                        <table class="ui-table f12 pct100">
+                            <thead>
+                                <tr>
+                                    <th width="6%">序号</th>
+                                    <th width="17%">申请时间</th>
+                                    <th width="18%">类型</th>
+                                    <th width="14%">金牌商家</th>
+                                    <th width="14%">归属区域</th>
+                                    <th width="13%">金牌商家类型</th>
+                                    <th width="10%">状态</th>
+                                    <th width="8%">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="lgui-table-body mt-1">
+                        <table class="ui-table tc f12" width="100%">
+                            <tbody class="ui-thover">
+                                <tr>
+                                    <td width="6%">1</td>
+                                    <td width="17%">2020-09-22 17:56:14</td>
+                                    <td width="18%">金牌商家定价设置</td>
+                                    <td width="14%">杨兴旺</td>
+                                    <td width="14%">上海</td>
+                                    <td width="13%">业务型合伙式金牌商家</td>
+                                    <td width="10%" class="blue">审核中</td>
+                                    <td width="8%" class="blue">
+                                        <a href="./applyPricePermit.html">审核</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <!-- table end -->
+                    </div>
+
+                </div>
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+
+    </script>
+</body>
+
+</html>
