@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>月度冠军维护-信息管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        .txtb2 {
+            border: 1px #2487E4 solid;
+            color: #2487E4;
+            width: 100px;
+            text-align: center;
+        }
+
+        .ibBt {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body class='showTip report'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                信息管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">月度冠军维护</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="fix f12 bgwh p20 ui-content ovh minH">
+            <div class="">
+                <div class="xzhj daj">
+                    <a href="javascript:void(0)" onclick="showLayer('明星金牌商家信息录入','merchantsEntry.html')"
+                        class="dib xzhj-button daj">
+                        <span class="dib mr10">信息添加</span> <img src="../images/documnts/t8.png" width="20px"
+                            height="20px" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="cl mb20 mt20 dac f12">
+                <span class="dib pct25">
+                    金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                </span>
+                <span class="dib pct25">
+                    分类： <span class="radio">
+                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                    class="radio-opacity" name="radio"></i>中文版</label>
+                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                    name="radio"></i>英文版</label>
+                    </span>
+                </span>
+                <span class="dib pct25">
+                    <button type="button" class="ui-button mr20 ml20">查询</button>
+                </span>
+            </div>
+
+            <div class="lgui-table-box mt30">
+                <div class="lgui-table-body">
+                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
+                        <thead>
+                            <tr class="fixTr">
+                                <th width="4%">序号</th>
+                                <th width="4%">姓名</th>
+                                <th width="10%">专业领域</th>
+                                <th width="6%">分红月份</th>
+                                <th width="10%">分红金额</th>
+                                <th width="14%">录入时间</th>
+                                <th width="6%">是否首页显示</th>
+                                <th width="6%">分类</th>
+                                <th width="7%">首页排序序号</th>
+                                <th width="15%">金牌商家首页头像</th>
+                                <th width="15%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr>
+                                <td width="4%">1</td>
+                                <td width="6%">白浅</td>
+                                <td width="10%">地方的</td>
+                                <td width="8%">1</td>
+                                <td width="10%">322</td>
+                                <td width="10%">2019-05-28 16:43:04</td>
+                                <td width="6%">否</td>
+                                <td width="6%">中文版</td>
+                                <td width="6%">
+                                    <input id="orderNum89ED1041B1DE05F8E05371001FAC1E28" value="13"
+                                        class="ui-input pct90 tc" size="10">
+                                    <br><a href="javascript:void(0);"
+                                        onclick="javascript:toUpdateInfo('89ED1041B1DE05F8E05371001FAC1E28');">更新</a>
+                                </td>
+                                <td width="15%">
+                                    <a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2019/2019-05-28/1559032993513.jpg"
+                                        target="_blank"
+                                        class="ui-files auto zxx_text_overflow mr20 vm">u=1428491283,1074181291&amp;fm=26&amp;gp=0.jpg</a>
+                                </td>
+                                <td width="15%" class="tablebtdb redm">
+                                    <a href="javascript:updateIndexStar('89ED1041B1DE05F8E05371001FAC1E28',0);">首页显示</a>
+                                    <span class="dib pl2 pr2">|</span>
+                                    <a href="javascript:deleteIndexStar('89ED1041B1DE05F8E05371001FAC1E28');">删除</a>
+                                    <span class="dib pl2 pr2">|</span>
+                                    <a href="javascript:void(0)"  onclick="showLayer('编辑','merchantsToModify.html')">编辑</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <script type="text/javascript" src="../js/pagelist.js"></script>
+            <div class="mb20"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //  viewport: $(window)
+                // },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+        })
+        function showLayer(name, url) {
+            var page = layer.open({
+                type: 2,
+                title: name,
+                shadeClose: true,
+                shade: 0.4,
+                area: ['960px', '530px'],
+                content: url //iframe的url
+            });
+            $("#close_but").on("click", function () {
+                layer.close(page);
+            });
+        }
+        
+
+    </script>
+    <script>
+        function deleteIndexStar(id) {
+            var url = "/LgAdmin/visitcard/deleteIndexStar.action?indexStar.id=" + id;
+            if (confirm("确定操作？")) {
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    cache: false,
+                    success: function (data) {
+                        if (data.message == "1") {
+                            alert("删除成功!");
+                            location.replace(location.href);
+                        } else if (data.message == "-1") {
+                            alert("数据异常，删除失败！");
+                            return;
+                        }
+                    }
+                });
+            }
+        }
+
+        function updateIndexStar(id, isShow) {
+            var url = "/LgAdmin/visitcard/updateIndexStar.action?indexStar.id=" + id + "&indexStar.isShow=" + isShow;
+            if (confirm("确定操作？")) {
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    cache: false,
+                    success: function (data) {
+                        if (data.message == "1") {
+                            //alert("操作成功!");
+                            location.replace(location.href);
+                        } else if (data.message == "-1") {
+                            alert("数据异常，操作失败！");
+                            return;
+                        }
+                    }
+                });
+            }
+        }
+        function editIndexStar(id, isWebShow) {
+            var url = "/LgAdmin/visitcard/loginUserList.action?indexStar.id=" + id + "&indexStar1.isWebShow=" + isWebShow;
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

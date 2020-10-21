@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>(新增、修改)案例-月度冠军维护</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style> 
+        body,
+        html {
+            background: #fff;
+        }
+
+        
+    </style>
+</head>
+
+<body class="showTip">
+    <div class="lgui-table-box ml20 mt5 mr20">
+        <div class="lgui-table-header pct100">
+            <table class="ui-table f12 auto tl mt20 " width="100%">
+                <tbody>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">金牌商家：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">成单时间：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="ui-input ui-input pct90 ml10 borNone" data-type="time" small-type="small"><input type="text"
+                                    placeholder="time4" id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">客户国家：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">成单品名：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="ui-input ui-input pct90 ml10 borNone" data-type="time" small-type="small"><input type="text"
+                                    placeholder="time4" id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">分类：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="radio">
+                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>中文版</label>
+                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>英文版</label>
+                                </span>
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">首页排序编号：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">是否首页显示：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="radio">
+                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                </span>
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">金牌商家头像上传：</span>
+                        </td>
+                        <td width="37%">
+                            <span class="dac pl10">
+                                <div class="">
+                                    <div class="mb10">
+                                        <span class=" dib">
+                                            <button type="button" class="ui-button mr10 pr10 vm" data-type="upfile"
+                                                onclick="upfile()">附件上传(<2MB)</button>
+                                                <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">重置</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+</body>
+    <script>
+         function showLayer(name, url) {
+            var page = layer.open({
+                type: 2,
+                title: name,
+                shadeClose: true,
+                shade: 0.4,
+                area: ['960px', '500px'],
+                content: url //iframe的url
+            });
+            $("#close_but").on("click", function () {
+                layer.close(page);
+            });
+        }
+
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+    </script>
+</html>
