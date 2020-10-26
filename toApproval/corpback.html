@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>客户退款审批-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+</head>
+
+<body class="showTip">
+
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                评审管理
+                <span class="dib gga pl5 pr5">/</span>
+                客户退款审批
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">查看</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./corpback.html" class="ui-tab4-list ml20 mr10 on">申请表</a>
+                    <a href="./signVerdict.html" class="ui-tab4-list">评审意见</a>
+                </div>
+            </div>
+            <div class="p20">
+                <div class="f14 b g28">基本信息</div>
+                <table class="row ui-table pct100 f12 mt30">
+                    <tbody>
+                        <tr>
+                            <td>客户名称</td>
+                            <td>上海强强强强</td>
+                            <td>单位余额</tdwidth=>
+                            <td colspan="3">222</td>
+                        </tr>
+                        <tr>
+                            <td width="15%">联系方式</td>
+                            <td width="20%">17700010001</td>
+                            <td width="15%">状态</td>
+                            <td width="20%">已确认</td>
+                            <td width="15%">审批人</td>
+                            <td width="15%">张三</td>
+                        </tr>
+                        <tr>
+                            <td>退款银行账号</td>
+                            <td>17700010001</td>
+                            <td>退款开户银行</td>
+                            <td colspan="3">建设银行12310123</td>
+                        </tr>
+                        <tr>
+                            <td>申请退款金额</td>
+                            <td colspan="5">100 <span class="red ml20">（废料款提现）</span></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+        function prev() {
+            window.history.back(-1)
+        }
+
+    </script>
+</body>
+
+</html>

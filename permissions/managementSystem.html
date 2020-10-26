@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>系统分类角色管理-权限管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
+        id="layuicss-laydate">
+    <style>
+        .hoverBlue:hover {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                权限管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">系统分类角色管理</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-tab3">
+            <a href="./managementSystem.html.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">管理系统</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="newDoOutputInvoiceProcList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工系统</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="newDoOutputInvoiceProcList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">文化系统</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="ui-content minH">
+            <div class="p20">
+                <div class="clearfix mb15">
+                    <span class="g28 b l">选择角色</span>
+                    <a href="javascript:void(0)" class="r">新增系统角色</a>
+                </div>
+                <div class="p20 n16_mulsel f0 checkbox">
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>风控专员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>物流人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>单证</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>区域经理</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>物流小飞人</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>分红人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>RFQ短信接收人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>管理员注册审核人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务开票</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸运营经理</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>金牌商家账户充值</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>预分红提醒人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>加工商分红付款</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>采购合同评审1</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>采购合同评审2</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>采购合同评审3</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>饭卡充值人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>加盟金牌商家对接人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>收款（外贸）短信接收人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>备货亏损额把控人员</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸财务</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>法务</label>
+                    </span>
+                    <span class="n16_single dib pct20 f12 mb20">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>资源信息审核人员</label>
+                    </span>
+                    <span class="n16_single dib f12">
+                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>增加风控业务跟进人员（超时未入库）</label>
+                    </span>
+                </div>
+                <div class="mt30 b g28">选择系统分类菜单</div>
+                <table class="ui-table row f12 tc mt15 pct100">
+                    <tbody>
+                        <tr>
+                            <td width="20%">
+                                乐刚管理系统<br>
+                                （单选）
+                            </td>
+                            <td width="80%">
+                                <div class="ui-tab6 pct100">
+                                    <div class="ui-tab6_top">
+                                        <ul>
+                                            <li>待确认客户签收</li>
+                                            <li>待确认客户签收</li>
+                                            <li>待确认客户签收</li>
+                                            <li>待确认客户签收</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+        })
+
+
+
+    </script>
+</body>
+
+</html>

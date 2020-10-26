@@ -42,49 +42,55 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f12">
-                    <span class="m_db m_mb10">
+                    <span class="pct25 dib m_db m_mb10">
                         <span class="searchLable">审批状态：</span>
-                        <span class="single pct15 dib mr20 m_pct80">
-                            <a href="./applyprintAction_toApplyPrintList.html"  class="ui-option mr5 on">待审批</a>
-                            <a  href="./applyprintAction_toApplyPrintList1.html"  class="ui-option">已审批</a>
+                        <span class="single  dib">
+                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 on">待审批</a>
+                            <a href="./applyprintAction_toApplyPrintList1.html" class="ui-option">已审批</a>
                         </span>
                     </span>
-                    <span class="searchLable">&emsp;审批人：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="searchLable">&emsp;订单号：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="searchLable ">金牌商家：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">用印类型：</span>
+                    <div class="dib selectSingle">
+                        <a class="on" href="javscript:void(0)">全部</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">用章</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">合同审核</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">线下章</a>
+                    </div>
                 </div>
                 <div class="mb10 f12">
-                    <span class="searchLable">申请时间：</span>
-                    <span class="ui-input tc f0 pct15  range mr20" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                        <span class="dib pct5 tc">-</span>
-                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;审批人：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="searchLable">审批时间：</span>
-                    <span class="ui-input tc f0 pct15  range mr20" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                        <span class="dib pct5 tc">-</span>
-                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib f12">
-                        <span class="searchLable">用印类型：</span>
-                        <div class="dib selectSingle">
-                            <a class="on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">用章</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">合同审核</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">线下章</a>
-                        </div>
+                    <span class="pct25 dib">
+                        <span class="searchLable ">金牌商家：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
-
-
-                <div class="tc">
+                <div class="mb10 f12">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">申请时间：</span>
+                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">审批时间：</span>
+                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30">
@@ -116,17 +122,20 @@
                                     <td width="172">未盖章</td>
                                     <td width="156">
                                         <div>在2节点</div>
-                                        <div><i class="n18_icon_step1"></i>-<i class="n18_icon_step2"></i>-<i class="n18_icon_step3"></i> </div>
+                                        <div><i class="n18_icon_step1"></i>-<i class="n18_icon_step2"></i>-<i
+                                                class="n18_icon_step3"></i> </div>
                                     </td>
                                     <td width="141">
-                                        <a href="javascript:void(0)" onclick="openDetails(this)" class="hoverBlue">审批</a>
+                                        <a href="javascript:void(0)" onclick="openDetails(this)"
+                                            class="hoverBlue">审批</a>
                                     </td>
                                 </tr>
                                 <tr class="hideTr dn">
                                     <td colspan="8">
                                         <div class="auto tl" style="width: 98%;">
                                             <div>
-                                                <a class="b blue f12 mr20" href="javascript:void(0)" id="step1">订单详细内容：59083<i class="icon-leftArrow ml10"></i> </a>
+                                                <a class="b blue f12 mr20" href="javascript:void(0)"
+                                                    id="step1">订单详细内容：59083<i class="icon-leftArrow ml10"></i> </a>
                                                 <span>金牌商家姓名：张聪&emsp;&emsp;电话：8327&emsp;&emsp;手机：11155551111</span>
                                             </div>
                                             <table class="ui-table pct100 row mt15">
@@ -135,30 +144,34 @@
                                                         <td width="15%">申请原因：</td>
                                                         <td width="85%">测试一下了~</td>
                                                     </tr>
-                                                  <tr>
-                                                      <td class="vt">参考附件：</td>
-                                                      <td>
-                                                          <div><a href="javascript:void(0)" class="ui-files mr15 vm">组件1111.jpg</a></div>
-                                                          <span class="ui-tip" data-type="normal">提示：参考附件仅用于提供给审批人员在审批时进行核对或参考，不用于盖章。证照复印件用印需标注“仅供......使用，他用无效，再复印无效”。</span>
-                                                      </td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="vt">用印附件：</td>
-                                                      <td>
-                                                          <div><a href="javascript:void(0)" class="ui-files mr15 vm">组件1111.jpg</a></div>
-                                                      </td>
-                                                  </tr>
+                                                    <tr>
+                                                        <td class="vt">参考附件：</td>
+                                                        <td>
+                                                            <div><a href="javascript:void(0)"
+                                                                    class="ui-files mr15 vm">组件1111.jpg</a></div>
+                                                            <span class="ui-tip"
+                                                                data-type="normal">提示：参考附件仅用于提供给审批人员在审批时进行核对或参考，不用于盖章。证照复印件用印需标注“仅供......使用，他用无效，再复印无效”。</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="vt">用印附件：</td>
+                                                        <td>
+                                                            <div><a href="javascript:void(0)"
+                                                                    class="ui-files mr15 vm">组件1111.jpg</a></div>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                             <div class="mt30 g28 f14 b">评审记录</div>
                                             <div class="mt30 ml50 nodeLine f12">
                                                 <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
                                                 <div class="ui-auditBox mt10 ml10">
-                                                    <div class="dib vt green"> 
+                                                    <div class="dib vt green">
                                                         <i class="dib sp-Bg vt mr10"></i>审核通过
                                                     </div>
                                                     <div class="dib ml20">
-                                                        <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                        <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30
+                                                            13:23:12</div>
                                                         <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
                                                     </div>
                                                 </div>
@@ -168,7 +181,8 @@
                                                         <i class="dib sp-Bg vt mr10"></i>审核通过
                                                     </div>
                                                     <div class="dib ml20">
-                                                        <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                        <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30
+                                                            13:23:12</div>
                                                         <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
                                                     </div>
                                                 </div>
@@ -182,11 +196,13 @@
                                                             <span class="radio">
                                                                 <label class="mr15">
                                                                     <i class="ui-radio goldIcon v-3 mr2">
-                                                                        <input type="radio" class="radio-opacity" name="radio"></i>同意申请
+                                                                        <input type="radio" class="radio-opacity"
+                                                                            name="radio"></i>同意申请
                                                                 </label>
                                                                 <label>
                                                                     <i class="ui-radio goldIcon v-3 mr2">
-                                                                        <input type="radio" class="radio-opacity" name="radio"></i>不同意申请
+                                                                        <input type="radio" class="radio-opacity"
+                                                                            name="radio"></i>不同意申请
                                                                 </label>
                                                             </span>
                                                         </td>
@@ -229,7 +245,7 @@
             $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
-        function openDetails(obj){
+        function openDetails(obj) {
             $(obj).parents(".openTr").next("tr").toggle()
         }
     </script>

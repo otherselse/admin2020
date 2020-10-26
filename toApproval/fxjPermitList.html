@@ -41,12 +41,12 @@
 		<div class="ui-content minH">
 			<div class="p20">
 				<div class="mb10 f0">
-                    <span class="dib pct25 f12">
-						<span class="searchLable">金牌商家：</span> 
+					<span class="dib pct25 f12">
+						<span class="searchLable">金牌商家：</span>
 						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 					</span>
 					<span class="dib pct50 f12">
-					<span class="searchLable">审核状态：</span>	
+						<span class="searchLable">审核状态：</span>
 						<div class="dib selectSingle pct69 m_pct31">
 							<a class="on" href="javscript:void(0)">已评审</a>
 							<span class="pr5 pl5">|</span>
@@ -57,43 +57,159 @@
 				<div class="tc mt20">
 					<button type="button" class="ui-button mr20">查询</button>
 				</div>
-                <div class="lgui-table-box mt30 checkbox">
-                    <div class="lgui-table-header">
-                        <table class="ui-table f12 pct100">
-                            <thead>
-                                <tr>
-                                    <th width="6%">序号</th>
-                                    <th width="17%">申请日期</th>
-                                    <th width="18%">类型</th>
-                                    <th width="14%">金牌商家</th>
-                                    <th width="14%">所属区域</th>
-                                    <th width="13%">充值（解封）金额</th>
-                                    <th width="10%">状态</th>
-                                    <th width="10%">操作</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="lgui-table-body mt-1">
-                        <table class="ui-table tc f12" width="100%">
-                            <tbody class="ui-thover">
-                                <tr>
-                                    <td width="6%">1</td>
-                                    <td width="17%">2020-06-28 21:15:04</td>
-                                    <td width="18%">金牌商家风险保证金充值</td>
-                                    <td width="14%">之华</td>
-                                    <td width="14%">上海</td>
-                                    <td width="13%" numtype="formatMoney">100,000</td>
-                                    <td width="10%"><span class="blue">审核中</span></td>
-                                    <td width="10%"><a href="./fxjyj.html">审核</a></td>
-                                </tr>
-                            </tbody>
-                        
-                        </table>
-                        <!-- table end -->
-                    </div>
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table f12 pct100">
+							<thead>
+								<tr>
+									<th width="6%">序号</th>
+									<th width="17%">申请日期</th>
+									<th width="18%">类型</th>
+									<th width="14%">金牌商家</th>
+									<th width="14%">所属区域</th>
+									<th width="13%">充值（解封）金额</th>
+									<th width="10%">状态</th>
+									<th width="10%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12" width="100%">
+							<tbody class="ui-thover">
+								<tr class="openTr">
+									<td width="6%">1</td>
+									<td width="17%">2020-06-28 21:15:04</td>
+									<td width="18%">金牌商家风险保证金充值</td>
+									<td width="14%">之华</td>
+									<td width="14%">上海</td>
+									<td width="13%" numtype="formatMoney">100,000</td>
+									<td width="10%">审核通过</td>
+									<td width="10%"><a href="javascript:void(0)" onclick="openDetails(this)">审核</a></td>
+								</tr>
+								<tr class="hideTr dn">
+									<td colspan="8">
+										<div class="auto tl" style="width: 98%;">
+											<div class="b g28">评审记录</div>
+											<div class="mt30 ml30 nodeLine f12">
+												<div class="g28 ui-audit f12 pl10"><span>审批</span></div>
+												<div class="ui-auditBox mt10 ml10">
+													<div class="dib vt green">
+														<i class="dib sp-Bg vt mr10"></i>审核通过
+													</div>
+													<div class="dib ml20">
+														<div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30
+															13:23:12</div>
+														<div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+													</div>
+												</div>
 
-                </div>
+											</div>
+											<div class="b g28 mt30">风险保证金充值申请意见</div>
+											<table class="ui-table f12 pct100 row mt15">
+												<tbody>
+													<tr>
+														<td width="20%">本人审批意见：</td>
+														<td width="80%">
+															<span class="radio">
+																<label class="mr15">
+																	<i class="ui-radio goldIcon v-3 mr2 on">
+																		<input type="radio" class="radio-opacity"
+																			name="radio">
+																	</i>同意申请
+																</label>
+																<label>
+																	<i class="ui-radio goldIcon v-3 mr2">
+																		<input type="radio" class="radio-opacity"
+																			name="radio">
+																	</i>不同意申请
+																</label>
+															</span>
+														</td>
+
+													</tr>
+													<tr>
+														<td class="vt">本人审批备注：</td>
+														<td>
+															<textarea class="pct98 ui-textarea" cols="30"
+																rows="6"></textarea>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr class="openTr">
+									<td width="6%">1</td>
+									<td width="17%">2020-06-28 21:15:04</td>
+									<td width="18%">金牌商家风险保证金充值</td>
+									<td width="14%">之华</td>
+									<td width="14%">上海</td>
+									<td width="13%" numtype="formatMoney">100,000</td>
+									<td width="10%">审核中</td>
+									<td width="10%"><a href="javascript:void(0)" onclick="openDetails(this)">审核</a></td>
+								</tr>
+								<tr class="hideTr dn">
+									<td colspan="8">
+										<div class="auto tl" style="width: 98%;">
+											<div class="b g28">评审记录</div>
+											<div class="mt30 ml30 nodeLine f12">
+												<div class="g28 ui-audit f12 pl10"><span>审批</span></div>
+												<div class="ui-auditBox mt10 ml10">
+													<div class="dib vt green">
+														<i class="dib sp-Bg vt mr10"></i>审核通过
+													</div>
+													<div class="dib ml20">
+														<div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30
+															13:23:12</div>
+														<div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="b g28 mt30">风险保证金充值申请意见</div>
+											<table class="ui-table f12 pct100 row mt15">
+												<tbody>
+													<tr>
+														<td width="20%">本人审批意见：</td>
+														<td width="80%">
+															<span class="radio">
+																<label class="mr15">
+																	<i class="ui-radio goldIcon v-3 mr2 on">
+																		<input type="radio" class="radio-opacity"
+																			name="radio">
+																	</i>同意申请
+																</label>
+																<label>
+																	<i class="ui-radio goldIcon v-3 mr2">
+																		<input type="radio" class="radio-opacity"
+																			name="radio">
+																	</i>不同意申请
+																</label>
+															</span>
+														</td>
+
+													</tr>
+													<tr>
+														<td class="vt">本人审批备注：</td>
+														<td>
+															<textarea class="pct98 ui-textarea" cols="30"
+																rows="6"></textarea>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+
+						</table>
+						<!-- table end -->
+					</div>
+
+				</div>
 				<script type="text/javascript" src="../js/pagelist.js"></script>
 			</div>
 		</div>
@@ -113,7 +229,10 @@
 			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
-
+		//展开明细
+		function openDetails(obj) {
+			$(obj).parents(".openTr").next("tr").toggle()
+		}
 	</script>
 </body>
 

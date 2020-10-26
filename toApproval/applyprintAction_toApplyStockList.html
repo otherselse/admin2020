@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>加工客户库存审批-审批管理-乐刚智能云系统</title>
+    <title>加工客户库存核对-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -31,7 +31,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">加工客户库存审批</span>
+                <span class="g28">加工客户库存核对</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -39,39 +39,38 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="mb10">
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                <div class="mb10 f12">
+                    <span class="f12">
+                        <span class="searchLable">审核状态：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>待核对</label>
+                            <label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>已核对</label>
+                        </span>
                     </span>
-                    <span class="dib f12">
-                        <span class="searchLable">业务日期：</span>
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
+                    <span class="f12">
+                        <span class="searchLable">核对结果：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>存在差异</label>
+                            <label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>准确无误</label>
+                        </span>
+                    </span>
+                    <span class="searchLable">单位名称：</span>
+                    <input type="text" class="ui-input mr20 pct16" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct25">
+                    <span class="searchLable">业务日期：</span> <span class="ui-input tc f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
                 </div>
                 <div>
-                    <span class="pct25 f12  dib">
-                        <span class="searchLable">审核状态：</span>
-                        <div class="dib selectSingle">
-                            <a href="javascript:void(0)">待审核</a>
-                            <span>|</span>
-                            <a href="javascript:void(0)">未审核</a>
-                        </div>
-                    </span>
-                    <span class="f12">
-                        <span class="searchLable">核对结果：</span>
-                        <div class="dib selectSingle">
-                            <a href="javascript:void(0)">存在差异</a>
-                            <span>|</span>
-                            <a href="javascript:void(0)">准确无误</a>
-                        </div>
-                    </span>
+
+
+
+
 
                 </div>
                 <div class="tc f12">

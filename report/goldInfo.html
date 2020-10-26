@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>单位运营汇总-报表管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="ui-tab3 pct100" style="margin-top: 20px;">
+            <a href="goldInfo.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">金牌商家业务概况</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="goldRegInfo.html" class="ui-tab3-list rel"><span class="ui-tab3-text">注册信息</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+          
+        </div>
+        <div class="ui-content ovh minH">
+
+            <div class="p20">
+                <div class="f0">
+                    <div class="pct22 f12 dib">
+                        <span class="searchLable">单位名称：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                    </div>
+                    <div class="pct22 f12 dib">
+                        <span class="searchLable">毛利区间：</span>
+                        <span class="ui-input pct59 f0" data-type="section">
+                            <input type="text" placeholder="请输入">
+                            <span class="pct5 dib tc">~</span>
+                            <input type="text" placeholder="请输入">
+                        </span>
+                    </div>
+                    <div class="pct30 f12 dib">
+                        <span class="searchLable">订单日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
+                            <span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </div>
+                </div>
+                <div class="tc mt20 mb30">
+                    <button type="button" class="ui-button">查询</button>
+                </div>
+                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="3%">序号</th>
+                            <th width="12%">单位名称</th>
+                            <th width="5%">合作时长</th>
+                            <th width="5%">订单数</th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    成交吨位<i class="goldIcon icon-sort vm ml5 down"></i>
+                                </label>
+                            </th>
+                            <th width="11%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    成交总额<i class="goldIcon icon-sort vm ml5 down"></i>
+                                </label>
+                            </th>
+                            <th width="11%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    预估税前毛利<i class="goldIcon icon-sort vm ml5 down"></i>
+                                </label>
+                            </th>
+                            <th width="12%">
+                                平均税前毛利率(定购)
+                            </th>
+                            <th width="11%">
+                                平均溢价比率(备货)
+                            </th>
+                            <th width="5%">
+                                联系人
+                            </th>
+                            <th width="9%">
+                                联系电话
+                            </th>
+                            <th width="9%">供货明细</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr class="openTr">
+                            <td>1</td>
+                            <td>
+                                <div class="pl20 tl">
+                                    <a href="#">简简单单供应链服务</td>
+                                </div>
+                            <td>220天</td>
+                            <td>110</td>
+                            <td>33040.34</td>
+                            <td>4559934.34</td>
+                            <td>139,344.33</td>
+                            <td>0.234340</td>
+                            <td>0.020200</td>
+                            <td>马云云</td>
+                            <td>13914585594</td>
+                            <td><a href="javascript:void(0)" onclick="openDetails(this)">查看</a></td>
+                        </tr>
+                        <tr class="hideTr dn">
+                            <td colspan="12">
+                                <table class="auto ui-table mt20" width="98%">
+                                    <thead>
+                                        <tr>
+                                            <th width="9%">金牌商家</th>
+                                            <th width="11%">成交吨位</th>
+                                            <th width="11%">成交金额</th>
+                                            <th width="12%">未回款金额</th>
+                                            <th width="12%">逾期未回款金额</th>
+                                            <th width="11%">平均超期天数</th>
+                                            <th width="11%">合作时长</th>
+                                            <th width="11%">单位联系人</th>
+                                            <th width="11%">联系人电话</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>孙晶雪</td>
+                                            <td>24.34</td>
+                                            <td>100,344</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0天</td>
+                                            <td>433天</td>
+                                            <td>沈经理</td>
+                                            <td>13945582484</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist").eq(13).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        
+        })
+        	//展开明细
+		function openDetails(obj) {
+			$(obj).parents(".openTr").next("tr").toggle()
+		}
+
+  
+    </script>
+</body>
+
+</html>

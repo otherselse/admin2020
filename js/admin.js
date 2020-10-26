@@ -90,6 +90,16 @@ $(function(){
 		  });
 		}); 
 	}
+	if($('.render-year').length>0){
+		lay('.render-year').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,type:'year'
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		  });
+		}); 
+	}
 	
 
 	//提示

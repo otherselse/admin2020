@@ -42,49 +42,55 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f12">
-                    <span class="m_db m_mb10">
+                    <span class="pct25 dib m_db m_mb10">
                         <span class="searchLable">审批状态：</span>
-                        <span class="single pct15 dib mr20 m_pct80">
-                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5">待审批</a>
+                        <span class="single  dib">
+                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 ">待审批</a>
                             <a href="./applyprintAction_toApplyPrintList1.html" class="ui-option on">已审批</a>
                         </span>
                     </span>
-                    <span class="searchLable">&emsp;审批人：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="searchLable">&emsp;订单号：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="searchLable ">金牌商家：</span>
-                    <input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">用印类型：</span>
+                    <div class="dib selectSingle">
+                        <a class="on" href="javscript:void(0)">全部</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">用章</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">合同审核</a>
+                        <span class="pr5 pl5 ">|</span>
+                        <a href="javscript:void(0)">线下章</a>
+                    </div>
                 </div>
                 <div class="mb10 f12">
-                    <span class="searchLable">申请时间：</span>
-                    <span class="ui-input tc f0 pct15  range mr20" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                        <span class="dib pct5 tc">-</span>
-                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;审批人：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="searchLable">审批时间：</span>
-                    <span class="ui-input tc f0 pct15  range mr20" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                        <span class="dib pct5 tc">-</span>
-                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib f12">
-                        <span class="searchLable">用印类型：</span>
-                        <div class="dib selectSingle">
-                            <a class="on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">用章</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">合同审核</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">线下章</a>
-                        </div>
+                    <span class="pct25 dib">
+                        <span class="searchLable ">金牌商家：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
-
-
-                <div class="tc">
+                <div class="mb10 f12">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">申请时间：</span>
+                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">审批时间：</span>
+                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30">

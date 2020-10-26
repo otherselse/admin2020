@@ -43,15 +43,16 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl mb10 f0">
-                    <span class="dib f12">
-                        <span class="searchLable">评审状态：</span><span class="single">
-                            <button type="button" class="ui-option mr5 on">全部</button>
-                            <button type="button" class="ui-option mr5">未评审</button>
-                            <button type="button" class="ui-option">已评审</button>
-                        </span>
+                    <span class="dib f12 mr20">
+                        <span class="searchLable">评审状态：</span>
+                        <div class="dib selectSingle mr20">
+                            <a class="on" href="javscript:void(0)">全部</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">未评审</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">已评审</a>
+                        </div>
                     </span>
-                </div>
-                <div class="cl f0 mb10 ">
                     <span class="dib f12">
                         <span class="searchLable">担保类别：</span>
                         <div class="dib selectSingle mr20">
@@ -97,12 +98,9 @@
                         <input type="text" class="ui-input pct16  mr20" placeholder="请输入" autocomplete="off">
                         <span class="searchLable">客户单位：</span>
                         <input type="text" class="ui-input pct16  mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">申请日期：</span>
-                        <span class="ui-input tc f0 pct20  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-                        </span>
+                        <span class="pct25 dib f12">申请时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span></span>
                     </span>
                 </div>
                 <div class="tc">

@@ -41,14 +41,17 @@
             <div class="p20">
                 <div>
                     <span class="dib pct25 f12">
-                        订单号：
+                        <span class="searchLable">订单号：</span>
+
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25 f12">
-                        单位名称：
+                        <span class="searchLable">单位名称：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="f12">状态：</span>
+                    <span class="f12">
+                        <span class="searchLable">状态：</span>
+                    </span>
                     <span class="radio f12">
                         <label class="mr10">
                             <i class="ui-radio goldIcon v-3 mr2">
@@ -67,30 +70,82 @@
                         </label>
                     </span>
                 </div>
-                    <table class="ui-table tc f12 mt30 pct100">
-                        <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>类型</th>
-                                <th>申请编号</th>
-                                <th>订单号</th>
-                                <th>单位名称</th>
-                                <th>金牌商家</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>销售退货入库申请</td>
-                                <td>STC(22)-18001406</td>
-                                <td>48997</td>
-                                <td><span class="blue">景腾有限公司</span></td>
-                                <td>汤小唯</td>
-                                <td><a href="./saleBackFilePermitDetail.html">未审核</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <table class="ui-table tc f12 mt30 pct100">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>类型</th>
+                            <th>申请编号</th>
+                            <th>订单号</th>
+                            <th>单位名称</th>
+                            <th>金牌商家</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr class="openTr">
+                            <td>1</td>
+                            <td>销售退货入库申请</td>
+                            <td>STC(22)-18001406</td>
+                            <td>48997</td>
+                            <td>景腾有限公司</td>
+                            <td>汤小唯</td>
+                            <td><a href="javascript:void(0)" onclick="openDetails(this)">未审核</a></td>
+                        </tr>
+                        <tr class="hideTr">
+                            <td colspan="7">
+                                <div class="auto f14 b mt30 tl g28" style="width: 98%;">审核意见</div>
+                                <div class="mt30 ml30 nodeLine f12 tl">
+                                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                                    <div class="ui-auditBox mt10 ml10">
+                                        <div class="dib vt green"> 
+                                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                                        </div>
+                                        <div class="dib ml20">
+                                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="auto f14 b mt30 tl g28" style="width: 98%;">评审意见</div>
+                                <table class="ui-table row f12 auto mt15 tl" width="98%">
+                                    <tbody>
+                                        <tr>
+                                            <td width="20%"> 退货入库附件： </td>
+                                            <td width="80%"><a href="javascript:void(0)"
+                                                    class="ui-files mr15 vm">组件1111.jpg</a><a href="javascript:void(0)"
+                                                    class="ui-files mr15 vm">组件1111.jpg</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>本人审批意见：</td>
+                                            <td>
+                                                <span class="radio">
+                                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input
+                                                                type="radio" class="radio-opacity"
+                                                                name="radio"></i>同意申请</label>
+                                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                                class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>本人审批备注：</td>
+                                            <td>
+                                                <textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="tc mt20">
+                                    <button class="ui-button mr15" type="button">提交</button>
+                                    <button class="ui-button" data- type="button" data-type="clear">退回</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -112,6 +167,9 @@
         })
         function prev() {
             window.history.back(-1)
+        }
+        function openDetails(obj) {
+            $(obj).parents(".openTr").next("tr").toggle()
         }
 
     </script>
