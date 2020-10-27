@@ -16,7 +16,61 @@
 </head>
 <body class="showTip">
     <div class="p20">
-      <table class="ui-table tc f12 auto  " width="100%">
+    	<div class="cl f12">
+    		<span class="dib pct20 tr">金牌商家：</span>
+    		<span class="dib pct75">汤一份</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">手机号码：</span>
+    		<span class="dib pct75">1234567890</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">手机号码：</span>
+    		<span class="dib pct75">1234567890</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">充值类型：</span>
+    		<span class="dib pct75">
+    			<select id="billType" name="gtGMoneyMain.billType" class="ui-input pct80">
+				             <option value="10">无</option>
+				             <option value="8">短期活动</option>
+							 <option value="42">电话费</option>
+							 <option value="43">宿舍费</option>
+							 <option value="44">快递费</option>
+							 <option value="57">饭卡退费</option>
+							 <option value="81">平台广告推广奖励</option>
+							 <option value="82">云系统应用推广奖励</option>
+							 <option value="83">双推工程推广奖励</option>
+				        </select>
+    		</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">充值金额：</span>
+    		<span class="dib pct75">
+    			<span class="ui-input pct80" data-type="price"><input type="text" value="" placeholder="请输入"><span class="r">元</span></span>
+    		</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">充值账户：</span>
+    		<span class="dib pct75 radio">
+    			<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>乐财宝</label>
+	            		<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>G2G钱包</label>
+	            		<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>分红余额</label>
+    		</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">订单号：</span>
+    		<span class="dib pct75">
+    			<input type="text" class="ui-input pct80" placeholder="请输入" autocomplete="off">
+    		</span>
+    	</div>
+    	<div class="cl f12 mt20">
+    		<span class="dib pct20 tr">备注：</span>
+    		<span class="dib pct75">
+    			<textarea name="gatherCash.remark" class="ui-textarea pct80" rows="3" value="" placeholder="请填写"></textarea>
+    		</span>
+    	</div>
+<!--       <table class="ui-table tc f12 auto  " width="100%">
          <tbody>
 	            <tr class="resource-table">
 	            	<td class="title" width="20%">金牌商家：</td>
@@ -65,7 +119,7 @@
 	            	<td class="cont"><textarea name="gatherCash.remark" class="ui-textarea pct80" rows="3" value="" placeholder="请填写"></textarea></td>
 	            </tr>
 	      </tbody>
-	  </table>
+	  </table> -->
 
 	  <div class="tc  mt20 mb20">
         	<button type="button" class="ui-button mr10">确认</button>

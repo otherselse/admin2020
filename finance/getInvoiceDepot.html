@@ -45,7 +45,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<span class="ui-tip pct100 mb20">温馨提示：发票号的格式请保持一致连号发票格式为12345678-12345688，非连号发票格式为654321,789564,987523；后期将针对采购发票登记进行排查，不合格的将执行惩罚。</span>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">仓库单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
@@ -56,7 +56,7 @@
 					</div>	
 
 
-	                <div class="f0 mb20">
+	                <div class="f0 mb20 searchLable">
 	                	<span class="pct25 dib f12">&emsp;&emsp;区域：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
@@ -76,7 +76,7 @@
 	                            <input type="hidden" value="">
 	                            <button type="button" class="ui-option mr5">运输发票</button>
 	                            <button type="button" class="ui-option mr5">加工发票</button>
-	                            <button type="button" class="ui-option mr5">仓储发票</button>
+	                            <button type="button" class="ui-option mr5 on">仓储发票</button>
 	                            <button type="button" class="ui-option mr5">订舱发票</button>
 	                            <button type="button" class="ui-option mr5">办公费用发票</button>
 	                        </span>
@@ -153,21 +153,9 @@
 		                    	<tr height="45">
 		                    		<td colspan="15" class="tl pt10 pb10 ">
 		                    			<div class="dib pct8 tc">
-		                    				<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号
+		                    				<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
 		                    			</div>
-		                    			发票编号：<input type="text" class="ui-input pct8 mr15" />
-		                    			开票总金额：<input type="text" class="ui-input pct8 mr15" />
-		                    			开票日期：<span class="ui-input pct8 mr15" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
-
-		                    			税率：<span class="ui-input pct5 mr15" data-type="price"><input type="text" value="" placeholder="" class="pct80"><span class="r pct20">%</span></span>
-		                    			<span class="dib f12 radio">
-											<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>专用发票</label>
-											<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>普通发票</label>
-										</span>
-		                    			<button class="ui-button mr5" data-type="upfile" type="button">普通上传</button>
-		                    			<button class="ui-button " data-type="upfile" type="button">高拍仪上传</button>
-		                    			<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1">查看</a>
-		                    			<button type="button" class="ui-button w90">确认</button>
+		                    			
 		                    		</td>
 		                    	</tr>
 
@@ -177,6 +165,38 @@
 	            	</div>
 	                
 	            </div><!-- table end -->
+	            <table class="ui-table tc f12 auto mt10 " width="100%">
+					<tbody>
+						<tr class="resource-table">
+							<td class="title" width="13%">发票编号：</td>
+							<td width="20%" class="cont"><input type="text" class="ui-input pct80 " placeholder="请输入" autocomplete="off"></td>
+							<td class="title" width="13%">开票总金额：</td>
+							<td width="20%" class="cont"><input type="text" class="ui-input pct80 " placeholder="请输入" autocomplete="off" value="123"></td>
+							<td class="title" width="13%">开票日期：</td>
+							<td width="20%" class="cont"><span class="ui-input pct80" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" lay-key="1"></span></td>
+						</tr>
+						<tr class="resource-table">
+							
+							<td class="title">发票类型：</td>
+							<td class="cont">
+								<span class="single ">
+		                            <input type="hidden" value="">
+		                            <button type="button" class="ui-option mr5">专用发票</button>
+		                            <button type="button" class="ui-option mr5">普通发票</button>
+		                        </span>
+							</td>
+							<td class="title">税率：</td>
+							<td class="cont"><span class="ui-input pct80" data-type="price"><input type="text" value="" placeholder="" class="pct80" autocomplete="off"><span class="r">%</span></span></td>
+							<td class="title">附件上传：</td>
+							<td width="20%" class="cont">
+								<button class="ui-button " data-type="upfile" type="button">普通上传</button>
+								<button class="ui-button " data-type="upfile" type="button">高拍仪上传</button>
+								<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1" data-hasqtip="6">查看</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="tc mb10 mt10"><button type="button" class="ui-button ">确认</button></div>
 	            
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
 
