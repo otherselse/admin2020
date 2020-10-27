@@ -38,33 +38,26 @@
             </div>
         </div>
         <div class="ui-content minH">
-            <div class="lh84 bor-bottom">
-                <div class="ui-tab4">
-                    <a href="./procBonusApplyAction_procAfterProcessList.html" class="ui-tab4-list ml20">待审核</a>
-                    <a hhref="./procBonusApplyAction_procAfterProcessList.html" class="ui-tab4-list on">已审核</a>
-                </div>
-            </div>
             <div class="p20">
-
-                <div class="mb10">
-                    <span class="pct25 f12 dib">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                <div class="mb10 f12">
+                    <span class="m_mb10 m_db">
+                        <span class="searchLable">审核状态：</span>
+                        <div class="dib selectSingle  mr20">
+                            <a class="on" href="javascript:void(0)">待审核</a>
+                            <a href="javascript:void(0)">已审核</a>
+                        </div>
                     </span>
-                    <span class="pct25 f12 dib">
-                        <span class="searchLable">区域：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct30 dib f12">
-                        <span class="searchLable">申请日期：</span>
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                    <span class="searchLable">金牌商家：</span>
+                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">区域：</span>
+                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="pct25 dib f12  ">
+                        <span class="searchLable">入库申请时间：</span>
+                        <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                        </span>
-                    </span>
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span></span>
                 </div>
                 <div class="tc f12">
                     <button class="ui-button">查询</button>
@@ -103,14 +96,17 @@
                                     <td width="7%">审核通过</td>
                                     <td width="8%">系统审批</td>
                                     <td width="10%">2020-07-06 13:17:18</td>
-                                    <td width="6%" class="blue"><a href="javascript:void(0)" onclick="openDetails(this)">查看</a></td>
+                                    <td width="6%" class="blue"><a href="javascript:void(0)"
+                                            onclick="openDetails(this)">查看</a></td>
                                 </tr>
                                 <tr class="hideTr dn">
                                     <td colspan="11" class="f12">
                                         <div class="tl auto g28  mt10 f0" style="width: 98%;">
-                                        <span class="pct33 f12 dib"><span class="b g28">转换金额：</span>11元</span>
-                                        <span class="pct33 f12 dib"><span class="b g28">附件：</span><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span>    
-                                        <span class="pct33 f12 dib"><span class="b g28">审批意见：</span>同意</span>
+                                            <span class="pct33 f12 dib"><span class="b g28">转换金额：</span>11元</span>
+                                            <span class="pct33 f12 dib"><span class="b g28">附件：</span><a
+                                                    href="javascript:void(0)"
+                                                    class="ui-files mr20 vm">组件1111.jpg</a></span>
+                                            <span class="pct33 f12 dib"><span class="b g28">审批意见：</span>同意</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -138,7 +134,7 @@
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
-        function openDetails(obj){
+        function openDetails(obj) {
             $(obj).parents(".openTr").next("tr").toggle()
         }
     </script>

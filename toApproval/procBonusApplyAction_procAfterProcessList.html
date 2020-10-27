@@ -39,14 +39,11 @@
         </div>
         <div class="ui-content minH">
             <div class="lh84 bor-bottom">
-                <div class="ui-tab4">
-                    <a href="./procBonusApplyAction_procAfterProcessList.html" class="ui-tab4-list on ml20">待审批</a>
-                    <a hhref="./procBonusApplyAction_procAfterProcessList.html" class="ui-tab4-list">已审批</a>
-                </div>
+
             </div>
             <div class="p20">
                 <div class="f12 lh24 mb10">
-                    <span class="vt dib">加工商：</span>
+                    <span class="vt dib searchLable">加工商：</span>
                     <div class="dib selectProcName gd8 selectSingle ">
                         <a href="javscript:void(0)">全部</a>
                         <span class="pr5 pl5 ">|</span>
@@ -64,33 +61,37 @@
                     </div>
                     <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
                 </div>
-                <div class="mb10">
-                    <span class="pct25 f12 dib">
-                        单位名称：
-                        <span class="input-selSearch pct59">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
-                                readonly="">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell">北京</a>
-                                <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
+                <div class="mb10 f12">
+                    <span class="m_db m_mb10">
+                        <span class="searchLable">评审类型：</span>
+                        <span class="radio dib  mr20">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>内贸销售合同评审</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                        name="radio"></i>外贸销售合同评审</label>
                         </span>
                     </span>
-                    <span class="pct25 f12 dib">
-                        订单号：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">单位名称：</span>
+                    <span class="input-selSearch mr20 pct16">
+                        <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                            readonly="">
+                        <div class="search-cont">
+                            <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                            <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                        </div>
                     </span>
-                    <span class="pct30 dib f12">申请日期：
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                        </span>
+                    <span class="searchLable">订单号：</span>
+                    <input type="text" class="ui-input mr20 pct16" placeholder="请输入" autocomplete="off">
+
+                    <span class="searchLable">申请日期：</span>
+                    <span class="ui-input tc f0 pct20   range" data-type="time">
+                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off">
+                        <span class="dib pct5 tc">-</span>
+                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                     </span>
                 </div>
                 <div class="tc f12">
@@ -126,11 +127,11 @@
                                     <td width="8%">￥20000</td>
                                     <td width="8%">优惠券抵扣</td>
                                     <td width="8%"><a href="#" target="_blank">SHSQ20200829002</a></td>
-                                    <td width="5%"><a href="javascript:void(0)"  onclick="showDiv_lrl(this)">审批</a></td>
+                                    <td width="5%"><a href="javascript:void(0)" onclick="showDiv_lrl(this)">审批</a></td>
                                 </tr>
                                 <tr class="hideTr dn">
                                     <td colspan="9" class="f12">
-                                        <div class="tl auto b g28" style="width: 98%;" >问题货物</div>
+                                        <div class="tl auto b g28" style="width: 98%;">问题货物</div>
                                         <table class="ui-table tc f12 auto mt10" width="98%">
                                             <thead>
                                                 <tr>
@@ -157,16 +158,21 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="tl auto mt10" style="width: 98%;">售后原因：<span class="mr2">尺寸加工错误</span><span class="mr2">毛刺公差不符</span><span class="mr2">板面划伤</span></div>
-                                        <div class="tl auto b g28 mt10" style="width: 98%;" >问题描述</div>
-                                        <textarea class="ui-textarea auto mt10" style="width: 98%;" rows="4" readonly="">readonly</textarea>
+                                        <div class="tl auto mt10" style="width: 98%;">售后原因：<span
+                                                class="mr2">尺寸加工错误</span><span class="mr2">毛刺公差不符</span><span
+                                                class="mr2">板面划伤</span></div>
+                                        <div class="tl auto b g28 mt10" style="width: 98%;">问题描述</div>
+                                        <textarea class="ui-textarea auto mt10" style="width: 98%;" rows="4"
+                                            readonly="">readonly</textarea>
                                         <table class="ui-table row auto tl mt10" style="width: 98%;">
                                             <tbody>
                                                 <tr>
                                                     <td width="13%">问题图片</td>
-                                                    <td width="20%"><span class="dib"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span> </td>
+                                                    <td width="20%"><span class="dib"><a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a></span> </td>
                                                     <td width="13%">质量异议</td>
-                                                    <td width="20%"><span class="dib"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span> </td>
+                                                    <td width="20%"><span class="dib"><a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a></span> </td>
                                                     <td width="13%">审单人员</td>
                                                     <td width="21%">光明</td>
                                                 </tr>
@@ -187,43 +193,58 @@
                                                 <tr>
                                                     <td>质量跟踪表</td>
                                                     <td colspan="5">
-                                                        <a href="/LgAdmin/procBonusApplyAction_lookProcMainCheckDetail.action?procMainCheck.id=ADC4852B7A3E1B51E05371001FAC355C" class="mr2 blue" target="_blank">zlgzb20200826180603384</a>
+                                                        <a href="/LgAdmin/procBonusApplyAction_lookProcMainCheckDetail.action?procMainCheck.id=ADC4852B7A3E1B51E05371001FAC355C"
+                                                            class="mr2 blue" target="_blank">zlgzb20200826180603384</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>订单附件</td>
                                                     <td colspan="5">
-                                                        <span class="dib"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></span> 
+                                                        <span class="dib"><a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a></span>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div class="mt30 b tl g28 f14 auto" style="width: 98%;" >评审记录</div>
+                                        <div class="mt30 ml30 nodeLine f12 tl">
+                                            <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                                            <div class="ui-auditBox mt10 ml10">
+                                                <div class="dib vt green"> 
+                                                    <i class="dib sp-Bg vt mr10"></i>审核通过
+                                                </div>
+                                                <div class="dib ml20">
+                                                    <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                    <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                                </div>
+                                            </div>
+                                            <div class="g28 ui-audit f12 pl10 mt10"><span>2节点</span></div>
+                                            <div class="ui-auditBox mt10 ml10">
+                                                <div class="dib vt green">
+                                                    <i class="dib sp-Bg vt mr10"></i>审核通过
+                                                </div>
+                                                <div class="dib ml20">
+                                                    <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                    <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <table class="ui-table f12 tl row mt15 auto" style="width: 98%;">
                                             <tbody>
                                                 <tr>
-                                                    <td width="13%">审核</td>
-                                                    <td width="87%">1节点</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>审批意见</td>
-                                                    <td>审批通过，测试正向流程 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>审核人</td>
-                                                    <td>光明/2020-09-24 11:37:29</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>本人审批意见</td>
-                                                    <td>
+                                                    <td width="15%">本人审批意见</td>
+                                                    <td width="85%">
                                                         <span class="radio">
                                                             <label class="mr15">
                                                                 <i class="ui-radio goldIcon v-3 mr2 on">
-                                                                    <input type="radio" class="radio-opacity" name="radio">
+                                                                    <input type="radio" class="radio-opacity"
+                                                                        name="radio">
                                                                 </i>同意申请
                                                             </label>
                                                             <label>
                                                                 <i class="ui-radio goldIcon v-3 mr2">
-                                                                    <input type="radio" class="radio-opacity" name="radio">
+                                                                    <input type="radio" class="radio-opacity"
+                                                                        name="radio">
                                                                 </i>不同意申请
                                                             </label>
                                                         </span>
@@ -232,13 +253,15 @@
                                                 <tr>
                                                     <td class="vt">本人审批备注</td>
                                                     <td>
-                                                        <textarea class="pct98 ui-textarea" cols="30" rows="6"></textarea>
+                                                        <textarea class="pct98 ui-textarea" cols="30"
+                                                            rows="6"></textarea>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="tc mt10">
-                                            <button class="ui-button pl5 pr5" data-type="smallbbr" type="button">提交</button>
+                                        <div class="tc mt20">
+                                            <button class="ui-button pl5 pr5" 
+                                                type="button">提交</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -435,16 +458,16 @@
         function prev() {
             window.history.back(-1)
         }
-        function showDiv_lrl(obj){
+        function showDiv_lrl(obj) {
 
             $(obj).parents(".openTr").next(".hideTr").toggle()
             $(obj).toggleClass("on")
-            if($(obj).hasClass("on")){
+            if ($(obj).hasClass("on")) {
                 $(obj).html("收起")
-            }else{
+            } else {
                 $(obj).html("审批")
             }
-          
+
 
         }
 

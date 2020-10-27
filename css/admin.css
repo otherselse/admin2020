@@ -1775,6 +1775,7 @@ a.wh:hover {
   .m-tabLimitSCroll .ui-tab3 {
     min-width: 1400px;
   }
+
 }
 
 @media only screen and (min-width: 1460px) {
@@ -2590,7 +2591,7 @@ a.wh:hover {
 }
 
 .ui-tip.noIcon[data-type="blue"] {
-  padding: 15px 0 15px 20px;
+  padding: 15px 20px 15px 20px;
   background-image: none;
 }
 
@@ -2611,7 +2612,7 @@ a.wh:hover {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
-  border-left: 10px solid #282828;
+  border-left: 7px solid #676767;
   border-bottom: 5px solid transparent;
   display: inline-block;
   vertical-align: baseline;
@@ -2659,9 +2660,30 @@ a.wh:hover {
   color: #282828;
   font-weight: 700;
 }
+.selectPrintBox{
+  width: 180px;
+  height: 240px;
+  box-sizing: border-box;
+  border: 1px solid #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.selectPrint{
+  display: flex;
+}
+.selectPrintImg{
+  height: 149px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectPrintBox.on{
+  border: 1px solid #1365e8;
 /* InformationChanges */
-
+}
 .icon-stock-enter {
   background: url(../images/InformationChanges/icon-stock.png) -247px 0 no-repeat;
   width: 32px;
@@ -2698,20 +2720,48 @@ a.wh:hover {
   height: 32px;
 }
 
-.bor-R6 {
-  border-radius: 6px;
+.bor-R6{
+  border-radius:6px;
 }
-
-.icon-zk {
-  background: url(../images/InformationChanges/7-w.png) no-repeat;
-  width: 13px;
-  height: 8px;
-  background-size: 13px 8px;
+.n16_mulsel{
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #e6e6e6;
 }
-
-.icon-zk.on {
-  background: url(../images/InformationChanges/7-y.png) no-repeat;
-  width: 13px;
-  height: 8px;
-  background-size: 13px 8px;
+.ui-tab6_top{
+  border-bottom: 1px #d9d9d9 solid;
+}
+.ui-tab6_top ul{
+  display: flex;
+}
+.ui-tab6_top li{
+  width: 132px;
+  position: relative;
+}
+.lgui-table-body td{
+  word-break: break-all;
+}
+.condEx{
+  display: flex;
+  justify-content: center;
+}
+.ui-input[data-type='section'] {
+  min-width: auto;
+}
+.ui-input[data-type='section'] >input{
+  width: 40%;
+  background: none;
+}
+.ui-table tbody td {
+  color: #282828;
+}
+.goldRegInfo_l{
+  box-sizing: border-box;
+  padding-left: 60px;
+}
+.userImg{
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+  width: 76px;
+  height: 100px;
 }

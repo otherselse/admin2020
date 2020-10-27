@@ -14,6 +14,8 @@
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
         id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
+        id="layuicss-layer">
 </head>
 
 <body class="showTip">
@@ -41,13 +43,15 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl f12 mb10">
+
                     <span class="searchLable">是否评审：</span>
-                    <div class="dib selectSingle mr40">
-                        <a href="javscript:void(0)" class="on">已审批</a>
-                        <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)">未审批</a>
-                    </div>
-                    <span class="searchLable">单位名称：</span>
+                    <span class="radio mr40">
+                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                    class="radio-opacity" name="radio"></i>已审批</label>
+                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                    name="radio"></i>未审批</label>
+                    </span>
+                    <span class="searchLable">金牌商家：</span>
                     <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
                     <span class="searchLable">订单号：</span>
                     <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
@@ -69,14 +73,156 @@
                         </tr>
                     </thead>
                     <tbody class="ui-thover">
-                        <tr>
+                        <tr class="openTr">
                             <td width="108">1</td>
                             <td width="139">2020-05-25 10:46:45</td>
                             <td width="172">59795</td>
                             <td width="139">杨兴旺</td>
                             <td width="172">原产地证办理评审</td>
-                            <td width="156">在2节点</td>
-                            <td width="141"><a href="applyoriginCertAction_applyOriginCertAudit.html">评审</a> </td>
+                            <td width="156">
+                                <div>在2节点</div>
+                                <div><i class="n18_icon_step1"></i>-<i class="n18_icon_step2"></i>-<i
+                                        class="n18_icon_step3"></i> </div>
+                            </td>
+                            <td width="141"><a href="javascript:void(0)" onclick="openDetails(this)"
+                                    class="hoverBlue">审批</a> </td>
+                        </tr>
+                        <tr class="hideTr dn">
+                            <td colspan="7">
+                                <div class="auto tl" style="width: 98%;">
+                                    <div>
+                                        <a class="b blue f12" onclick="openOrder()">订单ID：58974<i
+                                                class="icon-leftArrow ml10"></i> </a>
+                                        <span
+                                            class="ml15 f12">金牌商家姓名：张聪&nbsp;&nbsp;电话：8327&nbsp;&nbsp;手机：11155551111</span>
+                                    </div>
+                                    <div class="f14 g28 mt30 b">申请信息</div>
+                                    <table class="ui-table row f12 pct100 mt15">
+                                        <tbody>
+                                            <tr>
+                                                <td width="15%">申请办理原产地证类别：</td>
+                                                <td width="85%">FORM A</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="vt">申请说明：</td>
+                                                <td><textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="f14 g28 mt30 b">评审意见</div>
+                                    <table class="ui-table row f12 tl pct100 mt15">
+                                        <tbody>
+                                            <tr>
+                                                <td>办理费用(元)：</td>
+                                                <td>
+                                                    ￥<input type="text" class="ui-input mr20" placeholder="请输入" autocomplete="off">
+                                                </td>
+                                                <td>产地证费用附件：</td>
+                                                <td>
+                                                    <button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
+                                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="15%">本人审批意见：</td>
+                                                <td width="85%" colspan="3">
+                                                    <span class="radio">
+                                                        <label class="mr15">
+                                                            <i class="ui-radio goldIcon v-3 mr2 on">
+                                                                <input type="radio" class="radio-opacity" name="radio">
+                                                            </i>同意申请
+                                                        </label>
+                                                        <label>
+                                                            <i class="ui-radio goldIcon v-3 mr2">
+                                                                <input type="radio" class="radio-opacity" name="radio">
+                                                            </i>不同意申请
+                                                        </label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="vt">本人审批备注：</td>
+                                                <td colspan="3">
+                                                    <textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr class="openTr">
+                            <td width="108">1</td>
+                            <td width="139">2020-05-25 10:46:45</td>
+                            <td width="172">59795</td>
+                            <td width="139">杨兴旺</td>
+                            <td width="172">原产地证办理评审</td>
+                            <td width="156">
+                                <div>在3节点</div>
+                                <div><i class="n18_icon_step1"></i>-<i class="n18_icon_step1"></i>-<i
+                                        class="n18_icon_step2"></i> </div>
+                            </td>
+                            <td width="141"><a href="javascript:void(0)" onclick="openDetails(this)"
+                                    class="hoverBlue">审批</a> </td>
+                        </tr>
+                        <tr class="hideTr dn">
+                            <td colspan="7">
+                                <div class="auto tl" style="width: 98%;">
+                                    <div>
+                                        <a class="b blue f12" onclick="openOrder()">订单ID：58974<i
+                                                class="icon-leftArrow ml10"></i> </a>
+                                        <span
+                                            class="ml15 f12">金牌商家姓名：张聪&nbsp;&nbsp;电话：8327&nbsp;&nbsp;手机：11155551111</span>
+                                    </div>
+                                    <div class="mt10 f12">
+                                        办理费用：<span class="g28">￥20</span><span class="ml30">产地证费用附件：<a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a></span> 
+                                    </div>
+                                    <div class="f14 g28 mt30 b">申请信息</div>
+                                    <table class="ui-table row f12 pct100 mt15">
+                                        <tbody>
+                                            <tr>
+                                                <td width="15%">申请办理原产地证类别：</td>
+                                                <td width="85%">FORM A</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="vt">申请说明：</td>
+                                                <td><textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="f14 g28 mt30 b">评审意见</div>
+                                    <table class="ui-table row f12 tl pct100 mt15">
+                                        <tbody>
+                                           
+                                            <tr>
+                                                <td width="15%">本人审批意见：</td>
+                                                <td width="85%">
+                                                    <span class="radio">
+                                                        <label class="mr15">
+                                                            <i class="ui-radio goldIcon v-3 mr2 on">
+                                                                <input type="radio" class="radio-opacity" name="radio">
+                                                            </i>同意申请
+                                                        </label>
+                                                        <label>
+                                                            <i class="ui-radio goldIcon v-3 mr2">
+                                                                <input type="radio" class="radio-opacity" name="radio">
+                                                            </i>不同意申请
+                                                        </label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="vt">本人审批备注：</td>
+                                                <td>
+                                                    <textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </td>
                         </tr>
 
                     </tbody>
@@ -95,11 +241,26 @@
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
+        //展开明细
+        function openDetails(obj) {
+            $(obj).parents(".openTr").next("tr").toggle()
+        }
+        function openOrder() {
+            layer.open({
+                type: 2,
+                title: '订单详情',
+                shadeClose: true, //开启点击遮罩关闭层
+                area: ['1000px', '600px'],
+                offset: ['50px', ''],
+                content: './orderAction_order.html'
+            });
+        }
 
     </script>
 </body>

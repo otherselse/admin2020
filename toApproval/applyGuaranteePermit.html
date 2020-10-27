@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>资金日报审批-审批管理-乐刚智能云系统</title>
+    <title>金牌商家担保审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -33,7 +33,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib  pl5 pr5">/</span>
-                <span class="g28">资金日报审批</span>
+                <span class="g28">金牌商家担保审批</span>
 
             </div>
             <div class="r m_dn">
@@ -41,119 +41,320 @@
             </div>
         </div>
         <div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./enBookdepotAction_searchallbookdeport.html" class="ui-tab4-list ml20 mr10 on">担保评审</a>
+                    <a href="./sellReviewAction_guarantee.html" class="ui-tab4-list ">担保函记录</a>
+                </div>
+            </div>
             <div class="p20">
-                <div class="cl mb10 f0">
-                    <span class="dib f12">
-                        <span class="searchLable">评审状态：</span><span class="single">
-                            <button type="button" class="ui-option mr5 on">全部</button>
-                            <button type="button" class="ui-option mr5">未评审</button>
-                            <button type="button" class="ui-option">已评审</button>
-                        </span>
-                    </span>
-                </div>
-                <div class="cl f0 mb10 ">
-                    <span class="dib f12">
-                        <span class="searchLable">担保类别：</span>
-                        <div class="dib selectSingle mr20">
-                            <a class="on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">客户担保</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">总额担保</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">承运商担保</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">欠款担保</a>
-                        </div>
-                    </span>
-                </div>
-                <div class="cl f0 mb10 ">
-                    <span class="dib f12">
-                        <span class="searchLable">办理区域：</span>
-                        <div class="dib selectSingle mr20">
-                            <a class="on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">上海</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">天津</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">杭州</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">宁波</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">常熟</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">广州</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">成都</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">无锡</a>
-                        </div>
-                    </span>
-                </div>
-                <div class="cl f0 mb15">
-                    <span class=" f12">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct16  mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">客户单位：</span>
-                        <input type="text" class="ui-input pct16  mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">申请日期：</span>
-                        <span class="ui-input tc f0 pct20  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-                        </span>
-                    </span>
-                </div>
-                <div class="tc">
-                    <button type="button" class="ui-button">查询</button>
-                </div>
-                <div class="lgui-table-box mt30">
-                    <div class="lgui-table-header">
-                        <table class="ui-table f12 pct100">
-                            <thead>
-                                <tr>
-                                    <th width="5%">序号</th>
-                                    <th width="11%">申请日期</th>
-                                    <th width="8%">申请人</th>
-                                    <th width="9%">申请额度(元)</th>
-                                    <th width="9%">申请类型</th>
-                                    <th width="15%">客户单位</th>
-                                    <th width="6%">办理区域</th>
-                                    <th width="16%">担保期限</th>
-                                    <th width="5%">状态</th>
-                                    <th width="10%">审核时间</th>
-                                    <th width="6%">操作</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="lgui-table-body mt-1">
-                        <table class="ui-table tc f12" width="100%">
-                            <tbody class="ui-thover">
-                                <tr>
-                                    <td width="5%">1</td>
-                                    <td width="11%">2020-09-25 15:26:40</td>
-                                    <td width="8%">徐河若</td>
-                                    <td width="9%" numtype="formatMoney">200,000,000</td>
-                                    <td width="9%">客户担保</td>
-                                    <td width="15%">
-                                        <a href="../toApplySale/supplierApply.html" target="_blank" id="step1" >上海加工商有限公司</a>
-                                    </td>
-                                    <td width="6%">上海</td>
-                                    <td width="16%">2020-09-25——2023-09-25</td>
-                                    <td width="5%">审批通过</td>
-                                    <td width="10%">2020-09-25 15:27:03</td>
-                                    <td width="6%"><a href="./applyGuaranteePermit.html">详情</a></td>
-                                </tr>
-                            </tbody>
+                <div class="b f14 g28 mt10">评审内容</div>
+                <table class="ui-table row pct100 f12 mt15">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="tc b g28">客户担保 申请信息</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">申请人：</td>
+                            <td width="30%"> 徐河若--(19987856462)</td>
+                            <td width="20%">加盟时间：</td>
+                            <td width="30%">2020-06-02</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">担保单位：</td>
+                            <td width="30%"> 上海加工商有限公司</td>
+                            <td width="20%">担保金额：</td>
+                            <td width="30%">200000000元</td>
+                        </tr>
+                        <tr>
+                            <td>担保时间：</td>
+                            <td>2020-09-25-2023-09-25</td>
+                            <td>担保函签署区域：</td>
+                            <td>上海区域</td>
+                        </tr>
+                        <tr>
+                            <td>身份证号：</td>
+                            <td>111111111111111111</td>
+                            <td>金牌商家类型：</td>
+                            <td>加盟式金牌商家</td>
+                        </tr>
+                        <tr>
+                            <td>身份证附件：</td>
+                            <td colspan="3">
+                                <a href="javascript:void(0)" class="ui-files mr15 vm">组件1111.jpg</a><a
+                                    href="javascript:void(0)" class="ui-files mr15 vm">组件1111.jpg</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>通讯地址：</td>
+                            <td colspan="3">地址：</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="ui-table row pct100 f12 mt30">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="g28 tc b">金牌商家评价信息----李四四----2020-09-25 15:28:51</td>
+                        </tr>
+                        <tr>
+                            <td>工作年限(年)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssessworkage" class="ui-input" name="loginUserAssess.workage"
+                                    value="10"></td>
+                            <td>钢材行业从业年限(年)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssesssteelworkage" class="ui-input"
+                                    name="loginUserAssess.steelworkage" value="2"></td>
+                        </tr>
+                        <tr>
+                            <td>主要客户群体：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssesssteelcorpAreaID" class="ui-input"
+                                    name="loginUserAssess.corpAreaID" value="2">
+                                <input type="hidden" id="lastLoginUserAssesssteelcorpAreaName" class="ui-input"
+                                    name="loginUserAssess.corpAreaName">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                    </div>
+                                </span>
+                            </td>
+                            <td>主要业务模式：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssesssteelmainBussID" class="ui-input"
+                                    name="loginUserAssess.mainBussID" value="1">
+                                <input type="hidden" id="lastLoginUserAssesssteelmainBussName" class="ui-input"
+                                    name="loginUserAssess.mainBussName" value="现款">
+                                <span class="checkbox">
+                                    <label class="mr5">
+                                        <i class="ui-checkbox goldIcon v-3 mr2 on">
+                                            <input type="checkbox" class="checkbox-opacity" name="checkbox">
+                                        </i>现款
+                                    </label>
+                                    <label class="mr5">
+                                        <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <input type="checkbox" class="checkbox-opacity" name="checkbox">
+                                        </i>欠款/款到卸货
+                                    </label>
+                                    <label class="mr5">
+                                        <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <input type="checkbox" class="checkbox-opacity" name="checkbox">
+                                        </i>外贸
+                                    </label>
+                                    <label>
+                                        <i class="ui-checkbox goldIcon v-3 mr2">
+                                            <input type="checkbox" class="checkbox-opacity" name="checkbox">
+                                        </i>快速备/任你押
+                                    </label>
+                                </span>
+                        </tr>
+                        <tr>
+                            <td>客户回款周期(天)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssesscorpReceiveDays" class="ui-input"
+                                    name="loginUserAssess.corpReceiveDays" value="22"></td>
+                            <td>逾期情况：</td>
+                            <td><input type="text" id="lastLoginUserAssesscaseremark" class="ui-input"
+                                    name="loginUserAssess.caseRemark" value="无"></td>
+                        </tr>
+                        <tr>
+                            <td>月均交易量(吨)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssesssaleWeight" class="ui-input"
+                                    name="loginUserAssess.saleWeight" value="2"></td>
+                            <td>月均收入(元)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssessincomeave" class="ui-input" name="loginUserAssess.incomeave"
+                                    value="299"></td>
+                        </tr>
+                        <tr>
+                            <td>自有房产：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssessisestate" class="ui-input"
+                                    name="loginUserAssess.isestate" value="1">
+                                <input type="hidden" id="lastLoginUserAssessisestateName" class="ui-input"
+                                    name="loginUserAssess.isestateName" value="是">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">有</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">无</a>
+                                    </div>
+                                </span>
+                                (必须是产权在本人名下)
+                            </td>
+                            <td>面积(平方米)：</td>
+                            <td><input type="text" onkeyup="publicUtil.inputOnlyNumber(this);"
+                                    id="lastLoginUserAssessareaPlace" class="ui-input" name="loginUserAssess.areaPlace"
+                                    value="200">
+                                所在地<input type="text" id="lastLoginUserAssessdomicile" class="ui-input"
+                                    name="loginUserAssess.domicile" value="上海">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>自有车辆：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssessishavecar" class="ui-input"
+                                    name="loginUserAssess.ishavecar" value="1">
+                                <input type="hidden" id="lastLoginUserAssessishavecarName" class="ui-input"
+                                    name="loginUserAssess.ishavecarName" value="是">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">有</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">无</a>
+                                    </div>
+                                </span>(必须是产权在本人名下)
+                            </td>
+                            <td>车辆型号：</td>
+                            <td><input type="text" id="lastLoginUserAssesscarTypeName" class="ui-input"
+                                    name="loginUserAssess.carTypeName" value="大型货车">
 
-                        </table>
-                        <!-- table end -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>精神面貌：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssessmentalType" class="ui-input"
+                                    name="loginUserAssess.mentalType" value="1">
+                                <input type="hidden" id="lastLoginUserAssessmentalTypeName" class="ui-input"
+                                    name="loginUserAssess.mentalTypeName" value="好">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">好</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">一般</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">差</a>
+                                    </div>
+                                </span>
+                            </td>
+                            <td>表达表述：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssesslanguageType" class="ui-input"
+                                    name="loginUserAssess.languageType" value="1">
+                                <input type="hidden" id="lastLoginUserAssesslanguageTypeName" class="ui-input"
+                                    name="loginUserAssess.languageTypeName" value="好">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">好</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">一般</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">差</a>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>全职/兼职：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssessprofessionType" class="ui-input"
+                                    name="loginUserAssess.professionType" value="1">
+                                <input type="hidden" id="lastLoginUserAssessprofessionTypeName" class="ui-input"
+                                    name="loginUserAssess.professionTypeName" value="全职">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">全职</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">兼职</a>
+                                    </div>
+                                </span>
+                            </td>
+                            <td>是否在运营中心办公：</td>
+                            <td>
+                                <input type="hidden" id="lastLoginUserAssessisworkin" class="ui-input"
+                                    name="loginUserAssess.isworkin" value="1">
+                                <input type="hidden" id="lastLoginUserAssessisworkinName" class="ui-input"
+                                    name="loginUserAssess.isworkinName" value="是">
+                                <span class="input-selSearch">
+                                    <input type="text" class="ui-input searchUp" readonly="" placeholder="请选择"
+                                        autocomplete="off">
+                                    <div class="search-cont pct100">
+                                        <a href="javascript:void(0)" class="search-list db ell">是</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">否</a>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>家庭情况：</td>
+                            <td colspan="3">
+                                <input type="hidden" id="lastLoginUserAssesshomeRemark" class="ui-input"
+                                    name="loginUserAssess.homeRemark" value="无">
+                                <textarea id="homeRemark" class="ui-textarea pct90"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>综合评价：<br>(从业务能力、风险意识<br>和风险承担能力<br>等方面进行分析评价)</td>
+                            <td colspan="3">
+                                <input type="hidden" id="lastLoginUserAssessallRemark" class="ui-input"
+                                    name="loginUserAssess.allRemark" value="无">
+                                <textarea id="allRemark" class="ui-textarea pct90"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="b f14 g28 mt30">审批意见</div>
+                <div class="mt15 ml50 nodeLine f12">
+                    <div class="g28 ui-audit f12 pl10"><span>复核</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30 13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
                     </div>
-
+                    <div class="g28 ui-audit f12 pl10 mt10"><span>审批</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30 13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
                 </div>
-                <script type="text/javascript" src="../js/pagelist.js"></script>
+                <div class="b f14 g28 mt30">本人审批意见</div>
+                <table class="ui-table row f12 pct100 mt30">
+                    <tbody>
+                        <tr>
+                            <td width="15%">本人审批意见：</td>
+                            <td widht="85%">
+                                <span class="radio pl15">
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>同意申请</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                                class="radio-opacity" name="radio"></i>不同意申请</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%">审批备注：</td>
+                            <td widht="85%"><textarea class="ui-textarea pct98"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tc mt30">
+                    <button class="ui-button mr15" data-type="big" type="button">提交</button>
+                    <button class="ui-button mr15" data-type="bigclear" type="button">退回</button>
+                    <button class="ui-button" data-type="bigclear" type="button">返回</button>
+                </div>
             </div>
         </div>
     </div>
@@ -168,6 +369,7 @@
     <script>
         $(function () {
             $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
         })
 
 

@@ -43,13 +43,16 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl f12 ">
-                    选项：<div class="dib selectSingle mr20">
-                        <a class="on" href="javscript:void(0)">已评审</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">未评审</a>
-                    </div>
-                    单位名称：<input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="m_db m_mt10">起止时间：<span class="ui-input tc f0 pct20  range" data-type="time">
+                 <span class="searchLable">选项：</span>
+                 <span class="radio dib mr20">
+                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>已评审</label>
+                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未评审</label>
+                </span>
+                <span class="searchLable">单位名称：</span>
+                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="m_db m_mt10">
+                       <span class="searchLable">起止时间：</span> 
+                        <span class="ui-input tc f0 pct20  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off"
@@ -83,11 +86,12 @@
                                     <td width="60">1</td>
                                     <td width="109">2020-06-30</td>
                                     <td width="138">资金日报明细天津信浩商贸有限公司2020-06-30</td>
-                                    <td width="263"><a href="javascript:void(0);">天津信浩商贸有限公司</a></td>
+                                    <td width="263">天津信浩商贸有限公司</td>
                                     <td width="148">资金日报明细</td>
                                     <td width="147">李四四</td>
                                     <td width="147">
-                                        <span class="blue">在3节点</span>
+                                        <div>在3节点</div>
+                                        <div><i class="n18_icon_step1"></i>-<i class="n18_icon_step2"></i>-<i class="n18_icon_step3"></i> </div>
                                     </td>
                                     <td width="147">
                                         <a href="./permitCapitalDayPage.html">查看</a>

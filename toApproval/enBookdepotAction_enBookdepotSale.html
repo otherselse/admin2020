@@ -41,74 +41,75 @@
             </div>
         </div>
         <div class="ui-content minH">
-            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span> </div>
-			<div class="lh84 bor-bottom">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
                 <div class="ui-tab4">
                     <a href="./enBookdepotAction_searchallbookdeport.html" class="ui-tab4-list ml20 mr10 ">订舱详情</a>
                     <a href="./enBookdepotAction_enBookdepotSale.html" class="ui-tab4-list on">订舱评审</a>
                 </div>
             </div>
             <div class="p20">
-               <table class="ui-table tl pct100 row f12">
-                   <tbody>
-                       <tr>
-                           <td>订单ID：</td>
-                           <td>61454</td>
-                           <td>金牌商家姓名：</td>
-                           <td>唐宇捷</td>
-                           <td>金牌商家电话：</td>
-                           <td>1212312</td>
-                           <td>金牌商家手机：</td>
-                           <td>12233344441</td>
-                       </tr>
-                       <tr>
-                           <td>订舱报价单：</td>
-                           <td colspan="7"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
-                       </tr>
-                   </tbody>
-               </table>
-               <div class="f14 g28 mt15">销售合同评审意见</div>
-               <table class="ui-table pl20 f12 tl pct100 mt15">
-                <tbody>
-                    <tr>
-                        <td class="bgfa">审批：</td>
-                        <td>一节点</td>
-                    </tr>
-                    <tr>
-                        <td class="bgfa">审批意见：</td>
-                        <td><span class="red">[审核通过]</span>系统自动审批 2020-09-24 11:37:29</td>
-                    </tr>
-                    <tr>
-                        <td class="bgfa" width="15%">本人审批意见：</td>
-                        <td width="85%">
-                            <span class="radio">
-                                <label class="mr15">
-                                    <i class="ui-radio goldIcon v-3 mr2 on">
-                                        <input type="radio" class="radio-opacity" name="radio">
-                                    </i>同意申请
-                                </label>
-                                <label>
-                                    <i class="ui-radio goldIcon v-3 mr2">
-                                        <input type="radio" class="radio-opacity" name="radio">
-                                    </i>不同意申请
-                                </label>
-                            </span>
-                        </td>
-                     
-                    </tr>
-                    <tr>
-                        <td class="bgfa vt">本人审批备注：</td>
-                        <td>
-                            <textarea class="pct98 ui-textarea" cols="30" rows="6"></textarea>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="tc mt20">
-                <button class="ui-button" data-type="big" type="button">提交</button>
+                <div class="f12 ">
+                    <span class="b  blue" onclick="openOrder()">订单详细内容：59083<i class="icon-leftArrow ml10"></i>
+                    </span>
+                    <span class="ml15">金牌商家姓名：张聪&nbsp;&nbsp;电话：8327&nbsp;&nbsp;手机：11155551111</span>
+                </div>
+                <table class="ui-table mt15 tl pct100 row f12">
+                    <tbody>
+                        <tr>
+                            <td width="20%">订舱报价单：</td>
+                            <td width="80%"><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="f14 g28 mt15">销售合同评审意见</div>
+                <div class="mt30 ml30 nodeLine f12">
+                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                    <div class="ui-auditBox mt10 ml10">
+                        <div class="dib vt green">
+                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                        </div>
+                        <div class="dib ml20">
+                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30 13:23:12</div>
+                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                        </div>
+                    </div>
+                </div>
+                <table class="ui-table pl20 f12 tl pct100 mt15">
+                    <tbody>
+
+                        <tr>
+                            <td class="bgfa" width="15%">本人审批意见：</td>
+                            <td width="85%">
+                                <span class="radio">
+                                    <label class="mr15">
+                                        <i class="ui-radio goldIcon v-3 mr2 on">
+                                            <input type="radio" class="radio-opacity" name="radio">
+                                        </i>同意申请
+                                    </label>
+                                    <label>
+                                        <i class="ui-radio goldIcon v-3 mr2">
+                                            <input type="radio" class="radio-opacity" name="radio">
+                                        </i>不同意申请
+                                    </label>
+                                </span>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="bgfa vt">本人审批备注：</td>
+                            <td>
+                                <textarea class="pct98 ui-textarea" cols="30" rows="6"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tc mt20">
+                    <button class="ui-button" data-type="big" type="button">提交</button>
+                </div>
             </div>
-            </div>
-		</div>
+        </div>
     </div>
     <!-- rightBar -->
 
@@ -123,7 +124,16 @@
             $(".mulfolder").eq(3).addClass("open").find(".smlist").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
-
+        function openOrder() {
+            layer.open({
+                type: 2,
+                title: '订单详情',
+                shadeClose: true, //开启点击遮罩关闭层
+                area: ['1000px', '600px'],
+                offset: ['50px', ''],
+                content: './orderAction_order.html'
+            });
+        }
 
     </script>
 </body>

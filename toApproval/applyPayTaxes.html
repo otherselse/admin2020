@@ -31,6 +31,8 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib gga pl5 pr5">/</span>
+                金牌商家缴费审批
+                <span class="dib gga pl5 pr5">/</span>
                 <span class="g28">售后审批</span>
             </div>
             <div class="r m_dn">
@@ -40,29 +42,32 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10">
-                    <span class="pct25 f12 dib">金牌商家：<input type="text" class="ui-input  pct59" placeholder="请输入" autocomplete="off"></span>
-                    <span class="pct25 f12 dib">地区：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-                    <span class="pct30 dib f12">申请时间：
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input  pct59" placeholder="请输入" autocomplete="off"></span>
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">地区：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+                    <span class="pct30  dib f12">
+                        <span class="searchLable">申请时间：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
                 </div>
                 <div class="mb10 f12">
-                    审核状态：
-						<div class="dib selectSingle">
-							<a class="on" href="javscript:void(0)">全部</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">待审核</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">已同意</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">不同意</a>
-						</div>
+                    <span class="searchLable">审核状态：</span>
+                    <div class="dib selectSingle">
+                        <a class="on" href="javscript:void(0)">全部</a>
+                        <span class="pr5 pl5">|</span>
+                        <a href="javscript:void(0)" class="">待审核</a>
+                        <span class="pr5 pl5">|</span>
+                        <a href="javscript:void(0)" class="">已同意</a>
+                        <span class="pr5 pl5">|</span>
+                        <a href="javscript:void(0)" class="">不同意</a>
+                    </div>
                 </div>
                 <div class="tc f12">
                     <button class="ui-button">查询</button>
@@ -99,7 +104,7 @@
                                     <td width="15%">1231</td>
                                     <td width="5%"><a href="javascript:void(0)">审批</a></td>
                                 </tr>
-                          
+
                             </tbody>
                         </table>
                         <!-- table end -->
@@ -120,7 +125,7 @@
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-           
+
         })
     </script>
 </body>

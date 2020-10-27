@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>运输合同审批-审批管理-乐刚智能云系统</title>
+	<title>承兑汇票审批-审批管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -32,7 +32,7 @@
 				<span class="dib pl5 pr5 ">/</span>
 				审批管理
 				<span class="dib pl5 pr5">/</span>
-				<span class="g28">运输合同审批</span>
+				<span class="g28">承兑汇票审批</span>
 			</div>
 			<div class="r m_dn">
 				左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -41,13 +41,12 @@
 		<div class="ui-content minH">
 			<div class="p20">
 				<div class="mb10 f0">
-					<span class="dib pct25 f12 m_db">
+					<span class="dib f12 pct25 m_db m_mb10">
 						<span class="searchLable">&emsp;&emsp;状态：</span>
-						<div class="dib selectSingle pct69 m_pct31">
-							<a class="on" href="javscript:void(0)">已评审</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">未评审</a>
-						</div>
+						<span class="single">
+							<button type="button" class="ui-option mr5 on">已评审</button>
+							<button type="button" class="ui-option">未评审</button>
+						</span>
 					</span>
 					<span class="dib f12 m_mt10">
 						<span class="searchLable"><span class="dn m_dib">&emsp;</span>&emsp;区域：</span>
@@ -114,7 +113,7 @@
 						</tr>
 					</thead>
 					<tbody class="ui-thover">
-						<tr>
+						<tr class="openTr">
 							<td>1<input type="hidden" id="AF7915E1897F5099E05371001FACD334"
 									value="AF7915E1897F5099E05371001FACD334"></td>
 							<td>2020-04-05</td>
@@ -123,17 +122,65 @@
 							<td>上海</td>
 							<td>STC(22)-20001333</td>
 							<td>
-								<div class="pl20 tl blue">中国邮政运输集团</div>
+								<div class="pl20 tl">中国邮政运输集团</div>
 							</td>
 							<td>
 								<div class="pl20 tl">加工商评审</div>
 							</td>
 							<td>
-								<span class="blue">处理完毕</span>
+								<span class="ui-icon-circles" type="red">处理完毕</span>
 							</td>
-							<td><a href="./transConAction_transCon.html">查看</a></td>
+							<td><a onclick="openDetails(this)" href="javascript:void(0)">退回</a></td>
 						</tr>
-					
+						<tr class="hideTr dn">
+							<td colspan="10">
+								<div class="auto tl b g28" style="width: 98%;">相关信息</div>
+								<table class="ui-table row auto tl mt30" width="98%">
+									<tbody>
+										<tr>
+											<td width="15%"><span class="red">*</span>承兑面值金额</td>
+											<td width="35%">￥20</td>
+											<td width="15%"><span class="red">*</span>汇票到期日</td>
+											<td width="35%">--</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr class="openTr">
+							<td>1<input type="hidden" id="AF7915E1897F5099E05371001FACD334"
+									value="AF7915E1897F5099E05371001FACD334"></td>
+							<td>2020-04-05</td>
+							<td>61122</td>
+							<td>之花</td>
+							<td>上海</td>
+							<td>STC(22)-20001333</td>
+							<td>
+								<div class="pl20 tl">中国邮政运输集团</div>
+							</td>
+							<td>
+								<div class="pl20 tl">加工商评审</div>
+							</td>
+							<td>
+								<span class="ui-icon-circles" type="gray">处理完毕</span>
+							</td>
+							<td><a onclick="openDetails(this)" href="javascript:void(0)">查看</a></td>
+						</tr>
+						<tr class="hideTr dn">
+							<td colspan="10">
+								<div class="auto tl b g28" style="width: 98%;">相关信息</div>
+								<table class="ui-table row auto tl mt30" width="98%">
+									<tbody>
+										<tr>
+											<td width="15%"><span class="red">*</span>承兑面值金额</td>
+											<td width="35%">￥20</td>
+											<td width="15%"><span class="red">*</span>汇票到期日</td>
+											<td width="35%">--</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 				<script type="text/javascript" src="../js/pagelist.js"></script>
@@ -152,9 +199,13 @@
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script>
 		$(function () {
-			$(".mulfolder").eq(0).addClass("open").find(".smlist").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".mulfolder").eq(1).addClass("open").find(".smlist").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
+		//展开明细
+		function openDetails(obj) {
+			$(obj).parents(".openTr").next("tr").toggle()
+		}
 
 	</script>
 </body>
