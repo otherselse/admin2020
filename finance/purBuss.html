@@ -36,22 +36,23 @@
 	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 	        	</div>
 	        </div>
-	        <div class="m-tabLimitSCroll scrollbar">
-		        <div class="ui-tab3">
-					<a href="saleBuss.html" class="ui-tab3-list rel "><span class="ui-tab3-text">销售业务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="businessBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售业务余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="saleFinBuss.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售财务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="workBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售往来余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="purBuss.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">采购业务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="purBusinessBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购业务余额表</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="purFinBuss.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购财务往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
-					<a href="purWorkBalance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购往来余额表</span><i class="goldIcon ui-tab3-dot"></i></a>				
-					<a href="etterOfInquiry.html" class="ui-tab3-list rel"><span class="ui-tab3-text">询证函</span><i class="goldIcon ui-tab3-dot"></i></a>
-				</div>
+	        <div class="ui-tab3">
+				<a href="saleBuss.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
-			<div class="ui-content ovh minH">				
-				<div class="p20 f12">
-					<div class="mb10 f0">
+			<div class="ui-content ovh minH">
+				<div class="ui-tab4 p20">
+                    <a href="saleBuss.html" class="ui-tab4-list mb10 ">销售业务往来账</a>
+                    <a href="businessBalance.html" class="ui-tab4-list mb10 ">销售业务余额表</a>
+                    <a href="saleFinBuss.html" class="ui-tab4-list mb10 ">销售财务往来账</a>
+                    <a href="workBalance.html" class="ui-tab4-list mb10 ">销售往来余额表</a>
+                    <a href="purBuss.html" class="ui-tab4-list mb10 on">采购业务往来账</a>
+                    <a href="purBusinessBalance.html" class="ui-tab4-list mb10">采购业务余额表</a>
+                    <a href="purFinBuss.html" class="ui-tab4-list mb10">采购财务往来账</a>
+                    <a href="purWorkBalance.html" class="ui-tab4-list mb10">采购往来余额表</a>
+                    <a href="etterOfInquiry.html" class="ui-tab4-list mb10">询证函</a>
+                </div>					
+				<div class="p20 f12 bte">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">单位名称：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
@@ -59,35 +60,35 @@
 					</div>
 					<div class="mb10 f0">
 						<span class="dib f12 radio pct25">
-							往来余额大于零：
+							<span class="searchLable">往来余额大于零：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 						<span class="dib f12 radio pct25">
-							业务余额大于零：
+							<span class="searchLable">业务余额大于零：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 						<span class="dib f12 radio pct25">
-							账户余额大于零：
+							<span class="searchLable">账户余额大于零：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 						<span class="dib f12 radio pct25">
-							是否结算完毕：
+							<span class="searchLable">是否结算完毕：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 					</div>
-					<div class="mb15 radio">
-						<span class="dib f12 radio pct25">
-							发票未收回天数：
+					<div class="mb15 f0">
+						<span class="dib f12  pct25">
+							<span class="searchLable">发票未收回天数：</span>
 							<span class="ui-input pct59" data-type="section">
 									<input type="text" placeholder="天数">~
 									<input type="text" placeholder="天数">
 							</span>
 						</span>						
-						订单日期：
+						<span class="searchLable f12">订单日期：</span>
 							<span class="ui-input tc f0 pct25  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span>				
