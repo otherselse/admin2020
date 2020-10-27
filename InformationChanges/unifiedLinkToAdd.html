@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>关联添加-资源信息维护</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        body,
+        html {
+            background: #fff;
+        }
+
+        .xx {
+            background: url(../images/InformationChanges/11.png) no-repeat right;
+        }
+
+        .h30 {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .h60 {
+            height: 60px;
+        }
+
+        .sy {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .chao {
+            overflow: hidden;
+        }
+
+        .classMax>span {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: #353535;
+        }
+
+        .ui-files {
+            font-size: 12px;
+            line-height: 26px;
+            height: 26px;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid #E5E5E5;
+            border-radius: 13px;
+            padding: 0px 10px 0px 10px;
+            color: #676767;
+            background: url(=) #fff no-repeat 12px 5px;
+            max-width: 500px;
+            overflow: hidden;
+        }
+
+        .classMax span {
+            width: 70px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .jia a {
+            width: 95px;
+        }
+
+        .selectSingle span {
+            color: #676767;
+        }
+
+        .selectSingle a.on {
+            color: #1365e8;
+            background: #FFFFFF;
+            border: 1px solid #E6E6E6;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <div class="lgui-table-box ml20 mt5 mr20">
+        <div class="lgui-table-header pct100">
+            <div class="single mt20 tc">
+                <input type="hidden">
+                关联类别：<button type="button" class="ui-option mr20 on" onclick="showTbody('t1')">加工商</button>
+                <button type="button" class="ui-option gang mr20"  onclick="showTbody('t2')">大类</button>
+                <button type="button" class="ui-option mr20" onclick="showTbody('t3')">加工方式</button>
+                <button type="button" class="ui-option mr20" onclick="showTbody('t4')">规格</button>
+                <button type="button" class="ui-option mr20" onclick="showTbody('t5')">包装</button>
+                <button type="button" class="ui-option mr20" onclick="showTbody('t6')">贴膜</button>
+            </div>
+
+            <table class="ui-table f12 auto tl mt20 " width="100%">
+                <tbody class="n17-kClist n17-bbb ovh t1">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;加工商：</span>
+                            <input type="hidden" id="j_procCorp" data="stat_company" name="steNameQuality.procCorp"
+                                value="上海华冶钢材加工有限公司">
+                            <input type="hidden" id="j_procCorpID" data="stat_company" name="steNameQuality.procCorpID"
+                                value="14">
+                        </td>
+                        <td width="90%">
+                            <div class="c">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont jia pct70 stat_company first selectSingle" id="procList"
+                                        cname="加工商">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"
+                                            id="company01" onclick="j_confirmProc(this,'14')" title="上海华冶钢材加工有限公司"><span
+                                                class="n17-kClCInfoText">上海华冶钢材加工有限公司</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company02"
+                                            onclick="j_confirmProc(this,'2')" title="广州启圆钢材加工有限公司"><span
+                                                class="n17-kClCInfoText">广州启圆钢材加工有限公司</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company03"
+                                            onclick="j_confirmProc(this,'18')" title="天津华冶钢材加工有限公司"><span
+                                                class="n17-kClCInfoText">天津华冶钢材加工有限公司</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company04"
+                                            onclick="j_confirmProc(this,'24')" title="浙江南冶金属剪切配送有限公司"><span
+                                                class="n17-kClCInfoText">浙江南冶金属剪切配送有限公司</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company05"
+                                            onclick="j_confirmProc(this,'9')" title="无锡海德钢材加工有限公司"><span
+                                                class="n17-kClCInfoText">无锡海德钢材加工有限公司</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company06"
+                                            onclick="j_confirmProc(this,'6')" title="常熟宝进钢材加工有限公司"><span
+                                                class="n17-kClCInfoText">常熟宝进钢材加工有限公司</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                            <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
+			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont selectSingle fl pct92 n17-bdb stat_catalog" cname="大类">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog01" onclick="j_selectSteSort(this,'13')"><span class="n17-kClCInfoText">热轧类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog02" onclick="j_selectSteSort(this,'14')"><span class="n17-kClCInfoText">酸洗类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog03" onclick="j_selectSteSort(this,'53')"><span class="n17-kClCInfoText">冷镀类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog04" onclick="j_selectSteSort(this,'54')"><span class="n17-kClCInfoText">其他类</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">加工方式：</span>
+                            <input type="hidden" id="j_procType" data="stat_proctype" name="steNameQuality.procType" value="170">
+			                <input type="hidden" id="j_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪+横切">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="fl pct92 n17-bdb selectSingle stat_proctype" cname="加工方式">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType01" onclick="j_selectProcType(this,'162')"><span class="n17-kClCInfoText">横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType02" onclick="j_selectProcType(this,'163')"><span class="n17-kClCInfoText">纵剪</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType03" onclick="j_selectProcType(this,'170')"><span class="n17-kClCInfoText">纵剪+横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType04" onclick="j_selectProcType(this,'175')"><span class="n17-kClCInfoText">切边开平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType05" onclick="j_selectProcType(this,'165')"><span class="n17-kClCInfoText">分卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType06" onclick="j_selectProcType(this,'1117')"><span class="n17-kClCInfoText">重卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType07" onclick="j_selectProcType(this,'1120')"><span class="n17-kClCInfoText">校平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType08" onclick="j_selectProcType(this,'1118')"><span class="n17-kClCInfoText">切割</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType09" onclick="j_selectProcType(this,'1119')"><span class="n17-kClCInfoText">去钢印</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType10" onclick="j_selectProcType(this,'-999')"><span class="n17-kClCInfoText">更新包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType11" onclick="j_selectProcType(this,'1111')"><span class="n17-kClCInfoText">涂漆</span></a>				
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="n17-kClist n17-bbb ovh dn t2">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                            <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
+			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont selectSingle first fl pct92 n17-bdb stat_catalog" cname="大类">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog01" onclick="j_selectSteSort(this,'13')"><span class="n17-kClCInfoText">热轧类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog02" onclick="j_selectSteSort(this,'14')"><span class="n17-kClCInfoText">酸洗类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog03" onclick="j_selectSteSort(this,'53')"><span class="n17-kClCInfoText">冷镀类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog04" onclick="j_selectSteSort(this,'54')"><span class="n17-kClCInfoText">其他类</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;品名：</span>
+                            <input type="hidden" id="t_steName" data="stat_stename" name="steNameQuality.steName">
+                            <input type="hidden" id="t_steNameID" data="stat_stename" name="steNameQuality.steNameID">
+                        </td>
+                        <td width="90%">
+                            <div class="c df">
+                                <div style="width: 91%;" class="c kZhan chao">
+                                    <span class="n17-kClistCont fl h30 dac n17-bdb selectSingle stat_stename" id="t_priceSteNameList" cname="品名" >
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName01" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">热轧卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName02" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">镀铝锌卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName03" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">无取向电工钢卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName04" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">铝卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName05" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">镀铝卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName06" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">热轧花纹卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName07" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">花纹卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName08" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">不锈钢卷板</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName09" onclick="t_confirmSteName(event,this,'1')"><span class="n17-kClCInfoText">直缝焊管</span></a>
+                                    </span>
+                                </div>
+                                <div class="zk">
+                                    <span class="dib ml10 mr5 menuhook icon-zk" onclick="updown(this)"></span>
+                                    <a href="../InformationChanges/nameRecord.html" target="_block" class="tiptop" title="添加品名">
+                                        <img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10"
+                                        height="10" alt="" onclick="show(this)">
+                                    </a>
+                                    <!-- <img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook"
+                                        width="10" height="10" alt=""> -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;牌号：</span>
+                            <input type="hidden" id="t_qualityID" data="stat_stuff" name="steNameQuality.qualityID">
+                            <input type="hidden" id="t_qualityName" data="stat_stuff" name="steNameQuality.qualityName">
+                        </td>
+                        <td width="90%">
+                            <div class="c df">
+                                <div style="width: 91%;" class="c kZhan chao">
+                                    <span class="n17-kClistCont fl h30 dac selectSingle n17-bdb stat_stuff" id="t_priceSteNameQualityList" cname="牌号">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff01"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">Q235B</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff02"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">NSSQAS1500-S</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff03"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">SA1D+Z</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff04"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">DX51D+Z82</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff05"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">DX54D</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff06"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">JHAS345</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff07"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">ALCOT</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff08"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">SA1C</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff09"><span class="n17-kClCInfoText" onclick="t_confirmSteNameQuality(event,this,'1')">SGCC+Z80</span></a>
+                                    </span>
+                                </div>
+                                <div class="zk">
+                                    <span class="dib ml10 mr5 menuhook icon-zk" onclick="updown(this)"></span>
+                                    <a href="../InformationChanges/brandRecord.html" target="_block" class="tiptop" title="添加牌号">
+                                        <img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10"
+                                            height="10" alt="" onclick="show(this)">
+                                    </a>
+                                    <!-- <img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook"
+                                        width="10" height="10" alt=""> -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="n17-kClist n17-bbb ovh dn t3">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">加工方式：</span>
+                            <input type="hidden" id="p_procType" data="stat_proctype" name="steNameQuality.procType" value="163">
+                            <input type="hidden" id="p_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont fl pct92 n17-bdb selectSingle first stat_proctype" cname="加工方式">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType01" onclick="p_selectProcType(this,'162')"><span class="n17-kClCInfoText">横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo on" id="procType02" onclick="p_selectProcType(this,'163')"><span class="n17-kClCInfoText">纵剪</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType03" onclick="p_selectProcType(this,'170')"><span class="n17-kClCInfoText">纵剪+横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType04" onclick="p_selectProcType(this,'175')"><span class="n17-kClCInfoText">切边开平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType05" onclick="p_selectProcType(this,'165')"><span class="n17-kClCInfoText">分卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType06" onclick="p_selectProcType(this,'1117')"><span class="n17-kClCInfoText">重卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType07" onclick="p_selectProcType(this,'1120')"><span class="n17-kClCInfoText">校平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType08" onclick="p_selectProcType(this,'1118')"><span class="n17-kClCInfoText">切割</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType09" onclick="p_selectProcType(this,'1119')"><span class="n17-kClCInfoText">去钢印</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType10" onclick="p_selectProcType(this,'-999')"><span class="n17-kClCInfoText">更新包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType11" onclick="p_selectProcType(this,'1111')"><span class="n17-kClCInfoText">涂漆</span></a>				
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                            <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
+			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont selectSingle fl pct92 n17-bdb stat_catalog" cname="大类">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog01" onclick="j_selectSteSort(this,'13')"><span class="n17-kClCInfoText">热轧类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog02" onclick="j_selectSteSort(this,'14')"><span class="n17-kClCInfoText">酸洗类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog03" onclick="j_selectSteSort(this,'53')"><span class="n17-kClCInfoText">冷镀类</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog04" onclick="j_selectSteSort(this,'54')"><span class="n17-kClCInfoText">其他类</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;厚度：</span>
+                            <input type="hidden" id="p_steSort" data="stat_catalog" name="steNameQuality.steSort">
+                            <input type="hidden" id="p_steSortID" data="stat_catalog" name="steNameQuality.steSortID">
+                        </td>
+                        <td width="90%">
+                            <div class="c">
+                                <div style="width: 95%;" class="c">
+                                    <span class="fl pct92 n17-bdb stat_thickness selectSingle" cname="厚度">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procThick01" onclick="p_thickness(this)"><span class="n17-kClCInfoText">0~2</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procThick02" onclick="p_thickness(this)"><span class="n17-kClCInfoText">2~5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procThick03" onclick="p_thickness(this)"><span class="n17-kClCInfoText">5~10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procThick04" onclick="p_thickness(this)"><span class="n17-kClCInfoText">10~25</span></a>				
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont  selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="n17-kClist n17-bbb ovh dn t4">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;规格：</span>
+                           <input type="hidden" id="s_steSpec" data="stat_procspec" name="steNameQuality.steSpec" value="宽度">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont fl pct92 n17-bdb first selectSingle stat_procspec" cname="规格">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSpec01" onclick="s_selectSteSpec(this)"><span class="n17-kClCInfoText">长</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo on" id="procSpec02" onclick="s_selectSteSpec(this)"><span class="n17-kClCInfoText">宽度</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSpec03" onclick="s_selectSteSpec(this)"><span class="n17-kClCInfoText">数量</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSpec04" onclick="s_selectSteSpec(this)"><span class="n17-kClCInfoText">重量</span></a>	
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">加工方式：</span>
+                            <input type="hidden" id="p_procType" data="stat_proctype" name="steNameQuality.procType" value="163">
+                            <input type="hidden" id="p_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont fl pct92 n17-bdb selectSingle first stat_proctype" cname="加工方式">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType01" onclick="p_selectProcType(this,'162')"><span class="n17-kClCInfoText">横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo on" id="procType02" onclick="p_selectProcType(this,'163')"><span class="n17-kClCInfoText">纵剪</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType03" onclick="p_selectProcType(this,'170')"><span class="n17-kClCInfoText">纵剪+横切</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType04" onclick="p_selectProcType(this,'175')"><span class="n17-kClCInfoText">切边开平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType05" onclick="p_selectProcType(this,'165')"><span class="n17-kClCInfoText">分卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType06" onclick="p_selectProcType(this,'1117')"><span class="n17-kClCInfoText">重卷</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType07" onclick="p_selectProcType(this,'1120')"><span class="n17-kClCInfoText">校平</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType08" onclick="p_selectProcType(this,'1118')"><span class="n17-kClCInfoText">切割</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType09" onclick="p_selectProcType(this,'1119')"><span class="n17-kClCInfoText">去钢印</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType10" onclick="p_selectProcType(this,'-999')"><span class="n17-kClCInfoText">更新包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procType11" onclick="p_selectProcType(this,'1111')"><span class="n17-kClCInfoText">涂漆</span></a>				
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;属性：</span>
+                            <input type="hidden" id="s_property" data="stat_length" name="steNameQuality.property" value="10~100">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="fl pct92 n17-bdb selectSingle stat_length" cname="属性">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procLength01" onclick="s_selectProperty(this)"><span class="n17-kClCInfoText">1~10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo on" id="procLength02" onclick="s_selectProperty(this)"><span class="n17-kClCInfoText">10~100</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procLength03" onclick="s_selectProperty(this)"><span class="n17-kClCInfoText">0~1000</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procLength04" onclick="s_selectProperty(this)"><span class="n17-kClCInfoText">1000~12000</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procLength05" onclick="s_selectProperty(this)"><span class="n17-kClCInfoText">12000~20000</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont  selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="n17-kClist n17-bbb ovh dn t5">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;包装：</span>
+                            <input type="hidden" id="b_packTypeName" data="stat_package" name="steNameQuality.packTypeName">
+                            <input type="hidden" id="b_packType" data="stat_package" name="steNameQuality.packTypeName">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont fl pct92 n17-bdb selectSingle first stat_package" cname="包装">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage01" onclick="b_selectPackType(this,'1')"><span class="n17-kClCInfoText">裸包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage02" onclick="b_selectPackType(this,'6')"><span class="n17-kClCInfoText">裸包+木架</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage03" onclick="b_selectPackType(this,'2')"><span class="n17-kClCInfoText">油纸包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage04" onclick="b_selectPackType(this,'7')"><span class="n17-kClCInfoText">油纸+木架</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage05" onclick="b_selectPackType(this,'3')"><span class="n17-kClCInfoText">简包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage06" onclick="b_selectPackType(this,'4')"><span class="n17-kClCInfoText">精包装</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procPackage07" onclick="b_selectPackType(this,'5')"><span class="n17-kClCInfoText">缠绕包装</span></a>	
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont  selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="n17-kClist n17-bbb ovh dn t6">
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;贴膜：</span>
+                            <input type="hidden" id="l_laminaTion" data="stat_sticker" name="steNameQuality.laminaTion">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont fl pct92 n17-bdb first selectSingle stat_sticker" cname="贴膜">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSticker01" onclick="l_selectLaminaTion(this)"><span class="n17-kClCInfoText">白膜</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSticker02" onclick="l_selectLaminaTion(this)"><span class="n17-kClCInfoText">字膜</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSticker03" onclick="l_selectLaminaTion(this)"><span class="n17-kClCInfoText">蓝膜</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSticker04" onclick="l_selectLaminaTion(this)"><span class="n17-kClCInfoText">黑白膜</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procSticker05" onclick="l_selectLaminaTion(this)"><span class="n17-kClCInfoText">自行备膜</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;&emsp;属性：</span>
+                            <input type="hidden" id="l_property" data="stat_attr" name="steNameQuality.property">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="fl pct92 n17-bdb selectSingle stat_attr" cname="属性">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr01" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">3S</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr02" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">4S</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr03" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">5S</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr04" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">8S</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr05" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">单面</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo" id="procAttr06" onclick="l_selectProperty(this)"><span class="n17-kClCInfoText">双面</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table t1">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                            <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
+                        </td>
+                        <td width="90%">
+                            <div class="c max">
+                                <div style="width: 95%;" class="c">
+                                    <span class="n17-kClistCont  selectSingle fl pct92 n17-bdb stat_price" cname="单价">
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price01" onclick="j_price(event,this)"><span class="n17-kClCInfoText">0</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price02" onclick="j_price(event,this)"><span class="n17-kClCInfoText">5</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price03" onclick="j_price(event,this)"><span class="n17-kClCInfoText">10</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price04" onclick="j_price(event,this)"><span class="n17-kClCInfoText">15</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price05" onclick="j_price(event,this)"><span class="n17-kClCInfoText">20</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price06" onclick="j_price(event,this)"><span class="n17-kClCInfoText">25</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price07" onclick="j_price(event,this)"><span class="n17-kClCInfoText">30</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price08" onclick="j_price(event,this)"><span class="n17-kClCInfoText">35</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price09" onclick="j_price(event,this)"><span class="n17-kClCInfoText">40</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price10" onclick="j_price(event,this)"><span class="n17-kClCInfoText">45</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price11" onclick="j_price(event,this)"><span class="n17-kClCInfoText">50</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price12" onclick="j_price(event,this)"><span class="n17-kClCInfoText">55</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price13" onclick="j_price(event,this)"><span class="n17-kClCInfoText">60</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price14" onclick="j_price(event,this)"><span class="n17-kClCInfoText">65</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price15" onclick="j_price(event,this)"><span class="n17-kClCInfoText">70</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price16" onclick="j_price(event,this)"><span class="n17-kClCInfoText">75</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price17" onclick="j_price(event,this)"><span class="n17-kClCInfoText">80</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price18" onclick="j_price(event,this)"><span class="n17-kClCInfoText">85</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price19" onclick="j_price(event,this)"><span class="n17-kClCInfoText">90</span></a>
+                                        <a href="javascript:void(0)" class="dib n17-kClCInfo w50" id="price20" onclick="j_price(event,this)"><span class="n17-kClCInfoText">-5</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table y">
+                        <td width="10%" class="vt bgfa">
+                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                        </td>
+                        <td width="90%">
+                            <div class="selContact dac" style="display: none;">
+                                <span class="selContactMore"></span>
+                                <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
+                                <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="y">
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">取消</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/layte/layte.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+</body>
+<!-- <script>
+    var kai = function (obj) {
+        $(obj).parents(".max").find(".zk").find(".img1").toggleClass("dn");
+        $(obj).parents(".max").find(".zk").find(".img2").toggleClass("dn");
+        $(obj).parents(".inK").toggleClass("dn");
+    }
+    var show = function (obj) {
+        $(obj).toggleClass("dn");
+        $(obj).next(".img2").removeClass("dn");
+        $(obj).parents(".max").find(".inK").toggleClass("dn");
+    }
+
+    var updown = function (obj) {
+        $(obj).toggleClass("on");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("h60");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("sy");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("chao");
+    }
+
+    $(".classMax > span").click(function () {
+        $(this).parents(".classMax").find("span").removeClass("blue");
+        $(this).addClass("blue");
+        $(".selectClass").css("display", "block");
+    });
+
+    $(".classMax > .").click(function () {
+        $(".selectClass .").text($(this).text());
+    });
+
+
+    $(".classMax > .").click(function () {
+        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .").text() == "") {
+            alert("请选择大类");
+            $(this).removeClass("blue");
+            $(".selectClass").css("display", "none");
+            return;
+        } else {
+            $(".selectClass .").text($(this).text());
+        }
+    });
+
+    $(".classMax > .").click(function () {
+        $(".selectClass .").text($(this).text());
+    });
+
+    $(".classMax > .").click(function () {
+        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .").text() == "") {
+            alert("请选择大类");
+            $(this).removeClass("blue");
+            $(".selectClass").css("display", "none");
+            return;
+        } else {
+            $(".selectClass .").text($(this).text());
+        }
+    });
+
+    $(".pshow").click(function () {
+        $(".g").addClass("dn");
+        $(".p").toggleClass("dn");
+        $(".selectClass .,.selectClass .,.selectClass .,.selectClass .").text("");
+        $(".selectClass").css("display", "none");
+        $(".classMax span").removeClass("blue");
+        $(".x3").addClass("dn");
+        $(".gC").addClass("dn");
+        $(".gjTr").addClass("dn");
+        $(".x2").removeClass("dn");
+    });
+
+    $(".gshow").click(function () {
+        $(".g").removeClass("dn");
+        $(".p").addClass("dn");
+        $(".selectClass .,.selectClass .,.selectClass .,.selectClass .").text("");
+        $(".selectClass").css("display", "none");
+        $(".classMax span").removeClass("blue");
+        $(".x3").addClass("dn");
+        $(".gC").addClass("dn");
+        $(".gjTr").addClass("dn");
+        $(".x2").removeClass("dn");
+    });
+
+
+    $(".icon-sdel").click(function () {
+        $(".selectClass").css("display", "none");
+        $(".selectClass .,.selectClass .,.selectClass .").text("");
+        $(".classMax span").removeClass("blue");
+    });
+
+    $(".gcshow").click(function () {
+        $(".g").addClass("dn");
+        $(".p").removeClass("dn");
+        $(".gjTr").addClass("dn");
+        $(".gC").removeClass("dn");
+        $(".Tr").removeClass("dn");
+        $(".selectClass .,.selectClass .,.selectClass .,.selectClass .").text("");
+        $(".selectClass").css("display", "none");
+        $(".classMax span").removeClass("blue");
+        $(".x3").removeClass("dn");
+        $(".x2").removeClass("dn");
+    });
+
+    $(".gjshow").click(function () {
+        $(".g").addClass("dn");
+        $(".p").addClass("dn");
+        $(".gC").addClass("dn");
+        $(".gjTr").removeClass("dn");
+        $(".Tr").addClass("dn");
+        $(".x3").addClass("dn");
+        $(".x2").addClass("dn");
+        $(".selectClass .,.selectClass .,.selectClass .,.selectClass .").text("");
+        $(".selectClass").css("display", "none");
+        $(".classMax span").removeClass("blue");
+    });
+</script> -->
+
+<script>
+    //20170711 add
+
+    $(function () {
+        $(window).on("click", function () {
+            $(".n17-searchList").slideUp("fast");
+        })
+
+        //用来点击选择选中
+        $("body").on("click", ".n17-kClCInfo", function () {
+            $(this).siblings().removeClass("on");
+            $(this).addClass("on");
+            //setOptionOn(this);
+        });
+
+        $("body").on("click", ".first", function () {
+            $(this).parents(".n17-kClist").css("height", "auto");
+            $(this).parent().children(".n18-showinfo").show();
+        })
+
+        //用来显示悬浮时表格的边框
+        $(".n17-Ttd").live("mouseover", function () {
+            showtbmsfc($(this));
+        });
+        $(".n17-Ttd").live("mouseout", function () {
+            $(".tbmsfc").hide();
+        });
+
+        $("body").append("<div id='tbmsfct' class='tbmsfc tbmsfc-t'></div><div id='tbmsfcb' class='tbmsfc tbmsfc-b' ></div><div id='tbmsfcl' class='tbmsfc tbmsfc-l' ></div><div id='tbmsfcr' class='tbmsfc tbmsfc-r'></div>");
+
+    })
+
+    function showtbmsfc(tbtr) {
+        $(".tbmsfc").show();
+        $("#tbmsfct").css({ "top": tbtr.offset().top, "left": tbtr.offset().left, "width": tbtr.outerWidth(), "height": "0" });
+        $("#tbmsfcl").css({ "top": tbtr.offset().top, "left": tbtr.offset().left, "width": "0", "height": tbtr.height() });
+        $("#tbmsfcb").css({ "top": tbtr.offset().top + tbtr.height(), "left": tbtr.offset().left, "width": tbtr.outerWidth(), "height": "0" });
+        $("#tbmsfcr").css({ "top": tbtr.offset().top, "left": tbtr.offset().left + tbtr.outerWidth(), "width": "0", "height": tbtr.height() });
+    }
+
+    //点击搜索图标
+    function setSearch(obj) {
+        $(obj).toggleClass("active");
+    }
+
+    //点击增加图标
+    function addName(obj) {
+        $.layer({
+            type: 2,
+            title: '增加品名',
+            shadeClose: true, //开启点击遮罩关闭层
+            area: ['1000px', '300px'],
+            offset: ['100px', ''],
+            iframe: { src: 'addProdName.html' }
+        });
+    }
+
+    function addStuffName() {
+        $.layer({
+            type: 2,
+            title: '增加牌号',
+            shadeClose: true, //开启点击遮罩关闭层
+            area: ['1000px', '500px'],
+            offset: ['100px', ''],
+            iframe: { src: 'addProdStaff.html' }
+        });
+    }
+
+    //用来收起展开品名牌号维护的数据
+    function scrollBar(obj) {
+        var myobj = $(obj).parent().prev();
+        if (myobj.height() == 48) {
+            myobj.height("auto");
+            $(obj).addClass("n17-down");
+        } else {
+            myobj.height(48);
+            $(obj).removeClass("n17-down");
+        }
+    }
+
+    //用来收起展开各模块
+    function setScroll(obj) {
+        if ($(obj).parents(".n17-kClist").height() == 48) {
+            $(obj).parents(".n17-kClist").height("auto");
+            $(obj).parents(".n17-kClist").find(".n18-showinfo").show();
+            $(obj).parents(".n17-kClist").find(".selContactMore").html('');
+            $(obj).parents(".n17-kClist").find(".n17-kClCInfo").removeClass("on");
+            $(obj).parents(".n17-kClist").find(".selContact").hide();
+
+        } else {
+            $(obj).parents(".n17-kClist").height(48);
+            $(obj).parents(".n17-kClist").find(".n18-showinfo").hide();
+        }
+    }
+
+    //点击添加到已选择部分
+    function setOptionOn(obj) {
+        var str = "", s = "", n = "", flag = 0, l = 0;
+        n = $(obj).parent().attr("cname");
+        s = $(obj).parents().attr("class");
+        s = getClassString(s, "stat_");
+        l = $(obj).parents(".n18-showinfo").find(".n17-bdb").length;
+        /* if($(obj).parent().hasClass("stat_price")){
+            if($(obj).parents(".n17-kindCont").find(".selContactMore").find("span").length<l-1){
+                //alert("请最后选择单价，谢谢！");
+                $(obj).removeClass("on");
+                return;
+            }
+        } */
+
+        str = "<span data='" + s + "' id='" + $(obj).attr("id") + "'><a href='javascript:void(0)' onclick='contactDel(this)' class='ui-files  selContactList'>" + n + "：" + $(obj).children(".n17-kClCInfoText").text() + "   <i class='icon-sdel goldIcon vm ml5 menuhook'></i></a></span>";
+        $(obj).parents(".n17-kClist").find(".selContactMore").children("span").each(function () {
+            if ($(this).attr("data") == s) {
+                $(this).prop('outerHTML', str);
+                flag++;
+            }
+        })
+
+        if (!flag) {
+            if ($(obj).parent().hasClass("first")) {
+                $(obj).parents(".n17-kClist").find(".selContactMore").prepend(str);
+            } else {
+                $(obj).parents(".n17-kClist").find(".selContactMore").append(str);
+            }
+        } else {
+        }
+
+        $(obj).parents(".n17-kClist").find(".selContact").show();
+
+    }
+
+    //查找对应的字符串，并返回字符串
+    function getClassString(s, str) {
+        var index = s.indexOf(str);
+        var index2 = s.indexOf(" ", index);
+        if (index2 > -1) {
+            s = s.substring(index, index2);
+        } else {
+            s = s.substring(index);
+        }
+        return s;
+    }
+
+    function searchList(obj, e) {
+        var myobj = $(obj).parents(".n17-Operating").find(".n17-searchList");
+        setSearchPosition(obj);
+        myobj.show();
+    }
+
+    //搜索定位
+    function setSearchPosition(obj) {
+        $(obj).parents(".n17-Operating").find(".n17-searchList").width($(obj).parents(".n17-searchshow").width());
+        $(obj).parents(".n17-Operating").find(".n17-searchList").css({ "top": $(obj).offset().top + $(obj).outerHeight(), "left": $(obj).offset().left });
+    }
+
+    //搜索下拉点击
+    function searchGetValue(obj) {
+        var flag = 0;
+
+        $(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").each(function () {
+            if ($(this).attr("id") == $(obj).attr("id")) {
+                $(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").removeClass("on");
+                $(this).addClass("on");
+                flag++;
+                //setOptionOn(this);
+            }
+        })
+        if (!flag) {
+            $(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").removeClass("on");
+            var str = "<a href='javascript:void(0)' class='dib n17-kClCInfo ell on' id='" + $(obj).attr("id") + "' ><span class='n17-kClCInfoText'>" + $(obj).text() + "</span></a>";
+            $(obj).parents(".n17-kClist").find(".n17-searchSAdd").html(str);
+
+        }
+
+        $(obj).parents(".n17-Operating").find("input.n17-addinput").val($(obj).text());
+        $(obj).parents(".n17-Operating").find(".n17-searchList").slideUp("fast");
+
+    }
+
+    //删除已选择中的选择项
+    function contactDel(obj) {
+        var k = $(obj).parent("span").attr("data");
+        var id = $(obj).parent("span").attr("id");
+        $(obj).parents(".n17-kClist").find(".n17-kClCInfo").each(function () {
+            if ($(this).attr("id") == id) {
+                $(this).removeClass("on");
+            }
+        });
+        $(obj).parents(".n17-kClist").find("input[data='" + k + "']").val("");
+        $(obj).parent("span").remove();
+
+    }
+
+    //清除所有选择项
+    function setAllClear(obj) {
+        $(obj).parents(".n17-kClist").find(".n17-kClCInfo").removeClass("on");
+        $(obj).parents(".selContact").find(".selContactMore").html('');
+        $(obj).parents(".selContact").hide();
+        $(obj).parents(".n17-kClist").find("input").each(function () {
+            $(this).val("");
+        });
+    }
+
+    //防止冒泡
+    function stopPro(e) {
+        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+            if (event.stopPropagation) {
+                // this code is for Mozilla and Opera 
+                event.stopPropagation();
+            }
+            else if (window.event) {
+                // this code is for IE 
+                window.event.cancelBubble = true;
+            }
+        } else {
+            e.stopPropagation();
+        }
+    }
+    //选中时添加样式
+    function setClickOn(obj) {
+        $(obj).parent().siblings().removeClass("on");
+        $(obj).parent().addClass("on");
+    }
+    //=======在操作加工商区域时===========开始
+    //选择加工商
+    function j_confirmProc(obj, sortNum) {
+        $("#j_procCorp").val($(obj).find("span").text());
+        $("#j_procCorpID").val(sortNum);
+        setOptionOn(obj);
+    }
+
+    //搜索加工商
+    function j_queryCustProc(obj) {
+        var memoCode = $(obj).val().toUpperCase();
+        if (memoCode != null && memoCode != "" && memoCode.length >= 6) {
+            var url = app.root + "/LgAdmin/procOrderIndex/queryCustProc.action";
+            $.post(url, { "memoCode": memoCode }, function (arrayList) {
+                var htmlStr = "";
+                $.each(arrayList, function (i, item) {
+                    htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company" + i + "\" onclick=\"j_confirmProc(this,'" + item.corpID + "')\" title='" + item.corp + "'><span class=\"n17-kClCInfoText\">" + item.corp + "</span></a>";
+                });
+                $("#procList").html(htmlStr);
+            });
+        } else if (memoCode == null || memoCode == "") {
+            var htmlStr = "";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company01\" onclick=\"j_confirmProc(this,'14')\" title='上海华冶钢材加工有限公司'><span class=\"n17-kClCInfoText\">上海华冶钢材加工有限公司</span></a>";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company02\" onclick=\"j_confirmProc(this,'2')\" title='广州启圆钢材加工有限公司'><span class=\"n17-kClCInfoText\">广州启圆钢材加工有限公司</span></a>";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company03\" onclick=\"j_confirmProc(this,'18')\" title='天津华冶钢材加工有限公司'><span class=\"n17-kClCInfoText\">天津华冶钢材加工有限公司</span></a>";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company04\" onclick=\"j_confirmProc(this,'24')\" title='浙江南冶金属剪切配送有限公司'><span class=\"n17-kClCInfoText\">浙江南冶金属剪切配送有限公司</span></a>";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company05\" onclick=\"j_confirmProc(this,'9')\" title='无锡海德钢材加工有限公司'><span class=\"n17-kClCInfoText\">无锡海德钢材加工有限公司</span></a>";
+            htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company06\" onclick=\"j_confirmProc(this,'6')\" title='常熟宝进钢材加工有限公司'><span class=\"n17-kClCInfoText\">常熟宝进钢材加工有限公司</span></a>";
+            $("#procList").html(htmlStr);
+        }
+    }
+
+    //选择大类
+    function j_selectSteSort(obj, sortNum) {
+        $("#j_steSort").val($(obj).find("span").text());
+        $("#j_steSortID").val(sortNum);
+        setOptionOn(obj);
+    }
+
+    //选择加工方式
+    function j_selectProcType(obj, procType) {
+        $("#j_procType").val(procType);
+        $("#j_procTypeName").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+
+    //选择单价
+    function j_price(e, obj) {
+        var price = $(obj).find("span").text();
+        $("#j_price").val(price);
+        setOptionOn(obj);
+    }
+
+    //=======在操作加工商区域时===========结束
+
+    //=======在操作大类区域时===========开始
+    //选择大类，并搜索品名
+    function t_selectSteSort(obj, sortNum) {
+        //清空品名和id
+        $("#t_steName").val("");
+        $("#t_steNameID").val("");
+        $(obj).parents(".n17-kClist").find(".selContactMore").find("span[data='stat_stename']").remove();
+        //清空品名助记码
+        $("#t_steNameMemoCode").val("");
+        $("#t_qualityMemoCode").val("");
+        var steSort = $(obj).text();
+        $("#t_steSort").val(steSort);
+        $("#t_steSortID").val(sortNum);
+        setOptionOn(obj);
+        var url = app.root + "/LgAdmin/procOrderIndex/selectPriceName.action";
+        $.post(url, { "steName.steSortID": sortNum }, function (arrayList) {
+            var htmlStr = "";
+            $.each(arrayList, function (i, item) {
+                htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName" + item.steNameID + "\" onclick=\"t_confirmSteName(event,this,'" + item.steNameID + "')\"><span class=\"n17-kClCInfoText\">" + item.steName + "</span></a>";
+            });
+
+            $("#t_priceSteNameList").html(htmlStr);
+            if (arrayList.length < 1) {
+                var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>无结果，请添加品名</a>";
+                $("#t_priceSteNameList").html(pmSteName);
+            }
+        });
+    }
+
+    //搜索品名
+    function t_searchSteNameList(obj, e) {
+        //清空选中的品名
+        $("#t_steName").val("");
+        $("#t_steNameID").val("");
+        //清空品名助记码
+        $("#t_qualityMemoCode").val("");
+        var t_steSortID = $("#t_steSortID").val();
+        var memoCode = $(obj).val().toUpperCase();
+        var url = app.root + "/LgAdmin/procOrderIndex/selectPriceName.action";
+        $.post(url, { "steName.steSortID": t_steSortID, "steName.memoCode": memoCode }, function (arrayList) {
+            var htmlStr = "";
+            $.each(arrayList, function (i, item) {
+                htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName" + item.steNameID + "\" onclick=\"t_confirmSteName(event,this,'" + item.steNameID + "')\"><span class=\"n17-kClCInfoText\">" + item.steName + "</span></a>";
+            });
+            $("#t_priceSteNameList").html(htmlStr);
+            if (arrayList.length < 1) {
+                var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>搜索无结果，请添加品名</a>";
+                $("#t_priceSteNameList").html(pmSteName);
+            }
+        });
+    }
+
+    //确认品名,并搜索牌号
+    function t_confirmSteName(e, obj, steNameID) {
+        //stopPro(e);
+        //清楚牌号和id
+        $("#t_qualityID").val("");
+        $("#t_qualityName").val("");
+        $(obj).parents(".n17-kClist").find(".selContactMore").find("span[data='stat_stuff']").remove();
+        var t_steSortID = $("#t_steSortID").val();
+        if (t_steSortID == null || t_steSortID == "") {
+            alert("请先选择大类");
+            return;
+        }
+        //确认品名前，先把之前 选择的牌号清空
+        $("#t_qualityID").val("");
+        $("#t_qualityName").val("");
+        var steName = $(obj).find("span").text();
+        $("#t_steName").val(steName);
+        $("#t_steNameID").val(steNameID);
+        /* $(obj).parent().siblings().removeClass("on");
+        $(obj).parent().addClass("on"); */
+        setOptionOn(obj);
+        var url = app.root + "/LgAdmin/procOrderIndex/selectSteNameQuality.action";
+        $.post(url, { "steNameQuality.steSortID": t_steSortID, "steNameQuality.steNameID": steNameID }, function (arrayList) {
+            var htmlStr = "";
+            $.each(arrayList, function (i, item) {
+                htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName01\" onclick=\"t_confirmSteNameQuality(event,this,'" + item.qualityID + "')\"><span class=\"n17-kClCInfoText\">" + item.qualityName + "</span></a>";
+            });
+
+            $("#t_priceSteNameQualityList").html(htmlStr);
+            if (arrayList.length < 1) {
+                var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>无结果，请添加牌号</a>";
+                $("#t_priceSteNameQualityList").html(pmSteName);
+            }
+        });
+    }
+    //搜索牌号
+    function t_searchSteNameQualityList(obj, e) {
+        var t_steSortID = $("#t_steSortID").val();//大类ID
+        var t_steNameID = $("#t_steNameID").val();//品名ID
+        var searchCode = $(obj).val().toUpperCase();
+        if (t_steSortID == null || t_steSortID == "") {
+            alert("请选择大类");
+            return;
+        }
+        if (t_steNameID == null || t_steNameID == "") {
+            alert("请选择品名");
+            return;
+        }
+        //清空品名助记码
+        $("#t_qualityMemoCode").val("");
+        var qualityName = $(obj).val().toUpperCase();
+        var url = app.root + "/LgAdmin/procOrderIndex/selectSteNameQuality.action";
+        var date = {
+            "steNameQuality.steSortID": t_steSortID,
+            "steNameQuality.steNameID": t_steNameID,
+            "steNameQuality.qualityName": qualityName
+        };
+        $.post(url, date, function (arrayList) {
+            var htmlStr = "";
+            $.each(arrayList, function (i, item) {
+                htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName01\" onclick=\"t_confirmSteNameQuality(event,this,'" + item.qualityID + "')\"><span class=\"n17-kClCInfoText\">" + item.qualityName + "</span></a>";
+            });
+
+            $("#t_priceSteNameQualityList").html(htmlStr);
+            if (arrayList.length < 1) {
+                var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>搜索无结果，请添加牌号</a>";
+                $("#t_priceSteNameQualityList").html(pmSteName);
+            }
+        });
+    }
+
+    //确认牌号
+    function t_confirmSteNameQuality(e, obj, qualityID) {
+        //stopPro(e);
+        var t_steSortID = $("#t_steSortID").val();//大类ID
+        var t_steNameID = $("#t_steNameID").val();//品名ID
+        if (t_steSortID == null || t_steSortID == "") {
+            alert("请选择大类");
+            return;
+        }
+        if (t_steNameID == null || t_steNameID == "") {
+            alert("请选择品名");
+            return;
+        }
+        var steNameQuality = $(obj).find("span").text();
+        $("#t_qualityID").val(qualityID);
+        $("#t_qualityName").val(steNameQuality);
+        /* $(obj).parent().siblings().removeClass("on");
+        $(obj).parent().addClass("on"); */
+        setOptionOn(obj);
+    }
+    //确认单价
+    function t_price(e, obj) {
+        //stopPro(e);
+        var t_steSortID = $("#t_steSortID").val();//大类ID
+        var t_steNameID = $("#t_steNameID").val();//品名ID
+        var t_qualityID = $("#t_qualityID").val();//牌号ID
+        /* if(t_steSortID == null || t_steSortID==""){
+            alert("请选择大类");
+            return;
+        }
+        if(t_steNameID == null || t_steNameID==""){
+            alert("请选择品名");
+            return;
+        }
+        if(t_qualityID == null || t_qualityID==""){
+            alert("请选择牌号");
+            return;
+        } */
+        /* $(obj).parent().siblings().removeClass("on");
+        $(obj).parent().addClass("on"); */
+        $("#t_price").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //=======在操作大类区域时===========结束
+    //=======在操作加工方式区域时===========开始
+    //选择加工方式
+    function p_selectProcType(obj, procType) {
+        $("#p_procType").val(procType);
+        $("#p_procTypeName").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择大类
+    function p_selectSteSort(obj, steSortID) {
+        $("#p_steSort").val($(obj).find("span").text());
+        $("#p_steSortID").val(steSortID);
+        setOptionOn(obj);
+    }
+    //选择厚度
+    function p_thickness(obj) {
+        $("#p_thickness").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+
+    //选择单价
+    function p_price(e, obj) {
+        $("#p_price").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //=======在操作加工方式区域时===========结束
+    //========在操作规格区域时============开始
+    //选择规格
+    function s_selectSteSpec(obj) {
+        $("#s_steSpec").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择加工方式
+    function s_selectProcType(obj, procType) {
+        $("#s_procType").val(procType);
+        $("#s_procTypeName").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择属性
+    function s_selectProperty(obj) {
+        $("#s_property").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择单价
+    function s_price(e, obj) {
+        $("#s_price").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //========在操作规格区域时============结束
+    //========在操作包装区域时============开始
+    //选择包装
+    function b_selectPackType(obj, packType) {
+        $("#b_packType").val(packType);
+        $("#b_packTypeName").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择单价
+    function b_price(e, obj) {
+        $("#b_price").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //========在操作包装区域时============结束
+    //========在操作贴膜区域时============开始
+    //选择贴膜
+    function l_selectLaminaTion(obj) {
+        $("#l_laminaTion").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择属性
+    function l_selectProperty(obj) {
+        $("#l_property").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //选择单价
+    function l_price(e, obj) {
+        $("#l_price").val($(obj).find("span").text());
+        setOptionOn(obj);
+    }
+    //========在操作贴膜区域时============结束
+
+    //每块区域提交
+    function t_addConnection(e, obj, lineNum) {
+        stopPro(e);
+        if (lineNum == 1) {
+            var j_procCorp = $("#j_procCorp").val();//加工商名称
+            var j_procCorpID = $("#j_procCorpID").val();//加工商ID
+            var j_steSort = $("#j_steSort").val();//大类
+            var j_steSortID = $("#j_steSortID").val();//大类ID
+            var j_procType = $("#j_procType").val();//加工方式
+            var j_procTypeName = $("#j_procTypeName").val();//加工方式
+            var j_price = $("#j_price").val();//单价
+            if (j_procCorpID == null || j_procCorpID == "") {
+                alert("请选择加工商");
+                return;
+            }
+            if ((j_steSortID == null || j_steSortID == "") && (j_procType == null || j_procType == "")) {
+                alert("请选择大类或加工方式，只能选择一个");
+                return;
+            }
+            if ((j_steSortID != null && j_steSortID != "") && (j_procType != null && j_procType != "")) {
+                alert("请选择大类或加工方式，只能选择一个");
+                return;
+            }
+            if (j_price == null || j_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            var data = {
+                "steNameQuality.procCorp": j_procCorp,
+                "steNameQuality.procCorpID": j_procCorpID,
+                "steNameQuality.steSort": j_steSort,
+                "steNameQuality.steSortID": j_steSortID,
+                "steNameQuality.procType": j_procType,
+                "steNameQuality.procTypeName": j_procTypeName,
+                "steNameQuality.price": j_price,
+                "lineNum": lineNum
+            };
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        } else if (lineNum == 2) {
+            var t_steSort = $("#t_steSort").val();//大类
+            var t_steSortID = $("#t_steSortID").val();//大类ID
+            var t_steName = $("#t_steName").val();//品名
+            var t_steNameID = $("#t_steNameID").val();//品名ID
+            var t_qualityID = $("#t_qualityID").val();//牌号ID
+            var t_qualityName = $("#t_qualityName").val();//牌号
+            var t_price = $("#t_price").val();//单价
+            if (t_steSortID == null || t_steSortID == "") {
+                alert("请选择大类");
+                return;
+            }
+            if (t_steNameID == null || t_steNameID == "") {
+                alert("请选择品名");
+                return;
+            }
+            if (t_qualityID == null || t_qualityID == "") {
+                alert("请选择牌号");
+                return;
+            }
+            if (t_price == null || t_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            var data = {
+                "steNameQuality.steSort": t_steSort,
+                "steNameQuality.steSortID": t_steSortID,
+                "steNameQuality.steName": t_steName,
+                "steNameQuality.steNameID": t_steNameID,
+                "steNameQuality.qualityID": t_qualityID,
+                "steNameQuality.qualityName": t_qualityName,
+                "steNameQuality.price": t_price,
+                "lineNum": lineNum
+            };
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        } else if (lineNum == 3) {
+            //只有横切162，纵剪163，切边开平175,分卷165考虑厚度
+            var p_procType = $("#p_procType").val();//加工方式
+            var p_procTypeName = $("#p_procTypeName").val();//加工方式
+            var p_steSort = $("#p_steSort").val();//大类
+            var p_steSortID = $("#p_steSortID").val();//大类ID
+            var p_thickness = $("#p_thickness").val();//厚度
+            var p_price = $("#p_price").val();//单价
+            if (p_procType == null || p_procType == "") {
+                alert("请选择加工方式");
+                return;
+            }
+            if (p_steSortID == null || p_steSortID == "") {
+                alert("请选择大类");
+                return;
+            }
+            var data = "";
+            //重卷  分卷  横切  纵剪 切边开平考虑厚度
+            if (p_procType == 162 || p_procType == 163 || p_procType == 175 || p_procType == 165 || p_procType == 1117) {
+                if (p_thickness == null || p_thickness == "") {
+                    alert("请选择厚度");
+                    return;
+                }
+                data = {
+                    "steNameQuality.procType": p_procType,
+                    "steNameQuality.procTypeName": p_procTypeName,
+                    "steNameQuality.steSort": p_steSort,
+                    "steNameQuality.steSortID": p_steSortID,
+                    "steNameQuality.thickness": p_thickness,
+                    "steNameQuality.price": p_price,
+                    "lineNum": lineNum
+                };
+            } else {
+                data = {
+                    "steNameQuality.procType": p_procType,
+                    "steNameQuality.procTypeName": p_procTypeName,
+                    "steNameQuality.steSort": p_steSort,
+                    "steNameQuality.steSortID": p_steSortID,
+                    "steNameQuality.price": p_price,
+                    "lineNum": lineNum
+                };
+            }
+            if (p_price == null || p_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        } else if (lineNum == 4) {
+            var s_steSpec = $("#s_steSpec").val();//规格
+            var s_procType = $("#s_procType").val();//加工方式ID
+            var s_procTypeName = $("#s_procTypeName").val();//加工方式
+            var s_property = $("#s_property").val();//属性
+            var s_price = $("#s_price").val();//单价
+            if (s_steSpec == null || s_steSpec == "") {
+                alert("请选择规格");
+                return;
+            }
+            if (s_procType == null || s_procType == "") {
+                alert("请选择加工方式");
+                return;
+            }
+            if (s_property == null || s_property == "") {
+                alert("请选择属性");
+                return;
+            }
+            if (s_price == null || s_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            var data = {
+                "steNameQuality.steSpec": s_steSpec,
+                "steNameQuality.procType": s_procType,
+                "steNameQuality.procTypeName": s_procTypeName,
+                "steNameQuality.property": s_property,
+                "steNameQuality.price": s_price,
+                "lineNum": lineNum
+            };
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        } else if (lineNum == 5) {
+            var b_packType = $("#b_packType").val();//包装ID
+            var b_packTypeName = $("#b_packTypeName").val();//包装
+            var b_price = $("#b_price").val();//单价
+            if (b_packType == null || b_packType == "") {
+                alert("请选择包装");
+                return;
+            }
+            if (b_price == null || b_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            var data = {
+                "steNameQuality.packType": b_packType,
+                "steNameQuality.packTypeName": b_packTypeName,
+                "steNameQuality.price": b_price,
+                "lineNum": lineNum
+            };
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        } else if (lineNum == 6) {
+            var l_laminaTion = $("#l_laminaTion").val();//贴膜
+            var l_property = $("#l_property").val();//属性
+            var l_price = $("#l_price").val();//单价
+            if (l_laminaTion == null || l_laminaTion == "") {
+                alert("请选择贴膜");
+                return;
+            } else if (l_laminaTion == "自行备膜") {
+                if (l_property != null && l_property != "" && l_property != "单面" && l_property != "双面") {
+                    alert("当选择自行备膜时，需要选择属性:单面或双面");
+                    //$("#pageForm").submit();
+                    return;
+                }
+            } else {
+                if (l_property == null || l_property == "") {
+                    alert("请选择属性");
+                    return;
+                } else if (l_property == "单面" || l_property == "双面") {
+                    alert("当选择厚度");
+                    //$("#pageForm").submit();
+                    return;
+                }
+            }
+            if (l_price == null || l_price == "") {
+                alert("请选择单价");
+                return;
+            }
+            var url = app.root + "/LgAdmin/procOrderIndex/savePriceSteSortNameQuality.action";
+            var data = {
+                "steNameQuality.laminaTion": l_laminaTion,
+                "steNameQuality.property": l_property,
+                "steNameQuality.price": l_price,
+                "lineNum": lineNum
+            };
+            $.post(url, data, function (data) {
+                if (data.data == 0) {
+                    alert("保存成功");
+                    location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action?subTitle=JGHJBZ";
+                } else if (data.data == 1) {
+                    alert("关联数据已存在");
+                } else if (data.data == -1 || data.data == 2) {
+                    alert("请联系管理员");
+                }
+            });
+        }
+    }
+    function chaXun() {
+        $("#pageForm").submit();
+    }
+
+    //删除
+    function tableDel(obj, allBillID) {
+        if (!confirm("确定作废该明细吗？")) { return; }
+        var url = app.root + "/LgAdmin/procOrderIndex/delectPriceSteSortNameQuality.action";
+        $.post(url, { "steNameQuality.id": allBillID }, function (data) {
+            if (data.data == 0) {
+                alert("删除成功");
+                //$(obj).parents(".n17-Ttd").remove();
+                location.href = app.root + "/LgAdmin/procOrderIndex/procPriceStandard.action";
+            } else if (data.data == 2) {
+                alert("请联系管理员");
+            }
+        });
+    }
+    //统一核价标准,点击自动核价按钮(检测--测试用)
+    function autoPriceCheck() {
+        //var id="750C5942314F7DF2E05371001FAC9150";
+        var billNo = $("#testBillNo").val();
+        if (billNo == null || billNo == "" || billNo.length != 17) {
+            alert("请输入完整的加工单号!");
+            return;
+        }
+        var url = app.root + "/LgAdmin/procOrderIndex/autoPriceCheck.action";
+        $.post(url, { "procMain.billNo": billNo }, function (data) {
+            if (data.data == 0) {
+                alert("核价成功");
+            } else {
+                alert(data.msg);
+            }
+        });
+    }
+
+    function selectType(type) {
+        $("#logType").val(type);
+    }
+
+    function showTbody(name){
+        $("tbody").addClass("dn")
+        $("."+name).removeClass("dn");
+    }
+    var updown = function (obj) {
+        $(obj).toggleClass("on");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("h60");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("sy");
+        $(obj).parents(".zk").prev(".kZhan").toggleClass("chao");
+    }
+</script>
+
+</html>

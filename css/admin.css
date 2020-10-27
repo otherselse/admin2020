@@ -1833,15 +1833,21 @@ a.wh:hover {
   display: none; */
 }
 
+.kZhan {
+  height: 30px;
+}
+
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-.selectDiv::-webkit-scrollbar {
+.selectDiv::-webkit-scrollbar,
+.kZhan::-webkit-scrollbar {
   width: 7px;
   height: 7px;
   background-color: #F5F5F5;
 }
 
 /*定义滚动条轨道 内阴影+圆角*/
-.selectDiv::-webkit-scrollbar-track {
+.selectDiv::-webkit-scrollbar-track,
+.kZhan::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   border-radius: 10px;
@@ -1849,7 +1855,8 @@ a.wh:hover {
 }
 
 /*定义滑块 内阴影+圆角*/
-.selectDiv::-webkit-scrollbar-thumb {
+.selectDiv::-webkit-scrollbar-thumb,
+.kZhan::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
@@ -1998,6 +2005,10 @@ a.wh:hover {
   border-bottom: 1px solid #EEEEEEFF;
 }
 
+.bor-bE6E6 {
+  border-bottom: 1px solid #E6E6E6;
+}
+
 .pct8 {
   width: 8%;
 }
@@ -2061,6 +2072,68 @@ a.wh:hover {
 
 
 /* report */
+
+.jpSj {
+  background: #F9EEE4;
+  border-radius: 0 100px 100px 0;
+  color: #AD7443;
+  letter-spacing: 0;
+}
+
+.ziMq {
+  background: #EBF3FF;
+  border-radius: 11px;
+}
+
+.lh60 {
+  line-height: 60px;
+}
+
+.fanH {
+  background: #F9F9F9;
+  border: 1px solid #EEEEEE;
+  border-radius: 3px;
+}
+
+
+.reDK {
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.angle-wrapper:after{
+  width:0px;
+  height:0px;
+  border: 8px transparent solid;
+  border-left-color: #fff;
+  position:absolute;
+  top:22px;
+  left:100%;
+  content:""
+}
+
+
+.reD-top {
+  background: #F1F3F7;
+  border: 1px solid #E6E6E6;
+}
+
+.reD-gunn {
+  background: #FFFFFF;
+  border: 1px solid #08CB93;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #08CB93;
+  letter-spacing: 0;
+}
+
+.min-blueK {
+  height: 16px;
+  width: 4px;
+  background: #1365E8;
+}
 
 .leBie {
   position: absolute;
@@ -2358,6 +2431,13 @@ a.wh:hover {
   -moz-transform: rotate(90deg);
 }
 
+.t_deg180 {
+  transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
 .t_deg45 {
   transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -2367,6 +2447,10 @@ a.wh:hover {
 
 .c-80 {
   color: #ccc;
+}
+
+.col-8080 {
+  color: #808080;
 }
 
 /* 评审 */
@@ -2569,12 +2653,14 @@ a.wh:hover {
 .xia {
   background: url(../images/statistical/xia.png);
   background-size: 100% 100%;
-  width: 10px;
-  height: 8px;
+  width: 8px;
+  height: 4px;
 }
 
 .xia.on {
   background: url(../images/statistical/y-xia.png);
+  width: 8px;
+  height: 4px;
 }
 
 .c14bb {
