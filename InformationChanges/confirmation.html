@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>资源信息维护-信息管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        .hideTr1 {
+            background: #F1F3F7;
+        }
+
+        .qtip-lep0 .qtip-content {
+            padding: 0px;
+        }
+
+        body,
+        html {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body class='showTip report'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar  bg-F1F3F7FF">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                信息管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">资本中心信息维护</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-tab3">
+            <a href="addRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">添加记录</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="theRelationalRecord.html" class="ui-tab3-list rel"><span class="ui-tab3-text">关联记录</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="confirmation.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">信息确认</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="fix f12 bgwh ui-content ovh minH">
+            <div class=" p20">
+                <div class="mb10 f0">
+                    <span class="pct25 dib f12">名称：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">大类：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">操作人：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">截止日期：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="">
+                        </span>
+                    </span>
+                </div>
+                <div class="f0">
+                    <span class="dib pct100 f12">
+                        类别：<div class="dib selectSingle mr20">
+                            <a class="on" href="javscript:void(0)">未上传</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">审核中</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">已通过</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">未通过</a>
+                        </div>
+
+                    </span>
+                </div>
+
+                <div class="tc mt20">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+            </div>
+            <!-- search end -->
+            <div class="lgui-table-box ml20 mt30 mr20">
+                <div class="lgui-table-body">
+                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
+                        <thead>
+                            <tr class="n17-Ttitle">
+                                <th width="5%">序号</th>
+                                <th width="6%">大类</th>
+                                <th width="16%">类别</th>
+                                <th width="13%">名称</th>
+                                <th width="13%">助记码</th>
+                                <th width="8%">操作人</th>
+                                <th width="8%">操作时间</th>
+                                <th width="15%">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr class="n17-Ttd">
+                                <td>1</td>
+                                <td>板材类</td>
+                                <td>
+                                    <input type="hidden" value="2">
+                                    牌号
+                                </td>
+                                <td>
+                                    BQ20007-010-01-002-0
+                                </td>
+                                <td>
+                                    11111
+                                </td>
+                                <td>
+                                    徐河若
+                                </td>
+                                <td>
+                                    2020-08-25 15:55:42.0
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="doDelAdd('2073','2')"><i
+                                            class="n17-icon  n17-Tdel dib vm mr5"></i>删除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- table end -->
+            <script type="text/javascript" src="../js/pagelist.js"></script>
+            <div class="mb20"></div>
+        </div>
+    </div>
+
+    <!-- 查看图片 -->
+    <div class="f12 dom18 dn">
+        <div class="selectDiv f12">
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+        </div>
+    </div>
+
+    <div class="itemCapital" id="itemCapitalIn"></div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //  viewport: $(window)
+                // },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
+                },
+            });
+        })
+    </script>
+    <script>
+
+        function showLayer(name, url, w, h) {
+            layer.open({
+                type: 2,
+                title: name,
+                shadeClose: true,
+                shade: 0.4,
+                area: [w + 'px', h + 'px'],
+                content: url //iframe的url
+            });
+        }
+
+
+        //tab2 菜单移动
+        $(".ui-tab2").find(".ui-tab2-list").on("click", function () {
+            var tab2index = Number($(this).parents(".ui-tab2").find(".ui-tab2-list").index($(this))) * 90 + "px";
+            $(this).parents(".ui-tab2").find(".ui-tab2-line").animate({ "left": tab2index })
+            $(this).addClass("on").siblings().removeClass("on");
+        })
+
+    </script>
+
+</body>
+
+</html>

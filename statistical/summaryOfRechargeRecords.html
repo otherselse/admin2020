@@ -49,10 +49,10 @@
                         金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                        &emsp;订单ID：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        订单ID：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                        区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
                         仓库：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
@@ -66,37 +66,30 @@
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
-                    <span class="margin20">
-                        <select id="parentBillType" name="gtGMoneyMainLog.parentBillType" onchange="searchClick()"
-                            style="width:120px;border:1px #ccc solid">
-                            <option value="">无</option>
-                            <option value="1">积分类</option>
-                            <option value="2">充值类</option>
-                            <option value="3">分红类</option>
-                            <option value="4">转换类</option>
-                            <option value="5">过渡类</option>
-                            <option value="6">收益类</option>
-                            <option value="7">饭卡类</option>
-                            <option value="8">奖励类</option>
-                            <option value="9">零星类</option>
-                            <option value="10">工资弥补业务亏损</option>
-                            <option value="11">提现类</option>
-                            <option value="12">超时类</option>
-                            <option value="13">其它类</option>
-                        </select>
-                        <input type="text" id="corp" value="" name="gtGMoneyMainLog.billTypeName"
-                            class="vm txt1 mr20 lh25 n17-stock-up" onclick="nSearchClick(this,event)"
-                            onkeyup="nSearchKey(this)" autocomplete="off" style="width:40%;">
-                        <div class="n17-nSearch" id="searchDiv"
-                            style="z-index: 10; width: 193px; left: 256.547px; top: 336px; display: none;"><a
-                                href="javascript:void(0)" class="n17-searchInfo"
-                                onclick="nSearchClickV(this)">G2G钱包转乐财宝</a><a href="javascript:void(0)"
-                                class="n17-searchInfo" onclick="nSearchClickV(this)">结算转G2G类型</a><a
-                                href="javascript:void(0)" class="n17-searchInfo"
-                                onclick="nSearchClickV(this)">乐财宝转G2G钱包</a><a href="javascript:void(0)"
-                                class="n17-searchInfo" onclick="nSearchClickV(this)">分红转G2G钱包</a>
-                        </div>
-
+                    <span class="dib pct50">
+                        充值类型：<span class="input-selSearch pct40">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                        <span class="input-selSearch pct40">
+                            <input type="text" class="ui-input searchUp pct100" readonly placeholder="请输入"
+                                autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
                     </span>
                 </div>
                 <div class="tc mt20">
@@ -104,7 +97,7 @@
                     <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
 
-                <table class="ui-table tc mt30 f12" width="100%" data-type="edit" >
+                <table class="ui-table tc mt30 f12" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="3%">序号</th>
@@ -188,6 +181,11 @@
                         </tr>
                     </tfoot>
                 </table>
+
+                <div class="tc mt20">
+                    <button type="button" class="ui-button mr20">导出凭证</button>
+                    <button type="button" class="ui-button mr20">取消凭证</button>
+                </div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

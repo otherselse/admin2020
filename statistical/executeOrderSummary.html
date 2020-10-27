@@ -35,7 +35,7 @@
             <div class="l gga">
                 <a href="../index/index.html" class="gga">首页</a>
                 <span class="dib gga pl5 pr5">/</span>
-                评审管理
+                统计管理
                 <span class="dib gga pl5 pr5">/</span>
                 <span class="g28">执行订单汇总</span>
             </div>
@@ -46,58 +46,6 @@
 
         <div class="ui-content minH">
             <div class="f12 p20">
-                <div class="cl mb10 dac f12">
-                    <span class="dib pct25">
-                        &emsp;&emsp;区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct25">
-                        金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct25">
-                        订单编号：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct25">
-                        订单日期：<span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                </div>
-                <div class="df mb10">
-                    <span class="dib pct25">
-                        是否付款：<span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i> 是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        是否收款：<span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i> 是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        订单类型：<span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i> 内贸</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>外贸</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        是否有效：<span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i> 是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                </div>
                 <div class="df ">
                     <span class="dib pct50 df">
                         <div>业务类型： </div>
@@ -122,6 +70,61 @@
                         </div>
                     </span>
                 </div>
+
+                <div class="df mb10">
+                    <span class="dib pct25">
+                        是否付款：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        是否收款：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        订单类型：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 内贸</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>外贸</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        是否有效：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i> 是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="cl mb10 dac f12">
+                    <span class="dib pct25">
+                        &emsp;&emsp;区域：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        订单编号：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        订单日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        </span>
+                    </span>
+                </div>
+               
                 <div class="tc mt20 f12">
                     <span class="dib">
                         <button type="button" class="ui-button mr20">查询</button>

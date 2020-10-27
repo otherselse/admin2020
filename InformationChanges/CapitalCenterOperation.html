@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>(新增、修改)资本中心信息-资本中心信息维护</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        body,
+        html {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body class="showTip">
+    <div class="lgui-table-box ml20 mt5 mr20">
+        <div class="lgui-table-header pct100">
+            <table class="ui-table f12 auto tl mt20 " width="100%">
+                <tbody>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">加盟公司：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="input-selSearch pct69">
+                                    <input type="text" class="ui-input searchUp pct90 borNone" placeholder="请选择"
+                                        autocomplete="off" readonly="">
+                                    <div class="search-cont">
+                                        <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                    </div>
+                                </span>
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">时间：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <span class="ui-input ui-input pct90 ml10 borNone" data-type="time"
+                                    small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
+                                        value="2020-07-20" lay-key="11"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">信息类别：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <div class="ui-tab4 mt10">
+                                    <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10 on">办事指南</a>
+                                    <span class="input-selSearch">
+                                        <a href="javascript:void(0)" onclick="sel(0)"
+                                            class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
+                                        <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                            <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell active">会议资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">合同资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">信用资料</a>
+                                        </div>
+                                    </span>
+                                    <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10">审计中心</a>
+                                    <span class="input-selSearch">
+                                        <a href="javascript:void(0)" onclick="inp()"
+                                            class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
+                                        <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                            <a href="javascript:void(0)" class="search-list db ell">11</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell active">会议资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">合同资料</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">信用资料</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">名称：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <div class="pct100  f12 dn nameSel1">
+                                    <span class="input-selSearch pct90">
+                                        <input type="text" class="borNone ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                                            readonly="">
+                                        <div class="search-cont">
+                                            <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="pct100  f12  nameSel2">
+                                    <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">部门：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
+                            </div>
+                        </td>
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">金额：</span>
+                        </td>
+                        <td width="37%">
+                            <div class="pl10 tl">
+                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">附件上传：</span>
+                        </td>
+                        <td width="37%" colspan="3">
+                            <span class="dac pl10">
+                                <div class="">
+                                    <div class="mb10">
+                                        <span class=" dib">
+                                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                                                onclick="upfile()">附件上传</button>
+                                            <span class="ui-files mr20 vm"><a href="javascript:void(0)"
+                                                    class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+                                                    title="删除"></i></span>
+                                            <span class="ui-files mr20 vm"><a href="javascript:void(0)"
+                                                    class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+                                                    title="删除"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="resource-table">
+                        <td width="13%" class="vt bgfa">
+                            <span class="pt5 dib pl10">备注：</span>
+                        </td>
+                        <td width="37%" colspan="3">
+                            <div class="pl10 pr10">
+                                <textarea class="ui-textarea pct100" rows="2"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="tc">
+                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
+                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
+                                line-height: 24px;
+                                height: 25px;
+                                font-size: 12px;">关闭</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+</body>
+<script>
+
+    $(function () {
+        //下拉
+        $("body").on("click", ".xiaLa", function (e) {
+            e.stopPropagation();
+            $(".search-cont").hide();
+            $(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left })
+            $(this).parents(".input-selSearch").find(".search-cont").show();
+        })
+
+        $(".lj .search-list").click(function () {
+            $(this).parents(".lj").prev("a").text($(this).parents(".lj").prev("a").text() + "-" + $(this).text());
+        });
+    });
+
+    $(".ui-tab4-list").click(function () {
+        $(".ui-tab4-list").removeClass("on");
+        $(this).addClass("on");
+    });
+
+    function sel(inde) {
+        $(".nameSel1").css("display", "block");
+        $(".nameSel2").addClass("dn");
+        if (inde == 1) {
+            $(".str1").text("资料中心");
+            $(".str2").text("政府补助及荣耀");
+        }
+    }
+
+    function inp() {
+        $(".nameSel1").css("display", "none");
+        $(".nameSel2").removeClass("dn");
+        $(".str1").text("资料中心");
+    }
+
+    function empty(str) {
+        $(this).text(str);
+    }
+
+    function showLayer(name, url) {
+        var page = layer.open({
+            type: 2,
+            title: name,
+            shadeClose: true,
+            shade: 0.4,
+            area: ['960px', '500px'],
+            content: url //iframe的url
+        });
+        $("#close_but").on("click", function () {
+            layer.close(page);
+        });
+    }
+
+    setTime4();
+    var endtime = '', starttime = '';
+    function setTime4() {
+        starttime = laydate.render({
+            elem: '#time4'
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , min: '2020-07-01'
+            , done: function (value, date, endDate) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,//关键
+                    date: date.date
+                };
+                endtime.config.max = myobj;
+            }
+
+        });
+        //$("#time5").removeAttr("lay-key");
+    }
+</script>
+
+</html>

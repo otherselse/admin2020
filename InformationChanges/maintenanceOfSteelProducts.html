@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>钢品城维护-信息管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .ui-input[data-type='section'] {
+            min-width: 50px;
+        }
+
+        .ss-08 {
+            color: #08CB94FF;
+        }
+    </style>
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                信息管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">钢品城维护</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <div class="dac mb10">
+                    <span class="dib pct25">
+                        品名：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        &emsp;&emsp;仓库：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        钢厂：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        规格：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                </div>
+                <div class="dac">
+                    <span class="dib pct25">
+                        牌号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                </div>
+                <div class="tc mt20">
+                    <button type="button" class="ui-button ml20 mr10">查询</button>
+                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                </div>
+                <table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr>
+                            <th width="10%">品名</th>
+                            <th width="12%">规格</th>
+                            <th width="10%">牌号</th>
+                            <th width="9%">钢厂</th>
+                            <th width="9%">计量方式</th>
+                            <th width="7%">包装方式</th>
+                            <th width="9%">仓库</th>
+                            <th width="9%">挂牌价格</th>
+                            <th width="6%">重量</th>
+                            <th width="8%">金牌商家</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td>
+                                <span class="resourceNameSpan">热轧卷板</span>
+                                <input class="resourceNameInput tc ui-input pct90 auto" name="" value="热轧卷板"
+                                    style="display: none">
+                            </td>
+                            <td>
+                                <span class="resourceSpecSpan">3.000*1500*C</span>
+                                <input class="resourceSpecInput tc ui-input pct90 auto" name="" value="3.000*1500*C"
+                                    style="display: none">
+                            </td>
+                            <td>20#</td>
+                            <td>中国钢厂</td>
+                            <td>抄码</td>
+                            <td></td>
+                            <td>上海一号库</td>
+                            <td>
+                                <span class="resourcePriceSpan" numtype="formatMoney">250</span>
+                                <input class="resourcePriceInput tc ui-input pct90 auto" name="" value="250"
+                                    style="display: none">
+                            </td>
+
+                            <td numtype="formatMoney">12</td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" onclick="xiajia(3468934,0)">上挂</a>
+                                <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
+                                    onclick="tiaojia(3468934)"> 调价</a>
+                                <a href="javascript:void(0)" onclick="modify(this,3468934)" class="modifyBtn"> 修改</a>
+                                <a href="javascript:void(0)" onclick="saveModify(this,3468934)" class="saveModifyBtn"
+                                    style="display: none"> 保存</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+    <div class="qtip-content" id="qtip-14-content" aria-atomic="true">
+        <div class="dom1 f12" style="display: block; visibility: visible;">
+            <!-- 元/吨 -->
+            <div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="输入调整后的挂牌价格"></div>
+            <button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+            <button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+    </script>
+
+    <script language="javascript">
+
+        function xiajia(id, status) {
+            var msgAlert = "";
+            if (status == "0") {
+                msgAlert = "是否确定上挂？";
+            }
+            if (status == "1") {
+                msgAlert = "是否确定下架？";
+            }
+            var mypage = $.layer({
+                shadeClose: false, //开启点击遮罩关闭层
+                area: ['250px', '150px'],
+                dialog: {
+                    msg: msgAlert,
+                    btns: 2,
+                    type: -1,
+                    btn: ['确定', '取消'],
+                    yes: function () {
+                        layer.close(mypage);
+                        //修改状态
+                        var datas = {
+                            "resource.id": id,
+                            "resource.goods_status": status
+                        }
+                        url = "/LgAdmin/steelStoreMng/changeSteelGoods.action";
+                        $.ajax({
+                            type: "post", url: url, dataType: "json", data: datas,
+                            success: function (data) {
+                                if (data == "1") {
+                                    //	alert("操作成功!");
+                                    window.location.href = "/LgAdmin/steelStoreMng/steelStoreMng.action?subTitle=GPCGL";
+                                } else if (data == "-1") {
+                                    alert("操作失败,请联系乐刚客服!");
+                                }
+                            }
+                        });
+                    }, no: function () {
+                        layer.close(mypage);
+                    }
+                }
+            });
+        }
+
+
+        function tiaojia(id) {
+            var mypage = $.layer({
+                type: 1,
+                title: '调价',
+                shadeClose: true, //开启点击遮罩关闭层
+                area: ['450px', '200px'],
+                offset: ['150px', ''],
+                page: { dom: '.tj_div' }
+            });
+
+            $("#changeBtn").on("click", function () {
+                var resourcePrice = $("#resourcePrice").val();
+                if (resourcePrice == "") {
+                    alert("请输入价格!");
+                    return;
+                }
+                layer.close(mypage);
+                //修改状态
+                var datas = {
+                    "resource.id": id,
+                    "resource.resource_Price": resourcePrice
+                }
+                url = "/LgAdmin/steelStoreMng/changeSteelGoods.action";
+                $.ajax({
+                    type: "post", url: url, dataType: "json", data: datas,
+                    success: function (data) {
+                        if (data == "1") {
+                            //alert("操作成功!");
+                            window.location.href = "/LgAdmin/steelStoreMng/steelStoreMng.action?subTitle=GPCGL";
+                        } else if (data == "-1") {
+                            alert("操作失败,请联系乐刚客服!");
+                        }
+                    }
+                });
+            });
+            $("#tj_close").on("click", function () {
+                layer.close(mypage);
+            })
+        }
+        //选择品名
+        function selectSteName() {
+            $.layer({
+                type: 2,
+                title: '选择品名',
+                shadeClose: true, //开启点击遮罩关闭层
+                area: ['600px', '480px'],
+                offset: ['150px', ''],
+                iframe: { src: '/steNameQualityAction_searchSteName.action' }
+            });
+        }
+        //回调设置品名
+        function setSteName(obj) {
+            $("#resource_Name").val(obj.name);
+            //$("#steNameID").val(obj.id);
+        }
+
+        function modify(obj, resourceId) {
+            //将规格修改成可输入的
+            $(obj).parents("tr").find(".resourceSpecSpan").hide();
+            $(obj).parents("tr").find(".resourceSpecInput").show();
+            //将品名修改成可输入的
+            $(obj).parents("tr").find(".resourceNameSpan").hide();
+            $(obj).parents("tr").find(".resourceNameInput").show();
+            //将价格修改成可输入的
+            $(obj).parents("tr").find(".resourcePriceSpan").hide();
+            $(obj).parents("tr").find(".resourcePriceInput").show();
+
+            //最后将按钮的显示修改
+            $(obj).parents("tr").find(".modifyBtn").hide();
+            $(obj).parents("tr").find(".saveModifyBtn").show();
+
+        }
+        function saveModify(obj, resourceId) {
+            var resourcePrice = $(obj).parents("tr").find(".resourcePriceInput").val();
+            var resourceSpec = $(obj).parents("tr").find(".resourceSpecInput").val();
+            var resourceName = $(obj).parents("tr").find(".resourceNameInput").val();
+
+            var datas = {
+                "resource.id": resourceId,
+                "resource.resource_Price": resourcePrice,
+                "resource.resource_Spec": resourceSpec,
+                "resource.resource_Name": resourceName
+            }
+            url = "/LgAdmin/steelStoreMng/updateSteelGoods.action";
+            $.ajax({
+                type: "post", url: url, dataType: "json", data: datas,
+                success: function (data) {
+                    if (data == "1") {
+                        //alert("操作成功!");
+                        window.location.href = "/LgAdmin/steelStoreMng/steelStoreMng.action?subTitle=GPCGL";
+                    } else if (data == "-1") {
+                        alert("操作失败,请联系乐刚客服!");
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
