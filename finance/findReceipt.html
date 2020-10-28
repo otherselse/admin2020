@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/ptdjcss2020.css?v=1" type="text/css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+
+	<title>收据-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">收据</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="ui-tab3">
+				<a href="toReceipt.html" class="ui-tab3-list rel "><span class="ui-tab3-text">收据</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="findReceipt.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">收据统计表</span><i class="goldIcon ui-tab3-dot"></i></a>				
+			</div>
+
+			<div class="ui-content ovh minH">			
+				<div class="p20 f12 ">
+					<div class="mb10 f0">
+						<span class="pct30 dib f12 searchLable">业务时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
+						</span></span>
+						<span class="pct30 dib f12"><span class="searchLable">结算单位：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+								<div class="search-cont" >
+									<a href="javascript:void(0)" class="search-list db ell">中国工商银行上海宝山支行</a>
+									<a href="javascript:void(0)" class="search-list db ell">建行上海外高桥保税区支行</a>
+
+								</div>
+							</span>
+						</span>
+						<span class="dib f12 pct30"><span class="searchLable">订单类型：</span>
+							<div class="dib selectSingle ">
+	                                    <a class="on" href="javscript:void(0)">支票</a>
+	                                    <span class="pr5 pl5 ">|</span>
+	                                    <a href="javscript:void(0)">现金</a>	 
+	                                    <span class="pr5 pl5 ">|</span> 
+	                                    <a href="javscript:void(0)">转账</a>	 
+	                                </div>
+
+						</span>
+					</div>
+					<div class="tc mt20">
+	                	<button type="button" class="ui-button">查询</button>
+	                </div>
+
+	                <div class="lgui-table-box mt30  ">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr>
+		                            <th width="15%">收据号</th>
+		                            <th width="15%">操作日期</th> 
+		                            <th width="15%">交款单位</th>                             
+		                            <th width="10%">收款方式</th>
+		                            <th width="10%">收款金额</th>
+		                            <th width="10%">收款人</th> 
+		                            <th width="10%">是否作废</th>
+		                            <th width="15%">操作</th>
+		                            
+		                        </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	<tr>
+									<td width="15%">20201028NO354</td>
+									<td width="15%">2020-10-28 20:03:19</td>
+									<td width="15%">555</td>
+									<td width="10%">
+										 
+										现金
+										
+									</td>
+									<td width="10%" numtype="formatMoney">2</td>
+									<td width="10%">AAA1234</td>
+									<td width="10%">
+										未作废
+										
+									</td>
+									<td width="15%" class="blue">
+										<a href="javascript:void(0);" class="sblue" style="color: #2f3370" onclick="gotoDetail('B2BAF2FF41C23E18E05371001FACA523',0)"> 查看明细 
+										</a>
+										<a href="javascript:void(0);" class="sblue" style="color: #2f3370" onclick="backDetail('B2BAF2FF41C23E18E05371001FACA523',0)"> 作废 
+										</a>
+									</td>
+								</tr>
+		                    </tbody>		                    
+		                </table>		                
+	            	</div>
+	                
+	            </div>
+					
+		
+	
+
+
+	                
+
+					
+
+
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+			
+
+
+
+		})
+		
+
+
+
+		
+	</script>
+</body>
+</html>
