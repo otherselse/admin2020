@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>订单提成-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">订单提成</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="ui-tab3">
+				<a href="view3.html" class="ui-tab3-list rel "><span class="ui-tab3-text">贸易订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitReform.html" class="ui-tab3-list rel "><span class="ui-tab3-text">月度分红</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="procOrderCommission.html" class="ui-tab3-list rel "><span class="ui-tab3-text">加工订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="profitReform.html" class="ui-tab3-list rel"><span class="ui-tab3-text">分红跟踪表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitIncome.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">劳务报酬个税申报</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">				
+				<div class="p20 f12">
+					<div class="mb10">					
+						<span class="dib f12 searchLable">分红月份：
+								<span class="ui-input" data-type="time"><input type="text" placeholder="选择月份" readonly="" name="grossProfit.grossMonth" class="render-month"></span>
+						</span>	
+							
+						<button type="button" class="ui-button mr10 w90 ml20">查询</button>
+						<button type="button" class="ui-button w90">导出excel</button>
+						<span class="ui-tip ml20">默认导出的明细为当前页面显示的内容，可根据查询条件先自行筛选出需要导出的明细。</span>
+					</div>
+
+	                <!-- search end -->
+					
+					<div class="lgui-table-box mt30  m-tabLimitSCroll">
+						<div class="lgui-table-header" >
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr class="fixTr">
+								    <th width="8%" >工号</th>
+									<th width="8%" >姓名</th>
+									<th width="8%" >证照类型</th>
+									<th width="8%" >证照号码</th>
+									<th width="8%" >所得项目</th>
+									<th width="8%" > 本期收入</th>
+									<th width="10%" >本期免税收入</th>
+									<th width="10%" >商业健康保险</th>
+									<th width="10%" >税延养老保险</th>
+									<th width="10%" >其他</th>
+									<th width="8%" >减免税额</th>
+									<th width="8%" >备注</th>
+								  </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	 <tr>
+							        <td width="8%" >工号</td>
+									<td width="8%" >姓名</td>
+									<td width="8%" >证照类型</td>
+									<td width="8%" >证照号码</td>
+									<td width="8%" >所得项目</td>
+									<td width="8%" > 本期收入</td>
+									<td width="10%" >本期免税收入</td>
+									<td width="10%" >商业健康保险</td>
+									<td width="10%" >税延养老保险</td>
+									<td width="10%" >其他</td>
+									<td width="8%" >减免税额</td>
+									<td width="8%" >备注</td>
+							  </tr>
+		                    </tbody>	                    
+		                </table>		                
+	            	</div>
+	                
+	            </div>
+	            
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+
+
+		})
+		
+
+
+
+	</script>
+</body>
+</html>
