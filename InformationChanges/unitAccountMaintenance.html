@@ -47,20 +47,19 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-        <div class="fix f12 bgwh p20 ui-content ovh minH">
-            <div class="">
-                <div class="xzhj daj">
-                    <a href="javascript:void(0)" onclick="showLayer('银行账户资料新增','unitAccountAdd.html')"
-                        class="dib xzhj-button daj">
-                        <span class="dib mr10">资料新增</span> <img src="../images/documnts/t8.png" width="20px"
-                            height="20px" alt="">
-                    </a>
-                </div>
-            </div>
 
+        <div class="ui-tab3 ">
+            <a href="unitAccountMaintenance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">单位账户信息维护</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="theCustomerInformation.html" class="ui-tab3-list rel"><span class="ui-tab3-text">客户信息维护</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="fix f12 bgwh p20 ui-content ovh minH">
             <div class="cl mb20 mt20 dac f12">
                 <span class="dib pct25">
-                    往来单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">往来单位：</span>
+                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                 </span>
                 <button type="button" class="ui-button mr20 ml20">查询</button>
             </div>
@@ -73,7 +72,7 @@
                                 <th width="15%">开户银行</th>
                                 <th width="20%">银行账户</th>
                                 <th width="10%">币种</th>
-                                <th width="10">金额</th>
+                                <th width="10%">金额</th>
                                 <th width="10%">账户类型</th>
                                 <th width="10%">账户分类</th>
                             </tr>
@@ -146,4 +145,5 @@
 
     </script>
 </body>
+
 </html>
