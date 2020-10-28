@@ -44,7 +44,7 @@
 			</div>
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct22 dib f12">发票单位：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct22 dib f12">发票号：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
@@ -55,8 +55,8 @@
 					</span>
 						</span>
 					</div>
-					<div class="mb10 f0">
-						<span class="pct22 dib f12">
+					<div class="mb10 f0 searchLable">
+						<span class="pct22 dib f12 ">
 							发票类型：<span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
 								<div class="search-cont">
@@ -82,35 +82,35 @@
 					</span>
 						</span>
 					</div>
-					<div class="mb10 f0">
-						<span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct22 dib f12">&emsp;区域：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+					<div class="mb10 f0 ">
+						<span class="pct22 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct22 dib f12 searchLable">&emsp;区域：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct22 dib f12 radio">是否清票：
+						<span class="pct22 dib f12 radio"><span class="searchLable">是否清票：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
-						<span class="pct30 dib f12">发票清票日期：<span class="ui-input f0 pct69 range" data-type="time">
+						<span class="pct30 dib f12 "><span class="searchLable">发票清票日期：</span><span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
 					</span> <span class="checkbox"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无</span>
 						</span>
 					</div>	
 					<div class="mb10 f0">
-						<span class="pct22 dib f12 radio">
-							是否认证：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<span class="pct22 dib f12 radio ">
+							<span class="searchLable">是否认证：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 
 						<span class="pct22 dib f12 radio">
-							发票状态：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<span class="searchLable">发票状态：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
 
-						<span class="pct22 dib f12">认证日期：<span class="ui-input f0 pct59 range" data-type="time">
+						<span class="pct22 dib f12 searchLable">认证日期：<span class="ui-input f0 pct59 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>
 
-						<span class="pct30 dib f12">发票开具日期：<span class="ui-input f0 pct69 range" data-type="time">
+						<span class="pct30 dib f12 searchLable">发票开具日期：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 					</span>
 						</span>
@@ -216,16 +216,15 @@
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
-		                    		<td colspan="4" class="tl">
+		                    		<td colspan="14" class="tl">
 		                    			<i class="ui-checkbox goldIcon mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+		                    		
+		                    			<span class="dib ml20">入账日期：<span class="ui-input pct30 mr10" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
+		                    			<button type="button" class="ui-button">确认</button></span>
 		                    		</td>
-		                    		<td colspan="10">
-		                    			入账日期：<span class="ui-input pct30 mr10" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
-		                    			<button type="button" class="ui-button">确认</button>
-		                    		</td>
-		                    		<td colspan="10">
+		                    		<td colspan="10" class="tr">
 		                    			<button type="button" class="ui-button plr10 mr10">外贸采购发票及结转成本凭证导出</button>
-		                    			<button type="button" class="ui-button" data-type="clear">取消导出</button>
+		                    			<button type="button" class="ui-button mr20" data-type="clear">取消导出</button>
 		                    		</td>
 		                    	</tr>
 		                    	<tr height="40">

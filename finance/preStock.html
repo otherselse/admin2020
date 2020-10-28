@@ -39,9 +39,9 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct30 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct30 dib f12">采购单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
-						<span class="dib f12">订单类型：
+						<span class="pct30 dib f12 searchLable">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct30 dib f12 searchLable">采购单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="dib f12 searchLable">订单类型：
 							<div class="dib selectSingle ">
 	                                    <a class="on" href="javscript:void(0)">内贸</a>
 	                                    <span class="pr5 pl5 ">|</span>
@@ -53,34 +53,33 @@
 					</div>
 
 					<div class="mb10 f0">					
-						<span class="pct30 dib f12">入库时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct30 dib f12 searchLable">入库时间：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>
-						<span class="pct30 dib f12">出库时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct30 dib f12 searchLable">出库时间：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>
 						
-						<span class="pct40 dib f12">收票时间：<span class="ui-input tc f0 pct59  range" data-type="time">
+						<span class="pct40 dib f12 "><span class="searchLable">收票时间：</span><span class="ui-input tc f0 pct59  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span>
-						<span class="f12"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无收票日期</span>					
+						<span class="f12"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无</span>					
 						
 						</span>	
 						
 
 					</div>
 					<div class="mb15 f0">
-						<span class="pct30 dib f12">开票时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct30 dib f12 searchLable">开票时间：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>
+						<button type="button" class="ui-button ">查询</button>
 
 					</div>			
 
 	              
 
-	                <div class="tc  mt20 mb20">
-						<button type="button" class="ui-button ">查询</button>
-	                </div>
+	
 
 	                <!-- search end -->
 
@@ -110,7 +109,7 @@
 		                    </thead>
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-				                  <td >2</td>
+				                  <td >1</td>
 				                  <td >61064<br></td>
 				                  <td >冷轧卷板</td>
 				                  <td >11.000*800*C</td>
@@ -132,26 +131,22 @@
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
-		                    		<td colspan="4">当前页合计：</td>
-		                    		<td>96</td>
-		                    		<td colspan="2"></td>
-		                    		<td class="numFormat bkall">96</td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td colspan="4"></td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td colspan="2"></td>
+		                    		<td colspan="17">当前页合计：
+		                    			入库重量：<span class="red mr10">96</span>
+		                    			采购金额：<span class="numFormat bkall red mr10">936</span>
+		                    			采购结算金额：<span class="numFormat bkall red mr10">936</span>
+		                    			出库重量：<span class="numFormat bkall red mr10">936</span>
+		                    			销售金额：<span class="numFormat bkall red mr10">936</span>
+		                    		</td>	
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="4">所有页汇总：</td>
-		                    		<td>96</td>
-		                    		<td colspan="2"></td>
-		                    		<td class="numFormat  bkall">96</td>
-		                    		<td class="numFormat  bkall">936</td>
-		                    		<td colspan="4"></td>
-		                    		<td class="numFormat  bkall">936</td>
-		                    		<td class="numFormat bkall">93677776</td>
-		                    		<td colspan="2"></td>
+		                    		<td colspan="17">所有页合计：
+		                    			入库重量：<span class="red mr10">96</span>
+		                    			采购金额：<span class="numFormat bkall red mr10">936</span>
+		                    			采购结算金额：<span class="numFormat bkall red mr10">936</span>
+		                    			出库重量：<span class="numFormat bkall red mr10">936</span>
+		                    			销售金额：<span class="numFormat bkall red mr10">936</span>
+		                    		</td>
 		                    	</tr>
 
 		                    </tfoot>

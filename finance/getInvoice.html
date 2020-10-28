@@ -46,7 +46,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<span class="ui-tip pct100 mb20">温馨提示：发票号的格式请保持一致连号发票格式为12345678-12345688，非连号发票格式为654321,789564,987523；后期将针对采购发票登记进行排查，不合格的将执行惩罚。</span>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">供货单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
@@ -57,7 +57,7 @@
 					</div>	
 
 
-	                <div class="f0 mb20">
+	                <div class="f0 mb20 searchLable">
 	                	<span class="pct25 dib f12">&emsp;&emsp;规格：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<button type="button" class="ui-button ">查询</button>
 	                    <!-- <button type="button" class="ui-button " data-type="clear">清空</button> -->
@@ -70,11 +70,11 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
+		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>订单号</th>
 		                            <th width="5%">金牌商家</th>
 		                            <th width="10%" class="tl"><div class="pl5">采购合同号</div></th>  	                            
 		                            <th width="10%" class="tl"><div class="pl5">采购单位</div></th>
-		                            <th width="7%">单位评审等级</th>
+		                            <th width="7%">单位评审<br/>等级</th>
 		                            <th width="6%">品名</th> 
 		                            <th width="6%">规格</th>
 		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算重量<i class="goldIcon icon-sort vm ml5"></i></label></th>
@@ -132,20 +132,52 @@
 		                    	<tr height="45">
 		                    		<td colspan="15" class="tl pt10 pb10">
 		                    			<div class="dib pct8 tc">
-		                    				<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号
+		                    				<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选&emsp;
 		                    			</div>
-		                    			开票总吨数：<input type="text" class="ui-input pct8 mr15" />
-		                    			开票总金额：<input type="text" class="ui-input pct8 mr15" />
-		                    			开票日期：<span class="ui-input pct8 mr15" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
-		                    			税率：<span class="ui-input pct5 mr15" data-type="price"><input type="text" value="" placeholder="" class="pct80"><span class="r pct20">%</span></span>
-		                    			发票编号：<input type="text" class="ui-input pct8 mr15" />
-		                    			<button class="ui-button " data-type="upfile" type="button">附件上传</button>
-		                    			<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1">查看</a>
-		                    			<button type="button" class="ui-button w90">确认</button>
+		                    			<span class="dib">当前共选择(<span class="red">3</span>)</span>
+		                    			
 		                    		</td>
 		                    	</tr>
+		                    </tfoot>
+		                 </table>
+		                             
+	            	</div>
+	                
+	            </div><!-- table end -->
+	            <table class="ui-table tc f12 auto mt10 " width="100%">
+					<tbody>
+						<tr class="resource-table">
+							<td class="title" width="13%">开票总吨数：</td>
+							<td width="20%" class="cont">222</td>
+							<td class="title" width="13%">账户余额：</td>
+							<td width="20%" class="cont">222</td>
+							<td class="title" width="13%">开票日期：</td>
+							<td width="20%" class="cont"><span class="ui-input pct80" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span></td>
+						</tr>
+						<tr class="resource-table">
+							<td class="title">税率：</td>
+							<td class="cont"><span class="ui-input pct80" data-type="price"><input type="text" value="" placeholder="" class="pct80"><span class="r">%</span></span></td>
+							<td class="title">发票编号：</td>
+							<td class="cont"><input type="text" class="ui-input pct80 " placeholder="请输入" /></td>
+							<td class="title">附件上传：</td>
+							<td width="20%" class="cont">
+								<button class="ui-button " data-type="upfile" type="button">附件上传</button>
+								<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1">查看</a>
+							</span></td>
+						</tr>
+						<tr class="resource-table">
+							<td class="title">备注：</td>
+							<td class="cont" colspan="5">
+								<textarea class="ui-textarea pct98" rows="3"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="tc mt30 mb30"><button type="button" class="ui-button">确认</button></div>
+	            <table class="ui-table tc f12 " width="100%" data-type="edit">
+		                 	<tfoot class="bgfa">
 		                    	<tr>
-		                    		<td colspan="15" class="tl pt10 pb10 ">
+		                    		<td class="tl pt10 pb10 ">
 		                    			<div class="l pct10 pl10">未开票金额区域总计：</div>
 		                    			<div class="l pct85">
 		                    				自贸区：<span class="red numFormat mr20">3234244.00</span>
@@ -168,17 +200,14 @@
 		                    		</td>
 		                    	</tr>
 		                    	<tr>
-		                    		<td colspan="15" class="tl pt10 pb10 ">
+		                    		<td  class="tl pt10 pb10 ">
 		                    			<div class="l pct10 pl10">未开票金额所有总计：</div>
 		                    			<span class="red numFormat mr20">3234244.00</span>
 		                    		</td>
 		                    	</tr>
 		                    </tfoot>
 		                    
-		                </table>		                
-	            	</div>
-	                
-	            </div><!-- table end -->
+		                </table>		    
 	            
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
 

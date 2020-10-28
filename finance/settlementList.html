@@ -51,11 +51,11 @@
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
 					</span></span>
 						<span class="pct30 dib f12 ">预退税日期：<span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.preDateStart"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.preEndStart">
 					</span></span>
 
 					<span class="pct30 dib f12  ">退税日期：<span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.baDateStart"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.baEndStart">
 					</span></span>		
 						
 
@@ -163,10 +163,10 @@
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td colspan="14">
-		                    			<span class="ui-tip l ml10">提示：导出前请先选择好相对应的时间。</span>
+		                    			<!-- <span class="ui-tip l ml10">提示：导出前请先选择好相对应的时间。</span> -->
 		                    			<span class="r mr10">
-		                    				<button class="ui-button mr10 plr10" data-type="normal" type="button">导出退税款到账凭证</button>
-		                    				<button class="ui-button plr10" type="button">导出外贸计提凭证</button>
+		                    				<button class="ui-button mr10 plr10" data-type="normal" type="button" onclick="logExport(1);">导出退税款到账凭证</button>
+		                    				<button class="ui-button plr10" type="button" onclick="logExport(2);">导出外贸计提凭证</button>
 		                    			</span>
 		                    		</td>
 		                    	</tr>
@@ -231,6 +231,22 @@
 				area: ['600px', '420px'],
 				content: 'toBackRate.html' //iframe的url
 			});
+		}
+
+		function logExport(str){
+			var preDateStart=$("input[name='enExchange.preDateStart']").val();
+            var preEndStart=$("input[name='enExchange.preEndStart']").val();
+            var baDateStart=$("input[name='enExchange.baDateStart']").val();
+            var baEndStart=$("input[name='enExchange.baEndStart']").val();
+
+            if (str==1&& baDateStart=="" &&baEndStart=="") {
+                layer.alert("请选择退税日期起止时间");
+                return;
+            }
+            if (str==2&&preDateStart == ""&&preEndStart=="") {
+                layer.alert("请选择预退税日期起止时间");
+                return;
+            }
 		}
 
 

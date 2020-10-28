@@ -39,7 +39,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="cl  f12 lh24">							
-	                <span class="vt dib">加盟加工商：</span><div class="dib selectProcName gc" >
+	                <span class="vt dib searchLable">加盟加工商：</span><div class="dib selectProcName gc" >
                             <a href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
                             <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -63,7 +63,7 @@
                         </div>
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll" style="">展开</a>
 					</div>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct30 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct30 dib f12">提单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct30 dib f12">业务日期：<span class="ui-input tc f0 pct69  range" data-type="time">
@@ -78,82 +78,46 @@
 
 	                <!-- search end -->
 
-					<div class="lgui-table-box mt30 ">
-						<div class="lgui-table-body mt-1">
 							<table class="ui-table tc f12 " width="100%">
 								<thead>
 		                        <tr>
-				                  <th width="4%" >序号</th>
-				                  <th width="4%" >订单号</th>
-				                  <th width="6%" >品名</th>
-				                  <th width="6%" >规格</th>
-				                  <th width="6%" >入库重量</th>
-				                  <th width="6%" >采购单价</th>
-				                  <th width="6%" >采购结算单价</th>
-				                  <th width="6%" >采购金额</th>
-				                  <th width="6%" >采购结算金额</th>
-				                  <th width="6%" >入库时间</th>
-				                  <th width="6%" >采购单位</th>
-				                  <th width="6%" >收票时间</th>
-				                  <th width="6%" >出库时间</th>
-				                  <th width="6%" >出库重量</th>
-				                  <th width="6%" >销售金额</th>
-				                  <th width="7%" >开票日期</th>
-				                  <th width="7%" >入账日期</th>
+				                      <th width="10%" >提单号</th>
+							          <th width="6%" >业务日期</th>
+							          <th width="10%" >货主单位</th>
+							          <th width="5%" >结算方式</th>
+							          <th width="5%" >出库仓库</th>
+							          <th width="5%" >预提重量</th>
+							          <th width="5%" >出库费用</th>
+							          <th width="5%" >库存余货</th>
+							          <th width="5%" >余货估值</th>
+							          <th width="5%" >总欠款</th>
+							          <th width="5%" >审核人</th>
+							          <th width="10%" >加工商名称</th>
+							          <th width="10%" >审核时间</th>
 				                </tr>
 		                    </thead>
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-				                  <td >2</td>
-				                  <td >61064<br></td>
-				                  <td >冷轧卷板</td>
-				                  <td >11.000*800*C</td>
-				                  <td  class="numFormat">11</td>
-				                  <td  class="numFormat">4,000</td>
-				                  <td  class="numFormat">4,000</td>
-				                  <td  class="numFormat">44,000</td>
-				                  <td  class="numFormat">44,000</td>
-				                  <td >2020-09-03 13:50:24</td>
-				                  <td >上海市爱尚Travel有限公司</td>
-				                  <td ></td>
-				                  <td ></td>    <!-- 14169任务单周中明要求后面四个字段不予显示 -->
-				                  <td class="numFormat">0</td>
-				                  <td class="numFormat">0</td>
-				                  <td ></td>
-				                  <td ></td>
-				                </tr>
+							        <td >Out20201014583060</td>
+									<td >2020-10-14</td>
+									<td class="tablebtdb">上海柒柒贸易有限公司</td>
+									<td >现结</td>
+									<td >光明库</td>
+									<td >0.656</td>
+									<td >1376.8</td>
+									<td >0</td>
+									<td >0</td>
+									<td >25569.11</td>
+									<td >系統审核</td>
+									<td >上海光明实业有限公司</td>
+									<td class="tablebtdb  ">2020-10-20 19:17:20</td>
+								</tr>
 		                       
 		                    </tbody>
-		                    <tfoot class="bgfa">
-		                    	<tr height="45">
-		                    		<td colspan="4">当前页合计：</td>
-		                    		<td>96</td>
-		                    		<td colspan="2"></td>
-		                    		<td class="numFormat bkall">96</td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td colspan="4"></td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td class="numFormat bkall">936</td>
-		                    		<td colspan="2"></td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="4">所有页汇总：</td>
-		                    		<td>96</td>
-		                    		<td colspan="2"></td>
-		                    		<td class="numFormat  bkall">96</td>
-		                    		<td class="numFormat  bkall">936</td>
-		                    		<td colspan="4"></td>
-		                    		<td class="numFormat  bkall">936</td>
-		                    		<td class="numFormat bkall">93677776</td>
-		                    		<td colspan="2"></td>
-		                    	</tr>
-
-		                    </tfoot>
-
+		   
 		                </table>		                
-	            	</div>
 	                
-	            </div><!-- table end -->
+	           <!-- table end -->
 	            
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
 

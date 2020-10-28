@@ -125,7 +125,7 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="11%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/单位名称</div></th>
+		                            <th width="11%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>单位名称</div></th>
 		                            <th width="5%">客户分类</th>
 		                            <th width="5%">金牌商家</th>
 		                            <th width="5%">区域</th>
@@ -168,22 +168,24 @@
 		                        	<td colspan="15">
 		                        		<div class="pl20 pr20">
 		                        			<div class=" mb10 tl">
-		                        				<button class="ui-button w90" data-type="normal" type="button">批量开票</button>
+		                        				<button class="ui-button w90" data-type="normal" type="button" small-type="small">批量开票</button>
 		                        			</div>
 		                        			<div class="mb10 tl">
 												<span class="blue f18 mr20 b">NO.1</span>
-												<button class="ui-button w90 mr5" data-type="normal" type="button">确认开票</button>
-												<button class="ui-button w90 mr5" disabled="" data-type="normal" type="button">打印发票</button>
-												<button class="ui-button w90 mr5" data-type="normal" type="button">作废发票</button>
-												<button class="ui-button w90" data-type="normal" type="button">红冲发票</button>
+												<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">确认开票</button>
+												<button class="ui-button w90 mr5" disabled="" data-type="normal" type="button" small-type="small">打印发票</button>
+												<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">作废发票</button>
+												<button class="ui-button w90" data-type="normal" type="button" small-type="small">红冲发票</button>
 		                        			</div>
 											<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
 		              	                         <tbody>
 		                                            <tr class="resource-table">
 		                                            	<td class="title" width="15%">发票编号：</td>
-		                                            	<td width="35%" class="cont"><input type="text" value=""  class="ui-input pct80" placeholder="请输入" /></td>
+		                                            	<td width="35%" class="cont"><input type="text" value=""  class="pct30 bd_none lh30" placeholder="请输入" />
+		                                            	<a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon vm"></i>保存</a>
+		                                            	</td>
 		                                            	<td class="title" width="15%">发票开具日期：</td>
-		                                            	<td width="35%" class="cont"><span class="ui-input pct80" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span></td>
+		                                            	<td width="35%" class="cont"><span class=" pct80 " data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time bd_none lh30 timeIcon" autocomplete="off" ><a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon vm"></i>保存</a></span></td>
 		                                            </tr>
 		                                             <tr class="resource-table">
 		                                            	<td class="title">购货单位名称：</td>
@@ -240,7 +242,83 @@
 															</tr>
 														</tfoot>
 												</table>
-												<!-- list end -->
+												<!-- list1 end -->
+
+												<div class="mb10 tl">
+													<span class="blue f18 mr20 b">NO.2</span>
+													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">确认开票</button>
+													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">打印发票</button>
+													<button class="ui-button w90 mr5"  disabled="" data-type="normal" type="button" small-type="small">作废发票</button>
+													<button class="ui-button w90" data-type="normal" type="button" small-type="small">红冲发票</button>
+			                        			</div>
+												<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+			              	                         <tbody>
+			                                            <tr class="resource-table">
+			                                            	<td class="title" width="15%">发票编号：</td>
+			                                            	<td width="35%" class="cont"><input type="text" class="pct30 bd_none lh30" placeholder="请输入" value="12345" />
+			                                            	<a href="#" class="g28 ml5 h_edit"><i class="admIcon saveIcon vm"></i>修改</a>
+			                                            	</td>
+			                                            	<td class="title" width="15%">发票开具日期：</td>
+			                                            	<td width="35%" class="cont"><span class=" pct80 " data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time bd_none lh30 timeIcon" autocomplete="off" value="2020-06-10" ><a href="#" class="g28 ml5 h_edit"><i class="admIcon saveIcon vm"></i>修改</a></span></td>
+			                                            </tr>
+			                                             <tr class="resource-table">
+			                                            	<td class="title">购货单位名称：</td>
+			                                            	<td class="cont">海南行政单位</td>
+			                                            	<td class="title">购货单位地址电话：</td>
+			                                            	<td class="cont">上海市静安区wangzhi1街道 123456</td>
+			                                            </tr>
+			                                            <tr class="resource-table">
+			                                            	<td class="title">购货单位开户银行及帐号：</td>
+			                                            	<td class="cont">中国建设银行(232442323234324323)</td>
+			                                            	<td class="title">购货单位税务登记号：</td>
+			                                            	<td class="cont">65523358852525789452</td>
+			                                            </tr>
+			                                        </tbody>
+			                                    </table>
+			                        			<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
+														<thead>
+															<tr>
+																<th width="10%">品名</th>
+																<th width="10%">规格</th>
+																<th width="10%">牌号</th>
+																<th width="10%">重量(吨)</th>
+																<th width="10%">含税单价(元)</th>
+																<th width="10%">含税金额(元)</th>
+																<th width="10%">税率</th>
+															</tr>
+															<tbody class="ui-thover">
+																<tr>
+																	<td>Z向板</td>
+																	<td>0.600*1200*C</td>
+																	<td>BVA-Z25</td>
+																	<td>5</td>
+																	<td>500</td>
+																	<td>500</td>
+																	<td>45</td>
+																</tr>
+																<tr>
+																	<td>Z向板</td>
+																	<td>0.600*1200*C</td>
+																	<td>BVA-Z25</td>
+																	<td>5</td>
+																	<td>500</td>
+																	<td>500</td>
+																	<td>45</td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr height="40">
+																	<td colspan="3">合计</td>
+																	<td>5</td>
+																	<td>--</td>
+																	<td>500</td>
+																	<td>--</td>
+																</tr>
+															</tfoot>
+													</table>
+													<!-- list2 end -->
+
+
 		                        		</div>
 		                        	</td>
 		                        </tr>
@@ -341,7 +419,7 @@
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td colspan="15">
-		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/单位名称&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    </span>
+		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    </span>
 		                    			<span class="r mr10">
 		                    				<button class="ui-button mr10 plr10" data-type="normal" type="button">合并快递单</button>
 		                    				<button class="ui-button plr10" type="button">打印签收单</button>
@@ -349,22 +427,21 @@
 		                    		</td>
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="5">当页合计</td>
-		                    		<td>96</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">936</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td colspan="6"> </td>
+		                    		<td colspan="15">
+		                    			当页合计：开票总重量：<span class="red mr10">96</span>
+		                    			开票总金额：<span class="numFormat red mr10">96</span>
+		                    			不含税金额：<span class="numFormat red mr10">936</span>
+		                    			核销税额：<span class="numFormat red mr10">9456</span>
+		                    		</td>
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="5">所有页汇总</td>
-		                    		<td>96</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td class="numFormat">945456</td>
-		                    		<td colspan="6"> </td>
+		                    		<td colspan="15">
+		                    			所有页汇总：开票总重量：<span class="red mr10">96</span>
+		                    			开票总金额：<span class="numFormat red mr10">96</span>
+		                    			不含税金额：<span class="numFormat red mr10">936</span>
+		                    			核销税额：<span class="numFormat red mr10">9456</span>
+		                    		</td>
 		                    	</tr>
-
 		                    </tfoot>
 
 		                </table>		                
