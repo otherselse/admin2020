@@ -62,22 +62,30 @@
         <div class="ui-tab3">
             <a href="tradeOrder.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">贸易订单</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="processingOrders.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工订单</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
+            <!-- <a href="processingOrders.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工订单</span><i
+                    class="goldIcon ui-tab3-dot"></i></a> -->
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 f0">
-                    <span class="pct25 dib f12">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69"
+                <div class="mb10 df">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;&emsp;&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69"
                             placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入"
+                    <span class="pct25 dib f12">
+                        <span class="searchLable"> 单位名称：</span>
+                       <input type="text" class="ui-input pct69" placeholder="请输入"
                             autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">&emsp;&emsp;金牌商家：<input type="text" class="ui-input pct69"
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;&emsp;金牌商家：</span>
+                        <input type="text" class="ui-input pct69"
                             placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">&emsp;&emsp;&emsp;订单日期：<span class="ui-input f0 pct69 range"
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;订单日期：</span>
+                        <span class="ui-input  pct69 range"
                             data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
@@ -85,23 +93,29 @@
                         </span>
                     </span>
                 </div>
-                <div class="mb10 f0">
-                    <span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;区域：<input type="text" class="ui-input pct69"
+                <div class="mb10 df">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;&emsp;&emsp;&emsp;区域：</span>
+                       <input type="text" class="ui-input pct69"
                             placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="pct25 dib f12">
-                        业务类型：<span class="input-selSearch pct69">
+                        <span class="searchLable">业务类型：</span>
+                        <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
                             <div class="search-cont">
                                 <a href="javascript:void(0)" class="search-list db ell">采购发票</a>
                             </div>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">金牌商家类型：<input type="text" class="ui-input pct69" placeholder="请输入"
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">金牌商家类型：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"
                             autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">&emsp;&emsp;应收款日期：<span class="ui-input f0 pct69 range"
-                            data-type="time">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">应收款日期：</span>
+                        <span class="ui-input  pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
@@ -110,7 +124,8 @@
                 </div>
                 <div class="dac mb10">
                     <span class="dib pct25">
-                        &emsp;&emsp;&emsp;是否结算完毕：<span class="radio">
+                        <span class="searchLable">&emsp;&emsp;&emsp;是否结算完毕：</span>
+                        <span class="radio">
                             <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                         class="radio-opacity" name="radio"></i>是</label>
                             <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -118,7 +133,8 @@
                         </span>
                     </span>
                     <span class="dib pct25">
-                        是否超期： <span class="radio">
+                        <span class="searchLable">是否超期：</span>
+                         <span class="radio">
                             <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                         class="radio-opacity" name="radio"></i>是</label>
                             <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -127,7 +143,7 @@
                     </span>
                     <span class="dib pct25">
                         <div class="df">
-                            <div style="min-width: 85px;">单据回收情况：</div>
+                            <div class="searchLable" style="min-width: 85px;">单据回收情况：</div>
                             <div class="radio">
                                 <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                             class="radio-opacity" name="radio"></i>已回收</label>
@@ -137,7 +153,8 @@
                         </div>
                     </span>
                     <span class="dib pct25">
-                        &emsp;&emsp;是否已执行： <span class="radio">
+                        <span class="searchLable"> 是否已执行： </span>
+                       <span class="radio">
                             <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                         class="radio-opacity" name="radio"></i>是</label>
                             <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -149,7 +166,7 @@
                     <div class="dac mb10">
                         <span class="dib pct25">
                             <div class="df">
-                                <div style="min-width: 85px;">采购合同是否已执行：</div>
+                                <div class="searchLable" style="min-width: 85px;">采购合同是否已执行：</div>
                                 <div class="radio">
                                     <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                                 class="radio-opacity" name="radio"></i>已回收</label>
@@ -159,7 +176,8 @@
                             </div>
                         </span>
                         <span class="dib pct25">
-                            是否代付： <span class="radio">
+                            <span class="searchLable">是否代付：</span>
+                             <span class="radio">
                                 <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                             class="radio-opacity" name="radio"></i>是</label>
                                 <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -167,7 +185,8 @@
                             </span>
                         </span>
                         <span class="dib pct25">
-                            是否实提出库： <span class="radio">
+                            <span class="searchLable">是否实提出库：</span>
+                             <span class="radio">
                                 <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                             class="radio-opacity" name="radio"></i>是</label>
                                 <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -176,7 +195,7 @@
                         </span>
                         <span class="dib pct25" style="margin-top: -5px;">
                             <div class="df">
-                                <div>&emsp;&emsp;&emsp;操作类型：</div>
+                                <div class="searchLable">&emsp;操作类型：</div>
                                 <div class="selectSingle ">
                                     <a class="m_mt10 on" href="javscript:void(0)">定购</a>
                                     <span class="pr5 m_mt10 pl5 ">|</span>
@@ -199,7 +218,8 @@
                     </div>
                     <div class="dac">
                         <span class="pct25 dib f12">
-                            订单状态：<span class="input-selSearch pct69">
+                            <span class="searchLable">订单状态：</span>
+                            <span class="input-selSearch pct69">
                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                     autocomplete="off">
                                 <div class="search-cont">
@@ -208,7 +228,8 @@
                             </span>
                         </span>
                         <span class="pct25 dib f12">
-                            超期天数：<span class="input-selSearch pct69">
+                            <span class="searchLable">超期天数：</span>
+                            <span class="input-selSearch pct69">
                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                     autocomplete="off">
                                 <div class="search-cont">
@@ -226,7 +247,7 @@
                     </button>
                 </div>
 
-                <table  >
+                <table class="ui-table tc f12 checkbox table-cw mt5" width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="11%">订单号</th>
@@ -252,15 +273,15 @@
                         <tr>
                             <td class="tl">
                                 <div class="pl5">
-                                    <a href="../report/theOrderDetails.html" title="订单金额:&nbsp;1000<br>订单重量:&nbsp;10<br>点击查看订单详情"
-                                        class="tiptop">716271</a>
+                                    <a href="../report/theOrderDetails.html"
+                                        title="订单金额:&nbsp;1000<br>订单重量:&nbsp;10<br>点击查看订单详情" class="tiptop">716271</a>
                                     <div class="col-8080 mt5">外贸业务&ensp;|&ensp;2020-10-12</div>
                                 </div>
                             </td>
                             <td class="tl">
                                 <div class="pl5">
-                                    <a href="javascript:void(0)" title="联系方式：19987856462" class="b tiptop"
-                                        onclick="showStep()">唐一菲</a>
+                                    <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop"
+                                      >唐一菲</a>
                                     <div class="mt5 dac">
                                         <img src="../images/report/gongsi.png" width="17" height="19" alt="">
                                         <a href="javascript:void(0)"
@@ -640,6 +661,17 @@
                             <td>12222<span class="col-8080">34%</span></td>
                             <td colspan="8"></td>
                         </tr>
+                        <tr height="45">
+                            <td colspan="2">所有页合计：</td>
+                            <td>21200</td>
+                            <td>201201</td>
+                            <td>122122<span class="col-8080">/212122</span></td>
+                            <td>31232</td>
+                            <td colspan="2"></td>
+                            <td>122.12</td>
+                            <td>12222<span class="col-8080">34%</span></td>
+                            <td colspan="8"></td>
+                        </tr>
                     </tfoot>
                 </table>
                 <!-- table end -->
@@ -709,16 +741,6 @@
                 area: [w, h],
                 content: path //iframe的url
             });
-        }
-
-        function showSearchDn(obj) {
-            $(".cah").toggleClass("dn");
-            $(obj).find("img").toggleClass("t_deg180");
-            if ($(".cah").attr("class").indexOf("dn") < 0) {
-                $(".bText").text("收起");
-            } else {
-                $(".bText").text("更多查询");
-            }
         }
 
         $(".ui-checkbox").click(function () {

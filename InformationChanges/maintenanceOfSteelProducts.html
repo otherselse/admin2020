@@ -139,7 +139,7 @@
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
     <div class="qtip-content" id="qtip-14-content" aria-atomic="true">
-        <div class="dom1 f12" style="display: block; visibility: visible;">
+        <div class="dom1 f12" style="display: none; visibility: visible;">
             <!-- 元/吨 -->
             <div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="输入调整后的挂牌价格"></div>
             <button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
@@ -154,7 +154,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
         setTime4();

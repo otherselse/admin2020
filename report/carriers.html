@@ -14,7 +14,6 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
 
-
 </head>
 
 <body class="showTip report">
@@ -41,11 +40,11 @@
         <div class="ui-tab3 pct100">
             <a href="reviewFormForVIPUnits1.html" class="ui-tab3-list rel"><span class="ui-tab3-text">金牌商家</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="reviewFormForVIPUnits2.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">客户单位</span><i
+            <a href="reviewFormForVIPUnits2.html" class="ui-tab3-list rel"><span class="ui-tab3-text">客户单位</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
             <a href="reviewFormForVIPUnits3.html" class="ui-tab3-list rel"><span class="ui-tab3-text">供应商</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="carriers.html" class="ui-tab3-list rel"><span class="ui-tab3-text">承运商</span><i
+            <a href="carriers.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">承运商</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content ovh minH">
@@ -95,86 +94,87 @@
                 <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
-                            <th width="3%">序号</th>
-                            <th width="12%">单位名称</th>
+                            <th width="6%">金牌商家</th>
                             <th width="4%">地区</th>
                             <th width="4%">订单数</th>
-                            <th width="6%">超期订单数</th>
-                            <th width="7%">平均超期</th>
-                            <th width="8%">
+                            <th width="7%">超期未收款</th>
+                            <th width="7%">超期未收票</th>
+                            <th width="7%">超期库存(吨)</th>
+                            <th width="5%">累计分红</th>
+                            <th width="6%">合作客户数</th>
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     出库总重量<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="8%">
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     销售总额<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="9%">
+                            <th width="6%">库存销售成本</th>
+                            <th width="8%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     预估税前毛利<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="12%">
-                                平均税前毛利率(定购)
-                            </th>
-                            <th width="10%">
-                                平均溢价比率(备货)
-                            </th>
-                            <th width="10%" colspan="2">合作金牌商家</th>
+                            <th width="9%">平均税前毛利率(定购)</th>
+                            <th width="8%">备货总额度/余额度</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
-                        <tr class="openTr">
-                            <td>1</td>
-                            <td>
-                                <div class="pl20 tl">
-                                    <a href="#">简简单单供应链服务</a>
+                        <tr>
+                            <td class="tl">
+                                <div class="pl10">
+                                    <a href="goldRegInfo.html">袁大海</a><br>合伙式
                                 </div>
                             </td>
                             <td>上海</td>
-                            <td>220</td>
-                            <td>0</td>
-                            <td>0天</td>
-                            <td>96吨</td>
+                            <td><span class="blue">220</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td>123,345.34</td>
+                            <td>23</td>
+                            <td>139,344</td>
                             <td>139,344.33元</td>
-                            <td>139,344.33</td>
+                            <td>139,344.33元</td>
+                            <td>139,344.33元</td>
                             <td>0.234340</td>
-                            <td>0.020200</td>
-                            <td width="5%">3</td>
-                            <td width="5%"><a href="javascript:void(0)" onclick="openDetails(this)">查看</a></td>
+                            <td>
+                                <div class="tl pl10 tipclick onT" qtip-dom="dom1">
+                                    <div class="" >
+                                        100000 <img src="../images/report/xiug.png" class="menuhook  ml10 vm altX" width="17" height="17" alt="">
+                                    </div>
+                                    <span class="col-8080">329299</span>
+                                </div>
+                            </td>
                         </tr>
-                        <tr class="hideTr dn">
-                            <td colspan="13">
-                                <table class="auto ui-table mt20" width="98%">
-                                    <thead>
-                                        <tr>
-                                            <th width="9%">金牌商家</th>
-                                            <th width="11%">成交吨位</th>
-                                            <th width="11%">成交金额</th>
-                                            <th width="12%">未回款金额</th>
-                                            <th width="12%">逾期未回款金额</th>
-                                            <th width="11%">平均超期天数</th>
-                                            <th width="11%">合作时长</th>
-                                            <th width="11%">单位联系人</th>
-                                            <th width="11%">联系人电话</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>孙晶雪</td>
-                                            <td>24.34</td>
-                                            <td>100,344</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0天</td>
-                                            <td>433天</td>
-                                            <td>沈经理</td>
-                                            <td>13945582484</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <tr>
+                            <td class="tl">
+                                <div class="pl10">
+                                    <a href="goldRegInfo.html">袁大海</a><br>综合型合伙式
+                                </div>
+                            </td>
+                            <td>上海</td>
+                            <td><span class="blue">220</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td><span class="red">100,334.44</span></td>
+                            <td>123,345.34</td>
+                            <td>23</td>
+                            <td>139,344</td>
+                            <td>139,344.33元</td>
+                            <td>139,344.33元</td>
+                            <td>139,344.33元</td>
+                            <td>0.234340</td>
+                            <td>
+                                <div class="tl pl10 tipclick onT" qtip-dom="dom1">
+                                    <div class="" >
+                                        100000 <img src="../images/report/xiug.png" class="menuhook  ml10 vm altX" width="17" height="17" alt="">
+                                    </div>
+                                    <span class="col-8080">329299</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -183,6 +183,13 @@
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->
+
+        <div class="f12 dom1 dn">
+            <div class="14 mb2">修改备货总额度</div>
+            <input type="text" class="ui-input mb10" placeholder="请输入" autocomplete="off"><br>
+            <button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">确认</button>
+            <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+        </div>
     </div><!-- rightBar end -->
 
     <script type="text/javascript" src="../js/admin.js"></script>
@@ -194,14 +201,32 @@
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist").eq(13).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
+        
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
+                },
+            });
+            
+            $('.altX').click(function(event){
+                event.stopPropagation();
+                $(this).parents(".onT").click();
+            });
         })
-        //展开明细
-        function openDetails(obj) {
-            $(obj).parents(".openTr").next("tr").toggle()
-        }
-
-
     </script>
 </body>
 

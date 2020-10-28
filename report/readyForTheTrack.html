@@ -31,7 +31,7 @@
     <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
     <script type="text/javascript" src="../js/leftBar.js"></script>
     <!-- 左侧菜单 -->
-    
+
     <div class="rightBar">
         <div class="nav ovh">
             <div class="l gga">
@@ -53,127 +53,130 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">执行状态：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle">
-                                    <a class="on" href="javscript:void(0)">执行中</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">结束</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">操作类型：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle">
-                                    <a class="on" href="javscript:void(0)">自营</a>
-                                    <span class="pr5 pl5 ">|</span>
-                                    <a href="javscript:void(0)">非自营</a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">备货类型：</td>
-                            <td class="cont" width="37%">
-                                <div class="dib selectSingle">
-                                    <a class="m_mt10 on" href="javscript:void(0)">金牌商家备注</a>
-                                    <span class="pr5 m_mt10 pl5 ">|</span>
-                                    <a class="m_mt10" href="javscript:void(0)">客户单位备注</a>
-                                    <span class="pr5 m_mt10 pl5 ">|</span>
-                                    <a class="m_mt10" href="javscript:void(0)">金牌商家任你押</a>
-                                    <span class="pr5 m_mt10 pl5 ">|</span>
-                                    <a class="m_mt10" href="javscript:void(0)">客户单位任你押</a>
-                                </div>
-                            </td>
-                            <td class="title" width="13%">合同是否回收：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">是否入库：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                            <td class="title" width="13%">是否有库存：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title" width="13%">是否已付款：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                            <td class="title" width="13%">盈利状态：</td>
-                            <td class="cont" width="37%">
-                                <span class="radio ml5">
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
+                <div class="mb10 df">
+                    <span class="dib pct25">
+                        <span class="searchLable">&emsp;是否入库：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
                     </span>
+                    <span class="dib pct25">
+                        <span class="searchLable">执行状态：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>执行中</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>结束</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        <span class="searchLable">操作类型：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>自营</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>非自营</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        <span class="searchLable">是否有库存：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;金牌商家：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">供应商：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">区域：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        <span class="searchLable">合同签订时间：</span>
+                        <span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+                <div class="mb10 dac">
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">&emsp;&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25 ">
+                        <span class="searchLable">合同是否回收：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25 ">
+                        <span class="searchLable">是否已付款：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="dib pct25 ">
+                        <span class="searchLable">盈利状态：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="cah dn">
+                    <div class="df mb10 ">
+                        <span class="pct25 dib f12">
+                            <span class="searchLable min-w70">采购合同号：</span>
+                            <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                        </span>
+                        <span class="f1 mt5">
+                            <div class="df">
+                                <div class="min-w60 searchLable">备货类型：</div>
+                                <div class="selectSingle">
+                                    <a class="mb10 on" href="javscript:void(0)">金牌商家备注</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">客户单位备注</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">金牌商家任你押</a>
+                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <a class="mb10" href="javscript:void(0)">客户单位任你押</a>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
 
-                    <span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12"> 采购合同号：<input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12"> 供应商：<input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
+                <div class="mt20 mb10 tc">
+                    <button type="button" class="ui-button mr10">查询</button>
+                    <button type="button" class="ui-button" onclick="showSearchDn(this)" data-type="clear">
+                        <span class="bText dib mr5">更多查询</span>
+                        <img src="../images/report/fan.png" width="10" height="9" alt="">
+                    </button>
                 </div>
-                <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">&emsp;&emsp;区域：<input type="text" class="ui-input pct69"
-                            placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib f12" style="width:75%;">
-                        <div>
-                            <span class="dib pct33">
-                                入库日期：<span class="ui-input f0 pct69 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                        autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
-                                        placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-                                </span>
-                            </span>
-                            <button type="button" class="ui-button mr10">查询</button>
-                            <button type="button" class="ui-button " data-type="clear">清空</button>
-                        </div>
-                    </span>
-                </div>
-                <div class="tc mt20 mb10">
 
-                </div>
                 <div class="df">
                     <div style="flex: 1;"></div>
                     <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
@@ -217,18 +220,18 @@
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
-                            <td><a href="javascript:void(0)" onclick="showStep()">59332</a></td>
-                            <td>李思思</td>
+                            <td><a href="theOrderDetails.html">59252</a></td>
+                            <td><a href="">李思思</a></td>
                             <td>上海</td>
                             <td>金牌商家备货</td>
                             <td>2020-04-05 13:05:08</td>
-                            <td>乐乐集团有限公司</td>
+                            <td class="tl"><a href="">乐乐集团有限公司</a></td>
                             <td>10</td>
                             <td>1.000</td>
                             <td>543</td>
                             <td>20</td>
                             <td>3%</td>
-                            <td>33.3%</td>
+                            <td>25.3%</td>
                             <td>10%</td>
                             <td>执行中</td>
                             <td><a href="javascript:void(0)" class="tipclick" qtip-dom="dom1" data-hasqtip="17">未回收</a>
@@ -274,7 +277,7 @@
                                                 <td>聚方库</td>
                                                 <td>10</td>
                                                 <td>10</td>
-                                                <td><a href="">332442</a></td>
+                                                <td><a href="">252442</a></td>
                                                 <td>2020-08-19 13:20:36</td>
                                                 <td>10</td>
                                                 <td>20000</td>
@@ -289,7 +292,7 @@
                             </td>
                         </tr><!-- 隐藏内容end -->
                         <tr>
-                            <td>59332</td>
+                            <td>59252</td>
                             <td>李思思</td>
                             <td>上海</td>
                             <td>金牌商家备货</td>
@@ -300,7 +303,7 @@
                             <td>543</td>
                             <td>20</td>
                             <td>3%</td>
-                            <td>33.3%</td>
+                            <td>25.3%</td>
                             <td>10%</td>
                             <td>执行中</td>
                             <td>已回收</td>
