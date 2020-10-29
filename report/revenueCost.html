@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>出入库跟踪表-报表管理-乐刚智能云系统</title>
+    <title>经营报表取数表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
@@ -37,12 +37,13 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">出入库跟踪表</span>
+                <span class="g28">经营报表取数表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
+
         <div class="ui-tab3">
             <a href="revenueCost.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">收入/成本</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
@@ -53,6 +54,7 @@
             <a href="differencesAdjust.html" class="ui-tab3-list rel"><span class="ui-tab3-text">差异调整</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
+
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <table width="100%" class="mt5">
@@ -178,7 +180,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
         function showDiv_lrl(obj) {
