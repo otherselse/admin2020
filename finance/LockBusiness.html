@@ -108,7 +108,7 @@
 							        <td width="8%" ><span class="numFormat">0</span></td>
 							        <td width="8%" ><a class="numFormat" href="javascript:void(0)" onclick="layerED()">234340</a></td>
 							        <td width="8%" ><span class="ui-icon-circles mr10" type="green">已锁汇</span></td>
-							        <td width="8%"><a href="javascript:void(0)" onclick="layershbl()">结汇办理</a></td>
+							        <td width="8%"><a href="javascript:void(0)" onclick="layershED()">结汇办理</a></td>
 								</tr>
 		                    </tbody>	                    
 		                </table>		                
@@ -155,7 +155,25 @@
 		}
 
 		function layershED(){
-			
+			layer.open({
+				type: 2,
+				title: '锁汇办理确认',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['600px', '400px'],
+				content: 'lockyw.html' //iframe的url
+			});
+		}
+
+		function layershED(){
+			layer.open({
+				type: 2,
+				title: '结汇办理',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['600px', '400px'],
+				content: 'jhbl.html' //iframe的url
+			});
 		}
 
 
