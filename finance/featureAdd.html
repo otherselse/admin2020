@@ -152,9 +152,53 @@
 	</div><!-- rightBar end -->
 
 
+	<div class="addFeature p20 dn f12">
+		<div class="mb10">
+			<span class="searchLable vt">费用类型：</span>
+			<span class="pct90 dib vt">
+				<div class="ovh">
+					<a class="flineMList" href="javascript:void(0)">收入</a>
+					<a class="flineMList" href="javascript:void(0)">成本</a>
+					<a class="flineMList" href="javascript:void(0)">制造费用（加工成本）</a>
+					<a class="flineMList" href="javascript:void(0)">税金及附加</a>								
+				</div>
+				<div class="slineMenu">
+					<a class="slineMList" href="javascript:void(0)">贸易类收入</a>
+					<a class="slineMList" href="javascript:void(0)">纯加工收入</a>
+					<a class="slineMList" href="javascript:void(0)">仓库收入</a>
+				</div>
+			</span>
+		</div>
+		<div class="mb10 f0 ">
+			<span class="pct25 dib f12 "><span class="searchLable">费用区域：</span><span class="input-selSearch pct69">
+					<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+					<div class="search-cont">
+						<a href="javascript:void(0)" class="search-list db ell">外贸</a>
+						<a href="javascript:void(0)" class="search-list db ell">上海</a>
+					</div>
+				</span>
+			</span>
+			<span class="pct25 dib f12 searchLable">金额(元)：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+			</span>
+			<span class="pct25 dib f12 searchLable">入账日期：
+				<span class="ui-input pct69" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span>
+			</span>
+			<span class="pct25 dib f12 radio"><span class="searchLable">费用类型：</span>
+        		<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>贸易</label>
+			<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工</label>
+			</span>
+		</div>
+		<div class="">
+			<span class="searchLable">&emsp;&emsp;备注：</span>
+			<textarea class="ui-textarea pct90" rows="3"></textarea>
+		</div>
 
-
-	
+      
+        <div class="mt20 tc">
+        	<button type="button" class="ui-button mr10">确定</button>
+            <button type="button" class="ui-button " data-type="clear" onclick="closelayerAll()">取消</button>
+        </div>
+	</div>	
 	
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -180,9 +224,22 @@
 			
 
 		})
+
+
+		function editFeatureFee(){
+			layer.open({
+				type: 1,
+				title: '编辑',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '400px'],
+				content: $(".addFeature")
+			});
+		}
 		
-
-
+		function closelayerAll(){
+			layer.closeAll();
+		}
 		
 
 	</script>
