@@ -107,7 +107,6 @@ for(var i=0;i<menu_Data.length;i++){
 			_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
 			var _menuStrV='';
 			for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
-				console.log(menu_Data[i].menuList[j].smallM[v].href)
 				if(menu_Data[i].menuList[j].smallM[v].hide){
 					_menuStrV+='<a class="mDListShow" style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}else{
