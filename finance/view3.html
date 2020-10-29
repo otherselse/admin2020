@@ -68,7 +68,36 @@
 								autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
 								placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
 						</span>
+				</div>
+				<div class="mb10 f0 ">
+					<span class="pct22 dib f12 searchLable">金牌商家区域：<input type="text" class="ui-input pct59"
+							placeholder="请输入" autocomplete="off">
 					</span>
+					<span class="pct22 dib f12">
+						<span class="searchLable">订单分红类型：</span><span class="input-selSearch pct59">
+							<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell">合伙订单分红</a>
+								<a href="javascript:void(0)" class="search-list db ell">加盟订单分红</a>
+							</div>
+						</span>
+					</span>
+					<span class="pct22 dib f12">
+						<span class="searchLable">业务类型：</span><span class="input-selSearch pct59">
+							<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell">现款业务</a>
+								<a href="javascript:void(0)" class="search-list db ell">款到卸货</a>
+								<a href="javascript:void(0)" class="search-list db ell">欠款业务</a>
+							</div>
+						</span>
+					</span>
+
+					<span class="pct30 dib f12">红利核算操作日期：<span class="ui-input f0 pct69 range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+								autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+								placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						</span>
 				</div>
 				<div class="mb10 f0 searchLable">
 					<span class="pct22 dib f12">金牌商家区域：<input type="text" class="ui-input pct59" placeholder="请输入"
@@ -154,13 +183,13 @@
 
 
 				<div class="df mb5">
-                    <div style="flex: 1;"></div>
-                    <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
-                        表头配置
-                        <img src="../images//report/sl1.png" class="mr5" alt="">
-                    </a>
+					<div style="flex: 1;"></div>
+					<a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
+						表头配置
+						<img src="../images//report/sl1.png" class="mr5" alt="">
+					</a>
 				</div>
-				
+
 				<div class="lgui-table-box checkbox m-tabLimitSCroll">
 					<div class="lgui-table-header">
 						<table class="ui-table tc f12 " width="100%">
@@ -194,8 +223,8 @@
 							          <th width="3%">附加税</th>
 							          <th width="3%">个人所得税</th>
 							          <th width="3%">企业所得税</th> -->
-									<th width="3%">商互通成本</th>
-									<th width="3%">商互通收入</th>
+									<th width="4%">商互通成本</th>
+									<th width="4%">商互通收入</th>
 									<th width="3%">
 										<lable class="jpsj_Sort" onclick="setOrderCol('x.grossProfit',this)">毛利金额<i
 												data="orderBy" id="Ix.grossProfit" class=""></i>
@@ -204,14 +233,14 @@
 									<th width="3%">税前毛利</th>
 									<th width="3%">余卷重量</th>
 									<th width="3%">G2G金额</th>
-									<th width="3%">是否允许核算红利</th>
-									<th width="3%">是否已核算红利</th>
-									<th width="3%">结算完成时间</th>
+									<th width="5%">是否允许核算红利</th>
+									<th width="5%">是否已核算红利</th>
+									<th width="4%">结算完成时间</th>
 									<th width="3%">业务类型</th>
 									<th width="3%">操作类型</th>
 									<th width="3%">分红金额</th>
 									<th width="4%">实际出口日期</th>
-									<th width="3%">操作</th>
+									<th width="4%">操作</th>
 								</tr>
 								</tr>
 							</thead>
@@ -222,13 +251,14 @@
 						<table class="ui-table tc f12 " width="100%">
 							<tbody class="ui-thover">
 								<tr>
-									<td width="3%">上海</td>
-									<td width="3%">之华</td>
-									<td width="3%">
+									<td width="4%">
 										<a href="javascript:showorder('AE8864D0CE2A41CAE05371001FAC5CAE','list.action','61080')"
 											title="订单金额:&nbsp;19000.0<br>订单重量:&nbsp;19.0<br>点击查看订单详情"
 											class="tiptop">61080</a>
 									</td>
+									<td width="3%">上海</td>
+									<td width="3%">之华</td>
+
 									<td width="3%"><a href="javascript:void(0)" title="销售收款登记金额：1800.0 "><span
 												class="numFormat red">1800</span></a>
 									</td>
@@ -236,23 +266,23 @@
 												class="numFormat red">0</span></a></td>
 									<td width="3%"><a href="javascript:void(0)" title="费用付款登记金额：0.0"><span
 												class="numFormat ">0</span></a></td>
-									<td width="4%">
+									<td width="3%">
 										<a href="javascript:void(0)" title="销售返实提结算重量：0.0">
 											<span class="numFormat">0</span>
-										</a>/吨
+										</a>
 									</td>
-									<td width="5%"><a href="javascript:void(0)" title="销售返实提结算金额：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="销售返实提结算金额：0.0"><span
 												class="numFormat">0</span></a></td>
-									<td width="5%"><a href="javascript:void(0)" title="采购入库结算付款金额：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="采购入库结算付款金额：0.0"><span
 												class="numFormat">0</span></a></td>
-									<td width="5%"><a href="javascript:void(0)" title="库存销售金额：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="库存销售金额：0.0"><span
 												class="numFormat">0</span></a></td>
-									<td width="5%"><a href="javascript:void(0)" title="包含仓库加工短驳运输费用：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="包含仓库加工短驳运输费用：0.0"><span
 												class="numFormat">0</span></a></td>
-									<td width="5%">0</td>
-									<td width="5%"><a href="javascript:void(0)" title="资金占用利息：0.0"><span
+									<td width="3%">0</td>
+									<td width="4%"><a href="javascript:void(0)" title="资金占用利息：0.0"><span
 												class="numFormat">0</span></a></td>
-									<td width="5%">
+									<td width="4%">
 										<a href="javascript:void(0)"
 											title="增值税:&nbsp;0.0<br/>附加税:&nbsp;0.0<br/>印花税:&nbsp;0.48<br/>企业所得税:&nbsp;0.0<br/>个人所得税:&nbsp;<span class=''>未结算分红，未计算个税</span>"><span
 												class="redm"><span class="numFormat red">0.48</span></span></a>
@@ -264,9 +294,9 @@
 									<td  width="3%">0.0</td>
 									<td  width="3%"><span class="">--</span></td>
 									<td  width="3%">0.0</td> -->
-									<td width="3%"><a href="javascript:void(0)" title="商户通成本：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="商户通成本：0.0"><span
 												numtype="numFormat">0</span></a></td>
-									<td width="3%"><a href="javascript:void(0)" title="商户通收入：0.0"><span
+									<td width="4%"><a href="javascript:void(0)" title="商户通收入：0.0"><span
 												numtype="numFormat">0</span></a></td>
 									<td width="3%"><a
 											href="javascript:showorder('AE8864D0CE2A41CAE05371001FAC5CAE','list.action','61080');"
@@ -282,17 +312,18 @@
 												numtype="numFormat">0</span></a>
 									</td>
 
-									<td width="3%">
+									<td width="5%">
 										<a href="javascript:void(0)" title="是否允许核算红利">禁止</a>
 									</td>
-									<td width="3%">否</td>
-									<td width="3%">----</td>
+									<td width="5%">否</td>
+									<td width="4%">----</td>
 									<td width="3%">现款业务</td>
 									<td width="3%">定购</td>
 									<td width="3%"></td>
 									<td width="4%"></td>
-									<td width="3%"><a href="javascript:void(0)" title="该订单未操作完">未结束</a><a
-											href="javascript:void(0);" onclick="javascript:toOrderRate(61080);">|利息</a>
+									<td width="4%"><a href="javascript:void(0)" title="该订单未操作完" class="g28">未结束</a><span
+											class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0);"
+											onclick="javascript:toOrderRate(61080);">利息</a>
 									</td>
 								</tr>
 
@@ -301,17 +332,29 @@
 								<tr height="40">
 									<td colspan="33">
 										当前页合计：
-										已收票不含税金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
-										已收票进项税额：<span class="numFormat bkall red mr20">1,232,131,323</span>
-										已收票金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+										毛利金额：<span class="numFormat bkall red mr20">123213323</span>
+										G2G金额：<span class="numFormat bkall red mr20">1323123</span>
+										分红金额：<span class="numFormat bkall red mr20">1323123</span>
 									</td>
 								</tr>
 								<tr height="40">
 									<td colspan="33">
 										所有页合计：
-										已收票不含税金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
-										已收票进项税额：<span class="numFormat bkall red mr20">1,232,131,323</span>
-										已收票金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+										毛利金额：<span class="numFormat bkall red mr20">13213323</span>
+										G2G金额：<span class="numFormat bkall red mr20">1232131323</span>
+										分红金额：<span class="numFormat bkall red mr20">1232131323</span>
+									</td>
+								</tr>
+								<tr height="40">
+									<td colspan="33">
+										销售已收款:<span class="numFormat red">0</span>&nbsp;&nbsp;采购已付款:<span
+											class="numFormat red">0</span>&nbsp;&nbsp;物流结算付款:<span
+											class="numFormat redy">0</span>&nbsp;&nbsp;
+										销售实提重量：<span class="numFormat red">0</span>&nbsp;&nbsp;销售收款金额：<span
+											class="numFormat red">0</span>
+										&nbsp;&nbsp;采购付款金额：<span class="numFormat red">0</span>&nbsp;&nbsp;物流付款金额：<span
+											class="numFormat red">0</span>
+										&nbsp;&nbsp;毛利金额：<span class="numFormat red">0</span>
 									</td>
 								</tr>
 
@@ -324,8 +367,36 @@
 
 				<script type="text/javascript" src="../js/pagelist.js"></script>
 
+				</tbody>
+				<tfoot class="bgfa">
+					<tr height="40">
+						<td colspan="33">
+							当前页合计：
+							已收票不含税金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+							已收票进项税额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+							已收票金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+						</td>
+					</tr>
+					<tr height="40">
+						<td colspan="33">
+							所有页合计：
+							已收票不含税金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+							已收票进项税额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+							已收票金额：<span class="numFormat bkall red mr20">1,232,131,323</span>
+						</td>
+					</tr>
+
+				</tfoot>
+
+				</table>
 			</div>
-		</div><!-- ui-content end -->
+
+		</div><!-- table end -->
+
+		<script type="text/javascript" src="../js/pagelist.js"></script>
+
+	</div>
+	</div><!-- ui-content end -->
 	</div><!-- rightBar end -->
 
 	<script type="text/javascript" src="../js/admin.js"></script>
@@ -340,17 +411,21 @@
 			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
-	
-		function showLayer() {
-            layer.open({
-                type: 2,
-                title: '表头配置',
-                shadeClose: true,
-                shade: 0.4,
-                area: ['600px', '48%'],
-                content: 'vieToReadyForTheTrack.html' //iframe的url
-            });
-        }
+
+		function toOrderRate() {
+			layer.open({
+				type: 2,
+				title: '利息明细',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['800px', '400px'],
+				content: 'grossRateDay.html' //iframe的url
+			});
+		}
+
+
+
+
 	</script>
 </body>
 

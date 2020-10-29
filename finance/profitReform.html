@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>订单提成-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">订单提成</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="ui-tab3">
+				<a href="view3.html" class="ui-tab3-list rel "><span class="ui-tab3-text">贸易订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitReform.html" class="ui-tab3-list rel "><span class="ui-tab3-text">月度分红</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="procOrderCommission.html" class="ui-tab3-list rel "><span class="ui-tab3-text">加工订单提成</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="profitReform.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">分红跟踪表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="monthProfitIncome.html" class="ui-tab3-list rel"><span class="ui-tab3-text">劳务报酬个税申报</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">				
+				<div class="p20 f12">
+					<div class="mb10 f0 searchLable">					
+						<span class="pct30 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct30 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct30 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+					</div>
+
+
+					<div class="mb10 f0 ">
+						<span class="pct30 dib f12 searchLable">区&emsp;域：<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>									
+								</div>
+							</span>
+						</span>
+						<span class="pct30 dib f12 radio"><span class="searchLable">订单类型：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>内贸</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>外贸</label>
+						</span>
+						<span class="pct30 dib f12"><span class="searchLable">&emsp;&emsp;帮派：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">111帮</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海帮</a>									
+								</div>
+							</span>
+						</span>
+
+					</div>
+
+
+					<div class="mb10 f0">
+						<span class="dib f12 radio pct30"><span class="searchLable">订单分红类型：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>合伙订单分红</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加盟订单分红</label>
+						</span>
+						<span class="dib f12 radio pct30"><span class="searchLable">是否已提成：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>
+						<span class="dib f12 radio pct30"><span class="searchLable">是否允许提成：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>						
+						
+					</div>
+					<div class="mb10 f0">					
+						<span class="pct30 dib f12 searchLable">订单分红日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
+						</span></span>	
+						<span class="pct30 dib f12 searchLable">订单结算日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
+						</span></span>	
+						<button type="button" class="ui-button">查询</button>
+					</div>
+
+	                <!-- search end -->
+					
+					<div class="lgui-table-box mt30  m-tabLimitSCroll">
+						<div class="lgui-table-header" >
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr class="fixTr">
+								      <th width="3%">序号</th>
+									  <th width="3%">区域</th>
+									  <th width="5%">金牌商家</th>
+									  <th width="8%">订单号</th>
+									  <th width="3%">已收款</th>
+									  <th width="3%">已付款</th>
+									  <th width="4%">实提量</th>
+									  <th width="4%">出库销售收款</th>
+									  <th width="4%">结算入库付款</th>
+									  <th width="4%">库存销售成本</th>
+									  <th width="4%">费用结算付款</th>
+									  <th width="4%">资金占用利息</th>
+									  <th width="4%">税金</th>
+									  <th width="4%">商互通成本</th>
+									  <th width="4%">商互通收入</th>
+									  <th width="4%">咨询分红</th>
+									  <th width="4%">毛利金额</th>
+									  <th width="4%">G2G金额</th>
+									  <th width="4%">结算分红金额</th>
+									  <th width="4%">合作分红金额</th>
+									  <th width="4%">分红金额</th>
+									  <th width="3%">毛利率</th>
+									  <th width="3%">分红模式</th>
+									  <th width="3%">是否提成</th>
+									  <th width="3%">提成时间</th>
+									  <th width="3%">操作</th>
+								  </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	 <tr>
+									<td width="3%">1</td>
+									<td width="3%">上海</td>
+									<td width="5%">尹相春</td>
+									<td width="8%">										
+											<a href="javascript:showStep()" title="点击查看订单详情">61054</a>						
+											<a href="javascript:showStep()" title="点击查看订单详情" >61054</a>
+									</td>
+									<td width="3%" class="numFormat">22000</td>
+									<td width="3%" class="numFormat">20000</td>
+									<td width="4%" class="numFormat">10</td>
+									<td width="4%" class="numFormat">22000</td>
+									<td width="4%" class="numFormat">20000</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%"><a href="javascript:void(0)" title="增值税:&nbsp;230.09<br/>附加税:&nbsp;13.81<br/>印花税:&nbsp;11.15<br/>企业所得税:&nbsp;0<br/>
+									个人所得税:&nbsp;<span class=''>--</span> ">
+									<span class="redm" class="numFormat">444.04</span></a></td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">1555.96</td>
+									<td width="4%" class="numFormat">3300</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="4%" class="numFormat">0</td>
+									<td width="3%">
+									
+										
+										
+											7.07%
+										
+									
+									</td>
+									<td width="3%">阶梯分红</td>
+									<td width="3%">否</td>
+									<td width="3%">--</td>
+									<td width="3%">
+									   <a href="javscript:void(0)" onclick="showTrMore(this)">查看</a>
+									</td>
+							  </tr>
+							  <tr class="hideTr dn">
+							  	<td colspan="26">
+
+							  		<table width="98%"  class="ui-table tc f12 auto">
+							  			<thead>
+							  			<tr>
+									          <th width="5%">序号</th>
+									          <th width="5%">订单号</th>
+									          <th width="5%">已收款</th>
+									          <th width="5%">已付款</th>
+									          <th width="5%">实提量</th>
+									          <th width="6%">出库销售收款</th>
+									          <th width="6%">结算入库付款</th>
+									          <th width="6%">库存销售成本</th>
+									          <th width="6%">费用结算付款</th>
+									          <th width="6%">资金占用利息</th>
+									          <th width="5%">商互通成本</th>
+									          <th width="5%">商互通收入</th>
+									          <th width="5%">毛利金额</th>
+											  <th width="5%">G2G金额</th>
+									          <th width="5%">是否结算完成</th>
+									  </tr>
+									</thead>
+									  <tbody>
+									  
+									  <tr>
+									  		<td >1</td>
+											<td >61054</td>
+											<td  class="numFormat">22000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">10.0</td>
+											<td  class="numFormat">2000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">20000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">21744.95</td>
+											<td  class="numFormat">3300.0</td>
+											<td >是</td>
+									  </tr>
+									  
+									  
+									  <tr>
+									  		<td >2</td>
+											<td >61051</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">20,000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">20000.0</td>
+											<td  class="numFormat">-20000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">0.0</td>
+											<td  class="numFormat">-20000.0</td>
+											<td  class="numFormat">0.0</td>
+											<td >是</td>
+									  </tr>
+									  
+									    
+									  </tbody></table>
+							  	</td>
+							  </tr>
+		                    </tbody>
+		                    <tfoot>
+		                    	<tr height="45">
+									<td  colspan="16">当前页合计：</td>
+									<td  class="numFormat red">51407.4</td>
+									<td  class="numFormat red">16881</td>
+									<td  class="numFormat red">0</td>
+									<td  class="numFormat red">0</td>
+									<td  class="numFormat red">0</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+								</tr>
+								<tr>
+									<td  colspan="16">所有页合计：</td>
+									<td  class="numFormat red">754256776.48</td>
+									<td  class="numFormat red">3051061.77</td>
+									<td  class="numFormat red">-3935693.62</td>
+									<td  class="numFormat red">210492547.03</td>
+									<td  class="numFormat red">227451670.69</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+									<td >--</td>
+								</tr>
+		                    </tfoot>
+		                    
+		                </table>		                
+	            	</div>
+	                
+	            </div>
+	            
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+		
+
+
+
+	</script>
+</body>
+</html>

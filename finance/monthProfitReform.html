@@ -46,7 +46,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct22 dib f12">
+						<span class="pct22 dib f12 searchLable">
 							区域：<span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
 								<div class="search-cont">
@@ -61,18 +61,18 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+						<span class="pct22 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct22 dib f12">分红月份：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct22 dib f12 searchLable">分红月份：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
 
-						<span class="dib f12 radio">是否有效：
+						<span class="dib f12 radio"><span class="searchLable">是否有效：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>全部</label>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有效</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>无效</label>
 						</span>
 					</div>
 					<div class="mb10">					
-							金牌商家类型：<span class="dib  single mr40">
+							<span class="searchLable">金牌商家类型：</span><span class="dib  single mr40">
                   			<a class="ui-option mr5 tc" href="javscript:void(0)">内贸合伙式</a>
                   			<a class="ui-option mr5 tc" href="javscript:void(0)">外贸合伙式</a>
                   			<a class="ui-option mr5 tc" href="javscript:void(0)">加盟式</a>
@@ -85,6 +85,68 @@
 					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll">
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                    	<tr class="fixTr">
+						          <th width="3%" rowspan="3">序号</th>
+						          <th width="4%" rowspan="3">区域</th>
+						          <th width="4%" rowspan="3">金牌商家</th>
+						          <th width="4%" rowspan="3">金牌商家类型</th>
+						          <th width="4%" rowspan="3">有效/无效</th>
+						          <th width="4%" rowspan="3">分红月份</th>
+						          <th width="4%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('profitMoney',this)">税前毛利<i class="goldIcon icon-sort vm ml5" data="orderBy" id="profitMoney"></i></label>
+						          </th>
+						          <th width="4%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('addRate',this)">增值税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="addRate"></i></label>
+						          </th>
+						          <th width="4%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('elseRate',this)">附加税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="elseRate"></i></label>
+						          </th>
+						          <th width="4%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('printRate',this)">印花税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="printRate"></i></label>
+						          </th>
+						           <th width="5%" rowspan="3">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('personRate',this)">个人所得税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="personRate"></i></label>
+						           </th>
+						           <th width="4%" rowspan="3">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('wagepersonalrate',this)">工资个税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="wagepersonalrate"></i></label>
+						           </th>
+						           <th width="4%" rowspan="3">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('realRate',this)">实扣个税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="realRate"></i></label>
+						           </th>
+						          <th width="5%" rowspan="3">
+						           	<label class="sort-list dib poi" onclick="setOrderCol('companyRate',this)">企业所得税<i class="goldIcon icon-sort vm ml5" data="orderBy" id="companyRate"></i></label>
+						          </th>
+						          <th width="5%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('capitalMoney',this)">资金占用<i class="goldIcon icon-sort vm ml5" data="orderBy" id="capitalMoney"></i></label>
+						          </th>
+						          <th width="5%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('profit',this)">税后毛利<i class="goldIcon icon-sort vm ml5" data="orderBy" id="profit"></i></label>
+						           </th>
+						          <th width="5%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('grossType',this)">适用分红比例<i class="goldIcon icon-sort vm ml5" data="grossType" id="profitMoney"></i></label>
+						          </th>
+						           <th width="16%" colspan="4">
+						              业务拓展费用
+						          </th>
+						          <th width="5%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('payGross',this)">预计分红<i class="goldIcon icon-sort vm ml5" data="orderBy" id="payGrossN"></i></label>
+						          </th>
+						          <th width="5%" rowspan="3">
+						          	<label class="sort-list dib poi" onclick="setOrderCol('payGross',this)">实际分红<i class="goldIcon icon-sort vm ml5" data="orderBy" id="payGross"></i></label>
+						          </th>
+						          <th width="5%" rowspan="3">备注</th>
+						         
+						  </tr>
+		                    	<tr class="fixTr">
+		                    	  <th  width="4%">系统规定的比例金额</th>
+		                    	  <th width="4%">确认报销金额</th>
+		                    	  <th width="4%">是否报销</th>
+		                    	  <th width="4%">实际报销金额</th>
+                    	      </tr>
+		                    </thead>
+		                </table>
+							<!-- <table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                    	<tr class="fixTr">
 						          <th width="3%" rowspan="2">序号</th>
@@ -140,7 +202,7 @@
 						  </tr>
 		                    </thead>
 		                </table>
-
+ -->
 						</div>
 						<div class="lgui-table-body mt-1">
 							<table class="ui-table tc f12 " width="100%">
