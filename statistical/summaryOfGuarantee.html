@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>金牌商家担保类-统计管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <style>
+        .qtip {
+            max-width: 680px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            .m_index2 {
+                text-indent: 0em;
+            }
+        }
+    </style>
+</head>
+
+<body class='showTip'>
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                统计管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">金牌商家担保类</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-tab3">
+            <a href="goldMedalGuarantee.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保/承诺函上传</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="summaryOfGuarantee.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">担保/承诺函汇总</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="useOfGuaranteeLimit.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保额度使用汇总</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="fix f12 bgwh ui-content ovh minH">
+            <div class="ui-tab4 mt20 ml20">
+                <a href="summaryOfGuarantee.html" class="ui-tab4-list on">担保函汇总</a>
+                <a href="SummaryOfCommitmentLetters.html" class="ui-tab4-list">承诺函汇总</a>
+            </div>
+            <div class="pl20 pr20 pt20 f12">
+                <div class="mb10 f0 mr20">
+                    <div class="mb10 f0">
+                        <span class="pct25 dib f12">
+                            <span class="searchLable">金牌商家：</span>
+                            <input type="text" class="ui-input pct69" placeholder="请输入">
+                        </span>
+                        <span class="pct25 dib f12">
+                            <span class="searchLable">客户单位：</span>
+                            <input type="text" class="ui-input pct69" placeholder="请输入">
+                        </span>
+                        <span class="pct25 dib f12">
+                            <span class="searchLable">申请日期：</span>
+                            <span class="ui-input tc f0 pct69  range" data-type="time">
+                                <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                    class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                    class="render-time pct45" readonly="">
+                            </span>
+                        </span>
+                        <span class="pct25 dib f12">
+                            <span class="searchLable">终止日期：</span>
+                            <span class="ui-input tc f0 pct69  range" data-type="time">
+                                <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                    class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                    class="render-time pct45" readonly="">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mb10 f12">
+                        <span class="dib pct25">
+                            <span class="searchLable">办理区域：</span>
+                            <span class="input-selSearch pct69">
+                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                                    readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                                </div>
+                            </span>
+                        </span>
+                        <span class="dib pct33 f12" style="margin-left: -4px;">
+                            <div class="df">
+                                <div class="searchLable min-w60">交接状态：</div>
+                                <div class="dib selectSingle">
+                                    <a class="on" href="javscript:void(0)">全部</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">已交接</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">未交接</a>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="dib pct33 f12" style="margin-left: -4px;">
+                            <div class="df">
+                                <div class="searchLable min-w60">保存状态：</div>
+                                <div class="selectSingle">
+                                    <a class="on" href="javscript:void(0)">全部</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">未保存</a>
+                                    <span class="pr5 pl5 ">|</span>
+                                    <a href="javscript:void(0)">以保存</a>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="tc mt20">
+                        <button type="button" class="ui-button mr10">查询</button>
+                        <button type="button" class="ui-button " data-type="clear">清空</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ml20 mb10 dfc">
+                <span class="tipclick dac" qtip-dom="dom1">
+                    <a href="javascript:void(0)" class="goldIcon icon-info dib " data-hasqtip="8" oldtitle="...."
+                        title=""></a>
+                    <a href="javascript:void(0)" target="_blank" class="dib">《担保函交接与保存注意事项》</a>
+                </span>
+                <div class="f1"></div>
+            </div>
+
+            <!-- search end -->
+            <div class="lgui-table-box ml20 mr20">
+                <div class="lgui-table-body mt-1">
+                    <table class="ui-table table-cw tc f12" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="4%">序号</th>
+                                <th width="8%" class="tl">
+                                    <div class="pl20">
+                                        客户名称
+                                    </div>
+                                </th>
+                                <th width="5%">金牌商家</th>
+                                <th width="8%">担保金额(元)</th>
+                                <th width="12%">核保期限</th>
+                                <th width="10%">申请时间</th>
+                                <th width="10%">保证函生效时间</th>
+                                <th width="4%">状态</th>
+                                <th width="6%">操作人</th>
+                                <th width="6%">交接人</th>
+                                <th width="6%">保存人</th>
+                                <th width="8%">担保类别</th>
+                                <th width="6%">办理区域</th>
+                                <th width="7%">附件详情</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover">
+                            <tr>
+                                <td>1</td>
+                                <td class="tl">
+                                    <div class="pl20 ell">
+                                        上海vipCESHISSSAXMQXOMX
+                                    </div>
+                                </td>
+                                <td>李思思</td>
+                                <td>21122112212</td>
+                                <td>
+                                    <div class="dfc dfj">
+                                        <div class="time-Ximg mr5"></div>
+                                        <div>
+                                            2020-04-05<br />
+                                            2020-05-20
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2020-04-05 12:30:28</td>
+                                <td>2020-04-05 12:30:28</td>
+                                <td>有效</td>
+                                <td>李思思</td>
+                                <td>张三三</td>
+                                <td>网二二</td>
+                                <td>客户担保</td>
+                                <td>上海</td>
+                                <td>
+                                    <a href="##" class="mr20 f12 link-up" onclick="showTrMore(this)">查看</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn">
+                                <td colspan="14">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table checkbox f12  auto tl  mt10 mb10" width="100%">
+                                            <tbody>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">交接人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            李思思 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">操作人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            杨兴旺 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">保存人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            李思思 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">身份证：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">身份证照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">担保函：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">担保函照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">金牌商家照片：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">金牌商家照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">核保人照片：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">核保人照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">合照：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">合照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="f14 b tl">
+                                            金牌商家评价信息----李四四----2020-09-25 15:28:51
+                                        </div>
+
+                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">工作年限(年)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">钢材行业从业年限(年)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">主要客户群体：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch borNone pct69 ml20">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">选择选择1</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">选择选择2</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">选择选择3</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">选择选择5</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">选择选择6</a>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">主要业务模式：</span></td>
+                                                <td width="37%">
+                                                    <span class="checkbox ml20">
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>现款</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>欠款/货到卸款</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>外贸</label>
+                                                        <label class="mr20"><i
+                                                                class="ui-checkbox goldIcon v-3 mr2"><input
+                                                                    type="checkbox" class="checkbox-opacity"
+                                                                    name="checkbox"></i>快速备/任你押</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">客户回款周期(天)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">逾期情况：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">月均交易量(吨)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">月均收入(元)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">自有房产：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch ml20 borNone pct40">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">有</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">无</a>
+                                                        </div>
+                                                    </span>(必须是产权在本人名下)
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">面积(平方米)：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct40 ml20 borNone"
+                                                        placeholder="请输入">
+                                                    所在地 <input type="text" class="ui-input pct40  borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">自有车辆：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch ml20 borNone pct40">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">有</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">无</a>
+                                                        </div>
+                                                    </span>(必须是产权在本人名下)
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">车辆型号：</span></td>
+                                                <td width="37%">
+                                                    <input type="text" class="ui-input pct69 ml20 borNone"
+                                                        placeholder="请输入">
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">精神面貌：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch borNone pct69 ml20">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">好</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">一般</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">差</a>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">表达表述：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch borNone pct69 ml20">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">好</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">一般</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">差</a>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">全职/兼职：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch borNone pct69 ml20">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">全职</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">兼职</a>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">是否在运营中心办公：</span></td>
+                                                <td width="37%">
+                                                    <span class="input-selSearch borNone pct69 ml20">
+                                                        <input type="text" class="ui-input pct100 searchUp borNone"
+                                                            placeholder="请选择" autocomplete="off">
+                                                        <div class="search-cont pct100">
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell active">是</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="search-list db ell">否</a>
+                                                        </div>
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span class="pt5 dib pl20">家庭情况：</span></td>
+                                                <td colspan="3">
+                                                    <div class="pl20 pr20">
+                                                        <textarea class="ui-textarea pct100" rows="4"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td class="vt bgfa" width="13%">
+                                                    <span
+                                                        class="pt5 dib pl20">综合评价<br>(从业务能力、风险意识<br>和风险承担能力<br>等方面进行分析评价)：</span>
+
+                                                </td>
+                                                <td colspan="3">
+                                                    <div class="pl20 pr20">
+                                                        <textarea class="ui-textarea pct100" rows="4"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                            <tr>
+                                <td>1</td>
+                                <td class="tl">
+                                    <div class="pl20 ell">
+                                        上海vipCESHISSSAXMQXOMX
+                                    </div>
+                                </td>
+                                <td>李思思</td>
+                                <td>21122112212</td>
+                                <td>
+                                    <div class="dfc dfj">
+                                        <div class="time-Ximg mr5"></div>
+                                        <div>
+                                            2020-04-05<br />
+                                            2020-05-20
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2020-04-05 12:30:28</td>
+                                <td>2020-04-05 12:30:28</td>
+                                <td>有效</td>
+                                <td>李思思</td>
+                                <td>张三三</td>
+                                <td>
+                                    <button type="button" class="ui-button" data-type="small">保存</button>
+                                </td>
+                                <td>客户担保</td>
+                                <td>上海</td>
+                                <td>
+                                    <a href="##" class="mr20 f12 link-up" onclick="showTrMore(this)">查看</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn">
+                                <td colspan="14">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table checkbox f12  auto tl  mt10 mb10" width="100%">
+                                            <tbody>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">交接人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            李思思 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">操作人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            杨兴旺 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">保存人：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            李思思 2020-10-29 15:28:17
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">身份证：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">身份证照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">担保函：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">担保函照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">金牌商家照片：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">金牌商家照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">核保人照片：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">核保人照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                    <td class="bgfa" width="13%">
+                                                        <span class="pt5 dib pl20">合照：</span>
+                                                    </td>
+                                                    <td width="37%">
+                                                        <span class="dib pl20">
+                                                            <a href="javascript:void(0)" class="mr10" data-hasqtip="4"
+                                                                title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>"
+                                                                class="tiptop" aria-describedby="qtip-4">合照样本</a>
+                                                            <a href="javascript:void(0)"
+                                                                class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- table end -->
+            <script type="text/javascript" src="../js/pagelist.js"></script>
+            <div class="mb20"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top left',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
+                },
+            });
+        })
+    </script>
+    <script>
+        //时间范围
+        laydate.render({
+            elem: '#time1'
+            , range: true
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , value: '2020-06-04      -      2020-06-08'
+
+            , change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+
+        var time01 = laydate.render({
+            elem: '#time01'
+            , theme: 'lgblue'
+            , btns: ['clear', 'confirm']
+            , trigger: 'click'
+            , done: function (value, date) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,
+                    date: date.date,
+                }
+                time02.config.min = myobj
+                time02.config.value = myobj
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>
