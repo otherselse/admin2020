@@ -39,11 +39,11 @@
 			<div class="ui-content ovh minH">
 				<div class="bbe lh50 pl20"><a href="gathering.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>		
 				<div class="p20 f12">
-					<div class="">销售收款 (金牌商家:<span class="g28">尹相春</span>) </div>
+					<div class="">销售收款 (金牌商家:<span class="g28">尹相春</span>)&emsp;&emsp;&emsp;订单累计收款：<span class="b mr10">0</span>订单累计付款：<span class="b mr10">0</span>订单余额：<span class="b">0</span> </div>
 					<table class="ui-table tc f12 auto mt10 " width="100%">
 						<tbody>
 							<tr class="resource-table">
-								<td class="title" width="13%">付款单位：</td>
+								<td class="title" width="13%">单位名称：</td>
 								<td width="37%" class="cont">简简单单企业</td>
 								<td class="title" width="13%">账户余额：</td>
 								<td width="37%" class="cont"><span class="numFormat">1232332232</span>(客户余额)</td>
@@ -91,20 +91,10 @@
 								<td class="cont">1001018619100004070</td>
 							</tr>
 							<tr class="resource-table">
-								<td class="title">核销类型：</td>
-								<td class="cont radio">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('人民币','rmb')"></i>人民币收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('美元','my')"></i>美元收款</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setAccountType('欧元','oy')"></i>欧元收款</label>
-								</td>
-								<td class="title">汇率：</td>
-								<td class="cont"><input type="text" class="ui-input pct40" value="" placeholder="请输入"  ></td>
-							</tr>
-							<tr class="resource-table accountType dn">
-							    <td class="title"><span id="accountT"></span>收款：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-								<td class="title"></td>
-								<td class="cont"></td>
+								<td class="title">到款金额：</td>
+								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" autocomplete="off"></td>
+								<td class="title">收款类别：</td>
+								<td class="cont">销售收款</td>
 							</tr>
 							<tr class="resource-table">
 								<td class="title">到款类别：</td>
@@ -135,34 +125,29 @@
 								<td class="cont">60957|E200817000010</td>
 							</tr>
 							<tr class="resource-table">
-							    <td class="title">合同金额(美元)：</td>
-								<td class="cont numFormat">10000</td>
-								<td class="title">已到款金额(美元)：</td>
-								<td class="cont">100000&emsp;银行费用总和：<span class="numFormat">0</span></td>
+							    <td class="title">申请单号：</td>
+								<td class="cont"></td>
+								<td class="title">已到款金额：</td>
+								<td class="cont">0</td>
 							</tr>
 							<tr class="resource-table">
-							    <td class="title">本合同核销金额(美元)：</td>
-								<td class="cont checkbox"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>用余额支付合同金额</label></td>
-								<td class="title">银行费用：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 " value="0" placeholder="请输入" ></td>
+							    <td class="title">本合同核销金额：</td>
+								<td class="cont checkbox" colspan="3"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 使用客户余额核销应收金额</label></td>
 							</tr>
 							<tr class="resource-table">
 							    <td class="title">备注说明：</td>
-								<td class="cont">									
+								<td class="cont" colspan="3">									
 									<textarea  name="gatherCash.remark" class="ui-textarea pct80" rows="3" value=""></textarea>
 								</td>
-								<td class="title">附件上传：</td>
-								<td class="cont">
-									<button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
-									<span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-								</td>
-							</tr>												 
+							</tr>								
+																		 
 						</tbody>
 					</table>
 					
 					<div class="tc  mt20 mb20">
                     	<button type="button" class="ui-button mr10">提交</button>
                     	<button type="button" class="ui-button mr10">打印收据</button>
+                    	<button type="button" class="ui-button mr10">承兑打印</button>
                     	<button type="button" class="ui-button" data-type="clear" onclick="window.location='gathering.html'">返回</button>
                     </div>
 

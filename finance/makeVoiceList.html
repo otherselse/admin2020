@@ -47,8 +47,8 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
-						<span class="pct25 dib f12">发票单位：<span class="input-selSearch pct69">
+						<span class="pct25 dib f12 searchLable">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
+						<span class="pct25 dib f12 searchLable">发票单位：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
@@ -60,22 +60,22 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct25 dib f12 searchLable">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct25 dib f12">区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct25 dib f12 searchLable">区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>	
 					</div>
 		
 
 	                <div class="f0 mb10">
 
-	                	<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+	                	<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 
-	                	<span class="pct25 dib f12"> 业务类型：
+	                	<span class="pct25 dib f12 "><span class="searchLable">业务类型：</span>
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>直购</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>定购</label></span>
 
-	                	<span class="pct25 dib f12 m_pct31">发票开具日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+	                	<span class="pct25 dib f12 m_pct31 searchLable">发票开具日期：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>	
 		
@@ -166,18 +166,20 @@
 		                    		</td>
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="7">当页合计</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">936</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td colspan="5"> </td>
+		                    		<td colspan="15">
+		                    			当页合计：
+		                    			已开票不含税金额：<span class="numFormat red mr10">96</span>
+		                    			已开票销项税额：<span class="numFormat red mr10">936</span>
+		                    			已开票金额：<span class="numFormat red">9456</span>
+		                    		</td>		                    		
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="7">所有页汇总</td>
-		                    		<td class="numFormat">96</td>
-		                    		<td class="numFormat">9456</td>
-		                    		<td class="numFormat">945456</td>
-		                    		<td colspan="5"> </td>
+		                    		<td colspan="15">
+		                    			所有页汇总：
+		                    			已开票不含税金额：<span class="numFormat red mr10">296</span>
+		                    			已开票销项税额：<span class="numFormat red mr10">3936</span>
+		                    			已开票金额：<span class="numFormat red">93456</span>
+		                    		</td>
 		                    	</tr>
 
 		                    </tfoot>

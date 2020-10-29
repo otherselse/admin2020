@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>乐刚云用户配置表-信息管理-乐刚智能云系统</title>
+    <title>单位账户信息维护-信息管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <style>
         .txtb2 {
@@ -41,45 +41,26 @@
                 <span class="dib pl5 pr5 ">/</span>
                 信息管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">乐刚云用户配置表</span>
+                <span class="g28">单位账户信息维护</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-        <div class="fix f12 bgwh p20 ui-content ovh minH">
-            <div class="">
-                <div class="xzhj daj">
-                    <a href="javascript:void(0)" onclick="showLayer('增加','chineseAndEnglishAdd.html')"
-                        class="dib xzhj-button daj">
-                        <span class="dib mr10">信息添加</span> <img src="../images/documnts/t8.png" width="20px"
-                            height="20px" alt="">
-                    </a>
-                </div>
-            </div>
 
+        <div class="ui-tab3 ">
+            <a href="unitAccountMaintenance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">单位账户信息维护</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="theCustomerInformation.html" class="ui-tab3-list rel"><span class="ui-tab3-text">客户信息维护</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
+        <div class="fix f12 bgwh p20 ui-content ovh minH">
             <div class="cl mb20 mt20 dac f12">
                 <span class="dib pct25">
-                    字段：<span class="input-selSearch pct69">
-                        <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
-                        <div class="search-cont pct100">
-                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                        </div>
-                    </span>
+                    <span class="searchLable">往来单位：</span>
+                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                 </span>
-                <span class="dib pct25">
-                    中文名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="dib pct25">
-                    英文名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-            </div>
-            <div class="tc">
                 <button type="button" class="ui-button mr20 ml20">查询</button>
             </div>
             <div class="lgui-table-box mt30">
@@ -87,55 +68,25 @@
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
                         <thead>
                             <tr class="fixTr" style="width: 1200px;">
-                                <th width="4%">序号</th>
-                                <th width="17%">字段</th>
-                                <th width="14%">中文名称</th>
-                                <th width="15%">英文名称</th>
-                                <th width="16%">创建人</th>
-                                <th width="17%">操作</th>
+                                <th width="25%">科目</th>
+                                <th width="15%">开户银行</th>
+                                <th width="20%">银行账户</th>
+                                <th width="10%">币种</th>
+                                <th width="10%">金额</th>
+                                <th width="10%">账户类型</th>
+                                <th width="10%">账户分类</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td width="4%">1</td>
-                                <td width="17%">品名</td>
-                                <td width="17%">而单纯的</td>
-                                <td width="14%">
-                                    <input type="text" class="borNone ibBt tc" value="ER DANCHUN DE"
-                                        data="ER DANCHUN DE" readonly="" style="width: 80%;" tagname="steName" onchange="check(this)">
-                                </td>
-                                <td width="16%">杨兴旺</td>
-                                <td width="17%" class="blue">
-                                    <a href="javascript:void(0)" onclick="setEdit(this)">修改</a>
-                                    <span class="dib pl2 pr2">|</span>
-                                    <a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
-                                </td>
+                                <td>清晰启动器那些地区你去年去你那惊奇女士·</td>
+                                <td>中国建设银行</td>
+                                <td>11131 211212 2133113 1</td>
+                                <td>人民币</td>
+                                <td>1,1,11</td>
+                                <td>现金账户</td>
+                                <td>零售版</td>
                             </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="6">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th width="15%">修改时间</th>
-                                                    <th width="15%">修改人</th>
-                                                    <th width="35%">中文</th>
-                                                    <th width="35%">英文</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>2020-10-19 14:12:24</td>
-                                                    <td>杨兴旺</td>
-                                                    <td>而单纯的</td>
-                                                    <td>ER DANCHUN DE</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
                         </tbody>
                     </table>
                 </div>
@@ -153,7 +104,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -181,7 +132,7 @@
                 title: name,
                 shadeClose: true,
                 shade: 0.4,
-                area: ['600px', '300px'],
+                area: ['960px', '450px'],
                 content: url //iframe的url
             });
             $("#close_but").on("click", function () {
@@ -194,4 +145,5 @@
 
     </script>
 </body>
+
 </html>

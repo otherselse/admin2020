@@ -40,10 +40,10 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="addtitleBg mb20 tc">
-						<a href="javascript:void(0)" onclick="addBankEx()" class="addNewPage">银行收支录入</a>
+						<a href="javascript:void(0)" onclick="addBankEx()" class="addNewPage"><span class="dib vm">银行收支录入</span><i class="addarrow vm ml5"></i></a>
 					</div>
 					<div class="mb10 f0">
-						<span class="pct22 dib f12">银行账户：<span class="input-selSearch pct59">
+						<span class="pct22 dib f12 searchLable">银行账户：<span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">中国工商银行上海宝山支行</a>
@@ -61,13 +61,13 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct22 dib f12">交易单位：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+						<span class="pct22 dib f12 searchLable">交易单位：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct22 dib f12">金额：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+						<span class="pct22 dib f12 searchLable">金额：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
 						</span>
-						<span class="dib f12 pct30">
-	                		收（付）款时间段：<span class="ui-input f0 pct69 range" data-type="time">
+						<span class="dib f12 pct30 searchLable">
+	                		收（付）款时间：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 					</span>
 	                	</span>
@@ -75,11 +75,11 @@
 
 	                <div class="f0 mb10">
 	                	<span class="dib f12 mr40">
-	                		款项类型：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>收款</label>
+	                		<span class="searchLable">款项类型：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>收款</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>付款</label>
 	                	</span>
 	                	<span class="dib f12">
-	                		是否导出凭证：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+	                		<span class="searchLable">是否导出凭证：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 	                	</span>								
 	                </div>
@@ -148,7 +148,7 @@
 		                    <tfoot>
 		                    	<tr height="45">
 		                    		<td  class="" colspan="12">
-		                    			<div class="l mt5" style="width: 6%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div><div class="l ml10 mt5"> 当前共选择(2)条信息</div>
+		                    			<div class="l mt5" style="width: 6%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div><div class="l ml10 mt5"> 当前共选择(<span class="red">2</span>)条信息</div>
 		                    			<div class="r mr20">
 		                    				<button type="button" class="ui-button  mr5">导出</button>
 		                    				<button type="button" class="ui-button " data-type="normal">取消导出</button>

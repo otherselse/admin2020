@@ -343,3 +343,13 @@ function setOpen(obj) {
 				$(obj).text("收起");
 			}
 		}
+//展示更多搜索条件
+function showSearchDn(obj) {
+	$(".cah").toggleClass("dn");
+	$(obj).find("img").toggleClass("t_deg180");
+	if ($(".cah").attr("class").indexOf("dn") < 0) {
+		$(".bText").text("收起");
+	} else {
+		$(".bText").text("更多查询");
+	}
+}

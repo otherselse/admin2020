@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>加工资源定价管理-信息管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+    <style>
+        .ui-option,
+        .ui-optionNo {
+            background: #fff;
+            min-width: auto;
+        }
+
+        .ui-input[data-type='section'] {
+            min-width: 50px;
+        }
+
+        .ss-08{
+            color: #08CB94FF;
+        }
+    </style>
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                信息管理
+                <span class="dib pl5 pr5">/</span>
+                <span class="g28">加工资源定价管理</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p20 f12">
+                <div class="mb10 df ">
+                    <span class="dib mt2">&emsp;加工商：</span><span class="selectProcName selectSingle gc">
+                        <a class="mb10" class="mb10" href="javscript:void(0)" class="on">全部</a>
+                        <span class="pr5 mb10 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">上海加工运输有限责任公司</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">上海加工运输有限责任公司</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">上海加工运输有限责任公司</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                        <a class="mb10" href="javscript:void(0)">乔碧萝变变变加工厂</a>
+                        <span class="pr5 mb10 pl5 ">|</span>
+                    </span>
+                    <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+                </div>
+                <div class="dac mb10">
+                    <span class="dib pct25">
+                        金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        货主单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
+                        入库日期：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="">
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        销售单价：<span class="ui-input dib pct69" data-type="section">
+                            <input type="text" placeholder="" class="pct45" autocomplete="off">~<input class="pct45"
+                                type="text" placeholder="" autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+                <div class="dac mb10">
+                    <span class="dib pct25">
+                        &emsp;&emsp;品名： <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        &emsp;&emsp;钢厂： <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        &emsp;&emsp;规格： <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="dib pct25">
+                        &emsp;&emsp;牌号：<span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+                <div class="dac  ">
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">&emsp;操作人：</div>
+                            <div class="dib selectSingle">
+                                <a class="mb10 on" href="javscript:void(0)">系统上挂</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">管理员</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">客户</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">金牌商家</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">定价状态：</div>
+                            <div class="dib selectSingle ">
+                                <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">已定价</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">未定价</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">已更新</a>
+                                <span class="pr5 mb10 pl5 ">|</span>
+                                <a class="mb10" href="javscript:void(0)">未更新</a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="dac" style="margin-top: -10px;">
+                    <span class="dib pct25">
+                        &emsp;&emsp;分类：<span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>原料</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>成品</label>
+                        </span>
+                    </span>
+                    <span class="f1">
+                        挂牌状态：<span class="selectSingle">
+                            <a class=" on" href="javscript:void(0)">全部</a>
+                            <span class="pr5  pl5 ">|</span>
+                            <a class="" href="javscript:void(0)">已挂牌</a>
+                            <span class="pr5  pl5 ">|</span>
+                            <a class="" href="javscript:void(0)">未挂牌</a>
+                        </span>
+                        <button type="button" class="ui-button ml20 mr10">查询</button>
+                        <button type="button" class="ui-button " data-type="clear">清空</button>
+                    </span>
+                </div>
+                <table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
+                    <thead>
+                        <tr class="fixTr" style="width: 1200px;">
+                            <th width="5%">
+                                <div class="pl20"><i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                    class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>选择</div>
+                            </th>
+                            <th width="9%">加工商</th>
+                            <th width="5%">金牌商家</th>
+                            <th width="7%">入库日期</th>
+                            <th width="9%">货主单位</th>
+                            <th width="6%">品名</th>
+                            <th width="7%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    规格<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="4%">钢厂</th>
+                            <th width="5%">牌号</th>
+                            <th width="6%">计量方式</th>
+                            <th width="4%">重量</th>
+                            <th width="9%">
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+                                    销售单价<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            </th>
+                            <th width="7%">最近操作时间</th>
+                            <th width="4%">操作人</th>
+                            <th width="4%">仓库</th>
+                            <th width="5%">定价状态</th>
+                            <th width="5%">挂牌状态</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover bgwh">
+                        <tr>
+                            <td width="5%">
+                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>
+                            </td>
+                            <td width="9%">上海光明实业有限公司</td>
+                            <td width="5%">金管家</td>
+                            <td width="7%">2020-10-21</td>
+                            <td width="9%">坏猴子影业有限责任公司</td>
+                            <td width="6%">酸洗卷板</td>
+                            <td width="7%">2.500*1250*C</td>
+                            <td width="4%">联丰</td>
+                            <td width="5%">BLD</td>
+                            <td width="6%">抄码</td>
+                            <td width="4%" numtype="formatMoney">22</td>
+                            <td width="7%">
+                                <input type="text" data="price" class="ui-input tc auto pct90"
+                                    name="stockList[0].unitPrice" value="" svalue=""
+                                    onclick="javascript:$(this).val('')"
+                                    onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+                            </td>
+                            <td width="7%"></td>
+                            <td width="4%"></td>
+                            <td width="4%">光明库</td>
+                            <td width="5%">未定价 </td>
+                            <td width="5%">
+                                <span class="red">未挂牌</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%">
+                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>
+                            </td>
+                            <td width="9%">上海光明实业有限公司</td>
+                            <td width="5%">金管家</td>
+                            <td width="7%">2020-10-21</td>
+                            <td width="9%">坏猴子影业有限责任公司</td>
+                            <td width="6%">酸洗卷板</td>
+                            <td width="7%">2.500*1250*C</td>
+                            <td width="4%">联丰</td>
+                            <td width="5%">BLD</td>
+                            <td width="6%">抄码</td>
+                            <td width="4%" numtype="formatMoney">22</td>
+                            <td width="7%">
+                                <input type="text" data="price" class="ui-input tc auto pct90"
+                                    name="stockList[0].unitPrice" value="" svalue=""
+                                    onclick="javascript:$(this).val('')"
+                                    onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+                            </td>
+                            <td width="7%"></td>
+                            <td width="4%"></td>
+                            <td width="4%">光明库</td>
+                            <td width="5%">未定价 </td>
+                            <td width="5%">
+                                <span class="ss-08">未挂牌</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%">
+                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+                                        name="checkbox"></i>
+                            </td>
+                            <td width="9%">上海光明实业有限公司</td>
+                            <td width="5%">金管家</td>
+                            <td width="7%">2020-10-21</td>
+                            <td width="9%">坏猴子影业有限责任公司</td>
+                            <td width="6%">酸洗卷板</td>
+                            <td width="7%">2.500*1250*C</td>
+                            <td width="4%">联丰</td>
+                            <td width="5%">BLD</td>
+                            <td width="6%">抄码</td>
+                            <td width="4%" numtype="formatMoney">22</td>
+                            <td width="7%">
+                                <input type="text" data="price" class="ui-input tc auto pct90"
+                                    name="stockList[0].unitPrice" value="" svalue=""
+                                    onclick="javascript:$(this).val('')"
+                                    onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+                            </td>
+                            <td width="7%"></td>
+                            <td width="4%"></td>
+                            <td width="4%">光明库</td>
+                            <td width="5%">未定价 </td>
+                            <td width="5%">
+                                <span>已挂牌</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="">
+                        <tr height="45">
+                            <td colspan="19">
+                               <div class="l ml10">
+                                    <input type="text" class="ui-input">
+                                    <button class="ui-button mr20" data-type="normal" small-type="small" type="button">批量修改价格</button>
+                               </div>
+                               <div class="r mr10">
+                                <button type="button" class="ui-button mr10">挂牌销售</button>
+                                <button type="button" class="ui-button">撤销挂牌</button>
+                               </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- table end -->
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+            </div>
+        </div><!-- ui-content end -->
+    </div><!-- rightBar end -->
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+    <script>
+        $(function () {
+            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        })
+
+        function showDiv_lrl(obj) {
+            $(obj).parents("tr").next(".hideTr").css("display", "none")
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+        }
+
+        function showDiv_lrlHide(obj) {
+            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+        }
+
+        $(".mySingle span").click(function () {
+            console.log(11)
+            $(this).parents(".mySingle").find("span").removeClass("sbOn")
+            $(this).addClass("sbOn")
+        });
+        setTime4();
+        var endtime = '', starttime = '';
+        function setTime4() {
+            starttime = laydate.render({
+                elem: '#time4'
+                , theme: 'lgblue'
+                , trigger: 'click'
+                , min: '2020-07-01'
+                , done: function (value, date, endDate) {
+                    var myobj = {
+                        year: date.year,
+                        month: date.month - 1,//关键
+                        date: date.date
+                    };
+                    endtime.config.max = myobj;
+                }
+
+            });
+            //$("#time5").removeAttr("lay-key");
+        }
+
+    </script>
+</body>
+
+</html>

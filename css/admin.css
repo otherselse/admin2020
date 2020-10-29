@@ -228,6 +228,10 @@ a.wh:hover {
   min-width: 86px
 }
 
+.ui-button.w60 {
+  width: 60px;
+  min-width: 60px
+}
 .ui-button.w90 {
   width: 90px;
   min-width: 90px
@@ -913,8 +917,7 @@ a.wh:hover {
 }
 
 .addNewPage {
-  min-width: 120px;
-  height: 30px;
+ padding:0 10px;
   line-height: 30px;
   border-radius: 3px;
   background: transparent;
@@ -1187,6 +1190,45 @@ a.wh:hover {
   height: 110px;
 }
 
+.editIcon{
+  width: 12px;height: 12px;background-position: -19px -69px;
+}
+
+.h_edit:hover > .editIcon{background-position: -69px -69px;}
+
+.saveIcon{
+  width: 12px;height: 12px;background-position: -119px -69px;
+}
+
+.timeIcon{background:url(../images/finance/time.png) no-repeat left;text-indent: 2em}
+.ui-button.w245{min-width: 245px;}
+.addarrow{width: 20px;height: 20px;background:url(../images/finance/addarrow.png) no-repeat;display: inline-block;}
+.triangleDown{position: relative;text-indent:15px;}
+.triangleDown::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #676767 transparent transparent transparent ;
+    display: inline-block;
+    position: absolute;
+    left:0;top:6px;
+    text-indent: 0
+}
+.delForecastCols{display: none }
+.slineMenu{background: #F9F9F9;margin:6px 0 0 0;display: none;
+  border: 1px solid #EFEFEF;
+  border-radius: 3px;padding:3px 5px;
+  }
+.flineMList{margin:0 20px 5px 0;display: inline-block;color:#282828;}
+.slineMList{margin:0 20px 0 0;color:#282828;display: inline-block;}
+.flineMList.on,.flineMList:hover,.slineMList.on,.slineMList:hover{color:#2172F5;}
+.cs-finan-coupbg{height:50px;background:url(../images/finan/quanzi.png) #EF464B left top no-repeat ;color: #DAB68B;line-height: 50px}
+.cs-finan-arrowR{position:absolute;right:0;top:0;width: 38px;height: 50px;background:url(../images/finan/dianjifafang.png);display: inline-block;}
+.cs-finan-arrowL{position:absolute;left:0;top:0;width: 3px;height: 50px;background:url(../images/finan/dise.png);display: inline-block;}
+.cs-finan-coupbg.coupUsed{background:url(../images/finan/quanzhi.png) #ccc left top no-repeat ;color: #fff;}
+.coupUsed > .cs-finan-arrowR{position:absolute;right:0;top:0;width: 38px;height: 50px;background:url(../images/finan/yifafang.png);display: inline-block;}
 
 
 /* login */
@@ -1818,15 +1860,21 @@ a.wh:hover {
   display: none; */
 }
 
+.kZhan {
+  height: 30px;
+}
+
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-.selectDiv::-webkit-scrollbar {
+.selectDiv::-webkit-scrollbar,
+.kZhan::-webkit-scrollbar {
   width: 7px;
   height: 7px;
   background-color: #F5F5F5;
 }
 
 /*定义滚动条轨道 内阴影+圆角*/
-.selectDiv::-webkit-scrollbar-track {
+.selectDiv::-webkit-scrollbar-track,
+.kZhan::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   border-radius: 10px;
@@ -1834,7 +1882,8 @@ a.wh:hover {
 }
 
 /*定义滑块 内阴影+圆角*/
-.selectDiv::-webkit-scrollbar-thumb {
+.selectDiv::-webkit-scrollbar-thumb,
+.kZhan::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
   -webkit-box-shadow: inset 0 0 6px rgba(217, 217, 217, 1);
@@ -1983,6 +2032,10 @@ a.wh:hover {
   border-bottom: 1px solid #EEEEEEFF;
 }
 
+.bor-bE6E6 {
+  border-bottom: 1px solid #E6E6E6;
+}
+
 .pct8 {
   width: 8%;
 }
@@ -2047,6 +2100,105 @@ a.wh:hover {
 
 /* report */
 
+.jpSj {
+  background: #F9EEE4;
+  border-radius: 0 100px 100px 0;
+  color: #AD7443;
+  letter-spacing: 0;
+}
+
+.ziMq {
+  background: #EBF3FF;
+  border-radius: 11px;
+}
+
+.lh60 {
+  line-height: 60px;
+}
+
+.fanH {
+  background: #F9F9F9;
+  border: 1px solid #EEEEEE;
+  border-radius: 3px;
+}
+
+
+.reDK {
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.find-div-body {
+  position: relative;
+  /* top:30px; */
+  right: 0px;
+  /* width:400px; */
+  /* height:200px; */
+  /* padding:8px; */
+  background-color: #FFFFFF;
+  border: #cccccc solid 1px;
+  border-radius: 3px;
+}
+
+.find-div-body:before {
+  box-sizing: content-box;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -16px;
+  ;
+  left: 90px;
+  padding: 0;
+  border-bottom: 8px solid #FFFFFF;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  display: block;
+  content: '';
+  z-index: 12;
+}
+
+.find-div-body:after {
+  box-sizing: content-box;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -18px;
+  ;
+  left: 90px;
+  padding: 0;
+  border-bottom: 9px solid #cccccc;
+  border-top: 9px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  display: block;
+  content: '';
+  z-index: 10
+}
+
+
+.reD-top {
+  background: #F1F3F7;
+  border: 1px solid #E6E6E6;
+}
+
+.reD-gunn {
+  background: #FFFFFF;
+  border: 1px solid #08CB93;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #08CB93;
+  letter-spacing: 0;
+}
+
+.min-blueK {
+  height: 16px;
+  width: 4px;
+  background: #1365E8;
+}
+
 .leBie {
   position: absolute;
   left: 6px;
@@ -2069,6 +2221,10 @@ a.wh:hover {
 
 .min-w60 {
   min-width: 60px;
+}
+
+.min-70 {
+  min-width: 70px;
 }
 
 .mt4 {
@@ -2343,6 +2499,13 @@ a.wh:hover {
   -moz-transform: rotate(90deg);
 }
 
+.t_deg180 {
+  transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
 .t_deg45 {
   transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -2352,6 +2515,10 @@ a.wh:hover {
 
 .c-80 {
   color: #ccc;
+}
+
+.col-8080 {
+  color: #808080;
 }
 
 /* 评审 */
@@ -2554,12 +2721,14 @@ a.wh:hover {
 .xia {
   background: url(../images/statistical/xia.png);
   background-size: 100% 100%;
-  width: 10px;
-  height: 8px;
+  width: 8px;
+  height: 4px;
 }
 
 .xia.on {
   background: url(../images/statistical/y-xia.png);
+  width: 8px;
+  height: 4px;
 }
 
 .c14bb {
@@ -2574,7 +2743,8 @@ a.wh:hover {
   color: #282828;
   font-weight: 700;
 }
-.selectPrintBox{
+
+.selectPrintBox {
   width: 180px;
   height: 240px;
   box-sizing: border-box;
@@ -2585,19 +2755,22 @@ a.wh:hover {
   align-items: center;
 }
 
-.selectPrint{
+.selectPrint {
   display: flex;
 }
-.selectPrintImg{
+
+.selectPrintImg {
   height: 149px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.selectPrintBox.on{
+
+.selectPrintBox.on {
   border: 1px solid #1365e8;
-/* InformationChanges */
+  /* InformationChanges */
 }
+
 .icon-stock-enter {
   background: url(../images/InformationChanges/icon-stock.png) -247px 0 no-repeat;
   width: 32px;
@@ -2634,46 +2807,57 @@ a.wh:hover {
   height: 32px;
 }
 
-.bor-R6{
-  border-radius:6px;
+.bor-R6 {
+  border-radius: 6px;
 }
-.n16_mulsel{
+
+.n16_mulsel {
   box-sizing: border-box;
   width: 100%;
   border: 1px solid #e6e6e6;
 }
-.ui-tab6_top{
+
+.ui-tab6_top {
   border-bottom: 1px #d9d9d9 solid;
 }
-.ui-tab6_top ul{
+
+.ui-tab6_top ul {
   display: flex;
 }
-.ui-tab6_top li{
+
+.ui-tab6_top li {
   width: 132px;
   position: relative;
 }
-.lgui-table-body td{
+
+.lgui-table-body td {
   word-break: break-all;
 }
-.condEx{
+
+.condEx {
   display: flex;
   justify-content: center;
 }
+
 .ui-input[data-type='section'] {
   min-width: auto;
 }
-.ui-input[data-type='section'] >input{
+
+.ui-input[data-type='section']>input {
   width: 40%;
   background: none;
 }
+
 .ui-table tbody td {
   color: #282828;
 }
-.goldRegInfo_l{
+
+.goldRegInfo_l {
   box-sizing: border-box;
   padding-left: 60px;
 }
-.userImg{
+
+.userImg {
   box-sizing: border-box;
   border: 1px solid #E6E6E6;
   width: 76px;

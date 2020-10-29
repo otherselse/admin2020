@@ -43,7 +43,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="cl  f12 lh24">							
-	                <span class="vt dib">&emsp;加工商：</span><div class="dib selectProcName gc">
+	                <span class="vt dib searchLable">&emsp;加工商：</span><div class="dib selectProcName gc">
                             <a href="javscript:void(0)" class="on">全部</a>
                             <span class="pr5 pl5 ">|</span>
                             <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -68,15 +68,15 @@
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll" style="">展开</a>
 					</div>
 
-					<div class="mb10  lh24">
-							开票类型：<div class="dib single mr40">
+					<div class="mb10  lh24 ">
+							<span class="searchLable">开票类型：</span><div class="dib single mr40">
 	                                  <input type="hidden" value="">
                             <button type="button" class="ui-option mr5">加工发票</button>
                             <button type="button" class="ui-option mr5">仓储发票</button>                          
 	                                </div>
 						</span>
 						<span class="mr40 dib f12">
-							是否结算：<div class="dib selectSingle mr40">
+							<span class="searchLable">是否结算：</span><div class="dib selectSingle mr40">
 	                                    <a class="on" href="javscript:void(0)">全部</a>
 	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">是</a>	
@@ -84,7 +84,7 @@
 	                                    <a href="javscript:void(0)">否</a>	                                                                        
 	                                </div>
 						</span>
-						<span class="pct25 dib f12">货主单位：<span class="input-selSearch pct69">
+						<span class="pct25 dib f12 searchLable">货主单位：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码、汉字即时搜索" autocomplete="off" >
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
@@ -96,7 +96,7 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12">发票抬头：<span class="input-selSearch pct69">
+						<span class="pct25 dib f12 searchLable">发票抬头：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码、汉字即时搜索" autocomplete="off" >
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
@@ -111,7 +111,7 @@
 					</div>
 
 					<div class="mb10">
-						<span class="pct30 dib f12">申请日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<span class="pct30 dib f12 searchLable">申请日期：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>	
 						<button type="button" class="ui-button mr10">查询</button>
@@ -174,13 +174,13 @@
                         <label><i class="ui-checkbox goldIcon vm mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>不显示计量单位</label>
                     </div>
 
-                    <div class="mt15"> 发票名称：
+                   <!--  <div class="mt15"> 发票名称：
                         <span class="single">
                             <input type="hidden">
                             <button type="button" class="ui-option mr5">综合加工费</button>
                             <button type="button" class="ui-option ">仓储发票</button>
                         </span>
-                    </div>
+                    </div> -->
 
                     <div class="tc mt20 bte pt30 pb30">
                     <button class="ui-button" type="button" data-type="big" onclick="window.location='clearingBillByCorpName.html'">下一步</button>
