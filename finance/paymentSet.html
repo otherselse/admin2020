@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>支付结算-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+	
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">支付结算</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+	        </div>
+	        <div class="ui-tab3">
+	            <a href="paymentSet.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">结算跟踪表</span><i class="goldIcon ui-tab3-dot"></i></a>
+	            <a href="payment2.html" class="ui-tab3-list rel "><span class="ui-tab3-text">结算记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+	            <a href="payment3.html" class="ui-tab3-list rel "><span class="ui-tab3-text">转货记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+	             <a href="payment4.html" class="ui-tab3-list rel "><span class="ui-tab3-text">额度使用汇总表</span><i class="goldIcon ui-tab3-dot"></i></a>
+	        </div>
+			<div class="ui-content ovh minH">				
+				<div class="p20 f12">
+					<div class="mb10"><span class="ui-tip">温馨提示：余额在申请结算钱均可享受G2G收益</span></div>
+					<div class="mb10 f0 ">
+						<span class="pct30 dib f12 searchLable">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="dib f12 pct30"><span class="searchLable">订单类型：</span>
+							<div class="dib selectSingle ">
+                                <a class="on" href="javscript:void(0)">快速备业务</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">任你押业务</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">VIP业务</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">外贸</a>                                    
+                            </div>
+						</span>
+						<span class="dib f12 pct30"><span class="searchLable">订结算状态：</span>
+							<div class="dib selectSingle ">
+                                <a class="on" href="javscript:void(0)">未结算</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">可结算</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">结算中</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">已结算</a>                                    
+                            </div>
+						</span>
+					</div>
+					<div class="mb10 f0 searchLable">
+						<span class="pct30 dib f12 ">支付日期：<span class="ui-input f0 pct69 range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						</span></span>
+
+						<span class="pct30 dib f12 ">结算日期：<span class="ui-input f0 pct69 range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						</span></span>
+
+						<span class="pct30 dib f12 ">预计回款日期：<span class="ui-input f0 pct69 range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						</span></span>							
+	                </div>
+	                <div class="mt20  tc">
+						<button type="button" class="ui-button ">查询</button>	
+	                </div>
+
+
+							
+	    
+
+	                <!-- search end -->
+
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr>
+		                            <th width="4%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
+                                    <th width="5%">订单号</th>
+                                    <th width="5%">订单类型</th>
+                                    <th width="8%">合同金额(元)</th>
+                                    <th width="5%">首次支付时间</th>
+                                    <th width="8%">支付金额</th> 
+                                    <th width="5%">预计回款时间</th>
+                                    <th width="8%">已回款时间</th>
+                                    <th width="5%">回款超期天数</th>
+                                    <th width="6%">G2G结算收益</th>
+                                    <th width="5%">已结算金额</th>
+                                    <th width="5%">未结算金额</th>
+                                    <th width="8%">已转货物金额</th>
+                                    <th width="5%">可结算金额</th>
+                                    <th width="8%">结算时间</th>
+                                    <th width="5%">付款详情</th>
+                                    <th width="5%">货物清单</th>
+		                        </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	 <tr>
+		                    	 	<td width="4%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 1</td>
+                                    <td width="5%">12323</td>
+                                    <td width="5%">VIP</td>
+                                    <td width="8%" class="numFormat">23233.33</td>
+                                    <td width="5%">2020-10-11</td>
+                                    <td width="8%" class="numFormat">23233.33</td> 
+                                    <td width="5%">2020-10-11</td>
+                                    <td width="8%"class="numFormat">23233.33</td>
+                                    <td width="5%">1</td>
+                                    <td width="6%">0</td>
+                                    <td width="5%">0</td>
+                                    <td width="5%" class="numFormat">23233.33</td>
+                                    <td width="8%" class="numFormat">23233.33</td>
+                                    <td width="5%" class="numFormat">23233.33</td>
+                                    <td width="8%">2020-10-11 11:11:11</td>
+                                    <td width="5%"><a href="">查看</a></td>
+                                    <td width="5%"><a href="">查看</a></td>
+		                        </tr>			                       
+		                    </tbody>
+		                    <tfoot class="bgfa">
+		                    	<tr height="45">
+		                    		<td colspan="3">本页小计：</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">0</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td class="numFormat red bkall">0</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td colspan="3"></td>
+		                    	</tr>
+		                    	<tr height="45">
+		                    		<td colspan="3">总计：</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td></td>
+		                    		<td class="numFormat red bkall">0</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td class="numFormat red bkall">0</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td class="numFormat red bkall">23232323</td>
+		                    		<td colspan="3"></td>
+		                    	</tr>
+		                    	<tr height="45">
+		                    		<td colspan="17">
+		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    </span>
+		                    			<span class="r mr10 pct50 tr">
+		                    				结算总金额：<span class="ui-input pct20 tl" data-type="price">￥<input type="text" value="" placeholder="" class="pct80" autocomplete="off"></span>
+		                    				<button class="ui-button ml20" type="button">申请结算</button>
+		                    			</span>
+		                    		</td>
+		                    	</tr>
+		                    </tfoot>
+		                </table>		                
+	            	</div>
+	                
+	            </div><!-- table end -->
+	            
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+	<div class="dom1 dn">
+		<div class="mb15 mt5"><i class="vm admIcon icondoubt mr5"></i>是否确定已完成退税申报？</div>
+		<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
+		<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
+	</div>
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+
+
+
+		
+	</script>
+</body>
+</html>
