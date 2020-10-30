@@ -85,24 +85,24 @@
 							<table class="ui-table  f12 mt20" width="100%">
 								<thead>
 		                        <tr class="tl">
-				                      <th width="13%">单位名称</th>
-							            <th width="8%">创建时间</th>
-							            <th width="6%">入账金额</th>
-							            <th width="10%">优惠说明</th>
-							            <th width="6%">优惠券类型</th>
-							            <th width="8%">优惠券金额</th>
-							            <th width="6%">优惠券余额</th>
-							            <th width="6%" >发放状态</th>
-							            <th width="5%" >发放明细</th>
+				                      <th width="13%"><span class="pl10">单位名称</span></th>
+							            <th width="8%"><span class="pl10">创建时间</span></th>
+							            <th width="6%"><span class="pl10">入账金额</span></th>
+							            <th width="10%"><span class="pl10">优惠说明</span></th>
+							            <th width="6%"><span class="pl10">优惠券类型</span></th>
+							            <th width="8%" class="tc">优惠券金额</th>
+							            <th width="6%" ><span class="pl10">优惠券余额</span></th>
+							            <th width="6%" class="tc">发放状态</th>
+							            <th width="5%" class="tc">发放明细</th>
 				                </tr>
 		                    </thead>
 		                    <tbody class="ui-thover">
 		                    	 <tr>
-							        <td>上海加工商家股份有限公司</td>
-						            <td>2020-08-11 11:48:40</td>
-						            <td><span class="green numFormat">25000.00</span></td>
-						            <td>加工云</td>
-						            <td>双推优惠券</td>
+							        <td><span class="pl10">上海加工商家股份有限公司</span></td>
+						            <td><span class="pl10">2020-08-11 11:48:40</span></td>
+						            <td><span class="green numFormat pl10">25000.00</span></td>
+						            <td><span class="pl10">加工云</span></td>
+						            <td><span class="pl10">双推优惠券</span></td>
 						            <td style="padding:3px;">				                        
 							            <div class=" rel poi pl5 cs-finan-coupbg coupUsed" pid="8E9AE3A5417B5902E05370001FAC5543" moneysum="14700.00" onclick="confirmIssue('8E9AE3A5417B5902E05370001FAC5543','1')">
 							            	<i class="cs-finan-arrowL"></i>
@@ -110,12 +110,46 @@
 							            	￥<span class="dib f18 ">14700.00</span>
 							            </div>			                        
 				                    </td>
-						            <td class="numberFormat leftCoup">14,700.00</td>
-						            <td class="cent issueName">已发放</td>
-						            <td class="cent viewLogs"><a href="javascript:void(0)" class="blue" onclick="couponLogs('8E9AE3A5417B5902E05370001FAC5543')">查看</a></td>
+						            <td class=" leftCoup"><span class="pl10 numFormat">14700.00</span></td>
+						            <td class="tc issueName">已发放</td>
+						            <td class="tc viewLogs"><a href="javascript:void(0)" class="blue" onclick="couponLogs('8E9AE3A5417B5902E05370001FAC5543')">查看</a></td>
+								</tr>
+								<tr>
+							        <td><span class="pl10">上海加工商家股份有限公司</span></td>
+						            <td><span class="pl10">2020-08-11 11:48:40</span></td>
+						            <td><span class="green numFormat pl10">25000.00</span></td>
+						            <td><span class="pl10">加工云</span></td>
+						            <td><span class="pl10">双推优惠券</span></td>
+						            <td style="padding:3px;">				                        
+							            <div class=" rel poi pl5 cs-finan-coupbg " pid="8E9AE3A5417B5902E05370001FAC5542" moneysum="5000.00" onclick="confirmIssue('8E9AE3A5417B5902E05370001FAC5542','0')" style="line-height: 0px;">
+				                            <i class="cs-finan-arrowL"></i>
+				                            <i class="cs-finan-arrowR"></i>
+				                            <div style="padding-top: 13px; padding-left: 3px;">
+				                                <div style="height: 20px;color: #ffff8e;">
+				                                    共享券
+				                                </div>
+				                                <div>
+				                                    ￥<span class="dib f18 ">5000.00</span>
+				                                </div>
+				                            </div>
+				                        </div>			                        
+				                    </td>
+						            <td class=" leftCoup"><span class="pl10 numFormat">14700.00</span></td>
+						            <td class="tc issueName">未发放</td>
+						            <td class="tc viewLogs">--</td>
 								</tr>
 		                       
 		                    </tbody>
+		                    <tfoot class="bgfa tc">
+		                    	<tr height="45">
+		                    		<td colspan="9">总计：
+		                    			入账金额：<span class="green mr10 numFormat">9600000</span>
+		                    			优惠券发放：<span class="numFormat red mr10">90036</span>
+		                    			优惠券余额：<span class="numFormat red ">93006</span>
+		                    		</td>	
+		                    	</tr>
+		                    	
+		                    </tfoot>                   
 		   
 		                </table>		                
 	                
@@ -130,20 +164,6 @@
 	</div><!-- rightBar end -->
 
 
-	<div class="dom1 dn">
-		<div class="pb10">
-			<div class="radio">
-				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(0)"></i>收票联系人或地址错误</label><br>
-				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(0)"></i>开票信息错误</label><br>
-				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(1)"></i>其它</label>
-			</div>
-			<div class="radio dn mt10 pl20 cklxFee">
-				<textarea class="ui-textarea pct100" rows="3"></textarea>
-			</div>
-		</div>
-		<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
-		<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
-	</div>
 
 
 	
@@ -160,6 +180,17 @@
 			$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
+
+		function couponLogs(){
+			layer.open({
+				type: 2,
+				title: '发放明细',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'couponLogs.html' //iframe的url
+			});
+		}
 		
 	</script>
 </body>
