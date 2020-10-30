@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>人员配置权限-权限管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">  
+
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                权限管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">人员配置权限</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-tab3">
+                <a href="toManageMenuPage.html" class="ui-tab3-list rel "><span class="ui-tab3-text">权限分配</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="toManageMenuClone.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
+            </div>
+        <div class="ui-content minH">
+            <div class="p30">
+               
+                <div class="p_clonebg pct94 auto">
+                    <div class="bbe pt20 pb20 pl50 f14 g28">
+                        将
+                        <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
+                        <!-- 假如选中了人员，显示如下内容 -->
+                        <!-- <a href="##" class="ml10 mr10"><span class="topLogoCont vm bb mr5" ><img src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></span>马云云</a> -->
+                        的 
+                        <span class="input-selSearch pct15 ml10 mr10">
+                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+                                <div class="search-cont" >
+                                    <a href="javascript:void(0)" class="search-list db ell">管理系统</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">文化系统</a>
+
+                                </div>
+                            </span>
+                        权限复制给
+                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
+                        <button type="button" class="ui-button">提交</button>
+                    </div>
+                    <div class="pt20 pb20 pl50">
+                        将短信内容 <span class="p_msginfo dib f12 ml10 mr10">**大侠，您的系统权限已变更，请及时跟进和关注，如有异议请提出。</span>
+                        发送给
+                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
+                        <button type="button" class="ui-button">提交</button>
+                        <a href="" class="g80 f12 ml20">查看发送记录 ></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+        })
+          
+        
+      
+
+    </script>
+</body>
+
+</html>

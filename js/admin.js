@@ -218,6 +218,11 @@ $(function(){
 		$("#jgs_scroll").hide();
 	}
 
+	//switch
+	$(".ui-switch").on("click", function () {
+		$(this).toggleClass("on");
+	})
+
 })
 
 

@@ -78,7 +78,7 @@ var menu_Data=[
 
 	,{"title":"权限管理",
 	 "menuList":[
-	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/managementSystem.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
+	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
 			 // {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"菜单配置人员","href":"../permissions/managementSystem.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
 			 ,{"bigM":"权限管理","smallM":[{"mtitle":"角色权限管理","href":"../index/index.html"},{"mtitle":"流程节点管理","href":"../index/index.html"},{"mtitle":"账号管理","href":"../index/index.html"},{"mtitle":"管理员注册审批","href":"../index/index.html"}]}	
 			 ,{"bigM":"文化系统","smallM":[{"mtitle":"权限配置","href":"../index/index.html"},{"mtitle":"权限管理","href":"../index/index.html"}]}
