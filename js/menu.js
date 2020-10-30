@@ -94,10 +94,10 @@ var menu_Data=[
 
 	,{"title":"权限管理",
 	 "menuList":[
-			 {"bigM":"角色管理类","smallM":[{"mtitle":"管理员注册管理","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"系统分类角色管理","href":"../permissions/managementSystem.html"},{"mtitle":"系统角色人员管理","href":"../index/index.html"},{"mtitle":"系统角色菜单管理","href":"../index/index.html"},{"mtitle":"加工主账号菜单管理","href":"../index/index.html"}]}
-			 ,{"bigM":"流程审批类","smallM":[{"mtitle":"流程节点管理","href":"../index/index.html"},{"mtitle":"流程节点人员管理","href":"../index/index.html"}]}	
-			 ,{"bigM":"系统菜单类","smallM":[{"mtitle":"操作查看权限","href":"../index/index.html"},{"mtitle":"业绩考核权限","href":"../index/index.html"}]}
-			 ,{"bigM":"人员信息类","smallM":[{"mtitle":"账户信息管理","href":"../index/index.html"}]}
+	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/managementSystem.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
+			 // {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"菜单配置人员","href":"../permissions/managementSystem.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
+			 ,{"bigM":"权限管理","smallM":[{"mtitle":"角色权限管理","href":"../index/index.html"},{"mtitle":"流程节点管理","href":"../index/index.html"},{"mtitle":"账号管理","href":"../index/index.html"},{"mtitle":"管理员注册审批","href":"../index/index.html"}]}	
+			 ,{"bigM":"文化系统","smallM":[{"mtitle":"权限配置","href":"../index/index.html"},{"mtitle":"权限管理","href":"../index/index.html"}]}
 		]
 	}
 
