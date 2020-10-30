@@ -49,8 +49,8 @@
             <a href="gangSalesStatistics.html" class="ui-tab3-list rel"><span class="ui-tab3-text">帮会销售统计表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
-        <div class="ui-content f12 minH">
-            <div class="p20">
+        <div class="ui-content p20 f12 minH">
+            <div class="">
                 <div class="mb10  df">
                     <span class="mt5 dib">查询时段：</span>
                     <span class="single ">
@@ -84,126 +84,132 @@
                         </span>
                     </span>
                     <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
 
-                <div class="mb10 f14 g28 mt20">今日销采量统计</div>
-                <table class="ui-table tc f12" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="n17-Ttitle2">
-                            <th width="9%">排名</th>
-                            <th width="7%">区域</th>
-                            <th width="10%">销售量(吨)</th>
-                            <th width="11%">采购量(吨)</th>
-                            <th width="11%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    销售金额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="11%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    采购金额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="10%">收款重量(吨)</th>
-                            <th width="10%" class="f14  n17-bbb ">付款重量(吨)</th>
-                            <th width="11%" class="f14  n17-bbb ">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收款金额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="10%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    付款金额(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="bgwh" class="ui-thover">
-                        <tr>
-                            <td>
-                                <img src="../images/statistical/tc18.png" width="30" height="25" alt="">
-                            </td>
-                            <td>天津</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/statistical/tc19.png" width="30" height="25" alt="">
-                            </td>
-                            <td>天津</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="../images/statistical/tc20.png" width="30" height="25" alt="">
-                            </td>
-                            <td>天津</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr height="45">
-                            <td colspan="2">
-                                内贸汇总：
-                            </td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="2">
-                                自贸区：
-                            </td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="2">
-                                内外贸汇总：
-                            </td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                            <td>0.000</td>
-                            <td>0.000</td>
-                            <td>0.00</td>
-                            <td>0.00</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <script type="text/javascript" src="../js/pagelist.js"></script>
+                <div id="main" class="mt15" style="width:100%;height:250px;"></div>
             </div>
+
+            <!-- <div class="mb10 f14 g28 mt20">今日销采量统计</div> -->
+            <table class="ui-table tc mt20 f12" width="100%" data-type="edit">
+                <thead class="">
+                    <tr class="n17-Ttitle2">
+                        <!-- <th width="9%">排名</th> -->
+                        <th width="16%">区域</th>
+                        <th width="10%">销售量(吨)</th>
+                        <th width="11%">采购量(吨)</th>
+                        <th width="11%">
+                            <!-- <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)"> -->
+                                销售金额(元)
+                                <!-- <i class="goldIcon icon-sort vm ml5 down"></i></label> -->
+                        </th>
+                        <th width="11%">
+                            <!-- <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)"> -->
+                                采购金额(元)
+                                <!-- <i class="goldIcon icon-sort vm ml5 down"></i></label> -->
+                        </th>
+                        <th width="10%">收款重量(吨)</th>
+                        <th width="10%" class="f14  n17-bbb ">付款重量(吨)</th>
+                        <th width="11%" class="f14  n17-bbb ">
+                            <!-- <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)"> -->
+                                收款金额(元)
+                                <!-- <i class="goldIcon icon-sort vm ml5 down"></i></label> -->
+                        </th>
+                        <th width="10%">
+                            <!-- <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)"> -->
+                                付款金额(元)
+                                <!-- <i class="goldIcon icon-sort vm ml5 down"></i></label> -->
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bgwh dn" class="ui-thover">
+                    <tr>
+                        <td>
+                            <img src="../images/statistical/tc18.png" width="30" height="25" alt="">
+                        </td>
+                        <td>天津</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../images/statistical/tc19.png" width="30" height="25" alt="">
+                        </td>
+                        <td>天津</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../images/statistical/tc20.png" width="30" height="25" alt="">
+                        </td>
+                        <td>天津</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                </tbody>
+                <tfoot class="bgwh">
+                    <tr height="45">
+                        <td >
+                            内贸汇总：
+                        </td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr height="45">
+                        <td >
+                            自贸区：
+                        </td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr height="45">
+                        <td >
+                            内外贸汇总：
+                        </td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.000</td>
+                        <td>0.000</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <script type="text/javascript" src="../js/pagelist.js"></script>
         </div>
+    </div>
     </div>
     <!-- rightBar -->
     <div class="dom1 dn">
@@ -213,9 +219,12 @@
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts-en.common.min.js"></script>
     <script>
-        $(function () {
 
+        $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
             //tipclick 点击出现数据段
@@ -250,17 +259,69 @@
             });
         })
 
-        function show(obj) {
-            $(obj).find("span").toggleClass("t_deg90");
-            $(obj).toggleClass("on");
-        }
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
 
-        function clickPermit(obj, flag) {
-            if (flag == "1") {
-                $(obj).parents("tbody").find("textarea").val("同意申请。");
-            } else {
-                $(obj).parents("tbody").find("textarea").val("不同意申请。");
-            }
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['税前毛利', '总交易量']
+            },
+            grid: {
+                left: '0%',
+                right: '3%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['2020-7-28', '2020-8-28', '2020-9-28', '2020-10-28']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: '税前毛利',
+                    type: 'line',
+                    // stack: '总量',
+                    data: [320, 2532, 121, 334, 12, 2353, 320],
+                    itemStyle: {
+                        normal: {
+                            color: '#3A86FF', //折点颜色
+                            lineStyle: {
+                                color: '#3A86FF' //折线颜色
+                            }
+                        }
+                    }
+                },
+                {
+                    name: '总交易量',
+                    type: 'line',
+                    // stack: '总量',
+                    data: [820, 11, 9, 934, 1290, 1330, 1320],
+                    itemStyle: {
+                        normal: {
+                            color: '#F36F6D', //折点颜色
+                            lineStyle: {
+                                color: '#F36F6D' //折线颜色
+                            }
+                        }
+                    }
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        //图表宽度自适应
+        window.onresize = function () {
+            myChart.resize();
+            myChart1.resize();
         }
     </script>
 </body>

@@ -46,27 +46,35 @@
         <div class="fix f12 bgwh p20 ui-content ovh minH">
             <div class="cl mb10 dac f12">
                 <span class="dib pct25">
-                    &emsp;&emsp;品名：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    <span class="searchLable"> &emsp;&emsp;品名：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    &emsp;钢厂：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">&emsp;钢厂：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    &emsp;&emsp;牌号：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">&emsp;&emsp;牌号：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    &emsp;&emsp;规格：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">&emsp;&emsp;规格：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
             </div>
             <div class="df mb10">
                 <span class="dib pct25">
-                    金牌商家：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    
+                    <span class="searchLable">金牌商家：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    订单号：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">订单号：</span>
+                    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    仓库区域：<span class="input-selSearch pct69">
+                    <span class="searchLable">仓库区域：</span>
+                    <span class="input-selSearch pct69">
                         <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
                         <div class="search-cont pct100">
                             <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -79,7 +87,8 @@
                     </span>
                 </span>
                 <span class="dib pct25">
-                    入库日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+                    <span class="searchLable">入库日期：</span>
+                    <span class="ui-input tc f0 pct69  range" data-type="time">
                         <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"
                             lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                             class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
@@ -88,7 +97,7 @@
             </div>
             <div class="dac">
                 <span class="dac">
-                    <div>&emsp;&emsp;状态： </div>
+                    <div class="searchLable">&emsp;&emsp;状态： </div>
                     <div class="dib selectSingle dac">
                         <a class=" on" href="javscript:void(0)">全部</a>
                         <span class="pr5  pl5 ">|</span>
@@ -99,7 +108,7 @@
                         <a class="" href="javscript:void(0)">未更新</a>
                     </div>
                 </span>
-                <button type="button" class="ui-button mr20 ml20">查询</button>
+                <button type="button" class="ui-button mr20 ml40">查询</button>
                 <button type="button" class="ui-button" data-type="clear">清空</button>
             </div>
             <div class="lgui-table-box mt30">
@@ -115,14 +124,11 @@
                                 <th width="4%">备货类型</th>
                                 <th width="4%">供应商</th>
                                 <th width="4%">采购合同生成时间</th>
-                                <th width="4%">品名</th>
-                                <th width="4%">规格</th>
-                                <th width="4%">牌号</th>
+                                <th width="12%">品名&nbsp;/&nbsp;规格&nbsp;/&nbsp;牌号</th>
                                 <th width="4%">钢厂</th>
                                 <th width="4%">计量方式</th>
                                 <th width="4%">重量</th>
-                                <th width="4%">仓库</th>
-                                <th width="4%">仓库区域</th>
+                                <th width="8%">仓库&nbsp;/&nbsp;仓库区域</th>
                                 <th width="4%">入库时间</th>
                                 <th width="4%">订单号</th>
                                 <th width="4%">金牌商家</th>
@@ -146,14 +152,13 @@
                                 <td>金牌商家备货</td>
                                 <td>上海海洋大学</td>
                                 <td>2020-07-31</td>
-                                <td>冷轧卷板</td>
-                                <td>11.000*1100*C</td>
-                                <td>TDX51D AZ</td>
+                                <td>
+                                    冷轧卷板/TDX51D AZ/11.000*1100*C
+                                </td>
                                 <td>沙钢</td>
                                 <td>理算</td>
                                 <td numtype="formatMoney">10</td>
-                                <td>聚方库</td>
-                                <td>上海市</td>
+                                <td>聚方库/上海市</td>
                                 <td>2020-07-31</td>
                                 <td><input type="hidden" data="orderID" name="stockList[0].orderID" value="60808">
                                     60808</td>
@@ -161,7 +166,7 @@
                                 <td numtype="formatMoney">4,200</td>
                                 <td>--</td>
                                 <td>
-                                    <input type="text" class="ui-input pct90 " size="8">
+                                    <input type="text" class="ui-input pct90 tc" size="8">
                                 </td>
                                 <td>
                                 <td>
@@ -204,6 +209,9 @@
                                 </td>
                             </tr><!-- 隐藏内容end -->
                         </tbody>
+                        <tfoot>
+                            
+                        </tfoot>
                     </table>
                 </div>
             </div>
