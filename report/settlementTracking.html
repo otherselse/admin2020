@@ -217,60 +217,63 @@
                                                 <td>50000</td>
                                                 <td>
                                                     <!-- 定位到财务管理-付款-订单详情  -->
-                                                    <a
-                                                        href="/LgAdmin/finance/paymentForThree.action?applyPayMain.id=AD7390138554622CE05371001FAC072A"><span
-                                                            class="redm"> 查看</span> </a>
+                                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hideTr dn">
+                                                <td colspan="10">
+                                                    <div class="p20">
+                                                        <table class="ui-table  f12 row auto  mt10 mb10" width="100%">
+                                                            <tr >
+                                                                <td class="title" width="13.3%">订单号：</td>
+                                                                <td class="cont" width="20%">2133</td>
+                                                                <td class="title" width="13.3%">供应商：</td>
+                                                                <td class="cont" width="20%">2029</td>
+                                                                <td class="title" width="13.3%">业务类型：</td>
+                                                                <td class="cont" width="20%">-06</td>
+                                                            </tr>
+                                                            <tr >
+                                                                <td class="title" width="13.3%">合同重量(吨)：</td>
+                                                                <td class="cont" width="20%">2133</td>
+                                                                <td class="title" width="13.3%">已入库重量(吨)：</td>
+                                                                <td class="cont" width="20%">2029</td>
+                                                                <td class="title" width="13.3%">合同金额(元)：</td>
+                                                                <td class="cont" width="20%">-06</td>
+                                                            </tr>
+                                                            <tr >
+                                                                <td class="title" width="13.3%">采购合同：</td>
+                                                                <td class="cont" width="20%"><a href="http://116.228.150.225:6889/frontCenter/supplierApplyAction_purConDetailAdmin.action?tempPurContractMain.id=6C4D9D43267859F0E05371001FACD575" target="_block">查看</a></td>
+                                                                <td class="title" width="13.3%">采购审批记录：</td>
+                                                                <!-- 跳转审批管理-付款类申请审批 -->
+                                                                <td class="cont" width="20%"><a href="">查看</a></td>
+                                                                <td class="title" width="13.3%">付款申请审批记录：</td>
+                                                                <td class="cont" width="20%"><a href="">查看</a></td>
+                                                            </tr>
+                                                            <tr >
+                                                                <td class="title" width="13.3%">销售合同：</td>
+                                                                <td class="cont" width="20%">无</td>
+                                                                <td class="title" width="13.3%">销售审批记录：</td>
+                                                                <td class="cont" width="20%">无</td>
+                                                                <td class="title" width="13.3%">预计回款时间：</td>
+                                                                <td class="cont" width="20%">-06</td>
+                                                            </tr>
+                                                            <tr >
+                                                                <td class="title" width="13.3%">本次付款金额：</td>
+                                                                <td class="cont" width="20%">2133</td>
+                                                                <td class="title" width="13.3%">G2G共融共享货款支付 申请单：</td>
+                                                                <td class="cont" width="20%">2029</td>
+                                                                <td class="cont bgwh" width="20%" colspan="4">
+                                                                    <div class="dac">
+                                                                        <a href="http://116.228.150.225:6889/front/indexAction_capitalPrint.action?applyCapital.id=6C4DFC3F78175A82E05371001FAC39A8" target="_block" class="mr20">查看</a>
+                                                                        <a href="http://116.228.150.225:6889/LgAdmin/finance/ggxy.action" target="_block">《G2G共融共享协议》</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>
-                                    <div class="g28 f14 b tl mb5 mt20" id="do">订单详情</div>
-                                    <table class="ui-table  f12  auto  mt10 mb10" width="100%">
-                                        <tr class="resource-table">
-                                            <td class="title" width="13.3%">订单号：</td>
-                                            <td class="cont" width="20%">2133</td>
-                                            <td class="title" width="13.3%">供应商：</td>
-                                            <td class="cont" width="20%">2029</td>
-                                            <td class="title" width="13.3%">业务类型：</td>
-                                            <td class="cont" width="20%">-06</td>
-                                        </tr>
-                                        <tr class="resource-table">
-                                            <td class="title" width="13.3%">合同重量(吨)：</td>
-                                            <td class="cont" width="20%">2133</td>
-                                            <td class="title" width="13.3%">已入库重量(吨)：</td>
-                                            <td class="cont" width="20%">2029</td>
-                                            <td class="title" width="13.3%">合同金额(元)：</td>
-                                            <td class="cont" width="20%">-06</td>
-                                        </tr>
-                                        <tr class="resource-table">
-                                            <td class="title" width="13.3%">采购合同：</td>
-                                            <td class="cont" width="20%"><a href="http://116.228.150.225:6889/frontCenter/supplierApplyAction_purConDetailAdmin.action?tempPurContractMain.id=6C4D9D43267859F0E05371001FACD575">查看</a></td>
-                                            <td class="title" width="13.3%">采购审批记录：</td>
-                                            <!-- 跳转审批管理-付款类申请审批 -->
-                                            <td class="cont" width="20%"><a href="">查看</a></td>
-                                            <td class="title" width="13.3%">付款申请审批记录：</td>
-                                            <td class="cont" width="20%"><a href="">查看</a></td>
-                                        </tr>
-                                        <tr class="resource-table">
-                                            <td class="title" width="13.3%">销售合同：</td>
-                                            <td class="cont" width="20%">无</td>
-                                            <td class="title" width="13.3%">销售审批记录：</td>
-                                            <td class="cont" width="20%">无</td>
-                                            <td class="title" width="13.3%">预计回款时间：</td>
-                                            <td class="cont" width="20%">-06</td>
-                                        </tr>
-                                        <tr class="resource-table">
-                                            <td class="title" width="13.3%">本次付款金额：</td>
-                                            <td class="cont" width="20%">2133</td>
-                                            <td class="title" width="13.3%">G2G共融共享货款支付 申请单：</td>
-                                            <td class="cont" width="20%">2029</td>
-                                            <td class="cont" width="20%" colspan="4">
-                                                <div class="dac">
-                                                    <a href="http://116.228.150.225:6889/front/indexAction_capitalPrint.action?applyCapital.id=6C4DFC3F78175A82E05371001FAC39A8" class="mr20">查看</a>
-                                                    <a href="http://116.228.150.225:6889/LgAdmin/finance/ggxy.action">《G2G共融共享协议》</a>
-                                                </div>
-                                            </td>
-                                        </tr>
                                     </table>
                                 </div>
                             </td>
