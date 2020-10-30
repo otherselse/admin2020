@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>风险保证金审批-审批管理-乐刚智能云系统</title>
+	<title>风险保证金审核-审批管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
 	<link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -30,9 +30,9 @@
 			<div class="l gga">
 				<a href="../index/index.html" class="gga">首页</a>
 				<span class="dib pl5 pr5 ">/</span>
-				审批管理
+				审批
 				<span class="dib pl5 pr5">/</span>
-				<span class="g28">风险保证金审批</span>
+				<span class="g28">风险保证金审核</span>
 			</div>
 			<div class="r m_dn">
 				左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -47,11 +47,10 @@
 					</span>
 					<span class="dib pct50 f12">
 						<span class="searchLable">审核状态：</span>
-						<div class="dib selectSingle pct69 m_pct31">
-							<a class="on" href="javscript:void(0)">已评审</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">未评审</a>
-						</div>
+						<span class="radio">
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>已评审</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未评审</label>
+						</span>
 					</span>
 				</div>
 				<div class="tc mt20">
@@ -90,8 +89,9 @@
 								<tr class="hideTr dn">
 									<td colspan="8">
 										<div class="auto tl" style="width: 98%;">
-											<div class="b g28">评审记录</div>
-											<div class="mt30 ml30 nodeLine f12">
+											<div class="b g28  f14">风险保证金充值申请意见</div>
+											<table class="ui-table f12 pct100 row mt15">
+											<div class="mt15 ml15 nodeLine f12">
 												<div class="g28 ui-audit f12 pl10"><span>审批</span></div>
 												<div class="ui-auditBox mt10 ml10">
 													<div class="dib vt green">
@@ -105,8 +105,7 @@
 												</div>
 
 											</div>
-											<div class="b g28 mt30">风险保证金充值申请意见</div>
-											<table class="ui-table f12 pct100 row mt15">
+											
 												<tbody>
 													<tr>
 														<td width="20%">本人审批意见：</td>
@@ -137,6 +136,10 @@
 													</tr>
 												</tbody>
 											</table>
+											<div class="mt30 tc">
+												<button class="ui-button mr10" type="button">提交</button>
+												<button class="ui-button mr10" type="button" data-type="clear">退回</button>
+											</div>
 										</div>
 									</td>
 								</tr>

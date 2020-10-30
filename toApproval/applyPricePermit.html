@@ -142,8 +142,8 @@
                                 <th>操作</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody class="ui-thover">
+                            <tr class="openTr">
                                 <td>1</td>
                                 <td>镀铝板材</td>
                                 <td>1</td>
@@ -153,8 +153,15 @@
                                 <td>1</td>
                                 <td>1</td>
                                 <td> 2019-08-30 11:01:52</td>
-                                <td>查看</td>
+                                <td><a href="javascript:void(0)" onclick="openDetails(this)">查看</a></td>
                                 <td>--</td>
+                            </tr>
+                            <tr class="hideTr dn">
+                                <td colspan="11">
+                                    <div class="auto tl" style="width: 98%;">
+                                        2020-07-06 13:54:55 将计划量调整为0吨。上调浮动比例0.0%; 下调浮动比例0.0%;挂牌量1吨:
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2">合计</td>
@@ -218,6 +225,18 @@
         </div>
     </div>
     <!-- rightBar -->
+    <div class="dom2 f12 dn">
+          统一调整为
+        <div class="ui-input mb10 mt5" data-type="price">
+            <span class="red dib f16 vm">￥</span>
+            <input type="text" value="" class="pct70" placeholder="输入调整后价格">元/吨
+        </div>
+        <div class="mb5">
+            <button type="button" class="ui-button mr5" data-type="small">确认</button>
+            <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+        </div>
+
+    </div>
 
 
 
@@ -230,7 +249,13 @@
             $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
 
-
+        function prev(){
+			window.history.back(-1)
+        }
+        	//展开明细
+		function openDetails(obj) {
+			$(obj).parents(".openTr").next("tr").toggle()
+		}
     </script>
 </body>
 

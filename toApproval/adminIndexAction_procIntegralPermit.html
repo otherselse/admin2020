@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>加工积分提取审批-审批管理-乐刚智能云系统</title>
+    <title>积分提取审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -31,7 +31,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">加工积分提取审批</span>
+                <span class="g28">积分提取审批</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -51,12 +51,10 @@
                     <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
                     <span class="searchLable">区域：</span>
                     <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="pct25 dib f12  ">
+                    <span class="pct25 dib f12  m_db m_mt10">
                         <span class="searchLable">入库申请时间：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
                         </span></span>
                 </div>
                 <div class="tc f12">
@@ -101,13 +99,18 @@
                                 </tr>
                                 <tr class="hideTr dn">
                                     <td colspan="11" class="f12">
-                                        <div class="tl auto g28  mt10 f0" style="width: 98%;">
-                                            <span class="pct33 f12 dib"><span class="b g28">转换金额：</span>11元</span>
-                                            <span class="pct33 f12 dib"><span class="b g28">附件：</span><a
-                                                    href="javascript:void(0)"
-                                                    class="ui-files mr20 vm">组件1111.jpg</a></span>
-                                            <span class="pct33 f12 dib"><span class="b g28">审批意见：</span>同意</span>
-                                        </div>
+                                        <table class="ui-table row tl auto" width="98%">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="16%">转换金额：</td>
+                                                    <td width="16%">11元</td>
+                                                    <td width="16%">附件：</td>
+                                                    <td width="16%"><a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a></td>
+                                                    <td width="17%">审批意见：</td>
+                                                    <td width="17%">同意</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </td>
                                 </tr>
                             </tbody>

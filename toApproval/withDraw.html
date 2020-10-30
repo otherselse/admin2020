@@ -40,37 +40,40 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f0">
-                    <span class="pct33 f12 dib">区域：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-                    <span class="pct33 f12 dib">金牌商家：<input type="text" class="ui-input  pct59" placeholder="请输入" autocomplete="off"></span>
-                    <span class="pct33 f12 dib">提成类型：
-                        <div class="dib selectSingle">
-							<a class="on" href="javscript:void(0)">零售</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">加工</a>
-						</div>
-                    </span>
-                  
+                        <span class="searchLable f12">状态：</span>
+                        <div class="dib selectSingle mr40 f12">
+                            <a class="on" href="javscript:void(0)">申请中</a>
+                            <span class="pr5 pl5">|</span>
+                            <a href="javscript:void(0)" class="">已处理</a>
+                            <span class="pr5 pl5">|</span>
+                            <a href="javscript:void(0)" class="">退回</a>
+                        </div>
+                        <span class="searchLable f12">提成类型：</span>
+                        <span class="radio f12">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>零售</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工</label>
+                        </span>
+                    
+                </div>
+                <div class="mb10 f0">
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">区域：</span>
+                        <input type="text" class="ui-input pct59" placeholder="请输入"
+                            autocomplete="off"></span>
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input  pct59" placeholder="请输入"
+                            autocomplete="off"></span>
+                            <span class="dib f12  m_pct31 pct25">
+                               <span class="searchLable">申请时间：</span>
+                                <span class="ui-input tc f0 pct69  range" data-type="time">
+                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+                                        autocomplete="off">
+                                </span>
+                            </span>
+
                 </div>
                 <div class="mb10  f0">
-                   <span class="pct33 f12 dib">
-                       状态：
-						<div class="dib selectSingle">
-							<a class="on" href="javscript:void(0)">申请中</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">已处理</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">退回</a>
-                        </div>
-                    </span>
-                    <span class="dib f12  m_pct31 pct33">申请时间：
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                        </span>
-                    </span>
                 </div>
                 <div class="tc f12">
                     <button class="ui-button">查询</button>
@@ -80,7 +83,9 @@
                         <table class="ui-table f12 pct100">
                             <thead>
                                 <tr>
-                                    <th width="7%"><i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
+                                    <th width="7%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+                                    </th>
                                     <th width="12%">申请日期</th>
                                     <th width="9%">金牌商家</th>
                                     <th width="9%">金牌商家编号</th>
@@ -99,7 +104,8 @@
                         <table class="ui-table tc f12" width="100%">
                             <tbody class="ui-thover">
                                 <tr class="openTr">
-                                    <td width="7%"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+                                    <td width="7%"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
+                                                class="checkbox-opacity" name="checkbox"></i></td>
                                     <td width="12%">2020-01-01</td>
                                     <td width="9%">金牌商家</td>
                                     <td width="9%">0101</td>
@@ -114,14 +120,14 @@
                                 <tr class="hideTr dn">
                                     <td colspan="11">
                                         <table class="ui-table row auto tl" width="98%">
-                                                <tbody>
-                                                    <tr>
-                                                        <td width="15%">提现金额：</td>
-                                                        <td width="45%"><input class="ui-input mr5">元</td>
-                                                        <td width="15%">开户行归属地所在城市:</td>
-                                                        <td width="45%"><input class="ui-input" value="安徽/芜湖市"></td>
-                                                    </tr>
-                                                </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td width="15%">提现金额：</td>
+                                                    <td width="45%"><input class="ui-input mr5">元</td>
+                                                    <td width="15%">开户行归属地所在城市:</td>
+                                                    <td width="45%"><input class="ui-input" value="安徽/芜湖市"></td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                         <div class="mt30 tc">
                                             <button class="ui-button mr10" type="button">修改</button>
@@ -163,12 +169,12 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script>
         $(function () {
-            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })
         //展开明细
-		function openDetails(obj) {
-			$(obj).parents(".openTr").next("tr").toggle()
-		}
+        function openDetails(obj) {
+            $(obj).parents(".openTr").next("tr").toggle()
+        }
     </script>
 </body>
 
