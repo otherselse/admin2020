@@ -14,6 +14,9 @@
     <title>市场定价管理-信息管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <style>
+        .qtip {
+            max-width: 450px;
+        }
     </style>
 </head>
 
@@ -64,7 +67,7 @@
             </div>
             <div class="df mb10">
                 <span class="dib pct25">
-                    
+
                     <span class="searchLable">金牌商家：</span>
                     <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                 </span>
@@ -153,7 +156,8 @@
                                 <td>上海海洋大学</td>
                                 <td>2020-07-31</td>
                                 <td>
-                                    冷轧卷板/TDX51D AZ/11.000*1100*C
+                                    冷轧卷板/11.000*1100*C<br>
+                                    TDX51D AZ
                                 </td>
                                 <td>沙钢</td>
                                 <td>理算</td>
@@ -179,7 +183,7 @@
                             </tr>
                             <!-- 点击执行显示 -->
                             <tr class="hideTr dn">
-                                <td colspan="22">
+                                <td colspan="19">
                                     <div class="pl20 pr20">
                                         <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
                                             <thead>
@@ -210,11 +214,49 @@
                             </tr><!-- 隐藏内容end -->
                         </tbody>
                         <tfoot>
-                            
+                            <tr height="45" class="bgfa">
+                                <td colspan="19" class="lh45">
+                                    <div class="l">
+                                        <i class="ui-checkbox ml10 goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+                                        <span class="dib ml20">重量总计：</span>
+                                        <span class="">单页汇总：</span>
+                                        <span class="red">10</span>吨
+                                        <span class="ml20 dib">所有汇总：</span>
+                                        <span class="red">10</span>吨
+                                    </div>
+                                    <div class="r">
+                                        <a href="javascript:void(0)" class="mr20 blue f12 link-up g80 tipclick" qtip-dom="dom2">价格统调</a>
+                                        <button type="button" class="ui-button mr20 ml20">市场定价</button>
+                                    </div>
+                                </td>
+                            </tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="qtip-content" id="qtip-3-content" aria-atomic="true">
+        <div class="dom2 f12" style="display: none; visibility: visible;">
+            <div class="radio  pb10">
+                <label class="mr15"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一调整为</label>
+                <label class="mr15"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一下调为</label>
+                <label class=""><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一上调为</label>
+            </div>
+            <div class="ui-input mb10" data-type="price">
+                <span class="red dib f16 vm">￥</span>
+                <input type="text" value="" class="pct80" placeholder="输入调整后价格">元/吨
+            </div>
+            <div class="mb5">
+                <button type="button" class="ui-button mr5" data-type="small">确认</button>
+                <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+            </div>
+
         </div>
     </div>
 
@@ -237,7 +279,7 @@
                     }
                 },
                 position: {
-                    my: 'top center',
+                    my: 'top right',
                     at: 'bottom center'
                 },
                 // position: {

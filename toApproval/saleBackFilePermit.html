@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>退货入库审批-审批管理-乐刚智能云系统</title>
+    <title>退货入库审批单据-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -31,7 +31,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">退货入库审批</span>
+                <span class="g28">退货入库审批单据</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -42,7 +42,6 @@
                 <div>
                     <span class="dib pct25 f12">
                         <span class="searchLable">订单号：</span>
-
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25 f12">
@@ -92,23 +91,8 @@
                             <td>汤小唯</td>
                             <td><a href="javascript:void(0)" onclick="openDetails(this)">未审核</a></td>
                         </tr>
-                        <tr class="hideTr">
+                        <tr class="hideTr dn">
                             <td colspan="7">
-                                <div class="auto f14 b mt30 tl g28" style="width: 98%;">审核意见</div>
-                                <div class="mt30 ml30 nodeLine f12 tl">
-                                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
-                                    <div class="ui-auditBox mt10 ml10">
-                                        <div class="dib vt green"> 
-                                            <i class="dib sp-Bg vt mr10"></i>审核通过
-                                        </div>
-                                        <div class="dib ml20">
-                                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
-                                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                                <div class="auto f14 b mt30 tl g28" style="width: 98%;">评审意见</div>
                                 <table class="ui-table row f12 auto mt15 tl" width="98%">
                                     <tbody>
                                         <tr>
@@ -117,9 +101,26 @@
                                                     class="ui-files mr15 vm">组件1111.jpg</a><a href="javascript:void(0)"
                                                     class="ui-files mr15 vm">组件1111.jpg</a></td>
                                         </tr>
+                                    </tbody>
+                                </table>
+                                <div class="auto f14 b mt15 tl g28" style="width: 98%;">审核意见</div>
+                                <div class="mt15 ml30 nodeLine f12 tl">
+                                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                                    <div class="ui-auditBox mt10 ml10">
+                                        <div class="dib vt green"> 
+                                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                                        </div>
+                                        <div class="dib ml20">
+                                            <div>审批意见：同意申请 <span class="pl40">审批时间：</span>2019-12-30  13:23:12</div>
+                                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="ui-table row f12 auto mt15 tl" width="98%">
+                                    <tbody>
                                         <tr>
-                                            <td>本人审批意见：</td>
-                                            <td>
+                                            <td width="20%">本人审批意见：</td>
+                                            <td width="80%">
                                                 <span class="radio">
                                                     <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input
                                                                 type="radio" class="radio-opacity"

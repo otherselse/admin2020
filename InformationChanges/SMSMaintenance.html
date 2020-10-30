@@ -37,8 +37,16 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-
         <div class="fix f12 bgwh p20 ui-content ovh minH">
+            
+            <div class="xzhj daj">
+                <a href="javascript:void(0)" onclick="showLayer('信息录入','informationInput.html',600,300)"
+                    class="dib xzhj-button daj">
+                    <span class="dib mr10">信息录入</span> <img src="../images/documnts/t8.png" width="20px"
+                        height="20px" alt="">
+                </a>
+            </div>
+
             <div class="cl mb10 dac f12">
                 <span class="dib pct25">
                     短信接收人：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
@@ -56,41 +64,6 @@
                     <button type="button" class="ui-button mr20 ml20">查询</button>
                 </span>
             </div>
-            <h2 class="sp-yg pt20 mb10">消息录入</h2>
-            <table class="ui-table tc f12 auto" width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td class="title" width="13%">短信类型：</td>
-                        <td class="cont" width="37%">
-                            <span class="dib selectSingle">
-                                <a class="on" href="javscript:void(0)">库存定金</a>
-                                <span class="pr5  pl5 ">|</span>
-                                <a class="" href="javscript:void(0)">入库定价</a>
-                                <span class="pr5  pl5 ">|</span>
-                                <a class="" href="javscript:void(0)">备货定价</a>
-                            </span>
-                        </td>
-                        <td class="title" width="13%">短信接收人：</td>
-                        <td class="cont" width="37%">
-                            <input type="text" class="ui-input pct69" placeholder="请选择" autocomplete="off">
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td class="title" width="13%">短信内容：</td>
-                        <td class="tl" width="87%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="1"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="tc mt20">
-                <button type="button" class="ui-button mr10">查询</button>
-                <button type="button" class="ui-button " data-type="clear">清空</button>
-            </div>
-
             <div class="lgui-table-box mt30">
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
@@ -190,16 +163,17 @@
                 }
             });
         })
-        // function showLayer() {
-        //     layer.open({
-        //         type: 2,
-        //         title: '选择人员队列',
-        //         shadeClose: true,
-        //         shade: 0.4,
-        //         area: ['960px', '700px'],
-        //         content: 'selectGoldMerchants.html' //iframe的url
-        //     });
-        // }
+        
+        function showLayer(name, url, w, h) {
+            layer.open({
+                type: 2,
+                title: name,
+                shadeClose: true,
+                shade: 0.4,
+                area: [w + 'px', h + 'px'],
+                content: url //iframe的url
+            });
+        }
     </script>
     <script>
 

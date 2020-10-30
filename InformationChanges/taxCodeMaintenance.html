@@ -66,13 +66,16 @@
 
             <div class="cl mb20 mt20 dac f12">
                 <span class="dib pct25">
-                    品名：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">品名：</span>
+                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    规格：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">规格：</span>
+                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                 </span>
                 <span class="dib pct25">
-                    类型：<span class="input-selSearch pct69">
+                    <span class="searchLable">类型：</span>
+                    <span class="input-selSearch pct69">
                         <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
                         <div class="search-cont pct100">
                             <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -95,29 +98,29 @@
                         <thead>
                             <tr class="fixTr">
                                 <th width="4%">序号</th>
-                                <th width="17%">品名</th>
+                                <th width="15%">品名</th>
                                 <th width="14%">编码</th>
                                 <th width="5%">类型</th>
                                 <th width="8%">操作人</th>
-                                <th width="8%">操作时间</th>
-                                <th width="17%">记录</th>
+                                <th width="17%">操作时间</th>
+                                <th width="10%">记录</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td width="4%">2</td>
-                                <td width="17%">
+                                <td>2</td>
+                                <td>
                                     <input type="text" class="borNone ibBt tc" value="输油气管" data="输油气管" readonly=""
                                         tagname="steName" onchange="check(this)">
                                 </td>
-                                <td width="14%">
+                                <td>
                                     <input type="text" class="borNone ibBt tc" value="121312321" data="121312321"
                                         readonly="" tagname="steNameNo" onchange="check(this)">
                                 </td>
-                                <td width="5%">加工</td>
-                                <td width="16%">李四四</td>
-                                <td width="16%">2019-12-18 18:13:27</td>
-                                <td width="17%" class="blue">
+                                <td>加工</td>
+                                <td>李四四</td>
+                                <td>2019-12-18 18:13:27</td>
+                                <td class="blue">
                                     <a href="javascript:void(0)" onclick="setEdit(this)">修改</a>
                                     <span class="dib pl2 pr2">|</span>
                                     <a href="javascript:delHscode('99F89987BA367A32E05371001FACA8EF')">删除</a>

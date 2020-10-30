@@ -43,48 +43,23 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f12">
-                    <div class="dib mr40">
                         <span class="searchLable">审批状态：</span>
-                        <div class="dib selectSingle">
+                        <div class="dib selectSingle mr40">
                             <a href="javascript:void(0)" href="javascript:void(0)">不限</a>
                             <span>|</span>
                             <a href="javascript:void(0)">待审批</a>
                             <span>|</span>
                             <a href="javascript:void(0)">已审批</a>
                         </div>
-                    </div>
-                    <span class="dib f12  m_pct31">
+                        <span class="searchLable">申请公司：</span>
+                        <input type="text" class="ui-input pct16 mr40">
+                    <span class="dib f12 m_pct31">
                         <span class="searchLable">申请时间：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
                                 autocomplete="off">
                         </span>
                     </span>
-                </div>
-                <div class=" f12">
-                    <span class="searchLable dib vt">申请公司：</span>
-                    <div class="dib selectSingle selectProcName ">
-                        <a href="javascript:void(0)" href="javascript:void(0)">不限</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁交易</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">asfdas</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">安徽东岭实业有限公司</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁加工集团</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁加工集团</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁加工集团</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁加工集团</a>
-                        <span>|</span>
-                        <a href="javascript:void(0)">上海钢铁加工集团</a>
-                    </div>
                 </div>
                 <div class="tc mt20">
                     <button type="button" class="ui-button">查询</button>
@@ -153,19 +128,36 @@
                                             </tbody>
                                         </table>
                                         <form>
-                                            <table class="ui-table f12 auto row mt15 istable dn tl" style="width: 98%;">
+                                            <div class="mt15 istable auto dn" style="width: 98%;">
+                                                <div class="mt15 b f14 g28 tl">审批意见</div>
+                                                <div class="mt15 tl ml50 nodeLine f12">
+                                                    <div class="g28 ui-audit f12 pl10"><span>1节点</span></div>
+                                                    <div class="ui-auditBox mt10 ml10">
+                                                        <div class="dib vt green"> 
+                                                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                                                        </div>
+                                                        <div class="dib ml20">
+                                                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="g28 ui-audit f12 pl10 mt10"><span>2节点</span></div>
+                                                    <div class="ui-auditBox mt10 ml10">
+                                                        <div class="dib vt green">
+                                                            <i class="dib sp-Bg vt mr10"></i>审核通过
+                                                        </div>
+                                                        <div class="dib ml20">
+                                                            <div>审批意见：同意申请 <span class="pl40"> 审批时间：</span>2019-12-30  13:23:12</div>
+                                                            <div>审批备注：同意申请同意申请同意申请同意申请同意申请同意申请同意申请同意申请</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <table class="ui-table f12 auto row mt30  pct100 tl">
                                                 <tbody>
+                                                 
                                                     <tr>
-                                                        <td width="15%">审核</td>
-                                                        <td width="85%">1节点</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>审批意见</td>
-                                                        <td><span class="red">[审核通过]</span>系统自动审批 2020-09-24 11:37:29</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>本人审批意见</td>
-                                                        <td>
+                                                        <td width="15%">本人审批意见</td>
+                                                        <td width="85%">
                                                             <span class="radio">
                                                                 <label class="mr15">
                                                                     <i class="ui-radio goldIcon v-3 mr2 on">
@@ -189,6 +181,11 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div class="mt30 mb15 tc">
+                                                <button class="ui-button mr10" type="button">提交</button>
+                                                <button class="ui-button" data-type="clear" type="button">退回</button>
+                                            </div>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>

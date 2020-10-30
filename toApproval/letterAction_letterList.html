@@ -42,28 +42,33 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="cl  mb10 f12">
-                    <span class="searchLable">订单ID：</span> <input type="text" class="ui-input pct15 mr20"
+                <div class="cl f12 mb10">
+                    <span class="searchLable">&ensp;&ensp;状态：</span>
+                    <span class="radio">
+                        <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>已评审</label>
+                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未评审</label>
+                    </span>
+                   </div>
+                <div class="cl f0">
+                    <span class="dib f12 pct25">
+                        <span class="searchLable">订单ID：</span> <input type="text" class="ui-input pct59"
                         placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">金牌商家：</span> <input type="text" class="ui-input pct15 mr20"
-                            placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">单位名称：</span> <input type="text" class="ui-input pct15 mr20"
-                            placeholder="请输入" autocomplete="off">
-                    <span class="m_db m_mt10 f12 searchLable">申请时间：<span class="ui-input tc f0 pct20 range"
+                    </span>
+                    <span class="dib f12 pct25">
+                        <span class="searchLable">金牌商家：</span> <input type="text" class="ui-input pct59"
+                        placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib f12 pct25">
+                        <span class="searchLable">单位名称：</span> <input type="text" class="ui-input pct59"
+                        placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib f12 searchLable">申请时间：<span class="ui-input tc f0 pct59 range"
                             data-type="time">
-                            <input type="text" placeholder="开始日期" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off"
-                                lay-key="2"></span>
+                            <input type="text" placeholder="开始日期" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly=""></span>
                     </span>
                 </div>
-                <div class="cl f12 ">
-                 <span class="searchLable">&ensp;&ensp;状态：</span><div class="dib selectSingle">
-                        <a class="on" href="javscript:void(0)">已评审</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">未评审</a>
-                    </div>
-                </div>
+            
                 <div class="mt15 tc">
                     <button type="button" class="ui-button ">查询</button>
                 </div>

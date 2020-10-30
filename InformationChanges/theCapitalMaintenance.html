@@ -53,17 +53,18 @@
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer('新增资本信息','CapitalCenterOperation.html',960,530)"
+                    <a href="javascript:void(0)" onclick="showLayer('新增资本信息','CapitalCenterOperation.html',960,450)"
                         class="dib xzhj-button daj">
                         <span class="dib mr10">新增资本信息</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
                     </a>
                 </div>
             </div>
-            <div class="mb20 f0 mt20 ml20  mr20">
-                <div class="mb10 f0">
+            <div class="mt20 ml20  mr20">
+                <div class=" f0">
                     <span class="pct25 dib f12">
-                        加盟公司：<span class="input-selSearch pct69">
+                        <span class="searchLable"> 加盟公司：</span>
+                        <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -76,22 +77,29 @@
                             </div>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">部门：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-                    <span class="pct25 dib f12">关键字：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
-                    <span class="pct25 dib f12">时间：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                            class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                            class="render-time pct45" readonly="">
-                    </span></span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">部门：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">关键字：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="pct25 dib f12">
+                        <span class="searchLable">时间：</span>
+                        <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="">
+                        </span></span>
                 </div>
 
                 <div class="f0 dac">
                     <span class="df pct50 f12">
-                        <div class="min-w60 mt15">信息类别：</div>
+                        <div class="min-w60 mt15 searchLable">信息类别：</div>
                         <div class="ui-tab4 mt10">
                             <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10 on">办事指南</a>
                             <span class="input-selSearch">
-                                <a href="javascript:void(0)" onclick="sel(0)" class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
+                                <a href="javascript:void(0)" onclick="sel(0)"
+                                    class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
                                 <div class="search-cont pct100 lj" style="left: 0px; display: none;">
                                     <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -103,7 +111,8 @@
                             </span>
                             <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10">审计中心</a>
                             <span class="input-selSearch">
-                                <a href="javascript:void(0)" onclick="inp()" class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
+                                <a href="javascript:void(0)" onclick="inp()"
+                                    class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
                                 <div class="search-cont pct100 lj" style="left: 0px; display: none;">
                                     <a href="javascript:void(0)" class="search-list db ell">11</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -116,7 +125,8 @@
                         </div>
                     </span>
                     <div class="pct25  f12 dn nameSel1">
-                        &emsp;名称：<span class="input-selSearch pct69">
+                        <span class="searchLable"> &emsp;名称：</span>
+                        <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -130,7 +140,8 @@
                         </span>
                     </div>
                     <div class="pct25  f12  nameSel2">
-                        &emsp;名称：<input type="text" class="ui-input pct69" placeholder="请输入">
+                        <span class="searchLable"> &emsp;名称：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入">
                     </div>
                 </div>
 
@@ -145,7 +156,7 @@
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
                         <thead>
                             <tr class="n17-Ttitle2">
-                                <th width="6%">序号</th>
+                                <th width="6%">选择</th>
                                 <th width="20%">加盟公司</th>
                                 <th width="8%">信息类别</th>
                                 <th width="10%">名称</th>
@@ -159,13 +170,18 @@
                         </thead>
                         <tbody class="ui-thover">
                             <tr class="heji">
-                                <td><input type="checkbox" name="ids" value="A19B03D10BC50C53E05371001FAC4A85"></td>
+                                <td>
+                                    <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
+                                            class="checkbox-opacity" name="checkbox"></i>1
+                                </td>
                                 <td>上海乐刚供应链</td>
                                 <td>
-                                    <div class="ell lh25 demo" style="width: 100px">政府荣誉</div>
+                                    政府荣誉
                                 </td>
-                                <td title="互联网示范企业标准行业">
-                                    <div class="bkall ell demo" style="width: 100px">互联网示范企业标准行业</div>
+                                <td>
+                                    <span class="zxx_text_90 tiptop menuhook" title="互联网示范企业标准行业">
+                                        互联网示范企业标准行业
+                                    </span>
                                 </td>
                                 <td>
                                     上海市政府
@@ -175,9 +191,9 @@
                                     <input type="hidden" value="" id="sumMoney">
                                 </td>
                                 <td>
-                                    <div class="bkall ell tiptop menuhook" title="需要提交材料，上海首批示范企业" style="width:90px">
+                                    <span class="zxx_text_90 tiptop menuhook" title="需要提交材料，上海首批示范企业">
                                         需要提交材料，上海首批示范企业
-                                    </div>
+                                    </span>
                                 </td>
                                 <td>
                                     2020-03-31
@@ -191,7 +207,7 @@
                                 </td>
                                 <td>
                                     <a href="javascript:void(0)"
-                                        onclick="showLayer('编辑资本信息','CapitalCenterOperation.html',960,530)">编辑</a>
+                                        onclick="showLayer('编辑资本信息','CapitalCenterOperation.html',960,450)">编辑</a>
                                     <span class="pl2 dib pr2">|</span>
                                     <a href="javascript:void(0)" onclick="deleteInfo()"> 删除</a>
                                     <span class="pl2 dib pr2">|</span>
@@ -225,18 +241,22 @@
                             </tr><!-- 隐藏内容end -->
                         </tbody>
                         <tfoot>
-                            <tr height="45" class="bgfa">
+                            <tr height="45" class="bgfa lh45">
                                 <td colspan="10">
                                     <div class="tc">
-                                        合计：金额:<span class="red">132141442</span>
+                                        <div class="l">
+                                            <i class="ui-checkbox goldIcon ml20 mr5"><input type="checkbox"
+                                                    class="checkbox-opacity" name="checkbox"
+                                                    onclick="setAll(this)"></i>全选
+                                        </div>
+                                        <div class="r">
+                                            <button type="button" class="ui-button mr20">批量删除</button>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
-                    <div class="mt20 tc">
-                        <button type="button" class="ui-button mr10">批量删除</button>
-                    </div>
                 </div>
             </div>
             <!-- table end -->
@@ -308,7 +328,7 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
                 },
             });
-
+            
             //下拉
             $("body").on("click", ".xiaLa", function (e) {
                 e.stopPropagation();
@@ -343,7 +363,7 @@
         function sel(inde) {
             $(".nameSel1").css("display", "block");
             $(".nameSel2").addClass("dn");
-            if(inde == 1){
+            if (inde == 1) {
                 $(".str1").text("资料中心");
                 $(".str2").text("政府补助及荣耀");
             }
@@ -355,7 +375,7 @@
             $(".str1").text("资料中心");
         }
 
-        function empty(str){
+        function empty(str) {
             $(this).text(str);
         }
     </script>

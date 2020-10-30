@@ -84,11 +84,9 @@
 				<div class="cl f0 mb10">
 					<span class="dib pct25 f12  m_pct31">
 						<span class="searchLable">申请时间：</span>
-						<span class="ui-input tc f0 pct69  range" data-type="time">
-							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-							<span class="dib pct5 tc">-</span>
-							<input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-						</span>
+						<span class="ui-input f0 pct69 range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+							</span>
 					</span>
 					<button type="button" class="ui-button mr20">查询</button>
 					<button type="button" class="ui-button" data-type="clear">清空</button>
@@ -128,14 +126,14 @@
 								<div class="pl20 tl">加工商评审</div>
 							</td>
 							<td>
-								<span class="ui-icon-circles" type="red">处理完毕</span>
+								<span class="ui-icon-circles" type="red">退回</span>
 							</td>
-							<td><a onclick="openDetails(this)" href="javascript:void(0)">退回</a></td>
+							<td><a onclick="openDetails(this)" href="javascript:void(0)">查看</a></td>
 						</tr>
 						<tr class="hideTr dn">
 							<td colspan="10">
-								<div class="auto tl b g28" style="width: 98%;">相关信息</div>
-								<table class="ui-table row auto tl mt30" width="98%">
+								<div class="auto tl b g28 f14" style="width: 98%;">相关信息</div>
+								<table class="ui-table row auto tl mt15" width="98%">
 									<tbody>
 										<tr>
 											<td width="15%"><span class="red">*</span>承兑面值金额</td>
@@ -162,14 +160,14 @@
 								<div class="pl20 tl">加工商评审</div>
 							</td>
 							<td>
-								<span class="ui-icon-circles" type="gray">处理完毕</span>
+								<span class="ui-icon-circles" type="gray">退回</span>
 							</td>
 							<td><a onclick="openDetails(this)" href="javascript:void(0)">查看</a></td>
 						</tr>
 						<tr class="hideTr dn">
 							<td colspan="10">
-								<div class="auto tl b g28" style="width: 98%;">相关信息</div>
-								<table class="ui-table row auto tl mt30" width="98%">
+								<div class="auto tl b g28 f12" style="width: 98%;">相关信息</div>
+								<table class="ui-table row auto tl mt15" width="98%">
 									<tbody>
 										<tr>
 											<td width="15%"><span class="red">*</span>承兑面值金额</td>
