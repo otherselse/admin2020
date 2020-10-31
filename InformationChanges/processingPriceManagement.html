@@ -121,23 +121,26 @@
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
-                        
-                    </tbody>
-                    <!-- <tfoot class="">
-                        <tr height="45">
-                            <th colspan="19">
-                                <div class="l ml10">
-                                    <input type="text" class="ui-input">
-                                    <button class="ui-button mr20" data-type="normal" small-type="small"
-                                        type="button">批量修改价格</button>
-                                </div>
-                                <div class="r mr10">
-                                    <button type="button" class="ui-button mr10">挂牌销售</button>
-                                    <button type="button" class="ui-button">撤销挂牌</button>
-                                </div>
-                            </th>
+                        <tr>
+                            <td>1</td>
+                            <td>2020-04-02 15:17:11</td>
+                            <td>上海加工运输有限责任公司</td>
+                            <td>206819040215953</td>
+                            <td> PRO20200402682145</td>
+                            <td>
+                                <a href="javascript:void(0);">宇宙洪荒大世界</a>
+                            </td>
+                            <td>苏一一</td>
+                            <td>1</td>
+                            <td>
+                                <a href="javascript:void(0);" title="核价人：李四四，日期:2020-04-02 15:17:32，单价:15元"
+                                    class="tiptop">已核价</a>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);" onclick="showLayer('查看','checkTheProcessingPrice.html',960,550)">查看</a>
+                            </td>
                         </tr>
-                    </tfoot> -->
+                    </tbody>
                 </table>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
@@ -176,6 +179,18 @@
             });
             //$("#time5").removeAttr("lay-key");
         }
+
+        function showLayer(name, url, w, h) {
+            layer.open({
+                type: 2,
+                title: name,
+                shadeClose: true,
+                shade: 0.4,
+                area: [w + 'px', h + 'px'],
+                content: url //iframe的url
+            });
+        }
+
 
     </script>
 </body>

@@ -19,159 +19,87 @@
         html {
             background: #fff;
         }
+
+        .ui-input[data-type='time'][small-type="small"] {
+            height: 30px;
+            line-height: 30px;
+        }
     </style>
 </head>
 
 <body class="showTip">
     <div class="lgui-table-box ml20 mt5 mr20">
-        <div class="lgui-table-header pct100">
-            <table class="ui-table f12 auto tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">金牌商家：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">成单时间：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="ui-input ui-input pct90 ml10 borNone" data-type="time"
-                                    small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
-                                        value="2020-07-20" lay-key="11"></span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">客户国家：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">成单品名：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">成单牌号：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">成单重量：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">成单规格：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">是否在首页显示：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="radio">
-                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>中文版</label>
-                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>英文版</label>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">主照片上传：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <span class="dac pl10">
-                                <div class="">
-                                    <div class="mb10">
-                                        <span class=" dib">
-                                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                                onclick="upfile()">附件上传</button>
-                                            <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </span>
-                        </td>
-                    </tr>
 
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">主照片上传：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <span class="dac pl10">
-                                <div class="">
-                                    <div class="mb10">
-                                        <span class=" dib">
-                                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                                onclick="upfile()">附件上传</button>
-                                            <span class="ui-files mr20 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                                                    title="删除"></i></span>
-                                            <span class="ui-files mr20 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                                                    title="删除"></i></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">案例内容：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="3"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">重置</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="lgui-table-header mt20 f12 pct100">
+            <div class="ml40">
+                <div class="mb10 df">
+                    <span class="dib pct40">
+                        &emsp;金牌商家：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40">
+                        &emsp;&emsp;&emsp;成单时间：<span class="ui-input ui-input pct70" data-type="time"
+                            small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
+                                value="2020-07-20" lay-key="11"></span>
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib pct40">
+                        &emsp;客户国家：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40">
+                        &emsp;&emsp;&emsp;成单品名：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib pct40">
+                        &emsp;成单牌号：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40">
+                        &emsp;&emsp;&emsp;成单重量：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib pct40">
+                        &emsp;成单规格：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40 mt5">
+                        是否在首页显示： <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>中文版</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>英文版</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    主照片上传：<span class=" dib">
+                        <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                            onclick="upfile()">附件上传</button>
+                        <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    副照片上传：<span class=" dib">
+                        <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                            onclick="upfile()">附件上传</button>
+                        <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    &emsp;案例内容：<textarea class="ui-textarea pct80" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="tc mt20">
+                <button type="button" class="ui-button mr10 w90">提交</button>
+                <button type="button" class="ui-button w90" data-type="clear">关闭</button>
+            </div>
         </div>
+
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>

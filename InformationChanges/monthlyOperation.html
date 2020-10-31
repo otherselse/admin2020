@@ -28,83 +28,51 @@
 </head>
 
 <body class="showTip">
-    <div class="lgui-table-box ml20 mt5 mr20">
-        <div class="lgui-table-header pct100">
-            <table class="ui-table f12 auto tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">帮派：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="input-selSearch pct69">
-                                    <input type="text" class="ui-input borNone searchUp pct100" placeholder="请选择"
-                                        autocomplete="off">
-                                    <div class="search-cont pct100">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
+    <div class="lgui-table-box ml40 mr20">
+        <div class="lgui-table-header mt20 f12 pct100">
+            <div class="ml40">
+                <div class="mb10 df">
+                    <span class="dib pct40">
+                        帮派：<span class="input-selSearch pct70">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+                                autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                             </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">帮主：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">月度：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="ui-input ui-input borNone pct69 ml10" data-type="time" small-type="small"><input
-                                        type="text" placeholder="time4" id="time4" readonly="" value="2020-07-20"
-                                        lay-key="11"></span>
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">目标量(吨)：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">备注：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="2"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">返回</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </span>
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40">
+                        &emsp;&emsp;&nbsp;&nbsp;帮主：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib mt5 pct40">
+                        月度：<span class="ui-input pct70 " data-type="time"
+                            small-type="small"><input type="text" placeholder="time4" id="time4" readonly=""
+                                value="2020-07-20" lay-key="11"></span>
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib pct40">
+                        目标量(吨)：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 ">
+                    备注：<textarea class="ui-textarea pct70" rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="tc mt20">
+                <button type="button" class="ui-button mr10 w90">提交</button>
+                <button type="button" class="ui-button w90" data-type="clear">关闭</button>
+            </div>
         </div>
+    
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -129,25 +97,25 @@
     }
 
     setTime4();
-        var endtime = '', starttime = '';
-        function setTime4() {
-            starttime = laydate.render({
-                elem: '#time4'
-                , theme: 'lgblue'
-                , trigger: 'click'
-                , min: '2020-07-01'
-                , done: function (value, date, endDate) {
-                    var myobj = {
-                        year: date.year,
-                        month: date.month - 1,//关键
-                        date: date.date
-                    };
-                    endtime.config.max = myobj;
-                }
+    var endtime = '', starttime = '';
+    function setTime4() {
+        starttime = laydate.render({
+            elem: '#time4'
+            , theme: 'lgblue'
+            , trigger: 'click'
+            , min: '2020-07-01'
+            , done: function (value, date, endDate) {
+                var myobj = {
+                    year: date.year,
+                    month: date.month - 1,//关键
+                    date: date.date
+                };
+                endtime.config.max = myobj;
+            }
 
-            });
-            //$("#time5").removeAttr("lay-key");
-        }
+        });
+        //$("#time5").removeAttr("lay-key");
+    }
 </script>
 
 </html>

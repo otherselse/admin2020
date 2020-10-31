@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>乐搜信息维护-信息管理-乐刚智能云系统</title>
+    <title>外贸产品维护-信息管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <style>
         .txtb2 {
@@ -21,9 +21,8 @@
             text-align: center;
         }
 
-        .ui-input[data-type='time'][small-type="small"] {
-            height: 30px;
-            line-height: 30px;
+        .ibBt {
+            background-color: transparent;
         }
     </style>
 </head>
@@ -42,18 +41,26 @@
                 <span class="dib pl5 pr5 ">/</span>
                 信息管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">乐搜信息维护</span>
+                <span class="g28">外贸产品维护</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
+
+        <div class="ui-tab3">
+            <a href="productDetailMaintenance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">产品明细维护</span><i
+                    class="goldIcon ui-tab3-dot"></i></a>
+            <a href="productCatalogMaintenance.html" class="ui-tab3-list rel on"><span
+                    class="ui-tab3-text">产品目录维护</span><i class="goldIcon ui-tab3-dot"></i></a>
+        </div>
+
         <div class="fix f12 bgwh p20 ui-content ovh minH">
             <div class="">
                 <div class="xzhj daj">
-                    <a href="javascript:void(0)" onclick="showLayer('新增单位','unitOperation.html')"
+                    <a href="javascript:void(0)" onclick="showLayer('新增产品目录','newProductCatalogueTuo.html')"
                         class="dib xzhj-button daj">
-                        <span class="dib mr10">添加新单位</span> <img src="../images/documnts/t8.png" width="20px"
+                        <span class="dib mr10">新增产品目录</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
                     </a>
                 </div>
@@ -61,35 +68,25 @@
 
             <div class="cl mb20 mt20 dac f12">
                 <span class="dib pct25">
-                    单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="dib pct25">
-                    主营品种：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="dib pct25">
-                    评审等级：<span class="input-selSearch pct69">
-                        <input type="text" class="ui-input searchUp pct100" placeholder="请选择" value="DESCRIPTION"
-                            autocomplete="off">
-                        <div class="search-cont pct100 tl">
-                            <a href="javascript:void(0)" class="search-list db ell active">上海大大大公司</a>
-                            <a href="javascript:void(0)" class="search-list db ell">上海嫁衣人物公司</a>
+                    产品目录：<span class="input-selSearch pct69">
+                        <input type="text" class="ui-input searchUp pct100" placeholder="占位符" autocomplete="off">
+                        <div class="search-cont pct100">
+                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                         </div>
                     </span>
                 </span>
-                <span class="dib pct25">
-                    评审状态：<span class="input-selSearch pct69">
-                        <input type="text" class="ui-input searchUp pct100" placeholder="请选择" value="DESCRIPTION"
-                            autocomplete="off">
-                        <div class="search-cont pct100 tl">
-                            <a href="javascript:void(0)" class="search-list db ell active">上海大大大公司</a>
-                            <a href="javascript:void(0)" class="search-list db ell">上海嫁衣人物公司</a>
-                        </div>
+                <span class="dib  f1">
+                    是否显示：<span class="radio">
+                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                    class="radio-opacity" name="radio"></i>是</label>
+                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                    name="radio"></i>否</label>
                     </span>
-                </span>
-            </div>
-
-            <div class="tc mt20">
-                <span class="dib pct25">
                     <button type="button" class="ui-button mr20 ml20">查询</button>
                 </span>
             </div>
@@ -98,66 +95,33 @@
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
                         <thead>
-                            <tr class="fixTr">
-                                <th width="15%">单位名称</th>
-                                <th width="25%">主营品种</th>
-                                <th width="10%">联系人</th>
-                                <th width="15%">联系电话</th>
-                                <th width="10%">评审等级<br></th>
-                                <th width="10%">评审状态<br></th>
-                                <th width="10%">操作</th>
+                            <tr class="tab0304T">
+                                <th width="5%">序号</th>
+                                <th width="15%">产品父级目录</th>
+                                <th width="15%">产品目录</th>
+                                <th width="8%">排序</th>
+                                <th width="15%">创建时间</th>
+                                <th width="8%">创建人</th>
+                                <th width="8%">是否显示</th>
+                                <th width="20%">内容</th>
+                                <th width="13%">操作</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td width="15%">海上的钢琴师</td>
-                                <td width="25%">冷轧卷板、热轧卷板、镀铝板材</td>
-                                <td width="10%">李鸿章</td>
-                                <td width="15%">18896548752</td>
-                                <td width="10%">1</td>
-                                <td width="10%">
-                                    <span class="daj">
-                                        <span class="dib rad colorW mr5"></span>
-                                        <span>有效</span>
-                                    </span>
+                                <td>1</td>
+                                <td>
+                                    Bar
                                 </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)"
-                                    onclick="showLayer('修改单位','unitOperation.html')">修改</a><a></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="15%">海上的钢琴师</td>
-                                <td width="25%">冷轧卷板、热轧卷板、镀铝板材</td>
-                                <td width="10%">李鸿章</td>
-                                <td width="15%">18896548752</td>
-                                <td width="10%">1</td>
-                                <td width="10%">
-                                    <span class="daj">
-                                        <span class="dib rad colorS mr5"></span>
-                                        <span>未评审</span>
-                                    </span>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)"
-                                    onclick="showLayer('修改单位','unitOperation.html')">修改</a><a></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="15%">海上的钢琴师</td>
-                                <td width="25%">冷轧卷板、热轧卷板、镀铝板材</td>
-                                <td width="10%">李鸿章</td>
-                                <td width="15%">18896548752</td>
-                                <td width="10%">1</td>
-                                <td width="10%">
-                                    <span class="daj">
-                                        <span class="dib rad colorWt mr5"></span>
-                                        <span>已过期</span>
-                                    </span>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)"
-                                    onclick="showLayer('修改信息','unitOperation.html')">修改</a><a></a>
+                                <td>水电费水电费</td>
+                                <td>1</td>
+                                <td>2020-04-28</td>
+                                <td>浦芳</td>
+                                <td>是</td>
+                                <td>师傅的说法都是发</td>
+                                <td>
+                                    <a href="javascript:void(0)" onclick="showLayer('编辑产品目录','newProductCatalogueTuo.html')"
+                                        class="blue">编辑</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -177,7 +141,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(6).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -205,33 +169,12 @@
                 title: name,
                 shadeClose: true,
                 shade: 0.4,
-                area: ['960px', '250px'],
+                area: ['960px', '430px'],
                 content: url //iframe的url
             });
             $("#close_but").on("click", function () {
                 layer.close(page);
             });
-        }
-
-        setTime4();
-        var endtime = '', starttime = '';
-        function setTime4() {
-            starttime = laydate.render({
-                elem: '#time4'
-                , theme: 'lgblue'
-                , trigger: 'click'
-                , min: '2020-07-01'
-                , done: function (value, date, endDate) {
-                    var myobj = {
-                        year: date.year,
-                        month: date.month - 1,//关键
-                        date: date.date
-                    };
-                    endtime.config.max = myobj;
-                }
-
-            });
-            //$("#time5").removeAttr("lay-key");
         }
 
     </script>

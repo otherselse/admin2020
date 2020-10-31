@@ -22,6 +22,10 @@
             padding: 0px;
         }
 
+        .qtip-lg {
+            min-width: 450px;
+        }
+
         body,
         html {
             background: #fff;
@@ -43,7 +47,7 @@
                 <a href="javascript:void(0)" class="ui-tab3-list rel on"><span
                         class="ui-tab3-text">订单详情(654211)</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
-            
+
             <div class="dajs f12 bgwh">
                 <div class="dajs bor-bE6E6 lh60 pct100 ">
                     <div class="dac ml20">
@@ -60,6 +64,13 @@
                 </div>
             </div>
 
+            <!-- 没有数据则不显示 比如当销售没有数据的话就不显示销售这一类 -->
+            <!-- 没有数据则不显示 比如当销售没有数据的话就不显示销售这一类 -->
+            <!-- 没有数据则不显示 比如当销售没有数据的话就不显示销售这一类 -->
+            <!-- 没有数据则不显示 比如当销售没有数据的话就不显示销售这一类 -->
+            <!-- 没有数据则不显示 比如当销售没有数据的话就不显示销售这一类 -->
+
+
             <div class="lgui-table-box bgwh">
                 <div class="lgui-table-body pt30 pl20 pr20" style="height: 100%;">
                     <!-- 销售 -->
@@ -72,146 +83,153 @@
                             <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">收起</a>
                         </div>
                         <div class="reDK">
-                            <div class="lh50 reD-top dajs">
-                                <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团&nbsp;>
-                                    <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现款业务</span>
-                                </span>
-                                <div class="pct25 dac">
-                                    <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18" alt="">
-                                    <span class="b f14 ml5">已结算3000元</span>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团&nbsp;>
+                                        <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现款业务</span>
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">已结算3000元</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="df">
-                                <span class="dib pct25 pl20 mb10">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">合同号：&emsp;</span>
-                                        <a href="javascript:void(0)" onclick="showLayer('合同','lookAtTheContrat.html',960,600)">STC(22)-2322113</a><span class="pl5 pr5">|</span>
-                                        <a href="">打印</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">合同金额：</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">合同重量：</span>23446吨
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">订单账期：</span>10天
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">交货地点：</span>货物所在仓库
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">已收金额：&emsp;</span>
-                                        34533.12元
-                                        <a href="">查看记录</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未收金额：&emsp;</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">付款方式：&emsp;</span>全款-电汇
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">应收款日期：</span>2020-12-23
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">超期天数：&emsp;</span>
-                                        <span class="red">10天<span class="dib ml5">催款函&nbsp;></span></span>
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">联系人：&emsp;&emsp;</span>马云云
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">联系电话：&emsp;</span>12828192192
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">提货方式：&emsp;</span>自提
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">最晚提货日期：</span>2020-12-23
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">结算金额：</span>3000元<span class="col-8080">(43.23吨)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">结算日期：</span>2020-08-12 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票金额：</span>3000元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票日期：</span>2020-12-23 13:23:11
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="pl20 pb20 pr20">
-                                <div class="dajs xian mb5 ">
-                                    <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
-                                            src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">合同号：&emsp;</span>
+                                            <a href="javascript:void(0)"
+                                                onclick="showLayer('合同','../report/lookAtTheContrat.html',960,600)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                            <a href="">打印</a>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同金额：</span>23446.33元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同重量：</span>23446吨
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">订单账期：</span>10天
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">交货地点：</span>货物所在仓库
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">已收金额：&emsp;</span>
+                                            34533.12元
+                                            <a href="javascript:void(0)" class="tipclick ml5" qtip-dom="dom1">查看记录</a>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">未收金额：&emsp;</span>23446.33元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">付款方式：&emsp;</span>全款-电汇
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">应收款日期：</span>2020-12-23
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">超期天数：&emsp;</span>
+                                            <span class="red">10天 <a href="" target="_block"><span
+                                                        class="dib red ml5">催款函&nbsp;></span></a></span>
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">联系人：&emsp;&emsp;</span>马云云
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">联系电话：&emsp;</span>12828192192
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">提货方式：&emsp;</span>自提
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">最晚提货日期：</span>2020-12-23
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">结算金额：</span>3000元<span
+                                                class="col-8080">(43.23吨)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算日期：</span>2020-08-12 13:23:11
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">开票金额：</span>3000元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">开票日期：</span>2020-12-23 13:23:11
+                                        </div>
+                                    </span>
                                 </div>
-                                <table class="ui-table tc f12 checkbox table-cw mt5" width="100%" data-type="edit">
-                                    <thead>
-                                        <th width="15%" class="tl">
-                                            <span class="dib pl10">
-                                                品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
-                                            </span>
-                                        </th>
-                                        <th width="6%">捆包号</th>
-                                        <th width="5%">钢厂</th>
-                                        <th width="5%">数量</th>
-                                        <th width="5%">重量</th>
-                                        <th width="7%">计算方式</th>
-                                        <th width="7%">仓库</th>
-                                        <th width="15%" class="tl">
-                                            <div class="ml10">
-                                                入库时间&nbsp;/&nbsp;入库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                        <th width="7%">签收时间</th>
-                                        <th width="12%" class="tl">
-                                            <div class="ml10">
-                                                出库时间&nbsp;/&nbsp;出库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                    </thead>
-                                    <tbody class="bgwh">
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                浅绿卷板&nbsp;/&nbsp;DCO3<br>
-                                                <span class="col-8080">11.0000*800*4000</span>
-                                            </div>
-                                        </td>
-                                        <td>dwd12</td>
-                                        <td>鞍钢</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>华业必去</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                        <td>20-12-16</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                    </tbody>
-                                </table>
+                                <div class="pl20 pb20 pr20">
+                                    <div class="dajs xian mb5 ">
+                                        <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
+                                                src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                    </div>
+                                    <table class="ui-table tc f12 checkbox table-cw mt5" width="100%" data-type="edit">
+                                        <thead>
+                                            <th width="15%" class="tl">
+                                                <span class="dib pl10">
+                                                    品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
+                                                </span>
+                                            </th>
+                                            <th width="6%">捆包号</th>
+                                            <th width="5%">钢厂</th>
+                                            <th width="5%">数量</th>
+                                            <th width="5%">重量</th>
+                                            <th width="7%">计算方式</th>
+                                            <th width="7%">仓库</th>
+                                            <th width="15%" class="tl">
+                                                <div class="ml10">
+                                                    入库时间&nbsp;/&nbsp;入库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                            <th width="7%">签收时间</th>
+                                            <th width="12%" class="tl">
+                                                <div class="ml10">
+                                                    出库时间&nbsp;/&nbsp;出库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    浅绿卷板&nbsp;/&nbsp;DCO3<br>
+                                                    <span class="col-8080">11.0000*800*4000</span>
+                                                </div>
+                                            </td>
+                                            <td>dwd12</td>
+                                            <td>鞍钢</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>华业必去</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                            <td>20-12-16</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div style="border-bottom: 1px solid #ccc;"></div>
@@ -227,304 +245,309 @@
                             <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">展开</a>
                         </div>
                         <div class="reDK dn">
-                            <div class="lh50 reD-top dajs">
-                                <span class="f16 ml20">供应商：瓜子二手钢投资集团&nbsp;>
-                                    <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现结</span>
-                                </span>
-                                <div class="pct25 dac">
-                                    <img src="../images/documnts/tc6-9.png" class="ml20" width="18" height="18" alt="">
-                                    <span class="b f14 ml5">未结算</span>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">供应商：瓜子二手钢投资集团&nbsp;>
+                                        <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现结</span>
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-9.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">未结算</span>
+                                    </div>
+                                </div>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">合同号：&emsp;</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                            <a href="">打印</a>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同金额：</span>23446.33元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同重量：</span>23446吨
+                                        </div>
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">支付类型：</span>全款
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">定价：&emsp;&emsp;</span>0.00元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">超期交货量：<span
+                                                    class="red dib mr2">5.34吨</span>(2小时)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">已入库重量：</span>5.34吨<span
+                                                class="col-8080">(13321元)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">未入库重量：</span>
+                                            5.34吨<span class="col-8080">(0元)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">已付款金额：</span>3087.22元
+                                            <a href="javascript:void(0)" class="tipclick ml5" qtip-dom="dom1">查看记录</a>
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">联系人：&emsp;&emsp;&emsp;</span>马云云
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">联系电话：&emsp;&emsp;</span>12828192192
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">交货地点：&emsp;&emsp;</span>货物交易所
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">提货方式：&emsp;&emsp;</span>自提
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">最晚提货日期：</span>2020-12-23
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">结算方式：&emsp;</span>供方统结
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算金额：&emsp;</span>3000元<span
+                                                class="col-8080">(43.23吨)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算日期：&emsp;</span>-
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">收票金额：&emsp;</span>0.00元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">未收票日期：</span>1231231元
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="pl20 pb20 pr20">
+                                    <div class="dajs xian mb5 ">
+                                        <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
+                                                src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                        <!-- <a href="summary.html" class="col-8080">出入库跟踪表&nbsp;></a> -->
+                                    </div>
+                                    <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%"
+                                        data-type="edit">
+                                        <thead>
+                                            <th width="15%" class="tl">
+                                                <span class="dib pl10">
+                                                    品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
+                                                </span>
+                                            </th>
+                                            <th width="6%">捆包号</th>
+                                            <th width="5%">钢厂</th>
+                                            <th width="5%">数量</th>
+                                            <th width="5%">重量</th>
+                                            <th width="7%">计算方式</th>
+                                            <th width="7%">仓库</th>
+                                            <th width="15%" class="tl">
+                                                <div class="ml10">
+                                                    入库时间&nbsp;/&nbsp;入库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                            <th width="7%">签收时间</th>
+                                            <th width="12%" class="tl">
+                                                <div class="ml10">
+                                                    出库时间&nbsp;/&nbsp;出库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    浅绿卷板&nbsp;/&nbsp;DCO3<br>
+                                                    <span class="col-8080">11.0000*800*4000</span>
+                                                </div>
+                                            </td>
+                                            <td>dwd12</td>
+                                            <td>鞍钢</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>华业必去</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                            <td>20-12-16</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="df">
-                                <span class="dib pct25 pl20 mb10">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">合同号：&emsp;</span>
-                                        <a href="javascript:void(0)">STC(22)-2322113</a><span class="pl5 pr5">|</span>
-                                        <a href="">打印</a>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">供应商：瓜子二手钢投资集团&nbsp;>
+                                        <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现结</span>
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-9.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">未结算</span>
                                     </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">合同金额：</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">合同重量：</span>23446吨
-                                    </div>
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">已付金额：</span>34533.12元
-                                        <a href="">查看记录</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">付款超时：</span>0小时
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">交货时间：&emsp;</span>2020-12-12
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">超期交货：&emsp;</span>5.34吨<span
-                                            class="col-8080">(2小时)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">已入库重量：</span>5.34吨<span class="col-8080">(13321元)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未入库重量：</span>
-                                        5.34吨<span class="col-8080">(0元)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">已出库重量：</span>
-                                        5.34吨<span class="col-8080">(1110元)</span>
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">联系人：&emsp;&emsp;&emsp;</span>马云云
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">联系电话：&emsp;&emsp;</span>12828192192
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">交货地点：&emsp;&emsp;</span>货物交易所
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">提货方式：&emsp;&emsp;</span>自提
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">最晚提货日期：</span>2020-12-23
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">结算金额：&emsp;</span>3000元<span
-                                            class="col-8080">(43.23吨)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">结算日期：&emsp;</span>2020-08-12 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">收票金额：&emsp;</span>3000元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">收票日期：&emsp;</span>2020-12-23 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未收票日期：</span>1231231元
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="pl20 pb20 pr20">
-                                <div class="dajs xian mb5 ">
-                                    <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
-                                            src="../images/documnts/jianX.png" width="13" height="9"></img></a>
-                                    <a href="summary.html" class="col-8080">出入库跟踪表&nbsp;></a>
                                 </div>
-                                <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%" data-type="edit">
-                                    <thead>
-                                        <th width="15%" class="tl">
-                                            <span class="dib pl10">
-                                                品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
-                                            </span>
-                                        </th>
-                                        <th width="6%">捆包号</th>
-                                        <th width="5%">钢厂</th>
-                                        <th width="5%">数量</th>
-                                        <th width="5%">重量</th>
-                                        <th width="7%">计算方式</th>
-                                        <th width="7%">仓库</th>
-                                        <th width="15%" class="tl">
-                                            <div class="ml10">
-                                                入库时间&nbsp;/&nbsp;入库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                        <th width="7%">签收时间</th>
-                                        <th width="12%" class="tl">
-                                            <div class="ml10">
-                                                出库时间&nbsp;/&nbsp;出库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                    </thead>
-                                    <tbody class="bgwh">
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                浅绿卷板&nbsp;/&nbsp;DCO3<br>
-                                                <span class="col-8080">11.0000*800*4000</span>
-                                            </div>
-                                        </td>
-                                        <td>dwd12</td>
-                                        <td>鞍钢</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>华业必去</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                        <td>20-12-16</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="lh50 reD-top dajs">
-                                <span class="f16 ml20">供应商：上海乐刚供应链股份有限公司&nbsp;>
-                                    <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">库存销售</span>
-                                </span>
-                                <div class="pct25 dac">
-                                    <img src="../images/documnts/tc6-9.png" class="ml20" width="18" height="18" alt="">
-                                    <span class="b f14 ml5">未结算</span>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">合同号：&emsp;</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                            <a href="">打印</a>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同金额：</span>23446.33元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">合同重量：</span>23446吨
+                                        </div>
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">支付类型：</span>全款
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">定价：&emsp;&emsp;</span>0.00元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">超期交货量：<span
+                                                    class="red dib mr2">5.34吨</span>(2小时)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">已入库重量：</span>5.34吨<span
+                                                class="col-8080">(13321元)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">未入库重量：</span>
+                                            5.34吨<span class="col-8080">(0元)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">已付款金额：</span>3087.22元
+                                            <a href="javascript:void(0)" class="tipclick ml5" qtip-dom="dom1">查看记录</a>
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">联系人：&emsp;&emsp;&emsp;</span>马云云
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">联系电话：&emsp;&emsp;</span>12828192192
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">交货地点：&emsp;&emsp;</span>货物交易所
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">提货方式：&emsp;&emsp;</span>自提
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">最晚提货日期：</span>2020-12-23
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">结算方式：&emsp;</span>供方统结
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算金额：&emsp;</span>3000元<span
+                                                class="col-8080">(43.23吨)</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算日期：&emsp;</span>-
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">收票金额：&emsp;</span>0.00元
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">未收票日期：</span>1231231元
+                                        </div>
+                                    </span>
                                 </div>
-                            </div>
-                            <div class="df">
-                                <span class="dib pct25 pl20 mb10">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">合同号：&emsp;</span>
-                                        <a href="javascript:void(0)">STC(22)-2322113</a><span class="pl5 pr5">|</span>
-                                        <a href="">打印</a>
+                                <div class="pl20 pb20 pr20">
+                                    <div class="dajs xian mb5 ">
+                                        <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
+                                                src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                        <!-- <a href="summary.html" class="col-8080">出入库跟踪表&nbsp;></a> -->
                                     </div>
-                                    <div class="dac mb5 ">
-                                        <span class="col-8080">合同金额：</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">合同重量：</span>23446吨
-                                    </div>
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">已付金额：</span>34533.12元
-                                        <a href="">查看记录</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">付款超时：</span>0小时
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">交货时间：&emsp;</span>2020-12-12
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">超期交货：&emsp;</span>5.34吨<span
-                                            class="col-8080">(2小时)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">已入库重量：</span>5.34吨<span class="col-8080">(13321元)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未入库重量：</span>
-                                        5.34吨<span class="col-8080">(0元)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">已出库重量：</span>
-                                        5.34吨<span class="col-8080">(1110元)</span>
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">联系人：&emsp;&emsp;&emsp;</span>马云云
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">联系电话：&emsp;&emsp;</span>12828192192
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">交货地点：&emsp;&emsp;</span>货物交易所
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">提货方式：&emsp;&emsp;</span>自提
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">最晚提货日期：</span>2020-12-23
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">结算金额：&emsp;</span>3000元<span
-                                            class="col-8080">(43.23吨)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">结算日期：&emsp;</span>2020-08-12 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">收票金额：&emsp;</span>3000元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">收票日期：&emsp;</span>2020-12-23 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未收票日期：</span>1231231元
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="pl20 pb20 pr20">
-                                <div class="dajs xian mb5 ">
-                                    <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
-                                            src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                    <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%"
+                                        data-type="edit">
+                                        <thead>
+                                            <th width="15%" class="tl">
+                                                <span class="dib pl10">
+                                                    品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
+                                                </span>
+                                            </th>
+                                            <th width="6%">捆包号</th>
+                                            <th width="5%">钢厂</th>
+                                            <th width="5%">数量</th>
+                                            <th width="5%">重量</th>
+                                            <th width="7%">计算方式</th>
+                                            <th width="7%">仓库</th>
+                                            <th width="15%" class="tl">
+                                                <div class="ml10">
+                                                    入库时间&nbsp;/&nbsp;入库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                            <th width="7%">签收时间</th>
+                                            <th width="12%" class="tl">
+                                                <div class="ml10">
+                                                    出库时间&nbsp;/&nbsp;出库类型
+                                                </div>
+                                            </th>
+                                            <th width="8%">出库操作人</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    浅绿卷板&nbsp;/&nbsp;DCO3<br>
+                                                    <span class="col-8080">11.0000*800*4000</span>
+                                                </div>
+                                            </td>
+                                            <td>dwd12</td>
+                                            <td>鞍钢</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>33</td>
+                                            <td>华业必去</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                            <td>20-12-16</td>
+                                            <td class="tl">
+                                                <div class="ml10">
+                                                    短驳入库<br>
+                                                    <span class="col-8080">2020-12-21 14:23:22</span>
+                                                </div>
+                                            </td>
+                                            <td>马云云</td>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%" data-type="edit">
-                                    <thead>
-                                        <th width="15%" class="tl">
-                                            <span class="dib pl10">
-                                                品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
-                                            </span>
-                                        </th>
-                                        <th width="6%">捆包号</th>
-                                        <th width="5%">钢厂</th>
-                                        <th width="5%">数量</th>
-                                        <th width="5%">重量</th>
-                                        <th width="7%">计算方式</th>
-                                        <th width="7%">仓库</th>
-                                        <th width="15%" class="tl">
-                                            <div class="ml10">
-                                                入库时间&nbsp;/&nbsp;入库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                        <th width="7%">签收时间</th>
-                                        <th width="12%" class="tl">
-                                            <div class="ml10">
-                                                出库时间&nbsp;/&nbsp;出库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                    </thead>
-                                    <tbody class="bgwh">
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                浅绿卷板&nbsp;/&nbsp;DCO3<br>
-                                                <span class="col-8080">11.0000*800*4000</span>
-                                            </div>
-                                        </td>
-                                        <td>dwd12</td>
-                                        <td>鞍钢</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>华业必去</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                        <td>20-12-16</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                         <div style="border-bottom: 1px solid #ccc;"></div>
@@ -540,146 +563,137 @@
                             <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">展开</a>
                         </div>
                         <div class="reDK dn">
-                            <div class="lh50 reD-top dajs">
-                                <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团&nbsp;>
-                                    <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现款业务</span>
-                                </span>
-                                <div class="pct25 dac">
-                                    <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18" alt="">
-                                    <span class="b f14 ml5">已结算3000元</span>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团</span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">已结算3000元</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="df">
-                                <span class="dib pct25 pl20 mb10">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">加工单号：&emsp;</span>
-                                        <a href="javascript:void(0)">STC(22)-2322113</a><span class="pl5 pr5">|</span>
-                                        <a href="">打印</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">加工金额：</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">加工重量：</span>23446吨
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">订单账期：</span>10天
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">交货地点：</span>货物所在仓库
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">已收金额：&emsp;</span>
-                                        34533.12元
-                                        <a href="">查看记录</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未收金额：&emsp;</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">付款方式：&emsp;</span>全款-电汇
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">应收款日期：</span>2020-12-23
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">超期天数：&emsp;</span>
-                                        <span class="red">10天<span class="dib ml5">催款函&nbsp;></span></span>
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">联系人：&emsp;&emsp;</span>马云云
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">联系电话：&emsp;</span>12828192192
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">提货方式：&emsp;</span>自提
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">最晚提货日期：</span>2020-12-23
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">结算金额：</span>3000元<span class="col-8080">(43.23吨)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">结算日期：</span>2020-08-12 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票金额：</span>3000元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票日期：</span>2020-12-23 13:23:11
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="pl20 pb20 pr20">
-                                <div class="dajs xian mb5 ">
-                                    <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
-                                            src="../images/documnts/jianX.png" width="13" height="9"></img></a>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">加工单号：&emsp;</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">执行状态：&emsp;</span>正常
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">加工单价：&emsp;</span>23446吨
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">加工总金额：</span>212222.1元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">宽度公差：&emsp;</span>国际
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">长度公差：&emsp;</span>国际
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">对角线公差：</span>国际
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">镰刀弯公差：</span>国际
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">产品包装：&emsp;</span>裸包装
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">贴膜方式：&emsp;</span>不贴膜
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">产品打包数：</span>5
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">每包重量：</span>2020吨
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">内外径要求：</span>508mm
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">喷标和钢印：</span>钢印
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">原标签处理：</span>剪下带走
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">预料处理：&emsp;</span>打包带走
+                                        </div>
+                                    </span>
                                 </div>
-                                <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%" data-type="edit">
-                                    <thead>
-                                        <th width="15%" class="tl">
-                                            <span class="dib pl10">
-                                                品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
-                                            </span>
-                                        </th>
-                                        <th width="6%">捆包号</th>
-                                        <th width="5%">钢厂</th>
-                                        <th width="5%">数量</th>
-                                        <th width="5%">重量</th>
-                                        <th width="7%">计算方式</th>
-                                        <th width="7%">仓库</th>
-                                        <th width="15%" class="tl">
-                                            <div class="ml10">
-                                                入库时间&nbsp;/&nbsp;入库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                        <th width="7%">签收时间</th>
-                                        <th width="12%" class="tl">
-                                            <div class="ml10">
-                                                出库时间&nbsp;/&nbsp;出库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                    </thead>
-                                    <tbody class="bgwh">
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                浅绿卷板&nbsp;/&nbsp;DCO3<br>
-                                                <span class="col-8080">11.0000*800*4000</span>
-                                            </div>
-                                        </td>
-                                        <td>dwd12</td>
-                                        <td>鞍钢</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>华业必去</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                        <td>20-12-16</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                    </tbody>
-                                </table>
+                                <div class="p20">
+                                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                                        <thead>
+                                            <th width="12%">投料</th>
+                                            <th width="13%">规格</th>
+                                            <th width="7%">牌号</th>
+                                            <th width="13%">捆包号</th>
+                                            <th width="7%">钢厂</th>
+                                            <th width="7%">数量</th>
+                                            <th width="7%">重量</th>
+                                            <th width="8%">加工重量</th>
+                                            <th width="8%">计量方式</th>
+                                            <th width="10%">参股</th>
+                                            <th width="8%">操作</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <tr>
+                                                <td>浅绿卷板</td>
+                                                <td>10100*980090</td>
+                                                <td>DC03</td>
+                                                <td>dff-234</td>
+                                                <td>鞍钢</td>
+                                                <td>33</td>
+                                                <td>33</td>
+                                                <td>33</td>
+                                                <td>112</td>
+                                                <td>华业必去</td>
+                                                <td>
+                                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看成品</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hideTr dn bg-F1F3F7FF">
+                                                <td colspan="11">
+                                                    <div class="pl20 pr20 pt10 pb10">
+                                                        <table class="ui-table tc f12 checkbox table-cw" width="100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="15%">品名</th>
+                                                                    <th width="15%">规格</th>
+                                                                    <th width="15%">牌号</th>
+                                                                    <th width="15%">数量</th>
+                                                                    <th width="20%">重量</th>
+                                                                    <th width="20%">已验收重量</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>浅绿卷板</td>
+                                                                    <td>10100*980090</td>
+                                                                    <td>DC03</td>
+                                                                    <td>33</td>
+                                                                    <td>33</td>
+                                                                    <td>33</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div style="border-bottom: 1px solid #ccc;"></div>
@@ -695,151 +709,236 @@
                             <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">展开</a>
                         </div>
                         <div class="reDK dn">
-                            <div class="lh50 reD-top dajs">
-                                <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团&nbsp;>
-                                    <span class="reD-gunn f12 dib ml15 pl5 pr5 lh24">现款业务</span>
-                                </span>
-                                <div class="pct25 dac">
-                                    <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18" alt="">
-                                    <span class="b f14 ml5">已结算3000元</span>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">已结算3000元</span>
+                                    </div>
+                                </div>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">运输指令单：</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输重量：&emsp;</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输金额：</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算重量：</span>12828192192
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算金额：</span>3000元
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="p20">
+                                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                                        <thead>
+                                            <th width="10%">序号</th>
+                                            <th width="12%">品名</th>
+                                            <th width="15%">规格</th>
+                                            <th width="10%">牌号</th>
+                                            <th width="15%">数量</th>
+                                            <th width="13%">重量</th>
+                                            <th width="15%">计量方式</th>
+                                            <th width="10%">运输单位</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td>1</td>
+                                            <td>堵路卷板</td>
+                                            <td>1000*11</td>
+                                            <td>DC02</td>
+                                            <td>33</td>
+                                            <td>22</td>
+                                            <td>121</td>
+                                            <td>112</td>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="df">
-                                <span class="dib pct25 pl20 mb10">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">运输单号：&emsp;</span>
-                                        <a href="javascript:void(0)">STC(22)-2322113</a><span class="pl5 pr5">|</span>
-                                        <a href="">打印</a>
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">已结算3000元</span>
                                     </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">运输金额：</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">运输重量：</span>23446吨
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">订单账期：</span>10天
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">交货地点：</span>货物所在仓库
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">已收金额：&emsp;</span>
-                                        34533.12元
-                                        <a href="">查看记录</a>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">未收金额：&emsp;</span>23446.33元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">付款方式：&emsp;</span>全款-电汇
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">应收款日期：</span>2020-12-23
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">超期天数：&emsp;</span>
-                                        <span class="red">10天<span class="dib ml5">催款函&nbsp;></span></span>
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">联系人：&emsp;&emsp;</span>马云云
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">联系电话：&emsp;</span>12828192192
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">提货方式：&emsp;</span>自提
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">最晚提货日期：</span>2020-12-23
-                                    </div>
-                                </span>
-                                <span class="dib pct25 pl20">
-                                    <div class="dac mb5 mt10">
-                                        <span class="col-8080">结算金额：</span>3000元<span class="col-8080">(43.23吨)</span>
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">结算日期：</span>2020-08-12 13:23:11
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票金额：</span>3000元
-                                    </div>
-                                    <div class="dac mb5">
-                                        <span class="col-8080">开票日期：</span>2020-12-23 13:23:11
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="pl20 pb20 pr20">
-                                <div class="dajs xian mb5 ">
-                                    <a href="javascript:void(0)" onclick="showTable(this)">需求明细<img class="ml5 dib"
-                                            src="../images/documnts/jianX.png" width="13" height="9"></img></a>
                                 </div>
-                                <table class="ui-table tc f12 checkbox table-cw mt5 dn" width="100%" data-type="edit">
-                                    <thead>
-                                        <th width="15%" class="tl">
-                                            <span class="dib pl10">
-                                                品名&nbsp;/&nbsp;牌号&nbsp;/&nbsp;规格
-                                            </span>
-                                        </th>
-                                        <th width="6%">捆包号</th>
-                                        <th width="5%">钢厂</th>
-                                        <th width="5%">数量</th>
-                                        <th width="5%">重量</th>
-                                        <th width="7%">计算方式</th>
-                                        <th width="7%">仓库</th>
-                                        <th width="15%" class="tl">
-                                            <div class="ml10">
-                                                入库时间&nbsp;/&nbsp;入库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                        <th width="7%">签收时间</th>
-                                        <th width="12%" class="tl">
-                                            <div class="ml10">
-                                                出库时间&nbsp;/&nbsp;出库类型
-                                            </div>
-                                        </th>
-                                        <th width="8%">出库操作人</th>
-                                    </thead>
-                                    <tbody class="bgwh">
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                浅绿卷板&nbsp;/&nbsp;DCO3<br>
-                                                <span class="col-8080">11.0000*800*4000</span>
-                                            </div>
-                                        </td>
-                                        <td>dwd12</td>
-                                        <td>鞍钢</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>33</td>
-                                        <td>华业必去</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                        <td>20-12-16</td>
-                                        <td class="tl">
-                                            <div class="ml10">
-                                                短驳入库<br>
-                                                <span class="col-8080">2020-12-21 14:23:22</span>
-                                            </div>
-                                        </td>
-                                        <td>马云云</td>
-                                    </tbody>
-                                </table>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">运输指令单：</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输重量：&emsp;</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输金额：</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算重量：</span>12828192192
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算金额：</span>3000元
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="p20">
+                                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                                        <thead>
+                                            <th width="10%">序号</th>
+                                            <th width="12%">品名</th>
+                                            <th width="15%">规格</th>
+                                            <th width="10%">牌号</th>
+                                            <th width="15%">数量</th>
+                                            <th width="13%">重量</th>
+                                            <th width="15%">计量方式</th>
+                                            <th width="10%">运输单位</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td>1</td>
+                                            <td>堵路卷板</td>
+                                            <td>1000*11</td>
+                                            <td>DC02</td>
+                                            <td>33</td>
+                                            <td>22</td>
+                                            <td>121</td>
+                                            <td>112</td>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <div style="border-bottom: 1px solid #ccc;"></div>
                     </div>
 
+                    <!-- 短驳 -->
+                    <div class="max-Details mt30">
+                        <div class="dajs mb5">
+                            <div class="dac">
+                                <span class="dib min-blueK"></span>
+                                <span class="f14 dib b ml5">短驳</span>
+                            </div>
+                            <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">展开</a>
+                        </div>
+                        <div class="reDK dn">
+                            <div>
+                                <div class="lh50 reD-top dajs">
+                                    <span class="f16 ml20">客户单位：阿里巴巴钢铁投资集团
+                                    </span>
+                                    <div class="pct25 dac">
+                                        <img src="../images/documnts/tc6-7.png" class="ml20" width="18" height="18"
+                                            alt="">
+                                        <span class="b f14 ml5">已结算3000元</span>
+                                    </div>
+                                </div>
+                                <div class="df">
+                                    <span class="dib pct25 pl20 mb10">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">短驳运输指令单：</span>
+                                            <a href="javascript:void(0)">STC(22)-2322113</a><span
+                                                class="pl5 pr5">|</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输重量：&emsp;&emsp;&emsp;</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">运输金额：</span>23446.33元
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算重量：</span>12828192192
+                                        </div>
+                                    </span>
+                                    <span class="dib pct25 pl20">
+                                        <div class="dac mb5 mt10">
+                                            <span class="col-8080">&emsp;</span>
+                                        </div>
+                                        <div class="dac mb5">
+                                            <span class="col-8080">结算金额：</span>3000元
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="p20">
+                                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                                        <thead>
+                                            <th width="10%">序号</th>
+                                            <th width="12%">品名</th>
+                                            <th width="15%">规格</th>
+                                            <th width="10%">牌号</th>
+                                            <th width="15%">数量</th>
+                                            <th width="13%">重量</th>
+                                            <th width="15%">计量方式</th>
+                                            <th width="10%">运输单位</th>
+                                        </thead>
+                                        <tbody class="bgwh">
+                                            <td>1</td>
+                                            <td>堵路卷板</td>
+                                            <td>1000*11</td>
+                                            <td>DC02</td>
+                                            <td>33</td>
+                                            <td>22</td>
+                                            <td>121</td>
+                                            <td>112</td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid #ccc;"></div>
+                    </div>
 
                     <!-- 毛利明细 -->
                     <div class="max-Details mt30">
@@ -869,16 +968,14 @@
                                     <span class="col-8080">资金占用利息</span>
                                 </div>
                             </div>
-                            <div class="find-div-body dac" style="width: 100%; height: 80px;">
-                                <div class="pct15 dajs tc">
-                                    <span style="margin-left: 60px;">
-                                        <div class="f16 b">202030.12</div>
-                                        <span class="col-8080">销售总额</span>
-                                    </span>
-                                    <span class="dib f18 b col-8080 mr20">-</span>
+                            <div class="find-div-body dac " style="width: 100%; height: 80px;">
+                                <div class="tc" style="width: 13%;">
+                                    <div class="f16 b ml20">202030.12</div>
+                                    <span class="col-8080 ml20">销售总额</span>
                                 </div>
-                                <div class="dac">
-                                    <span class="f24 col-8080">(</span>
+                                <div class="df f1 ">
+                                    <span class="dib f18 b mr20 ml10 col-8080">-</span>
+                                    <span class="f24 ml10 col-8080">(</span>
                                     <span class="ml5 tc">
                                         <div class="f14 b">202030</div>
                                         <span class="col-8080">采购款</span>
@@ -920,6 +1017,27 @@
         </div>
     </div>
 
+    <div class="dom1 dn">
+        <table class="ui-table tc f12 checkbox table-cw mt5" width="100%" data-type="edit">
+            <thead>
+                <tr>
+                    <th width="35%">类型</th>
+                    <th width="35%">到款时间</th>
+                    <th width="15%">金额</th>
+                    <th width="15%">操作员</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cent">退货费用</td>
+                    <td class="cent"></td>
+                    <td class="cent">￥6000.0</td>
+                    <td class="cent">之华</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div class="itemCapital" id="itemCapitalIn"></div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -929,6 +1047,26 @@
 
     <script>
         $(function () {
+            //tipclick 点击出现数据段
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'bottom center',
+                    at: 'top center'
+                },
+                position: {
+                    viewport: $(window)
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                }
+            });
 
         })
     </script>
