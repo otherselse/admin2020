@@ -71,28 +71,26 @@
 					<div class="mb10 f0 lh24">
 						<span class=" dib f12 mr40">
 							<span class="searchLable">开票类型：</span>
-							<span class="single  mr40">
-	                            <input type="hidden" value="">
-	                            <button type="button" class="ui-option mr5">加工发票</button>
-	                            <button type="button" class="ui-option mr5">仓储发票</button>
-	                            <button type="button" class="ui-option mr5">租赁发票</button>
-	                            <button type="button" class="ui-option mr5">废料发票</button>
-	                        </span>
+							<div class="dib selectSingle mr40">
+	                            <a class="on" href="javscript:void(0)">加工发票</a>
+	                            <span class="pr5 pl5 ">|</span>
+	                            <a href="javscript:void(0)">仓储发票</a>	
+	                            <span class="pr5 pl5 ">|</span>
+	                            <a href="javscript:void(0)">租赁发票</a>	
+	                            <span class="pr5 pl5 ">|</span>
+	                            <a href="javscript:void(0)">废料发票</a>                                                                 
+	                       </div>
 						</span>
 						<span class="mr40 dib f12">
-							<span class="searchLable">取票方式：</span><div class="dib selectSingle mr40">
-	                                    <a class="on" href="javscript:void(0)">快递到家</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">上门取件</a>	                                                                        
-	                                </div>
+							<span class="searchLable">取票方式：</span>
+							<span class="dib mr40"><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>快递到家</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>上门取件</label></span>
 						</span>
 
 						<span class="mr40 dib f12">
-							<span class="searchLable">发票状态：</span><div class="dib selectSingle mr40">
-	                                    <a class="on" href="javscript:void(0)">有效发票</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">作废发票</a>	                                                                        
-	                                </div>
+							<span class="searchLable">发票状态：</span>
+							<span class="dib mr40 radio"><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有效发票</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>作废发票</label></span>
 						</span>
 					</div>
 
@@ -115,8 +113,8 @@
 						</span></span>
 
 						<button type="button" class="ui-button ">查询</button>
-	                    <button type="button" class="ui-button mr10" data-type="clear">清空</button>
-
+<!-- 	                    <button type="button" class="ui-button mr10" data-type="clear">清空</button>
+ -->
 					</div>
 		
 
