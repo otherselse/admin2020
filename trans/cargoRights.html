@@ -36,23 +36,14 @@
 			<div class="ui-content ovh minH">
 				<div class="p20">
 					<div class="cl mb10 f0">
-						<span class="dib f12">
-							&emsp;&emsp;确认状态：<span class="single">
+						<span class="dib f12 pct25">
+							<span class="searchLable">&emsp;&emsp;确认状态：</span><span class="single">
 							<button type="button" class="ui-option mr5 on" onclick="window.location='cargoRights.html'">未确认</button>
 							<button type="button" class="ui-option" onclick="window.location='cargoRights_enter.html'">已确认</button>
 							</span>
 						</span>
-					</div>
-					<div class="cl mb10 f0 ">
-						<span class="pct25 dib f12 m_db">
-							&emsp;&emsp;入库类型：<div class="dib selectSingle  mr40">
-	                                    <a class="on" href="javscript:void(0)">转货</a>
-	                                    
-	                                </div>
-						</span>
-						<span class="pct75 dib f12 m_db m_index2">
-							
-	                        业务类型：<div class="dib selectSingle m_index0 pct80 m_mt10">
+						<span class="pct75 dib f12 m_db m_index2">							
+	                        <span class="searchLable">业务类型：</span><div class="dib selectSingle m_index0 pct80 m_mt10">
 	                                    <a class="on" href="javscript:void(0)">全部</a>
 	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">现款业务</a>
@@ -71,7 +62,7 @@
 	                                </div>
 						</span>
 					</div>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;区域：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
@@ -88,13 +79,13 @@
 						<span class="pct25 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 					</div>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">&emsp;&emsp;&emsp;&emsp;品名：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 						<span class="pct25 dib f12">&emsp;&emsp;规格：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 						<span class="pct25 dib f12">&emsp;&emsp;重量：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 						<span class="pct25 dib f12">&emsp;&emsp;仓库：<input type="text" class="ui-input pct69" placeholder="请输入"></span>
 					</div>
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12 m_pct31">入库申请时间：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
 					</span></span>
@@ -135,13 +126,26 @@
 	                            <td>瓜子二手钢直卖网</td>
 	                            <td>
 	                            	<a href="javascript:void(0)" id="10001" class="tipclick"  qtip-dom="dom1" onclick="setmyDom(this)">核查</a><span class="ml5 mr5 dib gd9">|</span>
-	                            	<a href="javascript:void(0)"  onclick="showDiv_lrl(this)" class="g28">查看</a>
+	                            	<a href="javascript:void(0)"  onclick="showDiv_lrl(this)" >查看</a>
 	                            </td>
 	                        </tr>
 	                        <tr class="hideTr dn">
 	                            <td colspan="9">
 	                                <div class="pl20 pr20">
-	                                	<div class="mt10 bgfa lh30 bdd tl pl10 pt2 pb2 gga"><span class="dib pct20">加工投料入库重量：<span class="g28">20.200</span> 吨</span><span class="dib pct20">成品已验收重量：<span class="g28">19.700</span> 吨</span><span class="dib pct20">已收卷重量：<span class="g28">0</span> 吨</span><span class="dib pct20">本次申请重量：<span class="g28">0</span> 吨</span></div>
+	                                	<table class="ui-table tc f12 auto mt10 " width="100%">
+											<tbody>
+												<tr class="resource-table">
+													<td class="title" width="10%">加工投料入库重量：</td>
+													<td width="15%" class="cont">20.200吨</td>
+													<td class="title" width="10%">成品已验收重量：</td>
+													<td width="15%" class="cont">19.700吨</td>
+													<td class="title" width="10%">已收卷重量：</td>
+													<td width="15%" class="cont">19.700吨</td>
+													<td class="title" width="10%">本次申请重量：</td>
+													<td width="15%" class="cont">19.700吨</td>
+												</tr>
+											</tbody>
+										</table>
 	                                	<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
 	                                        <thead>
 	                                            <tr>
@@ -299,7 +303,7 @@
 	                                                    </div>
 	                                                    <div class="mt10 pl5"> 
 															<a href="javascript:void(0)" title="<img src='../images/hwqj.jpg' width='250' height='155' ></a>">示例图片查看</a>
-	                                                        <span>提示：需有乐刚物流人员在场如示例照片进行拍摄，每张照片需有水印时间！</span>
+	                                                        <span class="ui-tip ml20" data-type="normal">提示：需有乐刚物流人员在场如示例照片进行拍摄，每张照片需有水印时间！</span>
 	                                                    </div>
 	                                                </td>
 	                                            </tr>
@@ -321,7 +325,7 @@
 	                                                    <div class="pl10 "> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
 	                                                    </div>
 	                                                    <div class="mt10 pl10"> 
-	                                                        <span>提示：除螺纹、中板、热轧等普材外均需上传原厂质保书，且质保书内容必须与货物标签保持一致！</span>
+	                                                        <span class="ui-tip " data-type="normal">提示：除螺纹、中板、热轧等普材外均需上传原厂质保书，且质保书内容必须与货物标签保持一致！</span>
 	                                                    </div>
 	                                                </td>
 	                                            </tr>
@@ -333,7 +337,7 @@
 	                                                    <div class="pl10"> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
 	                                                    </div>
 	                                                    <div class="mt10 pl10"> <a href="javascript:void(0)" title="<img src='../images/hwbq.jpg' width='250' height='155' ></a>">示例图片查看</a>
-	                                                        <span>提示：提示：请上传合同对应所有货物的标签照片，每张照片需有水印时间！</span>
+	                                                        <span class="ui-tip ml20" data-type="normal">提示：提示：请上传合同对应所有货物的标签照片，每张照片需有水印时间！</span>
 	                                                    </div>
 	                                                </td>
 	                                            </tr>
@@ -345,7 +349,7 @@
 	                                                    <div class="pl10"> <button type="button" class="ui-button mr20" data-type="upfile" onclick="upfile()">附件上传</button>
 	                                                    </div>
 	                                                    <div class="mt10 pl10">
-	                                                        <span>提示：特殊材料必须上传第三方检测结果，如：不锈钢及铝卷、铜卷等有色金属材料！</span>
+	                                                        <span class="ui-tip " data-type="normal">提示：特殊材料必须上传第三方检测结果，如：不锈钢及铝卷、铜卷等有色金属材料！</span>
 	                                                    </div>
 	                                                </td>
 	                                            </tr>
