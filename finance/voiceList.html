@@ -45,7 +45,7 @@
 			</div>
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
-					<div class="mb10 f0">
+					<div class="mb10 f0 searchLable">
 						<span class="pct25 dib f12">供货单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 						<span class="pct25 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
@@ -57,22 +57,23 @@
 
 
 	                <div class="f0 mb20">
-	                	<span class="pct25 dib f12">发票号码：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+	                	<span class="pct25 dib f12"><span class="searchLable">发票号码：</span><input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 	                	<span class="pct50 dib f12">
-	                		合同类型：<span class="single mr40">
-	                            <input type="hidden" value="">
-	                            <button type="button" class="ui-option mr5">直购</button>
-	                            <button type="button" class="ui-option mr5">定购</button>
-	                            <button type="button" class="ui-option ">外贸</button>
+	                		<span class="searchLable">合同类型：</span>
+	                		<span class="selectSingle mr40">
+	                            <a class="on" href="javscript:void(0)">直购</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">定购</a>
+                                 <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">外贸</a>
 	                        </span>
 	                        
 	                	</span>	
-	                	<div class="dib selectSingle f12">
-	                        	&emsp;&emsp;选项：
-                                <a class="on" href="javscript:void(0)">快递到家</a>
-                                <span class="pr5 pl5 ">|</span>
-                                <a href="javscript:void(0)">上门取件</a>                                                                  
-	                        </div>					
+	                	<div class="dib radio f12">
+	                        	<span class="searchLable">&emsp;&emsp;选项：</span>
+	                        	<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>快递到家</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>上门取件</label>                                                                 
+	                      </div>					
 	                </div>
 	                <div class="tc">
 	                	<button type="button" class="ui-button ">查询</button>

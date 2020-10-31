@@ -40,7 +40,7 @@
 				<div class="p20">
 					<div class="cl mb10 f0">
 						<span class="pct25 dib f12">
-								 货主单位：<span class="input-selSearch pct69">
+								<span class="searchLable">货主单位：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
 								<div class="search-cont" >
 									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -53,7 +53,7 @@
 							</span>
 						</span>
 						<span class="pct25 dib f12">
-							 费用单位：<span class="input-selSearch pct69">
+							 <span class="searchLable">费用单位：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
 								<div class="search-cont" >
 									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -66,7 +66,7 @@
 							</span>
 						</span>
 						<span class="pct25 dib f12">
-							 费用类型：<span class="input-selSearch pct69">
+							 <span class="searchLable">费用类型：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
 								<div class="search-cont" >
 									<a href="javascript:void(0)" class="search-list db ell">运输费</a>
@@ -89,16 +89,16 @@
 							</span>
 						</span>
 						<span class="pct25 dib f12">
-							发票号：<input type="text" class="ui-input pct69 " placeholder="请输入">
+							<span class="searchLable">发票号：</span><input type="text" class="ui-input pct69 " placeholder="请输入">
 						</span>
 				</div>
 				<div class="mb10 f0">
 					
-					<span class="pct25 dib f12 m_pct31">业务日期：<span class="ui-input f0 pct69 range" data-type="time">
+					<span class="pct25 dib f12 m_pct31 searchLable">业务日期：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
 						</span>
 					</span>
-					<span class="f12 m_db m_mt10">单据类型：<div class="dib selectSingle">
+					<span class="f12 m_db m_mt10"><span class="searchLable">单据类型：</span><div class="dib selectSingle">
 	                                    <a class="on" href="javscript:void(0)">加工单据</a>
 	                                    <span class="pr5 pl5 ">|</span>
 	                                    <a href="javscript:void(0)">入库单据</a>
@@ -112,7 +112,7 @@
 	                </span>
 				</div>
 				<div class="cl mb10 f12 lh24">							
-	                <span class="vt dib">&emsp;加工商：</span><div class="dib selectProcName gc">
+	                <span class="vt dib"><span class="searchLable">&emsp;加工商：</span></span><div class="dib selectProcName gc">
                             <a href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
                             <a href="javscript:void(0)">上海加工运输有限责任公司</a>
@@ -255,14 +255,49 @@
 
 
 
-	<div class="dn" id="yfkshow">
-		<table class="ui-table tc f12 auto mt10" width="96%">
+	<div class="dn p20 f12" id="yfkshow">
+		<div class="mb10">
+			<span class="dib tr pct20">收款方式：</span>
+			<span class="dib pct70">
+				<input type="hidden" value="0" id="collection_pay">
+		            	<label class=""><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" checked=""></i>扫码支付</label>
+		    </span>
+		</div>
+		<div class="mb10">
+			<span class="dib tr pct20">充值单位：</span>
+			<span class="dib pct70">
+				<span class="input-selSearch pct95">
+						<input type="text" class="ui-input searchUp pct100" placeholder="输入助记码或汉字搜索" autocomplete="off">
+						<div class="search-cont" >
+							<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+							<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+						</div>
+					</span>
+		    </span>
+		</div>
+		<div class="mb10">
+			<span class="dib tr pct20">充值金额：</span>
+			<span class="dib pct70">
+				<span class="ui-input pct95" data-type="price"><input type="text" value="" placeholder="请输入" class="pct80"><span class="r">元</span></span>
+		    </span>
+		</div>
+		<div class="mb10">
+			<span class="dib tr pct20">充值说明：</span>
+			<span class="dib pct70">
+				<textarea  class="ui-textarea pct95" rows="3" value="" placeholder="请填写"></textarea>
+		    </span>
+		</div>
+
+		<!-- <table class="ui-table tc f12 auto mt10" width="96%">
 		        <tbody>
 		          <tr class="resource-table">
 		            <td class="title" width="20%">收款方式：</td>
 		            <td width="80%" class="cont">
-		            	<input type="hidden" value="0" id="collection_pay">
-		            	<label class=""><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" checked=""></i>扫码支付</label>
+		            	
 		            </td>
 				 </tr>
 				 <tr class="resource-table">
@@ -292,7 +327,7 @@
 		            </td>
 		        </tr>
 		    </tbody>
-		</table>
+		</table> -->
 		<div class="tc  mt20 mb20">
         	<button type="button" class="ui-button mr10 w90">确定</button>
         	<button type="button" class="ui-button w90" data-type="clear" id="ye_payClose">取消</button>
@@ -374,7 +409,7 @@
 					title: '预付款充值',
 					shadeClose: false,
 					shade: 0.4,
-					area: ['500px', '400px'],
+					area: ['500px', '350px'],
 					content: $('#yfkshow')
 				});
 			$("#ye_payClose").on("click",function(){
