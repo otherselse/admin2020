@@ -17,7 +17,12 @@
     <style>
         .qtip {
             min-width: 580px;
-            min-height: 320px;
+            /* min-height: 320px; */
+        }
+
+        .qtip1 {
+            min-width: 460px;
+            max-height: 160px;
         }
 
         .hoverBlue:hover {
@@ -60,15 +65,27 @@
                 <div class="cl mb10 dac f12 ">
                     审核状态：<span class="single mr20">
                         <input type="hidden">
-                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5" id="ht">待审核</button></a>
-                        <a href="real-nameRegistrationThrough.html"><button type="button" class="ui-option mr5">审核通过</button></a>
-                        <a href="real-nameRegistrationNoThrough.html"><button type="button" class="ui-option mr5">审核不通过</button></a>
-                        <a href="real-nameRegistrationSeal.html"><button type="button" class="ui-option mr5 on">盖章确认</button></a>
+                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5"
+                                id="ht">待审核</button></a>
+                        <a href="real-nameRegistrationThrough.html"><button type="button"
+                                class="ui-option mr5">审核通过</button></a>
+                        <a href="real-nameRegistrationNoThrough.html"><button type="button"
+                                class="ui-option mr5">审核不通过</button></a>
+                        <a href="real-nameRegistrationSeal.html"><button type="button"
+                                class="ui-option mr5 on">盖章确认</button></a>
                     </span>
-                    <span class="m_db f1">
-                        <div class="dac">
-                            <a href='javascript:void(0)' class='goldIcon icon-info tipclick' qtip-dom="dom2"
-                                title=""></a>真假章辨别要点
+                    <span class="m_db dac f1">
+                        <div class="df mr20">
+                            <span class="tipclick1 menuhook dac" qtip-dom="dom3">
+                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
+                                <div class="">审批要点</div>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span class="tipclick menuhook dac" qtip-dom="dom2">
+                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
+                                <div class="">真假章辨别要点</div>
+                            </span>
                         </div>
                     </span>
                 </div>
@@ -129,8 +146,7 @@
                             <td>--</td>
                             <td><span class="red">否</span></td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue"
-                                    onclick="showTrMore(this),show(this)">查看
+                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">查看
                                     <span class="ml2 dib b">&gt;</span>
                                 </a>
                                 <a href="javascript:void(0)" class="hoverBlue" onclick="seal(1)">已盖章</a>
@@ -436,8 +452,7 @@
                             <td>--</td>
                             <td>是</td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue"
-                                    onclick="showTrMore(this),show(this)">查看
+                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">回收
                                     <span class="ml2 dib b">&gt;</span>
                                 </a>
                                 <a href="javascript:void(0)" onclick="seal(1)">未盖章</a>
@@ -718,6 +733,16 @@
     </div>
 
 
+
+    <div class='sealContent grey9 layer_pageContent dom3 dn'>
+        <div class="sealContent1 grey9 layer_pageContent" style="height: 200px; width: 500px;">
+            <p class="mb10 mt20"><span class="blue">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
+            <p class="mb10"><span class="blue">2、开票资料的税号或开户证明的账号与申请信息保持一致；</span></p>
+            <p class="mb10"><span class="blue">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -748,6 +773,29 @@
                 }
             });
 
+            //tipclick1 点击出现数据段
+            $('.tipclick1').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                /* position:{
+                        my: 'bottom center', 
+                                at: 'top center' 
+                    },*/
+                position: {
+                    viewport: $(window),
+                    my: 'bottom center', //my:是指三角的位置
+                    at: 'top center' //是在提示在组件的相对位置
+                },
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip1'  //
+                }
+            });
+
         })
 
         //选择单选
@@ -762,7 +810,7 @@
         function seal(val) {
             if (val == 1) {
                 alert("授权书是否未盖章？");
-            }else{
+            } else {
                 alert("授权书是否已盖章？")
             }
         }
