@@ -27,6 +27,12 @@
         .hoverBlue:hover {
             padding: 2px 5px;
         }
+
+        .ui-table tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 10px 2px;
+        }
     </style>
 </head>
 
@@ -324,10 +330,10 @@
                                     <table class="ui-table f12 auto tl mb10" width="100%">
                                         <tbody>
                                             <tr class="resource-table">
-                                                <td width="20%" class="vt bgfa">
+                                                <td width="13%" class="vt bgfa">
                                                     <span class="pt5 dib pl10">本人审批意见：</span>
                                                 </td>
-                                                <td width="80%">
+                                                <td width="37%">
                                                     <span class="radio pl10">
                                                         <label class="mr20" onclick="clickPermit(this,'1')"><i
                                                                 class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -335,7 +341,13 @@
                                                         <label class="mr20" onclick="clickPermit(this,'2')"><i
                                                                 class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                                                     class="radio-opacity" name="radio"></i>审核不通过</label>
-                                                        <span class="pl5 pr5">|</span>
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">实名认证情况：</span>
+                                                </td>
+                                                <td>
+                                                    <span class="radio pl10">
                                                         <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input
                                                                     type="radio" class="radio-opacity"
                                                                     name="radio"></i>通过实名验证</label>
@@ -346,10 +358,10 @@
                                                 </td>
                                             </tr>
                                             <tr class="resource-table">
-                                                <td width="20%" class="vt bgfa">
+                                                <td width="13%" class="vt bgfa">
                                                     <span class="pt5 dib pl10">本人审批备注：</span>
                                                 </td>
-                                                <td width="80%">
+                                                <td width="87%" colspan="3">
                                                     <div class="pl10 pr10">
                                                         <textarea class="ui-textarea pct100" rows="2"></textarea>
                                                     </div>

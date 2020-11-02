@@ -20,7 +20,7 @@
             /* min-height: 320px; */
         }
 
-        
+
         .qtip1 {
             min-width: 460px;
             max-height: 160px;
@@ -39,10 +39,16 @@
             box-sizing: border-box;
         }
 
-        .selectProcName span{
+        .selectProcName span {
             /* color: #676767; */
             display: inline-block;
             padding: 0 8px;
+        }
+
+        .ui-table tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 10px 2px;
         }
     </style>
 </head>
@@ -468,7 +474,7 @@
                             <td>是</td>
                             <td>
                                 <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">查看
-                                 <span class="ml2 dib b">&gt;</span>
+                                    <span class="ml2 dib b">&gt;</span>
                                 </a>
                             </td>
                         </tr>
@@ -746,7 +752,7 @@
         <p class='f16 tc blue cent' style='font-size: 18px;margin-top:40px'>请审批人员注意辨别用户提交的盖章真伪情况</p>
     </div>
 
-    
+
     <div class='sealContent grey9 layer_pageContent dom3 dn'>
         <div class="sealContent1 grey9 layer_pageContent" style="height: 200px; width: 500px;">
             <p class="mb10 mt20"><span class="blue">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
@@ -787,8 +793,8 @@
                 }
             });
 
-             //tipclick1 点击出现数据段
-             $('.tipclick1').qtip({
+            //tipclick1 点击出现数据段
+            $('.tipclick1').qtip({
                 show: { event: 'click' },
                 hide: 'unfocus',
                 content: {
