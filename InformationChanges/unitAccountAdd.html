@@ -25,131 +25,89 @@
 <body class="showTip">
     <div class="lgui-table-box ml20 mt5 mr20">
         <div class="lgui-table-header pct100">
-            <table class="ui-table f12 auto tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">往来单位：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">科目：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">开户银行：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">银行账户：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">币种：</span>
-                        </td>
-                        <td width="37%">
-                            <span class="input-selSearch pct90">
-                                <input type="text" class="ui-input searchUp borNone pct100" placeholder="请选择"
-                                    autocomplete="off">
-                                <div class="search-cont pct100">
-                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+
+            <div class="lgui-table-header mt20 f12 pct100">
+                <div class="ml40">
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            &emsp;&emsp;往来单位：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                        </span>
+                        <span class="dib pct10"></span>
+                        <span class="dib pct40">
+                            &emsp;&emsp;科目：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                        </span>
+                    </div>
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            &emsp;&emsp;开户银行：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                        </span>
+                        <span class="dib pct10"></span>
+                        <span class="dib pct40">
+                            银行账户：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                        </span>
+                    </div>
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            &emsp;&emsp;&emsp;&emsp;币种：<span class="input-selSearch pct70">
+                                <input type="text" class="ui-input searchUp pct100 " placeholder="请选择"
+                                    autocomplete="off" readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">账号余额：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">是否现金：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="radio">
-                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>现金</label>
-                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>非现金</label>
-                                </span>
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">是否锁定：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="radio">
-                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>未锁定</label>
-                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>锁定</label>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">银行账号分类：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <span class="input-selSearch pct90">
-                                <input type="text" class="ui-input searchUp borNone pct100" placeholder="请选择"
-                                    autocomplete="off">
-                                <div class="search-cont pct100">
-                                    <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                        </span>
+                        <span class="dib pct10"></span>
+                        <span class="dib pct40">
+                            账号余额：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                        </span>
+                    </div>
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            &emsp;&emsp;是否现金： <span class="radio">
+                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>现金</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>非现金</label>
+                            </span>
+                        </span>
+                        <span class="dib pct10"></span>
+                        <span class="dib pct40">
+                            是否锁定： <span class="radio">
+                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>未锁定</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>锁定</label>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            银行账号分类：<span class="input-selSearch pct70">
+                                <input type="text" class="ui-input searchUp pct100 " placeholder="请选择"
+                                    autocomplete="off" readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">重置</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="tc mt20">
+                    <button type="button" class="ui-button mr10 w90">提交</button>
+                    <button type="button" class="ui-button w90" data-type="clear">关闭</button>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>

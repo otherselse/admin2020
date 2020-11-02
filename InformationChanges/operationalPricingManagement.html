@@ -19,6 +19,10 @@
             color: #2487E4;
             text-align: center;
         }
+
+        .qtip {
+            max-width: 450px;
+        }
     </style>
 </head>
 
@@ -163,25 +167,50 @@
                             </tr>
                         </tbody>
                         <tfoot>
-                            <tr height="50" class="bgfa">
-                                <td colspan="20">
-                                    <button type="button" class="ui-button  mr20">挂牌</button>
-                                    <button type="button" class="ui-button">价格统调</button>
+                            <tr height="45" class="bgfa">
+                                <td colspan="20" class="lh45">
+                                    <div class="l">
+                                        <i class="ui-checkbox ml10 goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+                                        <span class="dib ml20">已选择<span class="red">6</span>条信息</span>
+                                    </div>
+                                    <div class="r">
+                                        <a href="javascript:void(0)" class="mr20 blue f12 link-up g80 tipclick" qtip-dom="dom2">价格统调</a>
+                                        <button type="button" class="ui-button mr20 ml20">挂牌</button>
+                                    </div>
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
-            <!-- <div class="tc mt20 mb20">
-                <button type="button" class="ui-button  mr20">挂牌</button>
-                <button type="button" class="ui-button">价格统调</button>
-            </div> -->
-
             <script type="text/javascript" src="../js/pagelist.js"></script>
             <div class="mb20"></div>
         </div>
     </div>
+
+    <div class="qtip-content" id="qtip-3-content" aria-atomic="true">
+        <div class="dom2 f12" style="display: none; visibility: visible;">
+            <div class="radio  pb10">
+                <label class="mr15"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一调整为</label>
+                <label class="mr15"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一下调为</label>
+                <label class=""><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                            name="radio"></i>统一上调为</label>
+            </div>
+            <div class="ui-input mb10" data-type="price">
+                <span class="red dib f16 vm">￥</span>
+                <input type="text" value="" class="pct80" placeholder="输入调整后价格">元/吨
+            </div>
+            <div class="mb5">
+                <button type="button" class="ui-button mr5" data-type="small">确认</button>
+                <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+            </div>
+
+        </div>
+    </div>
+
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>

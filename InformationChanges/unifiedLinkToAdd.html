@@ -52,6 +52,7 @@
         }
 
         .ui-files {
+            margin-top: 5px;
             font-size: 12px;
             line-height: 26px;
             height: 26px;
@@ -105,20 +106,20 @@
                 <button type="button" class="ui-option mr20" onclick="showTbody('t6')">贴膜</button>
             </div>
 
-            <table class="ui-table f12 auto tl mt20 " width="100%">
+            <table class="ui-table f12 row auto tl mt20 " width="100%">
                 <tbody class="n17-kClist n17-bbb ovh t1">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;加工商：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;加工商：</span>
                             <input type="hidden" id="j_procCorp" data="stat_company" name="steNameQuality.procCorp"
                                 value="上海华冶钢材加工有限公司">
                             <input type="hidden" id="j_procCorpID" data="stat_company" name="steNameQuality.procCorpID"
                                 value="14">
                         </td>
-                        <td width="90%">
-                            <div class="c">
+                        <td width="90%" style="padding: 8px 2px;">
+                            <div class="c mt5">
                                 <div style="width: 95%;" class="c">
-                                    <span class="n17-kClistCont jia pct70 stat_company first selectSingle" id="procList"
+                                    <span class="n17-kClistCont  pl15 jia pct70 stat_company first selectSingle" id="procList"
                                         cname="加工商">
                                         <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"
                                             id="company01" onclick="j_confirmProc(this,'14')" title="上海华冶钢材加工有限公司"><span
@@ -143,9 +144,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;大类：</span>
                             <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
 			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
                         </td>
@@ -162,9 +163,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">加工方式：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">加工方式：</span>
                             <input type="hidden" id="j_procType" data="stat_proctype" name="steNameQuality.procType" value="170">
 			                <input type="hidden" id="j_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪+横切">
                         </td>
@@ -188,9 +189,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -222,34 +223,23 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y" >
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%" style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
                 <tbody class="n17-kClist n17-bbb ovh dn t2">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;大类：</span>
                             <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
 			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
                         </td>
@@ -266,9 +256,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;品名：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;品名：</span>
                             <input type="hidden" id="t_steName" data="stat_stename" name="steNameQuality.steName">
                             <input type="hidden" id="t_steNameID" data="stat_stename" name="steNameQuality.steNameID">
                         </td>
@@ -299,9 +289,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;牌号：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;牌号：</span>
                             <input type="hidden" id="t_qualityID" data="stat_stuff" name="steNameQuality.qualityID">
                             <input type="hidden" id="t_qualityName" data="stat_stuff" name="steNameQuality.qualityName">
                         </td>
@@ -332,9 +322,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -366,34 +356,23 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%"  style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
                 <tbody class="n17-kClist n17-bbb ovh dn t3">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">加工方式：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">加工方式：</span>
                             <input type="hidden" id="p_procType" data="stat_proctype" name="steNameQuality.procType" value="163">
                             <input type="hidden" id="p_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪">
                         </td>
@@ -417,9 +396,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;大类：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;大类：</span>
                             <input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
 			                <input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
                         </td>
@@ -436,9 +415,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;厚度：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;厚度：</span>
                             <input type="hidden" id="p_steSort" data="stat_catalog" name="steNameQuality.steSort">
                             <input type="hidden" id="p_steSortID" data="stat_catalog" name="steNameQuality.steSortID">
                         </td>
@@ -455,9 +434,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -489,34 +468,23 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%"  style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
                 <tbody class="n17-kClist n17-bbb ovh dn t4">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;规格：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;规格：</span>
                            <input type="hidden" id="s_steSpec" data="stat_procspec" name="steNameQuality.steSpec" value="宽度">
                         </td>
                         <td width="90%">
@@ -532,9 +500,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">加工方式：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">加工方式：</span>
                             <input type="hidden" id="p_procType" data="stat_proctype" name="steNameQuality.procType" value="163">
                             <input type="hidden" id="p_procTypeName" data="stat_proctype" name="steNameQuality.procTypeName" value="纵剪">
                         </td>
@@ -558,9 +526,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;属性：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;属性：</span>
                             <input type="hidden" id="s_property" data="stat_length" name="steNameQuality.property" value="10~100">
                         </td>
                         <td width="90%">
@@ -577,9 +545,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -611,34 +579,23 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%"  style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
                 <tbody class="n17-kClist n17-bbb ovh dn t5">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;包装：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;包装：</span>
                             <input type="hidden" id="b_packTypeName" data="stat_package" name="steNameQuality.packTypeName">
                             <input type="hidden" id="b_packType" data="stat_package" name="steNameQuality.packTypeName">
                         </td>
@@ -658,9 +615,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -692,34 +649,23 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%"  style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
                 <tbody class="n17-kClist n17-bbb ovh dn t6">
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;贴膜：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;贴膜：</span>
                             <input type="hidden" id="l_laminaTion" data="stat_sticker" name="steNameQuality.laminaTion">
                         </td>
                         <td width="90%">
@@ -736,9 +682,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;&emsp;属性：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;&emsp;属性：</span>
                             <input type="hidden" id="l_property" data="stat_attr" name="steNameQuality.property">
                         </td>
                         <td width="90%">
@@ -756,9 +702,9 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table t1">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&nbsp;单价(元)：</span>
+                    <tr class=" t1">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&nbsp;单价(元)：</span>
                             <input type="hidden" id="j_price" data="stat_price" name="steNameQuality.price" value="25">
                         </td>
                         <td width="90%">
@@ -790,31 +736,25 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="resource-table y">
-                        <td width="10%" class="vt bgfa">
-                            <span class="pt5 dib pl10">&emsp;已选择：</span>
+                    <tr class=" y">
+                        <td width="10%" class=" bgfa">
+                            <span class=" dib">&emsp;已选择：</span>
                         </td>
-                        <td width="90%">
-                            <div class="selContact dac" style="display: none;">
+                        <td width="90%"  style="padding: 4px 2px;">
+                            <div class="selContact dac pl15" style="display: none;">
                                 <span class="selContactMore"></span>
                                 <button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="setAllClear(this)" type="button">清除全部</button>
                                 <button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
                             </div>
                         </td>
                     </tr>
-                    <tr class="y">
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">确认</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">取消</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
+
+            <div class="tc mt20">
+                <button type="button" class="ui-button mr10 w90">确认</button>
+                <button type="button w90" class="ui-button " data-type="clear">取消</button>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>

@@ -249,7 +249,7 @@
                 $(obj).text("取消");
                 $(obj).before("<a href='javascript:void(0)' onclick='saveTd(this)'>保存</a><span class='dib pl5 pr5'>|</span>")
             } else {
-                $(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone ibBt");
+                $(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone ibBt tc");
                 $(obj).parents("tr").find("input[tagname='steName']").val($(obj).parents("tr").find("input[tagname='steName']").attr("data"));
                 $(obj).parents("tr").find("input[tagname='steNameNo']").val($(obj).parents("tr").find("input[tagname='steNameNo']").attr("data"));
                 $(obj).prev().remove();

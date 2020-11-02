@@ -35,9 +35,9 @@ var menu_Data=[
 	}
 	,{"title":"统计管理",
 	"menuList":[
-			{"bigM":"统计汇总类","smallM":[{"mtitle":"审批汇总","href":"../statistical/approvalSummary.html"},{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html"},{"mtitle":"VIP专享资源汇总","href":"../statistical/endCustomerInquiry.html"},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html"},{"mtitle":"加工积分G2G收益汇总表","href":"../statistical/G2GGainsFromProcessing.html"},{"mtitle":"金牌商家协议确认汇总","href":"../statistical/goldMerchantAgreement.html"}]}
-			,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../statistical/statisticalProcessing.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html"},{"mtitle":"加工金牌商家统计","href":"../statistical/statisticsOfGoldMerchants.html"},{"mtitle":"金牌商家担保类","href":"../statistical/goldMedalGuarantee.html"}]}	
-		   ,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../statistical/theReportSummary.html"}]}	
+			{"bigM":"统计汇总类","smallM":[{"mtitle":"审批汇总","href":"../statistical/approvalSummary.html"},{"mtitle":"执行订单汇总","href":"../statistical/executeOrderSummary.html","hide":true},{"mtitle":"VIP专享资源汇总","href":"../statistical/endCustomerInquiry.html","hide":true},{"mtitle":"乐刚云使用统计","href":"../statistical/leGangCloudUsageStatistics.html"},{"mtitle":"双发积分统计","href":"../statistical/doubleIntegralStatistics.html"},{"mtitle":"商城交易量统计","href":"../statistical/mallTradingVolumeStatistics.html"},{"mtitle":"用户点击量统计","href":"../statistical/siteOverview.html"},{"mtitle":"金牌商家信息","href":"../statistical/goldMerchantInformation.html","hide":true},{"mtitle":"加工积分G2G收益汇总表","href":"../statistical/G2GGainsFromProcessing.html"},{"mtitle":"金牌商家协议确认汇总","href":"../statistical/goldMerchantAgreement.html"}]}
+			,{"bigM":"统计分析类","smallM":[{"mtitle":"加工统计","href":"../statistical/statisticalProcessing.html"},{"mtitle":"销采量统计","href":"../statistical/regionalRanking.html"},{"mtitle":"贸易金牌商家统计","href":"../statistical/thePartnershipType.html","hide":true},{"mtitle":"加工金牌商家统计","href":"../statistical/statisticsOfGoldMerchants.html"},{"mtitle":"金牌商家担保类","href":"../statistical/goldMedalGuarantee.html"}]}	
+		   ,{"bigM":"款项类","smallM":[{"mtitle":"充值记录汇总","href":"../statistical/summaryOfRechargeRecords.html"},{"mtitle":"自有资金记录汇总","href":"../statistical/ownCapitalRecord.html"},{"mtitle":"收开票数据汇总","href":"../statistical/collectionOfInvoiceData.html"},{"mtitle":"资金占用利息汇总","href":"../statistical/fundInterestSummary.html"},{"mtitle":"进销缺口统计","href":"../statistical/salesGapStatistics.html"},{"mtitle":"经营报表费用录入汇总","href":"../statistical/theReportSummary.html"}]}	
 		   ,{"bigM":"加工类","smallM":[{"mtitle":"生产经营人员配置","href":"../statistical/managementStaffing.html"},{"mtitle":"余料款充值记录汇总","href":"../statistical/remainingMaterialModel.html"}]}	
 	   ]
    }
@@ -71,7 +71,7 @@ var menu_Data=[
    ,{"title":"单据管理",
    "menuList":[
 		   {"bigM":"单据管理","smallM":[
-		   {"mtitle":"担保函/承诺函上传","href":"../documents/guaranteeUpload.html"},
+		  /*  {"mtitle":"担保函/承诺函上传","href":"../documents/guaranteeUpload.html","hide":true}, */
 		//    {"mtitle":"承诺函上传","href":"../documents/commitmentUpload.html","hide":true},
 		   {"mtitle":"进仓通知单上传","href":'../documents/warehouse.html'},
 		   {"mtitle":"信用证正本上传","href":"../documents/theIcUpload.html"},

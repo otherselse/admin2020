@@ -19,129 +19,80 @@
         html {
             background: #fff;
         }
+
+        .pct75 {
+            width: 75%;
+        }
     </style>
 </head>
 
 <body class="showTip">
     <div class="lgui-table-box ml20 mt5 mr20">
-        <span class="ui-tip mt15">全站内容用英文进行填写，您当前编辑内容之后，务必进行“保存”操作，您的修改才会生效。如果您未进行“保存”操作,您当前的修改将会丢失。
+        <span class="ui-tip mt15 ml40">全站内容用英文进行填写，您当前编辑内容之后，务必进行“保存”操作，您的修改才会生效。如果您未进行“保存”操作,您当前的修改将会丢失。
         </span>
-        <div class="lgui-table-header pct100">
-            <table class="ui-table f12 auto tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">产品目录：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <div class="pl10 tl">
-                                <span class="input-selSearch pct69">
-                                    <input type="text" class="ui-input searchUp pct100" placeholder="占位符"
-                                        autocomplete="off">
-                                    <div class="search-cont pct100">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">产品标题：</span>
-                        </td>
-                        <td width="87%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone mr10" placeholder="请输入">
-                                提示:长度建议50个字符以内
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">主照片上传：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <span class="dac pl10">
-                                <div class="mb10">
-                                    <span class=" dib">
-                                        <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                            onclick="upfile()">附件上传</button>
-                                        <span class="ui-files mr20 vm"><a href="javascript:void(0)"
-                                                class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                                                title="删除"></i></span>
-                                        <span class="ui-files mr20 vm"><a href="javascript:void(0)"
-                                                class="g80">组件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
-                                                title="删除"></i></span>
-                                    </span>
+        <div class="lgui-table-box ml40 mt20">
+            <div class="lgui-table-header f12 pct100">
+                <div class="ml40">
+                    <div class="mb10 df">
+                        <span class="dib pct40">
+                            &emsp;产品目录：<span class="input-selSearch pct75">
+                                <input type="text" class="ui-input searchUp pct100 " placeholder="请选择"
+                                    autocomplete="off" readonly="">
+                                <div class="search-cont">
+                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10"><span class="red">*</span>产品用途/亮点：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" placeholder="要求必填:文字描述(100-200字)"
-                                    rows="3"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10"><span class="red">*</span>内容：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="3"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10"><span class="red">*</span>是否显示：</span>
-                        </td>
-                        <td width="37%">
-                            <span class="dac pl10">
-                                <span class="radio">
-                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
+                        </span>
+                        <span class="dib pct10"></span>
+                        <span class="dib pct40">
+                            <span class="red">*</span>是否显示：<span class="radio">
+                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>是</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>否</label>
                             </span>
+                        </span>
+                    </div>
+                    <div class="mb10 dac">
+                        &emsp;产品标题：<input type="text" class="ui-input pct30 " placeholder="请输入"> <span
+                            class="ui-tip ml10" data-type="normal">提示:长度建议50个字符以内</span>
+                    </div>
+                    <div class="mb10 dac">
+                        主照片上传：<span class=" dib">
+                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
+                                onclick="upfile()">附件上传</button>
+                            <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组件1.jpg</a><i
+                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                            <span class="ui-files  vm"><a href="javascript:void(0)" class="g80">组件1.jpg</a><i
+                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                        </span>
+                    </div>
+                    <div class="mb10 dac tl" style="margin-left: -25px;">
+                        <span class="dib"><span class="red">*</span>产品用途/亮点：</span>
+                        <textarea class="ui-textarea pct75" style="width: 77.5%;" placeholder="要求必填:文字描述(100-200字)"
+                            rows="3"></textarea>
                         </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10"><span class="red">*</span>排序号：</span>
+                    </div>
+                    <div class="mb10 dac tl">
+                        <span class="dib">&emsp;&emsp;&nbsp;<span class="red">*</span>内容：</span>
+                        <textarea class="ui-textarea pct80" placeholder="" rows="3"></textarea>
                         </td>
-                        <td width="37%">
-                            <span class="dac pl10">
-                                <input type="text" class="ui-input pct69 borNone mr10" placeholder="请输入">
-                                提示:字数越小排在越前,最小为1
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
-                                <button type="button" class="ui-button " data-type="clear" style="    min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">重置</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    </div>
+                    <div class="mb10 dac">
+                        &emsp;&emsp;排序号：<input type="text" class="ui-input pct30 " placeholder="请输入"> <span class="ui-tip ml10" data-type="normal">提示:字数越小排在越前,最小为1</span>
+                    </div>
+                </div>
+
+                <div class="tc mt20">
+                    <button type="button" class="ui-button mr10 w90">提交</button>
+                    <button type="button" class="ui-button w90" data-type="clear">关闭</button>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>

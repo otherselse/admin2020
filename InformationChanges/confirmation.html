@@ -21,10 +21,18 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
-
+        .txtb2 {
+            border: 1px #2487E4 solid;
+            color: #2487E4;
+            width: 100px;
+            text-align: center;
+        }
         body,
         html {
             background: #fff;
+        }
+        .ibBt {
+            background-color: transparent;
         }
     </style>
 </head>
@@ -93,7 +101,7 @@
                 </div>
             </div>
             <!-- search end -->
-            <div class="lgui-table-box ml20 mt30 mr20">
+            <div class="lgui-table-box ml20 mt10 mr20">
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
                         <thead>
@@ -102,35 +110,38 @@
                                 <th width="6%">大类</th>
                                 <th width="16%">类别</th>
                                 <th width="13%">名称</th>
-                                <th width="13%">助记码</th>
                                 <th width="8%">操作人</th>
                                 <th width="8%">操作时间</th>
                                 <th width="15%">操作</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover">
-                            <tr class="n17-Ttd">
+                            <tr class="n17-Ttd" id="2058">
                                 <td>1</td>
-                                <td>板材类</td>
+                                <td>型材类</td>
                                 <td>
-                                    <input type="hidden" value="2">
+                                    <input type="hidden" value="2" data="selectName">
                                     牌号
                                 </td>
+                                <td class="tc">
+                                    <input type="text" class="borNone ibBt tc" value="输油气管" data="输油气管" readonly=""
+                                        tagname="steName" onchange="check(this)">
+                                </td>
+
                                 <td>
-                                    BQ20007-010-01-002-0
+                                    金管家
                                 </td>
                                 <td>
-                                    11111
+                                    2020-03-12 17:08:57.0
                                 </td>
                                 <td>
-                                    徐河若
+                                    <a href="javascript:void(0)" onclick="setEdit(this)">修改</a>
+                                    <span class="dib pl2 pr2">|</span>
+                                    <a href="javascript:delHscode('99F89987BA367A32E05371001FACA8EF')">删除</a>
+                                    <span class="dib pl2 pr2">|</span>
+                                    <a href="javascript:delHscode('99F89987BA367A32E05371001FACA8EF')">确认</a>
+
                                 </td>
-                                <td>
-                                    2020-08-25 15:55:42.0
-                                </td>
-                                <td>
-                                    <a href="javascript:void(0)" onclick="doDelAdd('2073','2')"><i
-                                            class="n17-icon  n17-Tdel dib vm mr5"></i>删除</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -164,7 +175,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(6).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -227,6 +238,23 @@
             $(this).parents(".ui-tab2").find(".ui-tab2-line").animate({ "left": tab2index })
             $(this).addClass("on").siblings().removeClass("on");
         })
+
+        function setEdit(obj) {
+            var v = $(obj).text();
+            if (v == "修改") {
+                $(obj).parents("tr").find("input[tagname='steName']").removeClass().removeAttr("readonly").addClass("txtb2 ui-input tax");
+                $(obj).parents("tr").find("input[tagname='steNameNo']").removeClass().removeAttr("readonly").addClass("txtb2 ui-input code");
+                $(obj).text("取消");
+                $(obj).before("<a href='javascript:void(0)' onclick='saveTd(this)'>保存</a><span class='dib pl5 pr5'>|</span>")
+            } else {
+                $(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone ibBt tc");
+                $(obj).parents("tr").find("input[tagname='steName']").val($(obj).parents("tr").find("input[tagname='steName']").attr("data"));
+                $(obj).parents("tr").find("input[tagname='steNameNo']").val($(obj).parents("tr").find("input[tagname='steNameNo']").attr("data"));
+                $(obj).prev().remove();
+                $(obj).prev().remove();
+                $(obj).text("修改");
+            }
+        }
 
     </script>
 

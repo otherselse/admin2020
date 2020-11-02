@@ -22,10 +22,6 @@
             padding: 0px;
         }
 
-        body,
-        html {
-            background: #fff;
-        }
     </style>
 </head>
 
@@ -51,57 +47,67 @@
         </div>
 
         <div class="fix f12 bgwh ui-content ovh minH">
-            <div class="pl20 pr20 borR">
+            <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,530)"
+                    <a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,430)"
                         class="dib xzhj-button daj">
                         <span class="dib mr10">新增仓库信息</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
                     </a>
                 </div>
             </div>
-            <div class="mb20 f0 mt30 ml20  mr20">
-                <div class="mb10 f0 dac borR">
-                    <span class="dib pct25">
-                        <div class="min-w60">仓库状态：</div>
-                        <div class="dib selectSingle gc">
-                            <a href="javscript:void(0)" class="on">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)" class="">未确认</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">已确认</a>
+            <div class="mb20 f0 mt20 ml20  mr20">
+                <div class="mb10 f12 dac">
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">仓库状态：</div>
+                            <div class="dib selectSingle gc">
+                                <a href="javscript:void(0)" class="on">全部</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="">未确认</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">已确认</a>
+                            </div>
                         </div>
                     </span>
-                    <span class="dib pct25">
-                        <div class="min-w60">单据模板：</div>
-                        <div class="dib selectSingle gc">
-                            <a href="javscript:void(0)" class="on">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)" class="">未上传</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">已上传</a>
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">单据模板：</div>
+                            <div class="dib selectSingle gc">
+                                <a href="javscript:void(0)" class="on">全部</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="">未上传</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">已上传</a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+
+                <div class="mb10 f12 dac">
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">会员标记：</div>
+                            <div class="dib selectSingle gc">
+                                <a href="javscript:void(0)" class="on">全部</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="">会员仓库</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">非会员仓库</a>
+                            </div>
                         </div>
                     </span>
 
-                    <span class="dib pct25">
-                        <div class="min-w60">会员标记：</div>
-                        <div class="dib selectSingle gc">
-                            <a href="javscript:void(0)" class="on">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)" class="">会员仓库</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">非会员仓库</a>
-                        </div>
-                    </span>
-
-                    <span class="dib pct25">
-                        <div class="min-w60">停用标记：</div>
-                        <div class="dib selectSingle gc">
-                            <a href="javscript:void(0)" class="on">全部</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)" class="">停用</a>
-                            <span class="pr5 pl5 ">|</span>
-                            <a href="javscript:void(0)">非停用</a>
+                    <span class="dib pct50">
+                        <div class="df">
+                            <div class="min-w60">停用标记：</div>
+                            <div class="dib selectSingle gc">
+                                <a href="javscript:void(0)" class="on">全部</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)" class="">停用</a>
+                                <span class="pr5 pl5 ">|</span>
+                                <a href="javscript:void(0)">非停用</a>
+                            </div>
                         </div>
                     </span>
                 </div>
@@ -131,13 +137,13 @@
                     <span class="pct25 dib f12">&emsp;操作人：<input type="text" class="ui-input pct69"
                             placeholder="请输入"></span>
                     <span class="pct25 dib f12">
-                        操作时间：<span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                            <span class="dib pct5 tc">-</span>
-                            <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                        操作时间：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="">
                         </span>
                     </span>
-                    <span class="dib pct25 f12">
+                    <span class="dib pct50 f12">
                         <button type="button" class="ui-button mr10">查询</button>
                         <button type="button" class="ui-button " data-type="clear">清空</button>
                     </span>
@@ -198,9 +204,10 @@
                                 </td>
                                 <td width="8%">会员仓库</td>
                                 <td width="16%">
-                                    <i class="dib  icon-stock-enter poi s-tip tiptop"
-                                        onclick="showLayer('仓库信息确认','determineTheWarehouse.html',960,600)" title="信息确认"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop" title="操作记录详情"
+                                    <i class="dib  icon-stock-enter poi s-tip tiptop op5"
+                                        onclick="showLayer('仓库信息确认','determineTheWarehouse.html',960,600)"
+                                        title="信息确认"></i>
+                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
                                         onclick="showTrMore(this,2957)"></i>
                                 </td>
                             </tr>
@@ -261,15 +268,15 @@
                                 </td>
                                 <td width="8%">非会员仓库</td>
                                 <td width="16%">
-                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop"
+                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop op5"
                                         onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
                                         title="仓库单位维护"></i>
-                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop"
+                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
                                         onclick="showLayer('信息修改','modifyTheWarehouse.html',960,600)" title="信息修改"></i>
-                                    <i id="depotIsDel02955" style="display:inline-block"
-                                        class="dib icon-stock-t poi s-tip isDelButton mr5 tiptop" title="停用仓库"
+                                    <i id="depotIsDel02955" style="display:inline-block "
+                                        class="dib icon-stock-t poi s-tip isDelButton mr5 tiptop op5" title="停用仓库"
                                         onclick="showLayer('停用仓库','stopUsingTheWarehouse.html',600,350)"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop" title="操作记录详情"
+                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
                                         onclick="showTrMore(this)"></i>
                                 </td>
                             </tr>
@@ -300,7 +307,7 @@
                                     </div>
                                 </td>
                             </tr><!-- 隐藏内容end -->
-                            
+
                             <tr>
                                 <td width="5%">3</td>
                                 <td width="10%">嘟嘟嘟</td>
@@ -331,15 +338,15 @@
                                 </td>
                                 <td width="8%">非会员仓库</td>
                                 <td width="16%">
-                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop"
+                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop op5"
                                         onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',530)"
                                         title="仓库单位维护"></i>
-                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop"
+                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
                                         onclick="showLayer('信息修改','modifyTheWarehouse.html',600)" title="信息修改"></i>
-                                    <i id="depotIsDel12955" 
-                                        class="dib icon-stock-q poi s-tip isDelButton mr5 tiptop" title="启用仓库"
+                                    <i id="depotIsDel12955" class="dib icon-stock-q poi s-tip isDelButton mr5 tiptop op5"
+                                        title="启用仓库"
                                         onclick="showLayer('启用仓库','toEnableTheWarehouse.html',600,350)"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop" title="操作记录详情"
+                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
                                         onclick="showTrMore(this)"></i>
                                 </td>
                             </tr>
@@ -441,17 +448,23 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
                 },
             });
+            
+            $("tr").hover(function(){
+                $(this).find(".s-tip").toggleClass("op5");
+            },function(){
+                $(this).find(".s-tip").toggleClass("op5");
+            });
         })
     </script>
     <script>
 
-        function showLayer(name, url,w, h) {
+        function showLayer(name, url, w, h) {
             layer.open({
                 type: 2,
                 title: name,
                 shadeClose: true,
                 shade: 0.4,
-                area: [w+'px', h + 'px'],
+                area: [w + 'px', h + 'px'],
                 content: url //iframe的url
             });
         }

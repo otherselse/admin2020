@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <title>外贸单制作(制作单据)-单据管理-乐刚智能云系统</title>
+    <style>
+        .ui-table tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 7px 2px;
+        }
+    </style>
 </head>
 
 <body class='showTip'>
@@ -180,20 +187,20 @@
                 <div>
                     <div class="lgui-table-box checkbox">
                         <div class="lgui-table-header">
-                            <table class="ui-table tc f12 " width="100%">
+                            <table class="ui-table table-cw tc f12 " width="100%">
                                 <thead>
                                     <tr>
-                                        <th width="10%" class="tl">
-                                            <div class="pl20">
+                                        <th width="7%" class="tl">
+                                            <div class="pl10 dac">
                                                 <i class="ui-checkbox goldIcon vm mr5 pct20"><input type="checkbox"
                                                         class="checkbox-opacity" name="checkbox"></i>
-                                                <span class="dib">选择</span>
+                                                <div class="dib">选择</div>
                                             </div>
                                         </th>
                                         <th width="15%" class="">
                                             <div class="pl20">商品编号</div>
                                         </th>
-                                        <th width="20%">商品名称、规模型号</th>
+                                        <th width="23%">商品名称、规模型号</th>
                                         <th width="15%">数量及单位</th>
                                         <th width="11%">最终目的国(地区)</th>
                                         <th width="8%">单价</th>
@@ -202,14 +209,10 @@
                                         <th width="8%">征免</th>
                                     </tr>
                                 </thead>
-                            </table>
-                        </div>
-                        <div class="lgui-table-body mt-1">
-                            <table class="ui-table tc f12 " width="100%">
                                 <tbody class="ui-thover">
                                     <tr>
-                                        <td width="10%" class="tc pct10">
-                                            <div class="pl20">
+                                        <td width="7%" class="tc pct10">
+                                            <div class="pl10">
                                                 <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
                                                         class="checkbox-opacity tc" name="checkbox"></i></div>
                                         </td>
@@ -218,7 +221,7 @@
                                                 <input type="text" class="tc pct60" value="" placeholder="请输入商品编号">
                                             </span>
                                         </td>
-                                        <td width="20%">
+                                        <td width="23%">
                                             冷轧卷板AUTOMOBILE BEAM STEEL COIL
                                             10.000*800*C
                                         </td>
@@ -246,8 +249,8 @@
                                 <tfoot class="">
                                     <tr height="45">
                                         <td class="tl" style="border:none">
-                                            <span class=" mt5 dac dib pl20 tl">
-                                                <i class="ui-checkbox goldIcon mr5 vm pct20"><input type="checkbox"
+                                            <span class=" mt5 dac dib pl10 tl">
+                                                <i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox"
                                                         class="checkbox-opacity" name="checkbox"
                                                         onclick="setAll(this)"></i>
                                                 <span class="">全选</span>
@@ -342,22 +345,21 @@
                             <table class="ui-table tc f12 " width="100%">
                                 <thead>
                                     <tr>
-                                        <th width="10%" class="tl">
-                                            <div class="pl20">
-                                                <i class="ui-checkbox goldIcon vm mr5 pct20"><input type="checkbox"
+                                        <th width="7%" class="tl">
+                                            <div class="pl10 dac">
+                                                <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
                                                         class="checkbox-opacity" name="checkbox"></i>
                                                 <span class="dib">选择</span>
                                             </div>
                                         </th>
-                                        <th width="15%" class="tc">
+                                        <th width="18%" class="tc">
                                             <span class="input-selSearch pct80">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="DESCRIPTION" autocomplete="off">
                                                 <div class="search-cont pct100 tl">
-                                                    <a href="javascript:void(0)" class="search-list db ell active"
-                                                       >DESCRIPTION</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell"
-                                                        >PRODUCT
+                                                    <a href="javascript:void(0)"
+                                                        class="search-list db ell active">DESCRIPTION</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell">PRODUCT
                                                         NAME</a>
                                                 </div>
                                             </span>
@@ -365,27 +367,25 @@
                                         <th width="7%">GRADE</th>
                                         <th width="8%">SIZE(MM)</th>
                                         <th width="20%">
-                                            UNIT PRICE
-                                            <span class="input-selSearch pct30">
+                                            UNIT PRICE<span class="input-selSearch">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="USD/MT" autocomplete="off">
                                                 <div class="search-cont pct100 tl">
                                                     <a href="javascript:void(0)" class="search-list db ell active"
-                                                        class="search-list db ell" >USD/MT</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell"
-                                                    >RMB/MT</a>
+                                                        class="search-list db ell">USD/MT</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell">RMB/MT</a>
                                                 </div>
                                             </span>
                                         </th>
                                         <th width="15%">NET WEIGHT MTS</th>
                                         <th width="20%">TOTAL AMOUNT
-                                            <span class="input-selSearch pct30">
+                                            <span class="input-selSearch">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="USD" autocomplete="off">
                                                 <div class="search-cont pct100 tl">
-                                                    <a href="javascript:void(0)" class="search-list db ell active"
-                                                        >USD</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell" >RMB</a>
+                                                    <a href="javascript:void(0)"
+                                                        class="search-list db ell active">USD</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell">RMB</a>
                                                 </div>
                                             </span>
                                         </th>
@@ -398,20 +398,19 @@
                             <table class="ui-table tc f12 " width="100%">
                                 <tbody class="ui-thover">
                                     <tr>
-                                        <td class="tc" width="10%">
-                                            <div class="pl20">
+                                        <td class="tc" width="7%">
+                                            <div class="pl10">
                                                 <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
                                                         class="checkbox-opacity tc" name="checkbox"></i></div>
                                         </td>
-                                        <td class="tc pct15">
+                                        <td width="18%">
                                             <span class="input-selSearch pct90">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="DESCRIPTION" autocomplete="off">
                                                 <div class="search-cont pct100 tl">
-                                                    <a href="javascript:void(0)" class="search-list db ell active"
-                                                        >镀铝板材</a>
-                                                    <a href="javascript:void(0)" class="search-list db ell"
-                                                        >PRODUCT
+                                                    <a href="javascript:void(0)"
+                                                        class="search-list db ell active">镀铝板材</a>
+                                                    <a href="javascript:void(0)" class="search-list db ell">PRODUCT
                                                         NAME</a>
                                                 </div>
                                             </span>
@@ -845,22 +844,22 @@
                 </table>
                 <div>
                     <div class="lgui-table-box checkbox">
-                       
+
                         <div class="lgui-table-body mt-1">
                             <table class="ui-table tc f12 table-cw" width="100%">
                                 <thead>
                                     <tr class="100%">
-                                        <th width="10%" class="tl">
-                                            <span class=" mt5  dib pl20 tl"><i
-                                                    class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
+                                        <th width="7%" class="tl">
+                                            <span class="pl10 dac"><i
+                                                    class="ui-checkbox goldIcon mr5 vm"><input type="checkbox"
                                                         class="checkbox-opacity" name="checkbox"></i>
-                                                <span class="dib">选择</span>
+                                                <div class="dib">选择</div>
                                             </span>
                                         </th>
                                         <th width="4%" class="">
                                             <span class="dib">ITEM</span>
                                         </th>
-                                        <th width="9%" class="tc">
+                                        <th width="12%" class="tc">
                                             <span class="input-selSearch pct80">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="DESCRIPTION" autocomplete="off">
@@ -878,10 +877,11 @@
                                         <th width="9%"><span class="dib">NET </span> WEIGHT</th>
                                         <th width="10%"><span class="dib">GROSS </span>WEIGHT<span>(MTS)</span></th>
                                         <th width="9%">QUANTITY<span class="dib">(PCS)</span></th>
-                                        <th width="10%"><span class="dib">LENGTH</span> <span>METER</span><span>/PC</span></th>
+                                        <th width="10%"><span class="dib">LENGTH</span>
+                                            <span>METER</span><span>/PC</span></th>
                                         <th width="17%">
                                             <span class="dib">QUANTITY</span>
-                                            <span class="input-selSearch pct50">
+                                            <span class="input-selSearch">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="PACKAGES" autocomplete="off">
                                                 <div class="search-cont pct100 tl">
@@ -899,14 +899,14 @@
                                 </thead>
                                 <tbody class="ui-thover">
                                     <tr>
-                                        <td class="tc pct10" width="10%">
-                                            <span class=" mt5  dib pl20 tl"><i
+                                        <td class="" width="7%">
+                                            <span class=" dac pl10 tl"><i
                                                     class="ui-checkbox goldIcon mr5 pct20 vm"><input type="checkbox"
                                                         class="checkbox-opacity" name="checkbox"></i>
                                             </span>
                                         </td>
                                         <td width="4%"><span class="dib">1</span></td>
-                                        <td class="tc" width="9%">
+                                        <td class="tc" width="12%">
                                             <span class="input-selSearch pct90">
                                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                                                     value="DESCRIPTION" autocomplete="off">
@@ -1425,7 +1425,7 @@
 
     <script>
         $(function () {
-            $(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
     </script>

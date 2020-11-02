@@ -54,10 +54,12 @@
 
         <div class="fix f12 bgwh p20 ui-content ovh minH">
             <div class="cl dac f12">
-                时间段：<span class="ui-input tc f0  range" data-type="time">
-                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                    <span class="dib pct5 tc">-</span>
-                    <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+                <span class="pct25 dib">
+                    时间段：<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                            class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                            class="render-time pct45" readonly="">
+                    </span>
                 </span>
                 <button type="button" class="ui-button mr20 ml20">查询</button>
             </div>
@@ -81,21 +83,19 @@
                         <tbody class="ui-thover">
                             <tr>
                                 <td>1</td>
-                                <td>
-                                    <span class="green">已读</span>
-                                </td>
+                                <td>已读</td>
                                 <td>2020-04-29 14:38:35</td>
                                 <td>44</td>
                                 <td>44</td>
                                 <td>342358107@qq.com</td>
                                 <td>44</td>
-                                <td><span class="green">有效</span></td>
+                                <td><span class="green">无效</span></td>
                                 <td>
                                     <a href="javascript:void(0)" class="blue" onclick="showTrMore(this)">查看</a>
                                 </td>
                             </tr>
-                             <!-- 点击执行显示 -->
-                             <tr class="hideTr dn">
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn">
                                 <td colspan="9">
                                     <div class="pl20 pr20">
                                         <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
@@ -126,15 +126,14 @@
                             <tr>
                                 <td>2</td>
                                 <td>
-                                    <span class="orange">未读</span>
-
+                                    <span class="red">未读</span>
                                 </td>
                                 <td>2020-01-09 10:25:50</td>
                                 <td></td>
                                 <td></td>
                                 <td>info@lg-steel.com</td>
                                 <td></td>
-                                <td><span class="green">有效</span></td>
+                                <td><span class="">有效</span></td>
                                 <td><a href="javascript:void(0)" class="blue">查看</a></td>
                             </tr>
                         </tbody>

@@ -23,153 +23,47 @@
 </head>
 
 <body class="showTip">
-    <div class="lgui-table-box p20">
-        <div class="f12 lgui-table-header pct100">
-            <div class="mb10 df">
-                <span class="dib pct50">
-                    <div class="dac">
-                        <span class="f1">名称：</span>
-                        <input type="text" class="ui-input " placeholder="请输入">
-                    </div>
-                </span>
-                <span class="dib pct50">
-                    <div class="dac">
-                        <span class="f1">业务名称：</span>
-                        <input type="text" class="ui-input " placeholder="请输入">
-                    </div>
-                </span>
-            </div>
-            <div class="daj mb10">
-                <span class="dib">
-                    <input type="text" class="ui-input " placeholder="请输入">
-                </span>
-                <span class="dib ml40">
-                    8-15天：<input type="text" class="ui-input " placeholder="请输入">
-                </span>
-            </div>
-            <div class="daj mb10">
-                <span>
-                    16-30天：<input type="text" class="ui-input " placeholder="请输入">
-                </span>
-                <span class="dib ml40">
-                    资金占用利息：<input type="text" class="ui-input " placeholder="请输入">
-                </span>
-            </div>
-            <div class="mb10">
-                <div class="">
-                    30天以上：<input type="text" class="ui-input" placeholder="请输入">&emsp;(例如:2.0%*天数/30。只需填写百分比)
+    <div class="lgui-table-box ml40 mt20">
+        <div class="lgui-table-header f12 pct100">
+            <div class="">
+                <div class="mb10 df">
+                    <span class="dib tr pct40">
+                        名称：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib tr pct40">
+                        业务类型：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib tr pct40">
+                        1-7天：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib tr pct40">
+                        8-15天：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 df">
+                    <span class="dib tr pct40">
+                        16-30天：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                    <span class="dib pct10"></span>
+                    <span class="dib tr pct40">
+                        资金占用利息：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+                    </span>
+                </div>
+                <div class="mb10 dac">
+                    &emsp;&emsp;&emsp;&nbsp;30天以上：<input type="text" class="ui-input mr20" style="width: 28%;" placeholder="请输入">(例如:2.0%*天数/30。只需填写百分比)
+                </div>
+                <div class="" style="margin-left: 66px;">
+                    备注：<textarea class="ui-textarea pct70" readonly rows="2"></textarea>
                 </div>
             </div>
-            
-            <!-- 
-            <div class="daj dn mb10">
-                <span class="dib pct40">
-                    1-7天：<input type="text" class="ui-input pct70" placeholder="请输入">
-                </span>
-                <span class="dib pct40">
-                    8-15天：<input type="text" class="ui-input pct70" placeholder="请输入">
-                </span>
-            </div>
-            <div class="daj dn mb10">
-                <span class="dib pct40">
-                    16-30天：<input type="text" class="ui-input pct70" placeholder="请输入">
-                </span>
-                <span class="dib pct40">
-                    资金占用利息：<input type="text" class="ui-input pct70" placeholder="请输入">
-                </span>
-            </div>
-            <div class="daj dn mb10">
-                <span class="dib pct80">
-                    30天以上：<input type="text" class="ui-input" style="width: 35%;" placeholder="请输入">
-                   (例如:2.0%*天数/30。只需填写百分比)
-                </span>
-            </div>
-            <div class="daj dn mb10">
-                <span class="dib pct80">
-                    备注：<textarea class="ui-textarea pct70" rows="2" placeholder="必填项"></textarea>
-                </span>
-            </div> -->
-            <table class="ui-table f12 auto  tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">名称：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">业务类型：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">1-7天：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">8-15天：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">16-30天：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">30天以上：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct30 borNone"
-                                    placeholder="请输入">(例如:2.0%*天数/30。只需填写百分比)
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">资金占用利息：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class=" dib pl10">备注：</span>
-                        </td>
-                        <td width="37%" colspan="3">
-                            <div class="pl10 pr10">
 
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="mt20 mb30 tc">
-                <button type="button" class="ui-button mr10 tBtn">提交</button>
-                <button type="button" class="ui-button tBtn" data-type="clear">关闭</button>
+            <div class="tc mt20">
+                <button type="button" class="ui-button mr10 w90">提交</button>
+                <button type="button" class="ui-button w90" data-type="clear">关闭</button>
             </div>
         </div>
     </div>

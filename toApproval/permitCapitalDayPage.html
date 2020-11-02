@@ -63,18 +63,18 @@
         <div class="ui-content  mt20">
             <div class="lh84 bor-bottom">
                 <div class="ui-tab4">
-                    <a href="javascript:void(0)" class="ui-tab4-list ml10 on">当日收入</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">当日支出</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">库存盘点</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">银行账户余额</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">预测资金流入</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">预测资金流出</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">资金情况汇总</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list">审批意见</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list ml10 on" onclick="setScollTop(this,'msg1')">当日收入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg2')">当日支出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg3')">库存盘点</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg4')">银行账户余额</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg5')">预测资金流入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg6')">预测资金流出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg7')">资金情况汇总</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg8')">审批意见</a>
                 </div>
             </div>
-            <div class="p20">
-                <div class="b f14 g28">
+            <div class="p20 msg1">
+                <div class="b f14 g28 msg1">
                     当日收入
                 </div>
                 <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
@@ -165,7 +165,7 @@
             </div>
         </div>
         <div class="ui-content mt20">
-            <div class="p20">
+            <div class="p20 msg2">
                 <div class="b f14 g28">当日支出</div>
                 <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
                             class="toggle_l vm mr10 on"></i>现金部分</a></div>
@@ -331,7 +331,7 @@
             </div>
         </div>
         <div class="ui-content  mt20">
-            <div class="p20">
+            <div class="p20 msg3">
                 <div class="b f14 g28">库存盘点</div>
                 <table class="ui-table row f12 pct100 mt15">
                     <tbody>
@@ -343,7 +343,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30">银行账户余额</div>
+                <div class="b f14 g28 mt30 msg4">银行账户余额</div>
                 <table class="ui-table row f12 pct100 mt15">
                     <tbody>
                         <tr>
@@ -376,7 +376,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30">预测资金流入</div>
+                <div class="b f14 g28 mt30 msg5">预测资金流入</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
                         <tr>
@@ -403,7 +403,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30">预测资金流出</div>
+                <div class="b f14 g28 mt30 msg6">预测资金流出</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
                         <tr>
@@ -435,7 +435,7 @@
             </div>
         </div>
         <div class="ui-content  mt20">
-            <div class="p20">
+            <div class="p20 msg7">
                 <div class="b f14 g28">资金情况汇总</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
@@ -564,7 +564,7 @@
             </div>
         </div>
         <div class="ui-content  mt20">
-            <div class="p20">
+            <div class="p20 msg8">
                 <div class="b f14 g28">审批意见</div>
                 <div class="mt30 ml50 nodeLine f12">
                     <div class="g28 ui-audit f12 pl10"><span>复核意见</span></div>
@@ -627,6 +627,11 @@
         function showdiv(obj) {
             $(obj).find(".toggle_l").toggleClass("on")
             $(obj).parent().next().toggle()
+        }
+        function setScollTop(obj,el){
+            var height =  $("."+el).offset().top
+            $(document).scrollTop(height); 
+
         }
     </script>
 </body>
