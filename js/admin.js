@@ -219,7 +219,7 @@ $(function(){
 	}
 
 	//switch
-	$(".ui-switch").on("click", function () {
+	$(".manage-switch").on("click", function () {
 		$(this).toggleClass("on");
 	})
 
