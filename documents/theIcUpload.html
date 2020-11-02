@@ -21,13 +21,10 @@
             padding: 0px;
         }
 
-        /* .selectDiv a {
-            color: rgb(168, 168, 168);
+        .ui-audit::before {
+            width: 10px;
+            height: 10px;
         }
-
-        .selectDiv a:hover {
-            color: #1365E8FF;
-        } */
     </style>
 </head>
 
@@ -165,7 +162,7 @@
                                                     <td class="bgfa" width="13%">
                                                         <span class="pt5 dib pl20">上传正本：</span>
                                                     </td>
-                                                    <td width="87%">
+                                                    <td width="87%" colspan="3">
                                                         <span class="dib pl20">
                                                             <button type="button" class="ui-button mr10 vm w120"
                                                                 data-type="upfile" onclick="upfile()">上传正本附件</button>
@@ -181,17 +178,15 @@
                                                     <td class="bgfa" width="13%">
                                                         <span class="pt5 dib pl20">正本约定最晚装运日期：</span>
                                                     </td>
-                                                    <td width="87%">
+                                                    <td width="37%">
                                                         <span class="ui-input pct40 ml10" data-type="time"><input
                                                                 type="text" placeholder="选择最晚装运日期" id="time2"
                                                                 readonly=""></span>
                                                     </td>
-                                                </tr>
-                                                <tr>
                                                     <td class="vt bgfa" width="13%">
                                                         <span class="pt5 dib pl20">信用证有效期：</span>
                                                     </td>
-                                                    <td width="87%" class="borNone">
+                                                    <td width="37%" class="borNone">
                                                         <span class="ui-input pct40 ml10" data-type="time"><input
                                                                 type="text" placeholder="选择最晚装运日期" id="time3"
                                                                 readonly=""></span>
@@ -536,7 +531,7 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
     <script>
         $(function () {
-            $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -557,7 +552,7 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
                 },
             });
-            
+
             //myTipclick-p0 点击出现数据段没有内边距
             $('.myTipclick-p0').qtip({
                 show: { event: 'click' },
