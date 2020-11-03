@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>用户点击量统计-统计管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    
     <style>
         .hoverBlue:hover {
             padding: 2px 5px;
@@ -56,9 +54,9 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="mb10 f14 g28">乐刚物流用户点击跟踪</div>
+                <div class="mb10 f14 b g28">乐刚物流用户点击跟踪</div>
                 <div class="cl mb10 dac f12">
-                    <span class="mt5 dib">时间段分类：</span>
+                    <span class="searchLable dib">时间段分类：</span>
                     <span class="single ">
                         <input type="hidden">
                         <button type="button" class="ui-option mr5 on m_mb10">今日</button>
@@ -66,15 +64,14 @@
                         <button type="button" class="ui-option mr5 m_mb10">最近一个月</button>
                         <button type="button" class="qj ui-option mr5 m_mb10">自定义</button>
                     </span>
-                    <span class="ml5 f12 dn pct20" id="qj">
-                        <span class="ui-input tc f0 pct69 range" data-type="time">
+                    <span class="ml5 f12 dn" id="qj">
+                        <span class="ui-input tc f0 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
                     <button type="button" class="ui-button ml20 mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
                 <table class="ui-table tc mt30 f12" width="100%">
                     <thead>

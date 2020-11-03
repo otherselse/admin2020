@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>扣分记录明细表-自有资金记录汇总-统计管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
     <style>
         .hoverBlue:hover {
             padding: 2px 5px;
@@ -59,22 +56,20 @@
         <div class="ui-content minH">
             <div class="f12 p20">
                 <div class="cl mb10 dac f12">
-                    <span class="dib pct33">
+                    <span class="dib pct25">
                         <span class="searchLable">金牌商家：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct33">
+                    <span class="dib pct25">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25">
                         <span class="searchLable">金牌商家编号：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入"
                             autocomplete="off">
                     </span>
-                    <span class="dib pct33">
-                        <span class="searchLable">&emsp;&emsp;&emsp;&emsp;&emsp;订单号：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                </div>
-                <div class="dac">
-                    <span class="dib pct33">
+                    <span class="dib pct25">
                         <span class="searchLable">变动类型：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
@@ -88,15 +83,11 @@
                             </div>
                         </span>
                     </span>
-                    <span class="dib pct33">
-                        <span class="searchLable">&emsp;&emsp;业务日期：</span>
-                        <span class="ui-input tc f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                    <span class="pct33 dib">
+                    
+               
+                </div>
+                <div class="dac">
+                    <span class="pct30 dib">
                         <span class="searchLable">销售合同是否结算：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
@@ -108,6 +99,14 @@
                                 <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
                                 <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                             </div>
+                        </span>
+                    </span>
+                    <span class="dib pct30">
+                        <span class="searchLable">&emsp;&emsp;业务日期：</span>
+                        <span class="ui-input tc f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
                 </div>
