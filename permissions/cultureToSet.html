@@ -43,76 +43,222 @@
                 <a href="cultureToPerson.html" class="ui-tab3-list rel"><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToApproval.html" class="ui-tab3-list rel"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToRole.html" class="ui-tab3-list rel"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
         <div class="ui-content minH">
             <div class="p20">
-               <div class=" f12">
-                        <span class="searchLable">姓名：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">账号：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">是否评审：</span>
-                        <div class="dib selectSingle">
-                                        <a class="on" href="javscript:void(0)">未审核</a>
-                                        <span class="pr5 pl5 ">|</span>
-                                        <a href="javscript:void(0)">已审核</a>
-                                        <span class="pr5 pl5 ">|</span>
-                                        <a href="javscript:void(0)">全部</a>
-                                        <span class="pr5 pl5 ">|</span>
-                                        <a href="javscript:void(0)">已作废</a>
-                                    </div>
-                </div>
-                <div class="tc mt20"><button type="button" class="ui-button ">查询</button></div>
+               <div class="pb20 bbe">
+                    <span class=" dib pct10"><span class="searchLable">人员：</span><span class="f12 g80">单选</span></span>
+                    <button class="ui-button w96" data-type="normal" type="button">选择人员</button>
+                </div><!-- 人员end -->
+                <div class="pb20 bbe pt20 ">
+                    <span class=" dib pct10"><span class="searchLable">区域：</span><span class="f12 g80">非必选</span></span>
+                    <span class="dib pct85 checkbox f12">
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海加工</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>杭州</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无锡</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>天津</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>自贸区</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>广州</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>宁波</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>常熟</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>成都</label></span>
+                    </span>
+                </div><!-- 区域end -->                
+                <div class="pb20 bbe pt20 ">
+                    <span class=" dib pct10 vt"><span class="searchLable">角色：</span><span class="f12 g80">非必选</span></span>
+                     <span class="dib pct85 checkbox f0 lh24">
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>分控专员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务专员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>分控物流
+                    </label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>区域经理</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
 
-                <table class="ui-table tc f12 mt30" width="100%">
-                            <thead>
-                                <tr>
-                                    <th width="10%">姓名</th>
-                                    <th width="10%">手机号</th>
-                                    <th width="15%">区域</th>
-                                    <th width="20%">专业领域</th>
-                                    <th width="25%">注册时间</th>
-                                    <th width="20%">操作</th>
-                                </tr>
-                            </thead>
-                            <tbody class="ui-thover">
-                                 <tr>
-                                    <td><a href="">马云云</a></td>
-                                    <td>13712345678</td>
-                                    <td>上海</td>
-                                    <td>
-                                        <span class="input-selSearch pct69">
-                                            <input type="text" class="ui-input searchUp pct100" value="人事" autocomplete="off" readonly="">
-                                            <div class="search-cont" >
-                                                <a href="javascript:void(0)" class="search-list db ell">产品</a>
-                                                <a href="javascript:void(0)" class="search-list db ell">合规</a>
-                                                <a href="javascript:void(0)" class="search-list db ell">人事</a>
-                                            </div>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务开票</label></span>
+                            <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸运营经理</label></span>
+                            <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>金牌商家账户充值
+                        </label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>RFQ短息接受人员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>区域经理</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
+
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务开票</label></span>
+                            <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸运营经理</label></span>
+                            <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>金牌商家账户充值
+                        </label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>RFQ短息接受人员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
+                    </span>
+
+                </div><!-- 角色end -->
+
+                <div class="mt20"><span class="t_linerbg"><span class="pl10 searchLable">菜单权限：</span></span></div>
+                <table class="ui-table f12 tc mt15 pct100">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td width="10%" rowspan="2" class="bgfa">
+                                <span class="searchLable f14">文化系统</span><br>
+                                <span class="g80">（可多选）</span>
+                            </td>
+                            <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
+                                <div class="ui-tab4 n16_isMulS">
+                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setCultureSystem(this)" id="600">文化系统菜单</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureFlow(this)" id="1857">文化系统流程中心</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="resource-table">
+                          <td class="cont  n16_menuMulbgS" >
+                              <!-- <div class="n16_menulist checkbox">
+                                    <span class="dib pct10 vt mt2 pt1 n16_menulistContLeft">
+                                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setSmallMenu(this)"></i>全选</label>
+                                    </span>
+                                    <span class="dib pct85 f0 lh24 n16_menulistCont">
+                                        <span class="dib pct20 f12"  onclick="setMulThValueNew(this)" id="sort638" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>费用统计报表</span>
+                                        <span class="dib pct20 f12 rel"  onclick="setMulPanel(this)" id="sort604" childnum="5">
+                                            <span class=""><i class="mulselIcon admIcon v-3 mr5"></i>查询统计</span>
+                                            <span class="setMulPanelCont">
+                                                <div class="setMulPanelMCont">
+                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
+                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
+                                                    <div class="setMulPanelMenu"><i class="mulselIcon admIcon v-3 mr5"></i>外出办事申请</div>
+                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
+                                                </div>
+                                                <div class="setMulPanelMCont" style="left:160px">
+                                                    dfafadf
+                                                </div>
+                                            </span>
                                         </span>
-                                    </td>
-                                    <td>2020-08-11 23:33:33</td>
-                                    <td>
-                                        <a href="">审核</a>
-                                    </td>
-                                </tr>
-                               
-                            </tbody>
-                        </table>
-                        <script type="text/javascript" src="../js/pagelist.js"></script>
+                                        <span class="dib pct20 f12"  onclick="setMulThValueNew(this)" id="sort640" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>生产安全试卷管理</span>
+                                       
+                                    </span>
+                              </div>  -->
+                          </td>
+                        </tr>
+                        <tr class="resource-table">
+                            <td class="bgfa ">
+                                <span class="searchLable f14">已选</span><br>
+                                <span class="g80">文化系统菜单</span>
+                            </td>
+                            <td class="cont chooseMenu">
+                               <!--  <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-menudel admIcon"></i></a> -->
+                            </td>
+                        </tr>
+                        <tr class="resource-table">
+                            <td  class="bgfa ">
+                                <span class="searchLable f14">已选</span><br>
+                                <span class="g80">文化系统流程中心</span>
+                            </td>
+                            <td class="cont chooseFlow">
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
 
                 
             </div>
         </div>
     </div>
 
+
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
+            $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
         })
-          
+
+
+        //定义菜单权限数组,只搜索到一级菜单，以及菜单名称、id、以及子菜单个数
+        var cul_Data=[
+            {"title":"文化系统菜单",
+             "id":600,
+             "menuList":[
+                         {"title":"费用统计报表", "id":638,"childnum":0}
+                         ,{"title":"查询统计", "id":604,"childnum":5}
+                         ,{"title":"生产安全试卷管理", "id":640,"childnum":0}
+
+                    ]
+            }
+            ,{"title":"文化系统流程中心",
+             "id":1857,
+             "menuList":[
+                         {"title":"流程中心", "id":1858,"childnum":5}
+
+                    ]
+            }
+        ]
         
+        //文化菜单
+        function setCultureSystem(obj){
+            setMulThValueNewOne(obj,1); //type=1,显示到文化菜单处
+        }
+
+        //文化流程
+        function setCultureFlow(obj){
+            setMulThValueNewOne(obj,2);//type=1,显示到文化流程处
+        }
+
+        function setMulThValueNewOne(obj,type){
+            var id=$(obj).attr("id");
+            for(var i=0;i<cul_Data.length;i++){
+                if(id==cul_Data[i].id){
+                    var str="",menu='';
+                    for(var j=0;j<cul_Data[i].menuList.length;j++){
+                        if(cul_Data[i].menuList[j].childnum==0){
+                             menu=' <span class="dib pct20 f12"><span class="man_list" onclick="setMulThValueNew(this,'+type+')" id="'+cul_Data[i].menuList[j].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span></span>'
+                        }else{
+                            menu='<span class="dib pct20 f12 rel " ><span class="man_list"  onclick="setMulPanel(this,'+type+')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                        }
+                        str+=menu
+                       
+                    }
+                 //console.log(str)
+                 break;
+                }
+            }
+            var menustr='<div class="n16_menulist checkbox">'+
+                        '            <span class="dib pct10 vt mt2 pt1 n16_menulistContLeft">'+
+                        '                <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setSmallMenu(this)"></i>全选</label>'+
+                        '            </span>'+
+                        '            <span class="dib pct85 f0 lh24 n16_menulistCont">'+str+'</span>'+
+                        '      </div> '
+            $(".n16_menuMulbgS").html(menustr)
+
+            $(obj).addClass("on").siblings().removeClass("on");
+
+        }
       
+
+      function setMulThValueNew(obj,type){
+        var myobj='',str='';
+        if(type==1){
+            myobj=$(".chooseMenu")
+        }else{
+            myobj=$(".chooseFlow")
+        }
+        if($(obj).find(".ui-checkbox-unable").hasClass("on")){
+            $(obj).find(".ui-checkbox-unable").removeClass("on");
+            var myid="sort"+$(obj).attr("id");
+            $("#"+myid).remove();
+
+        }else{
+            $(obj).find(".ui-checkbox-unable").addClass("on");
+            if($(obj).attr("childnum")){ //增加已选文化系统菜单
+                str='<a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel" id="sort'+$(obj).attr("id")+'">'+$(obj).text()+'<i class="icon-menudel admIcon"></i></a>';
+                myobj.append(str)
+            }
+        }
+       
+      }
 
     </script>
 </body>
