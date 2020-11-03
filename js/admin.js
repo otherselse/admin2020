@@ -356,3 +356,15 @@ function showSearchDn(obj) {
 		$(".bText").text("更多查询");
 	}
 }
+
+//展示更多搜索条件
+function showSearchIconDn(obj) {
+	$(".cah").toggleClass("dn");
+	var t=$(obj).attr("ot")
+	$(obj).find("i").toggleClass("t_deg180");
+	if ($(".cah").attr("class").indexOf("dn") < 0) {
+		$(".bText").text("收起");
+	} else {
+		$(".bText").text(t);
+	}
+}
