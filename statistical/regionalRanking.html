@@ -52,7 +52,7 @@
         <div class="ui-content p20 f12 minH">
             <div class="">
                 <div class="mb10  df">
-                    <span class="mt5 dib">查询时段：</span>
+                    <span class="mt5 dib searchLable">查询时段：</span>
                     <span class="single ">
                         <input type="hidden">
                         <button type="button" class="ui-option mr5 on m_mb10">今日</button>
@@ -62,7 +62,7 @@
                         <button type="button" class="qj ui-option mr5 m_mb10">自定义</button>
                     </span>
                     <span class="f1 ml5 f12 dn " id="qj">
-                        <span class="ui-input tc f0 pct49  range" data-type="time">
+                        <span class="ui-input tc  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
@@ -71,7 +71,8 @@
                 </div>
                 <div class="df">
                     <span class="dib pct25">
-                        &emsp;&emsp;区域：<span class="input-selSearch pct69">
+                        <span class="searchLable">&emsp;&emsp;区域：</span>
+                        <span class="input-selSearch pct69">
                             <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
                             <div class="search-cont pct100">
                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -215,13 +216,14 @@
     <div class="dom1 dn">
         请审批人员认真查看附件内容，以附件为参考依据进行审批。
     </div>
-
+    
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts-en.common.min.js"></script>
+
     <script>
 
         $(function () {

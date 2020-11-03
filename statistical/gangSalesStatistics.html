@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>销采量统计-统计管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <script src="http://116.228.150.225:6889/js/highcharts/highcharts.js"></script>
+
     <style>
         .hoverBlue:hover {
             padding: 2px 5px;
@@ -249,7 +249,7 @@
         <div class="ui-content f12 minH">
             <div class="p20">
                 <div class="mb10 dac">
-                    <span class="mt5 dib">时间选择：</span>
+                    <span class="searchLable dib">时间选择：</span>
                     <span class="single">
                         <input type="hidden">
                         <button type="button" class="ui-option mr5 on m_mb10">三个月</button>
@@ -259,14 +259,19 @@
                     <button type="button" class="ui-button mr20 ml40" onclick="">查询</button>
                     <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
-                <div class="mt50" id="container" data-highcharts-chart="0"></div>
+                <div id="main" class="mt50" style="width: 1200px;height: 400px;"></div>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
+   <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts-en.common.min.js"></script>
+ 
+
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
@@ -306,74 +311,73 @@
         function setUp(obj) {
             $(obj).find("span").toggleClass("on");
         }
-    </script>
 
-    <script>
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
 
-        function saleBuyChart(obj, number) {
-            $("#chartType").val(number);
-            $("#salebuyChart").submit();
-        }
-
-        Highcharts.setOptions({
-            colors: ['#a8c8ff', '#ff8c22', '#1abc9c', '#005eff', '#f46361', '#07aefc', '#4e5c73', '#d57cea'],
-            symbols: ['circle', 'circle']
-        });
-        //reverse()用于倒序数组
-        var time = jQuery.parseJSON('["2020-10","2020-09","2020-08","2020-07","2020-06","2020-05"]').reverse();
-        var data = jQuery.parseJSON('[{"name":"青龙帮帮(之华)","data":[{"y":358.87,"extra":0.0},{"y":141.74,"extra":-60.5},{"y":147.95,"extra":4.4},{"y":82.74,"extra":-44.1},{"y":47.0,"extra":-43.2},{"y":0.0,"extra":-100.0}]},{"name":"大帮(浦芳1)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"沪帮(二叔)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"123帮(谢焕丽)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"1111帮(施景腾)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"菲菲帮(欧阳一菲)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"杨通帮(赵自立)","data":[{"y":735.0,"extra":997.0},{"y":135.0,"extra":-81.6},{"y":408.1,"extra":202.3},{"y":0.0,"extra":-100.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"696帮(诸葛小芸)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"测试帮(吉海威)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"小老虎帮(杨兴旺)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"冰棒帮(杨兴旺)","data":[{"y":2.0,"extra":0.0},{"y":0.0,"extra":-100.0},{"y":1.4,"extra":0.0},{"y":0.0,"extra":-100.0},{"y":2.0,"extra":0.0},{"y":0.0,"extra":-100.0}]},{"name":"12313帮(蔡依林)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"杨棒棒帮(杨雅芬)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"程波帮(陆小颖)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"哈哈帮(汤小唯)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"魏热1帮(魏一敏)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"琅琊帮(王忠强)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"咖帮(咖咖)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"66帮(唐宇捷)","data":[{"y":16.0,"extra":700.0},{"y":931.712,"extra":5723.2},{"y":96.0,"extra":-89.7},{"y":157.8,"extra":64.4},{"y":45.8,"extra":-71.0},{"y":0.29,"extra":-99.4}]},{"name":"豹帮(梦露)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"绿帽子帮(小绿)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]},{"name":"张三帮(于博)","data":[{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0},{"y":0.0,"extra":0.0}]}]');
-        //模拟数据
-        var myarr = {
-            "time": time,
-            "series": data
-        }
-
-        setLine(myarr.time, 'container', myarr.series)
-
-        function setLine(time, id, series) {
-            var chart = Highcharts.chart(id, {
-                chart: {
-                    type: 'line'
-                },
-                title: {
-                    text: null
-                },
-                credits: {
-                    enabled: false
-                },
-                xAxis: {
-                    categories: time
-                },
-                yAxis: {
-                    title: {
-                        text: ''
-                    },
-                    labels: {
-                        style: { color: '#000' },
-                        formatter: function () {
-                            return Highcharts.numberFormat(this.value, 0) + "吨";
-                        }
-                    }
-
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: true
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                type: 'scroll',
+                bottom: 10,
+                data: ['税前毛利', '总交易量',]
+            },
+            grid: {
+                left: '0%',
+                right: '3%',
+                bottom: '10%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['2020-7-28', '2020-8-28', '2020-9-28', '2020-10-28']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: '税前毛利',
+                    type: 'line',
+                    // stack: '总量',
+                    data: [320, 2532, 121, 334, 12, 2353, 320],
+                    itemStyle: {
+                        normal: {
+                            color: '#3A86FF', //折点颜色
+                            lineStyle: {
+                                color: '#3A86FF' //折线颜色
+                            }
                         }
                     }
                 },
-                tooltip: {
-                    //crosshairs: true,
-                    //shared: true,
-                    pointFormat: '<b>{series.name}</b>环比：{point.extra}%<br/>'
-                },
-                series: series
-            });
-            console.log(chart);
+                {
+                    name: '总交易量',
+                    type: 'line',
+                    // stack: '总量',
+                    data: [820, 11, 9, 934, 1290, 1330, 1320],
+                    itemStyle: {
+                        normal: {
+                            color: '#F36F6D', //折点颜色
+                            lineStyle: {
+                                color: '#F36F6D' //折线颜色
+                            }
+                        }
+                    }
+                }
+            ]
+        };
 
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        //图表宽度自适应
+        window.onresize = function () {
+            myChart.resize();
+            myChart1.resize();
         }
-
     </script>
 </body>
 

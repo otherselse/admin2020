@@ -18,6 +18,12 @@
         .hoverBlue:hover {
             padding: 2px 5px;
         }
+
+        .ui-table tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 10px 2px;
+        }
     </style>
 </head>
 
@@ -47,31 +53,39 @@
             <div class="p20">
                 <div class="cl mb10 dac f12">
                     <span class="dib pct100">
-                        评审状态：<span class="single mr20">
+                        <span class="searchLable">评审状态：</span>
+                        <span class="single mr20">
                             <input type="hidden">
-                            <a href="reviewOfWarranty.html"><button type="button" class="ui-option mr5 on">待评审</button></a>
-                            <a href="hasReviewOfWarranty.html"><button type="button" class="ui-option mr5">已评审</button></a>
+                            <a href="reviewOfWarranty.html"><button type="button"
+                                    class="ui-option mr5 on">待评审</button></a>
+                            <a href="hasReviewOfWarranty.html"><button type="button"
+                                    class="ui-option mr5">已评审</button></a>
                         </span>
                     </span>
                 </div>
                 <div class="cl mb10 dac f12">
                     <span class="dib pct25">
-                        &emsp;&emsp;品名：<input type="text" class="ui-input pct69 mr20" placeholder="请输入"
+                        <span class="searchLable">&emsp;&emsp;品名：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入"
                             autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        牌号：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">牌号：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        钢厂：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">钢厂：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
-                        规格：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">规格：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
                 <div class="cl dac f12">
                     <span class="dib pct25">
-                        &emsp;申请人：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">&emsp;申请人：</span>
+                       <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib">
                         <button type="button" class="ui-button mr20">查询</button>
@@ -96,8 +110,7 @@
                             <td>上海陆陆科技有限公司<span class="red"></span></td>
                             <td>待审核</td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue"
-                                    onclick="showTrMore(this)">评审</a>
+                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this)">评审</a>
                             </td>
                         </tr>
                         <!-- 待审核开始 -->
@@ -346,9 +359,9 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="dajs">
-                                        <h2 class="sp-yg tl mt20 l mb10">审批意见</h2>
-                                        <span class="ui-tip r mt10 mb10">请审批人员认真查看附件内容，以附件为参考依据进行审批。</span>
+                                    <div class="dac mt20 mb10">
+                                        <h2 class="sp-yg tl  ">审批意见</h2>
+                                        <span class="ui-tip ml10 ">请审批人员认真查看附件内容，以附件为参考依据进行审批。</span>
                                     </div>
                                     <table class="ui-table f12 auto tl mt10 mb10" width="100%">
                                         <tbody>

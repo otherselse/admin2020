@@ -2184,7 +2184,6 @@ a.wh:hover {
   /* height:200px; */
   /* padding:8px; */
   background-color: #FFFFFF;
-  border: #cccccc solid 1px;
   border-radius: 3px;
 }
 
@@ -2193,8 +2192,7 @@ a.wh:hover {
   width: 0px;
   height: 0px;
   position: absolute;
-  top: -16px;
-  ;
+  top: -16px;;
   left: 7%;
   padding: 0;
   border-bottom: 8px solid #FFFFFF;
@@ -2206,27 +2204,26 @@ a.wh:hover {
   z-index: 12;
 }
 
-.find-div-body:after {
-  box-sizing: content-box;
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  top: -18px;
-  left: 7%;
-  padding: 0;
-  border-bottom: 9px solid #cccccc;
-  border-top: 9px solid transparent;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  display: block;
-  content: '';
-  z-index: 10
+.myTabShadow{
+  box-shadow: 0 3px 8px 0 #e6e9ef;
+  -webkit-box-shadow: 0 3px 8px 0 #e6e9ef;
 }
+
+/* .aa::after{
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 7px;
+  background: url(../images/report/switchangleBut.png) no-repeat;
+} */
+
 
 
 .reD-top {
   background: #F1F3F7;
-  border: 1px solid #E6E6E6;
 }
 
 .reD-gunn {
@@ -2320,16 +2317,27 @@ a.wh:hover {
   text-align: center;
 }
 
+.gongSi-icon{
+  background:url(../images/report/gongsi.png) no-repeat;
+  width: 12px;
+  height: 13px;
+  background-size:100% 100%;
+}
+
 .lan-left {
-  background: url(../images/report/aa.png) no-repeat left;
-  height: 110%;
-  background-size: 12px 100%;
+  border-right:1px solid #e6e6e6;
+  width: 0px;
+  height: 100%;
+  margin-bottom: 20px;
+  background-size: 12px 12px; 
 }
 
 .lan-icon{
   background:url(../images/report/rad11.png) no-repeat;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  right: 6px;
   background-size:100% 100%;
 }
 

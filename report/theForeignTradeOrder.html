@@ -19,9 +19,18 @@
             background: #fff;
             min-width: auto;
         }
-        
+
         .qtip-lep0 .qtip-content {
             padding: 0px;
+        }
+
+        .ba {
+            line-height: 20px;
+            width: 50px;
+            height: 20px;
+            background: #FFE3E3;
+            margin-left: 10px;
+            text-align: center;
         }
     </style>
 
@@ -56,62 +65,99 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 f0">
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">&emsp;&emsp;金牌商家：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">付款类型：</span>
-                        <span class="input-selSearch pct69">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
-                                readonly="">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
+                <div class="mb10 dac">
+                    <span class="dib pct22">
+                        <span class="dib searchLable">是否已超期：</span>
+                        <span class="radio ml5">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">&emsp;&emsp;&emsp;订单号：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">&emsp;单位名称：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                </div>
-
-                <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">金牌商家类型：</span>
-                        <span class="input-selSearch pct69">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
-                                readonly="">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
+                    <span class="dib pct22">
+                        <span class="dib searchLable">是否已执行：</span>
+                        <span class="radio ml5">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">订单日期：</span>
+                    <span class="dib pct22 ml10">
+                        <span class="dib searchLable">&emsp;&emsp;是否结算：</span>
+                        <span class="radio ml5">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>是</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </span>
+                    <span class="pct30 dib f12">
+                        <span class="dib searchLable">&emsp;&emsp;&emsp;订单日期：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
-                    <span class="pct25 dib f12">
+                </div>
+                <div class="mb10 df">
+                    <span class="pct22 dib f12">
+                        <span class="dib searchLable">单位名称：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                  
+                    <span class="pct22 dib f12">
+                        <span class="dib searchLable">&emsp;付款类型：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                                readonly="">
+                            <div class="search-cont">
+                                <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="pct22 dib f12 ml10">
+                        <span class="dib searchLable ">金牌商家类型：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
+                                readonly="">
+                            <div class="search-cont">
+                                <a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="pct30 dib f12">
+                        <span class="dib searchLable">&emsp;&emsp;应收款日期：</span>
+                        <span class="ui-input f0 pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                </div>
+
+                <div class="df">
+                    <span class="pct22 dib f12">
+                        <span class="dib searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct22 dib f12">
+                        <span class="dib searchLable">&emsp;&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct22 m_pct31 ml10 dib f12">
                         <span class="dib searchLable">最后装运日期：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
@@ -119,44 +165,8 @@
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
-                    <span class="pct25 dib f12">
-                        <span class="dib searchLable">应收款日期：</span>
-                        <span class="ui-input f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-                        </span>
-                    </span>
                 </div>
-                <div>
-                    <span class="dib pct25">
-                        <span class="dib searchLable">是否已超期：</span>
-                        <span class="radio ml5">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        <span class="dib searchLable">是否已执行：</span>
-                        <span class="radio ml5">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        <span class="dib searchLable">是否结算：</span>
-                        <span class="radio ml5">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                </div>
+                
                 <div class="tc mt20 mb30">
                     <button class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
@@ -165,15 +175,8 @@
                 <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr class="">
-                            <th width="2%">序号</th>
-                            <th width="5%">时间</th>
-                            <th width="5%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">订单号<i
-                                        class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">单位名称</th>
-                            <th width="4%">金牌<br>商家
-                            </th>
+                            <th width="145px">订单号</th>
+                            <th width="10%">金牌商家/单位名称</th>
                             <th width="4%">付款方式</th>
                             <th width="4%">贸易术语</th>
                             <th width="5%">目的国家与港口</th>
@@ -182,43 +185,34 @@
                                         class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <th width="4%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同<br>
-                                    总金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="4%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">应收款<br>
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="4%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">已收款<br>
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                            <th width="7%" class="tl">
+                                <div class="pl10">
+                                    应收/未收金额
+                                </div>
                             </th>
                             <th width="5%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">未收款<br>
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="5%">
-                                <lable class="jpsj_Sort" onclick="setOrderCol('x.payMoney',this)">已付款<br>
-                                    金额<i data="orderBy" id="Ix.payMoney" class=""></i> </lable>
+                                <lable class="jpsj_Sort" onclick="setOrderCol('x.payMoney',this)">已付款
+                                    <i data="orderBy" id="Ix.payMoney" class=""></i> </lable>
                             </th>
                             <th width="3%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">税前毛利<i
-                                        class="goldIcon icon-sort vm ml5 down"></i></label>
+                                税前毛利/率
                             </th>
                             <th width="3%">是否<br>结算</th>
-                            <th width="5%">
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">应收款<br>日期<i
                                         class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="4%">
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">最后装运日期<i
                                         class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="5%">
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">订舱装运<br>
                                     日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
-                            <th width="5%">
+                            <th width="7%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">预计到港<br>
                                     日期<br><i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
@@ -227,21 +221,29 @@
                             <th width="4%">单据<br>查看
                             </th>
                             <!--  <th width="4%">区域</th> -->
-                            <th width="5%">操作</th>
+                            <th width="4%">操作</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
-                            <td>1</td>
-                            <td>2014-12-10 17:41:12.0</td>
-                            <td class="tablebtdb"><a href="javascript:detail('20936')"
-                                    title="订单金额:&nbsp;0<br>订单重量:&nbsp;0ss<br>点击查看订单详情"><span
-                                        class="tiptop redm">20936</span></a></td>
-                            <td>
-                                <a title="swsswswx21211211121wqxd.jpg"
-                                    class="tiptop dib zxx_text_overflow mt5 g67">a111111111111111</a>
+                            <td class="tl">
+                                <div class="pl5">
+                                    <a href="../public/theOrderDetails.html" target="_block">716271</a>
+                                    <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
+                                </div>
                             </td>
-                            <td>Jack</td>
+                            <td class="tl">
+                                <div class="pl5">
+                                    <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
+                                    <div class="mt5 dac">
+                                        <i class="gongSi-icon mr1"></i>
+                                        <a href="javascript:void(0)"
+                                            onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
+                                            title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+                                            class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+                                    </div>
+                                </div>
+                            </td>
                             <td> </td>
                             <td>FAS</td>
                             <td>--</td>
@@ -249,12 +251,10 @@
                             </td>
                             <td> <span>0</span>
                             </td>
-                            <td>
-                                <sapn>0</sapn>
-                            </td>
-                            <td><a href="javascript:void(0)" class="tiptop" title=" 销售收款登记金额：0 <br/>">
-                                    <span>0</span></a></td>
-                            <td><span>0</span>
+                            <td class="tl">
+                                <div class="pl10">
+                                    2020<span class="col-8080">/939</span>
+                                </div>
                             </td>
                             <td> <span>0</span>
                             </td>
@@ -275,8 +275,6 @@
                             </td>
                             <td>
                                 <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                <span class="dib p2 gd9">|</span>
-                                <a href="toEditUpload.html">打印</a>
                             </td>
                         </tr>
                         <!-- 开始 -->
@@ -400,8 +398,8 @@
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
 
-     <!-- 查看图片 -->
-     <div class="f12 dom18 dn">
+    <!-- 查看图片 -->
+    <div class="f12 dom18 dn">
         <div class="selectDiv f12">
             <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
             <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
@@ -421,9 +419,9 @@
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-        
-             //myTipclick-p0 点击出现数据段没有内边距
-             $('.myTipclick-p0').qtip({
+
+            //myTipclick-p0 点击出现数据段没有内边距
+            $('.myTipclick-p0').qtip({
                 show: { event: 'click' },
                 hide: 'unfocus',
                 content: {
