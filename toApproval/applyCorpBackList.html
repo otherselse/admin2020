@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>客户退款审批-审批管理-乐刚智能云系统</title>
+    <title>客户提现审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
@@ -31,7 +31,7 @@
                 <span class="dib gga pl5 pr5">/</span>
                 审批管理
                 <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">客户退款审批</span>
+                <span class="g28">客户提现审批</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -39,52 +39,76 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="mb10 f12">
-                    <span class="m_db m_mb10">
+                <div class="mb10 f0">
+                    <span class="dib pct33 f12">
+                        <span class="searchLable">单位名称：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="pct33 dib f12">
                         <span class="searchLable">提成类型：</span>
-                        <div class="dib selectSingle mr40">
+                        <div class="dib selectSingle ">
                             <a class="on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 pl5">|</span>
+                            <span>|</span>
                             <a href="javscript:void(0)" class="">余额</a>
-                            <span class="pr5 pl5">|</span>
+                            <span>|</span>
                             <a href="javscript:void(0)" class="">余料款</a>
-                            <span class="pr5 pl5">|</span>
+                            <span>|</span>
                             <a href="javscript:void(0)" class="">废料款</a>
                         </div>
                     </span>
-                    <span class="searchLable">支付状态：</span>
-                    <div class="dib selectSingle mr40">
-                        <a class="on" href="javscript:void(0)">全部</a>
-                        <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)" class="">未支付</a>
-                        <span class="pr5 pl5">|</span>
-                        <a href="javscript:void(0)" class="">已支付</a>
-                    </div>
-                    <span class="searchLable">状态：</span>
-                    <span class="radio mr40">
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                    class="radio-opacity" name="radio"></i>已评审</label>
-                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-                                    name="radio"></i>未评审</label>
-                    </span>
-                    <span class="searchLable">客户类型：</span>
-                    <span class="radio">
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                    class="radio-opacity" name="radio"></i>贸易客户</label>
-                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-                                    name="radio"></i>加工客户</label>
+                    <span class="dib f12">
+                        <span class="searchLable">支付状态：</span>
+                        <div class="dib selectSingle">
+                            <a class="on" href="javscript:void(0)">全部</a>
+                            <span>|</span>
+                            <a href="javscript:void(0)" class="">未支付</a>
+                            <span>|</span>
+                            <a href="javscript:void(0)" class="">已支付</a>
+                        </div>
                     </span>
                 </div>
-                <div class="mb10 f12">
-                    <span class="searchLable">单位名称：</span>
-                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
+                <div class="mb10  f0">
+                    <span class="pct33 dib f12">
                         <span class="searchLable">申请时间：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
                         </span>
                     </span>
+                    <span class="pct33 dib f12">
+                        <span class="searchLable">&ensp;&ensp;&ensp;&ensp;状态：</span>
+                        <span class="radio ">
+                            <label class="mr10">
+                                <i class="ui-radio goldIcon v-3 mr2">
+                                    <input type="radio" class="radio-opacity" name="radio"></i>已评审
+                            </label>
+                            <label>
+                                <i class="ui-radio goldIcon v-3 mr2">
+                                    <input type="radio" class="radio-opacity" name="radio"></i>未评审
+                                </label>
+                        </span>
+                    </span>
+                    <span class="f12">
+                        <span class="searchLable">客户类型：</span>
+                        <span class="radio">
+                            <label class="mr10">
+                                <i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                class="radio-opacity" name="radio"></i>贸易客户</label>
+                                <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+                                    name="radio"></i>加工客户</label>
+                                </span>
+                    </span>
+                </div>
+                <div class="mb10 f12 tc">
                     <button class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30 checkbox">
@@ -92,16 +116,16 @@
                         <table class="ui-table f12 pct100">
                             <thead>
                                 <tr>
-                                    <th width="5%">序号</th>
+                                    <th width="3%">序号</th>
                                     <th width="10%">申请时间</th>
-                                    <th width="10%">客户名称</th>
-                                    <th width="7%">客户类型</th>
+                                    <th width="14%">客户名称</th>
+                                    <th width="6%">客户类型</th>
                                     <th width="8%">提现类别</th>
-                                    <th width="10%">所属区域</th>
+                                    <th width="8%">所属区域</th>
                                     <th width="15%">账号</th>
                                     <th width="10%">银行</th>
                                     <th width="5%">退款金额</th>
-                                    <th width="4%">支付状态</th>
+                                    <th width="5%">支付状态</th>
                                     <th width="6%">状态</th>
                                     <th width="10%">操作</th>
                                 </tr>
@@ -112,16 +136,16 @@
                         <table class="ui-table tc f12" width="100%">
                             <tbody class="ui-thover">
                                 <tr>
-                                    <td width="5%">1</td>
+                                    <td width="3%">1</td>
                                     <td width="10%">2020-09-01</td>
-                                    <td width="10%">上海柒柒贸易有限公司</td>
-                                    <td width="7%">加工客户</td>
+                                    <td width="14%">上海柒柒贸易有限公司</td>
+                                    <td width="6%">加工客户</td>
                                     <td width="8%">废料款提现</td>
-                                    <td width="10%">上海</td>
+                                    <td width="8%">上海</td>
                                     <td width="15%">222112322112312312312</td>
                                     <td width="10%">建设银行12310123</td>
                                     <td width="5%" numtype="formatMoney">10</td>
-                                    <td width="4%">待支付 </td>
+                                    <td width="5%">待支付 </td>
                                     <td width="6%">审批结束</td>
                                     <td width="10%">
                                             <a href="./corpback.html">查看</a>

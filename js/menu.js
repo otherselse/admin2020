@@ -9,7 +9,7 @@ var menu_Data=[
 	 "menuList":[
 			 {"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList1.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../toApproval/procBonusApplyAction_procAfterProcessList.html"}
 			 ]}
-			 ,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家提现审批","href":"../toApproval/withDraw.html"},{"mtitle":"客户退款审批","href":"../toApproval/applyCorpBackList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"承兑汇票审批","href":"../toApproval/adminIndexAction_adminIndexList2.html"},{"mtitle":"风险保证金审核","href":"../toApproval/fxjPermitList.html"},{"mtitle":"租赁分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"}
+			 ,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家提现审批","href":"../toApproval/withDraw.html"},{"mtitle":"客户提现审批","href":"../toApproval/applyCorpBackList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"承兑汇票审批","href":"../toApproval/adminIndexAction_adminIndexList2.html"},{"mtitle":"风险保证金审核","href":"../toApproval/fxjPermitList.html"},{"mtitle":"租赁分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"}
 			 ]}
 			 ,{"bigM":"加工类","smallM":[{"mtitle":"加工商分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"},{"mtitle":"加工提成审核","href":"../toApproval/procBonusApplyAction_procBonusApplyN.html"},{"mtitle":"积分提取审批","href":"../toApproval/adminIndexAction_procIntegralPermit.html"},{"mtitle":"加工客户库存核对","href":"../toApproval/applyprintAction_toApplyStockList.html"}
 			 ]}
@@ -94,7 +94,7 @@ var menu_Data=[
 
 	,{"title":"权限管理",
 	 "menuList":[
-	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
+	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../permissions/toManageRolePerson.html"}]}
 			 // {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/AdministratorRegistration.html"},{"mtitle":"菜单配置人员","href":"../permissions/managementSystem.html"},{"mtitle":"审批配置人员","href":"../index/index.html"},{"mtitle":"角色配置人员","href":"../index/index.html"}]}
 			 ,{"bigM":"权限管理","smallM":[{"mtitle":"角色权限管理","href":"../permissions/manageToRole.html"},{"mtitle":"流程节点管理","href":"../permissions/manageToNode.html"},{"mtitle":"账号管理","href":"../permissions/manageToAccount.html"},{"mtitle":"管理员注册审批","href":"../permissions/manageToRegister.html"}]}	
 			 ,{"bigM":"文化系统","smallM":[{"mtitle":"权限配置","href":"../permissions/cultureToSet.html"},{"mtitle":"权限管理","href":"../permissions/cultureToManage.html"}]}

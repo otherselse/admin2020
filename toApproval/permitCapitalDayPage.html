@@ -46,35 +46,37 @@
             <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
             </div>
             <div class="p20">
-                <table class="ui-table pct100 f12 row">
+                <!-- <table class="ui-table pct100 f12 row">
                     <tbody>
                         <tr>
                             <td>加盟公司：</td>
-                            <td>上海乐刚供应链股份有限公司</td>
-                            <td>资金日报日期：</td>
-                            <td>2020-06-29</td>
-                            <td>申请日期：</td>
-                            <td>2020-06-29 14:36:32</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
+                <div class="b f14 g28">上海乐刚供应链股份有限公司</div>
+                <div class="f12 mt10">资金日报日期：<span class="g28">2020-06-29</span>  &ensp;&ensp;&ensp;&ensp; 申请日期：<span class="g28">2020-06-29 14:36:32</span> </div>
             </div>
         </div>
         <div class="ui-content  mt20">
             <div class="lh84 bor-bottom">
-                <div class="ui-tab4">
-                    <a href="javascript:void(0)" class="ui-tab4-list ml10 on" onclick="setScollTop(this,'msg1')">当日收入</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg2')">当日支出</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg3')">库存盘点</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg4')">银行账户余额</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg5')">预测资金流入</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg6')">预测资金流出</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg7')">资金情况汇总</a>
-                    <a href="javascript:void(0)" class="ui-tab4-list" onclick="setScollTop(this,'msg8')">审批意见</a>
+                <div class="ui-tab4 scolltopFix">
+                    <a href="javascript:void(0)" class="ui-tab4-list ml10 on" data-num="1" onclick="setScollTop(this,'msg1')">当日收入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="2" onclick="setScollTop(this,'msg2')">当日支出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="3" onclick="setScollTop(this,'msg3')">库存盘点</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="4" onclick="setScollTop(this,'msg4')">银行账户余额</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="5" onclick="setScollTop(this,'msg5')">预测资金流入</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="6" onclick="setScollTop(this,'msg6')">预测资金流出</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="7" onclick="setScollTop(this,'msg7')">资金情况汇总</a>
+                    <a href="javascript:void(0)" class="ui-tab4-list" data-num="8" onclick="setScollTop(this,'msg8')">审批意见</a>
                 </div>
             </div>
             <div class="p20 msg1">
-                <div class="b f14 g28 msg1">
+                <div class="b f14 g28 msg1 lable_t  ">
                     当日收入
                 </div>
                 <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
@@ -166,7 +168,7 @@
         </div>
         <div class="ui-content mt20">
             <div class="p20 msg2">
-                <div class="b f14 g28">当日支出</div>
+                <div class="b f14 g28 lable_t ">当日支出</div>
                 <div class="mt15"><a href="javascript:void(0)" class="f12 g28" onclick="showdiv(this)"><i
                             class="toggle_l vm mr10 on"></i>现金部分</a></div>
                 <table class="ui-table row f12 pct100 mt15 ">
@@ -332,7 +334,7 @@
         </div>
         <div class="ui-content  mt20">
             <div class="p20 msg3">
-                <div class="b f14 g28">库存盘点</div>
+                <div class="b f14 g28 lable_t ">库存盘点</div>
                 <table class="ui-table row f12 pct100 mt15">
                     <tbody>
                         <tr>
@@ -343,7 +345,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30 msg4">银行账户余额</div>
+                <div class="b f14 g28 mt30 msg4 lable_t ">银行账户余额</div>
                 <table class="ui-table row f12 pct100 mt15">
                     <tbody>
                         <tr>
@@ -376,7 +378,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30 msg5">预测资金流入</div>
+                <div class="b f14 g28 mt30 msg5 lable_t ">预测资金流入</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
                         <tr>
@@ -403,7 +405,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="b f14 g28 mt30 msg6">预测资金流出</div>
+                <div class="b f14 g28 mt30 msg6 lable_t ">预测资金流出</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
                         <tr>
@@ -436,7 +438,7 @@
         </div>
         <div class="ui-content  mt20">
             <div class="p20 msg7">
-                <div class="b f14 g28">资金情况汇总</div>
+                <div class="b f14 g28 lable_t ">资金情况汇总</div>
                 <table class="ui-table  f12 pct100 mt15 tc">
                     <thead>
                         <tr>
@@ -565,7 +567,7 @@
         </div>
         <div class="ui-content  mt20">
             <div class="p20 msg8">
-                <div class="b f14 g28">审批意见</div>
+                <div class="b f14 g28 lable_t ">审批意见</div>
                 <div class="mt30 ml50 nodeLine f12">
                     <div class="g28 ui-audit f12 pl10"><span>复核意见</span></div>
                     <div class="ui-auditBox mt10 ml10">
@@ -610,16 +612,18 @@
     <script>
         $(function () {
             $(".mulfolder").eq(4).addClass("open").find(".smlist").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            $('#step1').on('click', function () {
-                layer.open({
-                    type: 2,
-                    title: '订单详情',
-                    shadeClose: true, //开启点击遮罩关闭层
-                    area: ['1000px', '600px'],
-                    offset: ['50px', ''],
-                    content: './orderAction_order.html'
-                });
-            });
+            var h = $(".ui-tab4").offset().top
+            var cloneTop= $(".ui-tab4").clone().prependTo($('body')).hide();
+            $(window).scroll(function(){
+                var s=$(window).scrollTop();
+                if(s-30>h){
+                cloneTop.show()
+                cloneTop.addClass('fixed')
+                }else{
+                    cloneTop.removeClass('fixed')
+                cloneTop.hide()
+                }
+            })
         })
         function prev() {
             window.history.back(-1)
@@ -629,7 +633,10 @@
             $(obj).parent().next().toggle()
         }
         function setScollTop(obj,el){
-            var height =  $("."+el).offset().top
+            var num = $(obj).attr("data-num")
+          $(".scolltopFix").find(".ui-tab4-list").eq(num-1).addClass("on").siblings().removeClass("on")
+
+            var height =  $("."+el).offset().top-30
             $(document).scrollTop(height); 
 
         }
