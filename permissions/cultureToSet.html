@@ -113,30 +113,6 @@
                         </tr>
                         <tr class="resource-table">
                           <td class="cont  n16_menuMulbgS" >
-                              <!-- <div class="n16_menulist checkbox">
-                                    <span class="dib pct10 vt mt2 pt1 n16_menulistContLeft">
-                                        <label><i class="ui-checkbox goldIcon v-3 mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setSmallMenu(this)"></i>全选</label>
-                                    </span>
-                                    <span class="dib pct85 f0 lh24 n16_menulistCont">
-                                        <span class="dib pct20 f12"  onclick="setMulThValueNew(this)" id="sort638" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>费用统计报表</span>
-                                        <span class="dib pct20 f12 rel"  onclick="setMulPanel(this)" id="sort604" childnum="5">
-                                            <span class=""><i class="mulselIcon admIcon v-3 mr5"></i>查询统计</span>
-                                            <span class="setMulPanelCont">
-                                                <div class="setMulPanelMCont">
-                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
-                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
-                                                    <div class="setMulPanelMenu"><i class="mulselIcon admIcon v-3 mr5"></i>外出办事申请</div>
-                                                    <div class="setMulPanelMenu"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>外出办事申请</div>
-                                                </div>
-                                                <div class="setMulPanelMCont" style="left:160px">
-                                                    dfafadf
-                                                </div>
-                                            </span>
-                                        </span>
-                                        <span class="dib pct20 f12"  onclick="setMulThValueNew(this)" id="sort640" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>生产安全试卷管理</span>
-                                       
-                                    </span>
-                              </div>  -->
                           </td>
                         </tr>
                         <tr class="resource-table">
@@ -145,7 +121,6 @@
                                 <span class="g80">文化系统菜单</span>
                             </td>
                             <td class="cont chooseMenu">
-                               <!--  <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-menudel admIcon"></i></a> -->
                             </td>
                         </tr>
                         <tr class="resource-table">
@@ -174,6 +149,10 @@
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
+
+            /*$("body").on("click",function(){
+                $(".setMulPanelCont").hide();
+            })*/
         })
 
 
@@ -214,9 +193,9 @@
                     var str="",menu='';
                     for(var j=0;j<cul_Data[i].menuList.length;j++){
                         if(cul_Data[i].menuList[j].childnum==0){
-                             menu=' <span class="dib pct20 f12"><span class="man_list" onclick="setMulThValueNew(this,'+type+')" id="'+cul_Data[i].menuList[j].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span></span>'
+                             menu=' <span class="dib pct20 f12"><span class="man_list" onclick="setMulThValueNew(this,'+type+',event)" id="'+cul_Data[i].menuList[j].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span></span>'
                         }else{
-                            menu='<span class="dib pct20 f12 rel " ><span class="man_list"  onclick="setMulPanel(this,'+type+')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                            menu='<span class="dib pct20 f12 rel " ><span class="man_list"  onclick="setMulPanel(this,'+type+',event)" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
                         }
                         str+=menu
                        
@@ -237,27 +216,315 @@
 
         }
       
-
-      function setMulThValueNew(obj,type){
+    //点击最末级菜单选择
+      function setMulThValueNew(obj,type,e,flag){
+        stopPro(e);
         var myobj='',str='';
         if(type==1){
             myobj=$(".chooseMenu")
         }else{
             myobj=$(".chooseFlow")
         }
-        if($(obj).find(".ui-checkbox-unable").hasClass("on")){
+        var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
+        if($(obj).find(".ui-checkbox-unable").hasClass("on")){ //选中，点击
             $(obj).find(".ui-checkbox-unable").removeClass("on");
             var myid="sort"+$(obj).attr("id");
             $("#"+myid).remove();
+            if(flag==1){   //假如下拉菜单下，不选择
+                var mychain=$(obj).parents(".setMulPanelMCont ").attr("chain")
+                myobj.find(".chooseSmallCont").each(function(){
+                    if(mychain.indexOf($(this).attr("pid"))>-1){
+                        if($(this).find(".n16_menudel").length==0){
+                            $(this).remove();
+                        }
+                    }
+                })
+                setArrowOff(obj,type,e,flag);
 
-        }else{
+            } 
+
+        }else{ //没选中，点击
             $(obj).find(".ui-checkbox-unable").addClass("on");
+            
+            var chain=$(obj).parents(".setMulPanelMCont").attr("chain")||"0"
             if($(obj).attr("childnum")){ //增加已选文化系统菜单
-                str='<a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel" id="sort'+$(obj).attr("id")+'">'+$(obj).text()+'<i class="icon-menudel admIcon"></i></a>';
-                myobj.append(str)
+                str='<a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel" id="sort'+$(obj).attr("id")+'" pid="'+pid+'" chain="'+chain+'">'+$(obj).text()+'<i class="icon-menudel admIcon"></i></a>';
+
+                if(flag==1){ //表示是从下拉菜单中选择
+
+                    $("#"+pid).find(".mulselIcon").addClass("on") //一旦点击选中则下拉选中
+                    var chainArr=$(obj).parents(".setMulPanelMCont ").attr("chain").split(",");
+                    for(var i=0;i<chainArr.length;i++){
+                        
+                        if(!$("#"+chainArr[i]).find(".mulselIcon").hasClass("on")){
+                            $("#"+chainArr[i]).find(".mulselIcon").addClass("on")
+                        }
+                    }
+
+                     var pn=$(obj).parents(".setMulPanelCont").attr("pname");
+                     var pid=$(obj).parents(".setMulPanelCont").attr("pid");
+                    
+                     //myobj.append(str)
+                     var mf=0;
+                     myobj.find(".chooseSmallCont").each(function(){
+                        if($(this).attr("pid")==pid){
+                            $(this).append(str);
+                            mf++
+                        }
+                     })
+
+                     if(mf==0){
+                         str="<div class='chooseSmallCont' pid="+pid+"><span class='g68'>"+pn+"</span><br/>"+str+"</div>";
+                        myobj.append(str);
+                     }
+
+                }else{
+
+                     myobj.append(str);
+                }
+
+               
             }
         }
        
+      }
+
+      //点击多选的菜单，显示下级菜单
+      function setMulPanel(obj,type,e){
+            stopPro(e);
+            var myobj=$(obj).next(".setMulPanelCont");
+            myobj.attr("pname",$(obj).text()).attr("pid",$(obj).attr("id"));
+            //查询出一级下级菜单列表
+            var myarr=[
+                 {"title":"费用支出", "id":684,"childnum":0}
+                 ,{"title":"费用收入", "id":2061,"childnum":5}
+                 ,{"title":"外贸用章", "id":689,"childnum":0}
+                 ,{"title":"办公用品登记", "id":2117,"childnum":0}
+            ]
+            /*var myarr=[
+                         {"title":"费用支出查询", "id":684,"childnum":[
+                            {"title":"生产(查询统计费用支出)", "id":1604,"childnum":[
+                                {"title":"仓储费(查询统计费用支出生产)", "id":1688,"childnum":[]}
+                                ,{"title":"生产用具费(查询统计费用支出生产)", "id":1689,"childnum":[]}
+                                ,{"title":"生产维修费(查询统计费用支出生产)", "id":1690,"childnum":[]}
+                                ,{"title":"其他(查询统计费用支出生产)", "id":1691,"childnum":[]}
+                            ]}                           
+                         ]}
+                          ,{"title":"费用收入(查询统计)", "id":2061,"childnum":[
+                                {"title":"租赁费(查询统计)", "id":2062,"childnum":[
+                                    {"title":"其他费用收取(查询统计)", "id":2066,"childnum":[]}
+                                    ,{"title":"租金收取(查询统计)", "id":2067,"childnum":[]}
+                                    ,{"title":"合同录入(查询统计)", "id":2068,"childnum":[]}
+                                    ,{"title":"其他费用录入(查询统计)", "id":2069,"childnum":[]}
+                                ]}
+                               ,{"title":"租赁费2", "id":2070,"childnum":[]}
+                            ]}
+                         ,{"title":"外贸用章", "id":689,"childnum":[]}
+                         ,{"title":"办公用品登记", "id":2117,"childnum":[]}
+                    ];*/
+            var mystr='';
+            for(var i=0;i<myarr.length;i++){
+                var dom=''
+                if(myarr[i].childnum==0){
+                    dom='<div class="setMulPanelMenu " id='+myarr[i].id+'  onclick="setMulThValueNew(this,'+type+',event,1)" childnum="'+myarr[i].childnum+'"><i class="ui-checkbox-unable goldIcon v-3 mr5"></i>'+myarr[i].title+'</div>'
+                }else{
+                    dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,1,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5"></i>'+myarr[i].title+'</div>'
+                }
+                mystr+=dom
+               
+            }
+            mystr='<div class="setMulPanelMCont" pid='+$(obj).attr("id")+' chain='+$(obj).attr("id")+'><div class="closeMenuUp"><a class="goldIcon  icon-sdel " onclick="closeMenubg(this)" href="javascript:void(0)"></a></div>'+mystr+"</div>"
+            if(myobj.find(".setMulPanelMCont").length>0){
+                myobj.find(".setMulPanelMCont").each(function(){
+                    if($(this).attr("pid")==$(obj).attr("id")){
+                         myobj.show();
+                    }
+                })
+            }else{
+                 myobj.append(mystr).show();
+            }
+            
+            
+
+      }
+
+      //每次查询显示当前菜单的下级菜单
+      function setMulPanelSec(obj,type,e){
+         stopPro(e);
+         var myarr=[
+            {"title":"仓储费", "id":1688,"childnum":0}
+            ,{"title":"生产用具费", "id":1689,"childnum":3}
+            ,{"title":"生产维修费", "id":1690,"childnum":0}
+            ,{"title":"其他", "id":1691,"childnum":0}
+        ]
+        var l=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").length
+        var left=l*165;
+        var bid=$(obj).parents(".setMulPanelMCont").attr("pid")
+        if(type==1){
+            myobj=$(".chooseMenu")
+        }else{
+            myobj=$(".chooseFlow")
+        }
+
+        var mystr='';
+            for(var i=0;i<myarr.length;i++){
+                var dom=''
+                if(myarr[i].childnum==0){ 
+                    var hasOn="";
+                    myobj.find(".n16_menudel").each(function(){ //判断已选中是否存在，存在即显示选中
+                        if($(this).attr("id")=="sort"+myarr[i].id){
+                            hasOn="on";
+                            return false;
+                        }
+
+
+                    })
+                    //console.log(hasOn);
+                    dom='<div class="setMulPanelMenu " id='+myarr[i].id+'  onclick="setMulThValueNew(this,'+type+',event,1)" childnum="'+myarr[i].childnum+'"><i class="ui-checkbox-unable goldIcon v-3 mr5 '+hasOn+'"></i>'+myarr[i].title+'</div>'
+                }else{
+                    var hasArrow=""; //用于查找下拉箭头是否选中
+                    var mychainid=$(obj).parents(".setMulPanelMCont").attr("chain")+","+$(obj).attr("id")+","+myarr[i].id;
+                   //console.log(myarr[i].id)
+
+                    if(myobj.find(".n16_menudel[chain='"+mychainid+"']").length>0){
+                        hasArrow="on"
+                    }
+
+                    dom='<div class="setMulPanelMenu " onclick="setMulPanelSec2(this,1,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
+                }
+                mystr+=dom
+               
+            }
+
+        var chain=$(obj).parents(".setMulPanelMCont").attr("chain");
+        chain=chain+","+$(obj).attr("id");
+        var str='<div class="setMulPanelMCont " bid="'+bid+'" pid="'+$(obj).attr("id")+'" style="left:'+left+'px" chain="'+chain+'">'+mystr+'</div>'
+            var myflag=0;
+                $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").each(function(){
+                    if($(this).attr("bid")==bid){
+                        $(this).attr("pid",$(obj).attr("id"))
+                        $(this).html(mystr);
+                        myflag++;
+                        return false;
+                    }
+                })
+
+                if(myflag==0){
+                     $(obj).parents(".setMulPanelCont").append(str);
+
+                }
+
+            
+      }
+
+
+
+
+      //只是用于数据展示  setMulPanelSec2与setMulPanelSec 方法一样。只是myarr 数据读取不一样。
+      function setMulPanelSec2(obj,type,e){
+        stopPro(e);
+         var myarr=[
+            {"title":"生产用具1", "id":5550,"childnum":0}
+            ,{"title":"生产用具2", "id":5551,"childnum":0}
+            ,{"title":"生产用具3", "id":5552,"childnum":0}
+        ]
+                var l=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").length
+        var left=l*165;
+        var bid=$(obj).parents(".setMulPanelMCont").attr("pid")
+        if(type==1){
+            myobj=$(".chooseMenu")
+        }else{
+            myobj=$(".chooseFlow")
+        }
+
+        var mystr='';
+            for(var i=0;i<myarr.length;i++){
+                var dom=''
+                if(myarr[i].childnum==0){ 
+                    var hasOn="";
+                    myobj.find(".n16_menudel").each(function(){ //判断已选中是否存在，存在即显示选中
+                        if($(this).attr("id")=="sort"+myarr[i].id){
+                            hasOn="on";
+                            return false;
+                        }
+
+
+                    })
+                    //console.log(hasOn);
+                    dom='<div class="setMulPanelMenu " id='+myarr[i].id+'  onclick="setMulThValueNew(this,'+type+',event,1)" childnum="'+myarr[i].childnum+'"><i class="ui-checkbox-unable goldIcon v-3 mr5 '+hasOn+'"></i>'+myarr[i].title+'</div>'
+                }else{
+                    var hasArrow=""; //用于查找下拉箭头是否选中
+                    var mychainid=$(obj).parents(".setMulPanelMCont").attr("chain")+","+$(obj).attr("id")+","+myarr[i].id;
+                   //console.log(myarr[i].id)
+
+                    if(myobj.find(".n16_menudel[chain='"+mychainid+"']").length>0){
+                        hasArrow="on"
+                    }
+
+                    dom='<div class="setMulPanelMenu " onclick="setMulPanelSec2(this,1,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
+                }
+                mystr+=dom
+               
+            }
+
+        var chain=$(obj).parents(".setMulPanelMCont").attr("chain");
+        chain=chain+","+$(obj).attr("id");
+        var str='<div class="setMulPanelMCont " bid="'+bid+'" pid="'+$(obj).attr("id")+'" style="left:'+left+'px" chain="'+chain+'">'+mystr+'</div>'
+            var myflag=0;
+                $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").each(function(){
+                    if($(this).attr("bid")==bid){
+                        $(this).attr("pid",$(obj).attr("id"))
+                        $(this).html(mystr);
+                        myflag++;
+                        return false;
+                    }
+                })
+
+                if(myflag==0){
+                     $(obj).parents(".setMulPanelCont").append(str);
+
+                }
+
+      }
+
+      function closeMenubg(obj){
+        $(obj).parents(".setMulPanelCont").hide();
+        $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont:gt(0)").remove();
+      }
+
+      //处理点击取消情况下，各级折叠下拉菜单图标是否选中
+      function setArrowOff(obj,type,e,flag){
+       
+        var chainArr=$(obj).parents(".setMulPanelMCont").attr("chain").split(",");
+        for(var i=chainArr.length-1;i>=0;i--){
+            //console.log(chainArr[i])
+            var l=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+chainArr[i]+"']").find(".on").length;
+            if(l==0){
+                $("#"+chainArr[i]).find(".mulselIcon").removeClass("on");
+            }
+
+
+        }
+      }
+
+      function delCulMenu(obj){
+        var l=$(obj).parents(".chooseSmallCont").length;
+        var id=$(obj).attr("id").replace("sort","");
+       // console.log(id)
+        if(l==0){
+            $("#"+id).find(".ui-checkbox-unable").removeClass("on");
+            $(obj).remove();
+        }else{
+            var myobj=$(obj).parents(".chooseSmallCont");
+            $("#"+id).find(".ui-checkbox-unable").removeClass("on");
+            $(obj).remove();
+            if(myobj.find(".n16_menudel").length==0){ //假如全部没有去掉标题及所有  ！！！明天加上
+                $("#"+id).find(".ui-checkbox-unable").removeClass("on");
+                 myobj.remove();
+            }
+
+
+        }
       }
 
     </script>
