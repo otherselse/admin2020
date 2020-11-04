@@ -53,19 +53,17 @@
                 <div class="f0 mb15">
                     <div class="pct22 f12 dib">
                         <span class="searchLable">客户名称：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </div>
                     <div class="pct22 f12 dib">
                         <span class="searchLable">毛利区间：</span>
-                        <span class="ui-input pct59 f0" data-type="section">
-                            <input type="text" placeholder="请输入">
-                            <span class="pct5 dib tc">~</span>
-                            <input type="text" placeholder="请输入">
+                        <span class="ui-input pct69 f0" data-type="section">
+                            <input type="text" placeholder="请输入"><span class="pct5 dib tc">~</span><input type="text" placeholder="请输入">
                         </span>
                     </div>
                     <div class="pct22 f12 dib">
                         <span class="searchLable">地区：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </div>
                     <div class="pct30 f12 dib">
                         <span class="searchLable">订单日期：</span>
@@ -80,22 +78,27 @@
                     <span class="searchLable">业务类型：</span>
                     <div class="dib selectSingle">
                         <a class="on" href="javscript:void(0)">现款业务</a>
-                        <span class="pr5 pl5 ">|</span>
+                        <span class="">|</span>
                         <a href="javscript:void(0)">款到卸货</a>
-                        <span class="pr5 pl5 ">|</span>
+                        <span class="">|</span>
                         <a href="javscript:void(0)">欠款业务</a>
-                        <span class="pr5 pl5 ">|</span>
+                        <span class="">|</span>
                         <a href="javscript:void(0)">外贸</a>
                     </div>
                 </div>
+
                 <div class="tc mt20 mb30">
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
                         <tr>
-                            <th width="3%">序号</th>
-                            <th width="11%">金牌商家</th>
+                            <th width="6%" class="tl">
+                                <div class="pl10">
+                                    金牌商家
+                                </div>
+                            </th>
+                            <!-- <th width="11%">金牌商家</th> -->
                             <th width="4%">地区</th>
                             <th width="4%">订单数</th>
                             <th width="7%">超期未收款</th>
@@ -120,15 +123,16 @@
                                 </label>
                             </th>
                             <th width="9%">平均税前毛利率(定购)</th>
+                            <th width="8%">备货总额度/余额度</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
-                            <td>1</td>
-                            <td>
-                                <div class="pl10 tl">
-                                    <a href="../public/goldSituation.html">袁大海</a>/合伙式</td>
+                            <td class="tl">
+                                <div class="pl10">
+                                    <a href="goldRegInfo.html">袁大海</a><br>合伙式
                                 </div>
+                            </td>
                             <td>上海</td>
                             <td><span class="blue">220</span></td>
                             <td><span class="red">100,334.44</span></td>
@@ -141,11 +145,22 @@
                             <td>139,344.33元</td>
                             <td>139,344.33元</td>
                             <td>0.234340</td>
+                            <td>
+                                <div class="tl pl10 tipclick menuhook onT" qtip-dom="dom1">
+                                    <div class="">
+                                        100000 <img src="../images/report/xiuGai.png" class="  ml10 vm altX"
+                                            width="12" height="12" alt="">
+                                    </div>
+                                    <span class="col-8080">329299</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td>
-                                <div class="tl pl10"> <a href="../public/goldSituation.html">袁大海</a>/<a href="#">综合型合伙式</a></td></div>
+                            <td class="tl">
+                                <div class="pl10">
+                                    <a href="../public/goldRegInfo.html">袁大海</a><br>合伙式
+                                </div>
+                            </td>
                             <td>上海</td>
                             <td><span class="blue">220</span></td>
                             <td><span class="red">100,334.44</span></td>
@@ -158,6 +173,14 @@
                             <td>139,344.33元</td>
                             <td>139,344.33元</td>
                             <td>0.234340</td>
+                            <td>
+                                <div class="tl pl10 tipclick onT" qtip-dom="dom1">
+                                    <div class="">
+                                        100000 <i class="menuhook modify-icon ml10"></i>
+                                    </div>
+                                    <span class="col-8080">329299</span>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -166,6 +189,13 @@
             </div>
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
+
+    <div class="f12 dom1 dn">
+        <div class="14 mb2">修改备货总额度</div>
+        <input type="text" class="ui-input mb10" placeholder="请输入" autocomplete="off"><br>
+        <button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">确认</button>
+        <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+    </div>
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -176,6 +206,26 @@
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+        
+            $('.tipclick').qtip({
+                show: { event: 'click' },
+                hide: 'unfocus',
+                content: {
+                    text: function (event, api) {
+                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+                    }
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                // position: {
+                //     viewport: $(window)
+                // },;
+                style: {
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
+                },
+            });
         })
     </script>
 </body>

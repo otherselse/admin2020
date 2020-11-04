@@ -152,7 +152,7 @@ a.wh:hover {
 .selectSingle a {
   color: #676767;
   display: inline-block;
-  padding: 0 6px;
+  padding: 0 4px;
 }
 
 .selectSingle a:hover {}
@@ -168,6 +168,7 @@ a.wh:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
   border-radius: 15px;
   box-sizing: border-box;
+  padding: 0 8px;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -2238,6 +2239,15 @@ a.wh:hover {
   color: #08CB93;
   letter-spacing: 0;
 }
+.ba {
+  line-height: 20px;
+  width: 50px;
+  height: 20px;
+  background: #FFE3E3;
+  margin-left: 10px;
+  text-align: center;
+}
+
 
 .min-blueK {
   height: 16px;
@@ -2325,6 +2335,13 @@ a.wh:hover {
   background:url(../images/report/gongsi.png) no-repeat;
   width: 12px;
   height: 13px;
+  background-size:100% 100%;
+}
+
+.modify-icon{
+  background:url(../images/report/xiuGai.png) no-repeat;
+  width: 17px;
+  height: 17px;
   background-size:100% 100%;
 }
 
@@ -3190,7 +3207,32 @@ a.size6 {
   background-position: -58px -114px;
   display: inline-block;
 }
-
+.editIcon_b {
+  width: 12px;
+  height: 12px;
+  background: url(../images/edit.png) no-repeat ;
+  display: inline-block;
+}
+.saveIcon_b {
+  width: 12px;
+  height: 12px;
+  background: url(../images/save.png) no-repeat;
+  display: inline-block;
+}
 .fanArrowIcon{
   background:url(../images/report/fan.png);display: inline-block;width: 10px;height: 9px;
+}
+.scolltopFix.fixed{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background: #fff;
 }

@@ -9,7 +9,7 @@ var menu_Data=[
 	 "menuList":[
 			 {"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList1.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../toApproval/procBonusApplyAction_procAfterProcessList.html"}
 			 ]}
-			 ,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家提现审批","href":"../toApproval/withDraw.html"},{"mtitle":"客户退款审批","href":"../toApproval/applyCorpBackList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"承兑汇票审批","href":"../toApproval/adminIndexAction_adminIndexList2.html"},{"mtitle":"风险保证金审核","href":"../toApproval/fxjPermitList.html"},{"mtitle":"租赁分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"}
+			 ,{"bigM":"款项类","smallM":[{"mtitle":"付款类申请审批","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"金牌商家提现审批","href":"../toApproval/withDraw.html"},{"mtitle":"客户提现审批","href":"../toApproval/applyCorpBackList.html"},{"mtitle":"金牌商家缴费审批","href":"../toApproval/applyPayTaxes.html"},{"mtitle":"承兑汇票审批","href":"../toApproval/adminIndexAction_adminIndexList2.html"},{"mtitle":"风险保证金审核","href":"../toApproval/fxjPermitList.html"},{"mtitle":"租赁分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"}
 			 ]}
 			 ,{"bigM":"加工类","smallM":[{"mtitle":"加工商分红审批","href":"../toApproval/procBonusApplyAction_zlBonusApply.html"},{"mtitle":"加工提成审核","href":"../toApproval/procBonusApplyAction_procBonusApplyN.html"},{"mtitle":"积分提取审批","href":"../toApproval/adminIndexAction_procIntegralPermit.html"},{"mtitle":"加工客户库存核对","href":"../toApproval/applyprintAction_toApplyStockList.html"}
 			 ]}
@@ -59,7 +59,7 @@ var menu_Data=[
 				{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html"},
 				{"mtitle":"库存明细表","href":"../report/inventory.html"},
 				{"mtitle":"订单统计表","href":"../report/theSalesExecutive.html"},
-				{"mtitle":"运输统计表","href":"../report/transportStatistics.html"},
+				{"mtitle":"运输统计表","href":"../report/transportStatistics.html","hide":true},
 				
 			]}	
 			,{"bigM":"分析类","smallM":[{"mtitle":"经营报表","href":"../report/businessReport.html"}, {"mtitle":"新经营报表","href":"../index/index.html","hide":true},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"},{"mtitle":"经营报表取数表(加工)","href":"../report/income.html"},{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html","hide":true},{"mtitle":"经营报告表","href":"../report/domesticTrade.html"},{"mtitle":"资金日报表","href":"../report/cashJournal.html","hide":true},{"mtitle":"运营分析表","href":"../report/goldMerchantMarketing.html","hide":true},{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html","hide":true}]}

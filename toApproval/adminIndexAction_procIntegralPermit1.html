@@ -38,8 +38,8 @@
             </div>
         </div>
         <div class="ui-tab3 pct100">
-            <a href="./adminIndexAction_procIntegralPermit.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">待审核</span><i class="goldIcon ui-tab3-dot"></i></a>
-            <a href="./adminIndexAction_procIntegralPermit1.html" class="ui-tab3-list rel"><span class="ui-tab3-text">已审核</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="./adminIndexAction_procIntegralPermit.html" class="ui-tab3-list rel"><span class="ui-tab3-text">待审核</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <a href="./adminIndexAction_procIntegralPermit1.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">已审核</span><i class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content minH">
             <div class="p20">
@@ -62,15 +62,18 @@
                         <table class="ui-table f12 pct100 ">
                             <thead>
                                 <tr>
-                                    <th width="14%">申请时间</th>
+                                    <th width="10%">申请时间</th>
                                     <th width="8%">金牌商家</th>
-                                    <th width="14%">申请账号</th>
-                                    <th width="11%">所属区域</th>
-                                    <th width="19%">账号</th>
-                                    <th width="21%">银行</th>
+                                    <th width="9%">申请账号</th>
+                                    <th width="7%">所属区域</th>
+                                    <th width="16%">账号</th>
+                                    <th width="12%">银行</th>
                                     <th width="7%">转换积分</th>
+                                    <th width="7%">审核状态</th>
+                                    <th width="8%">审核人</th>
+                                    <th width="10%">审核日期</th>
                                     <th width="6%">操作</th>
-                                    </tr>
+                                </tr>
                             </thead>
                         </table>
                     </div>
@@ -78,35 +81,18 @@
                         <table class="ui-table tc f12" width="100%">
                             <tbody class="ui-thover">
                                 <tr class="openTr">
-                                    <td width="14%">2020-10-26 19:54:42</td>
-                                    <td width="8%">苏志才</td>
-                                    <td width="14%">18017169786</td>
-                                    <td width="11%">上海</td>
-                                    <td width="19%">1001233319005667868</td>
-                                    <td width="21%">中国工商银行股份有限公司上海宝山支行</td>
-                                    <td width="7%">22</td>
-                                    <td width="6%" class="blue">
-
-                                        <!-- <a href="javascript:void(0)"  onclick="openDetails(this)">查看</a> -->
-                                        <a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">查看</a>
-                                        <span class="dib ml-10 mt2 orange" leavetime="-668680"></span>
-                                        <span class="dib getTime c-line2 orange"></span>
-                                    </td>
-                                </tr>
-                                <tr class="hideTr dn">
-                                    <td colspan="11" class="f12">
-                                        <div class="auto tl pct100 clearfix" style="width: 98%;">
-                                            转换金额：11元 <span class="ml40">附件：</span>
-                                            <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a> 
-                                            <a href="javascript:void(0)" class="ml40" title="1.加工单须是通过乐刚网打印且加盖单位公章或合同章；<br/>2.附件中的手机号必须要与申请账号保持一致；<br/>3.附件中的联系人要与金牌商家的姓名一致或是姓氏一致；">
-                                            <i class="goldIcon icon-info vm "></i>
-                                            审核要点</a>
-                                            <div class="r">
-                                                <button class="ui-button mr20 w90" type="button">提交</button>
-                                                <button class="ui-button mr20 w90" type="button" data-type="clear">拒绝</button>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    <td width="10%">2020-07-06 13:17:18</td>
+                                    <td width="8%">陈耿</td>
+                                    <td width="9%">17608434525</td>
+                                    <td width="7%">上海</td>
+                                    <td width="16%">1001233319005667868</td>
+                                    <td width="12%">中国工商银行股份有限公司上海宝山支行</td>
+                                    <td width="7%">5</td>
+                                    <td width="7%">审核通过</td>
+                                    <td width="8%">系统审批</td>
+                                    <td width="10%">2020-07-06 13:17:18</td>
+                                    <td width="6%" class="blue"><a href="javascript:void(0)"
+                                      class="tipclick"  qtip-dom="dom3">查看</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -120,11 +106,30 @@
     </div>
     <!-- rightBar -->
 
-    <div class="dom1">
-        <div class="mb10">转换金额：<span class="g28">11元</span> </div>
-        <div class="mb10">&emsp;&emsp;附件：<a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a> </div>
-        <div class="mb10">审批意见：<span class="g28">同意</span> </div>
-    </div>
+
+    <div class="f12 bld8 pl10 dom3 dn">
+		<div class="g28 ui-audit"><span>审核</span> <span class="g1b ml15">审核通过</span></div>
+		<div class="lh20 mt5 mb30">
+			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
+			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+		</div>
+		<div class="g28 ui-audit"><span>复核</span> <span class="g1b ml15">审核通过</span></div>
+		<div class="lh20 mt5 mb30">
+			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
+			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+		</div>
+		<div class="g28 ui-audit"><span>复核</span> <span class="red ml15">审核未通过</span></div>
+		<div class="lh20 mt5">
+			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
+			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span
+					class="g67">付款金额与收款金额数目不符，请核对账单明细，重新提交申请。</span></div>
+			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
+		</div>
+	</div>
+
+
 
 
     <script type="text/javascript" src="../js/admin.js"></script>
