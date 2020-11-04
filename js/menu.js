@@ -59,7 +59,7 @@ var menu_Data=[
 				{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html"},
 				{"mtitle":"库存明细表","href":"../report/inventory.html"},
 				{"mtitle":"订单统计表","href":"../report/theSalesExecutive.html"},
-				{"mtitle":"运输统计表","href":"../report/transportStatistics.html"},
+				{"mtitle":"运输统计表","href":"../report/transportStatistics.html","hide":true},
 				
 			]}	
 			,{"bigM":"分析类","smallM":[{"mtitle":"经营报表","href":"../report/businessReport.html"}, {"mtitle":"新经营报表","href":"../index/index.html","hide":true},{"mtitle":"经营报表取数表","href":"../report/revenueCost.html"},{"mtitle":"经营报表取数表(加工)","href":"../report/income.html"},{"mtitle":"订单风险跟踪表","href":"../report/orderRiskTracking.html","hide":true},{"mtitle":"经营报告表","href":"../report/domesticTrade.html"},{"mtitle":"资金日报表","href":"../report/cashJournal.html","hide":true},{"mtitle":"运营分析表","href":"../report/goldMerchantMarketing.html","hide":true},{"mtitle":"毛利明细表","href":"../report/grossProfitDetail.html","hide":true}]}
