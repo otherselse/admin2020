@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 	<title>单位评审-评审管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-	<link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
 <body class="showTip">
 	<script type="text/javascript" src="../js/topBar.js"></script>	
@@ -36,20 +34,23 @@
 		<div class="ui-content minH">
 			<div class="p20">
 				<div class="cl mb10 f12 ">
-					评审状态：<span class="single mr20">
+					<span class="searchLable">评审状态：</span>
+					<span class="single mr20">
 						<input type="hidden">
 						<button type="button" class="ui-option mr5 on" value="0" id="permitFlag2" name="indexType" onclick="checkIsSelect(this)">待评审</button>
 						<button type="button" class="ui-option" name="indexType" id="permitFlag1" value="1" onclick="checkIsSelect(this)">评审完成</button>
 					</span>
 					<span id="permitFlag" class="dn">
-						审批退回：<span class="radio mr20">
+						<span class="searchLable">审批退回：</span>
+						<span class="radio mr20">
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 						<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 					</span>
 					</span>
 					
 					<span class="m_db m_mt10">
-						评审类型：<div class="dib selectSingle  mr40">
+						<span class="searchLable">评审类型：</span>
+						<div class="dib selectSingle  mr40">
 									<a class="on" href="javascript:void(0)">全部</a>
 									<span>|</span>
 									<a href="javascript:void(0)">VIP客户评审</a>
@@ -65,8 +66,10 @@
 					</span>
 				</div>
 				<div class="cl f12 ">
-					单位名称：<input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-					申请时间段：<span class="ui-input tc f0 pct16  range" data-type="time">
+					<span class="searchLable">单位名称：</span>
+					<input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
+					<span class="searchLable">申请时间段：</span>
+					<span class="ui-input tc f0 pct25  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
 					</span>
 				</div>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>余料款充值记录汇总-统计管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-
+    
     <style>
         .ui-option,
         .ui-optionNo {
@@ -48,87 +48,91 @@
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <div class="df">
-                    <span class="dib" style="margin-top:4px;">加工商：</span>
+                    <span class="dib searchLable" style="margin-top:4px;">加工商：</span>
                     <span class="selectProcName selectSingle gc">
                         <a class="mb10 on" href="javscript:void(0)">全部</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">魏热帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">鲍帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">互帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">菲菲帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">魏热帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">鲍帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">互帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">菲菲帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">互帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">菲菲帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">互帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                        <span class="pr5 mb10 pl5 ">|</span>
+                        <span class="mb10  ">|</span>
                         <a class="mb10" href="javscript:void(0)">菲菲帮</a>
                     </span>
                     <a class="dib mt2" href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
                 </div>
-                <div class="cl mt10 dac f12">
+                <div class="mt10 df f12">
                     <span class="dib pct25">
-                        货主单位：<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">货主单位：</span>
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        出库日期： <span class="ui-input tc f0 pct69 range" data-type="time">
+                    <span class="dib pct22">
+                        <span class="searchLable">仓库：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">全部</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="dib pct22">
+                        <span class="searchLable">余料类型：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">全部</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="dib pct25 m_pct31">
+                        <span class="searchLable">出库日期：</span>
+                         <span class="ui-input tc f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        余料类型：<span class="input-selSearch pct69">
-                            <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
-                            <div class="search-cont pct100">
-                                <a href="javascript:void(0)" class="search-list db ell active">全部</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
-                        </span>
-                    </span>
-                    <span class="dib pct25">
-                        仓库：<span class="input-selSearch pct69">
-                            <input type="text" class="ui-input pct100 searchUp" placeholder="请选择" autocomplete="off">
-                            <div class="search-cont pct100">
-                                <a href="javascript:void(0)" class="search-list db ell active">全部</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
                         </span>
                     </span>
                 </div>

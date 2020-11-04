@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>实名注册审批-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+
     <style>
         .qtip {
             min-width: 580px;
@@ -26,6 +24,12 @@
 
         .hoverBlue:hover {
             padding: 2px 5px;
+        }
+
+        .ui-table tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 10px 2px;
         }
     </style>
 </head>
@@ -62,7 +66,8 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl mb10 dac f12 ">
-                    审核状态：<span class="single mr20">
+                    <span class="searchLable">审核状态：</span>
+                    <span class="single mr20">
                         <input type="hidden">
                         <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5 on"
                                 id="ht">待审核</button></a>
@@ -89,17 +94,21 @@
                     </span>
                 </div>
                 <div class="cl f12 df">
-                    <span class="dib pct25">
-                        单位名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">单位名称：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        账号：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">账号：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        金牌商家：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        申请日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+                    <span class="dib pct25 m_pct31">
+                        <span class="searchLable">申请日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
@@ -108,7 +117,8 @@
                 </div>
                 <div class="mt10 f12">
                     <span class="dib pct25">
-                        授权书是否回收：<span class="radio">
+                        <span class="searchLable">授权书是否回收：</span>
+                        <span class="radio">
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                         class="radio-opacity" name="radio"></i>是</label>
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -324,10 +334,10 @@
                                     <table class="ui-table f12 auto tl mb10" width="100%">
                                         <tbody>
                                             <tr class="resource-table">
-                                                <td width="20%" class="vt bgfa">
+                                                <td width="13%" class="vt bgfa">
                                                     <span class="pt5 dib pl10">本人审批意见：</span>
                                                 </td>
-                                                <td width="80%">
+                                                <td width="37%">
                                                     <span class="radio pl10">
                                                         <label class="mr20" onclick="clickPermit(this,'1')"><i
                                                                 class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -335,7 +345,13 @@
                                                         <label class="mr20" onclick="clickPermit(this,'2')"><i
                                                                 class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                                                     class="radio-opacity" name="radio"></i>审核不通过</label>
-                                                        <span class="pl5 pr5">|</span>
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">实名认证情况：</span>
+                                                </td>
+                                                <td>
+                                                    <span class="radio pl10">
                                                         <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input
                                                                     type="radio" class="radio-opacity"
                                                                     name="radio"></i>通过实名验证</label>
@@ -346,10 +362,10 @@
                                                 </td>
                                             </tr>
                                             <tr class="resource-table">
-                                                <td width="20%" class="vt bgfa">
+                                                <td width="13%" class="vt bgfa">
                                                     <span class="pt5 dib pl10">本人审批备注：</span>
                                                 </td>
-                                                <td width="80%">
+                                                <td width="87%" colspan="3">
                                                     <div class="pl10 pr10">
                                                         <textarea class="ui-textarea pct100" rows="2"></textarea>
                                                     </div>
