@@ -47,7 +47,7 @@ var menu_Data=[
 				{"mtitle":"订单执行情况表","href":"../report/tradeOrder.html"},
 				{"mtitle":"外贸订单跟踪表","href":"../report/theForeignTradeOrder.html"},
 				{"mtitle":"出入库跟踪表","href":"../report/summary.html"},
-				{"mtitle":"寄售跟踪表","href":"../report/shippingTrackingForm.html"},
+				{"mtitle":"寄售跟踪表","href":"../report/openToBooking.html"},
 				{"mtitle":"备货跟踪表","href":"../report/readyForTheTrack.html"},
 				{"mtitle":"商互通管理","href":"../report/eachOther.html"},
 				{"mtitle":"自营管理","href":"../report/forResources.html"},

@@ -24,6 +24,50 @@
             height: 30px;
             line-height: 30px;
         }
+        .table-cell-fix-left,
+        .table-cell-fix-right {
+            left: 0;
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            z-index: 2;
+            background: #fff;
+        }
+
+        .m-tabLimitSCroll {
+            overflow: auto;
+        }
+
+        .ui-table tbody td {
+            padding: 5px 2px
+        }
+
+        @media (max-width: 1440px) {
+            .m-tabLimitSCroll {
+                /* max-height: 520px; */
+            }
+
+            .ui-table {
+                min-width: 1440px;
+            }
+        }
+
+        .table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
     </style>
 
 </head>
@@ -68,22 +112,19 @@
             </div>
             <div class="pl20 pr20 f12">
                 <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">采购单位：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">&emsp;订单号：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct30 dib f12">
                         <span class="searchLable">入库日期：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
@@ -93,35 +134,35 @@
                     </span>
                 </div>
                 <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">
+                    <span class="input-selSearch pct22 dib f12">
+                        <span class="searchLable">订单类型：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>内贸</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>外贸</label>
+                        </span>
+                    </span>
+                    <span class="input-selSearch pct22 dib f12">
+                        <span class="searchLable">提货类型：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>已提货未出库</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>其他</label>
+                        </span>
+                    </span>
+                    <span class="input-selSearch pct22 dib f12">
+                        <span class="searchLable">库存日期：</span>
+                        <span class="ui-input pct69" data-type="time" small-type="small"><input type="text"
+                                placeholder="time4" id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
+                    </span>
+                    <span class="pct30 dib f12">
                         <span class="searchLable">出库日期：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-                        </span>
-                    </span>
-                    <span class="input-selSearch pct25 dib f12">
-                        <span class="searchLable">库存日期：</span>
-                        <span class="ui-input pct69" data-type="time" small-type="small"><input type="text"
-                                placeholder="time4" id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
-                    </span>
-                    <span class="input-selSearch pct25 dib f12">
-                        <span class="searchLable">订单类型：</span>
-                        <span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>内贸</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>外贸</label>
-                        </span>
-                    </span>
-                    <span class="input-selSearch pct25 dib f12">
-                        <span class="searchLable">提货类型：</span>
-                        <span class="radio">
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>已提货未出库</label>
-                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>其他</label>
                         </span>
                     </span>
                 </div>
@@ -130,101 +171,109 @@
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="4%">订单号</th>
-                            <th width="4%">金牌商家</th>
-                            <th width="4%">品名</th>
-                            <th width="4%">规格</th>
-                            <th width="4%">牌号</th>
-                            <th width="4%">钢厂</th>
-                            <th width="4%">捆包号</th>
-                            <th width="4%">数量</th>
-                            <th width="4%">重量</th>
-                            <th width="4%">出库重量</th>
-                            <th width="4%">采购单价</th>
-                            <th width="4%">金额</th>
-                            <th width="4%">采购单位</th>
-                            <th width="4%">销售单价</th>
-                            <th width="4%">计量方式</th>
-                            <th width="4%">仓库</th>
-                            <th width="4%">入库时间</th>
-                            <th width="4%">入库类型</th>
-                            <th width="4%">入库操作人</th>
-                            <th width="4%">出库时间</th>
-                            <th width="4%">出库类型</th>
-                            <th width="4%">出库操作人</th>
-                            <th width="4%">提货状态</th>
-                            <th width="4%">收票时间</th>
-                            <th width="4%">开票时间</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="4%"><a href="javascript:detail('61177')" oldtitle="点击查看订单详情"><span
-                                        class="redm">61177</span><br></a></td>
-                            <td width="4%">赵自立</td>
-                            <td width="4%">热轧卷板</td>
-                            <td width="4%">11.000*800*C </td>
-                            <td width="4%">SA1E</td>
-                            <td width="4%">兆顺</td>
-                            <td width="4%">123</td>
-                            <td width="4%">10</td>
-                            <td width="4%">
-                                <span>10</span>
-                                /吨
-                            </td>
-                            <td width="4%">10</td>
-                            <td width="4%">
-                                <span>4,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>40,000</span>
-                            </td>
-                            <td width="4%">乐乐集团有限公司公司好</td>
-                            <td width="4%">0</td>
-                            <td width="4%">吨</td>
-                            <td width="4%">上海明飞库</td>
-                            <td width="4%">2020-09-15 11:11:28</td>
-                            <td width="4%">采购入库</td>
-                            <td width="4%">李四四</td>
-                            <td width="4%">--</td>
-                            <td width="4%">--</td>
-                            <td width="4%">--</td>
-                            <td width="4%">--</td>
-                            <td width="4%">--</td>
-                            <td width="4%">--</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="25">
-                                当前页合计：
-                                <span class="dib">当页合计：</span>
-                                <span class="dib">数量：</span>
-                                <span class="dib red">548</span>
-                                <span class="dib">重量：</span>
-                                <span class="dib red">986</span>
-                                <span class="dib">采购单位：</span>
-                                <span class="dib red">25,000</span>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="25">
-                                所有页合计：
-                                <span class="dib">当页合计：</span>
-                                <span class="dib">数量：</span>
-                                <span class="dib red">548</span>
-                                <span class="dib">重量：</span>
-                                <span class="dib red">986</span>
-                                <span class="dib">采购单位：</span>
-                                <span class="dib red">25,000</span>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <!-- table end -->
+
+                <div class="m-tabLimitSCroll lgui-table-box fixrightTab">
+                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                        <thead>
+                            <tr>
+                                <th width="4%">订单号</th>
+                                <th width="4%">金牌商家</th>
+                                <!-- <th width="4%">品名</th>
+                                <th width="4%">规格</th>
+                                <th width="3%">牌号</th> -->
+                                <th width="9%" class="tl">
+                                    <div class="ml10">品名/规格/牌号</div>
+                                </th>
+                                <th width="3%">钢厂</th>
+                                <th width="4%">捆包号</th>
+                                <th width="4%">数量</th>
+                                <th width="3%">重量</th>
+                                <th width="4%">出库重量</th>
+                                <th width="5%">采购单价</th>
+                                <th width="4%">金额</th>
+                                <th width="7%">采购单位</th>
+                                <th width="4%">销售单价</th>
+                                <th width="4%">计量方式</th>
+                                <th width="4%">仓库</th>
+                                <th width="6%">入库时间</th>
+                                <th width="4%">入库类型</th>
+                                <th width="4%">入库操作人</th>
+                                <th width="4%">出库时间</th>
+                                <th width="4%">出库类型</th>
+                                <th width="4%">出库操作人</th>
+                                <th width="4%">提货状态</th>
+                                <th width="4%">收票时间</th>
+                                <th width="4%">开票时间</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td width="4%"><a href="javascript:detail('61177')" oldtitle="点击查看订单详情"><span
+                                            class="redm">61177</span><br></a></td>
+                                <td width="4%">赵自立</td>
+                                <td class="tl">
+                                    <div class="ml10">
+                                        热轧卷板&nbsp;/&nbsp;Asly-1<br />
+                                        <span class="col-8080">11.000*800*c</span>
+                                    </div>
+                                </td>
+                                <td>鞍钢</td>
+                                <td width="4%">123</td>
+                                <td width="4%">10</td>
+                                <td width="4%">
+                                    <span>10</span>
+                                </td>
+                                <td width="4%">10</td>
+                                <td width="4%">
+                                    <span>4,000</span>
+                                </td>
+                                <td width="4%">
+                                    <span>40,000</span>
+                                </td>
+                                <td width="4%" class="tl">乐乐集团有限公司公司好</td>
+                                <td width="4%">0</td>
+                                <td width="4%">吨</td>
+                                <td width="4%">上海明飞库</td>
+                                <td width="4%" class="tl">2020-09-15 11:11:28</td>
+                                <td width="4%">采购入库</td>
+                                <td width="4%">李四四</td>
+                                <td width="4%">--</td>
+                                <td width="4%">--</td>
+                                <td width="4%">--</td>
+                                <td width="4%">--</td>
+                                <td width="4%">--</td>
+                                <td width="4%">--</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="">
+                            <tr height="45">
+                                <td colspan="25">
+                                    当前页合计：
+                                    <span class="dib">当页合计：</span>
+                                    <span class="dib">数量：</span>
+                                    <span class="dib red">548</span>
+                                    <span class="dib">重量：</span>
+                                    <span class="dib red">986</span>
+                                    <span class="dib">采购单位：</span>
+                                    <span class="dib red">25,000</span>
+                                </td>
+                            </tr>
+                            <tr height="45">
+                                <td colspan="25">
+                                    所有页合计：
+                                    <span class="dib">当页合计：</span>
+                                    <span class="dib">数量：</span>
+                                    <span class="dib red">548</span>
+                                    <span class="dib">重量：</span>
+                                    <span class="dib red">986</span>
+                                    <span class="dib">采购单位：</span>
+                                    <span class="dib red">25,000</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!-- table end -->
+                </div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->
@@ -238,7 +287,7 @@
 
     <script>
         $(function () {
-           $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on");// 静态页面定位使用，开发使用title等定位
+            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on");// 静态页面定位使用，开发使用title等定位
         })
 
         function showDiv_lrl(obj) {

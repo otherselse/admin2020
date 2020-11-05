@@ -20,13 +20,10 @@
             min-width: auto;
         }
 
-        .qtip{
-            min-width: 600px;
-        }
-
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
         .blue {
             color: #1365E8;
         }
@@ -57,62 +54,28 @@
         </div>
 
         <div class="ui-tab3">
-            <a href="unitReviewStatistics.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">供应商评审</span><i
+            <a href="unitReviewStatistics.html" class="ui-tab3-list rel"><span class="ui-tab3-text">供应商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
             <a href="carrierReview.html" class="ui-tab3-list rel"><span class="ui-tab3-text">承运商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
             <a href="processorReview.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="vipCustomerReview.html" class="ui-tab3-list rel"><span class="ui-tab3-text">VIP客户评审</span><i
+            <a href="vipCustomerReview.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">VIP客户评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
 
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 dac">
-                    <span class="dib dac" style="width: 44%;">
-                        <span class="searchLable">
-                            <div class="dac">
-                                评审等级<a href="javascript:void(0)" class="goldIcon icon-info dib mr5 myTipclick-p0"
-                                    qtip-dom="dom18"></a>：
-                            </div>
-                        </span>
-                        <span class="dib selectSingle">
-                            <a class='' class='' href="javscript:void(0)" class="on">武林盟主(1级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">一派掌门(2级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">江湖新秀(3级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">初出茅庐(4级)</a>
-                        </span>
+                <div class="dac">
+                    <span class="pct22 dib">
+                        <span class="dib searchLable">单位名称：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span>
-                        <span class="searchLable">&emsp;有效期：</span>
-                        <div class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">一个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">三个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">六个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">十二个月</a>
-                        </div>
+                    <span class="pct22 dib">
+                        <span class="dib searchLable">现场评审员：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                </div>
-
-                <div class="mb10 dac">
-                    <span class="dib pct22">
-                        <span class="searchLable">仓库性质：</span>
-                        <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">自有</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">租贷</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">寄放</a>
-                        </span>
-                    </span>
-                    <span class="dib pct22">
+                    <span class="dib f1">
                         <span class="searchLable">评审状态：</span>
                         <span class="dib selectSingle">
                             <a class='' href="javscript:void(0)" class="on">过期</a>
@@ -122,48 +85,8 @@
                             <a class='' href="javscript:void(0)">未评审</a>
                         </span>
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">积分奖励：</span>
-                        <span class="radio">
-                            <label class="mr10"><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct30">
-                        <span class="dib searchLable">评审通过日期：</span>
-                        <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                class="render-time pct45" readonly="">
-                        </span>
-                    </span>
                 </div>
 
-                <div class="dac">
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">现场评审人员：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">&emsp;&emsp;区域：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30">
-                        <span class="dib searchLable">评审到期日期：</span>
-                        <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                class="render-time pct45" readonly="">
-                        </span>
-                    </span>
-                </div>
-                
                 <div class="tc mt20 mb30">
                     <button type="button" class="ml10 ui-button mr10">查询</button>
                 </div>
@@ -173,14 +96,14 @@
                         <tr class="fixTr">
                             <th width="3%">序号</th>
                             <th width="4%">区域</th>
-                            <th width="12%" class="tl">
+                            <th width="10%" class="tl">
                                 <div class="pl10">
                                     单位名称
                                 </div>
                             </th>
                             <th width="8%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    评审通过日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                                    评审通过时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <th width="8%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
@@ -191,21 +114,21 @@
                                     交易量<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <!--   <th width="6%" >免检状态</th> -->
-                            <th width="9%">评审状态/等级</th>
+                            <th width="7%">评审状态</th>
                             <th width="5%">实缴金额<br>(万元)</th>
-                            <th width="8%">存量发票额度<br>(万元)</th>
-                            <th width="8%">预付款额度<br>(万元)</th>
-                            <th width="6%">未收发票金额</th>
-                            <th width="6%">预付款金额</th>
-                            <th width="6%">现场评审人员</th>
-                            <th width="6%">评审详情</th>
+                            <th width="8%">G2G充值<br>(万元)</th>
+                            <th width="8%">授信额度<br>(万元)</th>
+                            <th width="6%">关联单位</th>
+                            <th width="6%">账期</th>
+                            <th width="6%">现场评审员</th>
+                            <th width="5%">评审详情</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
                             <td width="3%">1</td>
                             <td width="4%">上海</td>
-                            <td class="tl">
+                            <td width="12%" class="tl">
                                 <div class="pl10">
                                     <a href="../public/userInfo.html" target="_block"
                                         class="zxx_text_overflow tiptop dib"
@@ -215,18 +138,18 @@
                             <td width="6%">2020-09-11</td>
                             <td width="6%">2020-12-11</td>
                             <td width="5%">1,675</td>
-                            <td width="5%">有效/1级</td>
+                            <td width="5%">有效</td>
                             <td width="5%">
                                 <span>1,000</span>
                             </td>
                             <td width="4%">
-                                <span>2,000</span>
+                                <span>20%</span>
                             </td>
                             <td width="4%">
                                 <span>1,000</span>
                             </td>
                             <td width="4%">
-                                <span>2,020,000</span>
+                                无
                             </td>
                             <td width="4%">
                                 <span>-980,000</span>
@@ -237,14 +160,14 @@
                             <td width="4%">
                                 <span>
                                     <a href="../public/applyDetail.html"
-                                        target="_blank" id="step1">查看</a>
+                                    target="_blank" id="step1">查看</a>
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <td width="3%">1</td>
                             <td width="4%">上海</td>
-                            <td class="tl">
+                            <td width="12%" class="tl">
                                 <div class="pl10">
                                     <a href="../public/userInfo.html" target="_block"
                                         class="zxx_text_overflow tiptop dib"
@@ -254,69 +177,28 @@
                             <td width="6%">2020-09-11</td>
                             <td width="6%">2020-12-11</td>
                             <td width="5%">1,675</td>
-                            <td width="5%"><span class="red">有效</span>/1级</td>
+                            <td width="5%"><span class="red">无效</span></td>
                             <td width="5%">
                                 <span>1,000</span>
                             </td>
                             <td width="4%">
-                                <span>2,000</span>
+                                <span>20%</span>
                             </td>
                             <td width="4%">
                                 <span>1,000</span>
                             </td>
                             <td width="4%">
-                                <span>2,020,000</span>
+                                无
                             </td>
                             <td width="4%">
                                 <span>-980,000</span>
                             </td>
                             <td width="4%">
-                                <a href="javascript:void(0)">徐河若</a>
+                                <a href="../public/goldRegInfo.html" target="_block">徐河若</a>
                             </td>
                             <td width="4%">
                                 <span>
-                                    <!-- 跳转评审管理-单位评审-表格操作-评审 -->
-                                    <a href="/LgAdmin/supApplyAction_supplierApply.action?supplier.id=E3C55DF580088E72E8D94169D60CD54C"
-                                        target="_blank" id="step1">查看</a>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">上海</td>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="../public/userInfo.html" target="_block"
-                                        class="zxx_text_overflow tiptop dib"
-                                        title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
-                                </div>
-                            </td>
-                            <td width="6%">2020-09-11</td>
-                            <td width="6%">2020-12-11</td>
-                            <td width="5%">1,675</td>
-                            <td width="5%"><span class="g13">未评审</span>/1级</td>
-                            <td width="5%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,020,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>-980,000</span>
-                            </td>
-                            <td width="4%">
-                                <a href="javascript:void(0)">徐河若</a>
-                            </td>
-                            <td width="4%">
-                                <span>
-                                    <!-- 跳转评审管理-单位评审-表格操作-评审 -->
-                                    <a href="/LgAdmin/supApplyAction_supplierApply.action?supplier.id=E3C55DF580088E72E8D94169D60CD54C"
+                                    <a href="../public/applyDetail.html"
                                         target="_blank" id="step1">查看</a>
                                 </span>
                             </td>
@@ -426,7 +308,7 @@
                     }
                 },
                 position: {
-                    my: 'top left',
+                    my: 'top center',
                     at: 'bottom center'
                 },
                 // position: {
@@ -437,6 +319,7 @@
                 },
             });
         })
+
 
         setTime4();
         var endtime = '', starttime = '';
