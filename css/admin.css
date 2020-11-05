@@ -2724,8 +2724,8 @@ a.wh:hover {
 }
 
 .ui-audit::before {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 
 .nodeLine .ui-auditBox:last-of-type::before {
@@ -3215,4 +3215,37 @@ a.size6 {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   background: #fff;
+}
+.mt90{
+  margin-top: 90px;
+}
+.reviewBox .clt-check-rcont{
+  background: #E8F6FE;
+  border: 1px solid #B9D5E6;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+.reviewBox .clt-check-rcont:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 10px solid #B9D5E6;
+  border-bottom: 7px solid transparent;
+  left: -10px;
+  top: 21px;
+  display: inline-block;
+  position: absolute;
+}
+.reviewBox .clt-check-rcont:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 8px solid  #E8F6FE;
+  border-bottom: 6px solid transparent;
+  left: -8px;
+  top: 22px;
+  display: inline-block;
+  position: absolute;
 }

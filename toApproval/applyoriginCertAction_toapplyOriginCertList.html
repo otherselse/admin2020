@@ -75,7 +75,7 @@
                         <tr class="openTr">
                             <td width="108">1</td>
                             <td width="139">2020-05-25 10:46:45</td>
-                            <td width="172"><a href="../public/theOrderDetails.html">59795</a> </td>
+                            <td width="172"><a href="../public/theOrderDetails.html" target="_blank">59795</a> </td>
                             <td width="139">杨兴旺</td>
                             <td width="172">原产地证办理评审</td>
                             <td width="156">
@@ -89,7 +89,7 @@
                         <tr class="hideTr dn">
                             <td colspan="7">
                                 <div class="auto tl" style="width: 98%;">
-                                    <div class="f14 g28 mt30 b">申请信息</div>
+                                    <div class="f14 g28 mt30 b lable_t">申请信息</div>
                                     <table class="ui-table row f12 pct100 mt15">
                                         <tbody>
                                             <tr>
@@ -102,48 +102,50 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="f14 g28 mt15 b">评审意见</div>
-                                    <table class="ui-table row f12 tl pct100 mt15">
-                                        <tbody>
-                                            <tr>
-                                                <td>办理费用(元)：</td>
-                                                <td>
-                                                    <span class="ui-input" data-type="price"><span class="red dib f16 vt">￥</span><input type="text" value="" placeholder="请输入"></span>
-                                                </td>
-                                                <td>产地证费用附件：</td>
-                                                <td>
-                                                    <button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
-                                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10%">本人审批意见：</td>
-                                                <td width="90%" colspan="3">
-                                                    <span class="radio">
-                                                        <label class="mr15">
-                                                            <i class="ui-radio goldIcon v-3 mr2 on">
-                                                                <input type="radio" class="radio-opacity" name="radio">
-                                                            </i>同意申请
-                                                        </label>
-                                                        <label>
-                                                            <i class="ui-radio goldIcon v-3 mr2">
-                                                                <input type="radio" class="radio-opacity" name="radio">
-                                                            </i>不同意申请
-                                                        </label>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="vt">本人审批备注：</td>
-                                                <td colspan="3">
-                                                    <textarea class="pct98 ui-textarea" cols="30" rows="2"></textarea>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="tc mt30">
-                                        <button class="ui-button mr10" type="button">提交</button>
-                                        <button class="ui-button" data-type="clear" type="button">退回</button>
+                                    <div class="f14 g28 mt15 b lable_t">评审意见</div>
+                                    <div class="auto bgwh pb30 pt20 mt15">
+                                        <table class="ui-table row f12 tl pct90 auto" >
+                                            <tbody>
+                                                <tr>
+                                                    <td>办理费用(元)：</td>
+                                                    <td>
+                                                        <span class="ui-input" data-type="price"><span class="red dib f16 vt">￥</span><input type="text" value="" placeholder="请输入"></span>
+                                                    </td>
+                                                    <td>产地证费用附件：</td>
+                                                    <td>
+                                                        <button class="ui-button mr20" data-type="upfile" type="button">附件上传</button>
+                                                        <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="clt-check-cont  pct95 tl mt15">
+                                            <div class="cl clt-check-box">
+                                                <div class="clt-check-left">
+                                                    <div class="pt20 pb20 mr10 tr">
+                                                        <span class="b g28 ">
+                                                                本人 <br>
+                                                                审批结果
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="clt-check-right reviewBox auto ">
+                                                    <div class="clt-check-rcont f12">
+                                                        <div>
+                                                            <span class="radio pct30 dib">
+                                                                <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                            </span>
+                                                        </div>
+                                                            <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc mt20">
+                                            <button class="ui-button mr10" type="button">提交</button>
+                                            <button class="ui-button" data-type="clear" type="button">退回</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -152,7 +154,7 @@
                         <tr class="openTr">
                             <td width="108">1</td>
                             <td width="139">2020-05-25 10:46:45</td>
-                            <td width="172">59795</td>
+                            <td width="172"><a href="../public/theOrderDetails.html" target="_blank">59795</a></td>
                             <td width="139">杨兴旺</td>
                             <td width="172">原产地证办理评审</td>
                             <td width="156">
@@ -166,14 +168,7 @@
                         <tr class="hideTr dn">
                             <td colspan="7">
                                 <div class="auto tl" style="width: 98%;">
-                                    <div>
-                                        <a class="b blue f12" onclick="openOrder()">订单ID：58974<i
-                                                class="icon-leftArrow ml10"></i> </a>
-                                        <span
-                                            class="ml15 f12">金牌商家姓名：张聪&nbsp;&nbsp;电话：8327&nbsp;&nbsp;手机：11155551111</span>
-                                    </div>
-                                    
-                                    <div class="f14 g28 mt30 b">申请信息</div>
+                                    <div class="f14 g28 mt30 b lable_t">申请信息</div>
                                     <div class="mt10 f12">
                                         办理费用：<span class="g28">￥20</span><span class="ml30">产地证费用附件：<a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a></span> 
                                     </div>
@@ -189,39 +184,39 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="f14 g28 mt15 b">评审意见</div>
-                                    <table class="ui-table row f12 tl pct100 mt15">
-                                        <tbody>
-                                           
-                                            <tr>
-                                                <td width="15%">本人审批意见：</td>
-                                                <td width="85%">
-                                                    <span class="radio">
-                                                        <label class="mr15">
-                                                            <i class="ui-radio goldIcon v-3 mr2 on">
-                                                                <input type="radio" class="radio-opacity" name="radio">
-                                                            </i>同意申请
-                                                        </label>
-                                                        <label>
-                                                            <i class="ui-radio goldIcon v-3 mr2">
-                                                                <input type="radio" class="radio-opacity" name="radio">
-                                                            </i>不同意申请
-                                                        </label>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="vt">本人审批备注：</td>
-                                                <td>
-                                                    <textarea class="pct98 ui-textarea" cols="30" rows="3"></textarea>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="tc mt30">
-                                        <button class="ui-button mr10" type="button">提交</button>
-                                        <button class="ui-button" data-type="clear" type="button">退回</button>
+                                    <div class="f14 g28 mt15 b lable_t">评审意见</div>
+                                    <div class="auto bgwh pb30 pt20 mt15" style="width:98%">
+                                        <div class="clt-check-cont  pct95 tl">
+                                            <div class="cl clt-check-box">
+                                                <div class="clt-check-left">
+                                                    <div class="pt20 pb20 mr10 tr">
+                                                        <span class="b g28 ">
+                                                                本人 <br>
+                                                                审批结果
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="clt-check-right reviewBox auto ">
+                                                    <div class="clt-check-rcont f12">
+                                                        <div>
+                                                            <span class="radio pct30 dib">
+                                                                <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                            </span>
+                                                        </div>
+                                                            <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc mt20">
+                                            <button class="ui-button mr10" type="button">提交</button>
+                                            <button class="ui-button" data-type="clear" type="button">退回</button>
+                                        </div>
                                     </div>
+
+
+
                                 </div>
 
                             </td>
@@ -262,6 +257,13 @@
                 offset: ['50px', ''],
                 content: './orderAction_order.html'
             });
+        }
+        function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents(".clt-check-rcont").find("textarea").val("备注：同意申请。");
+            } else {
+                $(obj).parents(".clt-check-rcont").find("textarea").val("备注：不同意申请。");
+            }
         }
 
     </script>
