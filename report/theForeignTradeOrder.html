@@ -42,11 +42,6 @@
             background: #fff;
         }
 
-
-        .ui-table {
-            min-width: 1440px;
-        }
-
         .m-tabLimitSCroll {
             overflow: auto;
         }
@@ -54,11 +49,33 @@
         .ui-table tbody td {
             padding: 5px 2px
         }
-
+        
         @media (max-width: 1440px) {
             .m-tabLimitSCroll {
                 /* max-height: 520px; */
             }
+
+            .ui-table {
+                min-width: 1440px;
+            }
+        }
+
+        .table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
         }
     </style>
 
@@ -251,16 +268,15 @@
                                     <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">预计到港日期<br><i
                                             class="goldIcon icon-sort vm ml5 down"></i></label>
                                 </th>
-                                <th width="4%" >
+                                <th width="4%">
                                     超期<br>天数
                                 </th>
-                                <th width="4%" class="sticky-right table-cell-fix-right table-cell-fix-right-last"
+                                <th width="4%" class="sticky-right table-cell-fix-right table-cell-fix-left-last"
                                     style="right: 55px;">
                                     单据<br>查看
                                 </th>
                                 <!--  <th width="4%">区域</th> -->
-                                <th width="4%" class="sticky-right table-cell-fix-right table-cell-fix-right-last"
-                                style="right: 0px;">操作</th>
+                                <th width="4%" class="sticky-right table-cell-fix-right" style="right: 0px;">操作</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover bgwh">
@@ -305,7 +321,7 @@
                                 <td> --</td>
                                 <td>--</td>
                                 <td></td>
-                                <td class="sticky-right table-cell-fix-right table-cell-fix-right-last"
+                                <td class="sticky-right table-cell-fix-right table-cell-fix-left-last"
                                     style="right: 55px;">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="15" data-type="smallbbr">
@@ -313,8 +329,7 @@
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
                                 </td>
-                                <td class="sticky-right table-cell-fix-right table-cell-fix-right-last"
-                                    style="right: 0;">
+                                <td class="sticky-right table-cell-fix-right" style="right: 0;">
                                     <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
                                 </td>
                             </tr>
@@ -351,7 +366,7 @@
                                                     </td>
                                                     <td class="vt bgfa" width="13%"><span
                                                             class="pt5 dib pl10">单据回收情况：</span></td>
-                                                    <td >
+                                                    <td>
                                                         <div class="ml5 dib selectSingle dac">
                                                             <a class="mb10 on" href="javscript:void(0)">销售合同</a>
                                                             <span class="mb10">|</span>
@@ -492,6 +507,7 @@
                 },
             });
         })
+
     </script>
 </body>
 

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>寄预售跟踪表-报表管理-乐刚智能云系统</title>
+    <title>寄售跟踪表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 </head>
 
@@ -31,7 +31,7 @@
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
                 <span class="dib pl5 pr5">/</span>
-                <span class="g28">寄预售跟踪表</span>
+                <span class="g28">寄售跟踪表</span>
             </div>
             <div class="r m_dn">
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
@@ -39,112 +39,106 @@
         </div>
 
         <div class="ui-tab3">
-            <a href="openToBooking.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">寄售</span><i
+            <a href="openToBooking.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">寄售跟踪表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="openToBookingTo.html" class="ui-tab3-list rel"><span
-                    class="ui-tab3-text">预售</span><i class="goldIcon ui-tab3-dot"></i></a>
+            <!-- <a href="openToBookingTo.html" class="ui-tab3-list rel"><span
+                    class="ui-tab3-text">预售</span><i class="goldIcon ui-tab3-dot"></i></a> -->
         </div>
 
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 f0">
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">&emsp;&emsp;仓库：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">重量：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">规格：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">操作日期：</span>
-                        <span class="ui-input f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-                        </span>
-                    </span>
-                </div>
-                <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">&emsp;&emsp;品名：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">牌号：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">钢厂：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">提货日期：</span>
-                        <span class="ui-input f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-                        </span>
-                    </span>
-                </div>
-
-                <div class="mb10 mt10 f0">
-                    <span class="pct25 dib f12">
+                <div class="mb10 ">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib f12">
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">品名：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib f1 f12">
                         <span class="searchLable">状态：</span>
                         <span class="selectSingle">
-                            <a class="mb10 on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">未挂牌</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">挂牌中</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">锁货中</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">已销售</a>
+                            <a class=" on" href="javscript:void(0)">全部</a>
+                            <span class="">|</span>
+                            <a class="" href="javscript:void(0)">未挂牌</a>
+                            <span class="">|</span>
+                            <a class="" href="javscript:void(0)">挂牌中</a>
+                            <span class="">|</span>
+                            <a class="" href="javscript:void(0)">锁货中</a>
+                            <span class="">|</span>
+                            <a class="" href="javscript:void(0)">已销售</a>
+                        </span>
+                    </span>
+
+                </div>
+                <div class="mb10 mt10 ">
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">&emsp;&emsp;仓库：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">规格：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct30  dib f12">
+                        <span class="searchLable">操作日期：</span>
+                        <span class="ui-input  pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
                 </div>
 
-                <div class="mb30 tc mt10">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
+                <div class="mb10 mt10 ">
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">&emsp;&emsp;重量：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">仓库：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct30 dib f12">
+                        <span class="searchLable">提货日期：</span>
+                        <span class="ui-input  pct69 range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <span class="pct22 dib">
+                        <button type="button" class="ui-button mr10">查询</button>
+                    </span>
                 </div>
-                <table class="ui-table tc f12 checkbox" width="100%" data-type="edit">
+
+                <table class="ui-table tc f12 mt30 checkbox" width="100%" data-type="edit">
                     <thead>
                         <tr>
-                            <th width="4%">类型</th>
-                            <th width="12%">单位名称/金牌商家</th>
-                            <th width="7%">操作时间</th>
-                            <th width="7%">品名</th>
-                            <th width="7%">规格</th>
-                            <th width="7%">牌号</th>
+                            <th width="12%" class="tl">
+                                <div class="pl10">
+                                    金牌商家/采购单位
+                                </div>
+                            </th>
+                            <th width="15%" class="tl">
+                                <div class="pl10">
+                                    品名/牌号/规格
+                                </div>
+                            </th>
+                            <th width="13%">操作时间</th>
                             <th width="8%">钢厂</th>
                             <th width="6%">仓库</th>
                             <th width="6%">计量方式</th>
                             <th width="6%">数量</th>
                             <th width="6%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">重量<i
-                                    class="goldIcon icon-sort vm ml5 down"></i></label>
+                                        class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <th width="6%">提货时间</th>
                             <th width="6%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">销售单价<i
-                                    class="goldIcon icon-sort vm ml5 down"></i></label>
+                                        class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <th width="6%">状态</th>
                             <th width="6%">上挂路径</th>
@@ -152,12 +146,24 @@
                     </thead>
                     <tbody class="ui-thover bgwh">
                         <tr>
-                            <td width="4%">寄售</td>
-                            <td width="12%">王至于有限公司/白浅</td>
+                            <td class="tl">
+                                <div class="pl10">
+                                    <a href="../public/goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
+                                    <div class="mt5 dac">
+                                        <i class="gongSi-icon mr1"></i>
+                                        <a href="javascript:void(0)"
+                                            title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+                                            class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="tl">
+                                <div class="pl10">
+                                    冷轧举办/SPCC-SD
+                                    <div class="col-8080">11.000*800*C</div>
+                                </div>
+                            </td>
                             <td width="7%">2020-08-31 09:49:49</td>
-                            <td width="7%">GALVANIZED PLATE</td>
-                            <td width="7%">asd123</td>
-                            <td width="7%">JHAS345</td>
                             <td width="8%">长江薄板</td>
                             <td width="6%">天津帝森库</td>
                             <td width="6%">过磅</td>
@@ -187,8 +193,7 @@
 
     <script>
         $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(9).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
         })		
     </script>
 </body>

@@ -23,6 +23,7 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
         .blue {
             color: #1365E8;
         }
@@ -53,9 +54,9 @@
         </div>
 
         <div class="ui-tab3">
-            <a href="tradeOrder.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">供应商评审</span><i
+            <a href="tradeOrder.html" class="ui-tab3-list rel"><span class="ui-tab3-text">供应商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
-            <a href="carrierReview.html" class="ui-tab3-list rel"><span class="ui-tab3-text">承运商评审</span><i
+            <a href="carrierReview.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">承运商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
             <a href="processorReview.html" class="ui-tab3-list rel"><span class="ui-tab3-text">加工商评审</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
@@ -66,48 +67,6 @@
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <div class="mb10 dac">
-                    <span class="dib dac" style="width: 44%;">
-                        <span class="searchLable">
-                            <div class="dac">
-                                评审等级<a href="javascript:void(0)" class="goldIcon icon-info dib mr5 myTipclick-p0"
-                                    qtip-dom="dom18"></a>：
-                            </div>
-                        </span>
-                        <span class="dib selectSingle">
-                            <a class='' class='' href="javscript:void(0)" class="on">武林盟主(1级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">一派掌门(2级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">江湖新秀(3级)</a>
-                            <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">初出茅庐(4级)</a>
-                        </span>
-                    </span>
-                    <span>
-                        <span class="searchLable">&emsp;有效期：</span>
-                        <div class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">一个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">三个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">六个月</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">十二个月</a>
-                        </div>
-                    </span>
-                </div>
-
-                <div class="mb10 dac">
-                    <span class="dib pct22">
-                        <span class="searchLable">仓库性质：</span>
-                        <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">自有</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">租贷</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">寄放</a>
-                        </span>
-                    </span>
                     <span class="dib pct22">
                         <span class="searchLable">评审状态：</span>
                         <span class="dib selectSingle">
@@ -119,13 +78,18 @@
                         </span>
                     </span>
                     <span class="dib pct22">
-                        <span class="searchLable">积分奖励：</span>
-                        <span class="radio">
-                            <label class="mr10"><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
+                        <span class="searchLable">单据回收状态：</span>
+                        <span class="dib selectSingle">
+                            <a class='' href="javscript:void(0)" class="on">全部</a>
+                            <span class="">|</span>
+                            <a class='' href="javscript:void(0)">已回收</a>
+                            <span class="">|</span>
+                            <a class='' href="javscript:void(0)">未回收</a>
                         </span>
+                    </span>
+                    <span class="pct22 dib">
+                        <span class="dib searchLable">现场评审员：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct30">
                         <span class="dib searchLable">评审通过日期：</span>
@@ -143,14 +107,10 @@
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="pct22 dib">
-                        <span class="dib searchLable">现场评审人员：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib">
                         <span class="dib searchLable">&emsp;&emsp;区域：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct30">
+                    <span class="dib pct25 m_pct31">
                         <span class="dib searchLable">评审到期日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -159,7 +119,7 @@
                         </span>
                     </span>
                 </div>
-                
+
                 <div class="tc mt20 mb30">
                     <button type="button" class="ml10 ui-button mr10">查询</button>
                 </div>
@@ -169,11 +129,12 @@
                         <tr class="fixTr">
                             <th width="3%">序号</th>
                             <th width="4%">区域</th>
-                            <th width="12%" class="tl">
+                            <th width="10%" class="tl">
                                 <div class="pl10">
                                     单位名称
                                 </div>
                             </th>
+                            <th width="5%">单据回收</th>
                             <th width="8%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
                                     评审通过日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
@@ -187,14 +148,14 @@
                                     交易量<i class="goldIcon icon-sort vm ml5 down"></i></label>
                             </th>
                             <!--   <th width="6%" >免检状态</th> -->
-                            <th width="9%">评审状态/等级</th>
+                            <th width="7%">评审状态/等级</th>
                             <th width="5%">实缴金额<br>(万元)</th>
                             <th width="8%">存量发票额度<br>(万元)</th>
                             <th width="8%">预付款额度<br>(万元)</th>
                             <th width="6%">未收发票金额</th>
                             <th width="6%">预付款金额</th>
                             <th width="6%">现场评审人员</th>
-                            <th width="6%">评审详情</th>
+                            <th width="5%">评审详情</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
@@ -208,6 +169,7 @@
                                         title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
                                 </div>
                             </td>
+                            <td><a href="javascript:void(0)" onclick="showTrMore(this)">2/7</a></td>
                             <td width="6%">2020-09-11</td>
                             <td width="6%">2020-12-11</td>
                             <td width="5%">1,675</td>
@@ -238,6 +200,28 @@
                                 </span>
                             </td>
                         </tr>
+                        <tr class="hideTr dn" >
+                            <td colspan="15" class="istd">
+                                <table class="ui-table auto mt15 istable" width="98% " style="display: table;">
+                                    <thead>
+                                        <tr>
+                                            <th width="20%">营业执照复印件</th>
+                                            <th width="20%">申请公司</th>
+                                            <th width="40%">费用项目</th>
+                                            <th width="20%">结算金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>JGSFH202009290021</td>
+                                            <td>上海华冶钢材加工有限公司</td>
+                                            <td>其他费用</td>
+                                            <td numtype="personal">8,500</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
                         <tr>
                             <td width="3%">1</td>
                             <td width="4%">上海</td>
@@ -248,6 +232,7 @@
                                         title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
                                 </div>
                             </td>
+                            <td><a href="">2/7</a></td>
                             <td width="6%">2020-09-11</td>
                             <td width="6%">2020-12-11</td>
                             <td width="5%">1,675</td>
@@ -275,6 +260,7 @@
                                     <!-- 跳转评审管理-单位评审-表格操作-评审 -->
                                     <a href="/LgAdmin/supApplyAction_supplierApply.action?supplier.id=E3C55DF580088E72E8D94169D60CD54C"
                                         target="_blank" id="step1">查看</a>
+
                                 </span>
                             </td>
                         </tr>
@@ -288,6 +274,7 @@
                                         title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
                                 </div>
                             </td>
+                            <td><a href="">2/7</a></td>
                             <td width="6%">2020-09-11</td>
                             <td width="6%">2020-12-11</td>
                             <td width="5%">1,675</td>
@@ -315,6 +302,7 @@
                                     <!-- 跳转评审管理-单位评审-表格操作-评审 -->
                                     <a href="/LgAdmin/supApplyAction_supplierApply.action?supplier.id=E3C55DF580088E72E8D94169D60CD54C"
                                         target="_blank" id="step1">查看</a>
+
                                 </span>
                             </td>
                         </tr>
@@ -434,6 +422,7 @@
                 },
             });
         })
+
 
         setTime4();
         var endtime = '', starttime = '';

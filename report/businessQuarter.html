@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>经营报表季度表-报表管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    
 
     <style>
         .ui-option,
@@ -237,6 +238,47 @@
         });
 
     </script>
+
+    <script>
+        /**
+             * 使用layui时间控件
+             * */
+        layui.use('laydate', function () {
+            const now = new Date();
+            const laydate = layui.laydate;
+            // 季度
+            laydate.render({
+                elem: '#summary_quarter'
+                , type: 'month'
+                , format: 'yyyy年M季度'
+                , min: "1900-1-1"
+                , max: now.getFullYear() - 1 + "-12-31"
+                , ready: function () {
+                    const hd = $("#layui-laydate" + $('#summary_quarter').attr("lay-key"));
+                    if (hd.length > 0) {
+                        hd.click(function () {
+                            ren($(this));
+                        });
+                    }
+                    ren(hd);
+                }
+            });
+            function ren(thiz) {
+                const mls = thiz.find(".laydate-month-list");
+                mls.each(function () {
+                    $(this).find("li").each(function (inx, ele) {
+                        const cx = ele.innerHTML;
+                        if (inx < 4) {
+                            ele.innerHTML = cx.replace(/月/g, "季度");
+                        } else {
+                            ele.style.display = "none";
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
