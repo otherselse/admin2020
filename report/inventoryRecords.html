@@ -56,56 +56,40 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title" width="13%"></td>
-                            <td class="cont" width="37%">
-                               
-                            </td>
-                            <td class="title" width="13%"></td>
-                            <td class="cont" width="37%">
-                                
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="df mb10">
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">订单号：&emsp;</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">品名：</span>
+                        <input type="text" class="ui-input pct69"
+                            placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">出库状态：</span>
+                        <span class="radio">
+                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>未出库</label>
+                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                        class="radio-opacity" name="radio"></i>已出库</label>
+                        </span>
+                    </span>
+                </div>
 
-                <div class="ml10 mb10 mt10 f0">
-                    <span class="pct25 dib f12">
+                <div class=" mb10 f0">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">金牌商家：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入"
                             autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">规格：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">&emsp;&emsp;品名：</span>
-                        <input type="text" class="ui-input pct69"
-                            placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">订单号：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入"
-                            autocomplete="off">
-                    </span>
-                </div>
-
-                <div class="ml10 mb10 f0">
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">&emsp;&emsp;钢厂：</span>
-                        <input type="text" class="ui-input pct69"
-                            placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">牌名：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入"
                             autocomplete="off">
                     </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct30 dib f12">
                         <span class="searchLable">入库日期：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
@@ -113,41 +97,29 @@
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
-                   
                 </div>
-                <div class="ml10 mb10 f0">
-                    <span class="pct50 dib f12">
+                <div class="mb10 f0">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">&emsp;&emsp;区域：</span>
-                        <span class="selectSingle">
-                            <a class="mb10 on" href="javscript:void(0)">全部</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">上海</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">天津</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">杭州</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">常熟</a>
-                            <span class="pr5 mb10 pl5 ">|</span>
-                            <a class="mb10" href="javscript:void(0)">无锡</a>
-                        </span>
+                        <input type="text" class="ui-input pct69"
+                            placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="pct50 dib f12">
-                        <span class="searchLable">出库类型：</span>
-                        <span class="selectSingle">
-                            <a class=" on" href="javscript:void(0)">全部</a>
-                            <span class="pr5  pl5 ">|</span>
-                            <a class="" href="javscript:void(0)">未出库</a>
-                            <span class="pr5  pl5 ">|</span>
-                            <a class="" href="javscript:void(0)">已出库</a>
-                        </span>
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">规格：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="pct30 dib f12">
+                        <span class="searchLable">&emsp;&emsp;钢厂：</span>
+                        <input type="text" class="ui-input pct69"
+                            placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct22 dib">
+                        <button type="button" class="ui-button mr10">查询</button>
                     </span>
                 </div>
-                <div class="tc mb30">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
-                </div>
-                <table class="ui-table tc f12 checkbox " width="100%" data-type="edit">
+               
+                <table class="ui-table tc f12 mt20 checkbox " width="100%" data-type="edit">
                     <thead>
                         <tr>
                             <th width="4%">序号</th>

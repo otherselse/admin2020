@@ -309,14 +309,15 @@ function hideTipCont(obj){
 
 // 用于显示订单详情
 function showStep(){
-	layer.open({
-		type: 2,
-		title: '订单详情',
-		shadeClose: true,
-		shade: 0.4,
-		area: ['80%', '80%'],
-		content: '../index/orderInfo.html' //iframe的url
-	});
+	// layer.open({
+	// 	type: 2,
+	// 	title: '订单详情',
+	// 	shadeClose: true,
+	// 	shade: 0.4,
+	// 	area: ['80%', '80%'],
+	// 	content: '../index/orderInfo.html' //iframe的url
+	// });win
+	window.open("../public/theOrderDetails.html"); 
 }
 
 //全选

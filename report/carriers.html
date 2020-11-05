@@ -52,23 +52,20 @@
             <div class="p20">
                 <div class="f0 mb15">
                     <div class="pct22 f12 dib">
-                        <span class="searchLable">客户名称：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">运输单位：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </div>
-                    <div class="pct22 f12 dib">
-                        <span class="searchLable">毛利区间：</span>
-                        <span class="ui-input pct59 f0" data-type="section">
-                            <input type="text" placeholder="请输入">
-                            <span class="pct5 dib tc">~</span>
-                            <input type="text" placeholder="请输入">
+                    <span class="pct22 dib f12">
+                        <span class="searchLable">评审状态：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont">
+                                <a href="javascript:void(0)" class="search-list db ell">采购发票</a>
+                            </div>
                         </span>
-                    </div>
-                    <div class="pct22 f12 dib">
-                        <span class="searchLable">地区：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-                    </div>
+                    </span>
                     <div class="pct30 f12 dib">
-                        <span class="searchLable">订单日期：</span>
+                        <span class="searchLable">运输时间：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
                             <span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
@@ -76,108 +73,72 @@
                         </span>
                     </div>
                 </div>
-                <div class="f12">
-                    <span class="searchLable">业务类型：</span>
-                    <div class="dib selectSingle">
-                        <a class="on" href="javscript:void(0)">现款业务</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">款到卸货</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">欠款业务</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">外贸</a>
-                    </div>
-                </div>
+
                 <div class="tc mt20 mb30">
                     <button type="button" class="ui-button">查询</button>
                 </div>
+
                 <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                     <thead>
-                        <tr>
-                            <th width="6%">金牌商家</th>
-                            <th width="4%">地区</th>
-                            <th width="4%">订单数</th>
-                            <th width="7%">超期未收款</th>
-                            <th width="7%">超期未收票</th>
-                            <th width="7%">超期库存(吨)</th>
-                            <th width="5%">累计分红</th>
-                            <th width="6%">合作客户数</th>
-                            <th width="7%">
+                        <tr class="fixTr">
+                            <th class="tablebth1" width="10%">序号</th>
+                            <th class="tablebth1" width="30%">运输单位</th>
+                            <th class="tablebth1 jpsj_Sort" width="15%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    出库总重量<i class="goldIcon icon-sort vm ml5 down"></i>
+                                    运输次数<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="7%">
+                            <th class="tablebth1 jpsj_Sort" width="15%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    销售总额<i class="goldIcon icon-sort vm ml5 down"></i>
+                                    总吨位<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="6%">库存销售成本</th>
-                            <th width="8%">
+                            <th class="tablebth1 jpsj_Sort" width="15%">
                                 <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    预估税前毛利<i class="goldIcon icon-sort vm ml5 down"></i>
+                                    总金额<i class="goldIcon icon-sort vm ml5 down"></i>
                                 </label>
                             </th>
-                            <th width="9%">平均税前毛利率(定购)</th>
-                            <th width="8%">备货总额度/余额度</th>
+                            <th class="tablebth1" width="15%">评审状态</th>
                         </tr>
                     </thead>
                     <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="goldRegInfo.html">袁大海</a><br>合伙式
-                                </div>
+                        <tr class="transSorts">
+                            <td width="10%">1</td>
+                            <td width="30%">
+                                云南花米饭运输公司
                             </td>
-                            <td>上海</td>
-                            <td><span class="blue">220</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td>123,345.34</td>
-                            <td>23</td>
-                            <td>139,344</td>
-                            <td>139,344.33元</td>
-                            <td>139,344.33元</td>
-                            <td>139,344.33元</td>
-                            <td>0.234340</td>
-                            <td>
-                                <div class="tl pl10 tipclick onT" qtip-dom="dom1">
-                                    <div class="" >
-                                        100000 <img src="../images/report/xiug.png" class="menuhook  ml10 vm altX" width="17" height="17" alt="">
-                                    </div>
-                                    <span class="col-8080">329299</span>
-                                </div>
+                            <td width="15%">
+                                1006
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="goldRegInfo.html">袁大海</a><br>综合型合伙式
-                                </div>
+                            <td width="15%">
+                                44324.130
                             </td>
-                            <td>上海</td>
-                            <td><span class="blue">220</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td><span class="red">100,334.44</span></td>
-                            <td>123,345.34</td>
-                            <td>23</td>
-                            <td>139,344</td>
-                            <td>139,344.33元</td>
-                            <td>139,344.33元</td>
-                            <td>139,344.33元</td>
-                            <td>0.234340</td>
-                            <td>
-                                <div class="tl pl10 tipclick onT" qtip-dom="dom1">
-                                    <div class="" >
-                                        100000 <img src="../images/report/xiug.png" class="menuhook  ml10 vm altX" width="17" height="17" alt="">
-                                    </div>
-                                    <span class="col-8080">329299</span>
-                                </div>
+                            <td width="15%">
+                                651177.976
+                            </td>
+                            <td width="15%">
+                                过期
                             </td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr height="45">
+                            <td>当前页合计</td>
+                            <td></td>
+                            <td>2664</td>
+                            <td>169419.770</td>
+                            <td>15961845.516</td>
+                            <td>--</td>
+                        </tr>
+                        <tr height="45">
+                            <td>所有页合计</td>
+                            <td></td>
+                            <td>2664</td>
+                            <td>169419.770</td>
+                            <td>15961845.516</td>
+                            <td>--</td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
@@ -201,7 +162,7 @@
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-        
+
             $('.tipclick').qtip({
                 show: { event: 'click' },
                 hide: 'unfocus',
@@ -221,8 +182,8 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
                 },
             });
-            
-            $('.altX').click(function(event){
+
+            $('.altX').click(function (event) {
                 event.stopPropagation();
                 $(this).parents(".onT").click();
             });
