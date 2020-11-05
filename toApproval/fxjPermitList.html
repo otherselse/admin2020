@@ -30,7 +30,7 @@
 			<div class="l gga">
 				<a href="../index/index.html" class="gga">首页</a>
 				<span class="dib pl5 pr5 ">/</span>
-				审批
+				审批管理
 				<span class="dib pl5 pr5">/</span>
 				<span class="g28">风险保证金审核</span>
 			</div>
@@ -83,7 +83,7 @@
 									<td width="14%">上海</td>
 									<td width="13%" numtype="formatMoney">100,000</td>
 									<td width="10%">审核通过</td>
-									<td width="10%"><a href="javascript:void(0)" class="tipclick" qtip-dom="dom3">审核</a></td>
+									<td width="10%"><a href="javascript:void(0)" class="tipclick" qtip-dom="dom3">查看</a></td>
 								</tr>
 								<tr class="openTr">
 									<td width="6%">1</td>
@@ -98,38 +98,35 @@
 								<tr class="hideTr dn">
 									<td colspan="8">
 										<div class="auto tl" style="width: 98%;">
-											<div class="b g28">风险保证金充值申请意见</div>
-											<table class="ui-table f12 pct100 row mt15">
-												<tbody>
-													<tr>
-														<td width="20%">本人审批意见：</td>
-														<td width="80%">
-															<span class="radio">
-																<label class="mr15">
-																	<i class="ui-radio goldIcon v-3 mr2 on">
-																		<input type="radio" class="radio-opacity"
-																			name="radio">
-																	</i>同意申请
-																</label>
-																<label>
-																	<i class="ui-radio goldIcon v-3 mr2">
-																		<input type="radio" class="radio-opacity"
-																			name="radio">
-																	</i>不同意申请
-																</label>
-															</span>
-														</td>
-
-													</tr>
-													<tr>
-														<td class="vt">本人审批备注：</td>
-														<td>
-															<textarea class="pct98 ui-textarea" cols="30"
-																rows="6"></textarea>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+											<div class="b g28 f14 lable_t">风险保证金充值申请意见</div>
+											<div class="auto bgwh pb30 pt20 mt15" style="width:98%">
+												<div class="clt-check-cont  ml20 pct95 tl">
+													<div class="cl clt-check-box">
+														<div class="clt-check-left">
+															<div class="pt20 pb20 mr10 tr">
+																<span class="b g28 ">
+																		本人 <br>
+																		审批结果
+																</span>
+															</div>
+														</div>
+														<div class="clt-check-right reviewBox auto ">
+															<div class="clt-check-rcont f12">
+																<div>
+																	<span class="radio pct30 dib">
+																		<label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+																		<label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+																	</span>
+																</div>
+																	<textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tc mt20">
+													<button class="ui-button mr15" type="button">提交</button>
+												</div>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -182,6 +179,13 @@
 		function openDetails(obj) {
 			$(obj).parents(".openTr").next("tr").toggle()
 		}
+		function clickPermit(obj, flag) {
+            if (flag == "1") {
+                $(obj).parents(".clt-check-rcont").find("textarea").val("备注：同意申请。");
+            } else {
+                $(obj).parents(".clt-check-rcont").find("textarea").val("备注：不同意申请。");
+            }
+        }
 	</script>
 </body>
 

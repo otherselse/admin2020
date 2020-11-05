@@ -34,6 +34,7 @@
                     <span class="dib f0 rel"><i class="proceIcon vt rel"></i><span
                             class="proceBg  f12">客户单位</span></span>
                     <span class="ui-label t_1 ml5 f12" data-type="red">自贸区</span>
+                    <a href="javascript:void(0)" class="ui-button r" data-type="back" onclick="prev()">返回</a>
                 </div>
                 <div class="mt20">
                     <span class="lable_t f16 b g28">基本信息</span>
@@ -385,6 +386,9 @@
         //展开明细
         function openDetails(obj) {
             $(obj).parents(".openTr").next("tr").toggle()
+        }
+        function prev() {
+            window.history.back(-1)
         }
     </script>
 </body>
