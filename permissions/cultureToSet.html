@@ -154,7 +154,7 @@
                         </tr>
                         <tr class="resource-table">
                           <td class="cont  adm_mAppCont" >
-                                --
+                                
                           </td>
                         </tr>
                     </tbody>
@@ -170,7 +170,8 @@
                             <th width="10%">审批人数</th>
                             <th width="10%">节点类型</th>
                             <th width="10%">该节点动作</th>
-                            <th width="15%">该节点是否接受短信</th>                         
+                            <th width="15%">该节点是否接受短信</th>
+                            <th width="10%">操作</th>                         
                         </tr>
                     </thead>
                     <tbody>
@@ -370,7 +371,7 @@
           // var str='<a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel adm_optMenu" id="sort'+$(obj).attr("id")+'" pid="'+pid+'" chain="'+chain+'">'+$(obj).text()+'<i class="icon-menudel admIcon"></i></a>';
           var str='<tr class="ui-thover adm_optMenu" id="sort'+$(obj).attr("id")+'" bid="'+bid+'" pid="'+pid+'" chain="'+chain+'">'+
                   '  <td><a href="javascript:void(0)" class="g28" onclick="delCulMenuTab(this)">'+$(obj).text()+'<i class="p_closeIcon vm ml5"></i></a></td>'+
-                  '  <td colspan="6" style="padding: 0"><table class="ui-table noline checkbox" width="100%" style="border:0">'+
+                  '  <td colspan="7" style="padding: 0"><table class="ui-table noline checkbox" width="100%" style="border:0">'+
                                 '    <tbody><tr>'+
                                 '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第1节点</label></div></td>'+
                                 '        <td width="10%">复核</td>'+
@@ -378,6 +379,7 @@
                                 '        <td width="10%">有管理员配置</td>'+
                                 '        <td width="10%">普通操作</td>'+
                                 '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+                                '        <td width="10%"><a href="javscript:void(0)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
                                 '    </tr>'+
                                 '    <tr>'+
                                 '       <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第2节点</label></div></td>'+
@@ -386,6 +388,7 @@
                                 '        <td width="10%">有管理员配置</td>'+
                                 '        <td width="10%">普通操作</td>'+
                                 '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+                                '        <td width="10%"><a href="javscript:void(0)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
                                 '    </tr>'+
                                 '    <tr>'+
                                 '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>第3节点</label></div></td>'+
@@ -394,6 +397,7 @@
                                 '        <td width="10%">有管理员配置</td>'+
                                 '        <td width="10%">普通操作</td>'+
                                 '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+                                '        <td width="10%"><a href="javscript:void(0)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
                                 '    </tr>'+
                                 '     <tr>'+
                                 '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第4节点</label></div></td>'+
@@ -402,6 +406,7 @@
                                 '        <td width="10%">有管理员配置</td>'+
                                 '        <td width="10%">普通操作</td>'+
                                 '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+                                '        <td width="10%"><a href="javscript:void(0)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
                                 '    </tr>'+
                                 '</tbody></table></td></tr>';
           return str;
