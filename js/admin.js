@@ -205,8 +205,8 @@ $(function(){
 
 
 	$(".selectSingle").find("a").on("click",function(){
-				$(this).addClass("on").siblings().removeClass("on");
-			})
+		$(this).addClass("on").siblings().removeClass("on");
+	})
 
 	//selectProcName 展开收起 以及是否显示展开
 	if($(".selectProcName").height()>24){
@@ -217,7 +217,7 @@ $(function(){
 	}
 
 	//switch
-	$(".manage-switch").on("click", function () {
+	$("body").on("click",".manage-switch",function () {
 		$(this).toggleClass("on");
 	})
 
