@@ -36,35 +36,34 @@
         </div>
 		<div class="ui-content minH">
 			<div class="p20">
-				<div class="cl mb10 f12 ">
-					<span class="searchLable">评审状态：</span>
-					<span class="single mr20">
-						<input type="hidden">
-						<button type="button" class="ui-option mr5 on" value="0" id="permitFlag2" name="indexType" onclick="checkIsSelect(this)">待评审</button>
-						<button type="button" class="ui-option" name="indexType" id="permitFlag1" value="1" onclick="checkIsSelect(this)">评审完成</button>
-					</span>
-					<span id="permitFlag" class="dn">
-						<span class="searchLable">审批退回：</span>
-						<span class="radio mr20">
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
-					</span>
-					</span>
-					
-					
-				</div>
-				<div class="cl f0">
-					<span class="dib pct25 f12">
-						<span class="searchLable">单位名称：</span>
-						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-					</span>
-					<span class="dib pct25 f12">
-						<span class="searchLable">申请时间：</span>
-						<span class="ui-input tc f0 pct69  range" data-type="time">
-							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+				<div class="cl mb10 f0 ">
+					<span class="dib  f12">
+						<span class="searchLable">评审状态：</span>
+						<span class="single mr40">
+							<input type="hidden">
+							<button type="button" class="ui-option mr5 on" value="0" id="permitFlag2" name="indexType" onclick="checkIsSelect(this)">待评审</button>
+							<button type="button" class="ui-option" name="indexType" id="permitFlag1" value="1" onclick="checkIsSelect(this)">评审完成</button>
 						</span>
 					</span>
-					<span class="dib f12 m_mt10">
+					
+					
+					<span id="permitFlag0" class="f12">
+						<span class="searchLable">是否系统提交：</span>
+						<span class="radio mr20">
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>
+					</span>
+					<span id="permitFlag" class="dn f12">
+						<span class="searchLable">审批退回：</span>
+						<span class="radio mr20">
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>
+					</span>
+				</div>
+				<div class="mb10 f0">
+					<span class="dib f12 ">
 						<span class="searchLable">评审类型：</span>
 						<div class="dib selectSingle">
 									<a class="on" href="javascript:void(0)">全部</a>
@@ -81,9 +80,32 @@
 								</div>
 					</span>
 				</div>
-				<div class="tc mt20">
-					<button type="button" class="ui-button mr20">查询</button>
-					<button type="button" class="ui-button" data-type="clear">清空</button>
+				<div class="cl f0">
+					<span class="dib pct25 f12">
+						<span class="searchLable">单位名称：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="dib pct25 f12">
+						<span class="searchLable">区域：</span>
+						<span class="input-selSearch pct69">
+							<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+							<div class="search-cont pct100">
+								<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+					</span>
+					<span class="dib pct30 f12">
+						<span class="searchLable">申请时间：</span>
+						<span class="ui-input tc f0 pct69  range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+						</span>
+					</span>
+					<button type="button" class="ui-button">查询</button>
 				</div>
 				<table class="ui-table tc f12 mt30" width="100%">
 					<thead>
@@ -196,9 +218,11 @@
 			var val = $(obj).val()
 			console.log(val)
 			 if(val=='1'){
+				 $("#permitFlag0").hide()
 				 $("#permitFlag").show()
 			 }else{
 				$("#permitFlag").hide()
+				$("#permitFlag0").show()
 			 }
 
 			// var target = document.getElementById('permitFlag');
