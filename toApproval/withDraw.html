@@ -40,43 +40,55 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f0">
-                        <span class="searchLable f12">状态：</span>
-                        <div class="dib selectSingle mr40 f12">
-                            <a class="on" href="javscript:void(0)">申请中</a>
-                            <span class="pr5 pl5">|</span>
-                            <a href="javscript:void(0)" class="">已处理</a>
-                            <span class="pr5 pl5">|</span>
-                            <a href="javscript:void(0)" class="">退回</a>
-                        </div>
-                </div>
-                <div class="mb10 f0">
-                    <span class="pct25 f12 dib">
-                        <span class="searchLable">区域：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入"
-                            autocomplete="off">
+                    <span class="dib f12 pct50">
+                        <span class="searchLable f12">审批状态：</span>
+                        <span class="single">
+                            <button type="button" class="ui-option mr5 on">申请中</button>
+                            <button type="button" class="ui-option mr5 ">已处理</button>
+                            <button type="button" class="ui-option">退回</button>
+                        </span>
                     </span>
-                    <span class="pct25 f12 dib">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input  pct59" placeholder="请输入">
-                    </span>
-                    <span class="dib f12  pct25">
-                        <span class="searchLable">申请时间：</span>
-                            <span class="ui-input tc f0 pct69  range" data-type="time">
-                                 <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
-                                      autocomplete="off">
-                            </span>
-                    </span>
-                    <span class="dib pct25 f12">
-                        <span class="searchLable f12">提成类型：</span>
-                        <span class="radio f12">
+                    <span class="dib  f12">
+                        <span class="searchLable">提成类型：</span>
+                        <span class="radio">
                             <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>零售</label>
                             <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工</label>
                         </span>
                     </span>
                 </div>
-                <div class="mb10  f0">
+                <div class="f0">
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input  pct69" placeholder="请输入">
+                    </span>
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">所属区域：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                    <span class="pct25 f12 dib">
+                        <span class="searchLable">提现金额：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入"
+                            autocomplete="off">
+                    </span>
+                    <span class="dib f12  pct25">
+                        <span class="searchLable">提现日期：</span>
+                            <span class="ui-input tc f0 pct69  range" data-type="time">
+                                 <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+                                      autocomplete="off">
+                            </span>
+                    </span>
                 </div>
-                <div class="tc f12">
+                <div class="tc f12 mt30">
                     <button class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30 checkbox">
