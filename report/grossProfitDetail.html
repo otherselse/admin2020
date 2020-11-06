@@ -19,6 +19,51 @@
             background: #fff;
             min-width: auto;
         }
+
+        .table-cell-fix-left,
+        .table-cell-fix-right {
+            left: 0;
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            z-index: 2;
+            background: #fff;
+        }
+
+        .m-tabLimitSCroll {
+            overflow: auto;
+        }
+
+        .ui-table tbody td {
+            padding: 5px 2px
+        }
+
+        @media (max-width: 1440px) {
+            .m-tabLimitSCroll {
+                /* max-height: 520px; */
+            }
+
+            .ui-table {
+                min-width: 1440px;
+            }
+        }
+
+        .table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
     </style>
 
 </head>
@@ -56,290 +101,230 @@
             <a href="domesticSettlement.html" class="ui-tab3-list rel"><span class="ui-tab3-text">内贸结算毛利表</span><i
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
+
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <table class="ui-table tc f12 auto" width="100%">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td class="title searchLable" width="13%">出库类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="checkbox">
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>运输出库</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>商户通出库</label>
-                                </span>
-                            </td>
-                            <td class="title searchLable searchLable" width="13%">金牌商家类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="checkbox">
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>综合型合伙式金牌商家</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>业务性合伙式金牌商家</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>加盟式金牌商家</label>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="resource-table">
-                            <td class="title searchLable" width="13%">入库类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="checkbox">
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>商户通入库</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>定购入库</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>备货入库</label>
-                                </span>
-                            </td>
-                            <td class="title searchLable" width="13%">业务类型：</td>
-                            <td class="cont" width="37%">
-                                <span class="checkbox">
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>自营备货</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>现款业务</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>欠款业务</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>款到卸货</label>
-                                    <label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2 on"><input
-                                                type="checkbox" class="checkbox-opacity"
-                                                name="checkbox"></i>非自营备货</label>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table width="100%" class="mt10">
-                    <tr>
-                        <td width="25%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib searchLable">金牌商家：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib searchLable">金牌商家区域：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入金牌商家区域" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib searchLable">订单号：</span>
-                                <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
-                            </span>
-                        </td>
-                        <td width="25%">
-                            <span class="input-selSearch pct100 ">
-                                <span class="dib searchLable">出库日期：</span>
-                                <span class="ui-input tc f0 pct69  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc mt20 mb10">
-                                <button type="button" class="ui-button mr10">查询</button>
-                                <button type="button" class="ui-button " data-type="clear">清空</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <div class="df mb5">
-                    <div style="flex: 1;"></div>
-                    <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
-                        表头配置
-                        <img src="../images//report/sl1.png" class="mr5" alt="">
-                    </a>
+                <div class="mb10 dac">
+                    <span class="pct30 dib">
+                        <span class="dib searchLable">订单号：&emsp;</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+                    </span>
+                    <span class="f1">
+                        <span class="searchLable">&emsp;&emsp;出库类型：</span>
+                        <span class="checkbox">
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 on"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>运输出库</label>
+                            <label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>商户通出库</label>
+                        </span>
+                    </span>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="3%">序号</th>
-                            <th width="3%">业务类型</th>
-                            <th width="4%">出库订单号</th>
-                            <th width="4%">出库类型</th>
-                            <th width="4%">金牌商家名称</th>
-                            <th width="4%">金牌商家区域</th>
-                            <th width="4%">金牌商家类型</th>
-                            <th width="4%">出库时间</th>
-                            <th width="4%">出库重量</th>
-                            <th width="4%">品名</th>
-                            <th width="4%">规格</th>
-                            <th width="4%">销售金额</th>
-                            <th width="3%">运输费</th>
-                            <th width="3%">加工费</th>
-                            <th width="3%">入库订单号</th>
-                            <th width="3%">入库类型</th>
-                            <th width="3%">采购金额</th>
-                            <th width="3%">原始成本金额</th>
-                            <th width="3%">短驳费</th>
-                            <th width="3%">仓储费</th>
-                            <th width="3%">预计税前毛利金额</th>
-                            <th width="3%">税金</th>
-                            <th width="3%">增值税</th>
-                            <th width="3%">印花金</th>
-                            <th width="3%">附加税</th>
-                            <th width="3%">个税</th>
-                            <th width="3%">预计税后毛利</th>
-                            <th width="3%">分红比例</th>
-                            <th width="3%">预计分红</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="3%">自营备货</td>
-                            <td width="4%"><a href="javascript:void(0)" onclick="showStep()">56581</a></td>
-                            <td width="4%">运输出库</td>
-                            <td width="4%">赵自立</td>
-                            <td width="4%">上海</td>
-                            <td width="4%">业务型合伙式金牌商家</td>
-                            <td width="4%">2019-09-30 14:09:47</td>
-                            <td width="4%">10.06</td>
-                            <td width="4%">热轧卷板</td>
-                            <td width="4%">10.000*800*C</td>
-                            <td width="4%">30,180</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%"><a href="javascript:void(0)" onclick="showStep()">56581</a></td>
-                            <td width="3%">定购入库</td>
-                            <td width="3%">20,000</td>
-                            <td width="3%">20,000</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">10,180</td>
-                            <td width="3%">5,406.76</td>
-                            <td width="3%">1,404.14</td>
-                            <td width="3%">12.98</td>
-                            <td width="3%">84.25</td>
-                            <td width="3%">1,735.73</td>
-                            <td width="3%">4,773.24</td>
-                            <td width="3%">20</td>
-                            <td width="3%">2,036</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <!-- <tr height="45">
-                            <td colspan="29">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">当前页合计：</div>
-                                    <div class="tl">
-                                        出库重量:<span class="red mr10">10</span>
-                                        销售金额:<span class="red mr10">1.000</span>
-                                        运输费:<span class="red mr10">1.000</span>
-                                        采购金额:<span class="red mr10">1.000</span>
-                                        原始成本金额:<span class="red mr10">1.000</span>
-                                        短驳费:<span class="red mr10">1.000</span>
-                                        仓储费:<span class="red mr10">1.000</span>
-                                        预计税前毛利金额:<span class="red mr10">1.000</span>
-                                        税金:<span class="red mr10">1.000</span>
-                                        增值税:<span class="red mr10">1.000</span>
-                                        印花金:<span class="red mr10">1.000</span>
-                                        附加税:<span class="red mr10">1.000</span>
-                                        个税:<span class="red mr10">1.000</span>
-                                        预计税后毛利:<span class="red mr10">1.000</span>
-                                        预计分红:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="29">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">所有页合计：</div>
-                                    <div class="tl">
-                                        出库重量:<span class="red mr10">10</span>
-                                        销售金额:<span class="red mr10">1.000</span>
-                                        运输费:<span class="red mr10">1.000</span>
-                                        采购金额:<span class="red mr10">1.000</span>
-                                        原始成本金额:<span class="red mr10">1.000</span>
-                                        短驳费:<span class="red mr10">1.000</span>
-                                        仓储费:<span class="red mr10">1.000</span>
-                                        预计税前毛利金额:<span class="red mr10">1.000</span>
-                                        税金:<span class="red mr10">1.000</span>
-                                        增值税:<span class="red mr10">1.000</span>
-                                        印花金:<span class="red mr10">1.000</span>
-                                        附加税:<span class="red mr10">1.000</span>
-                                        个税:<span class="red mr10">1.000</span>
-                                        预计税后毛利:<span class="red mr10">1.000</span>
-                                        预计分红:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
+                <div class="mb10 dac">
+                    <span class="pct30 dib">
+                        <span class="dib searchLable">区域：&emsp;&emsp;</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+                    </span>
+                    <span class="f1">
+                        <span class="searchLable">&emsp;&emsp;入库类型：</span>
+                        <span class="checkbox">
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 on"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>商户通入库</label>
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>定购入库</label>
+                            <label class=""><i class="ui-checkbox goldIcon v-3 mr2 "><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>备货入库</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="mb10 dac">
+                    <span class="pct30 dib">
+                        <span class="dib searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+                    </span>
+                    <span class="f1">
+                        <span class="searchLable">金牌商家类型：</span>
+                        <span class="checkbox">
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 on"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>综合型合伙式</label>
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>业务性合伙式</label>
+                            <label class=""><i class="ui-checkbox goldIcon v-3 mr2 "><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>加盟式</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="mb10 dac">
+                    <span class="pct30 dib">
+                        <span class="dib searchLable">出库日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+                                class="render-time pct45" readonly="">
+                        </span>
+                    </span>
+                    <span class="f1">
+                        <span class="searchLable">&emsp;&emsp;业务类型：</span>
+                        <span class="checkbox">
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 on"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>自营备货</label>
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>现款业务</label>
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 "><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>欠款业务</label>
+                            <label class="mr10"><i class="ui-checkbox goldIcon v-3 mr2 "><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>款到卸货</label>
+                            <label class=""><i class="ui-checkbox goldIcon v-3 mr2 "><input type="checkbox"
+                                        class="checkbox-opacity" name="checkbox"></i>非自营备货</label>
+                        </span>
+                        <button type="button" class="ui-button ml20">查询</button>
+                    </span>
+                </div>
 
-                        <tr height="45">
-                            <td colspan="8">当前页合计:</td>
-                            <td>51.1</td>
-                            <td></td>
-                            <td></td>
-                            <td>209,637.18</td>
-                            <td>134</td>
-                            <td>0</td>
-                            <td></td>
-                            <td></td>
-                            <td>162,950</td>
-                            <td>162,950</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>46,553.18</td>
-                            <td>24,745.5</td>
-                            <td>6,421.13</td>
-                            <td>96.38</td>
-                            <td>385.28</td>
-                            <td>7,930.08</td>
-                            <td>21,807.68</td>
-                            <td>--</td>
-                            <td>16,341.28</td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="8">所有页合计:</td>
-                            <td>105,930.276</td>
-                            <td></td>
-                            <td></td>
-                            <td>444,375,392.44</td>
-                            <td>1,435,375.79</td>
-                            <td>703,985.41</td>
-                            <td></td>
-                            <td></td>
-                            <td>274,051,641.04</td>
-                            <td>245,540,238.23</td>
-                            <td>37,920</td>
-                            <td>823,979.73</td>
-                            <td>167,322,490.47</td>
-                            <td>91,024,989.98</td>
-                            <td>23,697,535.38</td>
-                            <td>185,666.14</td>
-                            <td>1,435,361.94</td>
-                            <td>29,202,854.14</td>
-                            <td>76,297,500.49</td>
-                            <td>--</td>
-                            <td>12,235,291.726</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <!-- table end -->
-                <script type="text/javascript" src="../js/pagelist.js"></script>
+                <div class="m-tabLimitSCroll fixrightTab">
+                    <table class="ui-table tc f12 mt20 checkbox table-cw" width="100%" data-type="edit">
+                        <thead>
+                            <tr>
+                                <th width="6%" class="tl">
+                                    <div class="pl10">
+                                        出库订单号
+                                    </div>
+                                </th>
+                                <th width="10%" class="tl">
+                                    <div class="pl10">
+                                        金牌商家/区域/类型
+                                    </div>
+                                </th>
+                                <th width="5%">业务类型</th>
+                                <th width="10%" class="tl">
+                                    <div class="pl10">
+                                        品名/规格
+                                    </div>
+                                </th>
+                                <th width="11%" class="tl">
+                                    <div class="pl10">
+                                        出库重量/时间
+                                    </div>
+                                </th>
+                                <th width="5%">销售金额</th>
+                                <th width="4%">运输费</th>
+                                <th width="4%">加工费</th>
+                                <th width="6%" class="tl">
+                                    <div class="pl10">入库订单号</div>
+                                </th>
+                                <th width="5%">采购金额</th>
+                                <th width="5%">原始成本金额</th>
+                                <th width="5%">预计税前毛利金额</th>
+                                <th width="7%">税金</th>
+                                <th width="6%">预计税后毛利</th>
+                                <th width="5%">分红比例</th>
+                                <th width="5%">预计分红</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        <a href="javascript:void(0)" onclick="showStep()">56581</a>
+                                        <div class="col-8080">出库运输</div>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        马云云&nbsp;/&nbsp;上海
+                                        <div class="col-8080">综合性合伙式</div>
+                                    </div>
+                                </td>
+                                <td>自营备货</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        热轧卷板
+                                        <div class="col-8080">1800.000*4500*C</div>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        102.12
+                                        <div class="col-8080">2019-09-30 12:33:34</div>
+                                    </div>
+                                </td>
+                                <td>2112</td>
+                                <td>2112</td>
+                                <td>2112</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        <a href="javascript:void(0)" onclick="showStep()">56581</a>
+                                        <div class="col-8080">定期入库</div>
+                                    </div>
+                                </td>
+                                <td>30,180</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><a href="javascript:void(0)" class="tiptop" title="
+                                    <span class='col-8080'>增值税：&emsp;&emsp;</span>3000.00<br>
+                                    <span class='col-8080'>附加税：&emsp;&emsp;</span>3000.00<br>
+                                    <span class='col-8080'>印花税：&emsp;&emsp;</span>3000.00<br>
+                                    <span class='col-8080'>企业所得税：&emsp;&emsp;</span>3000.00<br>
+                                    <span class='col-8080'>个人所得税：&emsp;&emsp;</span>未结算分红,未计算个税<br>
+                                    ">565811.21</a>
+                                </td>
+                                <td>4,773.24</td>
+                                <td>20%</td>
+                                <td>26%</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="">
+                            <!-- <tr height="45">
+                                <td colspan="8">当前页合计:</td>
+                                <td>51.1</td>
+                                <td></td>
+                                <td></td>
+                                <td>209,637.18</td>
+                                <td>134</td>
+                                <td>0</td>
+                                <td></td>
+                                <td></td>
+                                <td>162,950</td>
+                                <td data-item-field="ys">162,950</td>
+                                <td data-item-field="db">0</td>
+                                <td data-item-field="kind">0</td>
+                                <td>46,553.18</td>
+                                <td>24,745.5</td>
+                                <td>6,421.13</td>
+                                <td>96.38</td>
+                                <td>385.28</td>
+                                <td>7,930.08</td>
+                                <td>21,807.68</td>
+                                <td>--</td>
+                                <td>16,341.28</td>
+                            </tr> -->
+                            <tr height="45">
+                                <td colspan="4">所有页合计:</td>
+                                <td>105,930.276</td>
+                                <td>105,930.276</td>
+                                <td>105,930.276</td>
+                                <td>444,375,392.44</td>
+                                <td>1,435,375.79</td>
+                                <td>703,985.41</td>
+                                <td></td>
+                                <td >162,950</td>
+                                <td>1,435,361.94</td>
+                                <td>29,202,854.14</td>
+                                <td>76,297,500.49</td>
+                                <td>76,297,500.49</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!-- table end -->
+                </div>
             </div>
+            <script type="text/javascript" src="../js/pagelist.js"></script>
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
+
+
+
+
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -377,7 +362,6 @@
                 content: 'groToReadyForTheTrack.html' //iframe的url
             });
         }
-
     </script>
 </body>
 

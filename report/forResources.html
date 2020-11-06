@@ -23,6 +23,51 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
+        .table-cell-fix-left,
+        .table-cell-fix-right {
+            left: 0;
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            z-index: 2;
+            background: #fff;
+        }
+
+        .m-tabLimitSCroll {
+            overflow: auto;
+        }
+
+        .ui-table tbody td {
+            padding: 5px 2px
+        }
+
+        @media (max-width: 1440px) {
+            .m-tabLimitSCroll {
+                /* max-height: 520px; */
+            }
+
+            /* .ui-table {
+                min-width: 1440px;
+            } */
+        }
+
+        .table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
     </style>
 
 </head>
@@ -84,7 +129,7 @@
                         <input type="text" class="ui-input pct69" placeholder="请输入规格" autocomplete="off">
                     </span>
                     <span class="dib pct22">
-                        <span class="searchLable">品名：</span>
+                        <span class="searchLable">&emsp;品名：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入品名" autocomplete="off">
                     </span>
                     <span class="dib pct22">
@@ -105,21 +150,13 @@
                         <div class="df">
                             <di class="min-w60 searchLable">交易模式：</di>
                             <div class="selectSingle gc">
-                                <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                <a class="mb10 on" href="javscript:void(0)">复核式</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                <a class="mb10" href="javscript:void(0)">直挂式</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">鲍帮</a>
+                                <a class="mb10" href="javscript:void(0)">核价式</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">互帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">菲菲帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                <a class="mb10" href="javscript:void(0)">无</a>
                             </div>
                         </div>
                     </span>
@@ -127,19 +164,11 @@
                         <div class="df">
                             <div class="min-w60 searchLable">金牌商家类型：</div>
                             <div class="dib selectSingle gc">
-                                <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                <a class="mb10 on" href="javscript:void(0)">合伙式</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                <a class="mb10" href="javscript:void(0)">加盟式</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">鲍帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">互帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                                <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">菲菲帮</a>
+                                <a class="mb10" href="javscript:void(0)">供应链式</a>
                             </div>
                         </div>
                     </span>
@@ -149,28 +178,28 @@
                         <div class="df">
                             <div class="min-w60 searchLable">挂牌状态：</div>
                             <div class="dib selectSingle gc">
-                                <a class="mb10 on" href="javscript:void(0)">全部</a>
+                                <a class="mb10 on" href="javscript:void(0)">未挂牌</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">魏热帮</a>
+                                <a class="mb10" href="javscript:void(0)">挂牌审核中</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">鲍帮</a>
+                                <a class="mb10" href="javscript:void(0)">重新定价审核中</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">互帮</a>
+                                <a class="mb10" href="javscript:void(0)">撤销审核中</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">哈哈帮</a>
+                                <a class="mb10" href="javscript:void(0)">挂牌中</a>
                                 <span class="mb10">|</span>
-                                <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+                                <a class="mb10" href="javscript:void(0)">提货中</a>
                             </div>
                         </div>
                     </span>
                     <span class="dib pct50">
                         <div class="df">
                             <div class="min-w60 searchLable"> &emsp;&emsp;货物类型：</div>
-                            <div class="radio">
-                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>互帮</label>
-                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>魏热帮</label>
+                            <div class="radio ml2">
+                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>现货</label>
+                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+                                            class="radio-opacity" name="radio"></i>期货</label>
                             </div>
                         </div>
                     </span>
@@ -179,97 +208,111 @@
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="4%">金牌商家</th>
-                            <th width="3%">区域</th>
-                            <th width="4%">金牌商家类型</th>
-                            <th width="4%">货物类型</th>
-                            <th width="4%">订单号</th>
-                            <th width="4%">品名</th>
-                            <th width="4%">规格</th>
-                            <th width="4%">牌号</th>
-                            <th width="4%">钢厂</th>
-                            <th width="4%">计量方式</th>
-                            <th width="4%">重量</th>
-                            <th width="4%">仓库</th>
-                            <th width="6%">入库时间</th>
-                            <th width="6%">挂牌时间</th>
-                            <th width="5%">交易模式</th>
-                            <th width="4%">市场定价</th>
-                            <th width="4%">原始采购单价</th>
-                            <th width="5%">采购价格</th>
-                            <th width="5%">当前价格</th>
-                            <th width="5%">分红模式</th>
-                            <th width="5%">挂牌状态</th>
-                            <th width="5%">挂牌途径</th>
-                            <th width="5%">记录</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="4%">唐一菲</td>
-                            <td width="3%">上海</td>
-                            <td width="4%">加盟式金牌商家</td>
-                            <td width="4%">现货</td>
-                            <td width="4%">36330</td>
-                            <td width="4%">H型钢</td>
-                            <td width="4%">1.250*1250*2500</td>
-                            <td width="4%">Q235</td>
-                            <td width="4%">鞍钢</td>
-                            <td width="4%">过磅</td>
-                            <td width="4%">52.369</td>
-                            <td width="4%">第三梦</td>
-                            <td width="6%">2016-11-28 00:00:00</td>
-                            <td width="6%">2016-11-28</td>
-                            <td width="5%">复核式一键购买</td>
-                            <td width="4%">3,100</td>
-                            <td width="4%">3,250</td>
-                            <td width="5%">3,250</td>
-                            <td width="5%">
-                                <input type="text" class="ui-input tc pct90" value="0988997" autocomplete="off"
-                                    style="border: 1px #2487E4 solid;">
-                            </td>
-                            <td width="5%"></td>
-                            <td width="5%"> 挂牌中</td>
-                            <td width="5%">-- </td>
-                            <td width="5%" class="blue">
-                                <a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
-                            </td>
-                        </tr>
-                        <!-- 点击执行显示 -->
-                        <tr class="hideTr dn  pct22">
-                            <td colspan="23">
-                                <div class="pl20 pr20">
-                                    <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                        <thead>
-                                            <th width="20%">修改时间</th>
-                                            <th width="15%">修改人</th>
-                                            <th width="10%">原销售单价</th>
-                                            <th width="15%">调整后的销售单价</th>
-                                        </thead>
-                                        <tbody>
-                                            <td>2020-12-12 12:12:12</td>
-                                            <td>唐玉洁</td>
-                                            <td>1221</td>
-                                            <td>122111</td>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr><!-- 隐藏内容end -->
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="23">当前页合计重量(吨)：<span class="red">4028</span></td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="23">所有页合计重量(吨)：<span class="red">4028</span></td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <!-- table end -->
+                <!-- <div class="m-tabLimitSCroll lgui-table-box fixrightTab"> -->
+                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                        <thead>
+                            <tr>
+                                <th width="4%">金牌商家</th>
+                                <th width="3%">区域</th>
+                                <th width="6%">金牌商家类型</th>
+                                <th width="4%">货物类型</th>
+                                <th width="4%">订单号</th>
+                                <!-- <th width="4%">品名</th>
+                                <th width="4%">规格</th>
+                                <th width="4%">牌号</th> -->
+                                <th width="10%" class="tl">
+                                    <div class="pl10">
+                                        品名/牌号/规格
+                                    </div>
+                                </th>
+                                <th width="4%">钢厂</th>
+                                <th width="4%">计量方式</th>
+                                <th width="4%">重量</th>
+                                <th width="4%">仓库</th>
+                                <th width="6%">入库时间</th>
+                                <th width="6%">挂牌时间</th>
+                                <th width="5%">交易模式</th>
+                                <th width="4%">市场定价</th>
+                                <th width="4%">原始采购单价</th>
+                                <th width="5%">采购价格</th>
+                                <th width="5%">当前价格</th>
+                                <th width="5%">分红模式</th>
+                                <th width="5%">挂牌状态</th>
+                                <th width="5%">挂牌途径</th>
+                                <th width="4%">记录</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td width="4%">唐一菲</td>
+                                <td width="3%">上海</td>
+                                <td width="4%" class="tl">加盟式金牌商家</td>
+                                <td width="4%">现货</td>
+                                <td width="4%">36330</td>
+                                <td width="10%" class="tl">
+                                    <div class="pl10">
+                                        镀铝板材/SPCC
+                                        <div class="col-8080">9.000*800*C</div>
+                                    </div>
+                                </td>
+                                <td width="4%">鞍钢</td>
+                                <td width="4%">过磅</td>
+                                <td width="4%">52.369</td>
+                                <td width="4%">第三梦</td>
+                                <td width="7%" class="tl">
+                                    <div class="">
+                                        2016-11-28<br>00:00:00
+                                    </div>
+                                </td>
+                                <td width="6%">2016-11-28</td>
+                                <td width="5%">复核式一键购买</td>
+                                <td width="4%">3,100</td>
+                                <td width="4%">3,250</td>
+                                <td width="5%">3,250</td>
+                                <td width="5%">
+                                    <input type="text" class="ui-input tc pct90" value="0988997" autocomplete="off"
+                                        style="border: 1px #2487E4 solid;">
+                                </td>
+                                <td width="5%"></td>
+                                <td width="5%"> 挂牌中</td>
+                                <td width="5%">-- </td>
+                                <td width="4%">
+                                    <a href="javascript:void(0);"  onclick="showTrMore(this)">查看</a>
+                                </td>
+                            </tr>
+                            <!-- 点击执行显示 -->
+                            <tr class="hideTr dn  pct22">
+                                <td colspan="23">
+                                    <div class="pl20 pr20">
+                                        <table class="ui-table tc f12 auto  showShadow mt-1" style="min-width: 0px;" width="100%">
+                                            <thead>
+                                                <th width="20%">修改时间</th>
+                                                <th width="15%">修改人</th>
+                                                <th width="10%">原销售单价</th>
+                                                <th width="15%">调整后的销售单价</th>
+                                            </thead>
+                                            <tbody>
+                                                <td>2020-12-12 12:12:12</td>
+                                                <td>唐玉洁</td>
+                                                <td>1221</td>
+                                                <td>122111</td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr><!-- 隐藏内容end -->
+                        </tbody>
+                        <tfoot class="">
+                            <tr height="45">
+                                <td colspan="23">当前页合计重量(吨)：<span class="red">4028</span></td>
+                            </tr>
+                            <tr height="45">
+                                <td colspan="23">所有页合计重量(吨)：<span class="red">4028</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!-- table end -->
+                <!-- </div> -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->

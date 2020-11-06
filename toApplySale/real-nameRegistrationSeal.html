@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
         id="layuicss-laydate">
     <style>
-        .qtip {
+          .qtip1 {
             min-width: 580px;
-            /* min-height: 320px; */
         }
 
-        .qtip1 {
-            min-width: 460px;
-            max-height: 160px;
+        .qtip2 {
+            min-width: 450px;
+            max-height: 200px;
+            margin-top: 20px;
         }
 
         .hoverBlue:hover {
@@ -152,8 +152,8 @@
                             <td>--</td>
                             <td><span class="red">否</span></td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">查看
-                                    <span class="ml2 dib b">&gt;</span>
+                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">回收
+                                    <!-- <span class="ml2 dib b">&gt;</span> -->
                                 </a>
                                 <a href="javascript:void(0)" class="hoverBlue" onclick="seal(1)">已盖章</a>
                             </td>
@@ -453,13 +453,13 @@
                             <td>2020-09-22 20:13:13</td>
                             <td>我是测试公司名称</td>
                             <td>12232323232</td>
-                            <td><span class="blue">盖章确认</span></td>
+                            <td><span class="">盖章确认</span></td>
                             <td>--</td>
                             <td>--</td>
                             <td>是</td>
                             <td>
-                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">回收
-                                    <span class="ml2 dib b">&gt;</span>
+                                <a href="javascript:void(0)" class="hoverBlue" onclick="showTrMore(this),show(this)">查看
+                                    <!-- <span class="ml2 dib b">&gt;</span> -->
                                 </a>
                                 <a href="javascript:void(0)" onclick="seal(1)">未盖章</a>
                             </td>
@@ -741,10 +741,10 @@
 
 
     <div class='sealContent grey9 layer_pageContent dom3 dn'>
-        <div class="sealContent1 grey9 layer_pageContent" style="height: 200px; width: 500px;">
-            <p class="mb10 mt20"><span class="blue">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
-            <p class="mb10"><span class="blue">2、开票资料的税号或开户证明的账号与申请信息保持一致；</span></p>
-            <p class="mb10"><span class="blue">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
+        <div class="sealContent1 grey9 layer_pageContent">
+            <p class="mb10 mt20"><span class="">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
+            <p class="mb10"><span class="">2、开票资料的税号或开户证明的账号与申请信息保持一致；</span></p>
+            <p class="mb10"><span class="">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
         </div>
     </div>
 
@@ -756,6 +756,7 @@
         $(function () {
             $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
+       
             //tipclick 点击出现数据段
             $('.tipclick').qtip({
                 show: { event: 'click' },
@@ -765,7 +766,7 @@
                         return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
                     }
                 },
-                /* position:{
+                /*position:{
                         my: 'bottom center', 
                                 at: 'top center' 
                     },*/
@@ -775,7 +776,7 @@
                     at: 'top center' //是在提示在组件的相对位置
                 },
                 style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip1'  //
                 }
             });
 
@@ -794,11 +795,11 @@
                     },*/
                 position: {
                     viewport: $(window),
-                    my: 'bottom center', //my:是指三角的位置
+                    my: 'top center', //my:是指三角的位置
                     at: 'top center' //是在提示在组件的相对位置
                 },
                 style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip1'  //
+                    classes: 'qtip-lg  qtip-light  qtip-shadow qtip-rounded qtip2'  //
                 }
             });
 

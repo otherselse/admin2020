@@ -19,6 +19,51 @@
             background: #fff;
             min-width: auto;
         }
+
+        .table-cell-fix-left,
+        .table-cell-fix-right {
+            left: 0;
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            z-index: 2;
+            background: #fff;
+        }
+
+        .m-tabLimitSCroll {
+            overflow: auto;
+        }
+
+        .ui-table tbody td {
+            padding: 5px 2px
+        }
+
+        @media (max-width: 1440px) {
+            .m-tabLimitSCroll {
+                /* max-height: 520px; */
+            }
+
+            .ui-table {
+                min-width: 1440px;
+            }
+        }
+
+        .table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
     </style>
 
 </head>
@@ -226,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="mt20 mb10 tc">
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button" onclick="showSearchDn(this)" data-type="clear">
@@ -235,177 +280,264 @@
                     </button>
                 </div>
 
-                <div class="df mb5">
+                <!-- <div class="df mb5">
                     <div style="flex: 1;"></div>
-                    <a href="javascript:void(0)" class="dac dfr" onclick="showLayer(this)">
+                    <a href="javascript:void(0)" class="dac dfr" onclick="cloTable()">
                         表头配置
                         <img src="../images//report/sl1.png" class="mr5" alt="">
                     </a>
+                </div> -->
+
+                <div class="m-tabLimitSCroll mt30 lgui-table-box fixrightTab">
+                    <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+                        <thead>
+                            <tr>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        订单号/日期
+                                    </div>
+                                </th>
+                                <th width="10%" class="tl">
+                                    <div class="pl10">
+                                        金牌商家/客户单位
+                                    </div>
+                                </th>
+                                <th width="4%">业务类型</th>
+                                <th width="4%">订单类型</th>
+                                <th width="6%" class="tl">
+                                    <div>
+                                        销售结算重量<br>
+                                        销售结算金额
+                                    </div>
+                                </th>
+                                <th width="3%">分红比例</th>
+                                <th width="5%">应分红金额</th>
+                                <th width="6%">资金占用利息</th>
+                                <th width="6%">出库日期</th>
+                                <th width="3%">入库金额</th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        预签收日期<br>
+                                        实收货日期
+                                    </div>
+                                </th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        开票金额/差异
+                                    </div>
+                                </th>
+                                <th width="6%">销售开票日期</th>
+                                <th width="6%">采购开票日期</th>
+                                <th width="6%">费用收票日期</th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        应收款日期<br>
+                                        实收票日期
+                                    </div>
+                                </th>
+                                <th width="6%" class="tl">
+                                    <div class="pl10">已收款金额</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="ui-thover bgwh">
+                            <tr>
+                                <td class="tl" >
+                                    <div class="pl10">
+                                        <a href="javascript:void(0)" onclick="showStep()">716271</a>
+                                        <div class="col-8080 mt5 wsn">2020-10-12</div>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        <a href="../public/goldRegInfo.html" title="联系方式：19987856462"
+                                            class="b tiptop">唐一菲</a>/业务型合伙人
+                                        <div class="mt5 dac">
+                                            <i class="gongSi-icon mr1"></i>
+                                            <a href="javascript:void(0)"
+                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>欠款业务</td>
+                                <td>
+                                    <a href="javascript:void(0)" class="tiptop"
+                                        title="<span class='col-8080'>库存销售类型：</span>库存销售类型">库存销售</a></td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020.22
+                                        <div class="col-8080">/939</div>
+                                    </div>
+                                </td>
+                                <td>20%</td>
+                                <td>202021.1</td>
+                                <td>202021.1</td>
+                                <td>2020-10-12</td>
+                                <td>211</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-09-11
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        40200<span class="col-8080">(10.22)</span>
+                                    </div>
+                                </td>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-08-23
+                                    </div>
+                                </td>
+                                <td>320311.22</td>
+                            </tr>
+                            <tr>
+                                <td class="tl" >
+                                    <div class="pl10">
+                                        <a href="javascript:void(0)" onclick="showStep()">716271</a>
+                                        <div class="col-8080 mt5 wsn">2020-10-12</div>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        <a href="../public/goldRegInfo.html" title="联系方式：19987856462"
+                                            class="b tiptop">唐一菲</a>/业务型合伙人
+                                        <div class="mt5 dac">
+                                            <i class="gongSi-icon mr1"></i>
+                                            <a href="javascript:void(0)"
+                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>欠款业务</td>
+                                <td>
+                                    直购
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020.22
+                                        <div class="col-8080">/939</div>
+                                    </div>
+                                </td>
+                                <td>20%</td>
+                                <td>202021.1</td>
+                                <td>202021.1</td>
+                                <td>2020-10-12</td>
+                                <td>211</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-09-11
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        40200<span class="col-8080">(10.22)</span>
+                                    </div>
+                                </td>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-08-23
+                                    </div>
+                                </td>
+                                <td>320311.22</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="">
+                            <tr height="45">
+                                <td colspan="4">当前页合计</td>
+                                <td>
+                                    2020<br>
+                                    10289
+                                </td>
+                                <td>025%</td>
+                                <td>2020.1</td>
+                                <td>12121</td>
+                                <td></td>
+                                <td>12</td>
+                                <td></td>
+                                <td>
+                                    40212<br>
+                                    1821
+                                </td>
+                                <td colspan="4"></td>
+                                <td>1233</td>
+                            </tr>
+                            <tr height="45">
+                                <td colspan="4">所有页合计</td>
+                                <td>
+                                    2020<br>
+                                    10289
+                                </td>
+                                <td>025%</td>
+                                <td>2020.1</td>
+                                <td>12121</td>
+                                <td></td>
+                                <td>12</td>
+                                <td></td>
+                                <td>
+                                    40212<br>
+                                    1821
+                                </td>
+                                <td colspan="4"></td>
+                                <td>1233</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!-- table end -->
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="2%">序号</th>
-                            <th width="2%">订单号</th>
-                            <th width="3%">订单日期</th>
-                            <th width="3%">金牌商家</th>
-                            <th width="3%">金牌商家类型</th>
-                            <th width="3%">业务类型</th>
-                            <th width="3%">订单类型</th>
-                            <th width="3%">库存销售类型</th>
-                            <th width="3%">分红比例</th>
-                            <th width="3%">客户名称</th>
-                            <th width="3%">销售结算重量</th>
-                            <th width="3%">销售结算金额</th>
-                            <th width="3%">加工费</th>
-                            <th width="3%">短驳费</th>
-                            <th width="3%">仓库费</th>
-                            <th width="3%">运输费</th>
-                            <th width="3%">库存销售成本</th>
-                            <th width="3%">关联订单</th>
-                            <th width="3%">G2G金额</th>
-                            <th width="2%">税金</th>
-                            <th width="3%">资金占用利息</th>
-                            <th width="2%">应分红金额</th>
-                            <th width="3%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    出库日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="3%">入库金额</th>
-                            <th width="3%">预签收日期</th>
-                            <th width="3%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收货日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="3%">开票金额</th>
-                            <th width="3%">开票差异</th>
-                            <th width="3%">销售开票日期</th>
-                            <th width="3%">采购收票日期</th>
-                            <th width="3%">费用收票日期</th>
-                            <th width="3%">应收款日期</th>
-                            <th width="3%">收款日期</th>
-                            <th width="3%">已收款金额</th>
-                            <th width="2%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="2%">1</td>
-                            <td width="2%"><a href="javascript:detail('61177')" title="点击查看订单详情"><span
-                                        class="redm">61177</span></a>
-                            </td>
-                            <td width="3%">2020-09-15</td>
-                            <td width="3%">赵自立</td>
-                            <td width="3%">业务型合伙式金牌商家</td>
-                            <td width="3%">
-                                现款业务
-                            </td>
-                            <td width="3%">定购</td>
-                            <td width="3%"></td>
-                            <td width="3%"></td>
-                            <td width="3%">
-                                <a href="javascript:void(0)" title=" 上海海洋大学"><span class="redm">
-                                        上海海洋大学</span>
-                                </a>
-                            </td>
-                            <td width="3%">
-                                <span>0</span>/吨
-                            </td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%"><a href="javascript:void(0)" title="">
-                                    <span class="redm">
-                                        --
-                                    </span>
-                                </a></td>
-                            <td width="3%">0</td>
-                            <td width="3%">
-                                <span>0</span>
-                            </td>
-                            <td width="3%">0</td>
-                            <td width="3%">
-                                <span>0</span>
-                            </td>
-                            <td width="3%">--</td>
-                            <td width="3%">0</td>
-                            <td width="3%">--</td>
-                            <td width="3%">--</td>
-                            <td width="3%">0</td>
-                            <td width="3%">0</td>
-                            <td width="3%">--</td>
-                            <td width="3%">--</td>
-                            <td width="3%">--</td>
-                            <td width="3%">2020-09-15</td>
-                            <td width="3%">--</td>
-                            <td width="3%">0</td>
-                            <td width="2%">
-                                <a href="/LgFront/sellReviewAction_esContractLgAdmin.action?orderID=61177"
-                                    target="_blank" title="" class="redm">打印</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="35">
-                                <div class="df tl pl20">
-                                    <div>当前页合计：</div>
-                                    <div>
-                                        销售结算重量:<span class="red mr20">10</span>
-                                        销售结算金额:<span class="red mr20">1.000</span>
-                                        加工费:<span class="red mr20">1.000</span>
-                                        短驳费:<span class="red mr20">1.000</span>
-                                        仓运费:<span class="red mr20">1.000</span>
-                                        运输费:<span class="red mr20">1.000</span>
-                                        库存销售成本:<span class="red mr20">1.000</span>
-                                        G2G金额:<span class="red mr20">1.000</span>
-                                        资金占用利息:<span class="red mr20">1.000</span>
-                                        入库金额:<span class="red mr20">1.000</span>
-                                        开票金额:<span class="red mr20">1.000</span>
-                                        开票差异:<span class="red mr20">1.000</span>
-                                        已收款金额:<span class="red mr20">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="35">
-                                <div class="df tl pl20">
-                                    <div>所有页合计：</div>
-                                    <div>
-                                        销售结算重量:<span class="red mr20">10</span>
-                                        销售结算金额:<span class="red mr20">1.000</span>
-                                        加工费:<span class="red mr20">1.000</span>
-                                        短驳费:<span class="red mr20">1.000</span>
-                                        仓运费:<span class="red mr20">1.000</span>
-                                        运输费:<span class="red mr20">1.000</span>
-                                        库存销售成本:<span class="red mr20">1.000</span>
-                                        G2G金额:<span class="red mr20">1.000</span>
-                                        资金占用利息:<span class="red mr20">1.000</span>
-                                        入库金额:<span class="red mr20">1.000</span>
-                                        开票金额:<span class="red mr20">1.000</span>
-                                        开票差异:<span class="red mr20">1.000</span>
-                                        已收款金额:<span class="red mr20">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->
     </div><!-- rightBar end -->
+    <div class="layui-layer-shade dn max-mu" onclick="cloTable()" id="layui-layer-shade6" times="6">
+
+    </div>
+    <div class="layui-layer dn mu-table layui-layer-page lgui-table-tools bgfa auto ovh " style=" height: 300px;position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;">
+        <div class="layui-layer-title" style="cursor: move;">自定义表头字段</div>
+        <div class="pl20 pr20 pt20">
+            <span class="ui-tip pct100 lh33">注意：1、对应列存在合并的，则不允许设置隐藏；2、表格不能有浮动表头。</span>
+        </div>
+        <div class=" mt5 dac dib ml40 mt20">
+            <i class="ui-checkbox goldIcon mr5 vm pct20">
+                <input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+            <span class="">全选</span>
+        </div>
+        <div class="lgui-table-tcont ml20 mt10">
+            <span class="dib lgui-table-detail"></span>
+        </div><br>
+        <div class="tc bte  pt20">
+            <input type="button" value="确认" onclick="setBut()" class="ui-button mr10 w90">
+            <input type="button" onclick="cloTable()" value="取消" class="ui-button w90 cancelBut" data-type="clear">
+            <a href="javascript:void(0)" class="r mr20" onclick="initTable()">恢复默认</a>
+        </div>
+        <span class="layui-layer-setwin" onclick="cloTable()"><a
+                class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;"></a></span><span
+            class="layui-layer-resize"></span>
+    </div>
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js//fixScroll/lgBaseFuncBut.js"></script>
 
     <script>
         $(function () {
@@ -436,6 +568,54 @@
                 area: ['600px', '48%'],
                 content: 'theToReadyForTheTrack.html' //iframe的url
             });
+        }
+
+    </script>
+
+    <script>
+        $(function () {
+
+            //cols 定义显示及权限
+            var mylgColInfo = [{ "name": "t-ys", "intro": "运输费", "status": false }, { "name": "t-jg", "intro": "加工费", "status": false }, { "name": "t-db", "intro": "短驳费", "status": false }, { "name": "t-cc", "intro": "仓库费", "status": false }, { "name": "t-je", "intro": "G2G金额", "status": false }, { "name": "t-sj", "intro": "税金", "status": false }, { "name": "t-kc", "intro": "库存销售成本", "status": false }]
+
+            //初始化表格数据
+            var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
+            for (var i = 0; i < mylgColInfo.length; i++) {
+                str += str;
+            }
+            $(".lgui-table-body").find("tbody").append(str)
+
+            // lgScrollTable.fixHeader(); //默认".lgui-table-box", ".lgui-table-header", ".lgui-table-body"固定滚动
+            lgScrollTable.choiceCol(mylgColInfo, '.lgui-table-detail', '.lgui-table-box'); //根据表格中列的配置，实现初始化表格
+        })
+
+        function setBut() {
+            //lgui-table-detail 表示选择区域内容class、lgui-table-box表示整个表格部分box，实现点击确认显示不显示；
+            lgScrollTable.seltable('.lgui-table-detail', '.lgui-table-box');
+            cloTable();
+        }
+
+        function initTable() {
+            // $(obj).parents("i").removeClass("on");
+            $(".lgui-table-tItem label").removeClass("on");
+            setBut();
+        }
+
+        function setAll(obj) {
+            // $(obj).parents("i").toggleClass("on");
+            // alert($(obj).parents("i").attr("class").indexOf(" on"));
+            if ($(obj).parents("i").attr("class").indexOf(" on") >= 0) {
+                $(obj).parents("i").removeClass("on");
+                $(".lgui-table-tItem label").removeClass("on");
+            } else {
+                $(obj).parents("i").addClass("on");
+                $(".lgui-table-tItem label").addClass("on");
+            }
+        }
+
+        function cloTable(obj) {
+            $(".mu-table").toggleClass("dn");
+            $(".max-mu").toggleClass("dn");
         }
 
     </script>
