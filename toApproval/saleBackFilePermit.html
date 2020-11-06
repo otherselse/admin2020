@@ -12,8 +12,7 @@
     <title>退货入库审批单据-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
 
 <body class="showTip">
@@ -40,6 +39,14 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div>
+                    <span class="f12">
+                        <span class="searchLable">状态：</span>
+                    </span>
+                    <span class="single mr40">
+                        <button type="button" class="ui-option mr5 on">未审核</button>
+                        <button type="button" class="ui-option mr5">已审核</button>
+                        <button type="button" class="ui-option">退回</button>
+                    </span>
                     <span class="dib pct25 f12">
                         <span class="searchLable">订单号：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
@@ -58,26 +65,7 @@
                             </div>
                         </span>
                     </span>
-                    <span class="f12">
-                        <span class="searchLable">状态：</span>
-                    </span>
-                    <span class="radio f12">
-                        <label class="mr10">
-                            <i class="ui-radio goldIcon v-3 mr2">
-                                <input type="radio" class="radio-opacity" name="radio">
-                            </i>未审核
-                        </label>
-                        <label class="mr10">
-                            <i class="ui-radio goldIcon v-3 mr2">
-                                <input type="radio" class="radio-opacity" name="radio">
-                            </i>已审核
-                        </label>
-                        <label>
-                            <i class="ui-radio goldIcon v-3 mr2">
-                                <input type="radio" class="radio-opacity" name="radio">
-                            </i>退回
-                        </label>
-                    </span>
+                    <button class="ui-button" type="button">查询</button>
                 </div>
                 <table class="ui-table tc f12 mt30 pct100">
                     <thead>
@@ -140,7 +128,7 @@
                                             <div class="pt20 pb20 mr10 tr">
                                                 <span class="b g28 ">
                                                         本人 <br>
-                                                        审批结果
+                                                        审批意见
                                                 </span>
                                             </div>
                                         </div>

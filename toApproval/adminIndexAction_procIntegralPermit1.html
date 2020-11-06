@@ -12,8 +12,7 @@
     <title>积分提取审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
 
 <body class="showTip fixtab ">
@@ -43,18 +42,32 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="mb10 f12">
-                    <span class="searchLable">金牌商家：</span>
-                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="searchLable">区域：</span>
-                    <input type="text" class="ui-input pct16 mr20" placeholder="请输入" autocomplete="off">
-                    <span class="pct25 dib f12  m_db m_mt10">
+                <div class="mb10 f0">
+                    <span class="dib pct25 f12">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct25 f12">
+                        <span class="searchLable">区域：</span>
+                        <span class="input-selSearch pct69">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </span>
+                 
+                    <span class="pct30 dib f12">
                         <span class="searchLable">申请时间：</span>
                         <span class="ui-input f0 pct69 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-                        </span></span>
-                </div>
-                <div class="tc f12">
+                        </span>
+                    </span>
                     <button class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30">
@@ -107,27 +120,11 @@
     <!-- rightBar -->
 
 
-    <div class="f12 bld8 pl10 dom3 dn">
-		<div class="g28 ui-audit"><span>审核</span> <span class="g1b ml15">审核通过</span></div>
-		<div class="lh20 mt5 mb30">
-			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
-			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
-			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
-		</div>
-		<div class="g28 ui-audit"><span>复核</span> <span class="g1b ml15">审核通过</span></div>
-		<div class="lh20 mt5 mb30">
-			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
-			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span></div>
-			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
-		</div>
-		<div class="g28 ui-audit"><span>复核</span> <span class="red ml15">审核未通过</span></div>
-		<div class="lh20 mt5">
-			<div> <span class="gga">审批人员：</span><span class="g67">李思思</span></div>
-			<div class="ui-audit-idea"> <span class="gga">审批意见：</span><span
-					class="g67">付款金额与收款金额数目不符，请核对账单明细，重新提交申请。</span></div>
-			<div> <span class="gga">审批人员：</span><span class="g67">2020-02-24 18:14:23</span></div>
-		</div>
-	</div>
+    <div class="dom3">
+        <div class="mb10">转换金额：<span class="g28">11元</span> </div>
+        <div class="mb10">&emsp;&emsp;附件：<a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a> </div>
+        <div class="mb10">审批意见：<span class="g28">同意</span> </div>
+    </div>
 
 
 

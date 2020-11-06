@@ -12,8 +12,7 @@
 	<title>运输合同审批-审批管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-	<link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-		id="layuicss-laydate">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
 
 <body class="showTip">
@@ -40,44 +39,46 @@
 		</div>
 		<div class="ui-content minH">
 			<div class="p20">
-				<div class="mb10 f0">
-					<span class="dib pct25 f12 m_db">
-						<span class="searchLable">&emsp;&emsp;状态：</span>
-						<div class="dib selectSingle pct69 m_pct31">
-							<a class="on" href="javscript:void(0)">已评审</a>
-							<span class="pr5 pl5">|</span>
-							<a href="javscript:void(0)" class="">未评审</a>
-						</div>
+				<div class="cl f0 mb10">
+					<span class="f12 dib pct44 m_db m_mb10">
+					<span class="searchLable">&emsp;&emsp;状态：</span>
+					<span class="single">
+						<button type="button" class="ui-option mr5 on">未评审</button>
+						<button type="button" class="ui-option">已评审</button>
 					</span>
-					<span class="dib f12 m_mt10">
-						<span class="searchLable"><span class="dn m_dib">&emsp;</span>&emsp;区域：</span>
-						<div class="dib selectSingle">
-							<a class="" href="javascript:void(0)">上海</a>
-							<span>|</span>
-							<a href="javascript:void(0)" class="">天津</a>
-							<span>|</span>
-							<a href="javascript:void(0)" class="">宁波</a>
-							<span>|</span>
-							<a href="javascript:void(0)" class="">杭州</a>
-							<span>|</span>
-							<a href="javascript:void(0)" class="">广州</a>
-						</div>
 					</span>
 				</div>
 				<div class="cl mb10 f0 ">
-					<span class="dib pct25 f12">
+					<span class="dib pct22 f12">
+					<span class="searchLable">&emsp;订单号：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="dib pct22 f12">
 						<span class="searchLable">金牌商家：</span>
 						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 					</span>
-					<span class="dib pct25 f12">
-						<span class="searchLable">合同号：</span>
-						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					<span class="dib f12 ">
+						<span>
+							<span class="searchLable">所在区域：</span>
+							<div class="dib selectSingle">
+								<a class="" href="javascript:void(0)">上海</a>
+								<span>|</span>
+								<a href="javascript:void(0)" class="">天津</a>
+								<span>|</span>
+								<a href="javascript:void(0)" class="">宁波</a>
+								<span>|</span>
+								<a href="javascript:void(0)" class="">杭州</a>
+								<span>|</span>
+								<a href="javascript:void(0)" class="">广州</a>
+							</div>
+						</span>
 					</span>
-					<span class="dib pct25 f12">
-						<span class="searchLable">订单号：</span>
+				</div>
+				<div class="cl  f0">
+					<span class="dib pct22 f12">
+						<span class="searchLable">&emsp;合同号：</span>	
 						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-					</span>
-					<span class="dib pct25 f12">
+					</span><span class="dib pct22 f12">
                         <span class="searchLable">单位名称：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
@@ -90,17 +91,17 @@
                                 <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                             </div>
                         </span>
-                    </span>
-				</div>
-				<div class="cl f0 mb10">
-					<span class="dib pct25 f12  m_pct31">
+					</span><span class="dib f12 m_pct31 pct30">
 						<span class="searchLable">申请时间：</span>
 						<span class="ui-input f0 pct69 range" data-type="time">
 							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
 							</span>
 					</span>
-					<button type="button" class="ui-button">查询</button>
+					<span class="m_db m_tc m_mt10">
+						<button type="button" class="ui-button">查询</button>
+					</span>
 				</div>
+
 				<table class="ui-table tc f12 mt30" width="100%">
 					<thead>
 						<tr>

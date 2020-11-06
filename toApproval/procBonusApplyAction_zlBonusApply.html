@@ -12,8 +12,7 @@
     <title>租赁分红审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
         id="layuicss-layer">
 </head>
@@ -43,16 +42,15 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f12">
-                        <span class="searchLable">审批状态：</span>
-                        <div class="dib selectSingle mr40">
-                            <a href="javascript:void(0)" href="javascript:void(0)">不限</a>
-                            <span>|</span>
-                            <a href="javascript:void(0)">待审批</a>
-                            <span>|</span>
-                            <a href="javascript:void(0)">已审批</a>
-                        </div>
+                        <span class="searchLable ">审批状态：</span>
+                        <span class="single mr40">
+							<button type="button" class="ui-option mr5 on">不限</button>
+							<button type="button" class="ui-option mr5">待审批</button>
+							<button type="button" class="ui-option">已审批</button>
+                        </span>
+                        <span class="dib pct25">
                             <span class="searchLable">申请公司：</span>
-                            <span class="input-selSearch pct16 mr40">
+                            <span class="input-selSearch pct69 ">
                                 <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
                                 <div class="search-cont pct100">
                                     <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -63,13 +61,16 @@
                                     <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                                 </div>
                             </span>
-                    <span class="dib f12 m_pct31">
+                        </span>
+                            
+                    <span class="dib f12 pct30">
                         <span class="searchLable">申请时间：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
                                 autocomplete="off">
                         </span>
                     </span>
+                    
                 </div>
                 <div class="tc mt20">
                     <button type="button" class="ui-button">查询</button>
@@ -132,8 +133,8 @@
                                             <div class="mt15 istable   pct100  pb30" >
                                                 <div style="width: 98%;" class="auto">
                                                 <div class="mt15 b f14 g28 tl lable_t">审批意见</div>
-                                                <div class="auto bgwh pb30 pt20 mt15" style="width:98%">
-                                                    <div class="clt-check-cont  pct100 tl">
+                                                <div class="auto bgwh pb30 pt20 mt15">
+                                                    <div class="clt-check-cont  pct95 tl">
                                                         <div class="cl clt-check-box">
                                                             <div class="clt-check-left">
                                                                 <div class="pt20 pb20 tr">
@@ -168,7 +169,7 @@
                                                                 <div class="pt20 pb20 mr10 tr">
                                                                     <span class="b g28 ">
                                                                             本人 <br>
-                                                                            审批结果
+                                                                            审批意见
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -234,7 +235,7 @@
                                         <form>
                                             <div class="mt15 istable   pct100  pb30" >
                                                 <div style="width: 98%;" class="auto">
-                                                <div class="mt15 b f14 g28 tl lable_t">审批意见</div>
+                                                <div class="mt15 b f14 g28 tl lable_t ">审批意见</div>
                                                 <div class="auto bgwh pb30 pt20 mt15" >
                                                     <div class="clt-check-cont  pct95 ml20 tl">
                                                         <div class="cl clt-check-box">
@@ -271,7 +272,7 @@
                                                                 <div class="pt20 pb20 mr10 tr">
                                                                     <span class="b g28 ">
                                                                             本人 <br>
-                                                                            审批结果
+                                                                            审批意见
                                                                     </span>
                                                                 </div>
                                                             </div>

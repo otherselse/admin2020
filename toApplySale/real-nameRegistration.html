@@ -15,13 +15,14 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
     <style>
-        .qtip {
+        .qtip1 {
             min-width: 580px;
         }
 
-        .qtip1 {
-            min-width: 460px;
-            max-height: 160px;
+        .qtip2 {
+            min-width: 450px;
+            max-height: 200px;
+            margin-top: 20px;
         }
 
         .hoverBlue:hover {
@@ -69,7 +70,7 @@
             <div class="p20">
                 <div class="cl mb10 dac f12 ">
                     <span class="searchLable">审核状态：</span>
-                    <span class="single mr20">
+                    <span class="single ml5 mr20">
                         <input type="hidden">
                         <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5 on"
                                 id="ht">待审核</button></a>
@@ -82,7 +83,7 @@
                     </span>
                     <span class="m_db dac f1">
                         <div class="df mr20">
-                            <span class="tipclick menuhook dac" qtip-dom="dom3">
+                            <span class="tipclick1 menuhook dac" qtip-dom="dom3">
                                 <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
                                 <div class="">审批要点</div>
                             </span>
@@ -135,8 +136,8 @@
                     <thead>
                         <tr>
                             <th width="6%">序号</th>
-                            <th width="10%">申请时间</th>
-                            <th width="23%">单位名称</th>
+                            <th width="15%">申请时间</th>
+                            <th width="18%">单位名称</th>
                             <th width="9%">申请账号</th>
                             <th width="9%">审核状态</th>
                             <th width="7%">授权书回收</th>
@@ -324,10 +325,22 @@
                                                     </span>
                                                 </td>
                                                 <td class="vt bgfa" width="13%">
-                                                    <span class="pt5 dib pl10"></span>
+                                                    <span class="pt5 dib pl10">是否核实：</span>
                                                 </td>
                                                 <td width="37%">
-
+                                                    <span class="radio pl10">
+                                                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input
+                                                                    type="radio" class="radio-opacity" name="radio"></i>
+                                                            是</label>
+                                                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input
+                                                                    type="radio" class="radio-opacity"
+                                                                    name="radio"></i>否</label>
+                                                    </span>
+                                                    <a href="javaScript:void(0)"  class="tiptop ml40"  title="开场语：您好，我是上海乐刚网的小X，请问您是 XXXX（公司）的X先生/女士吗？<br>
+                                                        1、若对方回答不是，那么评审流程也无需继续了。<br>
+                                                        2、若对方回答是，话术——我们这边想了解一下您目前业务是线上操作还是线下操作呢？<br>                                                        
+                                                        （1）若对方回答线上操作，话术——我们想了解一下您对于我们线上操作有哪些改进建议呢？<br>
+                                                        （2）若对方回答线下操作，话术——我们平台可以实现线上业务操作，很便捷哟，欢迎体验。">话术模板</a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -413,7 +426,7 @@
     </div>
 
     <div class='sealContent grey9 layer_pageContent dom3 dn'>
-        <div class="sealContent1 grey9 layer_pageContent" style="height: 200px; width: 500px;">
+        <div class="sealContent1 grey9 layer_pageContent">
             <p class="mb10 mt20"><span class="">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
             <p class="mb10"><span class="">2、开票资料的税号或开户证明的账号与申请信息保持一致；</span></p>
             <p class="mb10"><span class="">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
@@ -447,7 +460,7 @@
                     at: 'top center' //是在提示在组件的相对位置
                 },
                 style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded '  //
+                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip1'  //
                 }
             });
 
@@ -466,11 +479,11 @@
                     },*/
                 position: {
                     viewport: $(window),
-                    my: 'bottom center', //my:是指三角的位置
+                    my: 'top center', //my:是指三角的位置
                     at: 'top center' //是在提示在组件的相对位置
                 },
                 style: {
-                    classes: 'qtip-lg qtip1qtip-light  qtip-shadow qtip-rounded '  //
+                    classes: 'qtip-lg  qtip-light  qtip-shadow qtip-rounded qtip2'  //
                 }
             });
 

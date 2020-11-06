@@ -45,9 +45,9 @@
                 /* max-height: 520px; */
             }
 
-            .ui-table {
+            /* .ui-table {
                 min-width: 1440px;
-            }
+            } */
         }
 
         .table-cell-fix-left-last::after {
@@ -231,7 +231,8 @@
                         <img src="../images/report/sl1.png" class="mr5" alt="">
                     </a>
                 </div>
-                <div class="m-tabLimitSCroll lgui-table-box  fixrightTab">
+                <!-- <div class="m-tabLimitSCroll lgui-table-box  fixrightTab"> -->
+                <div class="lgui-table-box">
                     <table class="ui-table tc f12 checkbox mt5" width="100%" data-type="edit">
                         <thead>
                             <tr>
@@ -263,8 +264,7 @@
                                 </th>
                                 <th width="5%">执行状态</th>
                                 <th width="10%">合同回收状态</th>
-                                <th width="5%" class="sticky-right table-cell-fix-right table-cell-fix-left-last"
-                                    style="right: 0px;">操作</th>
+                                <th width="5%">操作</th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover bgwh">
@@ -280,7 +280,7 @@
                                 </td>
                                 <td class="tl">
                                     <div class="pl5">
-                                        <a href="../public/userInfo1.html">乐乐集团有限公司</a>
+                                        <a href="../public/userInfo1.html" target="_block">乐乐集团有限公司</a>
                                     </div>
                                 </td>
                                 <td>10</td>
@@ -294,8 +294,7 @@
                                 <td><a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
                                         data-hasqtip="17">未回收</a>
                                 </td>
-                                <td class="sticky-right table-cell-fix-right table-cell-fix-left-last"
-                                    style="right: 0px;"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+                                <td><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
                                 </td>
                             </tr>
                             <!-- 点击执行显示 -->
@@ -375,8 +374,7 @@
                                 <td data-item-field="kind1">10%</td>
                                 <td>执行中</td>
                                 <td>已回收</td>
-                                <td class="sticky-right table-cell-fix-right table-cell-fix-left-last"
-                                    style="right: 0px;"><a href="#">查看</a></td>
+                                <td><a href="#">查看</a></td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -438,7 +436,7 @@
             <span class="ui-tip pct100 lh33">注意：1、对应列存在合并的，则不允许设置隐藏；2、表格不能有浮动表头。</span>
         </div>
         <div class=" mt5 dac dib ml40 mt20">
-            <i class="ui-checkbox goldIcon mr5 vm pct20">
+            <i class="ui-checkbox goldIcon xd mr5 vm pct20">
                 <input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
             <span class="">全选</span>
         </div>
@@ -510,8 +508,8 @@
             cloTable();
         }
 
-        function initTable(){
-            // $(obj).parents("i").removeClass("on");
+        function initTable() {
+            $(".xd").removeClass("on");
             $(".lgui-table-tItem label").removeClass("on");
             setBut();
         }
@@ -519,15 +517,15 @@
         function setAll(obj) {
             // $(obj).parents("i").toggleClass("on");
             // alert($(obj).parents("i").attr("class").indexOf(" on"));
-            if($(obj).parents("i").attr("class").indexOf(" on")>=0){
+            if ($(obj).parents("i").attr("class").indexOf(" on") >= 0) {
                 $(obj).parents("i").removeClass("on");
                 $(".lgui-table-tItem label").removeClass("on");
-            }else{
+            } else {
                 $(obj).parents("i").addClass("on");
                 $(".lgui-table-tItem label").addClass("on");
             }
         }
-        
+
         function cloTable(obj) {
             $(".mu-table").toggleClass("dn");
             $(".max-mu").toggleClass("dn");

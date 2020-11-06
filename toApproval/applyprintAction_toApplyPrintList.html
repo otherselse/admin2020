@@ -12,8 +12,7 @@
     <title>用印审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
         id="layuicss-layer">
 </head>
@@ -42,12 +41,24 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="mb10 f12">
-                    <span class="pct25 dib m_db m_mb10">
                         <span class="searchLable">审批状态：</span>
-                        <span class="single  dib">
-                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 on tc">待审批</a>
+                        <span class="single dib">
+                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 on tc">未审批</a>
                             <a href="./applyprintAction_toApplyPrintList1.html" class="ui-option tc">已审批</a>
                         </span>
+                </div>
+                <div class="mb10 f12">
+                    <span class="pct30 dib f12">
+                        <span class="searchLable">申请时间：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="searchLable">用印类型：</span>
                     <div class="dib selectSingle">
@@ -61,36 +72,24 @@
                     </div>
                 </div>
                 <div class="mb10 f12">
-                    <span class="pct25 dib">
-                        <span class="searchLable">&emsp;审批人：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                    <span class="pct30 dib f12">
+                        <span class="searchLable">审批时间：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
+                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
                     </span>
                     <span class="pct25 dib">
-                        <span class="searchLable">&emsp;订单号：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">&emsp;审批人：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="pct25 dib">
                         <span class="searchLable ">金牌商家：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
-                <div class="mb10 f12">
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">申请时间：</span>
-                        <span class="ui-input tc f0 pct59  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">审批时间：</span>
-                        <span class="ui-input tc f0 pct59  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
+                <div class="mt30 tc">
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30">
@@ -163,68 +162,65 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <div class="mt30 g28 f14 b lable_t">评审记录</div>
+                                            <div class="mt30 g28 f14 b lable_t">评审意见</div>
                                             <div class="auto bgwh pb30 pt20 mt15" >
-                                                <div class="clt-check-cont  pct95 tl ml20">
-                                                    <div class="cl clt-check-box">
-                                                        <div class="clt-check-left">
-                                                            <div class="pt20 pb20 tr">
-                                                                <span class="mr10">1节点</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="clt-check-right">
-                                                            <div class="clt-check-rcont f0">
-                                                                <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-check on ml20 mr5 vm"></i><span class="green b">审核通过</span></div>
-                                                                <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct30 g28 vt">同意申请</span></div>
-                                                                <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cl clt-check-box">
-                                                        <div class="clt-check-left">
-                                                            <div class="pt20 pb20 tr ">
-                                                                <span class="mr10">2节点</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="clt-check-right">
-                                                            <div class="clt-check-rcont f0">
-                                                                <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-stop  ml20 mr5 vm"></i><span class="b red">审核不通过</span> </div>
-                                                                <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct70 g28 vt">同意申请，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，</span>
+                                                <div class="auto bgwh pb30 pt20 mt15">
+                                                    <div class="clt-check-cont  pct95 tl">
+                                                        <div class="cl clt-check-box">
+                                                            <div class="clt-check-left">
+                                                                <div class="pt20 pb20 tr">
+                                                                    <span class="mr10">1节点</span>
                                                                 </div>
-                                                                <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                                                            </div>
+                                                            <div class="clt-check-right">
+                                                                <div class="clt-check-rcont f0">
+                                                                    <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-check on ml20 mr5 vm"></i><span class="green b">审核通过</span></div>
+                                                                    <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct30 g28 vt">同意申请</span></div>
+                                                                    <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="b f14 g28 mt30 lable_t">评审意见</div>
-                                            <div class="auto bgwh pb30 pt20 mt15">
-                                                <div class="clt-check-cont  pct95 ml20 tl ">
-                                                    <div class="cl clt-check-box">
-                                                        <div class="clt-check-left">
-                                                            <div class="pt20 pb20 mr10 tr">
-                                                                <span class="b g28 ">
-                                                                        本人 <br>
-                                                                        审批结果
-                                                                </span>
+                                                        <div class="cl clt-check-box">
+                                                            <div class="clt-check-left">
+                                                                <div class="pt20 pb20 tr ">
+                                                                    <span class="mr10">2节点</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clt-check-right">
+                                                                <div class="clt-check-rcont f0">
+                                                                    <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-stop  ml20 mr5 vm"></i><span class="b red">审核不通过</span> </div>
+                                                                    <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct70 g28 vt">同意申请，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，</span>
+                                                                    </div>
+                                                                    <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="clt-check-right reviewBox auto ">
-                                                            <div class="clt-check-rcont f12">
-                                                                <div>
-                                                                    <span class="radio pct30 dib">
-                                                                        <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
-                                                                        <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                        <div class="cl clt-check-box">
+                                                            <div class="clt-check-left">
+                                                                <div class="pt20 pb20 mr10 tr">
+                                                                    <span class="b g28 ">
+                                                                            本人 <br>
+                                                                            审批意见
                                                                     </span>
                                                                 </div>
-                                                                    <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                            </div>
+                                                            <div class="clt-check-right reviewBox auto ">
+                                                                <div class="clt-check-rcont f12">
+                                                                    <div>
+                                                                        <span class="radio pct30 dib">
+                                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                            <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                                        </span>
+                                                                    </div>
+                                                                        <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="tc mt20">
-                                                    <button class="ui-button mr15" type="button">提交</button>
-                                                    <button class="ui-button" data-="" type="button" data-type="clear">退回</button>
+                                                    <div class="tc mt20">
+                                                        <button class="ui-button mr15" type="button">提交</button>
+                                                        <button class="ui-button mr15" type="button">退回</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

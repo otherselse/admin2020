@@ -12,8 +12,7 @@
     <title>加工仓储协议审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 </head>
 
 <body class="showTip">
@@ -41,20 +40,18 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl f12 mb10">
-                    <span class="m_db m_mb10">
-                        <span class="searchLable">合同状态：</span>
-                        <div class="dib selectSingle mr40">
-                            <a class="on" href="javscript:void(0)">全部</a>
-                            <span>|</span>
-                            <a href="javscript:void(0)" class="">待审批</a>
-                            <span>|</span>
-                            <a href="javscript:void(0)" class="">生效中</a>
-                            <span>|</span>
-                            <a href="javscript:void(0)" class="">已过期</a>
-                        </div>
+                    <span class="searchLable">合同状态：</span>
+                    <span class="single">
+                        <button type="button" class="ui-option mr5 on">全部</button>
+                        <button type="button" class="ui-option mr5">待审批</button>
+                        <button type="button" class="ui-option mr5">生效中</button>
+                        <button type="button" class="ui-option">已过期</button>
                     </span>
+                </div>
+                <div class="cl f12 mb10">
+                    <span class="dib pct22">
                         <span class="searchLable">单位名称：</span>
-                        <span class="input-selSearch pct16 mr40">
+                        <span class="input-selSearch pct69 ">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
                             <div class="search-cont pct100">
                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -65,18 +62,11 @@
                                 <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                             </div>
                         </span>
-                    <span class="pct25 dib f12 m_pct31"><span class="searchLable">申请日期：</span><span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                    </span>
+                    <span class="pct30 dib f12 "><span class="searchLable">申请日期：</span><span class="ui-input f0 pct69 range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
 						</span>
-					</span>
-                    <!-- <span class="searchLable"></span>
-                    <span class="ui-input tc f0  range" data-type="time">
-                        <input type="text" placeholder="开始日期" class="render-time pct45" readonly="">
-                        <span class="dib pct5 tc">-</span>
-                        <input type="text" placeholder="结束时间" class="render-time pct45" readonly=""></span> -->
-
-                </div>
-                <div class="tc mt20">
+                    </span>
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <table class="ui-table tc f12 mt30" width="100%">
