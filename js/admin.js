@@ -226,13 +226,12 @@ $(function(){
 
 // 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
-	if($(window).width()<1440){
+	if($(window).width()<1440&&$(".setLeftBar").hasClass("on")){
 		$("body").addClass("bLeftBar");
 		$(".setLeftBar").removeClass("on");
 		$(".leftBar").css("left","-200px")	
-		
-	}else{
-		$("body").removeClass("bLeftBar");		
+	}else if($(window).width()>1440&&$(".setLeftBar").hasClass("on")){
+		$("body").removeClass("bLeftBar");
 		$(".setLeftBar").addClass("on");
 		$(".leftBar").css("left","0")
 	}
