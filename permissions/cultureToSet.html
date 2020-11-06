@@ -259,7 +259,23 @@
         </div>
     </div>
 
+    <div class="dom1 f12" style="display:none">
+        <div class="radio  pb10">
+            <label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                        name="radio"></i>统一下调</label>
+            <label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity"
+                        name="radio"></i>统一上调</label>
+        </div>
+        <div class="ui-input mb10" data-type="price"><input type="text" value="" placeholder="输入调整后价格">元/吨</div>
+        <button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+        <button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
+    </div>
 
+    <div class="qCont  qtip-lg" style="display: none" onclick="stopPro(event)" >
+        <div class="qContent">
+            dddd
+        </div>
+    </div>
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -379,7 +395,7 @@
                                 '        <td width="10%">有管理员配置</td>'+
                                 '        <td width="10%">普通操作</td>'+
                                 '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
-                                '        <td width="10%"><a href="javscript:void(0)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
+                                '        <td width="10%"><a href="javscript:void(0)"  onclick="getArea(this,event)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>'+
                                 '    </tr>'+
                                 '    <tr>'+
                                 '       <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第2节点</label></div></td>'+
@@ -509,8 +525,21 @@ function randomNum(minNum, maxNum) {
       return 0;
       break;
   }
-} 
-    </script>
+}
+
+
+
+var _t=''
+function getArea(obj,e){            
+    stopPro(e);
+    _t=$(e.target);
+   /// console.log(_t)
+   var x=$(obj).offset().top+$(obj).outerHeight(true);
+   var y=$(obj).offset().left;
+   $(".qCont").css({"top":x,"left":y}).show();
+  // $(".qCont").find("input[type='text']").val('')
+}
+</script>
 
 </body>
 
