@@ -163,18 +163,25 @@
                         </td>
                         <td width="37%">
                             <div class="pl10 tl">
-                                <span class="checkbox">
-                                    <label class="mr10" onclick="select(this)"><i
-                                            class="uiCheckbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>交易云</label>
-                                    <label class="mr10" onclick="select(this)"><i
-                                            class="uiCheckbox goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>加工云</label>
-                                    <label class="mr10" onclick="select(this)"><i
-                                            class="uiCheckbox on goldIcon v-3 mr2"><input type="checkbox"
-                                                class="checkbox-opacity" name="checkbox"></i>管理云</label>
-                                    <label class="" onclick="select(this)"><i class="uiCheckbox goldIcon v-3 mr2"><input
-                                                type="checkbox" class="checkbox-opacity" name="checkbox"></i>云商城</label>
+                                <span class="myChe dac">
+                                    <span class="mr10">
+                                        <i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity " name="checkbox"></i>交易云
+                                    </span>
+                                    <span class="mr10">
+                                        <i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity " name="checkbox"></i>加工云
+                                    </span>
+                                </span>
+                                <span class="dac che-on">
+                                    <span class="mr10">
+                                        <i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity " name="checkbox"></i>交易云
+                                    </span>
+                                    <span class="mr10">
+                                        <i class="ui-checkbox goldIcon mr5"><input type="checkbox"
+                                                class="checkbox-opacity " name="checkbox"></i>加工云
+                                    </span>
                                 </span>
                             </div>
                         </td>
@@ -193,14 +200,13 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
     <script>
-        // function select(obj) {
-        //     alert(1,$(obj))
-        //     if ($(obj).find("i").attr("class").indexOf("on") < 0) {
-        //         $(obj).find("i").addClass("on");
-        //     } else {
-        //         $(obj).find("i").removeClass("on");
-        //     }
-        // }
+        $(".myChe").on('click','span', function () {
+            $(this).addClass("on").siblings("span").find("i").removeClass("on");
+        })
+
+        $(".che-on").on('click','span', function () {
+            $(this).toggleClass("on");
+        })
     </script>
 </body>
 
