@@ -205,8 +205,8 @@ $(function(){
 
 
 	$(".selectSingle").find("a").on("click",function(){
-				$(this).addClass("on").siblings().removeClass("on");
-			})
+		$(this).addClass("on").siblings().removeClass("on");
+	})
 
 	//selectProcName 展开收起 以及是否显示展开
 	if($(".selectProcName").height()>24){
@@ -217,7 +217,7 @@ $(function(){
 	}
 
 	//switch
-	$(".manage-switch").on("click", function () {
+	$("body").on("click",".manage-switch",function () {
 		$(this).toggleClass("on");
 	})
 
@@ -368,4 +368,21 @@ function showSearchIconDn(obj) {
 	} else {
 		$(".bText").text(t);
 	}
+}
+
+//阻止冒泡
+function stopPro(e){
+	if(navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i)=="7."|| navigator.appVersion.match(/8./i)=="8.")) 
+	{ 		
+		if (event.stopPropagation) { 
+		// this code is for Mozilla and Opera 
+		event.stopPropagation(); 
+		} 
+		else if (window.event) { 
+		// this code is for IE 
+		window.event.cancelBubble = true; 
+		}
+	}else{
+		e.stopPropagation();
+ }
 }
