@@ -12,8 +12,7 @@
     <title>产地证办理审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
         id="layuicss-layer">
 </head>
@@ -42,23 +41,26 @@
         </div>
         <div class="ui-content minH">
             <div class="p20">
-                <div class="cl f12 mb10">
-
-                    <span class="searchLable">是否评审：</span>
-                    <span class="radio mr40">
-                        <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                    class="radio-opacity" name="radio"></i>已审批</label>
-                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-                                    name="radio"></i>未审批</label>
+                <div class="cl f0 mb10">
+                    <span class="searchLable f12">是否评审：</span>
+                    <span class="single mr40 f12">
+                        <button type="button" class="ui-option mr5 on">未审批</button>
+                        <button type="button" class="ui-option">已审批</button>
                     </span>
-                    <span class="searchLable">金牌商家：</span>
-                    <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
+                    <span class="dib pct25 f12">
+                        <span class="searchLable">金牌商家：</span>
+                    <input type="text" class="ui-input pct69" placeholder="请输入">
+                    </span>
+                    <span class="dib pct25 f12">
                     <span class="searchLable">订单号：</span>
-                    <input type="text" class="ui-input pct15 mr40" placeholder="请输入">
+                    <input type="text" class="ui-input pct69" placeholder="请输入">
+                    </span>
+                    <span class="m_db m_mt10 tc">
+                        <button type="button" class="ui-button">查询</button>
+                    </span>
+                   
                 </div>
-                <div class="tc mt20">
-                    <button type="button" class="ui-button">查询</button>
-                </div>
+             
                 <table class="ui-table tc f12 mt30" width="100%">
                     <thead>
                         <tr>
@@ -125,7 +127,7 @@
                                                     <div class="pt20 pb20 mr10 tr">
                                                         <span class="b g28 ">
                                                                 本人 <br>
-                                                                审批结果
+                                                                审批意见
                                                         </span>
                                                     </div>
                                                 </div>
@@ -192,7 +194,7 @@
                                                     <div class="pt20 pb20 mr10 tr">
                                                         <span class="b g28 ">
                                                                 本人 <br>
-                                                                审批结果
+                                                                审批意见
                                                         </span>
                                                     </div>
                                                 </div>

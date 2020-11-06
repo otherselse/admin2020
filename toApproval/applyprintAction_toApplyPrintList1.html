@@ -12,8 +12,7 @@
     <title>用印审批-审批管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
         id="layuicss-layer">
 </head>
@@ -44,53 +43,56 @@
                 <div class="mb10 f12">
                     <span class="pct25 dib m_db m_mb10">
                         <span class="searchLable">审批状态：</span>
-                        <span class="single  dib">
-                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 tc ">待审批</a>
-                            <a href="./applyprintAction_toApplyPrintList1.html" class="ui-option on tc">已审批</a>
+                        <span class="single dib">
+                            <a href="./applyprintAction_toApplyPrintList.html" class="ui-option mr5 on tc">未审批</a>
+                            <a href="./applyprintAction_toApplyPrintList1.html" class="ui-option tc">已审批</a>
                         </span>
-                    </span>
-                    <span class="searchLable">用印类型：</span>
-                    <div class="dib selectSingle">
-                        <a class="on" href="javscript:void(0)">全部</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">用章</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">合同审核</a>
-                        <span class="pr5 pl5 ">|</span>
-                        <a href="javscript:void(0)">线下章</a>
-                    </div>
-                </div>
-                <div class="mb10 f12">
-                    <span class="pct25 dib">
-                        <span class="searchLable">&emsp;审批人：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib">
-                        <span class="searchLable">&emsp;订单号：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct25 dib">
-                        <span class="searchLable ">金牌商家：</span>
-                        <input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
                 <div class="mb10 f12">
                     <span class="pct25 dib f12">
                         <span class="searchLable">申请时间：</span>
-                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;订单号：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="searchLable">用印类型：</span>
+                    <div class="dib selectSingle">
+                        <a class="on" href="javscript:void(0)">全部</a>
+                        <span >|</span>
+                        <a href="javscript:void(0)">用章</a>
+                        <span >|</span>
+                        <a href="javscript:void(0)">合同审核</a>
+                        <span >|</span>
+                        <a href="javscript:void(0)">线下章</a>
+                    </div>
+                </div>
+                <div class="mb10 f12">
                     <span class="pct25 dib f12">
                         <span class="searchLable">审批时间：</span>
-                        <span class="ui-input tc f0 pct59  range" data-type="time">
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
+                    <span class="pct25 dib">
+                        <span class="searchLable">&emsp;审批人：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct25 dib">
+                        <span class="searchLable ">金牌商家：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                 
+                </div>
+                <div class="mt30 tc">
                     <button type="button" class="ui-button">查询</button>
                 </div>
                 <div class="lgui-table-box mt30">
