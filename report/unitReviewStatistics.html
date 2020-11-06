@@ -20,15 +20,31 @@
             min-width: auto;
         }
 
-        .qtip{
-            min-width: 600px;
+        .qtip {
+            min-width: 800px;
         }
 
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+
         .blue {
             color: #1365E8;
+        }
+
+        .ui-table thead th {
+            color: #282828;
+            border: 1px #e6e6e6 solid;
+            border-bottom: 2px #e6e6e6 solid;
+            background: #fafafa;
+            padding: 8px 2px;
+        }
+        .ui-table.myTable thead th {
+            padding: 2px 2px;
+        }
+
+        .ui-table.myTable tbody td {
+            padding: 4px 2px;
         }
     </style>
 
@@ -70,25 +86,51 @@
         <div class="ui-content ovh minH">
             <div class="p20 f12">
                 <div class="mb10 dac">
-                    <span class="dib dac" style="width: 44%;">
-                        <span class="searchLable">
-                            <div class="dac">
-                                评审等级<a href="javascript:void(0)" class="goldIcon icon-info dib mr5 myTipclick-p0"
-                                    qtip-dom="dom18"></a>：
-                            </div>
-                        </span>
+                    <span class="pct25 dib">
+                        <span class="dib searchLable">&emsp;&emsp;单位名称：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="pct30 m_pct31 dib">
+                        <span class="searchLable">评审状态：</span>
                         <span class="dib selectSingle">
-                            <a class='' class='' href="javscript:void(0)" class="on">武林盟主(1级)</a>
+                            <a class='' href="javscript:void(0)" class="on">过期</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">一派掌门(2级)</a>
+                            <a class='' href="javscript:void(0)">有效</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">江湖新秀(3级)</a>
+                            <a class='' href="javscript:void(0)">未评审</a>
+                        </span>
+                    </span>
+                    <span class="dib pct30 dac mt5 m_pct31">
+                        <span class="searchLable">评审等级：</span>
+                        <span class="dib selectSingle">
+                            <a class='' class='' href="javscript:void(0)" class="on">1级</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">初出茅庐(4级)</a>
+                            <a class='' class='' href="javscript:void(0)">2级</a>
+                            <span class="">|</span>
+                            <a class='' class='' href="javscript:void(0)">3级</a>
+                            <span class="">|</span>
+                            <a class='' class='' href="javscript:void(0)">4级</a>
+                        </span>
+                        <a href="javascript:void(0)" class="goldIcon icon-info dib  myTipclick-p0" qtip-dom="dom18"></a>
+                    </span>
+                </div>
+                <div class="mb10 dac">
+                    <span class="pct25 dib">
+                        <span class="dib searchLable">&emsp;&emsp;评审区域：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct30 m_pct31">
+                        <span class="searchLable">仓库性质：</span>
+                        <span class="dib selectSingle">
+                            <a class='' href="javscript:void(0)" class="on">自有</a>
+                            <span class="">|</span>
+                            <a class='' href="javscript:void(0)">租贷</a>
+                            <span class="">|</span>
+                            <a class='' href="javscript:void(0)">寄放</a>
                         </span>
                     </span>
                     <span>
-                        <span class="searchLable">&emsp;有效期：</span>
+                        <span class="searchLable">有效期限：</span>
                         <div class="dib selectSingle">
                             <a class='' href="javscript:void(0)" class="on">一个月</a>
                             <span class="">|</span>
@@ -100,38 +142,12 @@
                         </div>
                     </span>
                 </div>
-
                 <div class="mb10 dac">
-                    <span class="dib pct22">
-                        <span class="searchLable">仓库性质：</span>
-                        <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">自有</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">租贷</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">寄放</a>
-                        </span>
+                    <span class="pct25 dib">
+                        <span class="dib searchLable">现场评审人员：</span>
+                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">评审状态：</span>
-                        <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">过期</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">有效</a>
-                            <span class="">|</span>
-                            <a class='' href="javscript:void(0)">未评审</a>
-                        </span>
-                    </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">积分奖励：</span>
-                        <span class="radio">
-                            <label class="mr10"><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon ml15 v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                    <span class="dib pct30">
+                    <span class="dib pct30 m_pct31">
                         <span class="dib searchLable">评审通过日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -139,22 +155,7 @@
                                 class="render-time pct45" readonly="">
                         </span>
                     </span>
-                </div>
-
-                <div class="dac">
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">现场评审人员：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib">
-                        <span class="dib searchLable">&emsp;&emsp;区域：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30">
+                    <span class="dib pct30 m_pct31">
                         <span class="dib searchLable">评审到期日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -163,7 +164,6 @@
                         </span>
                     </span>
                 </div>
-                
                 <div class="tc mt20 mb30">
                     <button type="button" class="ml10 ui-button mr10">查询</button>
                 </div>
@@ -236,8 +236,7 @@
                             </td>
                             <td width="4%">
                                 <span>
-                                    <a href="../public/applyDetail.html"
-                                        target="_blank" id="step1">查看</a>
+                                    <a href="../public/applyDetail.html" target="_blank" id="step1">查看</a>
                                 </span>
                             </td>
                         </tr>
@@ -337,7 +336,7 @@
 
     <!-- 评审标准 -->
     <div class="f12 dom18 dn">
-        <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
+        <table class="ui-table myTable tc f12 checkbox table-cw" width="100%" data-type="edit">
             <thead>
                 <tr>
                     <th width="10%" rowspan="2">供应商等级</th>
@@ -426,7 +425,7 @@
                     }
                 },
                 position: {
-                    my: 'top left',
+                    my: 'top right',
                     at: 'bottom center'
                 },
                 // position: {

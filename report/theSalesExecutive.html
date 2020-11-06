@@ -280,223 +280,161 @@
                     </button>
                 </div>
 
-                <div class="df mb5">
+                <!-- <div class="df mb5">
                     <div style="flex: 1;"></div>
                     <a href="javascript:void(0)" class="dac dfr" onclick="cloTable()">
                         表头配置
                         <img src="../images//report/sl1.png" class="mr5" alt="">
                     </a>
-                </div>
+                </div> -->
 
-                <div class="m-tabLimitSCroll lgui-table-box fixrightTab">
+                <div class="m-tabLimitSCroll mt30 lgui-table-box fixrightTab">
                     <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
                         <thead>
                             <tr>
-                                <th width="2%">序号</th>
-                                <th width="2%">订单号</th>
-                                <th width="3%">订单日期</th>
-                                <th width="3%">金牌商家</th>
-                                <th width="3%">金牌商家类型</th>
-                                <th width="3%">业务类型</th>
-                                <th width="3%">订单类型</th>
-                                <th width="3%">库存销售类型</th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        订单号/日期
+                                    </div>
+                                </th>
+                                <th width="10%" class="tl">
+                                    <div class="pl10">
+                                        金牌商家/客户单位
+                                    </div>
+                                </th>
+                                <th width="4%">业务类型</th>
+                                <th width="4%">订单类型</th>
+                                <th width="6%" class="tl">
+                                    <div>
+                                        销售结算重量<br>
+                                        销售结算金额
+                                    </div>
+                                </th>
                                 <th width="3%">分红比例</th>
-                                <th width="3%">客户名称</th>
-                                <th width="3%">销售结算重量</th>
-                                <th width="3%">销售结算金额</th>
-                                <th width="3%" data-item-field="t-jg">加工费</th>
-                                <th width="3%" data-item-field="t-db">短驳费</th>
-                                <th width="3%" data-item-field="t-cc">仓库费</th>
-                                <th width="3%" data-item-field="t-ys">运输费</th>
-                                <th width="3%" data-item-field="t-kc">库存销售成本</th>
-                                <th width="3%">关联订单</th>
-                                <th width="3%" data-item-field="t-je">G2G金额</th>
-                                <th width="2%" data-item-field="t-sj">税金</th>
-                                <th width="3%">资金占用利息</th>
-                                <th width="2%">应分红金额</th>
-                                <th width="3%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                        出库日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
+                                <th width="5%">应分红金额</th>
+                                <th width="6%">资金占用利息</th>
+                                <th width="6%">出库日期</th>
                                 <th width="3%">入库金额</th>
-                                <th width="3%">预签收日期</th>
-                                <th width="3%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                        收货日期<i class="goldIcon icon-sort vm ml5 down"></i></label>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        预签收日期<br>
+                                        实收货日期
+                                    </div>
                                 </th>
-                                <th width="3%">开票金额</th>
-                                <th width="3%">开票差异</th>
-                                <th width="3%">销售开票日期</th>
-                                <th width="3%">采购收票日期</th>
-                                <th width="3%">费用收票日期</th>
-                                <th width="3%">应收款日期</th>
-                                <th width="3%">收款日期</th>
-                                <th width="3%">已收款金额</th>
-                                <th width="2%" class="sticky-right table-cell-fix-right table-cell-fix-left-last"
-                                    style="right: 0;">操作</th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        开票金额/差异
+                                    </div>
+                                </th>
+                                <th width="6%">销售开票日期</th>
+                                <th width="6%">采购开票日期</th>
+                                <th width="6%">费用收票日期</th>
+                                <th width="7%" class="tl">
+                                    <div class="pl10">
+                                        应收款日期<br>
+                                        实收票日期
+                                    </div>
+                                </th>
+                                <th width="6%" class="tl">
+                                    <div class="pl10">已收款金额</div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="ui-thover bgwh">
                             <tr>
-                                <td width="2%">1</td>
-                                <td width="2%"><a href="javascript:detail('61177')" title="点击查看订单详情"><span
-                                            class="redm">61177</span></a>
+                                <td class="tl" >
+                                    <div class="pl10">
+                                        <a href="javascript:void(0)" onclick="showStep()">716271</a>
+                                        <div class="col-8080 mt5 wsn">2020-10-12</div>
+                                    </div>
                                 </td>
-                                <td width="3%">2020-09-15</td>
-                                <td width="3%">赵自立</td>
-                                <td width="3%">业务型合伙式金牌商家</td>
-                                <td width="3%">
-                                    现款业务
+                                <td class="tl">
+                                    <div class="pl10">
+                                        <a href="../public/goldRegInfo.html" title="联系方式：19987856462"
+                                            class="b tiptop">唐一菲</a>/业务型合伙人
+                                        <div class="mt5 dac">
+                                            <i class="gongSi-icon mr1"></i>
+                                            <a href="javascript:void(0)"
+                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td width="3%">定购</td>
-                                <td width="3%"></td>
-                                <td width="3%"></td>
-                                <td width="3%">
-                                    <a href="javascript:void(0)" title=" 上海海洋大学"><span class="redm">
-                                            上海海洋大学</span>
-                                    </a>
+                                <td>欠款业务</td>
+                                <td><a href="javascript:void(0)" class="tiptop"
+                                        title="<span class='col-8080'>库存销售类型：</span>库存销售类型">库存销售</a></td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020.22
+                                        <div class="col-8080">/939</div>
+                                    </div>
                                 </td>
-                                <td width="3%">
-                                    <span>0</span>/吨
+                                <td>20%</td>
+                                <td>202021.1</td>
+                                <td>202021.1</td>
+                                <td>2020-10-12</td>
+                                <td>211</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-09-11
+                                    </div>
                                 </td>
-                                <td width="3%">0</td>
-                                <td width="3%" data-item-field="t-jg">0</td>
-                                <td width="3%" data-item-field="t-db">0</td>
-                                <td width="3%" data-item-field="t-cc">0</td>
-                                <td width="3%" data-item-field="t-ys">0</td>
-                                <td width="3%">0</td>
-                                <td width="3%" data-item-field="t-kc"><a href="javascript:void(0)" title="">
-                                        <span class="redm">
-                                            --
-                                        </span>
-                                    </a></td>
-                                <td width="3%" data-item-field="t-je">0</td>
-                                <td width="3%" data-item-field="t-sj">
-                                    <span>0</span>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        40200<span class="col-8080">(10.22)</span>
+                                    </div>
                                 </td>
-                                <td width="3%">0</td>
-                                <td width="3%">
-                                    <span>0</span>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td>2020-08-23</td>
+                                <td class="tl">
+                                    <div class="pl10">
+                                        2020-08-23<br>
+                                        2020-08-23
+                                    </div>
                                 </td>
-                                <td width="3%">--</td>
-                                <td width="3%">0</td>
-                                <td width="3%">--</td>
-                                <td width="3%">--</td>
-                                <td width="3%">0</td>
-                                <td width="3%">0</td>
-                                <td width="3%">--</td>
-                                <td width="3%">--</td>
-                                <td width="3%">--</td>
-                                <td width="3%">2020-09-15</td>
-                                <td width="3%">--</td>
-                                <td width="3%">0</td>
-                                <td width="2%" class="sticky-right table-cell-fix-right table-cell-fix-left-last"
-                                    style="right: 0;">
-                                    <a href="/LgFront/sellReviewAction_esContractLgAdmin.action?orderID=61177"
-                                        target="_blank" title="" class="redm">打印</a>
-                                </td>
+                                <td>320311.22</td>
                             </tr>
                         </tbody>
                         <tfoot class="">
-                            <!-- <tr height="45">
-                                <td colspan="35">
-                                    <div class="df tl pl20">
-                                        <div>当前页合计：</div>
-                                        <div>
-                                            销售结算重量:<span class="red mr20">10</span>
-                                            销售结算金额:<span class="red mr20">1.000</span>
-                                            加工费:<span class="red mr20">1.000</span>
-                                            短驳费:<span class="red mr20">1.000</span>
-                                            仓运费:<span class="red mr20">1.000</span>
-                                            运输费:<span class="red mr20">1.000</span>
-                                            库存销售成本:<span class="red mr20">1.000</span>
-                                            G2G金额:<span class="red mr20">1.000</span>
-                                            资金占用利息:<span class="red mr20">1.000</span>
-                                            入库金额:<span class="red mr20">1.000</span>
-                                            开票金额:<span class="red mr20">1.000</span>
-                                            开票差异:<span class="red mr20">1.000</span>
-                                            已收款金额:<span class="red mr20">1.000</span>
-                                        </div>
-                                    </div>
+                            <tr height="45">
+                                <td colspan="4">当前页合计</td>
+                                <td>
+                                    2020<br>
+                                    10289
                                 </td>
+                                <td>025%</td>
+                                <td>2020.1</td>
+                                <td>12121</td>
+                                <td></td>
+                                <td>12</td>
+                                <td></td>
+                                <td>
+                                    40212<br>
+                                    1821
+                                </td>
+                                <td colspan="4"></td>
+                                <td>1233</td>
                             </tr>
                             <tr height="45">
-                                <td colspan="35">
-                                    <div class="df tl pl20">
-                                        <div>所有页合计：</div>
-                                        <div>
-                                            销售结算重量:<span class="red mr20">10</span>
-                                            销售结算金额:<span class="red mr20">1.000</span>
-                                            加工费:<span class="red mr20">1.000</span>
-                                            短驳费:<span class="red mr20">1.000</span>
-                                            仓运费:<span class="red mr20">1.000</span>
-                                            运输费:<span class="red mr20">1.000</span>
-                                            库存销售成本:<span class="red mr20">1.000</span>
-                                            G2G金额:<span class="red mr20">1.000</span>
-                                            资金占用利息:<span class="red mr20">1.000</span>
-                                            入库金额:<span class="red mr20">1.000</span>
-                                            开票金额:<span class="red mr20">1.000</span>
-                                            开票差异:<span class="red mr20">1.000</span>
-                                            已收款金额:<span class="red mr20">1.000</span>
-                                        </div>
-                                    </div>
+                                <td colspan="4">所有页合计</td>
+                                <td>
+                                    2020<br>
+                                    10289
                                 </td>
-                            </tr> -->
-                            <tr height="45">
-                                <td colspan="10">当前页合计：</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td data-item-field="t-jg">0</td>
-                                <td data-item-field="t-db">0</td>
-                                <td data-item-field="t-cc">0</td>
-                                <td data-item-field="t-ys">0</td>
-                                <td data-item-field="t-kc">0</td>
-                                <td>--</td>
-                                <td data-item-field="t-je">0</td>
-                                <td data-item-field="t-sj">--</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>50,200</td>
+                                <td>025%</td>
+                                <td>2020.1</td>
+                                <td>12121</td>
                                 <td></td>
-                            </tr>
-                            <tr height="45">
-                                <td colspan="10">所有页合计：</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td data-item-field="t-jg">0</td>
-                                <td data-item-field="t-db">0</td>
-                                <td data-item-field="t-cc">0</td>
-                                <td data-item-field="t-ys">0</td>
-                                <td data-item-field="t-kc">0</td>
-                                <td>--</td>
-                                <td data-item-field="t-je">0</td>
-                                <td data-item-field="t-sj">--</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>50,200</td>
+                                <td>12</td>
                                 <td></td>
+                                <td>
+                                    40212<br>
+                                    1821
+                                </td>
+                                <td colspan="4"></td>
+                                <td>1233</td>
                             </tr>
                         </tfoot>
                     </table>
