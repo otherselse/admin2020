@@ -34,6 +34,12 @@
             var myobj='',str='';
             myobj=getmType(type);
             var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
+            if(pid!=0){
+              var z_obj=$(obj).parents(".setMulPanelMCont");
+              var z=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").index(z_obj);
+              $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont:gt("+z+")").hide();              
+             // $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").show();
+            }
             if($(obj).find(".ui-checkbox-unable").hasClass("on")){ //选中，点击
                 $(obj).find(".ui-checkbox-unable").removeClass("on");
                 var myid="sort"+$(obj).attr("id");
@@ -200,7 +206,9 @@
 
                 if(myflag==0){
                      $(obj).parents(".setMulPanelCont").append(str);
-
+                }else{
+                  
+                  $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").show();
                 }
       }
       //删除菜单，同时对选择做出处理
