@@ -12,7 +12,7 @@
     <title>SASS用户审核-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-        
+
     <style>
         .hoverBlue:hover {
             padding: 2px 5px;
@@ -55,23 +55,23 @@
                         <span class="searchLable">评审状态：</span>
                         <span class="single mr20">
                             <input type="hidden">
-                            <button type="button" class="ui-option mr5 on" onclick="tableShow(1)">待评审</button>
-                            <button type="button" class="ui-option mr5" onclick="tableShow(2)">已审核</button>
+                            <button type="button" class="ui-option mr5 on" onclick="showIn(1)">待评审</button>
+                            <button type="button" class="ui-option mr5" onclick="showIn(2)">已审核</button>
                         </span>
                     </span>
                 </div>
                 <div class="cl mb10 df f12">
                     <span class="dib pct22">
                         <span class="searchLable">公司名称：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct22">
                         <span class="searchLable">联系人：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct22">
                         <span class="searchLable">联系电话：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25 m_pct31">
                         <span class="searchLable">申请时间：</span>
@@ -82,7 +82,17 @@
                         </span>
                     </span>
                 </div>
-                <div class="tc mt20 f12">
+                <div class="f12 dn sIn1">
+                    <div class="dib  pct22">
+                        <span class="dib pct100">
+                            <span class="searchLable">&emsp;推荐人：</span>
+                            <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+                        </span>
+                    </div>
+                    <button type="button" class="ui-button mr20">查询</button>
+                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+                <div class="sIn2 tc mt20">
                     <button type="button" class="ui-button mr20">查询</button>
                     <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
@@ -250,7 +260,8 @@
                                                 </td>
                                                 <td width="37%">
                                                     <span class="dib ml10">
-                                                        <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
                                                     </span>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -546,7 +557,7 @@
                                                                 class="ui-checkbox on goldIcon v-3 mr2"><input
                                                                     type="checkbox" class="checkbox-opacity"
                                                                     name="checkbox"></i>交易云</label>
-                                                        <label class="mr20"><i
+                                                        <!-- <label class="mr20"><i
                                                                 class="ui-checkbox goldIcon v-3 mr2"><input
                                                                     type="checkbox" class="checkbox-opacity"
                                                                     name="checkbox"></i>加工云</label>
@@ -557,7 +568,7 @@
                                                         <label class="mr20"><i
                                                                 class="ui-checkbox goldIcon v-3 mr2"><input
                                                                     type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>云商城</label>
+                                                                    name="checkbox"></i>云商城</label> -->
                                                     </span>
                                                 </td>
                                             </tr>
@@ -611,7 +622,7 @@
             });
 
             //checkbox 多选
-            $(".checkbox label").click(function(){
+            $(".checkbox label").click(function () {
                 $(this).find("i").toggleClass("on");
             });
         })
@@ -630,6 +641,15 @@
         }
 
 
+        function showIn(ind){
+            if(ind == 1){
+                $(".sIn1").addClass("dn");
+                $(".sIn2").removeClass("dn");
+            }else{
+                $(".sIn1").removeClass("dn");
+                $(".sIn2").addClass("dn");
+            }
+        }
 
     </script>
 </body>
