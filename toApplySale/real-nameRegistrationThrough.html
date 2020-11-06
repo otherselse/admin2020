@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>实名注册审批-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
-    <link rel="stylesheet" href="file:///F:/LG/project/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9"
-        id="layuicss-laydate">
+
     <style>
        .qtip1 {
             min-width: 580px;
@@ -84,7 +82,8 @@
         <div class="ui-content minH">
             <div class="p20">
                 <div class="cl mb10 dac f12 ">
-                    审核状态：<span class="single mr20">
+                    <span class="searchLable">审核状态：</span>
+                    <span class="single ml5 mr20">
                         <input type="hidden">
                         <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5"
                                 id="ht">待审核</button></a>
@@ -111,17 +110,21 @@
                     </span>
                 </div>
                 <div class="cl f12 df">
-                    <span class="dib pct25">
-                        单位名称：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">单位名称：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        账号：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">账号：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        金牌商家：<input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="dib pct22">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        申请日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+                    <span class="dib pct30">
+                        <span class="searchLable">申请日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                 autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
                                 placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
@@ -129,8 +132,9 @@
                     </span>
                 </div>
                 <div class="mt10 f12">
-                    <span class="dib pct25">
-                        授权书是否回收：<span class="radio">
+                    <span class="dib pct22">
+                        <span class="searchLable">授权书是否回收：</span>
+                        <span class="radio">
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
                                         class="radio-opacity" name="radio"></i>是</label>
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -145,10 +149,10 @@
                     <thead>
                         <tr class="">
                             <th width="5%">序号</th>
-                            <th width="8%">申请时间</th>
+                            <th width="12%">申请时间</th>
                             <th width="10%">单位名称</th>
-                            <th width="8%">申请账号</th>
-                            <th width="8%">审核状态</th>
+                            <th width="6%">申请账号</th>
+                            <th width="6%">审核状态</th>
                             <th width="8%" class='sr'>审核人</th>
                             <th width="15%" class='st'>审核时间</th>
                             <th width="7%">授权书回收</th>
