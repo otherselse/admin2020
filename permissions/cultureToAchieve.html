@@ -39,43 +39,43 @@
 
         <div class="ui-tab3">
                 <a href="cultureToSet.html" class="ui-tab3-list rel "><span class="ui-tab3-text">人员配置权限</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToClone.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToClone.html" class="ui-tab3-list rel "><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToPerson.html" class="ui-tab3-list rel"><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToApproval.html" class="ui-tab3-list rel"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToRole.html" class="ui-tab3-list rel"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
 <!--                 <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
- -->                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
+ -->                <a href="cultureToAchieve.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
         <div class="ui-content minH">
              <div class="p30">
                
-                <div class="p_clonebg auto">
-                    <div class="bbe pt20 pb20 pl50 f14 g28">
-                        将
-                        <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
-                        <!-- 假如选中了人员，显示如下内容 -->
-                        <!-- <a href="##" class="ml10 mr10"><span class="topLogoCont vm bb mr5" ><img src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></span>马云云</a> -->
-                        的 
-                        <span class="input-selSearch pct15 ml10 mr10">
-                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-                                <div class="search-cont" >
-                                    <a href="javascript:void(0)" class="search-list db ell">管理系统</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">文化系统</a>
+                <div class="">
+                    <span class="t_linerbg"><span class="pl10 searchLable">关键字录入：</span></span>
+                    <input type="text" class="ui-input pct10" placeholder="请输入" autocomplete="off">
+                    <button type="button" class="ui-button ml20">提交</button>
+                    <span class="ui-tip   ml20" data-type="normal">注：1.录入人员名字，或者人员岗位名称，逻辑为包含；2.多条记录不影响，逻辑为包含</span>
+              </div>
 
-                                </div>
-                            </span>
-                        权限复制给
-                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
-                        <button type="button" class="ui-button" onclick="window.location='cultureToCloneSet.html'">提交</button>
-                    </div>
-                    <div class="pt20 pb20 pl50">
-                        将短信内容 <span class="p_msginfo dib f12 ml10 mr10">**大侠，您的系统权限已变更，请及时跟进和关注，如有异议请提出。</span>
-                        发送给
-                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
-                        <button type="button" class="ui-button" >提交</button>
-                        <a href="" class="g80 f12 ml20">查看发送记录 ></a>
-                    </div>
-                </div>
+              <div class="f14 mt30 mb10"><span class="searchLable">关键词列表</span></div>
+              <table class="ui-table tc f12  " width="100%">
+                    <thead>
+                        <tr>
+                            <th width="5%">序号</th>
+                            <th width="40%">类型</th>
+                            <th width="40%">关键字</th>
+                            <th width="15%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr>
+                            <td class="Exchange" exchangeid="AAEB9E7283285118E05371001FAC1E7B">1</td>
+                            <td>业绩考核</td>
+                            <td>王家伟</td>
+                            <td><a href="">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <script type="text/javascript" src="../js/pagelist.js"></script>
                 
             </div>
         </div>

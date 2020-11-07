@@ -43,8 +43,8 @@
                 <a href="cultureToPerson.html" class="ui-tab3-list rel "><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToApproval.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToRole.html" class="ui-tab3-list rel"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
+<!--                 <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
+ -->                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
         <div class="ui-content minH">
              <div class="p30">
@@ -79,11 +79,10 @@
                             <th width="10%">审批权限</th>
                             <th width="10%" class="tl"><div class="pl10">节点数</div></th>
                             <th width="10%">节点名</th>
-                            <th width="10%">审批人数</th>
+                            <th width="10%">同时审批人数</th>
                             <th width="10%">节点类型</th>
                             <th width="10%">该节点动作</th>
-                            <th width="15%">该节点是否接受短信</th>
-                            <th width="10%">操作</th>                         
+                            <th width="15%">是否接受短信</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,20 +93,65 @@
               <div class="mt30">
                 <span class="t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
                 <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
-                <a href="javascript:void(0)" class="n16_menudel">马晓燕</a> 
+                <a href="javascript:void(0)"  class="n16_menudel">马晓燕<i class="icon-menudel admIcon"></i></a> 
               </div>
 
                 <div class="tc mt40 mb50">
                     <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
 
-                ddd
+                
+              <div class="mt20 mb10">VIP客户评审-第1节点</div>
+                <table class="ui-table tc f12 chooseMenu checkbox" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">配置人</th>
+                            <th width="10%">操作时间</th>
+                            <th width="10%">审批授权人</th>
+                            <th width="10%">是否接受短信</th>
+                            <th width="15%" colspan="2">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr>
+                            <td>马云</td>
+                            <td>2020-08-08 08:44:22</td>
+                            <td>马云</td>
+                            <td><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>
+                            <td><a href="javscript:void(0)" onclick="getArea(this,event)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>
+                            <td><a href="##" class="g28">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>马云</td>
+                            <td>2020-08-08 08:44:22</td>
+                            <td>马云</td>
+                            <td><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>
+                            <td><a href="javscript:void(0)" onclick="getArea(this,event)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)">公司权限</a></td>
+                            <td><a href="##" class="g28">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
 
                 
             </div>
         </div>
     </div>
 
+ <div class="qCont  qtip-lg" style="display: none;width: 350px;" onclick="stopPro(event)" >
+        <div class="qContent">
+            <div class="f0 checkbox">
+                <span class="dib pct25 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海</label></span>
+                <span class="dib pct25 f12 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海加工</label></span>
+                <span class="dib pct25 f12 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>杭州</label></span>
+                <span class="dib pct25 f12 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无锡</label></span>
+            </div>
+            <div class="mt10 tc">
+                <button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick(this)">确认</button>
+                <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -118,6 +162,14 @@
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
+
+             $("#hideTip").on("click",function(){
+                $(this).parents(".qCont").hide();
+            })
+
+            $("body").on("click",function(){
+                $(".qCont").hide();
+            })
             
         })
 
@@ -189,8 +241,68 @@
       }
 
 
+      function setTable(obj,myid,chain,title){
+            var str='<tr class="ui-thover adm_optMenu" id="sort'+myid+'" chain="'+chain+'">'+
+          '  <td><a href="javascript:void(0)" class="g28" onclick="delCulMenuTab(this)">'+title+'<i class="p_closeIcon vm ml5"></i></a></td>'+
+          '  <td colspan="6" style="padding: 0"><table class="ui-table noline checkbox" width="100%" style="border:0">'+
+                        '    <tbody><tr>'+
+                        '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第1节点</label></div></td>'+
+                        '        <td width="10%">复核</td>'+
+                        '        <td width="10%">1</td>'+
+                        '        <td width="10%">有管理员配置</td>'+
+                        '        <td width="10%">普通操作</td>'+
+                        '        <td width="15%">是</td>'+
+                        '    </tr>'+
+                        '    <tr>'+
+                        '       <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第2节点</label></div></td>'+
+                        '        <td width="10%">复核</td>'+
+                        '        <td width="10%">1</td>'+
+                        '        <td width="10%">有管理员配置</td>'+
+                        '        <td width="10%">普通操作</td>'+
+                        '        <td width="15%">是</td>'+
+                        '    </tr>'+
+                        '    <tr>'+
+                        '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>第3节点</label></div></td>'+
+                        '        <td width="10%">复核</td>'+
+                        '        <td width="10%">1</td>'+
+                        '        <td width="10%">有管理员配置</td>'+
+                        '        <td width="10%">普通操作</td>'+
+                        '        <td width="15%">否</td>'+
+                        '    </tr>'+
+                        '     <tr>'+
+                        '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第4节点</label></div></td>'+
+                        '        <td width="10%">复核</td>'+
+                        '        <td width="10%">1</td>'+
+                        '        <td width="10%">有管理员配置</td>'+
+                        '        <td width="10%">普通操作</td>'+
+                        '        <td width="15%">否</td>'+
+                        '    </tr>'+
+                        '</tbody></table></td></tr>';
+          return str;
+      }
 
 
+      function delCulMenuTab(obj){
+        $(obj).parents("tr").remove();
+        contobj.find(".on").removeClass("on");
+        contobj.find(":radio:checked").prop("checked",false);
+      }
+
+
+var _t=''
+function getArea(obj,e){            
+    stopPro(e);
+    _t=$(e.target);
+   /// console.log(_t)
+   var x=$(obj).offset().top+$(obj).outerHeight(true);
+   var y=$(obj).offset().left-200;
+   $(".qCont").css({"top":x+5,"left":y}).show();
+  // $(".qCont").find("input[type='text']").val('')
+}
+
+ function gotoClick(obj){
+    $(".qCont").hide();
+ }
 
 </script>
 

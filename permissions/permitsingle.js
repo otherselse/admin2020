@@ -1,6 +1,6 @@
 
         var myMenuListSingle={
-            setMulThValueNewOne:function(obj,contobj,cul_Data,showobj){
+            setMulThValueNewOne:function(obj,contobj,cul_Data,showobj,tableType){
                 var id=$(obj).attr("id");
                 for(var i=0;i<cul_Data.length;i++){
                 if(id==cul_Data[i].id){
@@ -9,7 +9,7 @@
                         if(cul_Data[i].menuList[j].childnum==0){
                             var myclass=myMenuListSingle.searchIDhasOn(cul_Data[i].menuList[j].id,showobj);
                             var checked=(myclass=="on")?"checked":""
-                             menu='<span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="0" data-title="'+cul_Data[i].menuList[j].title+'" '+checked+'></i>'+cul_Data[i].menuList[j].title+'</label></span>';
+                             menu='<span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')" id="'+cul_Data[i].menuList[j].id+'" childnum="0" data-title="'+cul_Data[i].menuList[j].title+'" '+checked+'></i>'+cul_Data[i].menuList[j].title+'</label></span>';
                         }else{
                             var myclass=myMenuListSingle.searchMulhasOn(cul_Data[i].menuList[j].id,showobj);
 
@@ -24,7 +24,7 @@
              contobj.html(str);
              $(obj).addClass("on").siblings().removeClass("on");
            }
-           ,setMulThValueNew:function(obj,e,showobj){   //点击最末级菜单选择       
+           ,setMulThValueNew:function(obj,e,showobj,tableType){   //点击最末级菜单选择       
                 stopPro(e);
                 var str='',chain='';
                 var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
@@ -51,12 +51,16 @@
                             $(this).find(".setMulPanelMCont:gt(0)").remove();
                         }
                     })
-                    //console.log('aaa');
-
-                    
                 } 
-                str='<span  class="n16_menudel adm_optMenu" id="'+myid+'"  chain="'+chain+'">'+title+'</span>';
-                $("."+showobj).html(str);           
+                if(tableType){
+                    str=setTable(obj,myid,chain,title);
+                    $("."+showobj).find("tbody").html(str)
+                }else{
+                    str='<span  class="n16_menudel adm_optMenu" id="'+myid+'"  chain="'+chain+'">'+title+'</span>';
+                    $("."+showobj).html(str); 
+                }
+                
+                          
            } 
            ,setArrowIson:function(chain){
                 var chainArr=chain.split(",");
@@ -67,7 +71,7 @@
 
            
 
-           ,setMulPanelClick:function(obj,e,myarr,contobj,showobj){  //点击多选的菜单，显示下级菜单
+           ,setMulPanelClick:function(obj,e,myarr,contobj,showobj,tableType){  //点击多选的菜单，显示下级菜单
             //console.log(approl)
                 stopPro(e);
                 var myobj=$(obj).next(".setMulPanelCont");
@@ -82,7 +86,7 @@
                     if(myarr[i].childnum==0){
                         var myclass=myMenuListSingle.searchIDhasOn(myarr[i].id,showobj);
                         var checked=(myclass=="on")?"checked":"";
-                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
+                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
                     }else{
                         var myclass=myMenuListSingle.searchMulhasOn(myarr[i].id,showobj);
                         dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5  '+myclass+'" ></i>'+myarr[i].title+'</div>'
@@ -95,7 +99,7 @@
                 $(".setMulPanelCont").hide();
                  myobj.append(mystr).show();               
           }          
-          ,setMulPanelComm:function(obj,e,myarr,myobj,showobj){
+          ,setMulPanelComm:function(obj,e,myarr,myobj,showobj,tableType){
             var l=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").length
             var left=l*165;
             var bid=$(obj).parents(".setMulPanelMCont").attr("pid")
@@ -114,7 +118,7 @@
                         }
                        
                         //console.log(hasOn);
-                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+hasOn+'"><input type="radio" class="radio-opacity" name="radio" onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
+                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+hasOn+'"><input type="radio" class="radio-opacity" name="radio" onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
                     }else{
                         var hasArrow=""; //用于查找下拉箭头是否选中
                         if($("."+showobj).find(".adm_optMenu").length>0){

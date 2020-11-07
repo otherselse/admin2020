@@ -41,7 +41,7 @@
              // $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").show();
             }else{
               //假如一级显示菜单切换的时候，关闭下拉的浮层；
-              console.log("1111")
+              //console.log("1111")
               $(obj).parents(".checkbox").find(".adm_firstMulMenu").each(function(){
                     $(this).find(".setMulPanelCont").hide();
                     if($(this).find(".setMulPanelMCont").length>1){
