@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>实名注册审批-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <style>
-       .qtip1 {
+        .qtip1 {
             min-width: 580px;
         }
 
@@ -701,7 +703,7 @@
                                         </div>
                                         <div class="dac mb5">
                                             <div style="width:13%;"></div>
-                                            <div class="pl5">该委托书为不合格  (杨兴旺  2020-11-04 16:44:34)</div>
+                                            <div class="pl5">该委托书为不合格 (杨兴旺 2020-11-04 16:44:34)</div>
                                         </div>
                                         <div class="dac mb5">
                                             <div class="tr" style="width:13%;">客户现场授权证明：</div>
@@ -1013,7 +1015,6 @@
             <button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
         </div>
     </div>
-
     <div class='sealContent grey9 layer_pageContent dom2 dn'>
         <p class='absbar mt20'><span
                 class='blue'>1、公章字体方面：</span>中文章一般是宋体或仿宋体，且单独看每个字体都是标准的长方形；如果使用别的字体（稍微随意或扭曲的字体）要仔细甄别。</p>
@@ -1024,7 +1025,6 @@
         <p class='f16 tc blue cent' style='font-size: 18px;margin-top:40px'>请审批人员注意辨别用户提交的盖章真伪情况</p>
     </div>
 
-
     <div class='sealContent grey9 layer_pageContent dom3 dn'>
         <div class="sealContent1 grey9 layer_pageContent">
             <p class="mb10 mt20"><span class="">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
@@ -1032,6 +1032,7 @@
             <p class="mb10"><span class="">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
         </div>
     </div>
+
 
 
 
@@ -1087,7 +1088,6 @@
                     classes: 'qtip-lg  qtip-light  qtip-shadow qtip-rounded qtip2'  //
                 }
             });
-
         })
 
         $(".selectSingle").find("a").on("click", function () {
