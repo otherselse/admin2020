@@ -48,21 +48,22 @@
 
         <div class="ui-content minH">
             <div class="p20">
-                <div class="cl mb10 dac f12 ">
-                    <span class="dib ">
-                        <span class="searchLable">状态：</span>
-                        <span class="radio mr20">
-                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-                                        name="radio"></i>未评审</label>
-                            <label class="mr10"><i class="on ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>已评审</label>
-                        </span>
+                <div class="cl mb10  f0 ">
+                    <span class="dib f12">
+                        <span class="searchLable">&emsp;&emsp;状态：</span>
+                        <span class="single">
+							<input type="hidden">
+							<button type="button" class="ui-option mr5 on">未评审</button>
+							<button type="button" class="ui-option">已评审</button>
+						</span>
                     </span>
-                    <span class="dib pct22">
+                </div>
+                <div class="cl f0">
+                    <span class="dib pct25 f12">
                         <span class="searchLable">单位名称：</span>
                         <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
+                    <span class="dib pct25 f12">
                         <span class="searchLable">评审类型：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
@@ -76,21 +77,16 @@
                             </div>
                         </span>
                     </span>
-                    <span class="dib pct25 m_pct31">
+                    <span class="dib pct30 f12">
                         <span class="searchLable">申请时间：</span>
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                        <span class="ui-input tc f0 pct69  range" data-type="time"><input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
-
-                </div>
-                <div class="mt20 mb30 tc f12">
                     <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12" width="100%">
+                <table class="ui-table mt30 tc f12" width="100%">
                     <thead>
                         <tr>
                             <th width="10%">序号</th>
