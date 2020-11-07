@@ -25,6 +25,35 @@
             width: 10px;
             height: 10px;
         }
+
+        .qCont:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent #fff transparent;
+            top: -10px;
+            right: 0px;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+
+        .qCont {
+            width: 280px;
+            background: #fff;
+            padding: 0px;
+            line-height: 18px;
+            background-color: #fff;
+            border-color: #E2E2E2;
+            color: #454545;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            max-width: 380px;
+            min-width: 50px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -75,7 +104,8 @@
                             <span class="ui-input tc f0 pct69  range" data-type="time">
                                 <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
                                     autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                    placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                                    placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off"
+                                    lay-key="2">
                             </span>
                         </span>
                     </div>
@@ -85,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cl f12  mb15 mr20 tr">
+            <!-- <div class="cl f12  mb15 mr20 tr">
                 <span class="dib">
                     <span class="daj">
                         <span class="daj mr20">
@@ -106,7 +136,7 @@
                         </span>
                     </span>
                 </span>
-            </div>
+            </div> -->
             <!-- search end -->
             <div class="lgui-table-box ml20 mr20 ">
                 <div class="lgui-table-header pct100">
@@ -134,7 +164,9 @@
                                 <td class="pct4">1</td>
                                 <td class="pct15">2020-04-05 12:30:28</td>
                                 <td class="pct6">59862</td>
-                                <td class="pct10">中国邮政运输集团</td>
+                                <td class="pct10">
+                                    <a href="../public/goldSituation.html" target="_block">中国邮政运输集团</a>
+                                </td>
                                 <td class="pct10">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="15" data-type="smallbbr">
@@ -157,63 +189,18 @@
                                         <span>未上传</span>
                                     </span>
                                 </td>
+                                <!-- onclick="showTrMore(this)"  -->
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">上传正本</a>
-                                </td>
-                            </tr>
-                            <!-- 上传正本 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-                                            <tbody>
-                                                <tr class="">
-                                                    <td class="bgfa" width="13%">
-                                                        <span class="pt5 dib pl20">上传正本：</span>
-                                                    </td>
-                                                    <td width="87%" colspan="3">
-                                                        <span class="dib pl20">
-                                                            <button type="button" class="ui-button mr10 vm w120"
-                                                                data-type="upfile" onclick="upfile()">上传正本附件</button>
-                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                                    class="g80">组件1111组件</a><a
-                                                                    class="icon-sdel goldIcon vm ml5"
-                                                                    href="#"></a></span>
-                                                        </span>
-                                                    </td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td class="bgfa" width="13%">
-                                                        <span class="pt5 dib pl20">正本约定最晚装运日期：</span>
-                                                    </td>
-                                                    <td width="37%">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time2"
-                                                                readonly=""></span>
-                                                    </td>
-                                                    <td class="vt bgfa" width="13%">
-                                                        <span class="pt5 dib pl20">信用证有效期：</span>
-                                                    </td>
-                                                    <td width="37%" class="borNone">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time3"
-                                                                readonly=""></span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="tc mt20 mb20">
-                                            <button type="button" class="mr10 ui-button">提交</button>
-                                        </div>
-                                    </div>
+                                    <a href="javascript:void(0)" onclick="clickGG(this,event)">上传正本</a>
                                 </td>
                             </tr>
                             <tr class="pct100">
                                 <td class="pct4">1</td>
                                 <td class="pct15">2020-04-05 12:30:28</td>
                                 <td class="pct6">59862</td>
-                                <td class="pct10">中国邮政运输集团</td>
+                                <td class="pct10">
+                                    <a href="../public/goldSituation.html" target="_block">中国邮政运输集团</a>
+                                </td>
                                 <td class="pct10">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="15" data-type="smallbbr">
@@ -237,65 +224,16 @@
                                     </span>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">上传正本</a>
-
-                                </td>
-                            </tr>
-                            <!-- 上传正本 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-                                            <tbody>
-                                                <tr class="">
-                                                    <td class="bgfa" width="10%">
-                                                        <span class="pt5 dib pl20">上传正本：</span>
-                                                    </td>
-                                                    <td width="40%">
-                                                        <span class="dib pl20">
-                                                            <button type="button" class="ui-button mr10 vm w120"
-                                                                data-type="upfile" onclick="upfile()">上传正本附件</button>
-                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                                    class="g80">组件1111组件</a><a
-                                                                    class="icon-sdel goldIcon vm ml5"
-                                                                    href="#"></a></span>
-
-                                                        </span>
-                                                    </td>
-                                                    <td class="bgfa" width="11%">
-                                                        <span class="pt5 dib pl20">正本约定最晚装运日期：</span>
-                                                    </td>
-                                                    <td width="40%">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time2"
-                                                                readonly=""></span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="vt bgfa" width="10%">
-                                                        <span class="pt5 dib pl20">信用证有效期：</span>
-                                                    </td>
-                                                    <td width="40%" class="borNone">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time3"
-                                                                readonly=""></span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="tc mt20 mb20">
-                                            <button type="button" class="mr10 ui-button">提交</button>
-                                            <button type="button" class="ui-button " onclick="showTrMore(this)"
-                                                data-type="clear">退回</button>
-                                        </div>
-                                    </div>
+                                    <a href="javascript:void(0)" onclick="clickGG(this,event)">上传正本</a>
                                 </td>
                             </tr>
                             <tr class="pct100">
                                 <td class="pct4">1</td>
                                 <td class="pct15">2020-04-05 12:30:28</td>
                                 <td class="pct6">59862</td>
-                                <td class="pct10">中国邮政运输集团</td>
+                                <td class="pct10">
+                                    <a href="../public/goldSituation.html" target="_block">中国邮政运输集团</a>
+                                </td>
                                 <td class="pct10">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="16" data-type="smallbbr">
@@ -323,64 +261,16 @@
                                     </span>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">上传正本</a>
-                                </td>
-                            </tr>
-                            <!-- 上传正本 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-                                            <tbody>
-                                                <tr class="">
-                                                    <td class="bgfa" width="10%">
-                                                        <span class="pt5 dib pl20">上传正本：</span>
-                                                    </td>
-                                                    <td width="40%">
-                                                        <span class="dib pl20">
-                                                            <button type="button" class="ui-button mr10 vm w120"
-                                                                data-type="upfile" onclick="upfile()">上传正本附件</button>
-                                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                                    class="g80">组件1111组件</a><a
-                                                                    class="icon-sdel goldIcon vm ml5"
-                                                                    href="#"></a></span>
-
-                                                        </span>
-                                                    </td>
-                                                    <td class="bgfa" width="11%">
-                                                        <span class="pt5 dib pl20">正本约定最晚装运日期：</span>
-                                                    </td>
-                                                    <td width="40%">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time2"
-                                                                readonly=""></span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="vt bgfa" width="10%">
-                                                        <span class="pt5 dib pl20">信用证有效期：</span>
-                                                    </td>
-                                                    <td width="40%" class="borNone">
-                                                        <span class="ui-input pct40 ml10" data-type="time"><input
-                                                                type="text" placeholder="选择最晚装运日期" id="time3"
-                                                                readonly=""></span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="tc mt20 mb20">
-                                            <button type="button" class="mr10 ui-button">提交</button>
-                                            <button type="button" class="ui-button " onclick="showTrMore(this)"
-                                                data-type="clear">退回</button>
-                                        </div>
-                                    </div>
+                                    <a href="javascript:void(0)" onclick="clickGG(this,event)">上传正本</a>
                                 </td>
                             </tr>
                             <tr class="pct100">
                                 <td class="pct4">1</td>
                                 <td class="pct15">2020-04-05 12:30:28</td>
                                 <td class="pct6">59862</td>
-                                <td class="pct10">中国邮政运输集团</td>
+                                <td class="pct10">
+                                    <a href="../public/goldSituation.html" target="_block">中国邮政运输集团</a>
+                                </td>
                                 <td class="pct10">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="18" data-type="smallbbr">
@@ -409,11 +299,11 @@
                                     </span>
                                 </td>
                                 <td class="pct10">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">上传正本</a>
+                                    <a href="javascript:void(0)" onclick="clickGG(this,event)">上传正本</a>
                                 </td>
                             </tr>
                             <!-- 上传正本 -->
-                            <tr class="hideTr dn">
+                            <!-- <tr class="hideTr dn">
                                 <td colspan="10">
                                     <div class="pl20 pr20">
                                         <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
@@ -460,7 +350,7 @@
                                         </div>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -493,47 +383,74 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 审核不通过查看 -->
-            <div id="qtip-12"
-                class="qtip qtip-default qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-pos-tl qtip-focus"
-                tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-12-content"
-                aria-hidden="false" data-qtip-id="12">
-                <div class="qtip-tip">
-                    <canvas width="8" height="8"></canvas>
-                </div>
-                <div class="qtip-content" id="qtip-12-content" aria-atomic="true">
-                    <div class="f12 bld8 pl10 dom4 dn" style="visibility: visible;">
-                        <div class="g28 ui-audit"><span>复核意见</span> <span class="g1b ml15">复核通过</span></div>
-                        <div class="lh20 mt5 mb30">
-                            <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span>
-                            </div>
-                            <div> <span class="gga">审批时间：</span><span class="g67">2020-02-24 18:14:23</span></div>
-                        </div>
-                        <div class="g28 ui-audit"><span>审批意见</span> <span class="red ml15">审核不通过</span></div>
-                        <div class="lh20 mt5">
-                            <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">不同意申请</span>
-                            </div>
-                            <div> <span class="gga">审批时间：</span><span class="g67">2020-02-24 18:14:23</span></div>
-                        </div>
+        </div>
+        <div class="mb20"></div>
+    </div>
+    <!-- 审核不通过查看 -->
+    <div id="qtip-12" class="qtip qtip-default qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-pos-tl qtip-focus"
+        tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-12-content"
+        aria-hidden="false" data-qtip-id="12">
+        <div class="qtip-tip">
+            <canvas width="8" height="8"></canvas>
+        </div>
+        <div class="qtip-content" id="qtip-12-content" aria-atomic="true">
+            <div class="f12 bld8 pl10 dom4 dn" style="visibility: visible;">
+                <div class="g28 ui-audit"><span>复核意见</span> <span class="g1b ml15">复核通过</span></div>
+                <div class="lh20 mt5 mb30">
+                    <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">同意申请</span>
                     </div>
+                    <div> <span class="gga">审批时间：</span><span class="g67">2020-02-24 18:14:23</span></div>
+                </div>
+                <div class="g28 ui-audit"><span>审批意见</span> <span class="red ml15">审核不通过</span></div>
+                <div class="lh20 mt5">
+                    <div class="ui-audit-idea"> <span class="gga">审批意见：</span><span class="g67">不同意申请</span>
+                    </div>
+                    <div> <span class="gga">审批时间：</span><span class="g67">2020-02-24 18:14:23</span></div>
                 </div>
             </div>
-            <!-- 查看图片 -->
-            <div class="f12 dom18 dn">
-                <div class="selectDiv f12">
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                    <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-                </div>
-            </div>
-            <div class="mb20"></div>
         </div>
     </div>
+    <!-- 查看图片 -->
+    <div class="f12 dom18 dn">
+        <div class="selectDiv f12">
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+        </div>
+    </div>
+    <div class="qCont dn qtip-lg" onclick="stopPro(event)">
+        <div class="qContent">
+            <div class="tc pl20 pr20">
+                <div class="tl mb10 pct80">
+                    信用证有效期：
+                </div>
+                <span class="ui-input mb10 pct100" data-type="time"><input type="text" placeholder="请选择" id="time2"
+                        readonly=""></span>
+                <div class="tl mb10 pct80">
+                    正本约定最晚装运日期：
+                </div>
+                <span class="ui-input mb15 pct100" data-type="time"><input type="text" placeholder="请选择" id="time2"
+                    readonly=""></span>
+                <div class="tl mb10">
+                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile" onclick="upfile()">附件上传</button>
+                </div>
+                <div class="tl">
+                    <span class="ui-files vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a
+                        class="icon-sdel goldIcon vm ml5" href="#"></a></span>
+                </div>
+                
+            </div>
+            <div class="mt20 ml20 tl">
+                <button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick(this)">确认</button>
+                <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -585,6 +502,42 @@
         })
     </script>
     <script>
+        function stopPro(e) {
+            if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
+                if (event.stopPropagation) { event.stopPropagation(); }
+                else if (window.event) { window.event.cancelBubble = true; }
+            } else { e.stopPropagation(); }
+        }
+
+        $("#hideTip").on("click", function () {
+            $(this).parents(".qCont").hide();
+        })
+
+        $("body").on("click", function () {
+            $(".qCont").hide();
+        })
+
+        var _t = ''
+        function clickGG(obj, e) {
+            stopPro(e);
+            _t = $(e.target);
+            /// console.log(_t)
+            var x = $(obj).offset().top + $(obj).outerHeight(true);
+            var y = $(obj).offset().left;
+            // alert(x + '-' + y);
+            $(".qCont").css({ "top": x, "left": y - $(".qCont").width() }).show();
+            // $(".qCont").find("input[type='text']").val('')
+        }
+
+        function setSte(obj, flag, e) {
+            stopPro(e);
+            $(obj).parents(".radio").find(".ui-radio").removeClass("on");
+            $(obj).addClass("on");
+            //
+            $(".qContent").find(".specification").hide();
+            $(".qContent").find(".specification").eq(flag).show()
+        }
+
         //时间范围
         laydate.render({
             elem: '#time1'
