@@ -64,7 +64,7 @@
                     </tr>
                     <tr class="2 dn">
                         <td colspan="2" class="tc">
-                            <div style="height: 80px;border:1px solid" class="pct80 auto tl box-con p10"></div>
+                            <div style="height: 80px;border:1px solid #D9D9D9" class="pct80 auto tl box-con p10"></div>
                             <span class="radio dib mt5">
                                 <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
                                             class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
@@ -92,7 +92,7 @@
             </div>
             <div class="tc mt10">
                 <button type="button" class="mr10 ui-button w90">预览</button>
-                <button type="button" class="mr10 ui-button w90" data-type="clear">退回</button>
+                <button type="button" class="mr10 ui-button w90" data-type="clear">制作</button>
                 <button type="button" class="ui-button w90" data-type="clear">取消</button>
             </div>
         </div>
@@ -135,8 +135,8 @@
                 $(".2").addClass("dd")
 
                 $(".box-con").append(
-                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>'+
-                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>'+
+                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
+                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
                     '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>'
                     // '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'+
                     // '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'
@@ -148,10 +148,10 @@
             }
         }
 
-        $(".box-con").on('click','.ui-checkbox', function () {
-            if($(this).attr("class").indexOf(" on") < 1){
+        $(".box-con").on('click', '.ui-checkbox', function () {
+            if ($(this).attr("class").indexOf(" on") < 1) {
                 $(this).addClass("on")
-            }else{
+            } else {
                 $(this).removeClass("on")
             }
         })
