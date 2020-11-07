@@ -339,54 +339,40 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h1 class="tl f14 b mt20 mb5">审批意见</h1>
-                                    <table class="ui-table f12 auto tl mb10" width="100%">
-                                        <tbody>
-                                            <tr class="resource-table">
-                                                <td width="13%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批意见：</span>
-                                                </td>
-                                                <td width="37%">
-                                                    <span class="radio pl10">
-                                                        <label class="mr20" onclick="clickPermit(this,'1')"><i
-                                                                class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                                    class="radio-opacity" name="radio"></i> 审核通过</label>
-                                                        <label class="mr20" onclick="clickPermit(this,'2')"><i
-                                                                class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                                    class="radio-opacity" name="radio"></i>审核不通过</label>
-                                                    </span>
-                                                </td>
-                                                <td width="13%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">实名认证情况：</span>
-                                                </td>
-                                                <td>
-                                                    <span class="radio pl10">
-                                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input
-                                                                    type="radio" class="radio-opacity"
-                                                                    name="radio"></i>通过实名验证</label>
-                                                        <label class=""><i class="ui-radio goldIcon v-3 mr2"><input
-                                                                    type="radio" class="radio-opacity"
-                                                                    name="radio"></i>未通过是认证</label>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr class="resource-table">
-                                                <td width="13%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批备注：</span>
-                                                </td>
-                                                <td width="87%" colspan="3">
-                                                    <div class="pl10 pr10">
-                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
+                                    <h1 class="tl f14 b mt20 mb5 lable_t">审批意见</h1>
+                                    <div class="auto bgwh pb30 pt20 mt15 ">
+                                        <div class="clt-check-cont  pct95 ml20 tl">
+                                            <div class="cl clt-check-box">
+                                                <div class="clt-check-left">
+                                                    <div class="pt20 pb20 mr10 tr">
+                                                        <span class="b g28 ">
+                                                                本人 <br>
+                                                                审批意见
+                                                        </span>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <div class="tc  mt20 mb20">
-                                        <button type="button" class="ui-button mr10">提交</button>
+                                                </div>
+                                                <div class="clt-check-right reviewBox auto ">
+                                                    <div class="clt-check-rcont f12">
+                                                        <div>
+                                                            <span class="radio pct30 dib">
+                                                                <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                            </span>
+                                                            <span class="g28">实名认证情况：</span>
+                                                            <span class="radio">
+                                                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>通过验证</label>
+                                                                <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未通过验证</label>
+                                                            </span>
+                                                        </div>
+                                                            <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc mt20">
+                                            <button class="ui-button mr15" type="button">提交</button>
+                                        </div>
                                     </div>
-
                                 </div>
                             </td>
                         </tr>

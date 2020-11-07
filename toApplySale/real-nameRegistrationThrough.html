@@ -82,11 +82,11 @@
 
         <div class="ui-content minH">
             <div class="p20">
-                <div class="cl mb10 dac f12 ">
-                    <span class="searchLable">审核状态：</span>
-                    <span class="single ml5 mr20">
+                <div class="cl mb10 f0">
+                    <span class="searchLable f12">审核状态：</span>
+                    <span class="single ml5 f12">
                         <input type="hidden">
-                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5"
+                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5 "
                                 id="ht">待审核</button></a>
                         <a href="real-nameRegistrationThrough.html"><button type="button"
                                 class="ui-option mr5 on">审核通过</button></a>
@@ -95,45 +95,27 @@
                         <a href="real-nameRegistrationSeal.html"><button type="button"
                                 class="ui-option mr5">盖章确认</button></a>
                     </span>
-                    <span class="m_db dac f1">
-                        <div class="df mr20">
-                            <span class="tipclick1 menuhook dac" qtip-dom="dom3">
-                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
-                                <div class="">审批要点</div>
-                            </span>
-                        </div>
-                        <div class="df">
-                            <span class="tipclick menuhook dac" qtip-dom="dom2">
-                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
-                                <div class="">真假章辨别要点</div>
-                            </span>
-                        </div>
+                    <span class="r f12">
+                            <a class="tipclick1 mr20" href='javascript:void(0)' qtip-dom="dom3">
+                                <i href='javascript:void(0)' class='goldIcon vm icon-info' title=""></i>
+                                审批要点
+                            </a>
+                            <a class="tipclick"  href='javascript:void(0)' qtip-dom="dom2">
+                                <i  class='goldIcon icon-info vm'  title=""></i>
+                                真假章辨别要点
+                            </a>
                     </span>
                 </div>
-                <div class="cl f12 df">
-                    <span class="dib pct22">
+                <div class="cl f0 df">
+                    <span class="dib pct30 f12">
                         <span class="searchLable">单位名称：</span>
                         <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">账号：</span>
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">&emsp;&emsp;账号：</span>
                         <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30">
-                        <span class="searchLable">申请日期：</span>
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                </div>
-                <div class="mt10 f12">
-                    <span class="dib pct22">
+                    <span class="dib  f12">
                         <span class="searchLable">授权书是否回收：</span>
                         <span class="radio">
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
@@ -142,8 +124,20 @@
                                         class="radio-opacity" name="radio"></i>否</label>
                         </span>
                     </span>
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+                <div class="mt10 f0">
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">申请日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time"><input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <button type="button" class="ui-button ">查询</button>
                 </div>
 
                 <table class="ui-table tc f12 mt30" width="100%">
