@@ -54,7 +54,7 @@
                 } 
                 if(tableType){
                     str=setTable(obj,myid,chain,title);
-                    $("."+showobj).find("tbody").html(str)
+                    $("."+showobj).html(str)
                 }else{
                     str='<span  class="n16_menudel adm_optMenu" id="'+myid+'"  chain="'+chain+'">'+title+'</span>';
                     $("."+showobj).html(str); 
