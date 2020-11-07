@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>文化系统-权限管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">  
+
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                权限管理
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">文化系统</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+
+        <div class="ui-tab3">
+                <a href="cultureToSet.html" class="ui-tab3-list rel "><span class="ui-tab3-text">人员配置权限</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToClone.html" class="ui-tab3-list rel "><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToPerson.html" class="ui-tab3-list rel"><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToApproval.html" class="ui-tab3-list rel"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToRole.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
+            </div>
+        <div class="ui-content minH">
+             <div class="p30">               
+                <div class=""><span class="t_linerbg"><span class="pl10 searchLable">选择角色</span></span><a href="javascript:void(0)" class="dib ml10 f12" onclick="addRole()">+增加角色</a></div>
+                <table class="ui-table f12 tc mt15 pct100">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td width="10%" class="bgfa">
+                                <span class="searchLable f14">选择角色</span><br>
+                                （单选）
+                            </td>
+                            <td width="90%" class="cont radio f0 lh24" >
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="001" data-title="金牌商家审核1"></i>金牌商家审核1</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="002" data-title="金牌商家审核1"></i>查询统计</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="003" data-title="金牌商家审核2"></i>金牌商家审核2</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="004" data-title="金牌商家审核3"></i>金牌商家审核3</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="005" data-title="金牌商家审核4"></i>金牌商家审核4</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="006" data-title="金牌商家审核5"></i>金牌商家审核5</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="007" data-title="金牌商家审核6"></i>金牌商家审核6</label></span>
+                            </td>
+                        </tr>
+                      <tr class="resource-table">
+                            <td  class="bgfa searchLable f14">
+                                已选角色
+                            </td>
+                            <td class="cont chooseMenu" height="26">
+                                <!-- <a href="javascript:void(0)" class="n16_menudel" >费用统计报表<i class="icon-menudel admIcon"></i></a> -->
+                            </td>
+                        </tr>
+                  </tbody>
+              </table>
+
+              <div class="mt30">
+                <span class="t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
+                <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
+                <a href="javascript:void(0)" class="n16_menudel">马晓燕<i class="icon-menudel admIcon"></i></a> 
+              </div>
+              <table class="ui-table f12 tc mt15 pct100">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td width="10%" rowspan="2" class="bgfa g28 f14">
+                                已分配人员
+                            </td>
+                            <td width="90%" class="cont">
+                                <a href="javascript:void(0)" class="n16_menudel" >马云云<i class="icon-menudel admIcon"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tc mt40 mb50">
+                    <button class="ui-button w120" data-type="big" type="button">提交</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            
+        })
+
+        function setRole(obj){
+            var title=$(obj).attr("data-title");
+            var id=$(obj).attr("id");
+            var str='<a href="javascript:void(0)" class="n16_menudel" sortid='+id+' >'+title+'<i class="icon-menudel admIcon"></i></a>'
+            $(".chooseMenu").html(str);
+        }
+
+        function addRole(){
+            layer.open({
+             type: 2,
+             title: '新增系统角色',
+             shadeClose: true,
+             shade: 0.4,
+             area: ['740px', '400px'],
+             content: 'addRole.html' //iframe的url
+            });
+        }
+
+</script>
+
+</body>
+
+</html>
