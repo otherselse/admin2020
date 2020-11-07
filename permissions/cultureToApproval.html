@@ -40,8 +40,8 @@
         <div class="ui-tab3">
                 <a href="cultureToSet.html" class="ui-tab3-list rel "><span class="ui-tab3-text">人员配置权限</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToClone.html" class="ui-tab3-list rel "><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToPerson.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToApproval.html" class="ui-tab3-list rel"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToPerson.html" class="ui-tab3-list rel "><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="cultureToApproval.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToRole.html" class="ui-tab3-list rel"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
@@ -58,49 +58,50 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
-                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setCultureSingle(this)" id="600">文化系统菜单</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="1857">文化系统流程中心</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setCultureSingle(this)" id="600">人事薪资</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="1857">行政用印</a>
                                 </div>
                             </td>
                         </tr>
                         <tr class="resource-table">
-                          <td class="cont  n16_menuMulbgS f0 lh24 radio" >                                  
-                                       
-                                       
+                          <td class="cont  n16_menuMulbgS f0 lh24 radio" >                                                                   
 
                           </td>
                       </tr>
-                      <tr class="resource-table">
-                            <td rowspan="2" class="bgfa searchLable f14">
-                                已选
-                            </td>
-                            <td class="cont chooseMenu" height="26">
-                                <!-- <a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel adm_optMenu" id="sort638" pid="0" chain="0">费用统计报表<i class="icon-menudel admIcon"></i></a> -->
-                            </td>
-                        </tr>
                   </tbody>
               </table> 
+
+              <div class="f14 mt20 mb10"><span class="searchLable">已选权限</span><span class="ui-tip   ml10" data-type="normal">请选择审批节点</span></div>
+
+              <table class="ui-table tc f12 chooseMenu checkbox" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">审批权限</th>
+                            <th width="10%" class="tl"><div class="pl10">节点数</div></th>
+                            <th width="10%">节点名</th>
+                            <th width="10%">审批人数</th>
+                            <th width="10%">节点类型</th>
+                            <th width="10%">该节点动作</th>
+                            <th width="15%">该节点是否接受短信</th>
+                            <th width="10%">操作</th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+
               <div class="mt30">
                 <span class="t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
                 <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
                 <a href="javascript:void(0)" class="n16_menudel">马晓燕</a> 
               </div>
-              <table class="ui-table f12 tc mt15 pct100">
-                    <tbody>
-                        <tr class="resource-table">
-                            <td width="10%" rowspan="2" class="bgfa g28 f14">
-                                已分配人员
-                            </td>
-                            <td width="90%" class="cont">
-                                <a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
 
                 <div class="tc mt40 mb50">
                     <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
+
+                ddd
 
                 
             </div>
@@ -122,20 +123,20 @@
 
          //定义菜单权限数组,只搜索到一级菜单，以及菜单名称、id、以及子菜单个数
         var cul_Data=[
-            {"title":"文化系统菜单",
+            {"title":"人事薪资",
              "id":600,
              "menuList":[
-                         {"title":"金牌商家审核", "id":638,"childnum":0}
-                         ,{"title":"乐刚人才", "id":604,"childnum":0}
-                         ,{"title":"查询统计", "id":640,"childnum":5}
-                         ,{"title":"通知审批", "id":680,"childnum":0}
+                         {"title":"人事薪资1", "id":638,"childnum":0}
+                         ,{"title":"人事薪资2", "id":604,"childnum":0}
+                         ,{"title":"费用支出", "id":640,"childnum":5}
+                         ,{"title":"财务资金", "id":680,"childnum":0}
 
                     ]
             }
-            ,{"title":"文化系统流程中心",
+            ,{"title":"行政用印",
              "id":1857,
              "menuList":[
-                         {"title":"流程中心", "id":1858,"childnum":0}
+                         {"title":"公司行政用印", "id":1858,"childnum":0}
 
                     ]
             }
@@ -145,19 +146,20 @@
 
         var contobj=$(".n16_menuMulbgS");
         var showobj='chooseMenu';
+        var tableType=true;
         function setCultureSingle(obj){
-            myMenuListSingle.setMulThValueNewOne(obj,contobj,cul_Data,showobj);
+            myMenuListSingle.setMulThValueNewOne(obj,contobj,cul_Data,showobj,tableType);
         }
 
         function setMulPanel(obj,e){
             var myarr=[
-             {"title":"费用支出", "id":2222,"childnum":0}
-             ,{"title":"费用收入", "id":2223,"childnum":5}
-             ,{"title":"外贸用章", "id":2224,"childnum":0}
-             ,{"title":"办公用品登记", "id":2225,"childnum":0}
+             {"title":"费用支出1", "id":2222,"childnum":0}
+             ,{"title":"费用支出2", "id":2223,"childnum":5}
+             ,{"title":"费用支出3", "id":2224,"childnum":0}
+             ,{"title":"费用支出4", "id":2225,"childnum":0}
             ]
 
-            myMenuListSingle.setMulPanelClick(obj,e,myarr,contobj,showobj)
+            myMenuListSingle.setMulPanelClick(obj,e,myarr,contobj,showobj,tableType)
 
         }
 
@@ -170,7 +172,7 @@
             ,{"title":"生产维修费", "id":1113,"childnum":0}
             ,{"title":"其他", "id":1114,"childnum":0}
         ]
-        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj)        
+        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj,tableType)        
       }
 
           //每次查询显示当前菜单的下级菜单 （静态页面所用）
@@ -183,7 +185,7 @@
             ,{"title":"2生产维修费", "id":3113,"childnum":0}
             ,{"title":"2其他", "id":3114,"childnum":0}
         ]
-        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj)        
+        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj,tableType)        
       }
 
 

@@ -11,7 +11,7 @@
                         }else{
                             var myclass=myMenuList.searchMulhasOn(cul_Data[i].menuList[j].id,type);
                             //console.log("myclass:"+myclass)
-                            menu='<span class="dib pct20 f12 rel " ><span class="man_list"  onclick="setMulPanel(this,'+type+',event,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                            menu='<span class="dib pct20 f12 rel adm_firstMulMenu" ><span class="man_list"  onclick="setMulPanel(this,'+type+',event,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
                         }
                         str+=menu
                        
@@ -39,6 +39,15 @@
               var z=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").index(z_obj);
               $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont:gt("+z+")").hide();              
              // $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").show();
+            }else{
+              //假如一级显示菜单切换的时候，关闭下拉的浮层；
+              console.log("1111")
+              $(obj).parents(".checkbox").find(".adm_firstMulMenu").each(function(){
+                    $(this).find(".setMulPanelCont").hide();
+                    if($(this).find(".setMulPanelMCont").length>1){
+                        $(this).find(".setMulPanelMCont:gt(0)").remove();
+                    }
+                })
             }
             if($(obj).find(".ui-checkbox-unable").hasClass("on")){ //选中，点击
                 $(obj).find(".ui-checkbox-unable").removeClass("on");
@@ -55,7 +64,8 @@
                     })
                     myMenuList.setArrowOff(obj,type,e,flag);
 
-                } 
+                } else{
+                }
 
             }else{ //没选中，点击
                 $(obj).find(".ui-checkbox-unable").addClass("on");
