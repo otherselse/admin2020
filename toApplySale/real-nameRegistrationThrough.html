@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>实名注册审批-评审管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
     <style>
-       .qtip1 {
+        .qtip1 {
             min-width: 580px;
         }
 
@@ -80,11 +82,11 @@
 
         <div class="ui-content minH">
             <div class="p20">
-                <div class="cl mb10 dac f12 ">
-                    <span class="searchLable">审核状态：</span>
-                    <span class="single ml5 mr20">
+                <div class="cl mb10 f0">
+                    <span class="searchLable f12">审核状态：</span>
+                    <span class="single ml5 f12">
                         <input type="hidden">
-                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5"
+                        <a href="real-nameRegistration.html"><button type="button" class="ui-option mr5 "
                                 id="ht">待审核</button></a>
                         <a href="real-nameRegistrationThrough.html"><button type="button"
                                 class="ui-option mr5 on">审核通过</button></a>
@@ -93,45 +95,27 @@
                         <a href="real-nameRegistrationSeal.html"><button type="button"
                                 class="ui-option mr5">盖章确认</button></a>
                     </span>
-                    <span class="m_db dac f1">
-                        <div class="df mr20">
-                            <span class="tipclick1 menuhook dac" qtip-dom="dom3">
-                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
-                                <div class="">审批要点</div>
-                            </span>
-                        </div>
-                        <div class="df">
-                            <span class="tipclick menuhook dac" qtip-dom="dom2">
-                                <a href='javascript:void(0)' class='goldIcon icon-info' title=""></a>
-                                <div class="">真假章辨别要点</div>
-                            </span>
-                        </div>
+                    <span class="r f12">
+                            <a class="tipclick1 mr20" href='javascript:void(0)' qtip-dom="dom3">
+                                <i href='javascript:void(0)' class='goldIcon vm icon-info' title=""></i>
+                                审批要点
+                            </a>
+                            <a class="tipclick"  href='javascript:void(0)' qtip-dom="dom2">
+                                <i  class='goldIcon icon-info vm'  title=""></i>
+                                真假章辨别要点
+                            </a>
                     </span>
                 </div>
-                <div class="cl f12 df">
-                    <span class="dib pct22">
+                <div class="cl f0 df">
+                    <span class="dib pct30 f12">
                         <span class="searchLable">单位名称：</span>
                         <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">账号：</span>
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">&emsp;&emsp;账号：</span>
                         <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30">
-                        <span class="searchLable">申请日期：</span>
-                        <span class="ui-input tc f0 pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                </div>
-                <div class="mt10 f12">
-                    <span class="dib pct22">
+                    <span class="dib  f12">
                         <span class="searchLable">授权书是否回收：</span>
                         <span class="radio">
                             <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
@@ -140,8 +124,20 @@
                                         class="radio-opacity" name="radio"></i>否</label>
                         </span>
                     </span>
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                </div>
+                <div class="mt10 f0">
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">金牌商家：</span>
+                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                    </span>
+                    <span class="dib pct30 f12">
+                        <span class="searchLable">申请日期：</span>
+                        <span class="ui-input tc f0 pct69  range" data-type="time"><input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+                        </span>
+                    </span>
+                    <button type="button" class="ui-button ">查询</button>
                 </div>
 
                 <table class="ui-table tc f12 mt30" width="100%">
@@ -701,7 +697,7 @@
                                         </div>
                                         <div class="dac mb5">
                                             <div style="width:13%;"></div>
-                                            <div class="pl5">该委托书为不合格  (杨兴旺  2020-11-04 16:44:34)</div>
+                                            <div class="pl5">该委托书为不合格 (杨兴旺 2020-11-04 16:44:34)</div>
                                         </div>
                                         <div class="dac mb5">
                                             <div class="tr" style="width:13%;">客户现场授权证明：</div>
@@ -1013,7 +1009,6 @@
             <button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
         </div>
     </div>
-
     <div class='sealContent grey9 layer_pageContent dom2 dn'>
         <p class='absbar mt20'><span
                 class='blue'>1、公章字体方面：</span>中文章一般是宋体或仿宋体，且单独看每个字体都是标准的长方形；如果使用别的字体（稍微随意或扭曲的字体）要仔细甄别。</p>
@@ -1024,7 +1019,6 @@
         <p class='f16 tc blue cent' style='font-size: 18px;margin-top:40px'>请审批人员注意辨别用户提交的盖章真伪情况</p>
     </div>
 
-
     <div class='sealContent grey9 layer_pageContent dom3 dn'>
         <div class="sealContent1 grey9 layer_pageContent">
             <p class="mb10 mt20"><span class="">1、营业执照和实名认证授权书上传的附件必须加盖公司公章（鲜章）；</span></p>
@@ -1032,6 +1026,7 @@
             <p class="mb10"><span class="">3、身份证信息与实名认证授权书和申请人信息是否一致，身份证是否过期。</span></p>
         </div>
     </div>
+
 
 
 
@@ -1087,7 +1082,6 @@
                     classes: 'qtip-lg  qtip-light  qtip-shadow qtip-rounded qtip2'  //
                 }
             });
-
         })
 
         $(".selectSingle").find("a").on("click", function () {

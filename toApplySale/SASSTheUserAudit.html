@@ -23,6 +23,12 @@
             border-bottom: 1px #efefef solid;
             padding: 10px 2px;
         }
+
+        .ui-table.myTab tbody td {
+            border-right: 1px #efefef solid;
+            border-bottom: 1px #efefef solid;
+            padding: 7px 2px;
+        }
     </style>
 </head>
 
@@ -73,12 +79,12 @@
                         <span class="searchLable">联系电话：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25 m_pct31">
+                    <span class="dib pct30 ">
                         <span class="searchLable">申请时间：</span>
                         <span class="ui-input pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+                                autocomplete="off"><span class="dib pct5 tc">-</span><input type="text"
+                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
                         </span>
                     </span>
                 </div>
@@ -89,12 +95,10 @@
                             <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                         </span>
                     </div>
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                    <button type="button" class="ui-button ">查询</button>
                 </div>
                 <div class="sIn2 tc mt20">
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
+                    <button type="button" class="ui-button ">查询</button>
                 </div>
 
                 <table class="ui-table tc mt30 f12" width="100%">
@@ -311,43 +315,35 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h2 class="sp-yg tl mt30 mb10 dac">审核信息</h2>
-                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
-                                        <tbody>
-                                            <tr class="resource-table">
-                                                <td width="13%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批意见：</span>
-                                                </td>
-                                                <td width="87%">
-                                                    <span class="dib ml10">
-                                                        <span class="radio">
-                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i
-                                                                    class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i> 审核通过</label>
-                                                            <label class="" onclick="clickPermit(this,'2')"><i
-                                                                    class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i>审核不通过</label>
+                                    <h2 class="sp-yg tl mt30 mb10 dac lable_t">审核信息</h2>
+                                    <div class="auto bgwh pb30 pt20 mt15">
+                                        <div class="clt-check-cont  pct95 ml20 tl">
+                                            <div class="cl clt-check-box">
+                                                <div class="clt-check-left">
+                                                    <div class="pt20 pb20 mr10 tr">
+                                                        <span class="b g28 ">
+                                                                本人 <br>
+                                                                审批意见
                                                         </span>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr class="resource-table">
-                                                <td width="10%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批备注：</span>
-                                                </td>
-                                                <td width="87%">
-                                                    <div class="pl10 pr10">
-                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="tc  mt20 mb20">
-                                        <button type="button" class="ui-button mr20">提交</button>
-                                        <button type="button" class="ui-button" data-type="clear">取消</button>
+                                                </div>
+                                                <div class="clt-check-right reviewBox auto ">
+                                                    <div class="clt-check-rcont f12">
+                                                        <div>
+                                                            <span class="radio pct30 dib">
+                                                                <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                            </span>
+                                                        </div>
+                                                            <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc mt20">
+                                            <button class="ui-button mr15" type="button">提交</button>
+                                            <button class="ui-button mr15" type="button" data-type="clear">取消</button>
+                                        </div>
                                     </div>
                                 </div>
                             </td>
@@ -369,7 +365,211 @@
                         <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
-                                    <table class="ui-table checkbox f12 auto tl mt10 mb10" width="100%">
+                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
+                                        <tbody>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司名称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司税号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司简称：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司代码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人手机号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">推荐人姓名：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">注册地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">开户银行：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">银行账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司传真：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系人：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">E-mail：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司电话：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">营业执照：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        <a href="javascript:void(0)"
+                                                            class="ui-files mr20 vm">组件1111.jpg</a>
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">联系地址：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司账号：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">登录密码：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="resource-table">
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">公司ID：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        青山区小
+                                                    </span>
+                                                </td>
+                                                <td width="13%" class="vt bgfa">
+                                                    <span class="pt5 dib pl10">选择适用系统：</span>
+                                                </td>
+                                                <td width="37%">
+                                                    <span class="dib ml10">
+                                                        12342341
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr height="50px">
+                            <td>1</td>
+                            <td>马冬梅</td>
+                            <td>2020-09-03 </td>
+                            <td>ss</td>
+                            <td>12312421321</td>
+                            <td>加工云</td>
+                            <td>
+                                <a href="javascript:void(0)" class="hoverBlue"
+                                    onclick="showTrMore(this),show(this)">修改<span class="ml2 dib b">></span></a>
+                            </td>
+                        </tr>
+                        <!-- 修改开始 -->
+                        <tr class="hideTr dn">
+                            <td colspan="28">
+                                <div class="pl20 pr20">
+                                    <table class="ui-table checkbox myTab f12 auto tl mt10 mb10" width="100%">
                                         <tbody>
                                             <tr class="resource-table">
                                                 <td width="13%" class="vt bgfa">
@@ -385,7 +585,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -395,7 +595,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -413,7 +613,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -421,7 +621,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -431,7 +631,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -439,7 +639,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -449,7 +649,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -457,7 +657,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -467,7 +667,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100">
+                                                        <input type="text" class="ui-input ">
                                                     </div>
                                                 </td>
                                                 <td width="13%" class="vt bgfa">
@@ -475,7 +675,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100"
+                                                        <input type="text" class="ui-input "
                                                             value="11343342343">
                                                     </div>
                                                 </td>
@@ -486,7 +686,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100"
+                                                        <input type="text" class="ui-input "
                                                             value="11343342343">
                                                     </div>
                                                 </td>
@@ -495,7 +695,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100"
+                                                        <input type="text" class="ui-input "
                                                             value="11343342343">
                                                     </div>
                                                 </td>
@@ -516,7 +716,7 @@
                                                 </td>
                                                 <td width="37%">
                                                     <div class="ml10 pr10">
-                                                        <input type="text" class="ui-input borNone pct100"
+                                                        <input type="text" class="ui-input "
                                                             value="11343342343">
                                                     </div>
                                                 </td>
@@ -641,11 +841,11 @@
         }
 
 
-        function showIn(ind){
-            if(ind == 1){
+        function showIn(ind) {
+            if (ind == 1) {
                 $(".sIn1").addClass("dn");
                 $(".sIn2").removeClass("dn");
-            }else{
+            } else {
                 $(".sIn1").removeClass("dn");
                 $(".sIn2").addClass("dn");
             }

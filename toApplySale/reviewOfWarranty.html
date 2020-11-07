@@ -65,30 +65,29 @@
                 <div class="cl mb10 dac f12">
                     <span class="dib pct25">
                         <span class="searchLable">&emsp;&emsp;品名：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入"
+                        <input type="text" class="ui-input pct69 " placeholder="请输入"
                             autocomplete="off">
                     </span>
                     <span class="dib pct25">
                         <span class="searchLable">牌号：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
                         <span class="searchLable">钢厂：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib pct25">
                         <span class="searchLable">规格：</span>
-                        <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                 </div>
                 <div class="cl dac f12">
                     <span class="dib pct25">
                         <span class="searchLable">&emsp;申请人：</span>
-                       <input type="text" class="ui-input pct69 mr20" placeholder="请输入" autocomplete="off">
+                       <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
                     <span class="dib">
-                        <button type="button" class="ui-button mr20">查询</button>
-                        <button type="button" class="ui-button" data-type="clear">清空</button>
+                        <button type="button" class="ui-button ">查询</button>
                     </span>
                 </div>
 
@@ -116,7 +115,7 @@
                         <tr class="hideTr dn">
                             <td colspan="28">
                                 <div class="pl20 pr20">
-                                    <h2 class="sp-yg tl mt10 mb10">
+                                    <h2 class="sp-yg tl mt10 mb10 lable_t">
                                         质保书信息
                                     </h2>
                                     <table class="ui-table f12 auto tc mt10" width="100%">
@@ -359,44 +358,36 @@
                                         </tbody>
                                     </table>
                                     <div class="dac mt20 mb10">
-                                        <h2 class="sp-yg tl  ">审批意见</h2>
+                                        <h2 class="sp-yg tl lable_t">审批意见</h2>
                                         <span class="ui-tip ml10 ">请审批人员认真查看附件内容，以附件为参考依据进行审批。</span>
                                     </div>
-                                    <table class="ui-table f12 auto tl mt10 mb10" width="100%">
-                                        <tbody>
-                                            <tr class="resource-table">
-                                                <td width="10%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批意见：</span>
-                                                </td>
-                                                <td width="87%">
-                                                    <span class="dib ml10">
-                                                        <span class="radio">
-                                                            <label class="mr20" onclick="clickPermit(this,'1')"><i
-                                                                    class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i> 同意申请</label>
-                                                            <label class="" onclick="clickPermit(this,'2')"><i
-                                                                    class="ui-radio goldIcon v-3 mr2"><input
-                                                                        type="radio" class="radio-opacity"
-                                                                        name="radio"></i>不同意申请</label>
+                                    <div class="auto bgwh pb30 pt20 mt15">
+                                        <div class="clt-check-cont  pct95 ml20 tl">
+                                            <div class="cl clt-check-box">
+                                                <div class="clt-check-left">
+                                                    <div class="pt20 pb20 mr10 tr">
+                                                        <span class="b g28 ">
+                                                                本人 <br>
+                                                                审批意见
                                                         </span>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr class="resource-table">
-                                                <td width="10%" class="vt bgfa">
-                                                    <span class="pt5 dib pl10">本人审批备注：</span>
-                                                </td>
-                                                <td width="87%">
-                                                    <div class="pl10 pr10">
-                                                        <textarea class="ui-textarea pct100" rows="2"></textarea>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="tc  mt20 mb20">
-                                        <button type="button" class="ui-button mr20">提交</button>
+                                                </div>
+                                                <div class="clt-check-right reviewBox auto ">
+                                                    <div class="clt-check-rcont f12">
+                                                        <div>
+                                                            <span class="radio pct30 dib">
+                                                                <label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>同意申请</label>
+                                                                <label onclick="clickPermit(this,'2')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>不同意申请</label>
+                                                            </span>
+                                                        </div>
+                                                            <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tc mt20">
+                                            <button class="ui-button mr15" type="button">提交</button>
+                                        </div>
                                     </div>
                                 </div>
                             </td>

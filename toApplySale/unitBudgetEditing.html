@@ -50,6 +50,9 @@
         .clt-check-rcont:after {
             border-right: 8px solid #4EAAE0;
         }
+        .w100{
+            min-width: 120px;
+        }
     </style>
 </head>
 
@@ -75,7 +78,7 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-        <div class="bgwh">
+        <div class="bgwh" style="border-radius: 6px;">
             <div class="lh50 df pl20 bor-bottom">
                 <a class="dfc" href="javascript:history.back(-1)">
                     <img class=" mr10" src="../images/documnts/xz5.png" alt="">
@@ -130,7 +133,7 @@
                                 <span class="dib dac pl10">
                                     <span class="dac">
                                         <span class="input-selSearch pct25">
-                                            <input type="text" class="ui-input borNone searchUp pct100"
+                                            <input type="text" class="ui-input  searchUp pct100"
                                                 placeholder="请选择(1级分类)" autocomplete="off">
                                             <div class="search-cont pct100">
                                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -143,7 +146,7 @@
                                             </div>
                                         </span>
                                         <span class="input-selSearch pct25">
-                                            <input type="text" class="ui-input borNone searchUp pct100"
+                                            <input type="text" class="ui-input  searchUp pct100"
                                                 placeholder="请选择(2级分类)" autocomplete="off">
                                             <div class="search-cont pct100">
                                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -156,7 +159,7 @@
                                             </div>
                                         </span>
                                         <span class="input-selSearch pct25">
-                                            <input type="text" class="ui-input borNone searchUp pct100"
+                                            <input type="text" class="ui-input  searchUp pct100"
                                                 placeholder="请选择(3级分类)" autocomplete="off">
                                             <div class="search-cont pct100">
                                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -169,7 +172,7 @@
                                             </div>
                                         </span>
                                         <span class="input-selSearch pct25">
-                                            <input type="text" class="ui-input borNone searchUp pct100"
+                                            <input type="text" class="ui-input  searchUp pct100"
                                                 placeholder="请选择(4级分类)" autocomplete="off">
                                             <div class="search-cont pct100">
                                                 <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -194,7 +197,7 @@
                             <td colspan="7">
                                 <div class="pl10">
                                     <span class="input-selSearch pct20">
-                                        <input type="text" class="ui-input borNone searchUp pct100"
+                                        <input type="text" class="ui-input  searchUp pct100"
                                             placeholder="请选择所在区域" autocomplete="off">
                                         <div class="search-cont pct100">
                                             <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
@@ -207,7 +210,7 @@
                                         </div>
                                     </span>
 
-                                    <input type="text" class="ui-input pct30 borNone" placeholder="请输入详细地址">
+                                    <input type="text" class="ui-input pct30 " placeholder="请输入详细地址">
                                 </div>
                             </td>
                         </tr>
@@ -237,7 +240,7 @@
                             </td>
                             <td width="37%">
                                 <div class="ml10">
-                                    RMB<input type="text" class="ui-input pct50 borNone" placeholder="请输入">
+                                    RMB<input type="text" class="ui-input pct50 " placeholder="请输入">
                                 </div>
                             </td>
                         </tr>
@@ -349,11 +352,11 @@
                 <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
                     <tbody>
                         <tr class="resource-table">
-                            <td width="13%" class="vt bgfa">
+                            <td width="11%" class="vt bgfa">
                                 <span class="pt5 dib pl10">税务信用等级：</span>
                             </td>
-                            <td colspan="8">
-                                <span class="dib radio ml10">
+                            <td colspan="2">
+                                <span class="dib radio ml20">
                                     <label class="mr10"><i class="ui-radio goldIcon on v-3 mr2"><input type="radio"
                                                 class="radio-opacity" name="radio"></i>A</label>
                                     <label class="mr10"><i class="ui-radio goldIcon  v-3 mr2"><input type="radio"
@@ -368,10 +371,10 @@
                                 <span class="dib pl10">风险信息：</span>
                             </td>
                             <td>
-                                <div style="margin-left: -25px;">
+                                <div>
                                     <div class="dac mb10">
-                                        <div class="pct11 tr">被执行人员信息：</div>
-                                        <div class="pct38 tl">
+                                        <div class="pct50 dac ">
+                                            <div class="tr w100">被执行人员信息：</div>
                                             <span class="dib radio ml5">
                                                 <label class="mr10"><i class="ui-radio goldIcon on v-3 mr2"><input
                                                             type="radio" class="radio-opacity"
@@ -380,50 +383,38 @@
                                                             class="radio-opacity" name="radio"></i>无</label>
                                             </span>
                                         </div>
-                                        <div class="pct11 tr">被执行金融(万元)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">被执行金融(万元)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
                                     </div>
-                                    <div class="dac mb10">
-                                        <div class="pct11 tr">行政处罚(万元)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                    <div class="df mb10">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">行政处罚(万元)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
-                                        <div class="pct11 tr">股权出质(条)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">股权出质(条)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
                                     </div>
-                                    <div class="dac mb10">
-                                        <div class="pct11 tr">司法拍卖(条)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                    <div class="df mb10">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">司法拍卖(条)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
-                                        <div class="pct11 tr">被告案件信息(条)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">被告案件信息(条)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
                                     </div>
-                                    <div class="dac mb10">
-                                        <div class="pct11 tr">涉案金额(万元)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                    <div class="df mb10">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">涉案金额(万元)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
-                                        <div class="pct11 tr">金额/民间借贷案件：</div>
-                                        <div class="pct38 tl">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">金额/民间借贷案件：</div>
                                             <span class="dib radio ml5">
                                                 <label class="mr10"><i class="ui-radio goldIcon on v-3 mr2"><input
                                                             type="radio" class="radio-opacity"
@@ -433,54 +424,40 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="dac mb10">
-                                        <div class="pct11 tr">动产抵押(条)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                    <div class="df mb10">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">动产抵押(条)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
-                                        <div class="pct11 tr">不动产/土地抵押(条)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">不动产/土地抵押(条)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
                                     </div>
-                                    <div class="dac">
-                                        <div class="pct11 tr">抵押金额(万元)：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-                                                <input type="text" class="ui-input pct59" placeholder="请填写">
-                                            </span>
+                                    <div class="df mb5">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">抵押金额(万元)：</div>
+                                            <input type="text" class="ui-input pct40" placeholder="请填写">
                                         </div>
-                                        <div class="pct11 tr">金额、民间借贷案件：</div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
+                                        <div class=" dac pct50">
+                                            <div class="tr w100">金额、民间借贷案件：</div>
+                                            <span class="dib f1">
                                                 已解决<input type="text" class="ui-input pct15" placeholder="">件;
                                                 未解决<input type="text" class="ui-input pct15" placeholder="">件
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="dac mb10">
-                                        <div class="pct11 tr"></div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100">
-                                                <span class="ui-tip"
-                                                    style="background-color: #fff;border:none">提示：有效的动产及不动产抵押总额</span>
-                                            </span>
-                                        </div>
-                                        <div class="pct11 tr"></div>
-                                        <div class="pct38 tl">
-                                            <span class="dib pct100 ml5">
-
-                                            </span>
+                                    <div class="df mb5">
+                                        <div class="w100 tr"></div>
+                                        <div class="f1 tl" style="margin-left: -10px;">
+                                            <span class="ui-tip"
+                                                    style="background-color: #fff;border:none;">提示：有效的动产及不动产抵押总额</span>
                                         </div>
                                     </div>
                                     <div class="df">
-                                        <div class="pct11 tr">风险详情描述：</div>
+                                        <div class="w100 tr">风险详情描述：</div>
                                         <div class="f1 tl">
-                                            <span class="dib pct100 ml5">
+                                            <span class="dib pct100">
                                                 <textarea class="ui-textarea pct90" rows="2"
                                                     placeholder="请填写"></textarea>
                                             </span>
@@ -520,13 +497,13 @@
                 </div>
 
                 <div class="tc mt30">
-                    <button type="button" class="ui-button mr20">修改完成</button>
-                    <button class="ui-button mr20" data-type="clear" type="button">返回</button>
+                    <button type="button" class="ui-button max-btn mr20">修改完成</button>
+                    <button class="ui-button max-btn mr20" data-type="clear" type="button">返回</button>
                 </div>
-                <div class="mt40">&nbsp;</div>
+                <div class="mt20">&nbsp;</div>
             </div>
         </div>
-
+        <div class="mt20">&nbsp;</div>
     </div>
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
