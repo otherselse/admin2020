@@ -38,16 +38,14 @@
 			<div class="ui-content ovh minH">
 				<div class="p20">
 					<div class="cl mb10 f12 ">
-						<span class="searchLable">类型：</span><div class="dib selectSingle  mr40">
-	                            <a class="on" href="javscript:void(0)">开提单</a>
-	                            <span class="pr5 pl5 ">|</span>
-	                            <a href="javscript:void(0)">自提</a>
-	                         </div>
-	                    <span class="searchLable">选项：</span><div class="dib selectSingle">
-	                                    <a class="on" href="javscript:void(0)">未确认</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">已经确认</a>	                                    
-	                                </div>
+						<span class="searchLable">类型：</span>
+						<div class="dib radio  mr40">
+	                         <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>开提单</label>
+							<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>自提</label>
+	                     </div>
+	                    <span class="searchLable">选项：</span>
+	                     	<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未确认</label>
+							<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>已经确认</label>
 					</div>
 					<div class="mb10 f12 searchLable">
 						申请人：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
@@ -323,7 +321,7 @@
 	                                    </table>
 	                                   
 	                                    <div class="g28 f14 mt20 b tl mb10">审批意见</div>
-	                                    <table class="ui-table tc f12 auto mt10 showShadow mb20" width="100%">
+	                                  <!--   <table class="ui-table tc f12 auto mt10 showShadow mb20" width="100%">
 	              	                         <tbody>
 	                                            <tr class="resource-table">
 	                                            	<td class="title " width="10%">本人审批意见：</td>
@@ -334,7 +332,27 @@
 	                                            	<td class="cont"><textarea class="ui-textarea pct90" rows="3" readonly="">同意申请</textarea></td>
 	                                            </tr>
 	                                        </tbody>
-	                                    </table>
+	                                    </table> -->
+	                                    <div class="clt-check-cont  mt15">
+											<div class="cl clt-check-box">
+												<div class="clt-check-left">
+													<div class="pt20 pb20 mr10 tr">
+														<span class="b g28 ">
+																本人 <br>
+																审批结果
+														</span>
+													</div>
+												</div>
+												<div class="clt-check-right reviewBox">
+													<div class="clt-check-rcont f12">
+														<div class="radio tl">
+															<label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" checked=""></i>同意申请</label>
+														</div>
+														<textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：同意申请</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
 	                                    
 	                                </div>
 	                            </td>
@@ -429,7 +447,7 @@
 	                                    </table>
 	                                   
 	                                    <div class="g28 f14 mt20 b tl mb10">审批意见</div>
-	                                    <table class="ui-table tc f12 auto mt10 showShadow mb20" width="100%">
+	                                    <!-- <table class="ui-table tc f12 auto mt10 showShadow mb20" width="100%">
 	              	                         <tbody>
 	                                            <tr class="resource-table">
 	                                            	<td class="title " width="10%">本人审批意见：</td>
@@ -443,7 +461,28 @@
 	                                            	<td class="cont"><textarea class="ui-textarea pct90" rows="3" readonly="">同意申请</textarea></td>
 	                                            </tr>
 	                                        </tbody>
-	                                    </table>
+	                                    </table> -->
+	                                    <div class="clt-check-cont  mt15">
+											<div class="cl clt-check-box">
+												<div class="clt-check-left">
+													<div class="pt20 pb20 mr10 tr">
+														<span class="b g28 ">
+																本人 <br>
+																审批意见
+														</span>
+													</div>
+												</div>
+												<div class="clt-check-right reviewBox">
+													<div class="clt-check-rcont f12">
+														<div class="radio tl">
+															<label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" ></i>同意申请</label>
+															<label class="mr20" onclick="clickPermit(this,'1')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>不同意申请</label>
+														</div>
+														<textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
 
 	                                    <div class="tc  mt20 mb20">
 	                                    	<button type="button" class="ui-button mr10">提交</button>
