@@ -103,20 +103,17 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
-                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="1">首页</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="2">评审管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="3">物流管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="4">财务管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="5">统计管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="6">报表管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="7">信息管理</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="8">权限管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="700">物流管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="900">信息管理</a>                                    
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="800">权限管理</a>
                                 </div>
                             </td>
                         </tr>
                         <tr class="resource-table">
-                          <td class="cont  n16_menuMulbgS" style="padding:10px 0">
-                              <div class="n16_menulist checkbox">
+                          <td class="cont  adm_mCont" style="padding:10px 0;height: 26px">
+                              <div class="n16_mAuthorlist checkbox">
                                     <span class="dib pct10 vt mt2 pt1 n16_menulistContLeft">
                                         <label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setSmallMenu(this)"></i>订单类</label>
                                     </span>
@@ -129,30 +126,16 @@
                                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
                                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
                                     </span>
-                              </div> <!-- menulist -->
-                              <div class="n16_menulist checkbox">
-                                    <span class="dib pct10 vt mt2 pt1 n16_menulistContLeft">
-                                        <label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setSmallMenu(this)"></i>订单类</label>
-                                    </span>
-                                    <span class="dib pct85 f0 lh24 n16_menulistCont">
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>外贸执行情况表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>出入库跟踪表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
-                                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setMulThValueNew(this)"></i>订单执行情况表</label></span>
-                                    </span>
-                              </div> <!-- menulist -->
-
+                              </div> <!-- n16_mAuthorlist -->
+                             
                           </td>
                         </tr>
                         <tr class="resource-table">
                             <td  rowspan="2" class="bgfa searchLable f14">
                                 已选
                             </td>
-                            <td class="cont">
-                                <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a>
+                            <td class="cont chooseMenu" style="height: 26px">
+                               <!--  <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a> -->
                                <!--  <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a>
                                 <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a>
                                 <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a>
@@ -174,14 +157,14 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="1">待评审人员分配</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="2">待处理评审</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="3">待处理转货权</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="4">待处理申请</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="5">待处理自提委托申请</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="6">待收款队列</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="7">待确认客户签收</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="8">待付款队列</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="1">待评审人员分配</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="2">待处理评审</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="3">待处理转货权</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="4">待处理申请</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="5">待处理自提委托申请</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="6">待收款队列</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="7">待确认客户签收</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" pid="8">待付款队列</a>
                                 </div>
                             </td>
                         </tr>
@@ -295,16 +278,97 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="authormul.js"></script>
+    
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
 
         })
-          
         
-        function setMulThValueNewOne(obj){
+        //权限菜单权限数组
+        var authority_Data=[  
+            {"title":"首页",
+             "id":0,
+              "menuList":[]
+             }           
+            ,{"title":"评审管理",
+             "id":600,
+             "menuList":[
+                            {"title":"合同类", "id":610,"menuList":[
+                                {"title":"VIP业务采购合同评审", "id":6101}
+                                ,{"title":"备货采购合同审批", "id":6102}
+                                ,{"title":"运输合同审批", "id":6103}
+                                ,{"title":"加工仓储协议审批", "id":6104}
+                                ]
+                            }
+                            ,{"title":"款项类", "id":620,"menuList":[
+                                {"title":"付款类申请审批", "id":6201}
+                                ,{"title":"客户提现审批", "id":6202}
+                                ,{"title":"租赁分红审批", "id":6203}
+                                ]
+                            }                          
+                         ]
+            }
+            ,{"title":"物流管理", //没有大类
+             "id":700,
+             "menuList":[
+                         {"title":"货权(入库)确认", "id":701,"menuList":[]}
+                         ,{"title":"出库确认", "id":702,"menuList":[]}
+                         ,{"title":"自提确认", "id":703,"menuList":[]}
+                         ,{"title":"销售退货入库", "id":704,"menuList":[]}
+                         ,{"title":"库存盘点登记", "id":705,"menuList":[]}
+                         ,{"title":"单据打印", "id":706,"menuList":[]}
 
+                    ]
+            }
+            ,{"title":"信息管理",
+             "id":900,
+              "menuList":[]
+             }
+            ,{"title":"权限管理",
+             "id":800,
+             "menuList":[
+                            {"title":"权限配置", "id":801,"menuList":[
+                                {"title":"人员配置权限", "id":8101}
+                                ,{"title":"菜单配置人员", "id":8102}
+                                ,{"title":"审批配置人员", "id":8103}
+                                ,{"title":"角色配置人员", "id":8104}
+                                ]
+                            }
+                            ,{"title":"文化系统", "id":802,"menuList":[
+                                {"title":"付款类申请审批", "id":8201}
+                                ,{"title":"客户提现审批", "id":8202}
+                                ,{"title":"租赁分红审批", "id":8203}
+                                ]
+                            }                          
+                         ]
+            }
+
+
+        ]
+        
+        function setMulAuthoriy(obj){
+             var cont='adm_mCont';      
+             authoryMList.setMulThValueNewOne(obj,1,cont,authority_Data); //type=1,显示到文化菜单处
         } 
+
+
+        function getmType(type){
+            if(type==1){
+                myobj=$(".chooseMenu")
+            }else if(type==3){
+                myobj=$(".chooseAppl")
+            }
+            return myobj;
+          }
+
+
+        function delCulMenu(obj){
+             authoryMList.delCulMenuComm(obj)
+        }
+
 
         function setMulThValueNew(obj){
             var myobj= $(obj).parents(".n16_menulistCont");
@@ -323,7 +387,8 @@
             }
         } 
 
-        function setSmallMenu(obj){
+/*        function setSmallMenu(obj){
+            var pid=$(obj).attr("id");
             if(obj.checked){
                 $(obj).parents(".n16_menulist").find(".n16_menulistCont").find(".ui-checkbox").addClass("on");
                 $(obj).parents(".n16_menulist").find(".n16_menulistCont").find(":checkbox").prop("checked", true);
@@ -331,7 +396,7 @@
                 $(obj).parents(".n16_menulist").find(".n16_menulistCont").find(":checkbox").prop("checked",false);
                 $(obj).parents(".n16_menulist").find(".n16_menulistCont").find(".ui-checkbox").removeClass("on");
             }
-        }
+        }*/
 
 
     </script>
