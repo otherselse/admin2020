@@ -84,18 +84,24 @@
                                     <th width="10%">具体寄件内容</th>
                                     <th width="10%">快递单</th>
                                     <th width="10%">快递单号</th>
-                                    <th width="6%">预计费用</th>
-                                    <th width="6%">快递费用</th>
-                                    <th width="6%">差异费用</th>
-                                    <th width="6%">状态</th>
+                                    <th class="15%">
+                                        预计费用/快递费用/差异费用
+                                    </th>
+                                    <th width="9%">状态</th>
                                     <th width="5%">操作</th>
                                 </tr>
                             </thead>
                             <tbody class="ui-thover">
                                 <tr>
-                                    <td width="5%">1</td>
-                                    <td width="6%">冯欢欢</td>
-                                    <td width="5%">60646</td>
+                                    <td width="5%">
+                                        1
+                                    </td>
+                                    <td width="6%">
+                                        <a href="../public/goldRegInfo.html" target="_block">冯欢欢</a>
+                                    </td>
+                                    <td width="5%">
+                                        <a href="javascript:void(0)" onclick="showStep()">60646</a>
+                                    </td>
                                     <td width="15%">2018-07-31 14:32:26</td>
                                     <td width="10%">
                                         <a href="javascript:void(0)" title="swsswswx21211211121wqxd.jpg"
@@ -109,11 +115,9 @@
                                         <a href="javascript:void(0)" title="swsswswx21211211121wqxd.jpg"
                                             class="tiptop ui-files vm zxx_text_overflow g6">ws21qwwqw21wswswsw.jpg</a>
                                     </td>
-                                    <td width="10%"><span
-                                            class="tiptop dib zxx_text_overflow mt5 g67">777721728173817</span></td>
-                                    <td width="6%">0</td>
-                                    <td width="6%">25</td>
-                                    <td width="6%">--</td>
+                                    <td width="10%"><span class="tiptop dib zxx_text_overflow mt5 g67"
+                                            title="777721728173817">777721728173817</span></td>
+                                    <td>0/35/--</td>
                                     <td width="6%">
                                         <span class="daj">
                                             <span class="dib rad colorWt mr5"></span>
@@ -123,9 +127,8 @@
                                     <td width="5%"> <a href="javascript:void(0)" onclick="showTrMore(this)">办理确认</a>
                                     </td>
                                 </tr>
-
                                 <tr class="hideTr dn">
-                                    <td colspan="13">
+                                    <td colspan="11">
                                         <div class="pl20 pr20">
                                             <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
                                                 <tbody>
@@ -166,31 +169,29 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="vt bgfa" width="13%">
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
                                                             <span class="pt5 dib pl20">快递单号：</span>
                                                         </td>
-                                                        <td width="37%">
+                                                        <td width="37%" style="padding: 7px 2px;">
                                                             <span class="dib pl10 pct100">
-                                                                <input type="text" class="ui-input pct50 borNone"
+                                                                <input type="text" class="ui-input" style="width: 200px;"
                                                                     value="" placeholder="请输入快递单号">
                                                             </span>
                                                         </td>
-                                                        <td class="vt bgfa" width="13%">
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
                                                             <span class="pt5 dib pl20">快递费用：</span>
                                                         </td>
-                                                        <td width="37%">
+                                                        <td width="37%" style="padding: 7px 2px;">
                                                             <span class="dib pl20">
                                                                 --
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr class="resource-table">
-                                                        <td class="vt bgfa" width="13%">
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
                                                             <span class="pt5 dib pl20">快递单：</span></td>
-                                                        <td width="87%" colspan="3">
-                                                            <div class="pl10 pr5">
-                                                                <button type="button" class="ui-button mr10 vm w120"
-                                                                    data-type="upfile" onclick="upfile()">高拍仪上传</button>
+                                                        <td width="87%" colspan="3" style="padding: 7px 2px;">
+                                                            <div class="pl10 pr5" >
                                                                 <button type="button" class="ui-button mr10 vm"
                                                                     data-type="upfile" onclick="upfile()">常规上传</button>
                                                                 <span class="ui-files ml10 vm"><a
@@ -216,8 +217,12 @@
                                 </tr><!-- 隐藏内容end -->
                                 <tr>
                                     <td width="5%">1</td>
-                                    <td width="6%">冯欢欢</td>
-                                    <td width="5%">60646</td>
+                                    <td width="6%">
+                                        <a href="../public/goldRegInfo.html" target="_block">冯欢欢</a>
+                                    </td>
+                                    <td width="5%">
+                                        <a href="javascript:void(0)" onclick="showStep()">60646</a>
+                                    </td>
                                     <td width="15%">2018-07-31 14:32:26</td>
                                     <td width="10%"><a href="javascript:void(0)" title="swsswswx21211211121wqxd.jpg"
                                             class="tiptop ui-files vm zxx_text_overflow g6">组件dqwdqwdwdqd1111.jpg</a>
@@ -231,9 +236,7 @@
                                     <td width="10%">
                                         <span class="tiptop dib zxx_text_overflow mt5 g67">aaaaaaaaaaaaaaa</span>
                                     </td>
-                                    <td width="6%">0</td>
-                                    <td width="6%">25</td>
-                                    <td width="6%">--</td>
+                                    <td>0/35/--</td>
                                     <td width="6%">
                                         <span class="daj">
                                             <span class="dib rad colorY mr5"></span>
@@ -246,8 +249,12 @@
                                 </tr>
                                 <tr>
                                     <td width="5%">1</td>
-                                    <td width="6%">冯欢欢</td>
-                                    <td width="5%">60646</td>
+                                    <td width="6%">
+                                        <a href="../public/goldRegInfo.html" target="_block">冯欢欢</a>
+                                    </td>
+                                    <td width="5%">
+                                        <a href="javascript:void(0)" onclick="showStep()">60646</a>
+                                    </td>
                                     <td width="15%">2018-07-31 14:32:26</td>
                                     <td width="10%"><a href="javascript:void(0)" title="swsswswx21211211121wqxd.jpg"
                                             class="tiptop ui-files vm zxx_text_overflow g6">组件dqwdqwdwdqd1111.jpg</a>
@@ -262,9 +269,7 @@
                                     <td width="10%"><span title="swsswswx21211211121wqxd.jpg"
                                             class="tiptop tiptop dib zxx_text_overflow mt5 g67">777721728173817</span>
                                     </td>
-                                    <td width="6%">0</td>
-                                    <td width="6%">25</td>
-                                    <td width="6%">--</td>
+                                    <td>0/35/--</td>
                                     <td width="6%">
                                         <span class="daj">
                                             <span class="dib rad colorW mr5"></span>
@@ -273,9 +278,8 @@
                                     </td>
                                     <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">预录入</a></td>
                                 </tr>
-
                                 <tr class="hideTr dn">
-                                    <td colspan="13">
+                                    <td colspan="11">
                                         <div class="pl20 pr20">
                                             <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
                                                 <tbody>
@@ -316,10 +320,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="vt bgfa" width="13%">
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
                                                             <span class="pt5 dib pl20">快递单：</span>
                                                         </td>
-                                                        <td width="87%" colspan="3">
+                                                        <td width="87%" colspan="3" style="padding: 7px 2px;">
                                                             <div class="">
                                                                 <span class="dib  ml10">
                                                                     <a href="javascript:void(0)"
@@ -335,20 +339,20 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="vt bgfa" width="13%">
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
                                                             <span class="pt5 dib pl20">快递单号：</span>
                                                         </td>
-                                                        <td width="37%">
+                                                        <td width="37%" style="padding: 7px 2px;">
                                                             <span class="dib pl20 pct100">
                                                                 1412414214
                                                             </span>
                                                         </td>
-                                                        <td class="vt bgfa" width="13%">
-                                                            <span class="pt5 dib pl20">预计快递费用：</span>
+                                                        <td class="vt bgfa" width="13%" style="padding: 7px 2px;">
+                                                            <span class="pt5 dib pl20" >预计快递费用：</span>
                                                         </td>
-                                                        <td width="37%">
+                                                        <td width="37%" style="padding: 7px 2px;">
                                                             <span class="dib pl10 pct100">
-                                                                <input type="text" class="ui-input pct50 borNone"
+                                                                <input type="text" class="ui-input" style="width: 200px;"
                                                                     value="" placeholder="请输入预计费用">
                                                             </span>
                                                         </td>
@@ -359,7 +363,7 @@
                                                         </td>
                                                         <td width="37%">
                                                             <span class="dib pl10 pct100">
-                                                                <input type="text" class="ui-input pct50 borNone"
+                                                                <input type="text" class="ui-input" style="width: 200px;"
                                                                     value="" placeholder="请输入费用">
                                                             </span>
                                                         </td>

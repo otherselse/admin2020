@@ -43,8 +43,8 @@
                 <a href="cultureToPerson.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">菜单配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToApproval.html" class="ui-tab3-list rel"><span class="ui-tab3-text">审批配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="cultureToRole.html" class="ui-tab3-list rel"><span class="ui-tab3-text">角色配置人员</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
+<!--                 <a href="cultureToArea.html" class="ui-tab3-list rel"><span class="ui-tab3-text">人员配置区域</span><i class="goldIcon ui-tab3-dot"></i></a>
+ -->                <a href="cultureToAchieve.html" class="ui-tab3-list rel"><span class="ui-tab3-text">业绩考核权限</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
         <div class="ui-content minH">
              <div class="p30">
@@ -53,7 +53,7 @@
                     <tbody>
                         <tr class="resource-table">
                             <td width="10%" rowspan="2" class="bgfa">
-                                <span class="searchLable f14">管理系统</span><br>
+                                <span class="searchLable f14">文化系统</span><br>
                                 （单选）
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
@@ -98,6 +98,10 @@
                     </tbody>
                 </table>
 
+                <div class="tc mt40 mb50">
+                    <button class="ui-button w120" data-type="big" type="button">提交</button>
+                </div>
+
                 
             </div>
         </div>
@@ -108,6 +112,7 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="permitsingle.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
@@ -130,190 +135,18 @@
             ,{"title":"文化系统流程中心",
              "id":1857,
              "menuList":[
-                         {"title":"流程中心", "id":1858,"childnum":5}
+                         {"title":"流程中心", "id":1858,"childnum":0}
 
                     ]
             }
         ]
 
-        var myMenuListSingle={
-            setMulThValueNewOne:function(obj,contobj,cul_Data){
-                var id=$(obj).attr("id");
-                for(var i=0;i<cul_Data.length;i++){
-                if(id==cul_Data[i].id){
-                    var str="",menu='';
-                    for(var j=0;j<cul_Data[i].menuList.length;j++){
-                        if(cul_Data[i].menuList[j].childnum==0){
-                            var myclass=myMenuListSingle.searchIDhasOn(cul_Data[i].menuList[j].id);
-                            var checked=(myclass=="on")?"checked":""
-                             menu='<span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event)" id="'+cul_Data[i].menuList[j].id+'" childnum="0" data-title="'+cul_Data[i].menuList[j].title+'" '+checked+'></i>'+cul_Data[i].menuList[j].title+'</label></span>';
-                        }else{
-                            var myclass=myMenuListSingle.searchMulhasOn(cul_Data[i].menuList[j].id);
-
-                            menu='<span class="dib pct20 f12 rel " ><span class="man_list"  onclick="setMulPanel(this,event)" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5  '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
-                        }
-                        str+=menu
-                       
-                    }
-                 break;
-                }
-             }
-             contobj.html(str);
-             $(obj).addClass("on").siblings().removeClass("on");
-           }
-           ,setMulThValueNew:function(obj,e){   //点击最末级菜单选择       
-                stopPro(e);
-                var str='',chain='';
-                var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
-                var myid="sort"+$(obj).attr("id");
-                var title=$(obj).attr("data-title");
-                $(obj).parents(".radio").find(".ui-radio").removeClass("on");
-                $(obj).parents(".ui-radio").addClass("on");
-                if(pid!=0){   //假如下拉菜单下，不选择
-                    chain=$(obj).parents(".setMulPanelMCont ").attr("chain");
-                    var z_obj=$(obj).parents(".setMulPanelMCont");
-                    var z=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").index(z_obj);
-                    $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont:gt("+z+")").hide();
-                    if($(obj).attr("childnum")==0){
-                        myMenuListSingle.setArrowIson(chain,obj)
-                       if($(obj).parents(".setMulPanelMCont").find(".setMulPanelMenu").length>0){
-                            $(obj).parents(".setMulPanelMCont").find(".mulselIcon").removeClass("on");
-                       }
-                    }     
-                } 
-                str='<span  class="n16_menudel adm_optMenu" id="'+myid+'"  chain="'+chain+'">'+title+'</span>';
-                $(".chooseMenu").html(str);           
-           } 
-           ,setArrowIson:function(chain){
-                var chainArr=chain.split(",");
-                for(var i=0;i<chainArr.length;i++){
-                    $("#"+chainArr[i]).find(".mulselIcon ").addClass("on")
-                }
-           }
-
-           
-
-           ,setMulPanelClick:function(obj,e,myarr,contobj){  //点击多选的菜单，显示下级菜单
-            //console.log(approl)
-                stopPro(e);
-                var myobj=$(obj).next(".setMulPanelCont");
-                myobj.attr("pname",$(obj).text()).attr("pid",$(obj).attr("id"));  
-                if(myobj.find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").length>0){
-                    myobj.show();
-                    return;
-                }      
-                var mystr='';
-                for(var i=0;i<myarr.length;i++){
-                    var dom=''
-                    if(myarr[i].childnum==0){
-                        var myclass=myMenuListSingle.searchIDhasOn(myarr[i].id);
-                        var checked=(myclass=="on")?"checked":"";
-                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
-                    }else{
-                        var myclass=myMenuListSingle.searchMulhasOn(myarr[i].id);
-                        dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5  '+myclass+'" ></i>'+myarr[i].title+'</div>'
-                    }
-                    mystr+=dom
-                   
-                }
-                mystr='<div class="setMulPanelMCont" pid='+$(obj).attr("id")+' chain='+$(obj).attr("id")+'><div class="closeMenuUp"><a class="goldIcon  icon-sdel " onclick="myMenuListSingle.closeMenubg(this)" href="javascript:void(0)"></a></div>'+mystr+"</div>"
-
-                $(".setMulPanelCont").hide();
-                 myobj.append(mystr).show();               
-          }          
-          ,setMulPanelComm:function(obj,e,myarr,myobj){
-            var l=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").length
-            var left=l*165;
-            var bid=$(obj).parents(".setMulPanelMCont").attr("pid")
-
-            var mystr='';
-                for(var i=0;i<myarr.length;i++){
-                    var dom=''
-                    if(myarr[i].childnum==0){ 
-                        var hasOn="",checked="";
-                        if( $(".chooseMenu").find(".adm_optMenu").length>0){
-                            if($(".chooseMenu").find(".adm_optMenu").attr("id")=="sort"+myarr[i].id){
-                                 hasOn="on";
-                                 checked="checked"
-
-                            }
-                        }
-                       
-                        //console.log(hasOn);
-                        dom='<label class="setMulPanelMenu db pt2 pb2"><i class="ui-radio goldIcon v-3 mr2 '+hasOn+'"><input type="radio" class="radio-opacity" name="radio" onclick="myMenuListSingle.setMulThValueNew(this,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'" data-title="'+myarr[i].title+'" '+checked+'></i>'+myarr[i].title+'</label>'
-                    }else{
-                        var hasArrow=""; //用于查找下拉箭头是否选中
-                        if($(".chooseMenu").find(".adm_optMenu").length>0){
-                            if($(".chooseMenu").find(".adm_optMenu").attr("chain").indexOf(myarr[i].id)>-1){
-                                hasArrow="on"
-                            }
-                        }
-                        
-
-                        // 应该采用setMulPanelSec 方法，setMulPanelSec2只是用于展示静态结果。
-                        //dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,'+type+',event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
-                        dom='<div class="setMulPanelMenu " onclick="setMulPanelSec2(this,event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
-                    }
-                    mystr+=dom
-                   
-                }
-
-            var chain=$(obj).parents(".setMulPanelMCont").attr("chain");
-            chain=chain+","+$(obj).attr("id");
-            var str='<div class="setMulPanelMCont " bid="'+bid+'" pid="'+$(obj).attr("id")+'" style="left:'+left+'px" chain="'+chain+'">'+mystr+'</div>'
-                var myflag=0;
-                    $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").each(function(){
-                        if($(this).attr("bid")==bid){
-                            $(this).attr("pid",$(obj).attr("id"))
-                            $(this).html(mystr);
-                            myflag++;
-                            return false;
-                        }
-                    })
-
-                    if(myflag==0){
-                         $(obj).parents(".setMulPanelCont").append(str);
-                    }else{                  
-                      $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").show();
-                    }
-            }
-            //查询是否有菜单被选择，单个
-              ,searchIDhasOn:function(id){
-                var hasClass=""
-                id="sort"+id;
-                var l=$(".chooseMenu").find(".adm_optMenu[id="+id+"]").length;
-                if(l>0){
-                    hasClass="on"
-                }
-                //console.log("id"+id+":"+hasClass)
-                return hasClass;
-              }
-              //下拉选择箭头的是否选中
-              ,searchMulhasOn:function(id){
-                var hasClass=""
-                var l=$(".chooseMenu").find(".adm_optMenu").length;
-                if(l>0){
-                     var chain= $(".chooseMenu").find(".adm_optMenu").attr("chain");
-                    if(chain.indexOf(id)>-1){
-                        hasClass="on"   
-                    }                
-                    return hasClass;
-                }
-               
-              }
-              ,closeMenubg:function(obj){
-                $(obj).parents(".setMulPanelCont").hide();
-                $(obj).parents(".setMulPanelCont").find(".setMulPanelMCont:gt(0)").remove();
-              }
-      
-
-        }
 
 
         var contobj=$(".n16_menuMulbgS");
-        var selobj=$(".n16_menuMulbgS");
+        var showobj='chooseMenu';
         function setCultureSingle(obj){
-            myMenuListSingle.setMulThValueNewOne(obj,contobj,cul_Data);
+            myMenuListSingle.setMulThValueNewOne(obj,contobj,cul_Data,showobj);
         }
 
         function setMulPanel(obj,e){
@@ -324,7 +157,7 @@
              ,{"title":"办公用品登记", "id":2225,"childnum":0}
             ]
 
-            myMenuListSingle.setMulPanelClick(obj,e,myarr,contobj)
+            myMenuListSingle.setMulPanelClick(obj,e,myarr,contobj,showobj)
 
         }
 
@@ -337,7 +170,7 @@
             ,{"title":"生产维修费", "id":1113,"childnum":0}
             ,{"title":"其他", "id":1114,"childnum":0}
         ]
-        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj)        
+        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj)        
       }
 
           //每次查询显示当前菜单的下级菜单 （静态页面所用）
@@ -350,7 +183,7 @@
             ,{"title":"2生产维修费", "id":3113,"childnum":0}
             ,{"title":"2其他", "id":3114,"childnum":0}
         ]
-        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj)        
+        myMenuListSingle.setMulPanelComm(obj,e,myarr,contobj,showobj)        
       }
 
 
