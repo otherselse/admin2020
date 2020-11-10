@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>(新增、修改)产品明细-外贸产品维护</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>(新增、修改)产品明细-外贸产品维护</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-    <style>
-        body,
+		<style>
+			body,
         html {
             background: #fff;
         }
@@ -24,104 +24,103 @@
             width: 75%;
         }
     </style>
-</head>
+	</head>
 
-<body class="showTip">
-    <div class="lgui-table-box ml20 mt5 mr20">
-        <span class="ui-tip mt15 ml40">全站内容用英文进行填写，您当前编辑内容之后，务必进行“保存”操作，您的修改才会生效。如果您未进行“保存”操作,您当前的修改将会丢失。
-        </span>
-        <div class="lgui-table-box ml40 mt20">
-            <div class="lgui-table-header f12 pct100">
-                <div class="ml40">
-                    <div class="mb10 df">
-                        <span class="dib pct40">
-                            &emsp;产品目录：<span class="input-selSearch pct75">
-                                <input type="text" class="ui-input searchUp pct100 " placeholder="请选择"
-                                    autocomplete="off" readonly="">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                </div>
-                            </span>
-                        </span>
-                        <span class="dib pct10"></span>
-                        <span class="dib pct40">
-                            <span class="red">*</span>是否显示：<span class="radio">
-                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>是</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>否</label>
-                            </span>
-                        </span>
-                    </div>
-                    <div class="mb10 dac">
-                        &emsp;产品标题：<input type="text" class="ui-input pct30 " placeholder="请输入"> <span
-                            class="ui-tip ml10" data-type="normal">提示:长度建议50个字符以内</span>
-                    </div>
-                    <div class="mb10 dac tl" style="margin-left: -25px;">
-                        <span class="dib"><span class="red">*</span>产品用途/亮点：</span>
-                        <textarea class="ui-textarea pct75" style="width: 77.5%;" placeholder="要求必填:文字描述(100-200字)"
-                            rows="3"></textarea>
-                        </td>
-                    </div>
-                    <div class="mb10 dac">
-                        &emsp;&emsp;排序号：<input type="text" class="ui-input pct30 " placeholder="请输入"> <span class="ui-tip ml10" data-type="normal">提示:字数越小排在越前,最小为1</span>
-                    </div>
-                </div>
+	<body class="showTip">
+		<div class="lgui-table-box ml20 mt5 mr20">
+		<!-- 	<span class="ui-tip mt15 ml40">全站内容用英文进行填写，您当前编辑内容之后，务必进行“保存”操作，您的修改才会生效。如果您未进行“保存”操作,您当前的修改将会丢失。
+			</span> -->
+			<div class="lgui-table-box ml40 mt20">
+				<div class="lgui-table-header f12 pct100">
+					<div class="ml40">
+						<div class="mb10 dac">
+							<span class="dib pct40">
+								<span class="red">*</span>产品父类：<span class="input-selSearch pct75">
+									<input type="text" class="ui-input searchUp pct100 " placeholder="请选择" autocomplete="off" readonly="">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">北京</a>
+										<a href="javascript:void(0)" class="search-list db ell">上海</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								是否显示：<span class="radio" style="margin-left: -5px;">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+						</div>
+						<div class="mb10 dac">
+							<span class="dib pct40">
+								<span class="red">*</span>目录标题：<input type="text" class="ui-input pct75" placeholder="长度建议50个字符以内">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								&nbsp;<span class="red">*</span>排序号：<input type="text" class="ui-input pct75" placeholder="字数越小排在越前,最小为1">
+							</span>
+						</div>
+						<div class="mb10 df tl" >
+							<span class="dib"><span class="red">*</span>用途描述：</span>
+							<textarea class="ui-textarea" style="width: 79%;" placeholder="要求必填:文字描述(0-200字)" rows="3"></textarea>
+						</div>
+					</div>
 
-                <div class="tc mt20">
-                    <button type="button" class="ui-button mr10 w90">提交</button>
-                    <button type="button" class="ui-button w90" data-type="clear">关闭</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+					<div class="tc mt20">
+						<button type="button" class="ui-button mr10 w90">确定</button>
+						<button type="button" class="ui-button w90" data-type="clear">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
-</body>
-<script>
-    function showLayer(name, url) {
-        var page = layer.open({
-            type: 2,
-            title: name,
-            shadeClose: true,
-            shade: 0.4,
-            area: ['960px', '500px'],
-            content: url //iframe的url
-        });
-        $("#close_but").on("click", function () {
-            layer.close(page);
-        });
-    }
+	</body>
+	<script>
+		function showLayer(name, url) {
+			var page = layer.open({
+				type: 2,
+				title: name,
+				shadeClose: true,
+				shade: 0.4,
+				area: ['960px', '500px'],
+				content: url //iframe的url
+			});
+			$("#close_but").on("click", function() {
+				layer.close(page);
+			});
+		}
 
-    setTime4();
-    var endtime = '', starttime = '';
-    function setTime4() {
-        starttime = laydate.render({
-            elem: '#time4'
-            , theme: 'lgblue'
-            , trigger: 'click'
-            , min: '2020-07-01'
-            , done: function (value, date, endDate) {
-                var myobj = {
-                    year: date.year,
-                    month: date.month - 1,//关键
-                    date: date.date
-                };
-                endtime.config.max = myobj;
-            }
+		setTime4();
+		var endtime = '',
+			starttime = '';
 
-        });
-        //$("#time5").removeAttr("lay-key");
-    }
-</script>
+		function setTime4() {
+			starttime = laydate.render({
+				elem: '#time4',
+				theme: 'lgblue',
+				trigger: 'click',
+				min: '2020-07-01',
+				done: function(value, date, endDate) {
+					var myobj = {
+						year: date.year,
+						month: date.month - 1, //关键
+						date: date.date
+					};
+					endtime.config.max = myobj;
+				}
+
+			});
+			//$("#time5").removeAttr("lay-key");
+		}
+	</script>
 
 </html>
