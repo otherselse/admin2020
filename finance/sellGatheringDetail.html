@@ -39,115 +39,118 @@
 			<div class="ui-content ovh minH">
 				<div class="bbe lh50 pl20"><a href="gathering.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>		
 				<div class="p20 f12">
-					<div class="">销售收款 (金牌商家:<span class="g28">尹相春</span>)&emsp;&emsp;&emsp;订单累计收款：<span class="b mr10">0</span>订单累计付款：<span class="b mr10">0</span>订单余额：<span class="b">0</span> </div>
-					<table class="ui-table tc f12 auto mt10 " width="100%">
-						<tbody>
-							<tr class="resource-table">
-								<td class="title" width="13%">单位名称：</td>
-								<td width="37%" class="cont">简简单单企业</td>
-								<td class="title" width="13%">账户余额：</td>
-								<td width="37%" class="cont"><span class="numFormat">1232332232</span>(客户余额)</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">付款银行：</td>
-								<td class="cont">中国银行</td>
-								<td class="title">付款账号：</td>
-								<td class="cont">65214568565486</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">到款单号：</td>
-								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" ></td>
-								<td class="title">到款日期：</td>
-								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">到款银行：</td>
-								<td class="cont">
-									<select id="selfBank" class="ui-input pct80">
-							      		<option value="120908385010402">招商银行上海自贸试验区分行</option>
-							      		<option value="31001579511050023589">中国建设银行上海外高桥保税区支行</option>
-				                      <option value="1001018619100004070">中国工商银行上海兰谷路支行</option>
-							      		<option value="50131000343695476">上海农商银行上海自贸试验区分行</option>
-							      		<option value="122581022521">中国银行成都交大路支行</option>
-									   	<option value="651000832000027555">南充市商业银行成都金府支行</option>
-									   	<option value="12001785600052502539">中国建设银行天津滨海临空支行</option>
-									   	<option value="120908385010601">招商银行广州分行开发区支行</option>
-									   	<option value="381866004410">中国银行杭州滨江支行</option>
-									   	<option value="452067163976">中国银行上海市外高桥保税区支行</option>
-									   	<option value="450768072677">中国银行上海市外高桥保税区支行（美元户）</option>
-									   	<option value="31050110057900005899">中国建设银行股份有限公司上海自贸试验区分行（美元户）</option>
-				                        <option value="31050110057900005900">中国建设银行股份有限公司上海自贸试验区分行（欧元户）</option>
-									   	<option value="44001470047052500119">中国建设银行股份有限公司广州萝岗政务中心支行</option>
-				                      <option value="01259192111355">中国银行（香港美元户）</option>
-				                      <option value="01259192122223">中国银行（香港人民币户）</option>
-									   	<option value="现金账户">现金账户</option>
-									   	<option value="承兑账户">承兑账户</option>
-									   	<option value="2164 7010 0100 0518 94">兴业银行上海彭浦支行</option>
-				<!-- 					   	<option value="277881655546">中国银行天津融合广场支行</option>
-				 -->					   	<option value="1001233319005667868">中国工商银行上海宝山支行</option><option value="1001018619100004070" selected="selected">中国工商银行上海兰谷路支行</option><option value="金牌商家G2G账户">金牌商家G2G账户</option><option value="转账">转账</option><option value="446878560206">中国银行上海市友谊路支行</option><option value="1001279919005943746">工行自贸试验区外高桥保税区支行</option>
-							      </select>
-								</td>
-								<td class="title">到款账号：</td>
-								<td class="cont">1001018619100004070</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">到款金额：</td>
-								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" autocomplete="off"></td>
-								<td class="title">收款类别：</td>
-								<td class="cont">销售收款</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">到款类别：</td>
-								<td class="cont radio" colspan="3">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('电子银行承兑汇票')" value="40010"></i>电子银行承兑汇票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"   name="gatherCash.accountType" onclick="setValue('电汇')" value="4003"></i>电汇</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('银行转账支票')" value="4002"></i>银行转账支票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('现金')" value="4001"></i>现金</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  name="gatherCash.accountType" onclick="setValue('转账')" value="16024"></i>转账</label>
-								</td>
-							</tr>
-							<tr class="resource-table txfy_mainDiv dn">
-							    <td class="title">贴息费用：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-								<td class="title">出票单位：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-							</tr>
-							<tr class="resource-table txfy_mainDiv dn">
-							    <td class="title">汇票号码：</td>
-								<td class="cont"><input type="text" class="ui-input pct40 accountext" value="" placeholder="请输入"  ></td>
-								<td class="title">汇票到期日：</td>
-								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间"  readonly="" class="render-time"></span></td>
-							</tr>
-							<tr class="resource-table">
-							    <td class="title">合同号：</td>
-								<td class="cont"><a href="javascript:void(0)" onclick="showStep()">SHLG20200817001</a></td>
-								<td class="title">订单编号：</td>
-								<td class="cont">60957|E200817000010</td>
-							</tr>
-							<tr class="resource-table">
-							    <td class="title">申请单号：</td>
-								<td class="cont"></td>
-								<td class="title">已到款金额：</td>
-								<td class="cont">0</td>
-							</tr>
-							<tr class="resource-table">
-							    <td class="title">本合同核销金额：</td>
-								<td class="cont checkbox" colspan="3"><input type="text" class="ui-input pct40 mr10" value="" placeholder="请输入"><label class=""><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 使用客户余额核销应收金额</label></td>
-							</tr>
-							<tr class="resource-table">
-							    <td class="title">备注说明：</td>
-								<td class="cont" colspan="3">									
-									<textarea  name="gatherCash.remark" class="ui-textarea pct80" rows="3" value=""></textarea>
-								</td>
-							</tr>								
-																		 
-						</tbody>
-					</table>
+					<div class="ui-tip noIcon pct100" data-type="blue">
+                        <div class="tl">
+							<span class="b f14 g28 mr40">销售收款 (金牌商家:唐宇捷)</span>      
+							<span class="b g28 f12 mr40">订单累计收款：5,856</span>
+							<span class="b g28 f12 mr40">订单累计付款：5,856</span>
+							<span class="b g28 f12 mr40">订单余额：5,856</span>
+                        </div>
+                	</div>
+					<div class="mt20">
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">
+								&emsp;&emsp;单位名称：<span class="g28">世华国际中心有限公司</span> 
+							</div>
+							<div class="pct50 dib f12">
+								&emsp;账户余额：<span class="g28">是</span> 
+							</div>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">
+								&emsp;&emsp;付款银行：<span class="g28">中国银行</span> 
+							</div>
+							<div class="pct50 dib f12">
+								&emsp;付款账号：<span class="g28">621755558888868</span> 
+							</div>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">
+								&emsp;&emsp;到款单号：<input type="text" class="ui-input pct30" placeholder="请输入">
+							</div>
+							<div class="pct50 dib f12">
+								&emsp;到款日期：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
+							</div>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">
+								&emsp;&emsp;到款银行：<span class="input-selSearch pct30">
+									<input type="text" class="ui-input searchUp pct100" placeholder="请填写" autocomplete="off">
+									<div class="search-cont" style="display: none;">
+										<a href="javascript:void(0)" class="search-list db ell active">中国工商银行上海宝山支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</div>
+							<div class="pct50 dib f12">
+								&emsp;到款账号：<span class="g28">1001233319005667868</span>
+							</div>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">&emsp;&emsp;到款金额：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
+							<div class="pct50 dib f12">&emsp;收款类别：<span class="g28">销售收款</span></div>
+						</div>
+						<div class="f12 mb15">
+							&emsp;&emsp;到款类别：<span class="single">
+								<button type="button" class="ui-option mr10 on">电子银行承兑汇票</button>
+								<button type="button" class="ui-option mr10">电汇</button>
+								<button type="button" class="ui-option mr10">银行转账支票 </button>
+								<button type="button" class="ui-option mr10">现金</button>
+								<button type="button" class="ui-option mr10">转账</button>
+							</span>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">&emsp;&emsp;贴息费用：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
+							<div class="pct50 dib f12">&emsp;出票单位：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
+						</div>
+						<div class="f0 mb15">
+							<div class="pct50 dib f12">
+								&emsp;&emsp;汇票号码：<span class="input-selSearch pct30">
+									<input type="text" class="ui-input searchUp pct100" placeholder="请填写" autocomplete="off">
+									<div class="search-cont" style="display: none;">
+										<a href="javascript:void(0)" class="search-list db ell active">中国工商银行上海宝山支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</div>
+							<div class="pct50 dib f12">
+								汇票到期日：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
+							</div>
+						</div>
+						<div class="mb15 f0">
+							<div class="pct50 dib f12">&emsp;&emsp;&emsp;合同号：<a href="javascript:void(0)">STC(22)-20001619</a></div>
+							<div class="pct50 dib f12">&emsp;订单编号：<span class="g28">61717|E201109000004</span></div>
+						</div>
+						<div class="mb15 f0">
+							<div class="pct50 dib f12">&emsp;&emsp;申请单号：<span class="g28">--</span></div>
+							<div class="pct50 dib f12">已到款金额：<span class="g28">4</span></div>
+						</div>
+						<div class="mb15 f0">
+							<div class="pct50 f12">本次核销金额：<input type="text" class="ui-input pct30" placeholder="请输入">
+								<span class="checkbox ml10">
+									<label><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>使用客户余额核销应收金额</label>
+								</span>
+							</div>
+						</div>
+						<div class="mb15 f0">
+							<span class="f12">&emsp;&emsp;备注说明：</span>
+								<textarea class="ui-textarea pct80" rows="3"></textarea>
+							
+						</div>
+					</div>
 					
 					<div class="tc  mt20 mb20">
                     	<button type="button" class="ui-button mr10">提交</button>
-                    	<button type="button" class="ui-button mr10">打印收据</button>
-                    	<button type="button" class="ui-button mr10">承兑打印</button>
+                    	<button type="button" class="ui-button mr10" data-type="normal">打印收据</button>
+                    	<button type="button" class="ui-button mr10" data-type="normal">承兑打印</button>
                     	<button type="button" class="ui-button" data-type="clear" onclick="window.location='gathering.html'">返回</button>
                     </div>
 
