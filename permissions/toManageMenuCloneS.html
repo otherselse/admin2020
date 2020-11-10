@@ -38,21 +38,45 @@
         </div>
 
         <div class="ui-tab3">
-                <a href="toManageMenuPage.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">权限分配</span><i class="goldIcon ui-tab3-dot"></i></a>
-                <a href="toManageMenuClone.html" class="ui-tab3-list rel"><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="toManageMenuPage.html" class="ui-tab3-list rel "><span class="ui-tab3-text">权限分配</span><i class="goldIcon ui-tab3-dot"></i></a>
+                <a href="toManageMenuClone.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
         <div class="ui-content minH">
             <div class="p30">
-                <div class="pb20 bbe">
-                    <span class="searchLable dib pct10">人员（单选）：</span>
-                    <button class="ui-button w96" data-type="normal" type="button">选择人员</button>
+               
+                <div class="p_clonebg  auto">
+                    <div class="bbe pt20 pb20 pl50 f14 g28">
+                        将
+                        <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
+                        <!-- 假如选中了人员，显示如下内容 -->
+                        <a href="##" class="ml10 mr10"><span class="topLogoCont vm bb mr5" ><img src="http://fs.lgsteel.cn:8080/file/upload/OaErpImgDir/2016/2016-10-20/1476927097594.jpg" class="topLogo"></span>马云云</a>
+                        的 
+                        <span class="input-selSearch pct15 ml10 mr10">
+                                <input type="text" class="ui-input searchUp pct100" value="管理系统" autocomplete="off" readonly="">
+                                <div class="search-cont" >
+                                    <a href="javascript:void(0)" class="search-list db ell active">管理系统</a>
+
+                                </div>
+                            </span>
+                        权限复制给
+                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
+                        <button type="button" class="ui-button">提交</button>
+                    </div>
+                    <div class="pt20 pb20 pl50">
+                        将短信内容 <span class="p_msginfo dib f12 ml10 mr10">**大侠，您的系统权限已变更，请及时跟进和关注，如有异议请提出。</span>
+                        发送给
+                        <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
+                        <button type="button" class="ui-button" onclick="window.location=''">提交</button>
+                        <a href="javascript:void(0)" class="g80 f12 ml20" onclick="toLoadUserPermit()">查看发送记录 ></a>
+                    </div>
                 </div>
+
                 <div class="pb20 bbe pt20 ">
                     <span class="searchLable dib pct10">区域：</span>
                     <span class="dib pct85 checkbox f12">
-                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 on"><input type="checkbox" class="checkbox-opacity" name="checkbox" checked=""></i>上海</label></span>
                         <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海加工</label></span>
-                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>杭州</label></span>
+                        <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 on"><input type="checkbox" class="checkbox-opacity" name="checkbox" checked=""></i>杭州</label></span>
                         <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无锡</label></span>
                         <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>天津</label></span>
                         <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>自贸区</label></span>
@@ -62,10 +86,11 @@
                         <span class="dib pct8 "><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>成都</label></span>
                     </span>
                 </div><!-- 区域end -->
+
                 <div class="pb20 bbe pt20 ">
                     <span class="searchLable dib pct10 vt">角色：</span>
                      <span class="dib pct85 checkbox f0 lh24">
-                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>分控专员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 on"><input type="checkbox" class="checkbox-opacity" name="checkbox" checked=""></i>分控专员</label></span>
                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>财务专员</label></span>
                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>分控物流
                     </span>
@@ -76,7 +101,7 @@
                             <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸运营经理</label></span>
                             <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>金牌商家账户充值
                         </span>
-                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>RFQ短息接受人员</label></span>
+                        <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 on"><input type="checkbox" class="checkbox-opacity" name="checkbox" checked=""></i>RFQ短息接受人员</label></span>
                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>区域经理</label></span>
                         <span class="dib pct20 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>外贸收款短信提醒</label></span>
@@ -91,8 +116,7 @@
 
                 </div><!-- 角色end -->
 
-
-                <div class="mt20"><span class="t_linerbg"><span class="pl10 searchLable">菜单权限：</span></span></div>
+                <div class="mt20"><span class="t_linerbg"><span class="pl10 searchLable">操作查看权限：</span></span></div>
 
                 <table class="ui-table f12 tc mt15 pct100">
                     <tbody>
@@ -103,8 +127,8 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
-                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list  w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5 on" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="700">物流管理</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="900">信息管理</a>                                    
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="800">权限管理</a>
@@ -135,13 +159,13 @@
                                 已选
                             </td>
                             <td class="cont chooseMenu" style="height: 26px">
-                               
+                                <a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel adm_optMenu" id="sort6101" pid="610">VIP业务采购合同评审<i class="icon-menudel admIcon"></i></a><a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel adm_optMenu" id="sort6201" pid="620">付款类申请审批<i class="icon-menudel admIcon"></i></a></td>
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                 <div class="mt20"><span class="t_linerbg"><span class="pl10 searchLable">审批权限：<span class="f12 g80 n">非必选</span></span></span></div>
+                <div class="mt20"><span class="t_linerbg"><span class="pl10 searchLable">审批权限：<span class="f12 g80 n">非必选</span></span></span></div>
 
                   <table class="ui-table f12 tc mt10 pct100">
                     <tbody>
@@ -182,24 +206,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <tr class="ui-thover adm_optMenu" id="sort10002" pid="">  <td><a href="javascript:void(0)" class="g28" onclick="delCulMenuTab(this)">供应商评审<i class="p_closeIcon vm ml5"></i></a></td>  <td colspan="7" style="padding: 0"><table class="ui-table noline checkbox" width="100%" style="border:0">    <tbody><tr>        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第1节点</label></div></td>        <td width="10%">复核</td>        <td width="10%">1</td>        <td width="10%">有管理员配置</td>        <td width="10%">普通操作</td>        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>        <td width="10%"><a href="javscript:void(0)" onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>    </tr>    <tr>       <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第2节点</label></div></td>        <td width="10%">复核</td>        <td width="10%">1</td>        <td width="10%">有管理员配置</td>        <td width="10%">普通操作</td>        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>        <td width="10%"><a href="javscript:void(0)" onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>    </tr>    <tr>        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>第3节点</label></div></td>        <td width="10%">复核</td>        <td width="10%">1</td>        <td width="10%">有管理员配置</td>        <td width="10%">普通操作</td>        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>        <td width="10%"><a href="javscript:void(0)" onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>    </tr>     <tr>        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第4节点</label></div></td>        <td width="10%">复核</td>        <td width="10%">1</td>        <td width="10%">有管理员配置</td>        <td width="10%">普通操作</td>        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>        <td width="10%"><a href="javscript:void(0)" onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>    </tr></tbody></table></td></tr>
                     </tbody>
                 </table>
-            
 
-                
                 <div class="tc mt40 mb50">
                     <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
-
-                
                 
             </div>
         </div>
     </div>
 
 
-   <div class="qCont  qtip-lg" style="display: none;width: 350px;" onclick="stopPro(event)" >
+    <div class="qCont  qtip-lg" style="display: none;width: 350px;" onclick="stopPro(event)" >
         <div class="qContent">
             <div class="f0 checkbox lh22 admcityshow admContXq">
                 <span class="dib pct25 f12"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>上海</label></span>
@@ -241,11 +261,12 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="authormul.js"></script>
-    
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
             $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
             $(".n16_isMulApprol").find(".ui-tab4-list.on").click(); 
 
@@ -258,8 +279,9 @@
             })
 
         })
+          
         
-        //权限菜单权限数组
+         //权限菜单权限数组
         var authority_Data=[  
             {"title":"首页",
              "id":0,
@@ -456,6 +478,17 @@
         }
 
 
+        function toLoadUserPermit(){
+            layer.open({
+                type: 2,
+                title: '查看发送记录',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['80%', '400px'],
+                content: 'toUserPermit.html' //iframe的url
+            });
+        }
+      
 
     </script>
 </body>
