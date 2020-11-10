@@ -13,185 +13,354 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>仓库信息-仓库信息修改</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<style>
+		body,
+		html {
+			background: #fff;
+		}
+	</style>
 </head>
+	<body class="showTip">
+		<div class="lgui-table-box ml20 mt5 mr20">
+			<div class="lgui-table-box ml40 mt20">
+				<div class="lgui-table-header f12 pct100">
+					<div class="ml40">
+						<div class="mb10 df">
+							<span class="dib pct40">
+								&emsp;&emsp;&emsp;仓库名称：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								仓库单位：<span class="input-selSearch pct70">
+									<input type="text" class="ui-input searchUp pct100 " placeholder="请选择" autocomplete="off" readonly="">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">北京</a>
+										<a href="javascript:void(0)" class="search-list db ell">上海</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</span>
+						</div>
+						<div class="mb10 df">
+							<span class="dib pct40">
+								&emsp;&emsp;&emsp;&emsp;联系人：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								联系电话：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb5 df">
+							<span class="dib pct40">
+								&emsp;&emsp;&emsp;&emsp;&emsp;传真：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								会员标记：会员标记
+							</span>
+						</div>
+						<div class="mb5 df">
+							<span class="dib pct50 dac">
+								&emsp;&emsp;&emsp;仓库地址：<div align="left">
+									<input type="text" class="searchUp ui-input" value="--" readonly="" onclick="setArea(this,'getAddrStock',event)"
+									 id="getAddrStock">&emsp;
+									<input type="text" name="depot.addr" id="addr" class="ui-input" value="小猫咪仓库">
+									<input type="hidden" name="depot.province" id="province" class="txt1" value="">
+									<input type="hidden" name="depot.city" id="city" class="txt1" value="">
+									<input type="hidden" name="depot.area" id="area" class="txt1" value="">
 
-<body class="showTip">
-    <div class="lgui-table-box ml20 mt5 mr20">
-        <div class="lgui-table-header pct100">
-            <table class="ui-table f12 auto tl mt20 " width="100%">
-                <tbody>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">仓库名称：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">仓库单位：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="input-selSearch pct69">
-                                    <input type="text" class="ui-input searchUp borNone pct100" placeholder="请选择"
-                                        autocomplete="off">
-                                    <div class="search-cont pct100">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">联系人：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">联系电话：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">传真：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct69 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">会员标记：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                会员标记
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">仓库地址：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <span class="input-selSearch pct69">
-                                    <input type="text" class="ui-input searchUp borNone pct100" placeholder="请选择"
-                                        autocomplete="off">
-                                    <div class="search-cont pct100">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                                <input type="text" class="ui-input pct40 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">备注：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="1" placeholder="请填入">是大夫</textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">入库单据模板：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <span class="dac pl10">
-                                <div class="">
-                                    <div class="mb10">
-                                        <span class=" dib">
-                                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                                onclick="upfile()">附件上传</button>
-                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                    href="#"></a></span>
-                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                    href="#"></a></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">出库单据模板：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <span class="dac pl10">
-                                <div class="">
-                                    <div class="mb10">
-                                        <span class=" dib">
-                                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                                onclick="upfile()">附件上传</button>
-                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                    href="#"></a></span>
-                                            <span class="ui-files ml10 vm"><a href="javascript:void(0)"
-                                                    class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-                                                    href="#"></a></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="resource-table">
-                        <td width="13%" class="vt bgfa">
-                            <span class="pt5 dib pl10">不同意录入理由：</span>
-                        </td>
-                        <td width="87%" colspan="3">
-                            <div class="pl10 pr10">
-                                <textarea class="ui-textarea pct100" rows="2" placeholder="请填入"></textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="tc">
-                                <button type="button" class="ui-button mr10" data-type="small">提交</button>
-                                <button type="button" class="ui-button " data-type="clear" style="min-width: 60px;
-                                line-height: 24px;
-                                height: 25px;
-                                font-size: 12px;">关闭</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+									<input type="hidden" name="depot.provinceID" id="provinceID" class="txt1" value="">
+									<input type="hidden" name="depot.cityID" id="cityID" class="txt1" value="">
+									<input type="hidden" name="depot.areaID" id="areaID" class="txt1" value="">
+									<input type="hidden" name="depot.applyID" id="applyID" class="txt1" value="B3A4311DBFFE0692E05371001FAC0623">
+								</div>
+							</span>
+							<!-- <span class="dib pct10"></span
+							> -->
+							<span class="dib pct40">
+								&emsp;&emsp;备注：<textarea class="ui-textarea pct70" rows="1" placeholder="请填入">是大夫</textarea>
+							</span>
+						</div>
+						<div class="mb10 ">
+							&emsp;入库单据模板：<span class="dib ">
+								<button type="button" class="ui-button mr10 vm" data-type="upfile" onclick="upfile()">附件上传</button>
+								<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组1件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+								<span class="ui-files vm"><a href="javascript:void(0)" class="g80">组11件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</span>
+						</div>
+						<div class="mb10 ">
+							&emsp;出库单据模板：<span class="dib ">
+								<button type="button" class="ui-button mr10 vm" data-type="upfile" onclick="upfile()">附件上传</button>
+								<span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组1件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+								<span class="ui-files vm"><a href="javascript:void(0)" class="g80">组11件1.jpg</a><i class="icon-sdel goldIcon vm ml5"
+									 title="删除"></i></span>
+							</span>
+						</div>
+						<div class="">
+							不同意录入理由：<textarea class="ui-textarea pct70" placeholder="最多500字" rows="2"></textarea>
+						</div>
+					</div>
 
-</body>
+					<div class="tc mt20">
+						<button type="button" class="ui-button mr10 w90">提交</button>
+						<button type="button" class="ui-button w90" data-type="clear">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+		
+		/*20170412 add*/
+		.mt8{margin-top:8px}
+		.ml15{margin-left:15px}
+		.mr15{margin-right:15px}
+		.mt5{margin-top:5px}
+		.mb5{margin-bottom:5px}
+		.bjxx{color:#333;background-color:#f5f5f5;border:1px #dedede solid;border-radius:5px;width:96%;padding:0 1%;margin:0 auto;overflow:hidden;line-height:40px;text-align:left;margin-bottom:10px}
+		.activebj{background-color:#dfecff;border:none;}
+		.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+		.icon-wuliu{display:inline-block;width:17px;height:18px;vertical-align:middle;margin-right:5px;background:url(images/icon-wuliu.png) no-repeat;}
+		.c636385{color:#636385}
+		.grey-button{background:#dddddd;text-align:center;border-radius:5px;width:70px;display:inline-block;line-height:25px;vertical-align:middle;text-align:center;color:#333 !important;}
+		.blue-button{background:#478ffe;text-align:center;border-radius:5px;width:70px;display:inline-block;line-height:25px;vertical-align:middle;text-align:center;color:#fff !important;}
+		
+		/*select area start*/
+		.getCityCont{background:#fff;z-index:999;display:none;position:absolute;width:450px;border:1px #88b2fa solid;box-shadow: 0px 0px 12px rgba(57, 64, 125, 0.30);-o-box-shadow: 0px 0px 12px rgba(57, 64, 125, 0.30);-ms-box-shadow: 0px 0px 12px rgba(57, 64, 125, 0.30);-moz-box-shadow: 0px 0px 12px rgba(57, 64, 125, 0.30);-webkit-box-shadow: 0px 0px 12px rgba(57, 64, 125, 0.30);padding:5px;text-align:left;font-size:12px;}
+		.getcitydot{border:9px solid transparent;border-bottom-color:#2a79fc;position:absolute;left:10px;top:-18px;width:0;height:0;}
+		.getcitydotin{border:8px solid transparent;border-bottom-color:#fff;position:absolute;left:-8px;top:-7px;width:0;height:0;}
+		.getCityTitle{background:#f5f5f5;overflow:hidden;line-height:30px;margin-bottom:10px}
+		.getCityList{width:33%;float:left;text-align:center;position:relative}
+		.getCityTitle > .on{border-bottom:2px #2a79fc solid;color:#2a79fc;}
+		.getCityTitle > .on i{border:5px solid transparent;border-bottom-color:#2a79fc;position:absolute;top:20px;left:46%;width:0;height:0;}
+		.sel-provincel{width:8%;line-height:22px;color:#2a79fc;font-weight:bold}
+		.sel-provincelist{width:92%;line-height:22px;}
+		.chooseProv{display:inline-block;width:41px;padding:0px;overflow:hidden}
+		.chooseCity,.ChooseArea{display:inline-block;padding:0 10px;overflow:hidden;line-height:25px;}
+		/*select area end*/
+		</style>
+		<div class="getCityCont dn">
+				<input type="hidden" id="v_provinceID" value="110000">
+		        <input type="hidden" id="v_province" value="北京">
+		        <input type="hidden" id="v_cityID" value="110100">
+		        <input type="hidden" id="v_city" value="北京市">
+		        <input type="hidden" id="v_areasID" value="110106">
+		        <input type="hidden" id="v_areas" value="丰台区">
+				<i class="getcitydot"><i class="getcitydotin"></i></i>
+				<input type="hidden" value="getAddrStock" name="tempValue">
+				<div class="getCityTitle">
+					<a href="javascript:void(0)" class="getCityList on"><i></i>省份</a>
+					<a href="javascript:void(0)" class="getCityList"><i></i>城市</a>
+					<a href="javascript:void(0)" class="getCityList"><i></i>地区</a>
+				</div>
+				
+				<div class="moreProv" style="display: block;">
+					<div class="hline">
+			            <div class="fl sel-provincel">A-G</div>
+			            <div class="fl sel-provincelist">
+			            <a href="javascript:;" data-origin="p" data-id="340000" class="chooseProv">安徽</a>
+			            <a href="javascript:;" data-origin="p" data-id="110000" class="chooseProv">北京</a>
+			            <a href="javascript:;" data-origin="p" data-id="500000" class="chooseProv">重庆</a>
+			            <a href="javascript:;" data-origin="p" data-id="350000" class="chooseProv">福建</a>
+			            <a href="javascript:;" data-origin="p" data-id="440000" class="chooseProv">广东</a>
+			            <a href="javascript:;" data-origin="p" data-id="450000" class="chooseProv">广西</a>
+			            <a href="javascript:;" data-origin="p" data-id="520000" class="chooseProv">贵州</a>
+			            <a href="javascript:;" data-origin="p" data-id="620000" class="chooseProv">甘肃</a>
+			            </div>
+			        </div>
+					<div class="hline">
+			            <div class="fl sel-provincel">H-K</div>
+			            <div class="fl sel-provincelist">
+			            <a href="javascript:;" data-origin="p" data-id="460000" class="chooseProv">海南</a>
+			            <a href="javascript:;" data-origin="p" data-id="130000" class="chooseProv">河北</a>
+			            <a href="javascript:;" data-origin="p" data-id="230000" class="chooseProv">黑龙江</a>
+			            <a href="javascript:;" data-origin="p" data-id="410000" class="chooseProv">河南</a>
+			            <a href="javascript:;" data-origin="p" data-id="420000" class="chooseProv">湖北</a>
+			            <a href="javascript:;" data-origin="p" data-id="430000" class="chooseProv">湖南</a>
+			            <a href="javascript:;" data-origin="p" data-id="320000" class="chooseProv">江苏</a>
+			            <a href="javascript:;" data-origin="p" data-id="360000" class="chooseProv">江西</a>
+			            <a href="javascript:;" data-origin="p" data-id="220000" class="chooseProv">吉林</a>
+			            </div>
+			        </div>
+					<div class="hline">
+			            <div class="fl sel-provincel">L-S</div>
+			            <div class="fl sel-provincelist">
+			            <a href="javascript:;" data-origin="p" data-id="210000" class="chooseProv">辽宁</a>
+			            <a href="javascript:;" data-origin="p" data-id="150000" class="chooseProv">内蒙古</a>
+			            <a href="javascript:;" data-origin="p" data-id="640000" class="chooseProv">宁夏</a>
+			            <a href="javascript:;" data-origin="p" data-id="630000" class="chooseProv">青海</a>
+			            <a href="javascript:;" data-origin="p" data-id="370000" class="chooseProv">山东</a>
+			            <a href="javascript:;" data-origin="p" data-id="310000" class="chooseProv">上海</a>
+			            <a href="javascript:;" data-origin="p" data-id="140000" class="chooseProv">山西</a>
+			            <a href="javascript:;" data-origin="p" data-id="610000" class="chooseProv">陕西</a>
+			            <a href="javascript:;" data-origin="p" data-id="510000" class="chooseProv">四川</a>
+			            </div>
+			        </div>
+					<div class="hline">
+			            <div class="fl sel-provincel">T-Z</div>
+			            <div class="fl sel-provincelist">
+			            <a href="javascript:;" data-origin="p" data-id="120000" class="chooseProv">天津</a>
+			            <a href="javascript:;" data-origin="p" data-id="650000" class="chooseProv">新疆</a>
+			            <a href="javascript:;" data-origin="p" data-id="540000" class="chooseProv">西藏</a>
+			            <a href="javascript:;" data-origin="p" data-id="530000" class="chooseProv">云南</a>
+			            <a href="javascript:;" data-origin="p" data-id="330000" class="chooseProv">浙江</a>
+			            </div>
+			        </div>
+					
+				</div>
+				<div class="moreCity" style="display: none;"><a href="javascript:void(0);" data-origin="c" data-id="110101" class="ChooseArea">东城区</a><a href="javascript:void(0);" data-origin="c" data-id="110102" class="ChooseArea">西城区</a><a href="javascript:void(0);" data-origin="c" data-id="110103" class="ChooseArea">崇文区</a><a href="javascript:void(0);" data-origin="c" data-id="110104" class="ChooseArea">宣武区</a><a href="javascript:void(0);" data-origin="c" data-id="110105" class="ChooseArea">朝阳区</a><a href="javascript:void(0);" data-origin="c" data-id="110106" class="ChooseArea">丰台区</a><a href="javascript:void(0);" data-origin="c" data-id="110107" class="ChooseArea">石景山区</a><a href="javascript:void(0);" data-origin="c" data-id="110108" class="ChooseArea">海淀区</a><a href="javascript:void(0);" data-origin="c" data-id="110109" class="ChooseArea">门头沟区</a><a href="javascript:void(0);" data-origin="c" data-id="110111" class="ChooseArea">房山区</a><a href="javascript:void(0);" data-origin="c" data-id="110112" class="ChooseArea">通州区</a><a href="javascript:void(0);" data-origin="c" data-id="110113" class="ChooseArea">顺义区</a><a href="javascript:void(0);" data-origin="c" data-id="110114" class="ChooseArea">昌平区</a><a href="javascript:void(0);" data-origin="c" data-id="110115" class="ChooseArea">大兴区</a><a href="javascript:void(0);" data-origin="c" data-id="110116" class="ChooseArea">怀柔区</a><a href="javascript:void(0);" data-origin="c" data-id="110117" class="ChooseArea">平谷区</a><a href="javascript:void(0);" data-origin="c" data-id="110110" class="ChooseArea">密云区</a></div>
+			</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+		<script type="text/jscript">
+			function setArea(obj, str, e) {
+				stopPro(e);
+				$(".getCityCont").css({
+					"left": $(obj).offset().left,
+					"top": $(obj).offset().top + $(obj).outerHeight() + 10
+				});
+				$(".getCityCont").show();
+				$(".getCityCont").find("input[name='tempValue']").val(str);
+				$(".getCityCont").find(".getCityTitle").find("a").eq(0).click();
+			}
+
+			$(function() {
+				$(window).on("click", function() {
+					$(".getCityCont").hide();
+				})
+
+				//点击省
+				$(".chooseProv").live("click", function(e) {
+					e.stopPropagation();
+					$("#v_provinceID").val($(this).attr("data-id"));
+					$("#v_province").val($(this).text());
+					var provinceID = $(this).attr("data-id");
+					var url = app.root + '/frontCenter/procApplyAction_queryAllCity.action';
+					var obj = this;
+					$.post(url, {
+						"cities.provinceID": provinceID
+					}, function(arrayList) {
+						var str = "";
+						$.each(arrayList, function(i, item) {
+							str += "<a href='javascript:;' data-origin='c' data-id='" + item.cityID + "' class='chooseCity'>" + item
+								.city + "</a>";
+						})
+						if (str != "") {
+							$(obj).parents(".getCityCont").find(".getCityTitle").find("a").siblings().removeClass("on");
+							$(obj).parents(".getCityCont").find(".getCityTitle").find("a").eq(1).addClass("on");
+							$(obj).parents(".getCityCont").find(".moreCity").html(str);
+							$(obj).parents(".getCityCont").find(".moreCity").show();
+							$(obj).parents(".getCityCont").find(".moreProv").hide();
+						}
+					})
+					/*var str="<a href='javascript:;' data-origin='c' data-id='340100' class='chooseCity'>合肥市</a><a href='javascript:;' data-origin='c' data-id='340200' class='chooseCity'>芜湖市</a><a href='javascript:;' data-origin='c' data-id='340300' class='chooseCity'>蚌埠市</a><a href='javascript:;' data-origin='c' data-id='340400' class='chooseCity'>淮南市</a><a href='javascript:;' data-origin='c' data-id='340500' class='chooseCity'>马鞍山市</a><a href='javascript:;' data-origin='c' data-id='340600' class='chooseCity'>淮北市</a><a href='javascript:;' data-origin='c' data-id='340700' class='chooseCity'>铜陵市</a><a href='javascript:;' data-origin='c' data-id='340800' class='chooseCity'>安庆市</a><a href='javascript:;' data-origin='c' data-id='341000' class='chooseCity'>黄山市</a><a href='javascript:;' data-origin='c' data-id='341100' class='chooseCity'>滁州市</a><a href='javascript:;' data-origin='c' data-id='341200' class='chooseCity'>阜阳市</a><a href='javascript:;' data-origin='c' data-id='341300' class='chooseCity'>宿州市</a><a href='javascript:;' data-origin='c' data-id='341400' class='chooseCity'>巢湖市</a><a href='javascript:;' data-origin='c' data-id='341500' class='chooseCity'>六安市</a><a href='javascript:;' data-origin='c' data-id='341600' class='chooseCity'>亳州市</a><a href='javascript:;' data-origin='c' data-id='341700' class='chooseCity'>池州市</a><a href='javascript:;' data-origin='c' data-id='341800' class='chooseCity'>宣城市</a>";
+					$(this).parents(".getCityCont").find(".getCityTitle").find("a").siblings().removeClass("on");
+					$(this).parents(".getCityCont").find(".getCityTitle").find("a").eq(1).addClass("on");
+					$(this).parents(".getCityCont").find(".moreCity").html(str);
+					$(this).parents(".getCityCont").find(".moreCity").show();
+					$(this).parents(".getCityCont").find(".moreProv").hide();*/
+					var myobj = $(this).parents(".getCityCont").find("input[name='tempValue']").val();
+					$("#" + myobj).val($(this).text());
+
+				})
+
+				$(".chooseCity").live("click", function(e) {
+					e.stopPropagation();
+					$("#v_cityID").val($(this).attr("data-id"));
+					$("#v_city").val($(this).text());
+					var cityID = $(this).attr("data-id");
+					var obj = this;
+					var url = app.root + '/frontCenter/procApplyAction_queryAllAreaByCityID.action';
+					$.post(url, {
+						"cityID": cityID
+					}, function(arrayList) {
+						var str = "";
+						$.each(arrayList, function(i, item) {
+							str += "<a href='javascript:void(0);' data-origin='c' data-id='" + item.areaID + "' class='ChooseArea'>" +
+								item.area + "</a>";
+						})
+						if (str != "") {
+							$(obj).parents(".getCityCont").find(".getCityTitle").find("a").siblings().removeClass("on");
+							$(obj).parents(".getCityCont").find(".getCityTitle").find("a").eq(2).addClass("on");
+							$(obj).parents(".getCityCont").find(".moreCity").html(str);
+							$(obj).parents(".getCityCont").find(".moreProv").hide();
+						}
+					})
+
+
+					var myobj = $(this).parents(".getCityCont").find("input[name='tempValue']").val();
+					var str = $("#" + myobj).val();
+					$("#" + myobj).val(str + "-" + $(this).text());
+
+					/*var str="<a href='javascript:void(0)' class='ChooseArea' areaid='310113' title='宝山区'>宝山区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310105' title='长宁区'>长宁区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310230' title='崇明县'>崇明县</a><a href='javascript:void(0)' class='ChooseArea' areaid='310120' title='奉贤区'>奉贤区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310109' title='虹口区'>虹口区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310101' title='黄浦区'>黄浦区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310114' title='嘉定区'>嘉定区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310106' title='静安区'>静安区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310116' title='金山区'>金山区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310112' title='闵行区'>闵行区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310115' title='浦东新区'>浦东新区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310107' title='普陀区'>普陀区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310118' title='青浦区'>青浦区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310117' title='松江区'>松江区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310104' title='徐汇区'>徐汇区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310110' title='杨浦区'>杨浦区</a><a href='javascript:void(0)' class='ChooseArea' areaid='310108' title='闸北区'>闸北区</a>";
+					$(this).parents(".getCityCont").find(".getCityTitle").find("a").siblings().removeClass("on");
+					$(this).parents(".getCityCont").find(".getCityTitle").find("a").eq(2).addClass("on");
+					$(this).parents(".getCityCont").find(".moreCity").html(str);
+					$(this).parents(".getCityCont").find(".moreProv").hide();*/
+
+				})
+
+				$(".ChooseArea").live("click", function(e) {
+					e.stopPropagation();
+					$("#v_areasID").val($(this).attr("data-id"));
+					$("#v_areas").val($(this).text());
+					//var str=$(this).parents(".getCityCont").find("input[name='tempValue']").val();
+					var myobj = $(this).parents(".getCityCont").find("input[name='tempValue']").val();
+					var str = $("#" + myobj).val();
+					$("#" + myobj).val(str + "-" + $(this).text());
+					$(this).parents(".getCityCont").hide();
+				})
+
+				$(".getCityList").on("click", function(e) {
+					e.stopPropagation();
+					var index = $(".getCityTitle").find("a").index(this);
+					$(this).siblings().removeClass("on");
+					$(this).addClass("on");
+					$(this).parents(".getCityCont").find(".cityListMenu").show();
+					$(this).parents(".getCityCont").find(".cityListMenu").find("a").removeClass("on");
+					$(this).parents(".getCityCont").find(".cityListMenu").find("a").eq(index).addClass("on");
+					if (index == 0) {
+						$(this).parents(".getCityCont").find(".moreDistrict").hide();
+						$(this).parents(".getCityCont").find(".moreCity").hide();
+						$(this).parents(".getCityCont").find(".moreProv").show();
+					} else {
+						$(this).parents(".getCityCont").find(".moreDistrict").html('');
+						$(this).parents(".getCityCont").find(".moreDistrict").show();
+						$(this).parents(".getCityCont").find(".moreCity").hide();
+						$(this).parents(".getCityCont").find(".moreProv").hide();
+
+					}
+				})
+
+			})
+
+
+
+			//防止冒泡
+			function stopPro(e) {
+				if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion
+						.match(/8./i) == "8.")) {
+					if (event.stopPropagation) {
+						// this code is for Mozilla and Opera 
+						event.stopPropagation();
+					} else if (window.event) {
+						// this code is for IE 
+						window.event.cancelBubble = true;
+					}
+				} else {
+					e.stopPropagation();
+				}
+			}
+		</script>
+
+	</body>
 
 </html>
