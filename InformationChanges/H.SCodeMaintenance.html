@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>编码维护-信息管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <style>
-        .txtb2 {
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>编码维护-信息管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			.txtb2 {
             border: 1px #2487E4 solid;
             color: #2487E4;
             width: 100px;
@@ -25,324 +25,327 @@
             background-color: transparent;
         }
     </style>
-</head>
+	</head>
 
-<body class='showTip report'>
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                信息管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">编码维护</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class="ui-tab3">
-            <a href="taxCodeMaintenance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">税收编码维护</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="H.SCodeMaintenance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">H.S编码维护</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-        <div class="fix f12 bgwh p20 ui-content ovh minH">
-            <div class="">
-                <div class="xzhj daj">
-                    <a href="javascript:void(0)" onclick="showLayer('增加','H.SCodeMaintenanceAdd.html')"
-                        class="dib xzhj-button daj">
-                        <span class="dib mr10">信息添加</span> <img src="../images/documnts/t8.png" width="20px"
-                            height="20px" alt="">
-                    </a>
-                </div>
-            </div>
+	<body class='showTip report'>
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					信息管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">编码维护</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="taxCodeMaintenance.html" class="ui-tab3-list rel"><span class="ui-tab3-text">税收编码维护</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="H.SCodeMaintenance.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">H.S编码维护</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="fix f12 bgwh p20 ui-content ovh minH">
+				<div class="">
+					<div class="xzhj daj">
+						<a href="javascript:void(0)" onclick="showLayer('增加','H.SCodeMaintenanceAdd.html')" class="dib xzhj-button daj">
+							<span class="dib mr10">信息添加</span> <img src="../images/documnts/t8.png" width="20px" height="20px" alt="">
+						</a>
+					</div>
+				</div>
 
-            <div class="cl mb10 mt20 dac f12">
-                <span class="dib pct25">
-                    <span class="searchLable"> &emsp;品名：</span>
-                   <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="dib pct25">
-                    <span class="searchLable">规格：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="dib pct25">
-                    <span class="searchLable">退税率：</span>
-                    <span class="ui-input pct69" data-type="price">
-                        <input type="text" value="" placeholder="输入调整后价格">元/吨</span>
-                </span>
-                <span class="dib pct25">
-                    <span class="searchLable"> H.S编码：</span>
-                   <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-            </div>
-            <div class="dac">
-                <span class="dib pct25">
-                    <span class="searchLable">操作人：</span>
-                    <span class="ui-input pct69 " data-type="price">
-                        <input type="text" class="pct69" value="" placeholder="请输入">
-                        <span class="">%</span>
-                    </span>
-                </span>
-                <span class="f1">
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
-                </span>
-            </div>
-            <div class="lgui-table-box mt30">
-                <div class="lgui-table-body">
-                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr class="fixTr">
-                                <th width="4%">序号</th>
-                                <th width="17%">品名</th>
-                                <th width="14%">规格</th>
-                                <th width="15%">退税率(%)</th>
-                                <th width="17%">H.S 编码</th>
-                                <th width="16%">修改人</th>
-                                <th width="17%">记录</th>
-                            </tr>
-                        </thead>
-                        <tbody class="ui-thover">
-                            <tr>
-                                <td width="4%">1</td>
-                                <td width="17%">卷板</td>
-                                <td width="14%">1*1*5</td>
-                                <td width="15%">
-                                    <input type="text" class="borNone ibBt tc" value="9" data="9" readonly=""
-                                        tagname="steName" onchange="check(this)">
-                                </td>
-                                <td width="17%">
-                                    <input type="text" class="borNone ibBt tc" value="58552" data="58552" readonly=""
-                                        tagname="steName" onchange="check(this)">
-                                </td>
-                                <td width="16%">杨兴旺</td>
-                                <td width="17%" class="blue">
-                                    <a href="javascript:void(0)" onclick="setEdit(this)">修改</a>
-                                    <span class="dib pl2 pr2">|</span>
-                                    <a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto mt-1" width="100%">
-                                            <thead>
-                                                <tr class="n17-Ttitle">
-                                                    <th width="15%">修改时间</th>
-                                                    <th width="15%">修改人</th>
-                                                    <th width="35%">退税率</th>
-                                                    <th width="35%">H.S编码</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr class="">
-                                                    <td>2020-10-12 16:13:53</td>
-                                                    <td>杨兴旺</td>
-                                                    <td>9</td>
-                                                    <td>58552</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-            <div class="mb20"></div>
-        </div>
-    </div>
+				<div class="cl mb10 mt20 dac f12">
+					<span class="dib pct25">
+						<span class="searchLable"> &emsp;品名：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="dib pct25">
+						<span class="searchLable">规格：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="dib pct25">
+						<span class="searchLable">退税率：</span>
+						<span class="ui-input pct69 " data-type="price">
+							<input type="text" class="pct69" value="" placeholder="请输入">
+							<span class="">%</span>
+						</span>
+					</span>
+					<span class="dib pct25">
+						<span class="searchLable"> H.S编码：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+				</div>
+				<div class="dac">
+					<span class="dib pct25">
+						<span class="searchLable">操作人：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="f1">
+						<button type="button" class="ui-button mr20">查询</button>
+						<button type="button" class="ui-button" data-type="clear">清空</button>
+					</span>
+				</div>
+				<div class="lgui-table-box mt30">
+					<div class="lgui-table-body">
+						<table class="ui-table checkbox tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="fixTr">
+									<th width="4%">序号</th>
+									<th width="17%">品名</th>
+									<th width="14%">规格</th>
+									<th width="15%">退税率(%)</th>
+									<th width="17%">H.S 编码</th>
+									<th width="16%">修改人</th>
+									<th width="17%">记录</th>
+								</tr>
+							</thead>
+							<tbody class="ui-thover">
+								<tr>
+									<td width="4%">1</td>
+									<td width="17%">卷板</td>
+									<td width="14%">1*1*5</td>
+									<td width="15%">
+										<input type="text" class="borNone ibBt tc" value="9" data="9" readonly="" tagname="steName" onchange="check(this)">
+									</td>
+									<td width="17%">
+										<input type="text" class="borNone ibBt tc" value="58552" data="58552" readonly="" tagname="steName" onchange="check(this)">
+									</td>
+									<td width="16%">杨兴旺</td>
+									<td width="17%" class="blue">
+										<a href="javascript:void(0)" onclick="setEdit(this)">修改</a>
+										<span class="dib pl2 pr2">|</span>
+										<a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
+									</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+									<td colspan="10">
+										<div class="pl20 pr20">
+											<table class="ui-table tc f12 auto mt-1" width="100%">
+												<thead>
+													<tr class="n17-Ttitle">
+														<th width="15%">修改时间</th>
+														<th width="15%">修改人</th>
+														<th width="35%">退税率</th>
+														<th width="35%">H.S编码</th>
+													</tr>
+												</thead>
+												<tbody class="ui-thover">
+													<tr class="">
+														<td>2020-10-12 16:13:53</td>
+														<td>杨兴旺</td>
+														<td>9</td>
+														<td>58552</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr><!-- 隐藏内容end -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<script type="text/javascript" src="../js/pagelist.js"></script>
+				<div class="mb20"></div>
+			</div>
+		</div>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                position: {
-                    my: 'top center',
-                    at: 'bottom center'
-                },
-                // position: {
-                //  viewport: $(window)
-                // },
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                }
-            });
-        })
-        function showLayer(name, url) {
-            var page = layer.open({
-                type: 2,
-                title: name,
-                shadeClose: true,
-                shade: 0.4,
-                area: ['600px', '300px'],
-                content: url //iframe的url
-            });
-            $("#close_but").on("click", function () {
-                layer.close(page);
-            });
-        }
-    </script>
-    <script type="text/javascript">
+		<script>
+			$(function() {
+				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					position: {
+						my: 'top center',
+						at: 'bottom center'
+					},
+					// position: {
+					//  viewport: $(window)
+					// },
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
+					}
+				});
+			})
 
+			function showLayer(name, url) {
+				var page = layer.open({
+					type: 2,
+					title: name,
+					shadeClose: true,
+					shade: 0.4,
+					area: ['600px', '300px'],
+					content: url //iframe的url
+				});
+				$("#close_but").on("click", function() {
+					layer.close(page);
+				});
+			}
+		</script>
+		<script type="text/javascript">
+			function addcode() {
+				if ($("#steName").val() == "") {
+					alert("请输入品名");
+					return false;
+				}
+				if ($("#steNameNo").val() == "") {
+					alert("请输入编码");
+					return false;
+				}
+				var steName = $("#steName").val();
+				var steNameNo = $("#steNameNo").val();
+				var steNameType = $("#steNameType").val();
+				var url = app.root + "/LgAdmin/hsCode/insertEbstenameno.action";
+				$.ajax({
+					type: 'POST',
+					url: url,
+					data: {
+						"hsCode.steName": steName,
+						"hsCode.steNameNo": steNameNo,
+						"hsCode.type": steNameType
+					},
+					success: function(data) {
+						if (data == "1") {
+							//alert("添加成功");
+							$("#pageForm").submit();
+						} else if (data == "0") {
+							alert("添加失败");
+						}
+					}
+				});
+			}
 
-        function addcode() {
-            if ($("#steName").val() == "") {
-                alert("请输入品名");
-                return false;
-            }
-            if ($("#steNameNo").val() == "") {
-                alert("请输入编码");
-                return false;
-            }
-            var steName = $("#steName").val();
-            var steNameNo = $("#steNameNo").val();
-            var steNameType = $("#steNameType").val();
-            var url = app.root + "/LgAdmin/hsCode/insertEbstenameno.action";
-            $.ajax({
-                type: 'POST',
-                url: url,
-                data: {
-                    "hsCode.steName": steName,
-                    "hsCode.steNameNo": steNameNo,
-                    "hsCode.type": steNameType
-                },
-                success: function (data) {
-                    if (data == "1") {
-                        //alert("添加成功");
-                        $("#pageForm").submit();
-                    } else if (data == "0") {
-                        alert("添加失败");
-                    }
-                }
-            });
-        }
+			function showdiv(targetid, objN) {
+				var target = document.getElementById(targetid);
 
-        function showdiv(targetid, objN) {
-            var target = document.getElementById(targetid);
+				if (target.style.display == "block") {
+					target.style.display = "none";
+				} else {
+					target.style.display = "block";
+				}
 
-            if (target.style.display == "block") {
-                target.style.display = "none";
-            } else {
-                target.style.display = "block";
-            }
-
-        }
+			}
 
 
-        function addInfo() {
-            var page = $.layer({
-                type: 1,
-                shadeClose: true, //开启点击遮罩关闭层
-                //closeBtn: [0, false], //去掉默认关闭按钮
-                area: ['500px', '300px'],
-                title: '增加',
-                page: { dom: '.sel_out' }
-            });
-            $("#close_but").on("click", function () {
-                layer.close(page);
-            });
-        }
+			function addInfo() {
+				var page = $.layer({
+					type: 1,
+					shadeClose: true, //开启点击遮罩关闭层
+					//closeBtn: [0, false], //去掉默认关闭按钮
+					area: ['500px', '300px'],
+					title: '增加',
+					page: {
+						dom: '.sel_out'
+					}
+				});
+				$("#close_but").on("click", function() {
+					layer.close(page);
+				});
+			}
 
-        function delHscode(id) {
-            if (confirm("确认删除?")) {
-                $.post('/LgAdmin/hsCode/delEbstenameno.action', { 'hsCode.idStr': id }, function (data) {
-                    if (data.msg == '1') {
-                        alert('删除成功！');
-                        window.location.reload();
-                    } else {
-                        alert('删除失败！');
-                    }
-                })
-            }
-        }
+			function delHscode(id) {
+				if (confirm("确认删除?")) {
+					$.post('/LgAdmin/hsCode/delEbstenameno.action', {
+						'hsCode.idStr': id
+					}, function(data) {
+						if (data.msg == '1') {
+							alert('删除成功！');
+							window.location.reload();
+						} else {
+							alert('删除失败！');
+						}
+					})
+				}
+			}
 
-        function setEdit(obj) {
-            var v = $(obj).text();
-            if (v == "修改") {
-                $(obj).parents("tr").find("input[tagname='steName']").removeClass().removeAttr("readonly").addClass("txtb2 ui-input tax");
-                $(obj).parents("tr").find("input[tagname='steNameNo']").removeClass().removeAttr("readonly").addClass("txtb2 ui-input code");
-                $(obj).text("取消");
-                $(obj).before("<a href='javascript:void(0)' onclick='saveTd(this)'>保存</a><span class='dib pl5 pr5'>|</span>")
-            } else {
-                $(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone ibBt tc");
-                $(obj).parents("tr").find("input[tagname='steName']").val($(obj).parents("tr").find("input[tagname='steName']").attr("data"));
-                $(obj).parents("tr").find("input[tagname='steNameNo']").val($(obj).parents("tr").find("input[tagname='steNameNo']").attr("data"));
-                $(obj).prev().remove();
-                $(obj).prev().remove();
-                $(obj).text("修改");
-            }
-        }
+			function setEdit(obj) {
+				var v = $(obj).text();
+				if (v == "修改") {
+					$(obj).parents("tr").find("input[tagname='steName']").removeClass().removeAttr("readonly").addClass(
+						"txtb2 ui-input tax");
+					$(obj).parents("tr").find("input[tagname='steNameNo']").removeClass().removeAttr("readonly").addClass(
+						"txtb2 ui-input code");
+					$(obj).text("取消");
+					$(obj).before("<a href='javascript:void(0)' onclick='saveTd(this)'>保存</a><span class='dib pl5 pr5'>|</span>")
+				} else {
+					$(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone ibBt tc");
+					$(obj).parents("tr").find("input[tagname='steName']").val($(obj).parents("tr").find("input[tagname='steName']").attr(
+						"data"));
+					$(obj).parents("tr").find("input[tagname='steNameNo']").val($(obj).parents("tr").find("input[tagname='steNameNo']")
+						.attr("data"));
+					$(obj).prev().remove();
+					$(obj).prev().remove();
+					$(obj).text("修改");
+				}
+			}
 
-        function saveTd(obj) {
-            var idStr = $(obj).parents("tr").find("input[tagname='idStr']").val();
-            var steName = $(obj).parents("tr").find("input[tagname='steName']").val();
-            var steNameNo = $(obj).parents("tr").find("input[tagname='steNameNo']").val();
+			function saveTd(obj) {
+				var idStr = $(obj).parents("tr").find("input[tagname='idStr']").val();
+				var steName = $(obj).parents("tr").find("input[tagname='steName']").val();
+				var steNameNo = $(obj).parents("tr").find("input[tagname='steNameNo']").val();
 
-            if (idStr == "" || steName == "" || steNameNo == "") {
-                alert("请填写完整后修改");
-                return false;
-            }
-            $(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone tc");
-            var url = app.root + "/LgAdmin/hsCode/updateEbstenameno.action";
-            $.ajax({
-                type: 'POST',
-                url: url,
-                data: {
-                    "hsCode.idStr": idStr,
-                    "hsCode.steName": steName,
-                    "hsCode.steNameNo": steNameNo
-                },
-                success: function (data) {
-                    if (data == "1") {
-                        //alert("更新成功");
-                        window.location.reload();
-                    } else if (data == "0") {
-                        alert("更新失败");
-                    }
-                }
-            });
-            var my = $(obj).next();
-            $(obj).remove();
-            my.text("修改");
-        }
+				if (idStr == "" || steName == "" || steNameNo == "") {
+					alert("请填写完整后修改");
+					return false;
+				}
+				$(obj).parents("tr").find("input[type=text]").attr("readonly", true).removeClass().addClass("borNone tc");
+				var url = app.root + "/LgAdmin/hsCode/updateEbstenameno.action";
+				$.ajax({
+					type: 'POST',
+					url: url,
+					data: {
+						"hsCode.idStr": idStr,
+						"hsCode.steName": steName,
+						"hsCode.steNameNo": steNameNo
+					},
+					success: function(data) {
+						if (data == "1") {
+							//alert("更新成功");
+							window.location.reload();
+						} else if (data == "0") {
+							alert("更新失败");
+						}
+					}
+				});
+				var my = $(obj).next();
+				$(obj).remove();
+				my.text("修改");
+			}
 
-        function check(obj) {
-            var rate = $(obj).val();
-            if (rate == "") {
-                alert("请填写内容！")
-                return false;
-            }
-        }
-        function chaxun() {
-            $("#pageForm").submit();
-        }
-    </script>
-</body>
+			function check(obj) {
+				var rate = $(obj).val();
+				if (rate == "") {
+					alert("请填写内容！")
+					return false;
+				}
+			}
+
+			function chaxun() {
+				$("#pageForm").submit();
+			}
+		</script>
+	</body>
 
 </html>

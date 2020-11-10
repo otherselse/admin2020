@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>单位(添加、修改)广告-乐刚广告维护</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/exportFile/tableExporter.js"></script>
-    <style>
-        body,
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>单位(添加、修改)广告-乐刚广告维护</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/exportFile/tableExporter.js"></script>
+		<style>
+			body,
         html {
             background: #fff;
         }
@@ -26,692 +26,777 @@
             padding: 7px 2px;
         }
     </style>
-</head>
+	<style>
+	    a {
+	        text-decoration: none
+	    }
+	
+	    a:hover {
+	        color: #2172F5
+	    }
+	
+	    #dropUpfile {
+	        width: 150px;
+	        height: 150px;
+	        margin: 0 auto;
+	        background-color: #fafafa;
+	        position: relative;
+	        overflow: hidden;
+	        color: #1365E8;
+	        box-sizing: border-box;
+	        padding: 20px;
+	        font-size: 12px;
+	        display: inline-block;
+	    }
+	
+	    #dropUpfile:hover {
+	        background-color: #F0F8FF
+	    }
+	
+	    #file {
+	        line-height: 100%;
+	        width: 100%;
+	        height: 100%;
+	        opacity: 0;
+	        position: absolute;
+	        top: 0;
+	        right: 0;
+	        font-size: 100px
+	    }
+	
+	    #imgshow {
+	        vertical-align: top;
+	        display: inline-block;
+	    }
+	
+	    .upfileBg {
+	        width: 150px;
+	        height: 150px;
+	        border: 1px #efefef solid;
+	        display: inline-block;
+	        position: relative;
+	        box-sizing: border-box;
+	        font-size: 12px;
+	        color: #808080;
+	        vertical-align: top;
+	        margin-bottom: 10px;
+	        text-align: center
+	    }
+	
+	    .photoZM {
+	        width: 140px;
+	        height: 120px;
+	        display: inline-block;
+	    }
+	
+	
+	    .icon-sdel {
+	        width: 24px;
+	        height: 24px;
+	        display: inline-block;
+	        position: absolute;
+	        right: -6px;
+	        top: -6px;
+	        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAgVBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz////Q0NDx8fHo6Oju7u76+vr39/fl5eXY2NjS0tLz8/PU1NQFDf5tAAAAHnRSTlMA6I3B9rephnEJ++Hbx6CYelBKNyQZDrJYAe7RZi79Cix+AAAAy0lEQVQoz52ORwKDIBBFB7DHqNH0ArFGc/8Dxi8qmqVvQXnD8Ie2c07dyOHX07/3PXtnBUy4x7U/PORI6C3905IGfjPv4Q3JnBv2tzeU3thryoXoSvim+vRrpCdIBQq5yqUsVNWixSXg7iTIVdGoupXAJuAEOOO5ysekvS5ITaMUckyBs7GhK5EDBIHrXvsaOcNn95jAiWOqasgtFca9ZKQrGOurc+GtlEY8uSKiGb70tk+GhE06iM+0JItDaOYcaM3tmFyEsHnm01Z+Qo8gMu2en7QAAAAASUVORK5CYII=') no-repeat;
+	    }
+	
+	    .upfileBg:hover {
+	        border-color: #2172F5
+	    }
+	
+	    .upfileBg:hover .icon-sdel {
+	        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAmVBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmb////W1tZ1dXVsbGzq6uq9vb23t7eJiYlwcHDy8vLb29vT09PLy8vIyMiwsLB4eHjj4+OCgoJ8fHxBzwGmAAAAH3RSTlMA6I23qYZxCfv34dvHwqCYelBKNxkO8b6yWCbRZi4gLbR2JAAAANhJREFUKM+djlcOgzAQRG3TQyiB9LZLIL3n/oeL1zTDJ08CiTesZthwZokVmmI17XvHNkaeywNr3/WTDVT4tu63HrQI7f856MRNry+/LqU8yIfv6l4Styf5U3GW73CtgmRBBxlm0uP1RyeWCqwRSPI7Hl9YvIEwVGC6oDgiZlXTuAyg5IX4BD0QvDq4PfCeA7FQwWpMFScscpALaO88UsFU0Nzrh3ofSHOXKSsTmvU9AHHOAbyEVdjQIWQNQveGw1piXms3mjGdNPJJc3PCeqzjZRAYInXYUP4aRiHCLZKAxwAAAABJRU5ErkJggg==');
+	    }
+	
+	
+	    .ui-button.w60 {
+	        min-width: 60px;
+	    }
+	
+	    #noFileReader {
+	        height: 100px;
+	        line-height: 100px;
+	        text-align: center
+	    }
+	
+	    .upfileDoc {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) 0 0;
+	    }
+	
+	    .upfileXlsx {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) -140px 0;
+	    }
+	
+	    .upfilePdf {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) -280px 0;
+	    }
+	
+	    .upfileRar {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) -420px 0;
+	    }
+	
+	    .upfileVideo {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) -560px 0;
+	    }
+	
+	    .upfileOthers {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) -700px 0;
+	    }
+	
+	    .upfilePps {
+	        width: 140px;
+	        height: 120px;
+	        background: url(../images/upfiles/upfileIcon.png) 0 -120px;
+	    }
+	
+	    #dropUpfileCont {
+	        min-height: 150px;
+	    }
+	</style>
+	<style>
+	.selOption{border:1px #dedede solid;border-radius:3px;padding:3px 10px;margin-right:10px}
+	.selSingle >.on{background:#2876fc;color:#fff}
+	#imgId{width:250px}
+	</style>
+	</head>
 
-<body class="showTip">
-    <div class="lgui-table-box ml20 mt5 mr20">
-        <div class="lgui-table-header pct100">
-            <table class="ui-table f12 row auto tl mt20 " width="100%">
-                <tbody>
-                    <tr>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">公司名称：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <span class="input-selSearch pct80">
-                                    <input type="text" class="ui-input borNone searchUp pct100" placeholder="请选择"
-                                        autocomplete="off">
-                                    <div class="search-cont pct100">
-                                        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </div>
-                        </td>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">广告类别：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10 mt10 selectSingle gc">
-                                <a class="mb10 on" href="javscript:void(0)" class="on">乐刚首页</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                                <a class="mb10" href="javscript:void(0)" class="">未确认</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">投放时间：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <span class="ui-input tc f0 pct80 borNone  range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly="">
-                                    <span class="dib pct5 tc">-</span>
-                                    <input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-                                </span>
-                            </div>
-                        </td>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">是否显示：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <span class="radio">
-                                    <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>是</label>
-                                    <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                                class="radio-opacity" name="radio"></i>否</label>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">上传类型：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <span class="single">
-                                    <input type="hidden">
-                                    <button type="button" class="on ui-option mr20" onclick="classTo('im')">图片</button>
-                                    <button type="button" class="ui-option mr20" onclick="classTo('ht')">html代码</button>
-                                </span>
-                            </div>
-                        </td>
-                        <td width="13%" class="bgfa">
-                            <span class=" dib pl10">屏蔽单位：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <span class="input-selSearch vm">
-                                    <span class="ui-input pct90 borNone searchUp"><span
-                                            class="searchm-resultip">请选择牌号</span></span>
-                                    <div class="search-cont" data-type="mul" onclick="stopPro(event)"
-                                        style="left: 0px; display: none;">
-                                        <a class="icon-del goldIcon vm" href="javascript:void(0)"
-                                            onclick="closesContM(this)"></a>
-                                        <div class="p10"><input type="text" class="ui-input pct50" placeholder="请输入关键字"
-                                                data-type="small" small-type="search" autocomplete="off"></div>
-                                        <div class="search-contM f12 checkbox">
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择1"
-                                                            value="v_1"></i>选择1</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择2选择二选择二选择二"
-                                                            value="v_2"></i>选择2选择二选择二选择二</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择3"
-                                                            value="v_3"></i>选择3</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择4"
-                                                            value="v_4"></i>选择4</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择5"
-                                                            value="v_5"></i>选择5</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择6"
-                                                            value="v_6"></i>选择6</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择7"
-                                                            value="v_7"></i>选择7</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择8"
-                                                            value="v_8"></i>选择8</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择9"
-                                                            value="v_9"></i>选择9</label></span>
-                                            <span class="pct33 l db ell"><label><i
-                                                        class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
-                                                            class="checkbox-opacity" name="checkbox"
-                                                            onclick="setMulValue(this)" datanme="选择10"
-                                                            value="v_10"></i>选择10</label></span>
-                                        </div>
-                                        <div class="dn search-contM-foot pt10 pb10 tc" style="display: none;">
-                                            <button type="button" class="ui-button mr20" data-type="normal"
-                                                small-type="small" onclick="getMulresult(this)">确定</button>
-                                        </div>
-                                    </div>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="im dn">
-                        <td width="13%" class="bgfa">
-                            <span class=" dib pl10">图片：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="pl10 tl">
-                                <button type="button" class="ui-button mt30 mr10 vm l" data-type="upfile"
-                                    onclick="upfile()">附件上传</button>
-                                <a href="javascript:void(0)" class="n17-blue r ">
-                                    <img id="imgId"
-                                        src="http://resource.lgsteel.cn/lgsaas/2week/images/mysaas-white.png"
-                                        style="width: 200px;" height="120px">
-                                </a>
-                            </div>
-                        </td>
-                        <td width="13%" class="bgfa">
-                            <span class=" dib pl10">链接地址：</span>
-                        </td>
-                        <td>
-                            <div class="pl10 tl">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="ht dn">
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">html代码：</span>
-                        </td>
-                        <td colspan="3">
+	<body class="showTip">
+		<div class="lgui-table-box f12 p20">
+			<div class="lgui-table-header pct100">
+				<div class="dac mb10">
+					<div class="pct10 tr">公司名称：</div>
+					<div class="pct90">
+						<span class="input-selSearch pct30">
+							<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+							<div class="search-cont pct100">
+								<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">广告类别：</div>
+					<div class="pct90">
+						<span class="single">
+							<input type="hidden">
+							<button type="button" class="on ui-option mr10">加工商城</button>
+							<button type="button" class=" ui-option mr10">乐刚首页</button>
+							<button type="button" class=" ui-option mr10">乐刚登录</button>
+							<button type="button" class="ui-option mr10">乐刚云登录</button>
+							<button type="button" class="ui-option">转账</button>
+						</span>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">投放时间：</div>
+					<div class="pct90">
+						<span class="ui-input tc f0 pct30 range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+							 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+						</span>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">是否显示：</div>
+					<div class="pct90">
+						<span class="radio">
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+						</span>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">屏蔽单位：</div>
+					<div class="pct90">
+						<span class="input-selSearch pct30 vm">
+							<span class="ui-input pct100 searchUp"><span class="searchm-resultip">请选择牌号</span></span>
+							<div class="search-cont" data-type="mul" onclick="stopPro(event)" style="left: 0px; display: none;">
+								<a class="icon-del goldIcon vm" href="javascript:void(0)" onclick="closesContM(this)"></a>
+								<div class="p10"><input type="text" class="ui-input pct50" placeholder="请输入关键字" data-type="small" small-type="search"
+									 autocomplete="off"></div>
+								<div class="search-contM f12 checkbox">
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择1" value="v_1"></i>选择1</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择2选择二选择二选择二" value="v_2"></i>选择2选择二选择二选择二</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择3" value="v_3"></i>选择3</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择4" value="v_4"></i>选择4</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择5" value="v_5"></i>选择5</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择6" value="v_6"></i>选择6</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择7" value="v_7"></i>选择7</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择8" value="v_8"></i>选择8</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择9" value="v_9"></i>选择9</label></span>
+									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setMulValue(this)" datanme="选择10" value="v_10"></i>选择10</label></span>
+								</div>
+								<div class="dn search-contM-foot pt10 pb10 tc" style="display: none;">
+									<button type="button" class="ui-button mr20" data-type="normal" small-type="small" onclick="getMulresult(this)">确定</button>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">上传单位：</div>
+					<div class="pct90">
+						<span class="radio">
+							<label class="mr10" onclick="classTo('im')"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+									 name="radio"></i>图片</label>
+							<label class="" onclick="classTo('ht')"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity"
+									 name="radio"></i>html代码</label>
+						</span>
+					</div>
+				</div>
+				<div class="im dn">
+					<div class="df mb10">
+						<div class="pct10 tr">上传图片：</div>
+						<div class="pct90">
+							 <div id="dropUpfileCont" class="tl">
+								<span class="tc" id="dropUpfile">
+									<span style="font-size: 50px">+</span><br>支持拖拽上传
+									<input id="file" type="file" multiple="multiple">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ht">
+					<div class="df mb10">
+						<div class="pct10 tr">html代码：</div>
+						<div class="pct90">
+							<textarea name="textcontent" maxlength="400" type="text"  id="textId" class="txt1" spellcheck="false" style="margin:0;width:90%;;height:50px;" >
+								
+							</textarea>
+							<span class="ui-tip" data-type="normal">提示：提交html代码片段含有href务必换成jref,否则无法提交</span>
+						</div>
+					</div>
+				</div>
+				<div class="dac mb10">
+					<div class="pct10 tr">序号：</div>
+					<div class="pct90">
+						<input type="text" class="ui-input pct30" placeholder="请输入">
+					</div>
+				</div>
+				<div class="dac">
+					<div class="pct10 tr">备注：</div>
+					<div class="pct90">
+						<textarea class="ui-textarea pct90" rows="2"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="tc mt20">
+				<button type="button" class="ui-button mr20 w90">修改</button>
+				<button type="button" class="ui-button w90" data-type="clear">取消</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+		<script src="../js/upfile.js" type="text/javascript" charset="utf-8"></script>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">序号：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                        <td width="13%" class=" bgfa">
-                            <span class=" dib pl10">备注：</span>
-                        </td>
-                        <td width="37%">
-                            <div class="tl pl10">
-                                <input type="text" class="ui-input pct90 borNone" placeholder="请输入">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="tc mt20">
-                <button type="button" class="ui-button mr10 w90">提交</button>
-                <button type="button" class="ui-button w90" data-type="clear">取消</button>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	</body>
+	<script>
+		function classTo(obj) {
+			if (obj == "im") {
+				$(".im").removeClass("dn");
+				$(".ht").addClass("dn");
+			} else {
+				$(".ht").removeClass("dn");
+				$(".im").addClass("dn");
+			}
+		}
+		//初始化文本编辑器
+		var editor = null;
+		window.onload = function() {
 
-</body>
-<script>
-    function classTo(obj) {
-        if (obj == "im") {
-            $(".im").removeClass("dn");
-            $(".ht").addClass("dn");
-        } else {
-            $(".ht").removeClass("dn");
-            $(".im").addClass("dn");
-        }
-    }
-    //初始化文本编辑器
-    var editor = null;
-    window.onload = function () {
+			editor = CKEDITOR.replace('textcontent', {
+				toolbar: [
+					//加粗              斜体，                下划线                穿过线                  下标字                    上标字
+					['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+					// 数字列表                             实体列表                                  减小缩进    增大缩进
+					['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+					//左对 齐                                居中对齐                             右对齐                             两端对齐
+					['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+					//超链接     取消超链接        锚点
+					['Link', 'Unlink', 'Anchor'],
+					//图片               flash    表格                       水平线                          表情                    特殊字符                   分页符
+					['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
+					'/',
+					// 样式               格式                  字体            字体大小
+					['Styles', 'Format', 'Font', 'FontSize'],
+					//文本颜色     背景颜色
+					['TextColor', 'BGColor'],
+					//全屏                               显示区块
+					['Maximize', 'ShowBlocks', '-']
+				],
+				height: 200,
+				width: 1100
+			});
+		}
 
-        editor = CKEDITOR.replace('textcontent',
-            {
-                toolbar:
-                    [
-                        //加粗              斜体，                下划线                穿过线                  下标字                    上标字
-                        ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
-                        // 数字列表                             实体列表                                  减小缩进    增大缩进
-                        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
-                        //左对 齐                                居中对齐                             右对齐                             两端对齐
-                        ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-                        //超链接     取消超链接        锚点
-                        ['Link', 'Unlink', 'Anchor'],
-                        //图片               flash    表格                       水平线                          表情                    特殊字符                   分页符
-                        ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
-                        '/',
-                        // 样式               格式                  字体            字体大小
-                        ['Styles', 'Format', 'Font', 'FontSize'],
-                        //文本颜色     背景颜色
-                        ['TextColor', 'BGColor'],
-                        //全屏                               显示区块
-                        ['Maximize', 'ShowBlocks', '-']
-                    ], height: 200, width: 1100
-            }
-        );
-    }
+		//多选点击
+		function setMulValue(obj) {
+			var myobj = $(obj).parents(".search-cont").find(".search-contM-foot ");
+			var l = $(obj).parents(".search-cont").find(":checkbox:checked").length;
+			if (obj.checked) {
+				if (myobj.css("display") == "none") {
+					myobj.show();
+				}
+			} else {
+				if (l == 0) {
+					myobj.hide();
+				}
+			}
+		}
 
-    //多选点击
-    function setMulValue(obj) {
-        var myobj = $(obj).parents(".search-cont").find(".search-contM-foot ");
-        var l = $(obj).parents(".search-cont").find(":checkbox:checked").length;
-        if (obj.checked) {
-            if (myobj.css("display") == "none") {
-                myobj.show();
-            }
-        } else {
-            if (l == 0) {
-                myobj.hide();
-            }
-        }
-    }
-    function delsearchm(obj) {
-        var _v = $(obj).parents(".searchm-result").attr("data");
-        var myobj = $(obj).parents(".input-selSearch");
-        myobj.find("input[value='" + _v + "']").prop("checked", false);
-        myobj.find("input[value='" + _v + "']").parent(".ui-checkbox").removeClass("on");
-        $(obj).parents(".searchm-result").remove();
+		function delsearchm(obj) {
+			var _v = $(obj).parents(".searchm-result").attr("data");
+			var myobj = $(obj).parents(".input-selSearch");
+			myobj.find("input[value='" + _v + "']").prop("checked", false);
+			myobj.find("input[value='" + _v + "']").parent(".ui-checkbox").removeClass("on");
+			$(obj).parents(".searchm-result").remove();
 
-        var l = myobj.find(".searchm-result").length
-        if (l == 0) {
-            myobj.find(".ui-input").html('<span class="searchm-resultip">请选择牌号</span>')
-        }
+			var l = myobj.find(".searchm-result").length
+			if (l == 0) {
+				myobj.find(".ui-input").html('<span class="searchm-resultip">请选择牌号</span>')
+			}
 
-    }
-
-
-    //阻止冒泡
-    function stopPro(e) {
-        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
-            if (event.stopPropagation) {
-                // this code is for Mozilla and Opera 
-                event.stopPropagation();
-            }
-            else if (window.event) {
-                // this code is for IE 
-                window.event.cancelBubble = true;
-            }
-        } else {
-            e.stopPropagation();
-        }
-    }
-
-    //多选获取结果
-    function getMulresult(obj) {
-        var str = ''
-        var myobj = $(obj).parents(".search-cont").find(".search-contM").find(":checkbox:checked").each(function () {
-            str += '<span class="searchm-result" data="' + $(this).val() + '" ><span class="searchm-resText ">' + $(this).attr("datanme") + '</span><a class="icon-del goldIcon  ml2 mt5" href="javascript:void(0)" onclick="delsearchm(this)"></a></span>'
-        })
-        //console.log(str)
-        str = "<div class='searchm-cont'>" + str + "</div>"
-        $(obj).parents(".search-cont").prev(".ui-input").html(str);
-        $(obj).parents(".search-cont").hide();
-    }
-    $(function () {
-
-        //加载屏蔽广告的公司
-        var adv = $('#advEntity').val();
-        var name = $('#advTypeNameId').val();
-        var advTypeVal = $('#advTypeVal').val();
-        var picVal = $('#picId').val();
-        //var htmlVal=$('#htmlId').val();
-        var htmlVal = '';
-        var display = $('#displayId').val();
-        var adv = $('#advTypeId').find("a");
-        var advType = $('#displayDiv').find("a");
-        var upLoad = $('#uploadId').find("a");
-        var showVal = '';
-        //editor.setData(htmlVal);
-        $('#textId').val(htmlVal);
-        //把转义后的字符串转换成html标签
-        var tempHtml = turnToHtml(htmlVal)
-        //$('#tempId').html(tempHtml);
-
-        $.each(adv, function (index, ele) {
-            var val = $(this).attr("value")
-            if (val == advTypeVal) {
-                $(this).addClass("on").siblings().removeClass("on");
-            }
-        })
-
-        $.each(advType, function (index, ele) {
-            var val = $(this).attr("value")
-            if (val == display) {
-                $(this).addClass("on").siblings().removeClass("on");
-            }
-        })
-
-        $.each(upLoad, function (index, ele) {
-            if (picVal.length != 0) {
-                showVal = 1;
-                $(".typeImg").show();
-                $(".typeHtml").hide();
-            } else if (htmlVal.length != 0) {
-                showVal = 2;
-                var textarea = $('#htmlId').val();
-                $('#textId').text(textarea);
-                $(".typeHtml").show();
-                $(".typeImg").hide();
-            }
-            var val = $(this).attr("value")
-            if (val == showVal) {
-                $(this).addClass("on").siblings().removeClass("on");
-            }
-        })
-
-    })
+		}
 
 
-    function formClose() {
-        //先得到当前iframe层的索引
-        var index = parent.layer.getFrameIndex(window.name);
-        parent.layer.close(index);
-    }
+		//阻止冒泡
+		function stopPro(e) {
+			if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion
+					.match(/8./i) == "8.")) {
+				if (event.stopPropagation) {
+					// this code is for Mozilla and Opera 
+					event.stopPropagation();
+				} else if (window.event) {
+					// this code is for IE 
+					window.event.cancelBubble = true;
+				}
+			} else {
+				e.stopPropagation();
+			}
+		}
 
-    function fileUpload(nodeID, Num) {
-        document.getElementById("nodeID").value = nodeID;
-        document.getElementById("tableTDNum").value = Num;
-        var applyID = document.getElementById("advFormCorpId").value;
-        var billType = "-1";//未知 ，具体查看em_billFlowFile表说明
-        var sceneType = "0";//场景，主要用于评审模块
-        var url = '/LgAdmin/lgCloud/uploadPicFile.action';
-        var formData = new FormData();
-        formData.append('file', $('#file')[0].files[0]);
+		//多选获取结果
+		function getMulresult(obj) {
+			var str = ''
+			var myobj = $(obj).parents(".search-cont").find(".search-contM").find(":checkbox:checked").each(function() {
+				str += '<span class="searchm-result" data="' + $(this).val() + '" ><span class="searchm-resText ">' + $(this).attr(
+						"datanme") +
+					'</span><a class="icon-del goldIcon  ml2 mt5" href="javascript:void(0)" onclick="delsearchm(this)"></a></span>'
+			})
+			//console.log(str)
+			str = "<div class='searchm-cont'>" + str + "</div>"
+			$(obj).parents(".search-cont").prev(".ui-input").html(str);
+			$(obj).parents(".search-cont").hide();
+		}
+		$(function() {
 
-        $.ajax({
-            type: "post",
-            url: url,
-            data: formData,
-            cache: false,
-            contentType: false,
-            processData: false,
-            dataType: "json",
-            success: function (data) {
-                if (data.message == 1) {
-                    $('#imgId').attr('src', data.picPath)
-                    $('#picId').val(data.picPath);
-                } else {
-                    alert("上传失败");
-                }
-            }
-        });
-    }
+			//加载屏蔽广告的公司
+			var adv = $('#advEntity').val();
+			var name = $('#advTypeNameId').val();
+			var advTypeVal = $('#advTypeVal').val();
+			var picVal = $('#picId').val();
+			//var htmlVal=$('#htmlId').val();
+			var htmlVal = '';
+			var display = $('#displayId').val();
+			var adv = $('#advTypeId').find("a");
+			var advType = $('#displayDiv').find("a");
+			var upLoad = $('#uploadId').find("a");
+			var showVal = '';
+			//editor.setData(htmlVal);
+			$('#textId').val(htmlVal);
+			//把转义后的字符串转换成html标签
+			var tempHtml = turnToHtml(htmlVal)
+			//$('#tempId').html(tempHtml);
+
+			$.each(adv, function(index, ele) {
+				var val = $(this).attr("value")
+				if (val == advTypeVal) {
+					$(this).addClass("on").siblings().removeClass("on");
+				}
+			})
+
+			$.each(advType, function(index, ele) {
+				var val = $(this).attr("value")
+				if (val == display) {
+					$(this).addClass("on").siblings().removeClass("on");
+				}
+			})
+
+			$.each(upLoad, function(index, ele) {
+				if (picVal.length != 0) {
+					showVal = 1;
+					$(".typeImg").show();
+					$(".typeHtml").hide();
+				} else if (htmlVal.length != 0) {
+					showVal = 2;
+					var textarea = $('#htmlId').val();
+					$('#textId').text(textarea);
+					$(".typeHtml").show();
+					$(".typeImg").hide();
+				}
+				var val = $(this).attr("value")
+				if (val == showVal) {
+					$(this).addClass("on").siblings().removeClass("on");
+				}
+			})
+
+		})
 
 
+		function formClose() {
+			//先得到当前iframe层的索引
+			var index = parent.layer.getFrameIndex(window.name);
+			parent.layer.close(index);
+		}
 
-    $(function () {
-        $(".selOption").on("click", function () {
-            $(this).addClass("on").siblings().removeClass("on");
-            if ($(this).attr("type") == 3) {
-                if ($(this).attr("value") == 1) {
-                    $(".typeImg").show();
-                    $(".typeHtml").hide();
-                } else if ($(this).attr("value") == 2) {
-                    $(".typeHtml").show();
-                    $(".typeImg").hide();
-                }
-            }
-        })
+		function fileUpload(nodeID, Num) {
+			document.getElementById("nodeID").value = nodeID;
+			document.getElementById("tableTDNum").value = Num;
+			var applyID = document.getElementById("advFormCorpId").value;
+			var billType = "-1"; //未知 ，具体查看em_billFlowFile表说明
+			var sceneType = "0"; //场景，主要用于评审模块
+			var url = '/LgAdmin/lgCloud/uploadPicFile.action';
+			var formData = new FormData();
+			formData.append('file', $('#file')[0].files[0]);
 
-        $("body").on("click", ".delComp", function () {
-            $(this).remove();
-        })
-    })
-
-
-    function addCompany(obj) {
-        var myobj = $(obj).parents("td").find(".n17-stock-up");
-        var name = myobj.val().trim();
-        var url = app.root + "/LgAdmin/lgCloud/selectSasCorp.action"
-        //根据公司名称查询sas公司id
-        $.ajax({
-            type: "post",
-            url: url,
-            data: { "name": name },
-            cache: false,
-            dataType: "json",
-            success: function (data) {
-                if (data != null) {
-                    $.each(data, function (i, ele) {
-                        var id = ele.id;
-                        var str = '<a href="javascript:void(0)" id="' + id + '" class="blue delComp mr5">' + myobj.val() + '(删)</a>';
-                        $(obj).parents("td").find(".delContent").append(str);
-                        console.log(str)
-                    })
-                }
-            }
-        });
-
-        //var str='<a href="javascript:void(0)" id="'+id+'" class="blue delComp mr5">'+myobj.val()+'(删)</a>';
-        //$(obj).parents("td").find(".delContent").append(str);
-        //console.log(str)
-
-    }
-
-    //搜索
-    function nSearchClick(obj, e) {
-        stopPro(e);
-        nsetSearchP(obj);
-        if ($(obj).next(".n17-nSearch").css("display") == "none") {
-            $(".n17-nSearch").slideUp("fast");
-            $(obj).next(".n17-nSearch").slideDown("fast");
-        } else {
-            $(obj).next(".n17-nSearch").slideUp("fast");
-        }
-    }
-
-    function nsetSearchP(obj) {
-        $(obj).next(".n17-nSearch").width($(obj).width());
-        $(obj).next(".n17-nSearch").css({ "top": $(obj).offset().top + $(obj).outerHeight(), "left": $(obj).offset().left });
-    }
-
-    function nSearchClickV(obj) {
-        $(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
-        $(obj).parents(".n17-nSearch").slideUp("fast");
-    }
-
-    function nSearchKey(obj) {
-        $(".n17-nSearch").hide();
-        nsetSearchP(obj);
-        $(obj).next(".n17-nSearch").show();
-    }
-
-    //防止冒泡
-    function stopPro(e) {
-        if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion.match(/8./i) == "8.")) {
-
-            if (event.stopPropagation) {
-                // this code is for Mozilla and Opera 
-                event.stopPropagation();
-            }
-            else if (window.event) {
-                // this code is for IE 
-                window.event.cancelBubble = true;
-            }
-        } else {
-            e.stopPropagation();
-        }
-    }
+			$.ajax({
+				type: "post",
+				url: url,
+				data: formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				dataType: "json",
+				success: function(data) {
+					if (data.message == 1) {
+						$('#imgId').attr('src', data.picPath)
+						$('#picId').val(data.picPath);
+					} else {
+						alert("上传失败");
+					}
+				}
+			});
+		}
 
 
 
-    function insertVal(obj, id) {
-        $(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
-        $(obj).parents(".n17-nSearch").slideUp("fast");
-        $('#advFormCorpId').val(id);
-        $('#advFormCorpNameId').val(obj.innerHTML);
-    }
+		$(function() {
+			$(".selOption").on("click", function() {
+				$(this).addClass("on").siblings().removeClass("on");
+				if ($(this).attr("type") == 3) {
+					if ($(this).attr("value") == 1) {
+						$(".typeImg").show();
+						$(".typeHtml").hide();
+					} else if ($(this).attr("value") == 2) {
+						$(".typeHtml").show();
+						$(".typeImg").hide();
+					}
+				}
+			})
+
+			$("body").on("click", ".delComp", function() {
+				$(this).remove();
+			})
+		})
 
 
-    var commitStatus = false;
-    function submitForms() {
-        var corpName = $('#advFormCorpNameId').val();
-        var typeName = $('#advTypeNameId').val();
-        var showName = $('#displayId').val().trim();
-        var sortsId = $('#sortsId').val();
-        var timeVal1 = $('#advTimeId1').val();
-        var timeVal2 = $('#advTimeId1').val();
-        if (corpName.length == 0) {
-            alert("请选择广告商");
-            return;
-        }
-        if (typeName.length == 0) {
-            alert("请选择广告类型");
-            return;
-        }
-        if (showName.length == 0) {
-            alert("请选择是否显示广告");
-            return;
-        }
-        if (timeVal1.length == 0) {
-            alert("请选择广告投放时间");
-            return;
-        }
-        if (sortsId.length == 0) {
-            alert("请选择排序");
-            return;
-        }
-        var html = $('#textId').val().trim();
-        var data = editor.getData();
-        //把页面标签中的href 替换为 
-        var tempdata = data.replace('href', 'jref')
-        $('#htmlId').val(tempdata);
+		function addCompany(obj) {
+			var myobj = $(obj).parents("td").find(".n17-stock-up");
+			var name = myobj.val().trim();
+			var url = app.root + "/LgAdmin/lgCloud/selectSasCorp.action"
+			//根据公司名称查询sas公司id
+			$.ajax({
+				type: "post",
+				url: url,
+				data: {
+					"name": name
+				},
+				cache: false,
+				dataType: "json",
+				success: function(data) {
+					if (data != null) {
+						$.each(data, function(i, ele) {
+							var id = ele.id;
+							var str = '<a href="javascript:void(0)" id="' + id + '" class="blue delComp mr5">' + myobj.val() +
+								'(删)</a>';
+							$(obj).parents("td").find(".delContent").append(str);
+							console.log(str)
+						})
+					}
+				}
+			});
 
-        //编辑器内容,关键
-        editor.updateElement();
+			//var str='<a href="javascript:void(0)" id="'+id+'" class="blue delComp mr5">'+myobj.val()+'(删)</a>';
+			//$(obj).parents("td").find(".delContent").append(str);
+			//console.log(str)
 
+		}
 
-        var corpId = $('#advFormCorpId').val();
-        var corpName = $('#advFormCorpNameId').val();
-        var list = $('.delContent').find('a');
-        var corpArr = [];
-        list.each(function (index, ele) {
-            corpArr.push($(ele).attr('id'));
-        })
-        var corpIds = corpArr.join(',');
-        $('#unshowCorpIds').val(corpIds)
+		//搜索
+		function nSearchClick(obj, e) {
+			stopPro(e);
+			nsetSearchP(obj);
+			if ($(obj).next(".n17-nSearch").css("display") == "none") {
+				$(".n17-nSearch").slideUp("fast");
+				$(obj).next(".n17-nSearch").slideDown("fast");
+			} else {
+				$(obj).next(".n17-nSearch").slideUp("fast");
+			}
+		}
 
-        var url = "/LgAdmin/lgCloud/alterAdver.action"
-        var data = $("#pageForm").serialize();
-        var index = parent.layer.getFrameIndex(window.name);
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: url,
-            data: data,
-            success: function (data) {
-                if (data.success) {
-                    alert(data.message);
-                    parent.layer.close(index);
-                } else {
-                    alert(data.message);
-                    parent.layer.close(index);
-                }
-            }
-        });
+		function nsetSearchP(obj) {
+			$(obj).next(".n17-nSearch").width($(obj).width());
+			$(obj).next(".n17-nSearch").css({
+				"top": $(obj).offset().top + $(obj).outerHeight(),
+				"left": $(obj).offset().left
+			});
+		}
 
+		function nSearchClickV(obj) {
+			$(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
+			$(obj).parents(".n17-nSearch").slideUp("fast");
+		}
 
-    }
+		function nSearchKey(obj) {
+			$(".n17-nSearch").hide();
+			nsetSearchP(obj);
+			$(obj).next(".n17-nSearch").show();
+		}
 
+		//防止冒泡
+		function stopPro(e) {
+			if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion
+					.match(/8./i) == "8.")) {
 
-
-    function setValue(type, value, name) {
-        if (type == 1) {
-            $('#advTypeNameId').val(name);
-            $('#advTypeVal').val(value);
-        } else if (type == 2) {
-            $('#displayId').val(value);
-        }
-
-    }
-
-    function searchCorp(e, obj) {
-        var url = app.root + "/LgAdmin/lgCloud/selectCorp.action"
-        var corpName = $('#searchCorpId').val();
-        var text = '';
-        stopPro(e);
-        nsetSearchP(obj);
-        //根据名称查询乐刚客户列表
-        var DivHtml = $('#corpList');
-        DivHtml.html('');
-        $.ajax({
-            type: "post",
-            url: url,
-            data: { "corpName": corpName },
-            cache: false,
-            dataType: "json",
-            success: function (data) {
-                $.each(data, function (i, ele) {
-                    var corpId = ele.id
-                    var corpName = ele.corpName
-                    text = '<a href="javascript:void(0)" onclick="insertVal(this,' + corpId + ')" class="n17-searchInfo">' + corpName + '</a>'
-                    DivHtml.append(text);
-                    DivHtml.show();
-
-                })
-            }
-        });
+				if (event.stopPropagation) {
+					// this code is for Mozilla and Opera 
+					event.stopPropagation();
+				} else if (window.event) {
+					// this code is for IE 
+					window.event.cancelBubble = true;
+				}
+			} else {
+				e.stopPropagation();
+			}
+		}
 
 
-    }
 
-    function insertUnCorpVal(obj) {
-        $(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
-        $(obj).parents(".n17-nSearch").slideUp("fast");
-    }
-
-    function hideCorpList(e, obj) {
-        var DivHtml = $('#corpList');
-        if ($(obj).next(".n17-nSearch").css("display") == "none") {
-            $(".n17-nSearch").slideUp("fast");
-            $(obj).next(".n17-nSearch").slideDown("fast");
-        } else {
-            $(obj).next(".n17-nSearch").slideUp("fast");
-        }
-    }
+		function insertVal(obj, id) {
+			$(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
+			$(obj).parents(".n17-nSearch").slideUp("fast");
+			$('#advFormCorpId').val(id);
+			$('#advFormCorpNameId').val(obj.innerHTML);
+		}
 
 
-    function searchUnShowCorp(e, obj) {
-        var url = app.root + "/LgAdmin/lgCloud/selectSasCorp.action"
-        var name = $('#uncorpId').val();
-        var text = '';
-        stopPro(e);
-        nsetSearchP(obj);
-        //根据名称查询sas客户列表
-        var DivHtml = $('#uncorpList');
-        DivHtml.html('');
+		var commitStatus = false;
 
-        $.ajax({
-            type: "post",
-            url: url,
-            data: { "name": name },
-            cache: false,
-            dataType: "json",
-            success: function (data) {
-                $.each(data, function (i, ele) {
-                    var id = ele.id;
-                    var name = ele.name;
-                    text = '<a href="javascript:void(0)" onclick="insertUnCorpVal(this)"  id="' + id + '"  class="n17-searchInfo">' + name + '</a>';
-                    DivHtml.append(text);
-                    DivHtml.show();
+		function submitForms() {
+			var corpName = $('#advFormCorpNameId').val();
+			var typeName = $('#advTypeNameId').val();
+			var showName = $('#displayId').val().trim();
+			var sortsId = $('#sortsId').val();
+			var timeVal1 = $('#advTimeId1').val();
+			var timeVal2 = $('#advTimeId1').val();
+			if (corpName.length == 0) {
+				alert("请选择广告商");
+				return;
+			}
+			if (typeName.length == 0) {
+				alert("请选择广告类型");
+				return;
+			}
+			if (showName.length == 0) {
+				alert("请选择是否显示广告");
+				return;
+			}
+			if (timeVal1.length == 0) {
+				alert("请选择广告投放时间");
+				return;
+			}
+			if (sortsId.length == 0) {
+				alert("请选择排序");
+				return;
+			}
+			var html = $('#textId').val().trim();
+			var data = editor.getData();
+			//把页面标签中的href 替换为 
+			var tempdata = data.replace('href', 'jref')
+			$('#htmlId').val(tempdata);
 
-                })
-            }
-        });
-
-
-    }
-
-    //把转义后的html字符串  转换成 html格式
-    function turnToHtml(text) {
-        var dom = document.createElement('div');
-        dom.innerHTML = text;
-        text = dom.innerText || dom.textContent;
-        dom = null;
-        console.log('转义后的的格式为:' + text)
-        text = text.replace('href', 'jref')
-        return text
-    }
+			//编辑器内容,关键
+			editor.updateElement();
 
 
-</script>
+			var corpId = $('#advFormCorpId').val();
+			var corpName = $('#advFormCorpNameId').val();
+			var list = $('.delContent').find('a');
+			var corpArr = [];
+			list.each(function(index, ele) {
+				corpArr.push($(ele).attr('id'));
+			})
+			var corpIds = corpArr.join(',');
+			$('#unshowCorpIds').val(corpIds)
+
+			var url = "/LgAdmin/lgCloud/alterAdver.action"
+			var data = $("#pageForm").serialize();
+			var index = parent.layer.getFrameIndex(window.name);
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				url: url,
+				data: data,
+				success: function(data) {
+					if (data.success) {
+						alert(data.message);
+						parent.layer.close(index);
+					} else {
+						alert(data.message);
+						parent.layer.close(index);
+					}
+				}
+			});
+
+
+		}
+
+
+
+		function setValue(type, value, name) {
+			if (type == 1) {
+				$('#advTypeNameId').val(name);
+				$('#advTypeVal').val(value);
+			} else if (type == 2) {
+				$('#displayId').val(value);
+			}
+
+		}
+
+		function searchCorp(e, obj) {
+			var url = app.root + "/LgAdmin/lgCloud/selectCorp.action"
+			var corpName = $('#searchCorpId').val();
+			var text = '';
+			stopPro(e);
+			nsetSearchP(obj);
+			//根据名称查询乐刚客户列表
+			var DivHtml = $('#corpList');
+			DivHtml.html('');
+			$.ajax({
+				type: "post",
+				url: url,
+				data: {
+					"corpName": corpName
+				},
+				cache: false,
+				dataType: "json",
+				success: function(data) {
+					$.each(data, function(i, ele) {
+						var corpId = ele.id
+						var corpName = ele.corpName
+						text = '<a href="javascript:void(0)" onclick="insertVal(this,' + corpId + ')" class="n17-searchInfo">' +
+							corpName + '</a>'
+						DivHtml.append(text);
+						DivHtml.show();
+
+					})
+				}
+			});
+
+
+		}
+
+		function insertUnCorpVal(obj) {
+			$(obj).parents(".n17-nSearch").prev("input").val($(obj).text());
+			$(obj).parents(".n17-nSearch").slideUp("fast");
+		}
+
+		function hideCorpList(e, obj) {
+			var DivHtml = $('#corpList');
+			if ($(obj).next(".n17-nSearch").css("display") == "none") {
+				$(".n17-nSearch").slideUp("fast");
+				$(obj).next(".n17-nSearch").slideDown("fast");
+			} else {
+				$(obj).next(".n17-nSearch").slideUp("fast");
+			}
+		}
+
+
+		function searchUnShowCorp(e, obj) {
+			var url = app.root + "/LgAdmin/lgCloud/selectSasCorp.action"
+			var name = $('#uncorpId').val();
+			var text = '';
+			stopPro(e);
+			nsetSearchP(obj);
+			//根据名称查询sas客户列表
+			var DivHtml = $('#uncorpList');
+			DivHtml.html('');
+
+			$.ajax({
+				type: "post",
+				url: url,
+				data: {
+					"name": name
+				},
+				cache: false,
+				dataType: "json",
+				success: function(data) {
+					$.each(data, function(i, ele) {
+						var id = ele.id;
+						var name = ele.name;
+						text = '<a href="javascript:void(0)" onclick="insertUnCorpVal(this)"  id="' + id +
+							'"  class="n17-searchInfo">' + name + '</a>';
+						DivHtml.append(text);
+						DivHtml.show();
+
+					})
+				}
+			});
+
+
+		}
+
+		//把转义后的html字符串  转换成 html格式
+		function turnToHtml(text) {
+			var dom = document.createElement('div');
+			dom.innerHTML = text;
+			text = dom.innerText || dom.textContent;
+			dom = null;
+			console.log('转义后的的格式为:' + text)
+			text = text.replace('href', 'jref')
+			return text
+		}
+	</script>
 
 </html>
