@@ -24,6 +24,17 @@
         .ibBt {
             background-color: transparent;
         }
+		
+		.pct13{
+			width: 13%;
+		}
+		.pct37{
+			width: 37%;
+		}
+		
+	/* 	.w200{
+			width: 200px;
+		} */
     </style>
 	</head>
 
@@ -96,211 +107,143 @@
 										<a href="javascript:void(0)" onclick="showTrMore(this)">修改</a>
 									</td>
 								</tr>
-								<tr class="hideTr dn">
+								<tr class="hideTr dn">sss
 									<td colspan="5">
-										<div class="pl20 pr20">
-											<table class="ui-table  f12  auto tc  mt10 mb10" width="100%">
-												<tbody>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															单位名称：
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+										<div class="p20">
+											<div class="tl bgwh pt20 pb20">
+												<div class="daj mb10">
+													<div class="pct13 tr">单位名称：</div>
+													<div class="pct37 pl10"><input type="text" class="ui-input pct69" value="" placeholder="请输入"></div>
+													<div class="pct13 tr">单位助记码：</div>
+													<div class="pct37 pl10"><input type="text" class="ui-input pct69" value="" placeholder="请输入"></div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">区域：</div>
+													<div class="pct37 pl10"><input type="text" class="ui-input pct69" value="" placeholder="请输入"></div>
+													<div class="pct13 tr">单位代码：</div>
+													<div class="pct37 pl10"><input type="text" class="ui-input pct69" value="" placeholder="请输入"></div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">地址：</div>
+													<div class="pct37 pl10"><input type="text" class="ui-input pct69" value="" placeholder="请输入"></div>
+													<div class="pct13 tr">行业分类：</div>
+													<div class="pct37 pl10">
+														<span class="input-selSearch pct69">
+															<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+															<div class="search-cont">
+																<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
 															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">单位助记码：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+														</span>
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">客户分类：</div>
+													<div class="pct37 pl10">
+														<span class="input-selSearch pct69">
+															<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+															<div class="search-cont">
+																<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
 															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">区域：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+														</span>
+													</div>
+													<div class="pct13 tr">供应商分类：</div>
+													<div class="pct37 pl10">
+														<span class="input-selSearch pct49">
+															<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+															<div class="search-cont">
+																<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
 															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">单位代码：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+														</span>&nbsp;(是供应商的则填写)
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">是否是销售单位：</div>
+													<div class="pct37 pl10">
+														<span class="radio">
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+																	 name="radio"></i>否</label>
+															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+														</span>
+													</div>
+													<div class="pct13 tr">是否是供应商：</div>
+													<div class="pct37 pl10">
+														<span class="radio">
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+																	 name="radio"></i>否</label>
+															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+														</span>
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">是否是运输单位：</div>
+													<div class="pct37 pl10">
+														<span class="radio">
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+																	 name="radio"></i>否</label>
+															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+														</span>
+													</div>
+													<div class="pct13 tr">是否是加工单位：</div>
+													<div class="pct37 pl10">
+														<span class="radio">
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
+																	 name="radio"></i>否</label>
+															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+														</span>
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">备注：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+													<div class="pct13 tr">联系电话：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">单位性质：</div>
+													<div class="pct37 pl10">
+														<span class="input-selSearch pct69">
+															<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+															<div class="search-cont">
+																<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
 															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">地址：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+														</span>
+													</div>
+													<div class="pct13 tr">联系电话：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">单位性质：</div>
+													<div class="pct37 pl10">
+														<span class="input-selSearch pct69">
+															<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
+															<div class="search-cont">
+																<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
 															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">行业分类：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="input-selSearch pct69">
-																	<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
-																	<div class="search-cont">
-																		<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-																	</div>
-																</span>
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">客户分类：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="input-selSearch pct69">
-																	<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
-																	<div class="search-cont">
-																		<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-																	</div>
-																</span>
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">供应商分类：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="input-selSearch pct49">
-																	<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
-																	<div class="search-cont">
-																		<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-																	</div>
-																</span>&nbsp;(是供应商的则填写)
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">是否是销售单位：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="radio">
-																	<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																			 name="radio"></i>否</label>
-																	<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-																</span>
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">是否是供应商：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="radio">
-																	<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																			 name="radio"></i>否</label>
-																	<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-																</span>
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">是否是运输单位：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="radio">
-																	<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																			 name="radio"></i>否</label>
-																	<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-																</span>
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">是否是加工单位：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="radio">
-																	<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																			 name="radio"></i>否</label>
-																	<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-																</span>
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">备注：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">联系电话：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">单位性质：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<span class="input-selSearch pct69">
-																	<input type="text" class="ui-input  searchUp pct100" placeholder="请选择" autocomplete="off">
-																	<div class="search-cont">
-																		<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-																	</div>
-																</span>
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">银行账号：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
-															</div>
-														</td>
-													</tr>
-													<tr class="resource-table">
-														<td class="bgfa" width="13%">
-															<span class="dib">开户银行：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
-															</div>
-														</td>
-														<td class="bgfa" width="13%">
-															<span class="dib">税号：</span>
-														</td>
-														<td width="37%" class="tl">
-															<div class="pl10">
-																<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+														</span>
+													</div>
+													<div class="pct13 tr">银行账号：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+												</div>
+												<div class="daj mb10">
+													<div class="pct13 tr">开户银行：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+													<div class="pct13 tr">税号：</div>
+													<div class="pct37 pl10">
+														<input type="text" class="ui-input pct69 " value="" placeholder="请输入">
+													</div>
+												</div>
+											</div>
+								
 											<div class="tc  mt20 mb20">
 												<button type="button" class="mr10 ui-button">提交</button>
 											</div>
@@ -347,8 +290,8 @@
 						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
 					}
 				});
-				
-				$("input").parents("td").css("padding","7px 2px");
+
+				$("input").parents("td").css("padding", "7px 2px");
 			})
 		</script>
 		<script type="text/javascript">

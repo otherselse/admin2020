@@ -240,28 +240,29 @@
 							<span class="ui-input win searchUp"><span class="searchm-resultip">请选择屏蔽单位</span></span>
 							<div class="search-cont" data-type="mul" onclick="stopPro(event)" style="left: 0px; display: none;">
 								<a class="icon-del goldIcon vm" href="javascript:void(0)" onclick="closesContM(this)"></a>
-								<div class="p10"><input type="text" class="ui-input pct50" placeholder="请输入关键字" data-type="small" small-type="search"
+								<div class="p10">
+									<input type="text" class="ui-input pct50" onkeyup="selech(this)" placeholder="请输入关键字" data-type="small" small-type="search"
 									 autocomplete="off"></div>
 								<div class="search-contM f12 checkbox">
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择1" value="v_1"></i>选择1</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择2选择二选择二选择二" value="v_2"></i>选择2选择二选择二选择二</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择3" value="v_3"></i>选择3</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择4" value="v_4"></i>选择4</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择5" value="v_5"></i>选择5</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择6" value="v_6"></i>选择6</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择7" value="v_7"></i>选择7</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择8" value="v_8"></i>选择8</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择9" value="v_9"></i>选择9</label></span>
-									<span class="pct33 l db ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+									<span class="pct33 l  ell"><label><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
 												 name="checkbox" onclick="setMulValue(this)" datanme="选择10" value="v_10"></i>选择10</label></span>
 								</div>
 								<div class="dn search-contM-foot pt10 pb10 tc" style="display: none;">
@@ -341,7 +342,26 @@
 				$(".ht").removeClass("dn");
 				$(".im").addClass("dn");
 			}
+			
 		}
+		
+		// 搜索
+		function selech(obj){
+			var str = $(obj).val().trim();
+			if(str==''){
+				$(".search-contM").find(".pct33").removeClass("dn");
+			}else{
+				$(".search-contM").find(".pct33").each(function(){
+					console.log($(this).find("input").attr("datanme"));
+					if($(this).find("input").attr("datanme").indexOf(str)>0){
+						$(this).removeClass("dn");
+					}else{
+						$(this).addClass("dn");
+					}
+				});
+			}
+		}
+			
 		//初始化文本编辑器
 		var editor = null;
 		window.onload = function() {
@@ -385,7 +405,8 @@
 				}
 			}
 		}
-
+		
+		
 		function delsearchm(obj) {
 			var _v = $(obj).parents(".searchm-result").attr("data");
 			var myobj = $(obj).parents(".input-selSearch");

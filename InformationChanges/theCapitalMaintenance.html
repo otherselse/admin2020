@@ -95,11 +95,11 @@
                 <div class="f0 dac">
                     <span class="df pct50 f12">
                         <div class="min-w60 mt15 searchLable">信息类别：</div>
-                        <div class="ui-tab4 mt10">
-                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10 on">办事指南</a>
+                        <div class="ui-tab4 mt10 single">
+                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-option mb10 on">办事指南</a>
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="sel(0)"
-                                    class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
+                                    class="ui-option mb10 str1 xiaLa ">资料中心</a>
                                 <div class="search-cont pct100 lj" style="left: 0px; display: none;">
                                     <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -109,10 +109,10 @@
                                     <a href="javascript:void(0)" class="search-list db ell">信用资料</a>
                                 </div>
                             </span>
-                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10">审计中心</a>
+                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-option mb10">审计中心</a>
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="inp()"
-                                    class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
+                                    class="ui-option mb10 str2 xiaLa">政府补助及荣耀</a>
                                 <div class="search-cont pct100 lj" style="left: 0px; display: none;">
                                     <a href="javascript:void(0)" class="search-list db ell">11</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -355,8 +355,8 @@
             });
         }
 
-        $(".ui-tab4-list").click(function () {
-            $(".ui-tab4-list").removeClass("on");
+        $(".ui-option").click(function () {
+            $(".ui-option").removeClass("on");
             $(this).addClass("on");
         });
 
