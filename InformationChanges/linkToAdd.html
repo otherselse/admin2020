@@ -57,7 +57,7 @@
             padding: 0px 10px 0px 10px;
             color: #676767;
             background: url(=) #fff no-repeat 12px 5px;
-            max-width: 500px;
+            max-width: 100%;
             overflow: hidden;
         }
 
@@ -81,32 +81,32 @@
 
             <div class="single mt20 tc">
                 <input type="hidden">
-                关联类别：<button type="button" class="ui-option mr20 pshow on">品名牌号关联</button>
-                <button type="button" class="ui-option gang mr20 gshow">钢厂包装关联</button>
-                <button type="button" class="ui-option mr20 gcshow">钢材标准牌号关联</button>
-                <button type="button" class="ui-option gjshow ">国家港口关联</button>
+                关联类别：<button type="button" onclick="trShow([1,2,4])" class="ui-option mr20  on">品名牌号关联</button>
+                <button type="button" onclick="trShow([1,5,6])" class="ui-option gang mr20 ">钢厂包装关联</button>
+                <button type="button" onclick="trShow([1,2,3,4])" class="ui-option mr20 ">钢材标准牌号关联</button>
+                <button type="button" onclick="trShow([7,8])" class="ui-option  ">国家港口关联</button>
             </div>
 
             <table class="ui-table f12 auto tl row mt20 " width="100%">
                 <tbody>
-                    <tr class=" daTr">
+                    <tr class="selTr daTr">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">大类：</span>
                         </td>
                         <td width="90%">
                             <div class="dac">
-                                <div  class="dac w95h18">
+                                <div  class="dac w95 h18">
                                     <span class="classMax">
-                                        <span class="dib ml10 mr10 da">材料类</span>
-                                        <span class="dib ml10 mr10 da">材料类</span>
-                                        <span class="dib ml10 mr10 da">材料类</span>
+                                        <span class="dib ml10 mr10 ell da" title="材12122222212121料类">材12122222212121料类</span>
+                                        <span class="dib ml10 mr10 ell da">材料类</span>
+                                        <span class="dib ml10 mr10 ell da">材料类</span>
                                         <span class="dib ml10 mr10 da">材料类</span>
                                     </span>
                                 </div>
                             </div>
                         </td>
                     </tr>
-                    <tr class=" p">
+                    <tr class="selTr p">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">品名：</span>
                         </td>
@@ -123,13 +123,13 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" gC dn">
+                    <tr class="selTr gC dn">
                         <td width="10%" class=" bgfa">
-                            <span class=" dib ">钢材标准牌号关联：</span>
+                            <span class=" dib ">钢材标准：</span>
                         </td>
                         <td width="90%">
                             <div class="dac max">
-                                <div  class="dac w95h18">
+                                <div  class="dac w95 h18">
                                     <span class="classMax ">
                                         <span class="dib ml10 mr10 gbiao">材料类</span>
                                         <span class="dib ml10 mr10 gbiao">材料类</span>
@@ -140,13 +140,13 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" p">
+                    <tr class="selTr p">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">牌号：</span>
                         </td>
                         <td width="90%">
                             <div class="dac max">
-                                <div  class="dac w95h18">
+                                <div  class="dac w95 h18">
                                     <span class="classMax ">
                                         <span class="dib ml10 mr10 pai">材料类</span>
                                         <span class="dib ml10 mr10 pai">材料类</span>
@@ -157,13 +157,13 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" g dn">
+                    <tr class="selTr g dn">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">钢厂：</span>
                         </td>
                         <td width="90%">
                             <div class="dac max">
-                                <div  class="dac w95h18">
+                                <div  class="dac w95 h18">
                                     <span class="classMax ">
                                         <span class="dib ml10 mr10 pin">材料类</span>
                                         <span class="dib ml10 mr10 pin">材料类</span>
@@ -174,16 +174,16 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" g dn">
+                    <tr class="selTr g dn">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">包装方式：</span>
                         </td>
                         <td width="90%">
                             <div class="dac max">
                                 <div style="width: 91%;margin-right: 11px;" class="dac classMax h30 kZhan chao">
-                                    <span class="dib ml10 mr10 pai">2121</span>
-                                    <span class="dib ml10 mr10 pai">3swqsq`</span>
-                                    <span class="dib ml10 mr10 pai">qxqqxx</span>
+                                    <span class="dib ml10 mr10 bao">2121</span>
+                                    <span class="dib ml10 mr10 bao">3swqsq`</span>
+                                    <span class="dib ml10 mr10 bao">qxqqxx</span>
                                     <span class="dib ml10 mr10">材料类</span>
                                     <span class="dib ml10 mr10">材料类</span>
                                     <span class="dib ml10 mr10">材料类</span>
@@ -228,7 +228,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" gjTr dn">
+                    <tr class="selTr gjTr dn">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">国家：</span>
                         </td>
@@ -245,7 +245,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class=" gjTr dn">
+                    <tr class="selTr gjTr dn">
                         <td width="10%" class=" bgfa">
                             <span class=" dib ">港口：</span>
                         </td>
@@ -269,13 +269,13 @@
                         <td width="90%">
                             <div class="dac max">
                                 <span class="ui-files mr20 vm selectClass" style="display: none;">
-                                    <span class="blue da"></span>
+                                    <span class=" da"></span>
                                     <span class="x1">-</span>
-                                    <span class="blue pin"></span>
+                                    <span class=" pin"></span>
                                     <span class="x2">-</span>
-                                    <span class="blue gbiao"></span>
+                                    <span class=" gbiao"></span>
                                     <span class="x3 dn">-</span>
-                                    <span class="blue pai"></span>
+                                    <span class=" pai"></span>
                                     <i class="icon-sdel goldIcon vm ml5 menuhook"></i>
                                 </span>
                             </div>
@@ -316,13 +316,14 @@
     }
 
     $(".classMax > span").click(function () {
-        $(this).parents(".classMax").find("span").removeClass("blue");
+        $(this).parents(".classMax").find("span").not(".bao").removeClass("blue");
         $(this).addClass("blue");
         $(".selectClass").css("display", "block");
     });
 
     $(".classMax > .da").click(function () {
-        $(".selectClass .da").text($(this).text());
+		var tou = $(this).parents("td").prev("td").find("span").text();
+        $(".selectClass .da").text(tou+""+$(this).text());
     });
 
 
@@ -333,12 +334,29 @@
             $(".selectClass").css("display", "none");
             return;
         } else {
-            $(".selectClass .pin").text($(this).text());
+			var tou = $(this).parents("td").prev("td").find("span").text();
+            $(".selectClass .pin").text(tou+""+$(this).text());
         }
     });
-
+	
+	$(".classMax > .bao").click(function () {
+	   if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+	       alert("请选择大类");
+	       $(this).removeClass("blue");
+	       $(".selectClass").css("display", "none");
+	       return;
+	   }else{
+			if($(".selectClass .pai").text() == "" || $(".selectClass .pai").text() == null){
+				var tou = $(this).parents("td").prev("td").find("span").text();
+				 $(".selectClass .pai").text(tou+""+$(this).text());
+			}else{
+				$(".selectClass .pai").text($(".selectClass .pai").text()+","+$(this).text());
+			}
+	   }
+	});
     $(".classMax > .gbiao").click(function () {
-        $(".selectClass .gbiao").text($(this).text());
+		var tou = $(this).parents("td").prev("td").find("span").text();
+        $(".selectClass .gbiao").text(tou+""+$(this).text());
     });
 
     $(".classMax > .pai").click(function () {
@@ -348,33 +366,34 @@
             $(".selectClass").css("display", "none");
             return;
         } else {
-            $(".selectClass .pai").text($(this).text());
+			var tou = $(this).parents("td").prev("td").find("span").text();
+			$(".selectClass .pai").text(tou+""+$(this).text());
         }
     });
 
-    $(".pshow").click(function () {
-        $(".g").addClass("dn");
-        $(".p").toggleClass("dn");
-        $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
-        $(".selectClass").css("display", "none");
-        $(".classMax span").removeClass("blue");
-        $(".x3").addClass("dn");
-        $(".gC").addClass("dn");
-        $(".gjTr").addClass("dn");
-        $(".x2").removeClass("dn");
-    });
+    // $(".pshow").click(function () {
+    //     $(".g").addClass("dn");
+    //     $(".p").toggleClass("dn");
+    //     $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+    //     $(".selectClass").css("display", "none");
+    //     $(".classMax span").removeClass("blue");
+    //     $(".x3").addClass("dn");
+    //     $(".gC").addClass("dn");
+    //     $(".gjTr").addClass("dn");
+    //     $(".x2").removeClass("dn");
+    // });
 
-    $(".gshow").click(function () {
-        $(".g").removeClass("dn");
-        $(".p").addClass("dn");
-        $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
-        $(".selectClass").css("display", "none");
-        $(".classMax span").removeClass("blue");
-        $(".x3").addClass("dn");
-        $(".gC").addClass("dn");
-        $(".gjTr").addClass("dn");
-        $(".x2").removeClass("dn");
-    });
+    // $(".gshow").click(function () {
+    //     $(".g").removeClass("dn");
+    //     $(".p").addClass("dn");
+    //     $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+    //     $(".selectClass").css("display", "none");
+    //     $(".classMax span").removeClass("blue");
+    //     $(".x3").addClass("dn");
+    //     $(".gC").addClass("dn");
+    //     $(".gjTr").addClass("dn");
+    //     $(".x2").removeClass("dn");
+    // });
 
 
     $(".icon-sdel").click(function () {
@@ -383,31 +402,42 @@
         $(".classMax span").removeClass("blue");
     });
 
-    $(".gcshow").click(function () {
-        $(".g").addClass("dn");
-        $(".p").removeClass("dn");
-        $(".gjTr").addClass("dn");
-        $(".gC").removeClass("dn");
-        $(".daTr").removeClass("dn");
-        $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
-        $(".selectClass").css("display", "none");
-        $(".classMax span").removeClass("blue");
-        $(".x3").removeClass("dn");
-        $(".x2").removeClass("dn");
-    });
+    // $(".gcshow").click(function () {
+    //     $(".g").addClass("dn");
+    //     $(".p").removeClass("dn");
+    //     $(".gjTr").addClass("dn");
+    //     $(".gC").removeClass("dn");
+    //     $(".daTr").removeClass("dn");
+    //     $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+    //     $(".selectClass").css("display", "none");
+    //     $(".classMax span").removeClass("blue");
+    //     $(".x3").removeClass("dn");
+    //     $(".x2").removeClass("dn");
+    // });
 
-    $(".gjshow").click(function () {
-        $(".g").addClass("dn");
-        $(".p").addClass("dn");
-        $(".gC").addClass("dn");
-        $(".gjTr").removeClass("dn");
-        $(".daTr").addClass("dn");
-        $(".x3").addClass("dn");
-        $(".x2").addClass("dn");
-        $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
-        $(".selectClass").css("display", "none");
-        $(".classMax span").removeClass("blue");
-    });
+    // $(".gjshow").click(function () {
+    //     $(".g").addClass("dn");
+    //     $(".p").addClass("dn");
+    //     $(".gC").addClass("dn");
+    //     $(".gjTr").removeClass("dn");
+    //     $(".daTr").addClass("dn");
+    //     $(".x3").addClass("dn");
+    //     $(".x2").addClass("dn");
+    //     $(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+    //     $(".selectClass").css("display", "none");
+    //     $(".classMax span").removeClass("blue");
+    // });
+	
+	function trShow(ary){
+		$(".selTr").addClass("dn");
+		$(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+		$(".selectClass").css("display", "none");
+		$(".classMax span").removeClass("blue");
+		for(var i = 0;i < ary.length;i++){
+			$(".selTr:nth-child("+ary[i]+")").removeClass("dn");
+		}
+		
+	}
 </script>
 
 </html>

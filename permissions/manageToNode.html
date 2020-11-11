@@ -52,6 +52,13 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5 on" onclick="setCultureSingle(this)" id="100">待评审人员分配</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="600">待处理评审</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="700">待处理转货权</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="900">待处理申请</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setCultureSingle(this)" id="800">待付款队列</a>
+                                </div>
+                                <!-- <div class="ui-tab4 n16_isMulS">
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="1">待评审人员分配</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="2">待处理评审</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="3">待处理转货权</a>
@@ -60,121 +67,27 @@
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="6">待收款队列</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="7">待确认客户签收</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulThValueNewOne(this)" pid="8">待付款队列</a>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr class="resource-table">
-                          <td class="cont radio">
-                              <span class="dib pct20 f12"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>VIP客户评审</label></span>
-                              <span class="dib pct20 f12"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商评审</label></span>
-                              <span class="dib pct20 f12"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>V承运商评审</label></span>
-                              <span class="dib pct20 f12"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>加工商评审</label></span>
+                         <td class="cont  n16_menuMulbgS f0 lh24 radio" >                                                                   
+
                           </td>
                       </tr>
                     </tbody>
                 </table>
 
-                <div class="mt30 mb20">
-                    已选权限：<a href="javascript:void(0)" class="n16_menudel">VIP客户评审</a>
-                    <span class="dib ml30 pct50">
-                        设置节点数：
-                        <span class="input-selSearch pct20">
-                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">1</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">2</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">4</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">5</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">6</a>
-                                </div>
-                            </span>
-                    </span>
-                </div>
+               <div class="chooseMenu">
 
-                <table class="ui-table tc f12 checkbox" width="100%">
-                    <thead>
-                        <tr>
-                            <th width="10%">节点ID</th>
-                            <th width="10%">节点名</th>
-                            <th width="10%">审批人数</th>
-                            <th width="13%">节点类型</th>
-                            <th width="18%">该节点动作</th>
-                            <th width="12%">该节点是否接受短信</th>
-                            <th width="15%">该节点动作</th>
-                            <th width="12%">同类型人员仅能审批一次</th>                         
-                        </tr>
-                    </thead>
-                    <tbody>
-                         <tr class="ui-thover">
-                            <td>第1节点</td>
-                            <td>
-                                <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" autocomplete="off" readonly="" value="复核">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell active">复核</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">2</a>
-                                </div>
-                            </span>
-                            </td>
-                            <td>
-                                <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" autocomplete="off" readonly="" value="3">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell active">3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">4</a>
-                                </div>
-                            </span>
-                            </td>
-                            <td>
-                                <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" autocomplete="off" readonly="" value="由管理员配置">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell active">由管理员配置</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">4</a>
-                                </div>
-                            </span>
-                            </td>
-                            <td>
-                                <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" autocomplete="off" readonly="" value="流程审批完成更新业务表">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell active">流程审批完成更新业务表</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">4</a>
-                                </div>
-                            </span>
-                            </td>
-                            <td>
-                                <a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch on"></a>
-                            </td>
-                             <td>
-                                <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" autocomplete="off" readonly="" value="不同意时继续流转">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell active">不同意时继续流转</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">4</a>
-                                </div>
-                            </span>
-                            </td>
-                             <td>
-                                <label><i class="ui-checkbox goldIcon v-3 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></label>
-                            </td>
-                        </tr>
+              </div>             
 
-                    </tbody>
-                </table>
 
                 <div class="tc mt40 mb50">
-                    <button class="ui-button w120 mr10" data-type="big" type="button">提交</button>
-                    <button type="button" class="ui-button" onclick="showSearchIconDn(this)" data-type="bb" small-type="grey"  ot="操作记录">
-                        <span class="bText dib mr5">操作记录</span>
-                        <i class="fanArrowIcon"></i>
-                    </button>
+                    <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
 
-                <div class="cah dn">
-                    操作记录
-                </div>
+               
                
                 
                 
@@ -184,11 +97,267 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+     <script type="text/javascript" src="permitsingle.js"></script>
+
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
+             $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
+
         })
+
+
+        //定义菜单权限数组,只搜索到一级菜单，以及菜单名称、id、以及子菜单个数
+
+           var cul_Data=[  
+            {"title":"待评审人员分配",
+             "id":100,
+              "menuList":[
+                    {"title":"VIP客户评审人员待分配", "id":101,"childnum":0}
+                   ,{"title":"供应商评审人员待分配", "id":102,"childnum":0}
+                   ,{"title":"承运商评审人员待分配", "id":103,"childnum":0}
+                   ,{"title":"加工商评审人员待分配", "id":104,"childnum":0}
+                ]
+             }           
+            ,{"title":"待处理评审",
+             "id":600,
+             "menuList":[
+                    {"title":"内贸销售合同评审", "id":601,"childnum":0}
+                   ,{"title":"采购合同签订评审", "id":602,"childnum":0}
+                   ,{"title":"供应商评审审批", "id":603,"childnum":0}
+                   ,{"title":"销售VIP客户评审审批", "id":604,"menuList":0}
+                   ,{"title":"加工商评审审批", "id":605,"childnum":0}
+                   ,{"title":"加工合同签订评审", "id":606,"childnum":0}
+                          
+                ]
+            }
+            ,{"title":"待处理转货权",
+             "id":700,
+             "menuList":[
+                         {"title":"转货权(零售版)", "id":701,"childnum":0}
+                         ,{"title":"成品验收(零售版)", "id":702,"childnum":0}
+                         ,{"title":"转货权(加工版)", "id":703,"childnum":0}
+                         ,{"title":"成品验收(加工版)", "id":704,"childnum":0}
+                         ,{"title":"销售退货入库", "id":705,"childnum":0}
+
+                    ]
+            }
+            ,{"title":"待处理申请",
+             "id":900,
+              "menuList":[
+                {"title":"(外贸)采购合同付款申请", "id":901,"childnum":0}
+              ]
+             }
+            ,{"title":"待付款队列",
+             "id":800,
+             "menuList":[
+                          {"title":"采购合同付款队列", "id":801,"childnum":0}
+                         ,{"title":"运输费用付款队列(零售版)", "id":802,"childnum":0}
+                         ,{"title":"短驳费用付款队列(零售版)", "id":803,"childnum":0}
+                         ,{"title":"加工费用付款队列(零售版)", "id":804,"childnum":0}
+                         ,{"title":"运输费用付款队列(加工版)", "id":805,"childnum":0}                  
+                         ]
+            }
+
+
+        ]
+
+
+
+        var contobj=$(".n16_menuMulbgS");
+        var showobj='chooseMenu'; 
+        var tableType=true;
+        function setCultureSingle(obj){
+            myMenuListSingle.setMulThValueNewOne(obj,contobj,cul_Data,showobj,tableType);
+        }
+
+        function setMulPanel(obj,e){
+            var myarr=[
+             {"title":"费用支出1", "id":2222,"childnum":0}
+             ,{"title":"费用支出2", "id":2223,"childnum":0}
+             ,{"title":"费用支出3", "id":2224,"childnum":0}
+             ,{"title":"费用支出4", "id":2225,"childnum":0}
+            ]
+
+            myMenuListSingle.setMulPanelClick(obj,e,myarr,contobj,showobj,tableType)
+
+        }
+
+
+
+
+      function setTable(obj,myid,chain,title){
+         ////adm_optMenu 需要增加，用于找元素
+         
+          var str='<div class="f14 mt20 mb10"><span class="searchLable">已选权限：</span><a href="javascript:void(0)" class="n16_menudel adm_optMenu" id="'+myid+'" chain="'+chain+'"  onclick="delCulMenuTab(this)">'+title+'<i class="icon-menudel admIcon"></i></a><span class="dib ml20 searchLable">节点总数：3</span></div>'
+          str+=' <table class="ui-table tc f12  checkbox mt20" width="100%">'+
+              '      <thead>'+
+              '          <tr>'+
+              '              <th width="5%">节点ID</th>'+
+              '              <th width="10%">节点名</th>'+
+              '              <th width="10%">同时审批人数</th>'+
+              '              <th width="12%">节点类型</th>'+
+              '              <th width="15%">该节点动作</th>'+
+              '              <th width="8%">是否接受<br/>短信</th>'+
+              '              <th width="12%">审批后续动作</th>'+
+              '              <th width="8%">同类型人员<br/>仅能审批一次</th>'+
+              '              <th width="15%">操作信息</th>'+
+              '              <th width="5%"><a class="ui-icon-add vm" href="javascript:void(0)" onclick="addDom(this)"></a></th> '+
+              '          </tr>'+
+              '      </thead>'+
+              '      <tbody class="ui-hover">'+
+              '          <tr>'+
+              '              <td>'+
+              '                  <input type="text" class="ui-input pct80 tc" autocomplete="off" value="1">'+
+              '              </td>'+
+              '              <td>'+
+              '                  <span class="input-selSearch pct80">'+
+              '                      <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+              '                      <div class="search-cont">'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">评定</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">跟踪</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">审核</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">复核</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">复核</a>'+
+              '                      </div>'+
+              '                  </span>'+
+              '              </td>'+
+              '              <td>'+
+              '                  <span class="input-selSearch pct80">'+
+              '                      <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+              '                      <div class="search-cont">'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">1</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">2</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">3</a>'+
+              '                      </div>'+
+              '                  </span>'+
+              '              </td>'+
+              '              <td>'+
+              '                  <span class="input-selSearch pct80">'+
+              '                      <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+              '                      <div class="search-cont tl">'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">自动选择上级</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">由管理员配置</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">申请人自行选择</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">自动到申请人</a>'+
+              '                      </div>'+
+              '                  </span>'+
+              '              </td>'+
+              '              <td>'+
+              '                  <span class="input-selSearch pct80">'+
+              '                      <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+              '                      <div class="search-cont tl">'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">普通操作</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">流程审批完成，更新业务表</a>'+
+              '                      </div>'+
+              '                  </span>'+
+              '              </td>'+
+              '              <td><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+              '              <td>'+
+              '                   <span class="input-selSearch pct80">'+
+              '                      <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+              '                      <div class="search-cont tl">'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">不同意时继续流转</a>'+
+              '                          <a href="javascript:void(0)" class="search-list db ell">不同意时退回申请人</a>'+
+              '                      </div>'+
+              '                  </span>'+
+              '              </td>'+
+              '              <td><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>'+
+              '              <td class="tl">'+
+              '                  <div class="pl10">'+
+              '                      唐宇捷<br/><span class="g80">2020-10-30 20:33:44</span>'+
+              '                  </div>'+
+              '              </td>'+
+              '              <td>'+
+              '                  <a class="ui-icon-del vm" href="javascript:void(0)" onclick="delDom(this)"></a>'+
+              '              </td>'+
+              '          </tr>'+
+              '      </tbody>'+
+              '  </table> '
+          return str;
+      }
+
+
+      function delCulMenuTab(obj){
+        $(obj).parents(".chooseMenu").html('');
+         contobj.find(".on").removeClass("on");
+         contobj.find(":radio:checked").prop("checked",false);
+
+
+      }
+
+      function delDom(obj){
+        $(obj).parents("tr").remove();
+      }
+
+      function addDom(obj){
+        var str='<tr>'+
+                '            <td><input type="text" class="ui-input pct80 tc" autocomplete="off" value="1"></td>'+
+                '            <td>'+
+                '                <span class="input-selSearch pct80">'+
+                '                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+                '                    <div class="search-cont" style="display: none;">'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">评定</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">跟踪</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">审核</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">复核</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">复核</a>'+
+                '                    </div>'+
+                '                </span>'+
+                '            </td>'+
+                '            <td>'+
+                '                <span class="input-selSearch pct80">'+
+                '                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+                '                    <div class="search-cont" style="display: none;">'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">1</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">2</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">3</a>'+
+                '                    </div>'+
+                '                </span>'+
+                '            </td>'+
+                '            <td>'+
+                '                <span class="input-selSearch pct80">'+
+                '                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+                '                    <div class="search-cont tl" style="display: none;">'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">自动选择上级</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">由管理员配置</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">申请人自行选择</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">自动到申请人</a>'+
+                '                    </div>'+
+                '                </span>'+
+                '            </td>'+
+                '            <td>'+
+                '                <span class="input-selSearch pct80">'+
+                '                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+                '                    <div class="search-cont tl" style="display: none;">'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">普通操作</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">流程审批完成，更新业务表</a>'+
+                '                    </div>'+
+                '                </span>'+
+                '            </td>'+
+                '            <td><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
+                '            <td>'+
+                '                 <span class="input-selSearch pct80">'+
+                '                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">'+
+                '                    <div class="search-cont tl" style="display: none;">'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">不同意时继续流转</a>'+
+                '                        <a href="javascript:void(0)" class="search-list db ell">不同意时退回申请人</a>'+
+                '                    </div>'+
+                '                </span>'+
+                '            </td>'+
+                '            <td><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>'+
+                '            <td class="tl">'+
+                '                <div class="pl10">'+
+                '                    唐宇捷<br><span class="g80">2020-10-30 20:33:44</span>'+
+                '                </div>'+
+                '            </td>'+
+                '            <td><a class="ui-icon-del vm" href="javascript:void(0)" onclick="delDom(this)"></a></td>'+
+                '        </tr>'
+                $(obj).parents(".ui-table").append(str);
+      }
+
+
           
         
       

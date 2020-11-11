@@ -15,11 +15,11 @@
 </head>
 
 <body class='showTip'>
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
+ <script type="text/javascript" src="../js/topBar.js"></script>
+ <!-- 头部菜单 -->
+ <script type="text/javascript" src="../js/menu.js"></script>
+ <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+ <script type="text/javascript" src="../js/leftBar.js"></script>
     <!-- 左侧菜单 -->
     <div class="rightBar">
         <div class="nav ovh">
@@ -72,8 +72,7 @@
                                 <span class="pt5 dib pl10">身份证扫描件上传：</span></td>
                             <td width="87%">
                                 <div class="pl10 pr5">
-                                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile"
-                                        onclick="upfile()">高拍仪上传</button>
+                                  
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
@@ -95,8 +94,7 @@
                                 <span class="pt5 dib pl10">担保函扫描件上传：</span></td>
                             <td width="87%">
                                 <div class="pl10 pr5">
-                                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile"
-                                        onclick="upfile()">高拍仪上传</button>
+                                  
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
@@ -119,8 +117,7 @@
                                 <span class="pt5 dib pl10">金牌商家照片：</span></td>
                             <td width="87%">
                                 <div class="pl10 pr5">
-                                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile"
-                                        onclick="upfile()">高拍仪上传</button>
+                                  
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
@@ -143,8 +140,6 @@
                                 <span class="pt5 dib pl10">核保人照片：</span></td>
                             <td width="87%">
                                 <div class="pl10 pr5">
-                                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile"
-                                        onclick="upfile()">高拍仪上传</button>
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
@@ -167,8 +162,7 @@
                                 <span class="pt5 dib pl10">合照：</span></td>
                             <td width="87%">
                                 <div class="pl10 pr5">
-                                    <button type="button" class="ui-button mr10 vm w120" data-type="upfile"
-                                        onclick="upfile()">高拍仪上传</button>
+                                  
                                     <button type="button" class="ui-button mr10 vm" data-type="upfile"
                                         onclick="upfile()">常规上传</button>
                                     <a href="javascript:void(0)" class="mr10"
@@ -202,9 +196,8 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
-        $(function () {
-            $(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
+        $(function() {
+        	$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); // 静态页面定位使用，开发使用title等定位
         })
     </script>
     <script>

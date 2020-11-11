@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>人员配置权限-权限管理-乐刚智能云系统</title>
+    <title>人员配置权限-权限配置-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">  
 
@@ -28,7 +28,7 @@
             <div class="l gga">
                 <a href="../index/index.html" class="gga">首页</a>
                 <span class="dib gga pl5 pr5">/</span>
-                权限管理
+                权限配置
                 <span class="dib gga pl5 pr5">/</span>
                 <span class="g28">人员配置权限</span>
             </div>
@@ -44,7 +44,7 @@
         <div class="ui-content minH">
             <div class="p30">
                
-                <div class="p_clonebg pct94 auto">
+                <div class="p_clonebg  auto">
                     <div class="bbe pt20 pb20 pl50 f14 g28">
                         将
                         <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
@@ -61,14 +61,14 @@
                             </span>
                         权限复制给
                         <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
-                        <button type="button" class="ui-button">提交</button>
+                        <button type="button" class="ui-button" onclick="window.location='toManageMenuCloneS.html'">提交</button>
                     </div>
                     <div class="pt20 pb20 pl50">
                         将短信内容 <span class="p_msginfo dib f12 ml10 mr10">**大侠，您的系统权限已变更，请及时跟进和关注，如有异议请提出。</span>
                         发送给
                         <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
-                        <button type="button" class="ui-button">提交</button>
-                        <a href="" class="g80 f12 ml20">查看发送记录 ></a>
+                        <button type="button" class="ui-button" >提交</button>
+                        <a href="javascript:void(0)" class="g80 f12 ml20" onclick="toLoadUserPermit()">查看发送记录 &gt;</a>
                     </div>
                 </div>
                 
@@ -78,13 +78,23 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
           
-        
+         function toLoadUserPermit(){
+            layer.open({
+                type: 2,
+                title: '查看发送记录',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['80%', '400px'],
+                content: 'toUserPermit.html' //iframe的url
+            });
+        }
       
 
     </script>

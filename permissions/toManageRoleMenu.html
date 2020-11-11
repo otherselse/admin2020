@@ -47,6 +47,41 @@
                     <tbody>
                         <tr class="resource-table">
                             <td width="10%" rowspan="2" class="bgfa">
+                                <span class="searchLable f14">文化系统</span><br>
+                                （单选）
+                            </td>
+                            <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
+                                <div class="ui-tab4 n16_isMulS">         
+                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="700">物流管理</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="900">信息管理</a>                                    
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="800">权限管理</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="resource-table">
+                          <td class="cont  n16_menuMulbgS lh24 radio" >                                  
+                                       
+                                       
+
+                          </td>
+                      </tr>
+                      <tr class="resource-table">
+                            <td rowspan="2" class="bgfa searchLable f14">
+                                已选
+                            </td>
+                            <td class="cont chooseMenu" height="26">
+                            </td>
+                        </tr>
+                  </tbody>
+              </table> 
+
+<!-- 
+                <table class="ui-table f12 tc mt15 pct100">
+                    <tbody>
+                        <tr class="resource-table">
+                            <td width="10%" rowspan="2" class="bgfa">
                                 <span class="searchLable f14">管理系统</span><br>
                                 （单选）
                             </td>
@@ -99,7 +134,7 @@
                             </td>
                         </tr>
                   </tbody>
-              </table> 
+              </table>  -->
               <div class="mt30">
                 <span class="t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
                 <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
@@ -118,6 +153,45 @@
                     </tbody>
                 </table>
 
+                <div class="tc mt40 mb50">
+                    <button class="ui-button w120 mr10" data-type="big" type="button">提交</button>
+                    <button type="button" class="ui-button w120" onclick="showSearchIconDn(this)" data-type="bb" small-type="grey" ot="操作记录">
+                        <span class="bText dib mr5">操作记录</span>
+                        <i class="fanArrowIcon"></i>
+                    </button>
+                </div>
+
+                <div class="cah dn">
+                    <div class="mb10"><span class="t_linerbg"><span class="pl10 searchLable">操作记录</span></span></div>
+                    <table class="ui-table tc f12  " width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">菜单名称</th>
+                            <th width="40%" class="tl"><div class="pl10">已分配人员</div></th>
+                            <th width="10%">操作人</th>
+                            <th width="15%">操作日期</th>
+                            <th width="15%">记录类型</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr>
+                            <td>单位评审</td>
+                            <td class="tl"><div class="pl10">马云云，王嘉尔、周杰、就盖伦、马鞍山、马云云，王嘉尔、周杰、就盖伦、马鞍山</div></td>
+                            <td>马云</td>
+                            <td>2020-08-11 12:43:55</td>
+                            <td>提交数据</td>
+                        </tr>
+                        <tr>
+                            <td>单位评审</td>
+                            <td class="tl"><div class="pl10">马云云，王嘉尔、周杰、就盖伦、马鞍山、马云云，王嘉尔、周杰、就盖伦、马鞍山</div></td>
+                            <td>马云</td>
+                            <td>2020-08-11 12:43:55</td>
+                            <td>提交数据</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
                 
             </div>
         </div>
@@ -125,11 +199,80 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="authorsingle.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(".n16_isMulS").find(".ui-tab4-list.on").click();  //初始化显示选中的菜单的子菜单
 
         })
+
+               //权限菜单权限数组
+        var authority_Data=[  
+            {"title":"首页",
+             "id":0,
+              "menuList":[]
+             }           
+            ,{"title":"评审管理",
+             "id":600,
+             "menuList":[
+                            {"title":"合同类", "id":610,"menuList":[
+                                {"title":"VIP业务采购合同评审", "id":6101}
+                                ,{"title":"备货采购合同审批", "id":6102}
+                                ,{"title":"运输合同审批", "id":6103}
+                                ,{"title":"加工仓储协议审批", "id":6104}
+                                ]
+                            }
+                            ,{"title":"款项类", "id":620,"menuList":[
+                                {"title":"付款类申请审批", "id":6201}
+                                ,{"title":"客户提现审批", "id":6202}
+                                ,{"title":"租赁分红审批", "id":6203}
+                                ]
+                            }                          
+                         ]
+            }
+            ,{"title":"物流管理", //没有大类
+             "id":700,
+             "menuList":[
+                         {"title":"货权(入库)确认", "id":701,"menuList":[]}
+                         ,{"title":"出库确认", "id":702,"menuList":[]}
+                         ,{"title":"自提确认", "id":703,"menuList":[]}
+                         ,{"title":"销售退货入库", "id":704,"menuList":[]}
+                         ,{"title":"库存盘点登记", "id":705,"menuList":[]}
+                         ,{"title":"单据打印", "id":706,"menuList":[]}
+
+                    ]
+            }
+            ,{"title":"信息管理",
+             "id":900,
+              "menuList":[]
+             }
+            ,{"title":"权限管理",
+             "id":800,
+             "menuList":[
+                            {"title":"权限配置", "id":801,"menuList":[
+                                {"title":"人员配置权限", "id":8101}
+                                ,{"title":"菜单配置人员", "id":8102}
+                                ,{"title":"审批配置人员", "id":8103}
+                                ,{"title":"角色配置人员", "id":8104}
+                                ]
+                            }
+                            ,{"title":"文化系统", "id":802,"menuList":[
+                                {"title":"付款类申请审批", "id":8201}
+                                ,{"title":"客户提现审批", "id":8202}
+                                ,{"title":"租赁分红审批", "id":8203}
+                                ]
+                            }                          
+                         ]
+            }
+
+
+        ]
+         var contobj=$(".n16_menuMulbgS");
+         var showobj='chooseMenu';
+         function setMulAuthoriy(obj){
+              myMenuListSingle.setMulThValueNewOne(obj,contobj,authority_Data,showobj);
+        } 
           
         
       

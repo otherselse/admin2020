@@ -37,42 +37,40 @@
 	        	</div>
 	        </div>
 			<div class="ui-content ovh minH">
-				<div class="bbe lh50 pl20"><a href="gathering.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>		
-				<div class="p20 f12">
-					<div class="ui-tip noIcon pct100" data-type="blue">
+				<div class=" lh50 pl20"><a href="gathering.html" class="g28"><i class="leftArrow mr10" ></i>返回上一级</a></div>				
+				<div class="pl20 pr20 pb20 f12">
+					<div class="f20 g28 mb5">销售收款</div>
+					<div class="fin_gatherBg lh22">
+						<span class="dib pct30  vt">
+							金牌商家：马云云<br/>
+							合同号：STC(22)-20001644<br/>
+							订单号：61722 | E201110000002
+						</span>
+						<span class="dib pct30  vt">							
+							订单累计收款：230303.33<br/>
+							订单累计付款：230303.33<br/>
+							订单余额：230303.33
+						</span>
+						<span class="dib pct30  vt">							
+							单位名称：上海阿里巴巴不差钢投资集团<br/>
+							账户余额：2394403302.33（客户余额<br/>
+							付款银行：中国工商银行<br/>
+							付款账户：58593939939399339
+						</span>
+					</div>
+					<!-- <div class="ui-tip noIcon pct100" data-type="blue">
                         <div class="tl">
 							<span class="b f14 g28 mr40">销售收款 (金牌商家:唐宇捷)</span>      
 							<span class="b g28 f12 mr40">订单累计收款：5,856</span>
 							<span class="b g28 f12 mr40">订单累计付款：5,856</span>
 							<span class="b g28 f12 mr40">订单余额：5,856</span>
                         </div>
-                	</div>
-					<div class="mt20">
-						<div class="f0 mb15">
-							<div class="pct50 dib f12">
-								&emsp;&emsp;单位名称：<span class="g28">世华国际中心有限公司</span> 
-							</div>
-							<div class="pct50 dib f12">
-								&emsp;账户余额：<span class="g28">是</span> 
-							</div>
-						</div>
-						<div class="f0 mb15">
-							<div class="pct50 dib f12">
-								&emsp;&emsp;付款银行：<span class="g28">中国银行</span> 
-							</div>
-							<div class="pct50 dib f12">
-								&emsp;付款账号：<span class="g28">621755558888868</span> 
-							</div>
-						</div>
+                	</div> -->
+					<div class="mt20">						
 						<div class="f0 mb15">
 							<div class="pct50 dib f12">
 								&emsp;&emsp;到款单号：<input type="text" class="ui-input pct30" placeholder="请输入">
 							</div>
-							<div class="pct50 dib f12">
-								&emsp;到款日期：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
-							</div>
-						</div>
-						<div class="f0 mb15">
 							<div class="pct50 dib f12">
 								&emsp;&emsp;到款银行：<span class="input-selSearch pct30">
 									<input type="text" class="ui-input searchUp pct100" placeholder="请填写" autocomplete="off">
@@ -86,17 +84,23 @@
 									</div>
 								</span>
 							</div>
+							
+						</div>
+						<div class="f0 mb15">
 							<div class="pct50 dib f12">
-								&emsp;到款账号：<span class="g28">1001233319005667868</span>
+								&emsp;&emsp;到款日期：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
+							</div>
+							
+							<div class="pct50 dib f12">
+								&emsp;&emsp;到款账号：<input type="text" class="ui-input pct30" value="1001233319005667868" readonly="">
 							</div>
 						</div>
 						<div class="f0 mb15">
 							<div class="pct50 dib f12">&emsp;&emsp;到款金额：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
-							<div class="pct50 dib f12">&emsp;收款类别：<span class="g28">销售收款</span></div>
 						</div>
 						<div class="f12 mb15">
 							&emsp;&emsp;到款类别：<span class="single">
-								<button type="button" class="ui-option mr10 on">电子银行承兑汇票</button>
+								<button type="button" class="ui-option mr10 ">电子银行承兑汇票</button>
 								<button type="button" class="ui-option mr10">电汇</button>
 								<button type="button" class="ui-option mr10">银行转账支票 </button>
 								<button type="button" class="ui-option mr10">现金</button>
@@ -105,7 +109,7 @@
 						</div>
 						<div class="f0 mb15">
 							<div class="pct50 dib f12">&emsp;&emsp;贴息费用：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
-							<div class="pct50 dib f12">&emsp;出票单位：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
+							<div class="pct50 dib f12">&emsp;&emsp;出票单位：<input type="text" class="ui-input pct30" placeholder="请输入"></div>
 						</div>
 						<div class="f0 mb15">
 							<div class="pct50 dib f12">
@@ -122,17 +126,11 @@
 								</span>
 							</div>
 							<div class="pct50 dib f12">
-								汇票到期日：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
+								汇票到期日期：<span class="ui-input pct30" data-type="time"><input type="text" placeholder="选择时间" class="render-time pct100" readonly=""></span>
 							</div>
 						</div>
-						<div class="mb15 f0">
-							<div class="pct50 dib f12">&emsp;&emsp;&emsp;合同号：<a href="javascript:void(0)">STC(22)-20001619</a></div>
-							<div class="pct50 dib f12">&emsp;订单编号：<span class="g28">61717|E201109000004</span></div>
-						</div>
-						<div class="mb15 f0">
-							<div class="pct50 dib f12">&emsp;&emsp;申请单号：<span class="g28">--</span></div>
-							<div class="pct50 dib f12">已到款金额：<span class="g28">4</span></div>
-						</div>
+		
+	
 						<div class="mb15 f0">
 							<div class="pct50 f12">本次核销金额：<input type="text" class="ui-input pct30" placeholder="请输入">
 								<span class="checkbox ml10">
