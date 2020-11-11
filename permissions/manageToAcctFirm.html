@@ -88,9 +88,127 @@
                                     <td>2020-08-11</td>
                                     <td>正常</td>
                                     <td>
-                                        <a href="">详情</a><span class="ml5 mr5 dib gd9">|</span>
+                                        <a href="javascript:void(0)" onclick="showTrMore(this)">详情</a><span class="ml5 mr5 dib gd9">|</span>
                                         <a href="">重置密码</a><span class="ml5 mr5 dib gd9">|</span>
                                         <a href="">设置为月结</a>
+                                    </td>
+                                </tr>
+                                <tr class="hideTr dn">
+                                    <td colspan="10">
+                                        <div class="pl20 pr20">
+                                            <div class="tl f14  ovh">
+                                                <span class="t_linerbg mt10"><span class="pl10 searchLable">公司信息</span></span>
+                                                <span class="r"><button class="ui-button w90 mr10" data-type="normal" type="button" small-type="small">加入黑名单</utton>
+                                                <button class="ui-button w90 " data-type="normal" type="button" small-type="small">移除黑名单</button></span>
+                                            </div>
+                                             <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+                                                <tbody>
+                                                    <tr class="resource-table">
+                                                        <td width="7%" class="title">公司名称：</td>
+                                                        <td width="21%" class="cont"></td>
+                                                        <td width="7%" class="title">联系电话：</td>
+                                                        <td width="20%" class="cont"></td>
+                                                        <td width="7%" class="title">公司税号：</td>
+                                                        <td width="19%" class="cont"> <label for="depot_isdel0"></label></td>
+                                                        <td width="9%" class="title">联系人：</td>
+                                                        <td width="10%" class="cont"></td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title">固定电话：</td>
+                                                        <td class="cont"></td>
+                                                        <td height="30" class="title">注册地址：</td>
+                                                        <td class="cont"></td>
+                                                        <td class="title">传真：</td>
+                                                        <td class="cont"></td>
+                                                        <td class="title">所在省市：</td>
+                                                        <td class="cont"></td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td height="30" class="title">联系地址：</td>
+                                                        <td class="cont"></td>
+                                                        <td height="30" class="title">开户银行：</td>
+                                                        <td class="cont"></td>
+                                                        <td class="title">银行账号：</td>
+                                                        <td class="cont"></td>
+                                                        <td class="title">推荐金牌商家：</td>
+                                                        <td class="cont"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                           
+
+                                             <div class="tl f14 mt20"><span class="t_linerbg"><span class="pl10 searchLable">开票信息</span></span></div>
+                                              <table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+                                                <tbody>
+                                                    <tr class="resource-table">
+                                                        <td width="7%"  class="title">单位名称：</td>
+                                                        <td width="21%" class="cont"></td>
+                                                        <td width="7%" class="title">公司税号：</td>
+                                                        <td width="20%" class="cont"></td>
+                                                        <td width="7%" class="title">开户银行：</td>
+                                                        <td width="19%" class="cont"> <label for="depot_isdel0"></label></td>
+                                                        <td width="9%" class="title">银行账号：</td>
+                                                        <td width="10%" class="cont"></td>
+                                                    </tr>
+                                                    <tr class="resource-table">
+                                                        <td class="title">联系电话：</td>
+                                                        <td class="cont"></td>
+                                                        <td  class="title">联系地址：</td>
+                                                        <td class="cont" colspan="5"></td>
+                                                        
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="tl f14 mt20"><span class="t_linerbg"><span class="pl10 searchLable">月结信息</span></span></div>
+                                            <table class="ui-table tc f12 auto mt5  mb10" width="100%" >
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="14%">合同编号</th>
+                                                            <th width="12%" >合同签订地</th>
+                                                            <th width="12%" >合同生效日期</th>
+                                                            <th width="12%" >合同截止日期</th>
+                                                            <th width="12%" >结算方式</th>              
+                                                            <th width="18%" >付款期限</th>
+                                                            <th width="10%" >合同状态</th>
+                                                            <th width="8%" >操作</th>
+                                                        </tr>
+                                                        </thead><tbody class="ui-thover">
+                                                            <tr>
+                                                                <td>222</td>
+                                                                <td>上海</td>
+                                                                <td>2020-07-26 11:11:11</td>
+                                                                <td>2020-07-26 11:11:11</td>
+                                                                <td>--</td>
+                                                                <td>2020-07-26 11:11:11</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+                                            <div class="tl f14 mt20"><span class="t_linerbg"><span class="pl10 searchLable">操作记录</span></span></div>
+                                            <table class="ui-table tc f12 auto mt5  mb10" width="100%" >
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="10%">序号</th>
+                                                            <th width="30%">时间</th>
+                                                            <th width="20%">操作</th>
+                                                            <th width="15%">联系人</th>
+                                                            <th width="15%">联系电话</th>
+                                                            <th width="10%">是否评审</th>
+                                                        </tr>
+                                                        </thead><tbody class="ui-thover">
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>2020-07-26 11:11:11</td>
+                                                                <td>--</td>
+                                                                <td>咚咚咚</td>
+                                                                <td>13712345678</td>
+                                                                <td>是</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>

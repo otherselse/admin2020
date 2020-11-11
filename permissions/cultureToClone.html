@@ -73,7 +73,7 @@
                         发送给
                         <button class="ui-button w96 ml10 mr20" data-type="normal" type="button">选择人员</button>
                         <button type="button" class="ui-button" >提交</button>
-                        <a href="" class="g80 f12 ml20">查看发送记录 ></a>
+                        <a href="javascript:void(0)" class="g80 f12 ml20 " onclick="toLoadUserPermit()">查看发送记录 ></a>
                     </div>
                 </div>
                 
@@ -86,11 +86,23 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             
         })
+
+         function toLoadUserPermit(){
+            layer.open({
+                type: 2,
+                title: '查看发送记录',
+                shadeClose: true,
+                shade: 0.4,
+                area: ['80%', '400px'],
+                content: 'toUserPermit.html' //iframe的url
+            });
+        }
 
 
 </script>
