@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -123,122 +123,121 @@
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
 		                    	<tr>
-							        <th width="4%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
-							        <th width="3%" >金牌商家</th>
-							        <th width="2%" >区域</th>
-							        <th width="6%" >发票单位</th>
-								  	<th width="4%" >付款单位</th>
-									<th width="3%" >付款金额</th>
-							        <th width="3%" >发票号</th>
-							        <th width="5%" >已收票不含税金额</th>
-							        <th width="5%" >已收票进项税额</th>
-							        <th width="5%" >已收票金额</th>
-							        <th width="4%" >发票税率</th>
-							        <th width="4%" >入账日期</th>
-							        <th width="5%" >发票登记日期</th>
-							        <th width="5%" >发票开具日期</th>
-							        <th width="4%" >发票到期时间</th>
-							        <th width="6%" >清票时间</th>
-							        <th width="3%" >登票人</th>
-							        <th width="3%" >清票人</th>
-							        <th width="4%" >是否认证</th>
-							        <th width="4%" >认证时间</th>
-							        <th width="6%" >发票类型</th>
-							        <th width="5%" >是否已导出凭证</th>
-							        <th width="3%" >状态</th>
-							        <th width="4%" >操作</th>         
-							      </tr>
-
+                                    <th width="3%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+                                    <th width="7%"  class="tl"><div class="pl5">订单号</div></th>
+                                    <th width="5%" >金牌商家</th>
+                                    <th width="10%" class="tl"><div class="pl5">发票号/付款单位</div></th>
+                                    <th width="5%" >付款单位</th>
+                                    <th width="5%" >付款金额</th>
+                                    <th width="5%" >已收票额</th>
+                                    <th width="5%" >已收票不<br/>含税金额</th>
+                                    <th width="5%" >已收票进<br/>项税额</th>
+                                    <th width="4%" >发票<br/>税率</th>
+                                    <th width="6%" >入账日期</th>
+                                    <th width="6%" >发票开具日期</th>
+                                    <th width="6%" >发票到期时间</th>
+                                    <th width="5%" >登票/清票</th>
+                                    <th width="5%" >认证时间</th>
+                                    <th width="7%" >发票类型</th>
+                                    <th width="5%" >是否已导出凭证</th>
+                                    <th width="6%" >操作</th>                                      
+                                  </tr>
 		                    </thead>
 		                </table>
 
 						</div>
+						
 						<div class="lgui-table-body mt-1">
 							<table class="ui-table tc f12 " width="100%" >
 		                    <tbody class="ui-thover">
 		                    	<tr>
-		                    		<td width="4%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>12323</td>
-							        <td width="3%" >李四</td>
-							        <td width="2%" >上海</td>
-							        <td width="6%" >上海哈哦哦哦有限公司</td>
-								  	<td width="4%" ><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">查看</a></td>
-									<td width="3%" >0</td>
-							        <td width="3%" class="bkall">111111</td>
-							        <td width="5%" class="numFormat bkall">2343444</td>
-							        <td width="5%" class="numFormat bkall">12332323</td>
-							        <td width="5%" class="numFormat bkall">1123233</td>
-							        <td width="4%" >0.13</td>
-							        <td width="4%" >2020-10-11</td>
-							        <td width="5%" >2020-10-11 11:11:11</td>
-							        <td width="5%" >2020-10-11 11:11:11</td>
-							        <td width="4%" >2020-10-11 </td>
-							        <td width="6%" >2020-10-11 11:11:11</td>
-							        <td width="3%" >李四</td>
-							        <td width="3%" >张东</td>
-							        <td width="4%" >是</td>
-							        <td width="4%" >---</td>
-							        <td width="6%" >采购发票单<br/>(专用发票)</td>
-							        <td width="5%" >否</td>
-							        <td width="3%" >有效</td>
-							        <td width="4%" ><a href="javascript:void(0)" onclick="updateRZ()">认证</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="toVoid()">作废</a></td> 
-		                    	</tr>
-		                    	 <tr class="disabled">
-		                           <td ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>12323</td>
-							        <td>李四</td>
-							        <td>上海</td>
-							        <td>上海哈哦哦哦有限公司</td>
-								  	<td><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">查看</a></td>
-									<td>0</td>
-							        <td class="bkall">111111</td>
-							        <td class="numFormat bkall">2343444</td>
-							        <td class="numFormat bkall">12332323</td>
-							        <td class="numFormat bkall">1123233</td>
-							        <td >0.13</td>
-							        <td >2020-10-11</td>
-							        <td >2020-10-11 11:11:11</td>
-							        <td >2020-10-11 11:11:11</td>
-							        <td >2020-10-11 </td>
-							        <td >2020-10-11 11:11:11</td>
-							        <td >李四</td>
-							        <td >张东</td>
-							        <td >是</td>
-							        <td >---</td>
-							        <td >采购发票单<br/>(专用发票)</td>
-							        <td >否</td>
-							        <td >有效</td>
-							        <td ><a href="javascript:void(0)" onclick="updateRZ()">认证</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="toVoid()">有效</a></td> 
-		                        </tr>
+                                    <td width="3%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+                                    <td width="7%" class="tl"><div class="pl5">12323 <span class="fin_area dib">上海</span></div></td>
+                                    <td width="5%" >李四</td>
+                                    <td width="10%" class="tl"><div class="pl5">496696<br/>阿里巴巴不差钢投资</div></td>
+                                    <td width="5%" ><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">查看</a></td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="4%" >0.13</td>
+                                    <td width="6%" >2020-08-10</td>
+                                    <td width="6%" >2020-08-10<br/>14:34:22</td>
+                                    <td width="6%" >2020-08-10<br/>14:34:22</td>
+                                    <td width="5%" ><a href="javascript:void(0)" title="<span class='g80'>登票人&emsp;</span>&emsp;马云云<br/><span class='g80'>登票日期</span>&emsp;2020-11-10 13:34:55<br/><br/><span class='g80'>清票人&emsp;</span>&emsp;马云云<br/><span class='g80'>清票日期</span>&emsp;2020-11-10 13:34:55">查看</a></td>
+                                    <td width="5%" >--</td>
+                                    <td width="7%" >采购发票单（专用发票）</td>
+                                    <td width="5%" >否</td>
+                                    <td width="6%" ><a href="javascript:void(0)" onclick="updateRZ()">认证</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="toVoid()">作废</a></td>
+                                  </tr>
+                                  <tr class="disabled">
+                                    <td width="3%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+                                    <td width="7%">12323 <span class="fin_area dib">上海</span></td>
+                                    <td width="5%" >李四</td>
+                                    <td width="10%" class="tl"><div class="pl5">496696<br/>阿里巴巴不差钢投资</div></td>
+                                    <td width="5%" ><a href="javascript:void(0)" title="名称:简简单单企业<br/>联系人:<br/>联系电话:14745555555" class="tiptop">查看</a></td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="5%" class="numFormat bkall">2343444</td>
+                                    <td width="4%" >0.13</td>
+                                    <td width="6%" >2020-08-10</td>
+                                    <td width="6%" >2020-08-10<br/>14:34:22</td>
+                                    <td width="6%" >2020-08-10<br/>14:34:22</td>
+                                    <td width="5%" ><a href="javascript:void(0)" title="<span class='g80'>登票人&emsp;</span>&emsp;马云云<br/><span class='g80'>登票日期</span>&emsp;2020-11-10 13:34:55<br/><br/><span class='g80'>清票人&emsp;</span>&emsp;马云云<br/><span class='g80'>清票日期</span>&emsp;2020-11-10 13:34:55">查看</a></td>
+                                    <td width="5%" >--</td>
+                                    <td width="7%" >采购发票单（专用发票）</td>
+                                    <td width="5%" >否</td>
+                                    <td width="6%" ><a href="javascript:void(0)" onclick="updateRZ()">认证</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="toVoid()">作废</a></td>
+                                  </tr>
+		                    	
+
 		                        
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
-		                    		<td colspan="14" class="tl">
+		                    		<td colspan="18" class="tl">
 		                    			<i class="ui-checkbox goldIcon mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
 		                    		
 		                    			<span class="ml20 dib">入账日期：<span class="ui-input pct30 mr10" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
-		                    			<button type="button" class="ui-button">确认</button></span>
-		                    		</td>
-		                    		<td colspan="10" class="tr">
-		                    			<button type="button" class="ui-button plr10 mr10">外贸采购发票及结转成本凭证导出</button>
-		                    			<button type="button" class="ui-button mr20" data-type="clear">取消导出</button>
+		                    			<button type="button" class="ui-button">批量清票</button></span>
+		                    		
+		                    			<span class="r"><button type="button" class="ui-button plr10 mr10">外贸采购发票及结转成本凭证导出</button>
+		                    			<button type="button" class="ui-button mr20" data-type="clear">取消导出</button></span>
 		                    		</td>
 		                    	</tr>
-		                    	<tr height="40">
-		                    		<td colspan="24">
+		                    	<tr height="45">
+		                    		<td colspan="7" class="tr">
 		                    			当前页合计：
-		                    			已收票不含税金额：<span class="numFormat bkall red mr20">1232131323</span>
-		                    			已收票进项税额：<span class="numFormat bkall red mr20">1232131323</span>
-		                    			已收票金额：<span class="numFormat bkall red mr20">1232131323</span>
+		                    		</td>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td colspan="8">
 		                    		</td>
 		                    	</tr>
-		                    	<tr height="40">
-		                    		<td colspan="24">
+		                    	<tr height="45">
+		                    		<td colspan="7" class="tr">
 		                    			所有页合计：
-		                    			已收票不含税金额：<span class="numFormat bkall red mr20">1232131323</span>
-		                    			已收票进项税额：<span class="numFormat bkall red mr20">1232131323</span>
-		                    			已收票金额：<span class="numFormat bkall red mr20">1232131323</span>
 		                    		</td>
-		                    	</tr>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td>
+		                    			<span class="numFormat bkall">1232131323</span>
+		                    		</td>
+		                    		<td colspan="8">
+		                    		</td>
+		                    	</tr>		                    	
 		                    	
 		                    </tfoot>
 		                    

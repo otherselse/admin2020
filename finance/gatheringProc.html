@@ -38,6 +38,21 @@
 	        </div>
 			<div class="ui-content ovh minH">				
 				<div class="p20">
+					<div class="cl mb15 f12">
+						<span class="searchLable">单据类型：</span>
+						<div class="dib selectSingle">
+							<a href="javscript:void(0)">全部</a>
+							<span class="pr5 pl5 ">|</span>
+                            <a  href="javscript:void(0)">加工单据</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">入库单据</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">出库单据</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">转库单据</a>                           
+                            
+                        </div>
+					</div>
 					<div class="cl mb10 f0">
 						<span class="pct25 dib f12">
 								<span class="searchLable">货主单位：</span><span class="input-selSearch pct69">
@@ -91,8 +106,82 @@
 						<span class="pct25 dib f12">
 							<span class="searchLable">发票号：</span><input type="text" class="ui-input pct69 " placeholder="请输入">
 						</span>
-				</div>
-				<div class="mb10 f0">
+					</div>
+					<div class="cl mb10 f0">
+						<span class="pct25 dib f12">
+								<span class="searchLable">&emsp;加工商：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请输入公司名称" autocomplete="off">
+								<div class="search-cont" >
+									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 dib f12 searchLable">业务时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+						</span></span>
+						<button type="button" class="ui-button">查询</button>
+					</div>
+
+					<!-- <div class="cl mb10 f0">
+						<span class="pct25 dib f12">
+								<span class="searchLable">货主单位：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
+								<div class="search-cont" >
+									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 dib f12">
+							 <span class="searchLable">费用单位：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
+								<div class="search-cont" >
+									<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 dib f12">
+							 <span class="searchLable">费用类型：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+								<div class="search-cont" >
+									<a href="javascript:void(0)" class="search-list db ell">运输费</a>
+									<a href="javascript:void(0)" class="search-list db ell">拆包费用</a>
+									<a href="javascript:void(0)" class="search-list db ell">吊费</a>
+									<a href="javascript:void(0)" class="search-list db ell">转库费</a>
+									<a href="javascript:void(0)" class="search-list db ell">码头费用</a>
+									<a href="javascript:void(0)" class="search-list db ell">质量异议付款</a>
+									<a href="javascript:void(0)" class="search-list db ell">业务费</a>
+									<a href="javascript:void(0)" class="search-list db ell">加工费</a>
+									<a href="javascript:void(0)" class="search-list db ell">余料代售费用</a>
+									<a href="javascript:void(0)" class="search-list db ell">过磅费用</a>
+									<a href="javascript:void(0)" class="search-list db ell">加班费</a>
+									<a href="javascript:void(0)" class="search-list db ell">租赁费</a>
+									<a href="javascript:void(0)" class="search-list db ell">其他费用</a>
+									<a href="javascript:void(0)" class="search-list db ell">仓储费</a>
+									<a href="javascript:void(0)" class="search-list db ell">拆箱费</a>
+									<a href="javascript:void(0)" class="search-list db ell">装箱费</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 dib f12">
+							<span class="searchLable">发票号：</span><input type="text" class="ui-input pct69 " placeholder="请输入">
+						</span>
+				</div> -->
+				<!-- <div class="mb10 f0">
 					
 					<span class="pct25 dib f12 m_pct31 searchLable">业务日期：<span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
@@ -110,8 +199,8 @@
 	                                    <a href="javscript:void(0)">全部单据</a>
 	                                </div>
 	                </span>
-				</div>
-				<div class="cl mb10 f12 lh24">							
+				</div> -->
+				<!-- <div class="cl mb10 f12 lh24">							
 	                <span class="vt dib"><span class="searchLable">&emsp;加工商：</span></span><div class="dib selectProcName gc">
                             <a href="javscript:void(0)">全部</a>
                             <span class="pr5 pl5 ">|</span>
@@ -135,11 +224,9 @@
                             <span class="pr5 pl5 ">|</span>
                         </div>
                         <a class="dib vt " href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll" style="display: none;">展开</a>
-				</div>					
+				</div> -->					
 
-				<div class="tc mt20">
-                    <button type="button" class="ui-button">查询</button>
-                </div>
+				
 
 	                <!-- search end -->
 
@@ -206,8 +293,8 @@
 				            	<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setPay(0)"></i>扫码支付</label>
 				                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setPay(1)"></i>余额支付</label>
 				            </td>
-				            <td class="title" width="13%">结算单位：</td>
-				            <td width="37%" class="cont">
+				            <td class="title" width="13%" style="padding:0 2px 0 10px">结算单位：</td>
+				            <td width="37%" class="cont" style="padding:0 2px 0 10px">
 				            	<span class="input-selSearch pct50">
 									<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码" autocomplete="off">
 									<div class="search-cont" >
