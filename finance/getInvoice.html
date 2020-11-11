@@ -46,21 +46,36 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<span class="ui-tip pct100 mb20">温馨提示：发票号的格式请保持一致连号发票格式为12345678-12345688，非连号发票格式为654321,789564,987523；后期将针对采购发票登记进行排查，不合格的将执行惩罚。</span>
-					<div class="mb10 f0 searchLable">
-						<span class="pct25 dib f12">供货单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct25 dib f12">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					<div class="mb10 f0 ">
+						<span class="pct25 dib f12 searchLable">供货单位：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12 searchLable">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct25 dib f12">合同号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
+						<span class="pct25 dib f12 searchLable">规格：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="searchLable f12">合同类型：</span>
+						<div class="dib selectSingle f12">
+                            <a href="javscript:void(0)">直购</a>	                                    
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">定购</a>
+                            <span class="pr5 pl5 ">|</span>
+                            <a href="javscript:void(0)">外贸</a>	                                    
+                        </div>
 					</div>	
 
 
-	                <div class="f0 mb20 searchLable">
-	                	<span class="pct25 dib f12">&emsp;&emsp;规格：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+	                <div class="f0 mb20 ">
+	                	<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12 searchLable">合同号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12"><span class="searchLable">金牌商家是否确认：</span>
+							<span class="radio">
+	                           <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+	                           <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+	                        </span>
+
+						</span>
+	                </div>
+	                <div class="tc  mt20 mb20">
 						<button type="button" class="ui-button ">查询</button>
-	                    <!-- <button type="button" class="ui-button " data-type="clear">清空</button> -->
 	                </div>
 
 	                <!-- search end -->
@@ -69,22 +84,21 @@
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
-		                        <tr>
-		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>订单号</th>
+		                    	<tr>
+		                            <th width="4%"><i class="ui-checkbox goldIcon "><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+		                            <th width="5%">订单号</th>
 		                            <th width="5%">金牌商家</th>
-		                            <th width="10%" class="tl"><div class="pl5">采购合同号</div></th>  	                            
-		                            <th width="10%" class="tl"><div class="pl5">采购单位</div></th>
-		                            <th width="7%">单位评审<br/>等级</th>
-		                            <th width="6%">品名</th> 
-		                            <th width="6%">规格</th>
-		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算重量<i class="goldIcon icon-sort vm ml5"></i></label></th>
-		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">采购单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
-		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
-		                            <th width="6%">结算不含税单价</th>
-		                            <th width="6%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算金额<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="12%" class="tl"><div class="pl5">供货单位/合同号</div></th>
+		                            <th width="7%">评审等级</th>
+		                            <th width="11%" class="tl"><div class="pl5">品名/规格</div></th>
+		                            <th width="7%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算重量<i class="goldIcon icon-sort vm ml5"></i></label></th> 
+		                            <th width="7%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">采购单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="7%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算单价<i class="goldIcon icon-sort vm ml5"></i></label></th>
+		                            <th width="8%">结算不含税单价</th>
+		                            <th width="7%"><label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">结算金额<i class="goldIcon icon-sort vm ml5"></i></label></th>
 		                            <th width="6%">已收票金额</th>
 		                            <th width="6%">未收票金额</th>
-		                            <th width="6%">本次收票金额</th>
+		                            <th width="8%">本次收票金额</th>                           
 		                        </tr>
 		                    </thead>
 		                </table>
@@ -93,7 +107,23 @@
 						<div class="lgui-table-body mt-1">
 							<table class="ui-table tc f12 " width="100%"  data-type="edit">
 		                    <tbody class="ui-thover">
-		                    	 <tr>
+		                    	<tr>
+                                    <td width="4%"><i class="ui-checkbox goldIcon "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+                                    <td width="5%">12345</td>
+                                    <td width="5%">李冬梅</td>
+                                    <td width="12%" class="tl"><div class="pl5">阿里巴巴不差钢投资<br/><span class="g80">DDC(22)-20001934</span></div></td>
+                                    <td width="7%">1级</td>
+                                    <td width="11%" class="tl"><div class="pl5">冷轧卷板<br/><span class="g80">11.000*800*C</span></div></td>
+                                    <td width="7%" class="numFormat">232.33</td> 
+                                    <td width="7%" class="numFormat">23442</td>
+                                    <td width="7%" class="numFormat">23442</td>
+                                    <td width="8%" class="numFormat">23442</td>
+                                    <td width="7%" class="numFormat">23442</td>
+                                    <td width="6%" class="numFormat">23442</td>
+                                    <td width="6%" class="numFormat">23442</td>
+                                    <td width="8%"><input type="text" class="ui-input pct80" /></td>                           
+                                </tr>
+		                    	<!--  <tr>
 		                            <td width="8%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
 		                            <td width="5%">李冬梅</td>
 		                            <td width="10%" class="tl"><div class="pl5 bkall">DDC(22)-20000407</div></td>  	                            
@@ -126,9 +156,9 @@
 		                            <td class="numFormat">0</td>
 		                            <td class="numFormat">13226.55</td>
 		                            <td ><input type="text" class="ui-input pct80" /></td>
-		                        </tr>
+		                        </tr> -->
 		                    </tbody>
-		                    <tfoot class="bgfa">
+		                 <!--    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td colspan="15" class="tl pt10 pb10">
 		                    			<div class="dib pct8 tc">
@@ -138,13 +168,37 @@
 		                    			
 		                    		</td>
 		                    	</tr>
-		                    </tfoot>
+		                    </tfoot> -->
 		                 </table>
 		                             
 	            	</div>
 	                
 	            </div><!-- table end -->
-	            <table class="ui-table tc f12 auto mt10 " width="100%">
+	            <div class="fin_panel mt-1">
+	            	<div class="p20">
+	            		<div class="searchLable f14">发票登记</div>
+	            		<div class="mt20">
+	            			&emsp;&emsp;发票号：
+	            			<input type="text" class="ui-input pct15 " placeholder="请输入" autocomplete="off">
+	            			<button class="ui-button ml20" data-type="upfile" type="button">附件上传</button>
+	            			<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" href="javascript:void(0)" data-hasqtip="4" oldtitle="删除" title=""></a></span>
+	            		</div>
+	            		<div class="mt10">
+	            			开票总吨数：
+	            			<span class="ui-input pct15 mr20" data-type="price"><input type="text" value="" placeholder="" class="pct80" autocomplete="off"><span class="r">吨</span></span>
+		                    开票总金额：
+		                    <span class="ui-input pct15 mr20" data-type="price"><input type="text" value="" placeholder="" class="pct80" autocomplete="off"><span class="r">元</span></span>
+
+		                    开票日期：<span class="ui-input pct15 mr20" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
+		                    税率(%)：<input type="text" class="ui-input pct15" placeholder="请输入" autocomplete="off" value="13">
+
+
+	            		</div>
+
+	            	</div>
+	            </div>
+
+	         <!--    <table class="ui-table tc f12 auto mt10 " width="100%">
 					<tbody>
 						<tr class="resource-table">
 							<td class="title" width="13%">开票总吨数：</td>
@@ -172,9 +226,27 @@
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> -->
 				<div class="tc mt30 mb30"><button type="button" class="ui-button">确认</button></div>
-	            <table class="ui-table tc f12 " width="100%" data-type="edit">
+
+	            <script type="text/javascript" src="../js/pagelist.js"></script>
+
+	            <div class="mt20 bbe pb10 f14"><span class="t_linerbg"><span class="pl10 searchLable">未开票金额区域总计：</span></span></div>
+
+	            <div class=" ovh lh35">
+	            	<span class="l pct25 bbe">自贸区：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">上海：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">宁波：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">杭州：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">自贸区：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">上海：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">宁波：<span class="numFormat">16456445.55</span></span>
+	            	<span class="l pct25 bbe">杭州：<span class="numFormat">16456445.55</span></span>
+	            </div>
+
+	            <div class="mt20 mb50 f14"><span class="t_linerbg"><span class="pl10 searchLable">未开票金额所有区域总计：<span class="numFormat">8884484933.33</span></span></span></div>
+
+	           <!-- table class="ui-table tc f12 " width="100%" data-type="edit">
 		                 	<tfoot class="bgfa">
 		                    	<tr>
 		                    		<td class="tl pt10 pb10 ">
@@ -207,9 +279,8 @@
 		                    	</tr>
 		                    </tfoot>
 		                    
-		                </table>		    
+		                </table> -->		    
 	            
-	            <script type="text/javascript" src="../js/pagelist.js"></script>
 
 
 
