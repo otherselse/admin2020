@@ -58,7 +58,7 @@
                             </td>
                             <td width="90%" class="cont radio f0 lh24" >
                                 <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="001" data-title="金牌商家审核1"></i>金牌商家审核1</label></span>
-                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="002" data-title="金牌商家审核1"></i>查询统计</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="002" data-title="查询统计"></i>查询统计</label></span>
                                 <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="003" data-title="金牌商家审核2"></i>金牌商家审核2</label></span>
                                 <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="004" data-title="金牌商家审核3"></i>金牌商家审核3</label></span>
                                 <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="005" data-title="金牌商家审核4"></i>金牌商家审核4</label></span>
@@ -117,7 +117,7 @@
         function setRole(obj){
             var title=$(obj).attr("data-title");
             var id=$(obj).attr("id");
-            var str='<a href="javascript:void(0)" class="n16_menudel" sortid='+id+' >'+title+'<i class="icon-menudel admIcon"></i></a>'
+            var str='<a href="javascript:void(0)" class="n16_menudel" sortid='+id+' >'+title+'</a>'
             $(".chooseMenu").html(str);
         }
 

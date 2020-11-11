@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>角色配置人员-权限管理-乐刚智能云系统</title>
+    <title>角色配置人员-权限配置-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">  
 
@@ -28,7 +28,7 @@
             <div class="l gga">
                 <a href="../index/index.html" class="gga">首页</a>
                 <span class="dib gga pl5 pr5">/</span>
-                权限管理
+                权限配置
                 <span class="dib gga pl5 pr5">/</span>
                 <span class="g28">角色配置人员</span>
             </div>
@@ -42,7 +42,7 @@
             </div>
         <div class="ui-content minH">
             <div class="p30">
-               <div class="t_linerbg"><span class="pl10 searchLable">选择角色</span></div>
+               <div class="t_linerbg"><span class="pl10 searchLable">选择角色</span><a href="javascript:void(0)" class="dib ml10 f12" onclick="addRole()">+增加角色</a></div>
                <table class="ui-table f12 tc mt15 pct100">
                     <tbody>
                         <tr class="resource-table">
@@ -50,45 +50,43 @@
                                 <span class="searchLable f14">角色名称</span><br>
                                 （单选）
                             </td>
-                            <td width="90%" class="cont radio f0">
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                 <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
-                                <span class="pct20 dib f12 lh30"><label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金牌商家审核</label></span>
+                            <td width="90%" class="cont radio f0 lh24" >
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="001" data-title="金牌商家审核1"></i>金牌商家审核1</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="002" data-title="金牌商家审核1"></i>查询统计</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="003" data-title="金牌商家审核2"></i>金牌商家审核2</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="004" data-title="金牌商家审核3"></i>金牌商家审核3</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="005" data-title="金牌商家审核4"></i>金牌商家审核4</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="006" data-title="金牌商家审核5"></i>金牌商家审核5</label></span>
+                                <span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 "><input type="radio" class="radio-opacity" name="radio" onclick="setRole(this)" id="007" data-title="金牌商家审核6"></i>金牌商家审核6</label></span>
                             </td>
                         </tr>
-                        <tr class="resource-table">
-                            <td class="bgfa searchLable f14">已选角色</td>
-                            <td class="cont"><a href="javascript:void(0)" class="n16_menudel">自营管理</a></td>
+                       <tr class="resource-table">
+                            <td  class="bgfa searchLable f14">
+                                已选角色
+                            </td>
+                            <td class="cont chooseMenu" height="26">
+                                <!-- <a href="javascript:void(0)" class="n16_menudel" >费用统计报表<i class="icon-menudel admIcon"></i></a> -->
+                            </td>
                         </tr>
                         
                     </tbody>
                 </table>
 
-                <div class="mt30">                    
-                    <span class="pct10 dib t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
-                    <button class="ui-button w96" data-type="normal" type="button">选择人员</button>
-                    <a href="javascript:void(0)" class="n16_menudel">马云云</a>
-                    
-                </div>
-                 <table class="ui-table f12 tc mt15 pct100">
+                <div class="mt30">
+                <span class="t_linerbg"><span class="pl10 searchLable">人员（可多选）：</span></span>
+                <button class="ui-button w96 ml10 mr10" data-type="normal" type="button">选择人员</button>
+                <a href="javascript:void(0)" class="n16_menudel">马晓燕<i class="icon-menudel admIcon"></i></a> 
+              </div>
+              <table class="ui-table f12 tc mt15 pct100">
                     <tbody>
                         <tr class="resource-table">
-                            <td width="10%" class="bgfa searchLable f14">
+                            <td width="10%" rowspan="2" class="bgfa g28 f14">
                                 已分配人员
                             </td>
                             <td width="90%" class="cont">
-                                <a href="javascript:void(0)" class="n16_menudel">寄售跟踪表<i class="icon-sdel goldIcon v-3"></i></a>
+                                <a href="javascript:void(0)" class="n16_menudel" >马云云<i class="icon-menudel admIcon"></i></a>
                             </td>
                         </tr>
-
-                        
                     </tbody>
                 </table>
 
@@ -101,8 +99,35 @@
                 </div>
 
 
-                <div class="cah dn">
-                    操作记录
+                 <div class="cah dn">
+                    <div class="mb10"><span class="t_linerbg"><span class="pl10 searchLable">操作记录</span></span></div>
+                    <table class="ui-table tc f12  " width="100%">
+                    <thead>
+                        <tr>
+                            <th width="10%">菜单名称</th>
+                            <th width="40%" class="tl"><div class="pl10">已分配人员</div></th>
+                            <th width="10%">操作人</th>
+                            <th width="15%">操作日期</th>
+                            <th width="15%">记录类型</th>
+                        </tr>
+                    </thead>
+                    <tbody class="ui-thover">
+                        <tr>
+                            <td>单位评审</td>
+                            <td class="tl"><div class="pl10">马云云，王嘉尔、周杰、就盖伦、马鞍山、马云云，王嘉尔、周杰、就盖伦、马鞍山</div></td>
+                            <td>马云</td>
+                            <td>2020-08-11 12:43:55</td>
+                            <td>提交数据</td>
+                        </tr>
+                        <tr>
+                            <td>单位评审</td>
+                            <td class="tl"><div class="pl10">马云云，王嘉尔、周杰、就盖伦、马鞍山、马云云，王嘉尔、周杰、就盖伦、马鞍山</div></td>
+                            <td>马云</td>
+                            <td>2020-08-11 12:43:55</td>
+                            <td>提交数据</td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
                 
                 
@@ -112,11 +137,30 @@
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
         })
+
+         function setRole(obj){
+            var title=$(obj).attr("data-title");
+            var id=$(obj).attr("id");
+            var str='<a href="javascript:void(0)" class="n16_menudel" sortid='+id+' >'+title+'<i class="icon-menudel admIcon"></i></a>'
+            $(".chooseMenu").html(str);
+        }
+
+        function addRole(){
+            layer.open({
+             type: 2,
+             title: '新增系统角色',
+             shadeClose: true,
+             shade: 0.4,
+             area: ['740px', '400px'],
+             content: 'addRole2.html' //iframe的url
+            });
+        }
           
         
       
