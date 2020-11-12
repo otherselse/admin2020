@@ -149,12 +149,26 @@
 			});
 			//$("#time5").removeAttr("lay-key");
 		}
+		
+		// lg_MaxSize = 1024 * 1024 * 1; //最大文件大小 3M
+		// lg_type = 0; //0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
+		// lg_fileType = '.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|' // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
+		// myLgUpload.init(lg_MaxSize, lg_type, lg_fileType);
+		
+		// 删除图片方法
+		function delFile(obj) {
+			var key = Number($(obj).attr("data-key"));
+			var l = $("#imgshow").find(".ui-files").length;
+			$(obj).remove();
+			myLgUpload.filesObj.remove(key);
+			if (l == 1) {
+				$("#imgshow").hide();
+			}
+		}
 	</script>
 
 	<script>
 		//
-
-		
 	</script>
 
 </html>

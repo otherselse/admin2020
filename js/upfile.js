@@ -26,6 +26,7 @@
 					console.log('参数中的文件对象个数为0');
 					return false;
 				}
+				
 				var filesSize = myLgUpload.filesObj.size(); // 已存储的文件个数
 				var filesTotalSize = arr.length + filesSize; // 与当前文件合并后的文件个数
 				var f = true;
@@ -144,6 +145,7 @@
 		var lg_type=1;					  //0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
 		var lg_fileType='.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|'  // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
 		myLgUpload.init(lg_MaxSize,lg_type,lg_fileType);
+		
 		$('#file').change(function (event) {
 				var files = event.target.files;
 				myLgUpload.getFilesUpload(files,this);
@@ -171,12 +173,12 @@
 			fd.onload = function (ev) {	
 				var dropUpfileCont=$(obj).parents(".dropUpfileCont")
 				if(getFilesType(name)=="pic"){ //假如是图片
-					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><img src="" class="photoZM"><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
+					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="delFile(this)"  title="删除"><img src="" class="photoZM"><div class="ell">' + name + '</div><i class="icon-sdel1 vm ml5" ></i></a>'
 					dropUpfileCont.prepend(str);
 					var imgBase64=ev.target.result;	//console.log(imgBase64)   //base64 代码
 					dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").attr("src",imgBase64);					
 				}else{
-					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><span  class="photoZM"></span><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
+					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="delFile(this)"  title="删除"><span  class="photoZM"></span><div class="ell">' + name + '</div><i class="icon-sdel1 vm ml5" ></i></a>'
 					dropUpfileCont.prepend(str);
 					if(getFilesType(name)=="doc"){
 						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileDoc");
