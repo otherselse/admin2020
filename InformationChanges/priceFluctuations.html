@@ -14,6 +14,21 @@
 		<title>市场定价管理-信息管理-乐刚智能云系统</title>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 		<style>
+			.ui-button[data-type='small'] {
+			    min-width: 79px;
+			    line-height: 30px;
+			    height: 30px;
+			    font-size: 12px;
+			}
+			.ui-button[data-type='clears'] {
+			 min-width: 79px;
+			 line-height: 30px;
+			 height: 30px;
+			    font-size: 12px;
+			    background: #fff;
+			    border: 1px #EEEEEE solid;
+			    color: #676767;
+			}
 		</style>
 	</head>
 
@@ -46,9 +61,8 @@
 					<span class="searchLable">类型：</span>
 					<span class="single">
 						<input type="hidden">
-						<button type="button" class="ui-option mr5">未定价</button>
-						<button type="button" class="ui-option mr5">已定价</button>
-						<button type="button" class="ui-option on">未更新</button>
+						<button type="button" class="ui-option mr5 on">热销资源</button>
+						<button type="button" class="ui-option mr5">热备资源</button>
 					</span>
 					<span class="searchLable ml20">所在区域：</span>
 					<span class="dib selectSingle">
@@ -87,7 +101,7 @@
 									<!-- <th width="8%">修改价格</th> -->
 									<th width="6%">审批状态</th>
 									<th width="6%">类型</th>
-									<th width="5%">操作</th>
+									<th width="5%">记录</th>
 								</tr>
 							</thead>
 							<tbody class="ui-thover">
@@ -97,7 +111,7 @@
 									</td>
 									<td>2020-08-19 16:56:03</td>
 									<td class="tl">
-										<div class="pll0">徐河若/上海</div>
+										<div class="pl10">徐河若/上海</div>
 									</td>
 									<td>镀铝板材</td>
 									<td>11.000*800*C</td>
@@ -108,7 +122,7 @@
 										<span class="tiptop menuhook g13" title="提交时间：2020-09-22 09:23:2<br/>提交人：李四四">1,200</span>
 									</td> -->
 									<td>
-										<span class="tiptop menuhook g13" title="提交时间：2020-09-22 09:23:2<br/>提交人：李四四">1,200</span>
+										<span class="tiptop menuhook " title="提交时间：2020-09-22 09:23:2<br/>提交人：李四四">1,200</span>
 									</td>
 									<td>
 										<!-- <input type="text" class="ui-input pct90" size="8" placeholder="请输入"> -->
@@ -123,7 +137,8 @@
 										热销资源
 									</td>
 									<td>
-										<a href="javascript:void(0);" onclick="showTrMore(this)">
+										<!-- onclick="showTrMore(this)" -->
+										<a href="javascript:void(0);" class="tipclick" qtip-dom="dom3">
 											查看
 										</a>
 									</td>
@@ -176,31 +191,27 @@
 			</div>
 		</div>
 		<div class="f12 dom1 dn">
-			<div class="14 mb5">修改价格</div>
+			<div class="f14 mb5">修改价格</div>
 			<div class="ui-input mb10" data-type="price">
 				<span class="red dib f16 vm">￥</span>
 				<input type="text" value="" class="pct70" placeholder="请输入">
 			</div>
-			<button type="button" class="ui-button mr10" title="<div class='mb20'>
-				<div class='mb5'><span class='col-8080'>上次价格：</span>3000</div>
-				<div class='mb5'><span class='col-8080'>提交人：&emsp;</span>3000</div>
-				<div class='mb5'><span class='col-8080'>提交时间：</span>2020-11-10 13:23:21</div>
-			</div><div class=''>
-				<div class='mb5'><span class='col-8080'>本次价格：</span>3000</div>
-				<div class='mb5'><span class='col-8080'>提交人：&emsp;</span>3000</div>
-				<div class='mb5'><span class='col-8080'>提交时间：</span>2020-11-10 13:23:21</div>
-			</div>" data-type="small" onclick="gotoClick()">确认修改</button>
-			<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+			<div class="dac">
+				<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">确认修改</button>
+				<button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
+			</div>
 		</div>
 		
-		<div class="f12 dom2 dn">
-			<div class="14 mb5">修改价格</div>
-			<div class="ui-input mb10" data-type="price">
-				<span class="red dib f16 vm">￥</span>
-				<input type="text" value="" class="pct70" placeholder="请输入">
+		<div class="f12 dom3 dn">
+			<div class="mb20">
+				<div class="mb5"><span class="col-8080">上次价格：</span>3000</div>
+				<div class="mb5"><span class="col-8080">提交人：&emsp;</span>3000</div>
+				<div class="mb5"><span class="col-8080">提交时间：</span>2020-11-10 13:23:21</div>
+			</div><div class="">
+				<div class="mb5"><span class="col-8080">本次价格：</span>3000</div>
+				<div class="mb5"><span class="col-8080">提交人：&emsp;</span>3000</div>
+				<div class="mb5"><span class="col-8080">提交时间：</span>2020-11-10 13:23:21</div>
 			</div>
-			<button type="button" class="ui-button mr10" data-type="small" onclick="gotoClick()">确认修改</button>
-			<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
 		</div>
 		<script type="text/javascript" src="../js/admin.js"></script>
 		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -223,7 +234,7 @@
 						}
 					},
 					position: {
-						my: 'top center',
+						my: 'top right',
 						at: 'bottom center'
 					},
 					// position: {

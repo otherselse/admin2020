@@ -51,13 +51,7 @@
 						</span>
 						<span class="pct25 dib f12">合同号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
-					</div>	
-
-
-	                <div class="f0 mb20 ">
-	                	<span class="pct25 dib f12 searchLable">&emsp;&emsp;区域：<span class="input-selSearch pct69">
+						<span class="pct25 dib f12 searchLable">&emsp;&emsp;区域：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">上海</a>
@@ -71,8 +65,15 @@
 								</div>
 							</span>
 	                	</span>
+						
+					</div>	
+
+
+	                <div class="f0 mb20 ">
+	                	<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
 	                	<span class="dib f12 mr40">
-	                		<span class="searchLable">发票类型：</span>
+	                		<span class="searchLable">合同类型：</span>
 	                		<div class="dib selectSingle ">
                                 <a class="on" href="javscript:void(0)">运输发票</a>
                                 <span class="pr5 pl5 ">|</span>
@@ -99,21 +100,19 @@
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
-		                        <tr>
-		                            <th width="8%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/订单号</th>
-		                            <th width="10%" class="tl"><div class="pl5">合同号</div></th>                             
-		                            <th width="10%" class="tl"><div class="pl5">仓库单位</div></th>
-		                            <th width="10%" class="tl"><div class="pl5">收款单位</div></th>
+		                    	<tr>
+		                            <th width="5%"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i></th>
+		                            <th width="8%" class="tl"><div class="pl5">订单号</div></th>
+		                            <th width="6%">金牌商家</th>
+		                            <th width="12%" class="tl"><div class="pl5">仓库单位</div></th>
+		                            <th width="14%" class="tl"><div class="pl5">收款单位/合同号</div></th>
 		                            <th width="7%">结算重量</th> 
 		                            <th width="7%">结算金额</th>
 		                            <th width="7%">已开票金额</th>
+		                            <th width="9%">已开票不<br/>含税金额</th>
+		                            <th width="8%">已开票进<br/>项税额</th>
 		                            <th width="7%">未开票金额</th>
-		                            <th width="9%">已开票不含税金额</th>
-		                            <th width="8%">已开票进项税额</th>
-		                            <th width="7%">本次收票金额</th>
-		                            <th width="5%">金牌商家</th>
-		                            <th width="5%">区域</th>
-		                            
+		                            <th width="10%">本次收票金额</th>		                            
 		                        </tr>
 		                    </thead>
 		                </table>
@@ -122,7 +121,21 @@
 						<div class="lgui-table-body mt-1">
 							<table class="ui-table tc f12 " width="100%"  data-type="edit">
 		                    <tbody class="ui-thover">
-		                    	 <tr>
+		                    	<tr>
+		                    		<td width="5%"><i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
+                                    <td width="8%" class="tl"><div class="pl5">12323 <span class="fin_area dib">上海</span></div></td>
+                                    <td width="6%">李四</td>
+                                    <td width="12%" class="tl"><div class="pl5">成都大海金属加工配有限公司</div></td>
+                                    <td width="14%" class="tl"><div class="pl5">阿里巴巴不差钢投资<br/><span class="g80">DDC(22)-20001934</span></div></td>
+                                    <td width="7%">122.002</td> 
+                                    <td width="7%" class="numFormat bkall">123323</td>
+                                    <td width="7%" class="numFormat bkall">121233</td>
+                                    <td width="9%" class="numFormat bkall">12313</td>
+                                    <td width="8%" class="numFormat bkall">12332</td>
+                                    <td width="7%" class="numFormat bkall">1323</td>
+                                    <td width="10%"><input type="text" class="ui-input pct90 tc blue" value="12323.22" /></td> 
+                                  </tr>          
+<!-- 		                    	 <tr>
 		                            <td width="8%"><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i> 12345</td>
 		                            <td width="10%" class="tl"><div class="pl5">DDC(22)-20001510</div></td>
 		                            <td width="10%" class="tl"><div class="pl5">哈尔滨申达物资经销有限公司</div></td>
@@ -151,9 +164,9 @@
 		                            <td >3.00</td>
 		                            <td >李冬梅</td>
 		                            <td >上海</td>
-		                        </tr>
+		                        </tr> -->
 		                    </tbody>
-		                    <tfoot>
+		                    <!-- <tfoot>
 		                    	<tr height="45">
 		                    		<td colspan="15" class="tl pt10 pb10 ">
 		                    			<div class="dib pct8 tc">
@@ -163,13 +176,37 @@
 		                    		</td>
 		                    	</tr>
 
-		                    </tfoot>
+		                    </tfoot> -->
 		                    
 		                </table>		                
 	            	</div>
 	                
 	            </div><!-- table end -->
-	            <table class="ui-table tc f12 auto mt10 " width="100%">
+	            <div class="fin_panel mt-1">
+	            	<div class="p20">
+	            		<div class="searchLable f14">发票登记</div>
+	            		<div class="mt20">
+	            			&emsp;发票号：<input type="text" class="ui-input pct15 " placeholder="请输入" autocomplete="off">
+	            			<button class="ui-button ml20" data-type="upfile" type="button">附件上传</button>
+	            			<span class="ui-files mr10 vm mb5"><a href="javascript:void(0)" class="g80">组件.jpg</a><a class="icon-sdel goldIcon vm ml5" title="删除" href="javascript:void(0)"></a></span>
+	            		</div>
+	            		<div class="mt10">
+	            			发票类型：<span class="radio dib pct15 mr20">
+	            				<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>专用发票</label>
+	            				<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>普通发票</label>
+	            			</span>
+		                    开票总金额：
+		                    <span class="ui-input pct15 mr20" data-type="price"><input type="text" value="" placeholder="" class="pct80" autocomplete="off"><span class="r">元</span></span>
+
+		                    开票日期：<span class="ui-input pct15 mr20" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
+		                    税率(%)：<input type="text" class="ui-input pct15" placeholder="请输入" autocomplete="off" value="13">
+
+
+	            		</div>
+
+	            	</div>
+	            </div>
+	            <!-- <table class="ui-table tc f12 auto mt10 " width="100%">
 					<tbody>
 						<tr class="resource-table">
 							<td class="title" width="13%">发票编号：</td>
@@ -194,12 +231,12 @@
 							<td class="title">附件上传：</td>
 							<td width="20%" class="cont">
 								<button class="ui-button " data-type="upfile" type="button">普通上传</button>
-								<!-- <button class="ui-button " data-type="upfile" type="button">高拍仪上传</button> -->
+								 <button class="ui-button " data-type="upfile" type="button">高拍仪上传</button> 
 								<a class="g28 mr15 ml5 tipclick" href="javascript:void(0)" qtip-dom="dom1" data-hasqtip="6">查看</a>
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> -->
 				<div class="tc mb10 mt10"><button type="button" class="ui-button ">确认</button></div>
 	            
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
