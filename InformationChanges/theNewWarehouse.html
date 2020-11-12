@@ -76,24 +76,24 @@
                             联系电话：<input type="text" class="ui-input  pct70 " placeholder="请输入">
                         </span>
                     </div>
-                    <div class="mb10 ">
+                    <div class="mb10 df">
                         入库单据模板：<span class="dib ">
-                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                onclick="upfile()">附件上传</button>
-                            <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组1件1.jpg</a><i
-                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            <span class="ui-files vm"><a href="javascript:void(0)" class="g80">组11件1.jpg</a><i
-                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+						   <div class="tl dropUpfileCont">
+							<span class="tc" id="dropUpfile">
+								<span style="font-size: 50px">+</span><br />点击上传
+								<input id="file" type="file" multiple="multiple">
+							</span>
+						   </div>
                         </span>
                     </div>
-                    <div class="mb10 ">
+                    <div class="mb10 df">
                         出库单据模板：<span class="dib ">
-                            <button type="button" class="ui-button mr10 vm" data-type="upfile"
-                                onclick="upfile()">附件上传</button>
-                            <span class="ui-files mr10 vm"><a href="javascript:void(0)" class="g80">组1件1.jpg</a><i
-                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
-                            <span class="ui-files vm"><a href="javascript:void(0)" class="g80">组11件1.jpg</a><i
-                                    class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                           <div class="tl dropUpfileCont">
+                           	<span class="tc" id="dropUpfile">
+                           		<span style="font-size: 50px">+</span><br />点击上传
+                           		<input id="file3" type="file" multiple="multiple">
+                           	</span>
+                           </div>
                         </span>
                     </div>
                     <div class="">
@@ -113,7 +113,19 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	<script src="../js/upfile.js" type="text/javascript" charset="utf-8"></script>
 	
 </body>
-
+	<script type="text/javascript">
+		//删除图片方法
+		function delFile(obj) {
+			var key = Number($(obj).attr("data-key"));
+			var l = $("#imgshow").find(".ui-files").length;
+			$(obj).remove();
+			myLgUpload.filesObj.remove(key);
+			if (l == 1) {
+				$("#imgshow").hide();
+			}
+		}
+	</script>
 </html>
