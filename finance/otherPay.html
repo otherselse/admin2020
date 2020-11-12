@@ -42,116 +42,98 @@
 				<a href="otherPay.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">其他收支</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content ovh minH">				
-				<div class="p20 f12">			
-					<table class="ui-table tc f12 auto  " width="100%">
-						<tbody>
-							<tr class="resource-table">
-								<td class="title" width="13%">收款单位：</td>
-								<td class="cont" colspan="3">
-									<span class="input-selSearch pct80">
-										<input type="text" class="ui-input searchUp pct100" placeholder="请输入关键词" autocomplete="off">
-										<div class="search-cont" >
-											<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-										</div>
-									</span>
-								</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title" width="13%">收款银行：</td>
-								<td width="37%" class="cont">
-									<span class="input-selSearch pct70">
-										<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-										<div class="search-cont" >
-											<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-										</div>
-									</span>
-								</td>
-								<td class="title" width="13%">账户账号：</td>
-								<td width="37%" class="cont"><input name="payCash.realPayMoney" id="realPayMoney" type="text" readonly="readonly" class="ui-input bd_none pct70"></td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">交易金额：</td>
-								<td class="cont"><input type="text" class="ui-input pct70" value="" placeholder="请输入" autocomplete="off"></td>
-								<td class="title">交易日期：</td>
-								<td class="cont">
-									<span class="ui-input pct70" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
-								</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">付款单位：</td>
-								<td class="cont" colspan="3">
-									<span class="input-selSearch pct80">
-										<input type="text" class="ui-input searchUp pct100" placeholder="请输入关键词" autocomplete="off">
-										<div class="search-cont" >
-											<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-										</div>
-									</span>
-								</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title" >付款银行：</td>
-								<td  class="cont">
-									<span class="input-selSearch pct70">
-										<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-										<div class="search-cont" >
-											<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-											<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-										</div>
-									</span>
-								</td>
-								<td class="title" >付款户账号：</td>
-								<td class="cont"><input name="payCash.realPayMoney" id="realPayMoney" type="text" readonly="readonly" class="ui-input bd_none pct70"></td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">款项用途：</td>
-								<td  class="cont">
-									<span class="input-selSearch pct70">
+				<div class="p20 f12">
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							收款单位：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+						<div class="pct50 dib f12">
+							付款单位：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+					</div>
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							收款银行：<span class="input-selSearch pct40">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont" style="display: none;">
+									<a href="javascript:void(0)" class="search-list db ell active">中国工商银行上海宝山支行</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</div>
+						<div class="pct50 dib f12">
+							付款银行：<span class="input-selSearch pct40">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont" style="display: none;">
+									<a href="javascript:void(0)" class="search-list db ell active">中国工商银行上海宝山支行</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</div>								
+					</div>
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							收款账号：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+						<div class="pct50 dib f12">
+							付款账号：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+					</div>
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							交易金额：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+						<div class="pct50 dib f12">
+							交易日期：
+							<span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" ></span>
+						</div>
+					</div>	
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							款项用途：
+							<span class="input-selSearch pct40">
 										<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 										<div class="search-cont" >
 											<a href="javascript:void(0)" class="search-list db ell">网银互划</a>
 											<a href="javascript:void(0)" class="search-list db ell">转账</a>
 										</div>
 									</span>
-								</td>
-								<td class="title" >交易类别：</td>
-								<td class="cont radio">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" ></i>电子银行承兑汇票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" value="4003"></i>电汇</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" value="4002"></i>银行转账支票</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" value="4001"></i>现金</label>
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" value="16024"></i>转账</label>
-								</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title" >核销金额：</td>
-								<td  class="cont">
-									<input name="payCash.realPayMoney" id="realPayMoney" type="text" readonly="readonly" class="ui-input bd_none pct70">	
-								</td>
-								<td class="title" >备注：</td>
-								<td class="cont"><input type="text" class="ui-input pct70" value="" placeholder="请输入" autocomplete="off"></td>
-							</tr>
+						</div>
+						
+					</div>
+					<div class="f12 mb15">
+							交易类别：<span class="single">
+								<button type="button" class="ui-option mr10 ">电子银行承兑汇票</button>
+								<button type="button" class="ui-option mr10">电汇</button>
+								<button type="button" class="ui-option mr10">银行转账支票 </button>
+								<button type="button" class="ui-option mr10">现金</button>
+								<button type="button" class="ui-option mr10">转账</button>
+							</span>
+						</div>
+					<div class="f0 mb15">
+						<div class="pct50 dib f12">
+							核销金额：
+							<input type="text" class="ui-input pct40" placeholder="请输入" autocomplete="off">
+						</div>
+						
+					</div>
+					<div class="f12 mb15">
+						&emsp;&emsp;备注：<textarea name="gatherCash.remark" class="ui-textarea pct80" rows="3" value=""></textarea>
+					</div>
 
-						</tbody>
-					</table>
 					<div class="tc  mt20 mb20">
                     	<button type="button" class="ui-button">确认</button>
                     </div>						
