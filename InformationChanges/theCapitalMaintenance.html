@@ -62,7 +62,7 @@
             </div>
             <div class="mt20 ml20  mr20">
                 <div class=" f0">
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable"> 加盟公司：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
@@ -77,13 +77,13 @@
                             </div>
                         </span>
                     </span>
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">部门：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入"></span>
-                    <span class="pct25 dib f12">
+                    <span class="pct22 dib f12">
                         <span class="searchLable">关键字：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入"></span>
-                    <span class="pct25 dib f12">
+                    <span class="pct30 dib f12">
                         <span class="searchLable">时间：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -93,14 +93,14 @@
                 </div>
 
                 <div class="f0 dac">
-                    <span class="df pct50 f12">
+                    <span class="df f12" style="width: 66%;">
                         <div class="min-w60 mt15 searchLable">信息类别：</div>
                         <div class="ui-tab4 mt10 single">
                             <a href="javascript:void(0)" onclick="sel(1)" class="ui-option mb10 on">办事指南</a>
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="sel(0)"
                                     class="ui-option mb10 str1 xiaLa ">资料中心</a>
-                                <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                <div class="search-cont lj" style="left: 0px; display: none;width: 150%;">
                                     <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
                                     <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
@@ -113,7 +113,7 @@
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="inp()"
                                     class="ui-option mb10 str2 xiaLa">政府补助及荣耀</a>
-                                <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                <div class="search-cont lj" wid style="left: 0px; display: none;width: 130%;">
                                     <a href="javascript:void(0)" class="search-list db ell">11</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
                                     <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
@@ -124,8 +124,8 @@
                             </span>
                         </div>
                     </span>
-                    <div class="pct25  f12 dn nameSel1">
-                        <span class="searchLable"> &emsp;名称：</span>
+                    <div class="pct30 f12 dn nameSel1">
+                        <span class="searchLable">名称：</span>
                         <span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
@@ -139,8 +139,8 @@
                             </div>
                         </span>
                     </div>
-                    <div class="pct25  f12  nameSel2">
-                        <span class="searchLable"> &emsp;名称：</span>
+                    <div class="pct30  f12  nameSel2">
+                        <span class="searchLable">名称：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入">
                     </div>
                 </div>
@@ -338,7 +338,8 @@
             })
 
             $(".lj .search-list").click(function () {
-                $(this).parents(".lj").prev("a").text($(this).parents(".lj").prev("a").text() + "-" + $(this).text());
+				var te = $(this).parents(".lj").prev("a").text().split("-")[0];
+                $(this).parents(".lj").prev("a").text(te + "-" + $(this).text());
             });
         })
     </script>

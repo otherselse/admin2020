@@ -16,6 +16,25 @@
         .hoverBlue:hover {
             padding: 2px 5px;
         }
+		.xie {
+		    border: 0.5px solid #ccc;
+		    transform: rotate(35deg);
+		    position: absolute;
+		    top: 50%;
+		    width: 120%;
+		    left: -10px;
+		}
+		.leBie {
+		    position: absolute;
+		    left: 6px;
+		    bottom: -30px;
+		}
+		
+		.quYu {
+		    position: absolute;
+		    top: -30px;
+		    right: 6px;
+		}
     </style>
 </head>
 
@@ -73,17 +92,22 @@
                     </span>
                     <button type="button" class="ui-button ml20 mr20">查询</button>
                 </div>
-                <table class="ui-table tc mt30 f12" width="100%">
+                <table class="ui-table tc mt30 f12" width="100%" style="table-layout: fixed;">
                     <thead>
                         <tr>
-                            <th width="9%">&nbsp;</th>
+                            <!-- <th width="9%">&nbsp;</th> -->
+							<th rowspan="2"  class=" cent n17-bbb" style="padding: 0px; width: 100px;">
+								<div class="rel"><span class="leBie">类别</span>
+								<div class="xie"></div>
+								<span class="quYu">统计</span></div>
+							</th>
                             <th colspan="2">首页</th>
                             <th colspan="2">乐刚物流</th>
                             <th colspan="2">我的乐刚</th>
                             <th colspan="4">承运商系统</th>
                         </tr>
                         <tr>
-                            <th>统计</th>
+                            <!-- <th>统计</th> -->
                             <th width="9%">去找车</th>
                             <th width="12%">路线推荐下单</th>
                             <th width="8%">搜索</th>
@@ -95,9 +119,8 @@
                             <th width="8%">对账管理</th>
                             <th width="9%">开票收款</th>
                         </tr>
-                        <tr>
-                            <th>访客数(uv)</th>
-                            <td>0</td>
+                        <tr height="45">
+                            <td class="bgfa">访客数(uv)</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
