@@ -40,7 +40,7 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0 ">
-						<span class="pct25 dib f12"><span class="searchLable">&emsp;银行账户：</span><span class="input-selSearch pct69">
+						<span class="pct25 dib f12"><span class="searchLable">银行账户：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">中国工商银行上海宝山支行</a>
@@ -58,17 +58,15 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12 searchLable">订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct25 dib f12"><span class="searchLable">是否导出凭证：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">是</a>
+									<a href="javascript:void(0)" class="search-list db ell">否</a>
+								</div>
+							</span>
 						</span>
-						<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct25 dib f12 searchLable">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
-					</div>	
-
-
-	                <div class="f0 mb10">
-	                	<span class="pct25 dib f12 "><span class="searchLable">收付款类型：</span><span class="input-selSearch pct69">
+						<span class="pct30 dib f12 "><span class="searchLable">收付款类型：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">全部</a>
@@ -82,43 +80,42 @@
 								</div>
 							</span>
 	                	</span>
-	                	<span class="pct25 dib f12">
-	                		<span class="searchLable">是否导出凭证：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
-	                	</span>
-	                	<span class="pct25 dib f12">
+	                	<span class="pct20 dib f12">
 	                		<span class="searchLable">是否代付：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 	                	</span>
-	                	<span class="pct25 dib f12">
+					</div>
+
+
+					<div class="mb10 f0 ">
+						<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12">
 	                		<span class="searchLable">银行收支金额：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额不为0</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额为0</label>
-	                	</span>									
-	                </div>
-	                <div class="f0">
-	                	<span class="dib f12 pct50">
-	                		<span class="searchLable">&emsp;&emsp;&emsp;状态：</span>
-	                		<div class="dib selectSingle ">
-                                <a class="on" href="javscript:void(0)">全部</a>
-                                <span class="pr5 pl5 ">|</span>
-                                <a href="javscript:void(0)">有效</a>
-                                <span class="pr5 pl5 ">|</span>
-                                <a href="javscript:void(0)">无效</a>                                 
-                            </div>
-
-
-	                	</span>
-	                	<span class="dib f12 pct50">
-	                		<span class="searchLable">收（付）款时间：</span><span class="ui-input f0 pct69 range" data-type="time">
+	                	</span>	
+	                	<span class="dib f12 pct30">
+	                		<span class="searchLable">收付款时间：</span><span class="ui-input f0 pct69 range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 					</span>
 	                	</span>
-	                	
+	                	<span class="pct20 dib f12">
+	                		<span class="searchLable">状态：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有效</label>
+						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>无效</label>
+	                	</span>
+						
+					</div>	
+
+
+	                <div class="f0 mb10">	                	
+						<span class="pct25 dib f12 searchLable">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12 searchLable">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<button type="button" class="ui-button ">查询</button>               	
+	                									
 	                </div>
-	                <div class="mt20 tc">
-	                	<button type="button" class="ui-button ">查询</button>
-	                    <!-- <button type="button" class="ui-button " data-type="clear">清空</button> -->
-	                </div>
+
 
 	                <!-- search end -->
 
@@ -177,12 +174,12 @@
 		                            <td ><a href="paymentGatherDetail.html">查看</a></td>
 		                        </tr>
 		                    </tbody>
-		                    <tfoot>
+		                    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td  class="tc pt10 pb10 ">
 		                    			<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
 		                    		</td>
-		                    		<td colspan="8">合计：收款核销金额：<span class="red mr20 numFormat">234434</span>付款核销金额：<span class="red mr20 numFormat">234434</span>银行收支金额：<span class="red  numFormat">234434</span></td>
+		                    		<td colspan="8">合计：收款核销金额：<span class=" mr20 numFormat">234434</span>付款核销金额：<span class=" mr20 numFormat">234434</span>银行收支金额：<span class="  numFormat">234434</span></td>
 		                    		<td colspan="3">
 		                    			<button type="button" class="ui-button w90 mr5">导出</button>
 		                    			<button type="button" class="ui-button w90" data-type="normal">取消导出</button>
