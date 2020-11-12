@@ -1298,11 +1298,18 @@ a.wh:hover {
 
 .cs-finan-coupbg {
   height: 50px;
-  background: url(../images/finance/quanzi.png) #EF464B left top no-repeat;
-  color: #DAB68B;
+  background-color:#feebd0;
+  background-image: url(../images/finance/quanzi.png);
+  background-position:left top;
+  background-repeat:  no-repeat;
+  color: #ec302c;
   line-height: 50px
 }
 
+.cs-finan-cont{
+  padding-top:32px;
+  text-align: left;
+}
 .cs-finan-arrowR {
   position: absolute;
   right: 0;
@@ -1317,15 +1324,19 @@ a.wh:hover {
   position: absolute;
   left: 0;
   top: 0;
-  width: 3px;
-  height: 50px;
-  background: url(../images/finance/dise.png);
+  width: 64px;
+  height: 20px;
+  background: url(../images/finance/quan_red.png);
   display: inline-block;
 }
 
 .cs-finan-coupbg.coupUsed {
   background: url(../images/finance/quanzhi.png) #ccc left top no-repeat;
   color: #fff;
+}
+
+.coupUsed>.cs-finan-arrowL {
+  background: url(../images/finance/quan_grey.png);
 }
 
 .coupUsed>.cs-finan-arrowR {
