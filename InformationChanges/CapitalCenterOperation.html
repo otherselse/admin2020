@@ -69,7 +69,7 @@
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="sel(0)"
                                     class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
-                                <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                <div class="search-cont lj" style="left: 0px; display: none;width: 150%;">
                                     <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
                                     <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
@@ -82,7 +82,7 @@
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="inp()"
                                     class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
-                                <div class="search-cont pct100 lj" style="left: 0px; display: none;">
+                                <div class="search-cont lj" style="left: 0px; display: none;width: 120%;">
                                     <a href="javascript:void(0)" class="search-list db ell">11</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
                                     <a href="javascript:void(0)" class="search-list db ell">知识产权资料</a>
@@ -126,7 +126,7 @@
                     </span>
                 </div>
                 <div class="">
-                    &emsp;&emsp;备注：<textarea class="ui-textarea pct70" rows="2"></textarea>
+                    &emsp;&emsp;备注：<textarea class="ui-textarea" style="width: 75.5%;" rows="2"></textarea>
                 </div>
             </div>
 
@@ -155,7 +155,8 @@
         })
 
         $(".lj .search-list").click(function () {
-            $(this).parents(".lj").prev("a").text($(this).parents(".lj").prev("a").text() + "-" + $(this).text());
+          var te = $(this).parents(".lj").prev("a").text().split("-")[0];
+          $(this).parents(".lj").prev("a").text(te + "-" + $(this).text());
         });
     });
 

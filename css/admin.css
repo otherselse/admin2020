@@ -2536,7 +2536,7 @@ a.wh:hover {
 
 
 .min-blueK {
-  height: 16px;
+  height: 18px;
   width: 4px;
   background: #1365E8;
 }
@@ -3858,4 +3858,13 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
  background: #fafafa;
   font-weight: normal;
   border-bottom: 1px solid #cccc;
+}
+
+.ui-button[data-type='download'], .ui-button[data-type='upfile'], .ui-button[data-type='import'], .ui-button[data-type='print'] {
+  border: 1px #1365e8 solid;
+}
+.ui-button[data-type='download']:not(:disabled):hover, .ui-button[data-type='print']:not(:disabled):hover,.ui-button[data-type='upfile']:not(:disabled):hover, .ui-button[data-type='import']:not(:disabled):hover, .ui-button[data-type='smallFunc']:not(:disabled):hover {
+  background-color: #F0F6FF;
+  border-color: #1365E8;
+  color: #1365E8;
 }
