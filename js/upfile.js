@@ -1,4 +1,4 @@
-if(!Array.from){
+		if(!Array.from){
 	        Array.from = function (el) {
 	            return Array.apply(this, el);
 	        }
@@ -140,119 +140,92 @@ if(!Array.from){
 		}
 
 
+		var lg_MaxSize=1024 * 1024 * 3;   //最大文件大小 3M
+		var lg_type=1;					  //0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
+		var lg_fileType='.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|'  // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
+		myLgUpload.init(lg_MaxSize,lg_type,lg_fileType);
+		$('#file').change(function (event) {
+				var files = event.target.files;
+				myLgUpload.getFilesUpload(files,this);
+			})
+
+		$('#file3').change(function (event) {
+				var files = event.target.files;
+				myLgUpload.getFilesUpload(files,this);
+			})
+
+		$("#maxL").text((lg_MaxSize/(1024 * 1024))+"MB")
+		$("#fileT").text(",文件格式为："+lg_fileType.replace(/\|/g," "))
 
 
-
-		var lg_MaxSize = 1024 * 1024 * 3; //最大文件大小 3M
-		var lg_type = 1; //0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
-		var lg_fileType = '.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|' // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
-		myLgUpload.init(lg_MaxSize, lg_type, lg_fileType);
-		$('#file').change(function(event) {
-			var files = event.target.files;
-			myLgUpload.getFilesUpload(files, this);
-		})
-
-		$('#file3').change(function(event) {
-			var files = event.target.files;
-			myLgUpload.getFilesUpload(files, this);
-		})
-
-		$("#maxL").text((lg_MaxSize / (1024 * 1024)) + "MB")
-		$("#fileT").text(",文件格式为：" + lg_fileType.replace(/\|/g, " "))
-
-
-		function showFiles(file, key, obj) {
+		function showFiles(file, key,obj) {
 			var fd = new FileReader();
 			//调它的readAsDataURL并把原生File对象传给它，
-			fd.readAsDataURL(file) //base64
+			fd.readAsDataURL(file)//base64
 			var name = file.name;
-			if (!getFilesType(name)) {
+			if(!getFilesType(name)){
 				layer.msg('文件类型不正确');
 				return;
 			}
 
-			fd.onload = function(ev) {
-				var dropUpfileCont = $(obj).parents(".dropUpfileCont")
-				if (getFilesType(name) == "pic") { //假如是图片
-					var str = '<a data-key="' + key +
-						'" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><img src="" class="photoZM"><div class="ell">' +
-						name + '</div><i class="icon-sdel vm ml5" ></i></a>'
+			fd.onload = function (ev) {	
+				var dropUpfileCont=$(obj).parents(".dropUpfileCont")
+				if(getFilesType(name)=="pic"){ //假如是图片
+					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><img src="" class="photoZM"><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
 					dropUpfileCont.prepend(str);
-					var imgBase64 = ev.target.result; //console.log(imgBase64)   //base64 代码
-					dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").attr("src", imgBase64);
-				} else {
-					var str = '<a data-key="' + key +
-						'" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><span  class="photoZM"></span><div class="ell">' +
-						name + '</div><i class="icon-sdel vm ml5" ></i></a>'
+					var imgBase64=ev.target.result;	//console.log(imgBase64)   //base64 代码
+					dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").attr("src",imgBase64);					
+				}else{
+					var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><span  class="photoZM"></span><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
 					dropUpfileCont.prepend(str);
-					if (getFilesType(name) == "doc") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileDoc");
-					} else if (getFilesType(name) == "xlsx") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileXlsx");
-					} else if (getFilesType(name) == "pdf") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfilePdf");
-					} else if (getFilesType(name) == "rar") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileRar");
-					} else if (getFilesType(name) == "video") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileVideo");
-					} else if (getFilesType(name) == "ppt") {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfilePps");
-					} else {
-						dropUpfileCont.find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileOthers");
+					if(getFilesType(name)=="doc"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileDoc");
+					}else if(getFilesType(name)=="xlsx"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileXlsx");
+					}else if(getFilesType(name)=="pdf"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfilePdf");
+					}else if(getFilesType(name)=="rar"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileRar");
+					}else if(getFilesType(name)=="video"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileVideo");
+					}else if(getFilesType(name)=="ppt"){
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfilePps");
+					}else{						
+						dropUpfileCont.find("a[data-key="+key+"]").find(".photoZM").addClass("upfileOthers");
 					}
-
+					
 				}
-
-
+								
+				
 				//$("#imgshow").show();
 			}
 		}
 
 
-		function getFilesType(fname) {
-			if (fname.lastIndexOf('.') == -1) { //如果不存在"."  
-				layer.msg("文件不正确!");
-				return false;
-			}
-			var AllImgExt = [{
-					"name": "pic",
-					"type": ".jpg|.jpeg|.gif|.bmp|.png|"
-				},
-				{
-					"name": "doc",
-					"type": ".doc|.docx|"
-				},
-				{
-					"name": "xlsx",
-					"type": ".xls|.xlsx|.csv|"
-				},
-				{
-					"name": "pdf",
-					"type": ".pdf|"
-				},
-				{
-					"name": "rar",
-					"type": ".zip|.rar|"
-				},
-				{
-					"name": "ppt",
-					"type": ".pptx|.ppt|"
-				},
-				{
-					"name": "video",
-					"type": ".mp4|.avi|.mpg|"
-				}
-			]
+		function getFilesType(fname){
+			if (fname.lastIndexOf('.')==-1){    //如果不存在"."  
+                    layer.msg("文件不正确!");
+                    return false;
+             }
+             var AllImgExt=[
+             	{"name":"pic","type":".jpg|.jpeg|.gif|.bmp|.png|"},
+             	{"name":"doc","type":".doc|.docx|"},
+             	{"name":"xlsx","type":".xls|.xlsx|.csv|"},
+             	{"name":"pdf","type":".pdf|"},
+             	{"name":"rar","type":".zip|.rar|"},
+             	{"name":"ppt","type":".pptx|.ppt|"},
+             	{"name":"video","type":".mp4|.avi|.mpg|"}
+             ]
 
-			var extName = fname.substring(fname.lastIndexOf(".")).toLowerCase();
+             var extName = fname.substring(fname.lastIndexOf(".")).toLowerCase();
 
-			for (var i = 0; i < AllImgExt.length; i++) {
-				if (AllImgExt[i].type.indexOf(extName + "|") > -1) {
-					return AllImgExt[i].name
-				}
-			}
+             for(var i=0;i<AllImgExt.length;i++){
+             	if(AllImgExt[i].type.indexOf(extName+"|")>-1){
+             		return  AllImgExt[i].name
+             	}
+             }
 
-			return false;
+             return false;
 
 		}
 
@@ -264,28 +237,31 @@ if(!Array.from){
 		}
 
 		function doSubmit() {
-			var myarr = myLgUpload.filesObj.toArray();
-
+			var myarr=myLgUpload.filesObj.toArray();
+			
 			//上传文件
-			// if(myarr.length>0){
-			//     for(var i=0,len = myarr.length;i < len;i++){
-			//         let formData = new FormData();
-			//         formData.append('file',myarr[i]);
-			//         $.ajax({
-			//             url:'/oss/file/uploadFiles',
-			//             type:'post',
-			//             data:formData,
-			//             processData:false,
-			//             contentType:false,
-			//             success:function(data,statusText,headers){
-			//                 if(data.success){
-
-			//                 }
-			//             }
-			//         })
-			//     }
-			//     }else{
-			//         alert("请选择文件！")
-			//     }
-			//     return false;
+	    	// if(myarr.length>0){
+	     //     for(var i=0,len = myarr.length;i < len;i++){
+	     //         let formData = new FormData();
+	     //         formData.append('file',myarr[i]);
+	     //         $.ajax({
+	     //             url:'/oss/file/uploadFiles',
+	     //             type:'post',
+	     //             data:formData,
+	     //             processData:false,
+	     //             contentType:false,
+	     //             success:function(data,statusText,headers){
+	     //                 if(data.success){
+	                         
+	     //                 }
+	     //             }
+	     //         })
+	     //     }
+	     //     }else{
+	     //         alert("请选择文件！")
+	     //     }
+	     //     return false;
 		}
+
+
+	
