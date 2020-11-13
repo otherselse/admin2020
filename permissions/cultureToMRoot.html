@@ -168,8 +168,8 @@
 
       function setTable(obj,myid,chain,title){
          ////adm_optMenu 需要增加，用于找元素
-         
-          var str='<div class="f14 mt20 mb10"><span class="searchLable">已选权限：</span><a href="javascript:void(0)" class="n16_menudel adm_optMenu" id="'+myid+'" chain="'+chain+'"  onclick="delCulMenuTab(this)">'+title+'<i class="icon-menudel admIcon"></i></a><span class="dib ml20 searchLable">节点总数：3</span></div>'
+         var nodelength=1;
+          var str='<div class="f14 mt20 mb10"><span class="searchLable">已选权限：</span><a href="javascript:void(0)" class="n16_menudel adm_optMenu" id="'+myid+'" chain="'+chain+'"  onclick="delCulMenuTab(this)">'+title+'<i class="icon-menudel admIcon"></i></a><span class="dib ml20 searchLable">节点总数：'+nodelength+'</span></div>'
           str+=' <table class="ui-table tc f12  checkbox mt20" width="100%">'+
               '      <thead>'+
               '          <tr>'+
