@@ -17,6 +17,15 @@
 			.hoverBlue:hover {
             padding: 2px 5px;
         }
+		@media (max-width: 1440px) {
+		    .m-tabLimitSCroll {
+		        /* max-height: 520px; */
+		    }
+		
+		    .ui-table {
+		        min-width: 1440px;
+		    }
+		}
     </style>
 	</head>
 
@@ -109,60 +118,60 @@
 							<button type="button" class="ui-button" data-type="clear">清空</button>
 						</span>
 					</div>
-
-					<table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
-						<thead>
-							<tr class="fixTr" style="width: 1242px;">
-								<th width="2%">序号</th>
-								<th width="4%">订单号</th>
-								<th width="4%">金牌商家编号</th>
-								<th width="4%">金牌商家</th>
-								<th width="4%">区域</th>
-								<th width="5%">红利提取方式</th>
-								<th width="5%">业务类型</th>
-								<th width="6%">业务时间</th>
-								<th width="6%">金额/积分</th>
-								<th width="5%">登记前G2G钱包</th>
-								<th width="5%">登记前乐财宝</th>
-								<th width="5%">登记前分红余额</th>
-								<th width="5%">登记前加工积分</th>
-								<th width="5%">登记前加盟积分</th>
-								<th width="5%">登记前新手体验</th>
-								<th width="5%">登记前共享通</th>
-								<th width="5%">登记前融享通</th>
-								<th width="5%">登记前G2G使用金额</th>
-								<th width="5%">登记前冻结金额</th>
-								<th width="6%">备注</th>
-								<th width="4%">导出</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="2%">1</td>
-								<td width="4%">11311</td>
-								<td width="4%">10993</td>
-								<td width="4%">之华</td>
-								<td width="4%">上海</td>
-								<td width="5%">即时提取</td>
-								<td width="5%">G2G解冻</td>
-								<td width="6%">2020-08-26 10:12:46</td>
-								<td width="6%">10,000</td>
-								<td width="5%">98,009,305.18</td>
-								<td width="5%">1,101.07</td>
-								<td width="5%">-702,199.99</td>
-								<td width="5%">5</td>
-								<td width="5%">0</td>
-								<td width="5%">0</td>
-								<td width="5%">0</td>
-								<td width="5%">0</td>
-								<td width="5%">0</td>
-								<td width="5%">27,334</td>
-								<td width="6%">测试解冻</td>
-								<td width="4%">否</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<!-- <tr height="45">
+					<div class="m-tabLimitSCroll mt30 lgui-table-box fixrightTab">
+						<table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
+							<thead>
+								<tr class="fixTr" style="width: 1242px;">
+									<th width="2%">序号</th>
+									<th width="4%">订单号</th>
+									<th width="4%">金牌商家编号</th>
+									<th width="4%">金牌商家</th>
+									<th width="4%">区域</th>
+									<th width="5%">红利提取方式</th>
+									<th width="5%">业务类型</th>
+									<th width="6%">业务时间</th>
+									<th width="6%">金额/积分</th>
+									<th width="5%">登记前G2G钱包</th>
+									<th width="5%">登记前乐财宝</th>
+									<th width="5%">登记前分红余额</th>
+									<th width="5%">登记前加工积分</th>
+									<th width="5%">登记前加盟积分</th>
+									<th width="5%">登记前新手体验</th>
+									<th width="5%">登记前共享通</th>
+									<th width="5%">登记前融享通</th>
+									<th width="5%">登记前G2G使用金额</th>
+									<th width="5%">登记前冻结金额</th>
+									<th width="6%">备注</th>
+									<th width="4%">导出</th>
+								</tr>
+							</thead>
+							<tbody class="ui-thover bgwh">
+								<tr>
+									<td width="2%">1</td>
+									<td width="4%">11311</td>
+									<td width="4%">10993</td>
+									<td width="4%">之华</td>
+									<td width="4%">上海</td>
+									<td width="5%">即时提取</td>
+									<td width="5%">G2G解冻</td>
+									<td width="6%">2020-08-26 10:12:46</td>
+									<td width="6%">10,000</td>
+									<td width="5%">98,009,305.18</td>
+									<td width="5%">1,101.07</td>
+									<td width="5%">-702,199.99</td>
+									<td width="5%">5</td>
+									<td width="5%">0</td>
+									<td width="5%">0</td>
+									<td width="5%">0</td>
+									<td width="5%">0</td>
+									<td width="5%">0</td>
+									<td width="5%">27,334</td>
+									<td width="6%">测试解冻</td>
+									<td width="4%">否</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<!-- <tr height="45">
                             <td colspan="21">
                                 <div class="df pl20">
                                     <div class="min-w60">
@@ -206,41 +215,41 @@
                         </tr>
 						 -->
 
-							<tr height="45">
-								<td class="tablebtdb " colspan="8">当前页合计：</td>
-								<td class="tablebtdb " numtype="formatMoney">-2,000</td>
-								<td class="tablebtdb " numtype="formatMoney">-6,858,277.6</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb ">--</td>
-								<td class="tablebtdb ">--</td>
-							</tr>
-							<tr height="45">
-								<td class="tablebtdb " colspan="8">所有页合计：</td>
-								<td class="tablebtdb " numtype="formatMoney">-170,000</td>
-								<td class="tablebtdb " numtype="formatMoney">-545,062,796</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb " numtype="formatMoney">0</td>
-								<td class="tablebtdb ">--</td>
-								<td class="tablebtdb ">--</td>
-							</tr>
-						</tfoot>
-					</table>
-
+								<tr height="45">
+									<td class="tablebtdb " colspan="8">当前页合计：</td>
+									<td class="tablebtdb " numtype="formatMoney">-2,000</td>
+									<td class="tablebtdb " numtype="formatMoney">-6,858,277.6</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb ">--</td>
+									<td class="tablebtdb ">--</td>
+								</tr>
+								<tr height="45">
+									<td class="tablebtdb " colspan="8">所有页合计：</td>
+									<td class="tablebtdb " numtype="formatMoney">-170,000</td>
+									<td class="tablebtdb " numtype="formatMoney">-545,062,796</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb ">--</td>
+									<td class="tablebtdb ">--</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
 					<div class="tc mt20">
 						<button type="button" class="ui-button mr20">导出凭证</button>
 						<button type="button" class="ui-button mr20">取消凭证</button>

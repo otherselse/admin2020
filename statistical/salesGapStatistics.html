@@ -99,10 +99,12 @@
                             <td>40,000</td>
                             <td>0</td>
                             <td>
-                                <input type="text" class="ui-input purOut tc" placeholder="" value="637" size="8">
-                                <a href="javascript:void(0);" style="white-space:nowrap;"
-                                    onclick="submitPurOut(this,'82235F27A17D35F7E05371001FAC4FEF')" class="blue"> 提交
-                                </a>
+								<div class="tl pl10 tipclick menuhook onT" qtip-dom="dom1">
+                                    <div class="">
+                                        100000 <img src="../images/report/xiuGai.png" class=" vt ml5 vm altX"
+                                            width="12" height="12" alt="">
+                                    </div>
+                                </div>
                             </td>
                             <td>124,203</td>
                             <td>0</td>
@@ -148,9 +150,13 @@
         </div>
     </div>
     <!-- rightBar -->
-    <div class="dom1 dn">
-        请审批人员认真查看附件内容，以附件为参考依据进行审批。
-    </div>
+	
+	<div class="f12 dom1 dn">
+	    <div class="14 mb2">修改进项转出及调整</div>
+	    <input type="text" class="ui-input mb10" placeholder="请输入" autocomplete="off"><br>
+	    <button type="button" class="ui-button mr10" style="width: 67px;" data-type="small" onclick="gotoClick()">提交</button>
+	    <button type="button" class="ui-button " style="width: 67px;" data-type="clears" id="hideTip">取消</button>
+	</div>
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
