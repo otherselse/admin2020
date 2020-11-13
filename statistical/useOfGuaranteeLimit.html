@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>金牌商家担保类-统计管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <style>
-        .qtip {
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>金牌商家担保类-统计管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			.qtip {
             max-width: 680px;
         }
 
@@ -23,295 +23,287 @@
             }
         }
     </style>
-</head>
+	</head>
 
-<body class='showTip'>
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                统计管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">金牌商家担保类</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
+	<body class='showTip'>
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					统计管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">金牌商家担保类</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
 
-        <div class="ui-tab3">
-            <a href="goldMedalGuarantee.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保/承诺函上传</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="summaryOfGuarantee.html" class="ui-tab3-list re"><span class="ui-tab3-text">担保/承诺函汇总</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="useOfGuaranteeLimit.html" class="ui-tab3-list rell on"><span class="ui-tab3-text">担保额度使用汇总</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
+			<div class="ui-tab3">
+				<a href="goldMedalCommitmentLetter.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保/承诺函上传</span><i
+					 class="goldIcon ui-tab3-dot"></i></a>
+				<a href="summaryOfGuarantee.html" class="ui-tab3-list re"><span class="ui-tab3-text">担保/承诺函汇总</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="useOfGuaranteeLimit.html" class="ui-tab3-list rell on"><span class="ui-tab3-text">担保额度使用汇总</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
 
-        <div class="fix f12 bgwh ui-content ovh minH">
-            <div class="pl20 pr20 pt20 f12">
-                <div class="mb10 f0 mr20">
-                    <div class="mb10 f12 dac">
-                        <span class="dib pct25 f12" >
-                            <div class="df">
-                                <div class="searchLable min-w60">担保类别：</div>
-                                <div class="dib selectSingle">
-                                    <a class="on" href="javscript:void(0)">总额担保</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">客户担保</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">欠款担保</a>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="dib pct25 f12" >
-                            <div class="df">
-                                <div class="searchLable min-w60">合同结算：</div>
-                                <div class="selectSingle">
-                                    <a class="on" href="javscript:void(0)">全部</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">已结算</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">未结算</a>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="dib pct50 f12" >
-                            <div class="df">
-                                <div class="searchLable min-w60">&emsp;&emsp;状态：</div>
-                                <div class="selectSingle">
-                                    <a class="on" href="javscript:void(0)">全部</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">正常</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">待评审</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">过期</a>
-                                    <span class="">|</span>
-                                    <a href="javscript:void(0)">退回</a>
-                                </div>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="mb10 df f12">
-                        <span class="dib pct22">
-                            <span class="searchLable">办理区域：</span>
-                            <span class="input-selSearch pct69">
-                                <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
-                                    readonly="">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                </div>
-                            </span>
-                        </span>
-                        <span class="pct22 dib f12">
-                            <span class="searchLable">金牌商家：</span>
-                            <input type="text" class="ui-input pct69" placeholder="请输入">
-                        </span>
-                        <span class="pct22 dib f12">
-                            <span class="searchLable">客户单位：</span>
-                            <input type="text" class="ui-input pct69" placeholder="请输入">
-                        </span>
-                        <span class="pct30 dib f12">
-                            <span class="searchLable">申请日期：</span>
-                            <span class="ui-input tc f0 pct69  range" data-type="time">
-                                <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                    class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                    class="render-time pct45" readonly="">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="tc mt20 mb30">
-                        <button type="button" class="ui-button mr10">查询</button>
-                    </div>
-                </div>
-            </div>
+			<div class="fix f12 bgwh ui-content ovh minH">
+				<div class="pl20 pr20 pt20 f12">
+					<div class="mb10">
+						<span class="searchLable">担保类别：</span>
+						<span class="single">
+							<input type="hidden">
+							<button type="button" class="ui-option mr10 on">总额担保</button>
+							<button type="button" class="ui-option mr10">客服担保</button>
+							<button type="button" class="ui-option">欠款担保</button>
+						</span>
+					</div>
+					<div class="mb10 dac f12">
+						<span class="dib pct22">
+							<span class="searchLable">办理区域：</span>
+							<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">北京</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct30 dib f12">
+							<span class="searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入">
+						</span>
+						<span class="dib f1 f12">
+							<div class="df">
+								<div class="searchLable min-w60">合同结算：</div>
+								<div class="selectSingle">
+									<a class="on" href="javscript:void(0)">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">已结算</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">未结算</a>
+								</div>
+							</div>
+						</span>
+					</div>
+					<div class="mb10 dac f12">
+						<span class="pct22 dib f12">
+							<span class="searchLable">客户单位：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入">
+						</span>
+						<span class="pct30 dib f12">
+							<span class="searchLable">申请日期：</span>
+							<span class="ui-input tc f0 pct69  range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+							</span>
+						</span>
+						<span class="dib f1 f12">
+							<div class="df">
+								<div class="searchLable min-w60">&emsp;&emsp;状态：</div>
+								<div class="selectSingle">
+									<a class="on" href="javscript:void(0)">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">正常</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">待评审</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">过期</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">退回</a>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="tc mt15 mb30">
+					<button type="button" class="ui-button mr10">查询</button>
+				</div>
+				<!-- search end -->
+				<div class="lgui-table-box ml20 mr20">
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table table-cw tc f12" width="100%">
+							<thead>
+								<tr>
+									<th width="5%">序号</th>
+									<th width="5%">金牌商家</th>
+									<th width="5%">区域</th>
+									<th width="9%">担保签订额度(元)</th>
+									<th width="9%">授信额度</th>
+									<th width="7%">可用额度</th>
+									<th width="8%">占用额度</th>
+									<th width="11%">申请日期</th>
+									<th width="11%">审批日期</th>
+									<th width="12%">上传日期 </th>
+									<th width="8%">办理区域 </th>
+									<th width="5%">状态</th>
+									<th width="5%">使用详情</th>
+								</tr>
+							</thead>
+							<tbody class="ui-thover">
+								<tr>
+									<td width="5%">1</td>
+									<td width="5%">金管家</td>
+									<td width="5%">上海</td>
+									<td width="8%">5000000.00</td>
+									<td width="8%">5000000.00</td>
+									<td width="8%">
+										<span>5000000.00</span>
+									</td>
+									<td width="8%">0.00</td>
+									<td width="10%">2020-09-18</td>
+									<td width="10%">2020-09-18 13:21:35</td>
+									<td width="10%">2020-09-18</td>
+									<td width="8%">上海</td>
+									<td width="5%" class="blue">正常</td>
+									<td width="5%">
+										<a href="javascript:void(0)" class="blue" onclick="showTrMore(this)">查看</a>
+									</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+									<td colspan="13">
+										<div class="pl20 pr20">
+											<table class="ui-table checkbox f12  auto tc  mt10 mb10" width="100%">
+												<thead>
+													<tr>
+														<th width="10%">序号</th>
+														<th width="15%">订单号</th>
+														<th width="15%">合同号</th>
+														<th width="15%">使用(返回)金额</th>
+														<th width="15%">使用(返还)时间 </th>
+														<th width="15%">合同结算状态</th>
+														<th width="15%">类型 </th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>61460</td>
+														<td>DDC(22)-20001780</td>
+														<td>10</td>
+														<td>2020-10-14</td>
+														<td>未结算</td>
+														<td>额度扣除使用记录</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="7" class="bgfa">
+															使用(返回)金额汇总：<span id="conMoneyHZ" class="red">1640343.46</span>
+														</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+									</td>
+								</tr><!-- 隐藏内容end -->
+								<tr>
+									<td width="5%">1</td>
+									<td width="5%">金管家</td>
+									<td width="5%">上海</td>
+									<td width="8%">5000000.00</td>
+									<td width="8%">5000000.00</td>
+									<td width="8%">
+										<span>5000000.00</span>
+									</td>
+									<td width="8%">0.00</td>
+									<td width="10%">2020-09-18</td>
+									<td width="10%">2020-09-18 13:21:35</td>
+									<td width="10%">2020-09-18</td>
+									<td width="8%">上海</td>
+									<td width="5%" class="blue">过期</td>
+									<td width="5%">
+										<a href="javascript:void(0)" class="blue" onclick="showTrMore(this)">--</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- table end -->
+				<script type="text/javascript" src="../js/pagelist.js"></script>
+				<div class="mb20"></div>
+			</div>
+		</div>
 
-            <!-- search end -->
-            <div class="lgui-table-box ml20 mr20">
-                <div class="lgui-table-body mt-1">
-                    <table class="ui-table table-cw tc f12" width="100%">
-                        <thead>
-                            <tr>
-                                <th width="5%">序号</th>
-                                <th width="5%">金牌商家</th>
-                                <th width="5%">区域</th>
-                                <th width="9%">担保签订额度(元)</th>
-                                <th width="9%">授信额度</th>
-                                <th width="7%">可用额度</th>
-                                <th width="8%">占用额度</th>
-                                <th width="11%">申请日期</th>
-                                <th width="11%">审批日期</th>
-                                <th width="12%">上传日期 </th>
-                                <th width="8%">办理区域 </th>
-                                <th width="5%">状态</th>
-                                <th width="5%">使用详情</th>
-                            </tr>
-                        </thead>
-                        <tbody class="ui-thover">
-                            <tr>
-                                <td width="5%">1</td>
-                                <td width="5%">金管家</td>
-                                <td width="5%">上海</td>
-                                <td width="8%">5000000.00</td>
-                                <td width="8%">5000000.00</td>
-                                <td width="8%">
-                                    <span>5000000.00</span>
-                                </td>
-                                <td width="8%">0.00</td>
-                                <td width="10%">2020-09-18</td>
-                                <td width="10%">2020-09-18 13:21:35</td>
-                                <td width="10%">2020-09-18</td>
-                                <td width="8%">上海</td>
-                                <td width="5%" class="blue">正常</td>
-                                <td width="5%">
-                                    <a href="javascript:void(0)" class="blue" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="13">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table checkbox f12  auto tc  mt10 mb10" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th width="10%">序号</th>
-                                                    <th width="15%">订单号</th>
-                                                    <th width="15%">合同号</th>
-                                                    <th width="15%">使用(返回)金额</th>
-                                                    <th width="15%">使用(返还)时间 </th>
-                                                    <th width="15%">合同结算状态</th>
-                                                    <th width="15%">类型 </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>61460</td>
-                                                    <td>DDC(22)-20001780</td>
-                                                    <td>10</td>
-                                                    <td>2020-10-14</td>
-                                                    <td>未结算</td>
-                                                    <td>额度扣除使用记录</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="7" class="bgfa">
-                                                        使用(返回)金额汇总：<span id="conMoneyHZ" class="red">1640343.46</span>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
-                            <tr>
-                                <td width="5%">1</td>
-                                <td width="5%">金管家</td>
-                                <td width="5%">上海</td>
-                                <td width="8%">5000000.00</td>
-                                <td width="8%">5000000.00</td>
-                                <td width="8%">
-                                    <span>5000000.00</span>
-                                </td>
-                                <td width="8%">0.00</td>
-                                <td width="10%">2020-09-18</td>
-                                <td width="10%">2020-09-18 13:21:35</td>
-                                <td width="10%">2020-09-18</td>
-                                <td width="8%">上海</td>
-                                <td width="5%" class="blue">过期</td>
-                                <td width="5%">
-                                    <a href="javascript:void(0)" class="blue" onclick="showTrMore(this)">--</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- table end -->
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-            <div class="mb20"></div>
-        </div>
-    </div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script>
+			$(function() {
+				$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); // 静态页面定位使用，开发使用title等定位
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					position: {
+						my: 'top left',
+						at: 'bottom center'
+					},
+					// position: {
+					//     viewport: $(window)
+					// },;
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded', //
+					},
+				});
+			})
+		</script>
+		<script>
+			//时间范围
+			laydate.render({
+				elem: '#time1',
+				range: true,
+				theme: 'lgblue',
+				trigger: 'click',
+				value: '2020-06-04      -      2020-06-08'
 
-            //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                position: {
-                    my: 'top left',
-                    at: 'bottom center'
-                },
-                // position: {
-                //     viewport: $(window)
-                // },;
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded',  //
-                },
-            });
-        })
-    </script>
-    <script>
-        //时间范围
-        laydate.render({
-            elem: '#time1'
-            , range: true
-            , theme: 'lgblue'
-            , trigger: 'click'
-            , value: '2020-06-04      -      2020-06-08'
+					,
+				change: function(value, date, endDate) {
+					console.log(value); //得到日期生成的值，如：2017-08-18
+					console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+					console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+				}
+			});
 
-            , change: function (value, date, endDate) {
-                console.log(value); //得到日期生成的值，如：2017-08-18
-                console.log(date.year); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
-                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
-            }
-        });
+			var time01 = laydate.render({
+				elem: '#time01',
+				theme: 'lgblue',
+				btns: ['clear', 'confirm'],
+				trigger: 'click',
+				done: function(value, date) {
+					var myobj = {
+						year: date.year,
+						month: date.month - 1,
+						date: date.date,
+					}
+					time02.config.min = myobj
+					time02.config.value = myobj
 
-        var time01 = laydate.render({
-            elem: '#time01'
-            , theme: 'lgblue'
-            , btns: ['clear', 'confirm']
-            , trigger: 'click'
-            , done: function (value, date) {
-                var myobj = {
-                    year: date.year,
-                    month: date.month - 1,
-                    date: date.date,
-                }
-                time02.config.min = myobj
-                time02.config.value = myobj
-
-            }
-        });
-
-    </script>
-</body>
+				}
+			});
+		</script>
+	</body>
 
 </html>
