@@ -25,146 +25,6 @@
             line-height: 30px;
         }
     </style>
-	
-	<style>
-		a {
-			text-decoration: none
-		}
-	
-		a:hover {
-			color: #2172F5
-		}
-	
-		#dropUpfile {
-			width: 150px;
-			height: 150px;
-			margin: 0 auto;
-			background-color: #fafafa;
-			position: relative;
-			overflow: hidden;
-			color: #1365E8;
-			box-sizing: border-box;
-			padding: 20px;
-			font-size: 12px;
-			display: inline-block;
-		}
-	
-		#dropUpfile:hover {
-			background-color: #F0F8FF
-		}
-	
-		#file {
-			line-height: 100%;
-			width: 100%;
-			height: 100%;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			right: 0;
-			font-size: 100px
-		}
-	
-		#imgshow {
-			vertical-align: top;
-			display: inline-block;
-		}
-	
-		.upfileBg {
-			width: 150px;
-			height: 150px;
-			border: 1px #efefef solid;
-			display: inline-block;
-			position: relative;
-			box-sizing: border-box;
-			font-size: 12px;
-			color: #808080;
-			vertical-align: top;
-			margin-bottom: 10px;
-			text-align: center
-		}
-	
-		.photoZM {
-			width: 140px;
-			height: 120px;
-			display: inline-block;
-		}
-	
-	
-		.icon-sdel {
-			width: 24px;
-			height: 24px;
-			display: inline-block;
-			position: absolute;
-			right: -6px;
-			top: -6px;
-			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAgVBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz////Q0NDx8fHo6Oju7u76+vr39/fl5eXY2NjS0tLz8/PU1NQFDf5tAAAAHnRSTlMA6I3B9rephnEJ++Hbx6CYelBKNyQZDrJYAe7RZi79Cix+AAAAy0lEQVQoz52ORwKDIBBFB7DHqNH0ArFGc/8Dxi8qmqVvQXnD8Ie2c07dyOHX07/3PXtnBUy4x7U/PORI6C3905IGfjPv4Q3JnBv2tzeU3thryoXoSvim+vRrpCdIBQq5yqUsVNWixSXg7iTIVdGoupXAJuAEOOO5ysekvS5ITaMUckyBs7GhK5EDBIHrXvsaOcNn95jAiWOqasgtFca9ZKQrGOurc+GtlEY8uSKiGb70tk+GhE06iM+0JItDaOYcaM3tmFyEsHnm01Z+Qo8gMu2en7QAAAAASUVORK5CYII=') no-repeat;
-		}
-	
-		.upfileBg:hover {
-			border-color: #2172F5
-		}
-	
-		.upfileBg:hover .icon-sdel {
-			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAmVBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmb////W1tZ1dXVsbGzq6uq9vb23t7eJiYlwcHDy8vLb29vT09PLy8vIyMiwsLB4eHjj4+OCgoJ8fHxBzwGmAAAAH3RSTlMA6I23qYZxCfv34dvHwqCYelBKNxkO8b6yWCbRZi4gLbR2JAAAANhJREFUKM+djlcOgzAQRG3TQyiB9LZLIL3n/oeL1zTDJ08CiTesZthwZokVmmI17XvHNkaeywNr3/WTDVT4tu63HrQI7f856MRNry+/LqU8yIfv6l4Styf5U3GW73CtgmRBBxlm0uP1RyeWCqwRSPI7Hl9YvIEwVGC6oDgiZlXTuAyg5IX4BD0QvDq4PfCeA7FQwWpMFScscpALaO88UsFU0Nzrh3ofSHOXKSsTmvU9AHHOAbyEVdjQIWQNQveGw1piXms3mjGdNPJJc3PCeqzjZRAYInXYUP4aRiHCLZKAxwAAAABJRU5ErkJggg==');
-		}
-	
-	
-		.ui-button.w60 {
-			min-width: 60px;
-		}
-	
-		#noFileReader {
-			height: 100px;
-			line-height: 100px;
-			text-align: center
-		}
-	
-		.upfileDoc {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) 0 0;
-		}
-	
-		.upfileXlsx {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) -140px 0;
-		}
-	
-		.upfilePdf {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) -280px 0;
-		}
-	
-		.upfileRar {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) -420px 0;
-		}
-	
-		.upfileVideo {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) -560px 0;
-		}
-	
-		.upfileOthers {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) -700px 0;
-		}
-	
-		.upfilePps {
-			width: 140px;
-			height: 120px;
-			background: url(../images/upfiles/upfileIcon.png) 0 -120px;
-		}
-	
-		#dropUpfileCont {
-			min-height: 150px;
-		}
-	</style>
 </head>
 
 <body class="showTip">
@@ -344,6 +204,16 @@
             layer.close(page);
         });
     }
+	// 删除图片方法
+	function delFile(obj) {
+		var key = Number($(obj).attr("data-key"));
+		var l = $("#imgshow").find(".ui-files").length;
+		$(obj).remove();
+		myLgUpload.filesObj.remove(key);
+		if (l == 1) {
+			$("#imgshow").hide();
+		}
+	}
 
     setTime4();
     var endtime = '', starttime = '';
