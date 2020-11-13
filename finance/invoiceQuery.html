@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
-	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-	<title>贸易开票-财务管理-乐刚智能云系统</title>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-	
-	
-</head>
-<body class="showTip fixtab">
-	<script type="text/javascript" src="../js/topBar.js"></script>	
-	<!-- 头部菜单 -->
-	<script type="text/javascript" src="../js/menu.js"></script>
-	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-	<script type="text/javascript" src="../js/leftBar.js"></script>	
-	<!-- 左侧菜单 -->
-	
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>贸易开票-财务管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-	<div class="rightBar">
+
+	</head>
+	<body class="showTip fixtab report">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+
+
+		<div class="rightBar">
 			<div class="nav ovh">
 				<div class="l gga">
-		            <a href="../index/index.html" class="gga" >首页</a>
-		            <span class="dib pl5 pr5 ">/</span>
-		            财务管理
-		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">贸易开票</span>
-		        </div>
-		        <div class="r m_dn">
-	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-	        	</div>
-	        </div>
-	        <div class="ui-tab3">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					财务管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">贸易开票</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
 				<a href="invoiceQuery.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">发票查询</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="invoiceQueryAll.html" class="ui-tab3-list rel"><span class="ui-tab3-text">开票汇总表</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="makeVoiceList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">开票明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
@@ -44,15 +45,18 @@
 				<a href="expressPrint.html" class="ui-tab3-list rel"><span class="ui-tab3-text">快递单打印记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="finaceBackList.html" class="ui-tab3-list rel"><span class="ui-tab3-text">发票退回记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
-			<div class="ui-content ovh minH">				
+			<div class="ui-content ovh minH">
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct22 dib f12 searchLable">发票号码：<input type="text" class="ui-input pct59" placeholder="只能输入数字" autocomplete="off"></span>
-						<span class="pct22 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-						
+						<span class="pct22 dib f12 searchLable">发票号码：<input type="text" class="ui-input pct59" placeholder="只能输入数字"
+							 autocomplete="off"></span>
+						<span class="pct22 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入"
+							 autocomplete="off"></span>
+
 						<span class="pct30 dib f12 searchLable">&emsp;&emsp;订单日期：<span class="ui-input tc f0 pct69  range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-						</span></span>	
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+							</span></span>
 						<span class="pct22 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off" readonly="">
 								<div class="search-cont">
@@ -65,7 +69,6 @@
 								</div>
 							</span>
 						</span>
-
 					</div>
 					<div class="mb15 f0">
 						<span class="pct22 dib f12"><span class="searchLable">单位名称：</span><span class="input-selSearch pct59">
@@ -80,130 +83,144 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct22 dib f12 searchLable">&emsp;订单号：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>	
-						
-						<span class="pct30 dib f12 searchLable">开票申请时间：<span class="ui-input tc f0 pct69  range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-						</span></span>					
-						
-						
-					</div>			
+						<span class="pct22 dib f12 searchLable">&emsp;订单号：<input type="text" class="ui-input pct59" placeholder="请输入"
+							 autocomplete="off"></span>
 
-	                <div class="">
-						<span class="searchLable">业务类型：</span><div class="dib selectSingle mr40">
-	                                    <a class="on" href="javscript:void(0)">全部</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">直购</a>	                                    
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">现款</a>
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">款到卸货</a>	                                    
-	                                    <span class="pr5 pl5 ">|</span>
-	                                    <a href="javscript:void(0)">欠款</a>
-	                                </div>
-	                	<span class="f12"><span class="searchLable">是否已开票：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
-	                	<span class=" dib f12"><span class="searchLable">是否超额提交：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
+						<span class="pct30 dib f12 searchLable">开票申请时间：<span class="ui-input tc f0 pct69  range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+							</span></span>
+
+
+					</div>
+
+					<div class="">
+						<span class="searchLable">业务类型：</span>
+						<div class="dib selectSingle mr40">
+							<a class="on" href="javscript:void(0)">全部</a>
+							<span class="pr5 pl5 ">|</span>
+							<a href="javscript:void(0)">直购</a>
+							<span class="pr5 pl5 ">|</span>
+							<a href="javscript:void(0)">现款</a>
+							<span class="pr5 pl5 ">|</span>
+							<a href="javscript:void(0)">款到卸货</a>
+							<span class="pr5 pl5 ">|</span>
+							<a href="javscript:void(0)">欠款</a>
+						</div>
+						<span class="f12"><span class="searchLable">是否已开票：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
+						<span class=" dib f12"><span class="searchLable">是否超额提交：</span>
+							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+							<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
 						<span class=" dib f12"><span class="searchLable">采购发票是否收回：</span>
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
 
-	                </div>
 
-	                <div class="tc  mt20 mb20">
+					</div>
+
+					<div class="tc  mt20 mb20">
 						<button type="button" class="ui-button ">查询</button>
-	                </div>
+					</div>
 
-	                <!-- search end -->
+					<!-- search end -->
 
 					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll tabLimitSCroll" >
-						<div class="lgui-table-header">
-							<table class="ui-table tc table-cw f12 " width="100%">
-		                    <thead>
-		                        <tr>
-		                            <th width="11%" class="tl"><div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>单位名称</div></th>
-		                            <th width="5%">客户分类</th>
-		                            <th width="5%">金牌商家</th>
-		                            <th width="5%">区域</th>
-		                            <th width="4%">订单号</th>
-		                            <th width="7%">开票总重量</th> 
-		                            <th width="7%">开票总金额</th>
-		                            <th width="7%">不含税金额</th>  
-		                            <th width="7%">销项税额</th>
-		                            <th width="8%">申请时间</th> 
-		                            <th width="7%">业务类型</th>
-		                            <th width="7%">订单日期</th>
-		                            <th width="6%">采购发票<br/>是否收回</th>
-		                            <th width="5%">取票方式</th>
-		                            <th width="9%">操作</th>
-		                        </tr>
-		                    </thead>
-		                </table>
-
+						<div class="lgui-table-header table-cw">
+							<table class="ui-table tc f12 " width="100%">
+								<thead>
+									<tr>
+										<th width="11%" class="tl">
+											<div class="pl10 "><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
+													 onclick="setAll(this)"></i>单位名称</div>
+										</th>
+										<th width="5%">客户分类</th>
+										<th width="5%">金牌商家</th>
+										<th width="5%">区域</th>
+										<th width="5%">订单号</th>
+										<th width="7%">开票总重量</th>
+										<th width="7%">开票总金额</th>
+										<th width="7%">不含税金额</th>
+										<th width="7%">销项税额</th>
+										<th width="7%">申请时间</th>
+										<th width="7%">业务类型</th>
+										<th width="7%">订单日期</th>
+										<th width="6%">采购发票<br />是否收回</th>
+										<th width="5%">取票方式</th>
+										<th width="9%">操作</th>
+									</tr>
+								</thead>
+							</table>
 						</div>
 						<div class="lgui-table-body mt-1">
-							<table class="ui-table tc f12  table-cw" width="100%">
-		                    <tbody class="ui-thover">
-		                    	 <tr><td width="11%" class="tl"><div class="pl10 table_ell "><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i><span class="ell" title="中国邮政运输集团">中国邮政运输集团</span> </div></td>
-		                            <td width="5%">终端客户</td>
-		                            <td width="5%">李思思</th>
-		                            <td width="5%">上海</td>
-		                            <td width="4%">22221</td>
-		                            <td width="7%">100</td>
-		                            <td width="7%" class="numFormat">1232323</td>
-		                            <td width="7%" class="numFormat">1033340</td>
-		                            <td width="7%" class="numFormat">333333100</td>
-		                            <td width="8%"> 2020-04-22 11:11:11</td>
-		                            <td width="7%" >现款业务</td>
-		                            <td width="7%">2020-04-22 11:11:11</td>
-                       				<td width="6%">是</td>
-		                            <td width="5%"><a href="javascript:void(0)" onclick="showTrPost(this)">公司邮寄</a></td>
-		                            <td width="9%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" onclick="showTrDZh(this)" >对账函</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)" class="tipclick" qtip-dom="dom1">退回</a></td>
-		                        </tr>
-		                        <tr class="hideTr dn">
-		                        	<td colspan="15">
-		                        		<div class="pl20 pr20">
-		                        			<div class=" mb10 tl">
-		                        				<button class="ui-button w90" data-type="normal" type="button" small-type="small">批量开票</button>
-		                        			</div>
-		                        			<div class="mb10 tl">
-												<span class="blue f18 mr20 b">NO.1</span>
-												<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">确认开票</button>
-												<button class="ui-button w90 mr5" disabled="" data-type="normal" type="button" small-type="small">打印发票</button>
-												<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">作废发票</button>
-												<button class="ui-button w90" data-type="normal" type="button" small-type="small">红冲发票</button>
-		                        			</div>
-											<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
-		              	                         <tbody>
-		                                            <tr class="resource-table">
-		                                            	<td class="title" width="15%">发票编号：</td>
-		                                            	<td width="35%" class="cont"><input type="text" value=""  class="pct30 ui-input lh30" placeholder="请输入" />
-		                                            	<a href="#" class="g28 ml5 h_edit"><i class="admIcon  vm saveIcon_b"></i>保存</a>
-		                                            	</td>
-		                                            	<td class="title" width="15%">发票开具日期：</td>
-		                                            	<td width="35%" class="cont">
-		                                            		<span class="ui-input pct30 " data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time " autocomplete="off" ></span>
-		                                            		<a href="#" class="g28 ml5 h_edit"><i class="admIcon  vm saveIcon_b"></i>保存</a>
-		                                            	</td>
-		                                            </tr>
-		                                             <tr class="resource-table">
-		                                            	<td class="title">购货单位名称：</td>
-		                                            	<td class="cont">海南行政单位</td>
-		                                            	<td class="title">购货单位地址电话：</td>
-		                                            	<td class="cont">上海市静安区wangzhi1街道 123456</td>
-		                                            </tr>
-		                                            <tr class="resource-table">
-		                                            	<td class="title">购货单位开户银行及帐号：</td>
-		                                            	<td class="cont">中国建设银行(232442323234324323)</td>
-		                                            	<td class="title">购货单位税务登记号：</td>
-		                                            	<td class="cont">65523358852525789452</td>
-		                                            </tr>
-		                                        </tbody>
-		                                    </table>
-		                        			<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
+							<table class="ui-table table-cw tc f12 " width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="11%" class="tl">
+											<div class="pl10 table_ell"><i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity"
+													 name="checkbox"></i><span class="ell" title="中国邮政运输集团">中国邮政运输集团</span> </div>
+										</td>
+										<td width="5%">终端客户</td>
+										<td width="5%">李思思</td>
+										<td width="5%">上海</td>
+										<td width="5%">22221</td>
+										<td width="7%">100</td>
+										<td width="7%" class="numFormat">1232323</td>
+										<td width="7%" class="numFormat">1033340</td>
+										<td width="7%" class="numFormat">333333100</td>
+										<td width="7%">2020-04-22 11:11：11</td>
+										<td width="7%">现款业务</td>
+										<td width="7%">2020-04-22 11:11：11</td>
+										<td width="6%">是</td>
+										<td width="5%"><a href="javascript:void(0)" onclick="showTrPost(this)">公司邮寄</a></td>
+										<td width="9%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a><span class="ml5 mr5 dib gd9">|</span><a
+											 href="javascript:void(0)" onclick="showTrDZh(this)">对账函</a><span class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0)"
+											 class="tipclick" qtip-dom="dom1">退回</a>
+										</td>
+									</tr>
+									<tr class="hideTr dn">
+										<td colspan="15">
+											<div class="pl20 pr20">
+												<div class=" mb10 tl">
+													<button class="ui-button w90" data-type="normal" type="button" small-type="small">批量开票</button>
+												</div>
+												<div class="mb10 tl">
+													<span class="blue f18 mr20 b">NO.1</span>
+													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">确认开票</button>
+													<button class="ui-button w90 mr5" disabled="" data-type="normal" type="button" small-type="small">打印发票</button>
+													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">作废发票</button>
+													<button class="ui-button w90" data-type="normal" type="button" small-type="small">红冲发票</button>
+												</div>
+												<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
+													<tbody>
+														<tr class="resource-table">
+															<td class="title" width="15%">发票编号：</td>
+															<td width="35%" class="cont"><input type="text" value="" class="w200 ui-input lh30" placeholder="请输入" />
+																<a href="#" class="g28 ml5 h_edit"><i class="admIcon  vm saveIcon_b"></i>保存</a>
+															</td>
+															<td class="title" width="15%">发票开具日期：</td>
+															<td width="35%" class="cont">
+																<span class="ui-input w200" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time "
+																	 autocomplete="off"></span>
+																<a href="#" class="g28 ml5 h_edit"><i class="admIcon  vm saveIcon_b"></i>保存</a>
+															</td>
+														</tr>
+														<tr class="resource-table">
+															<td class="title">购货单位名称：</td>
+															<td class="cont">海南行政单位</td>
+															<td class="title">购货单位地址电话：</td>
+															<td class="cont">上海市静安区wangzhi1街道 123456</td>
+														</tr>
+														<tr class="resource-table">
+															<td class="title">购货单位开户银行及帐号：</td>
+															<td class="cont">中国建设银行(232442323234324323)</td>
+															<td class="title">购货单位税务登记号：</td>
+															<td class="cont">65523358852525789452</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
 													<thead>
 														<tr>
 															<th width="10%">品名</th>
@@ -214,35 +231,36 @@
 															<th width="10%">含税金额(元)</th>
 															<th width="10%">税率</th>
 														</tr>
-														<tbody class="ui-thover">
-															<tr>
-																<td>Z向板</td>
-																<td>0.600*1200*C</td>
-																<td>BVA-Z25</td>
-																<td>5</td>
-																<td>500</td>
-																<td>500</td>
-																<td>45</td>
-															</tr>
-															<tr>
-																<td>Z向板</td>
-																<td>0.600*1200*C</td>
-																<td>BVA-Z25</td>
-																<td>5</td>
-																<td>500</td>
-																<td>500</td>
-																<td>45</td>
-															</tr>
-														</tbody>
-														<tfoot>
-															<tr height="40">
-																<td colspan="3">合计</td>
-																<td>5</td>
-																<td>--</td>
-																<td>500</td>
-																<td>--</td>
-															</tr>
-														</tfoot>
+													</thead>
+													<tbody class="ui-thover">
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+															<td>45</td>
+														</tr>
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+															<td>45</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr height="40">
+															<td colspan="3">合计</td>
+															<td>5</td>
+															<td>--</td>
+															<td>500</td>
+															<td>--</td>
+														</tr>
+													</tfoot>
 												</table>
 												<!-- list1 end -->
 
@@ -250,86 +268,86 @@
 													<span class="blue f18 mr20 b">NO.2</span>
 													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">确认开票</button>
 													<button class="ui-button w90 mr5" data-type="normal" type="button" small-type="small">打印发票</button>
-													<button class="ui-button w90 mr5"  disabled="" data-type="normal" type="button" small-type="small">作废发票</button>
+													<button class="ui-button w90 mr5" disabled="" data-type="normal" type="button" small-type="small">作废发票</button>
 													<button class="ui-button w90" data-type="normal" type="button" small-type="small">红冲发票</button>
-			                        			</div>
+												</div>
 												<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
-			              	                         <tbody>
-			                                            <tr class="resource-table">
-			                                            	<td class="title" width="15%">发票编号：</td>
-			                                            	<td width="35%" class="cont"><input type="text" class="pct30 ui-input lh30" placeholder="请输入" value="12345" />
-			                                            	<a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon_b  vm"></i>修改</a>
-			                                            	</td>
-			                                            	<td class="title" width="15%">发票开具日期：</td>
-			                                            	<td width="35%" class="cont"><span class="ui-input pct30 " data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time  lh30 " autocomplete="off" value="2020-06-10" ></span>
-			                                            		<a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon_b  vm"></i>修改</a>
-			                                            	</td>
-			                                            </tr>
-			                                             <tr class="resource-table">
-			                                            	<td class="title">购货单位名称：</td>
-			                                            	<td class="cont">海南行政单位</td>
-			                                            	<td class="title">购货单位地址电话：</td>
-			                                            	<td class="cont">上海市静安区wangzhi1街道 123456</td>
-			                                            </tr>
-			                                            <tr class="resource-table">
-			                                            	<td class="title">购货单位开户银行及帐号：</td>
-			                                            	<td class="cont">中国建设银行(232442323234324323)</td>
-			                                            	<td class="title">购货单位税务登记号：</td>
-			                                            	<td class="cont">65523358852525789452</td>
-			                                            </tr>
-			                                        </tbody>
-			                                    </table>
-			                        			<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
-														<thead>
-															<tr>
-																<th width="10%">品名</th>
-																<th width="10%">规格</th>
-																<th width="10%">牌号</th>
-																<th width="10%">重量(吨)</th>
-																<th width="10%">含税单价(元)</th>
-																<th width="10%">含税金额(元)</th>
-																<th width="10%">税率</th>
-															</tr>
-															<tbody class="ui-thover">
-																<tr>
-																	<td>Z向板</td>
-																	<td>0.600*1200*C</td>
-																	<td>BVA-Z25</td>
-																	<td>5</td>
-																	<td>500</td>
-																	<td>500</td>
-																	<td>45</td>
-																</tr>
-																<tr>
-																	<td>Z向板</td>
-																	<td>0.600*1200*C</td>
-																	<td>BVA-Z25</td>
-																	<td>5</td>
-																	<td>500</td>
-																	<td>500</td>
-																	<td>45</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr height="40">
-																	<td colspan="3">合计</td>
-																	<td>5</td>
-																	<td>--</td>
-																	<td>500</td>
-																	<td>--</td>
-																</tr>
-															</tfoot>
-													</table>
-													<!-- list2 end -->
-
-
-		                        		</div>
-		                        	</td>
-		                        </tr>
-		                         <tr class="hideTr dn dzh">
-		                        	<td colspan="15">
-		                        		<div class="pl20 pr20">
-		                        			<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
+													<tbody>
+														<tr class="resource-table">
+															<td class="title" width="15%">发票编号：</td>
+															<td width="35%" class="cont"><input type="text" class="w200 ui-input lh30" placeholder="请输入" value="12345" />
+																<a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon_b  vm"></i>修改</a>
+															</td>
+															<td class="title" width="15%">发票开具日期：</td>
+															<td width="35%" class="cont"><span class="ui-input w200 " data-type="time"><input type="text"
+																	 placeholder="选择时间" readonly="" class="render-time  lh30 " autocomplete="off" value="2020-06-10"></span>
+																<a href="#" class="g28 ml5 h_edit"><i class="admIcon editIcon_b  vm"></i>修改</a>
+															</td>
+														</tr>
+														<tr class="resource-table">
+															<td class="title">购货单位名称：</td>
+															<td class="cont">海南行政单位</td>
+															<td class="title">购货单位地址电话：</td>
+															<td class="cont">上海市静安区wangzhi1街道 123456</td>
+														</tr>
+														<tr class="resource-table">
+															<td class="title">购货单位开户银行及帐号：</td>
+															<td class="cont">中国建设银行(232442323234324323)</td>
+															<td class="title">购货单位税务登记号：</td>
+															<td class="cont">65523358852525789452</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
+													<thead>
+														<tr>
+															<th width="10%">品名</th>
+															<th width="10%">规格</th>
+															<th width="10%">牌号</th>
+															<th width="10%">重量(吨)</th>
+															<th width="10%">含税单价(元)</th>
+															<th width="10%">含税金额(元)</th>
+															<th width="10%">税率</th>
+														</tr>
+													</thead>
+													<tbody class="ui-thover">
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+															<td>45</td>
+														</tr>
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+															<td>45</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr height="40">
+															<td colspan="3">合计</td>
+															<td>5</td>
+															<td>--</td>
+															<td>500</td>
+															<td>--</td>
+														</tr>
+													</tfoot>
+												</table>
+												<!-- list2 end -->
+											</div>
+										</td>
+									</tr>
+									<tr class="hideTr dn dzh">
+										<td colspan="15">
+											<div class="pl20 pr20">
+												<table class="ui-table tc f12 auto mt10 showShadow mb30" width="100%">
 													<thead>
 														<tr>
 															<th width="10%">品名</th>
@@ -339,161 +357,166 @@
 															<th width="10%">单价(元)</th>
 															<th width="10%">金额(元)</th>
 														</tr>
-														<tbody class="ui-thover">
-															<tr>
-																<td>Z向板</td>
-																<td>0.600*1200*C</td>
-																<td>BVA-Z25</td>
-																<td>5</td>
-																<td>500</td>
-																<td>500</td>
-															</tr>
-															<tr>
-																<td>Z向板</td>
-																<td>0.600*1200*C</td>
-																<td>BVA-Z25</td>
-																<td>5</td>
-																<td>500</td>
-																<td>500</td>
-															</tr>
-														</tbody>
-														<tfoot>
-															<tr height="40" class="tl">
-																<td colspan="6">
-																	<div class="pl20">附件列表：<a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
-																</td>
-															</tr>
-															<tr height="40" class="tl">
-																<td colspan="6">
-																	<div class="pl20">开票总金额(签收+补差)：<span class="numFormat">1111121</span></div>
-																</td>
-															</tr>
-														</tfoot>
+													</thead>
+													<tbody class="ui-thover">
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+														</tr>
+														<tr>
+															<td>Z向板</td>
+															<td>0.600*1200*C</td>
+															<td>BVA-Z25</td>
+															<td>5</td>
+															<td>500</td>
+															<td>500</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr height="40" class="tl">
+															<td colspan="6">
+																<div class="pl20">附件列表：<a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></div>
+															</td>
+														</tr>
+														<tr height="40" class="tl">
+															<td colspan="6">
+																<div class="pl20">开票总金额(签收+补差)：<span class="numFormat">1111121</span></div>
+															</td>
+														</tr>
+													</tfoot>
 												</table>
-		                        		</div>
-		                        	</td>
-		                        </tr><!-- 对账函 end -->
-		                        <tr class="hideTr dn post">
-		                        	<td colspan="15">
-		                        		<div class="pl20 pr20">
-		                        			<div class="bgwh p20">
-		                        			<div class="mt10 f14 tl mb10"><span class="t_linerbg"><span class="pl10 searchLable">快递单信息（请先打印后录入信息）</span></span></div>
-		                        			<div class="mb10 f0 tl">
-		                        				<span class="dib pct50 f12 mb10">快递单号：<input type="text" class="ui-input pct60" value="123456" /></span>
-		                        				<span class="dib pct50 f12 mb10">身份证号：<input type="text" class="ui-input pct60" value="123456789012345678" /></span>
-		                        				<span class="dib pct50 f12 mb10">&emsp;联系人：<input type="text" class="ui-input pct60" value="王之于" /></span>
-		                        				<span class="dib pct50 f12 mb10">联系地址：<input type="text" class="ui-input pct60" value="上海市静安区wangzhi1街道" /></span>
+											</div>
+										</td>
+									</tr><!-- 对账函 end -->
+									<tr class="hideTr dn post">
+										<td colspan="15">
+											<div class="pl20 pr20">
+												<div class="bgwh p20">
+													<div class="mt10 f14 tl mb10"><span class="t_linerbg"><span class="pl10 searchLable">快递单信息（请先打印后录入信息）</span></span></div>
+													<div class="mb10 f0 tl">
+														<span class="dib pct50 f12 mb10">快递单号：<input type="text" class="ui-input pct60" value="123456" /></span>
+														<span class="dib pct50 f12 mb10">身份证号：<input type="text" class="ui-input pct60" value="123456789012345678" /></span>
+														<span class="dib pct50 f12 mb10">&emsp;联系人：<input type="text" class="ui-input pct60" value="王之于" /></span>
+														<span class="dib pct50 f12 mb10">联系地址：<input type="text" class="ui-input pct60" value="上海市静安区wangzhi1街道" /></span>
 
-		                        				<span class="dib pct50 f12 mb10">&emsp;&emsp;电话：<input type="text" class="ui-input pct60" value="18965421002" /></span>
-		                        				<span class="dib pct50 f12 mb10">&emsp;快递费：<input type="text" class="ui-input pct60" value="10" /></span>
-		                        				<span class="dib pct50 f12 mb10">快递公司：<input type="text" class="ui-input pct60" value="中通快递" /></span>
-		                        				<span class="dib pct50 f12 mb10">金牌商家：志华</span>
-		                        				<span class="dib pct50 f12 mb10">联系方式：18965421002</span>
-		                        			</div>
-		                        			
-		                                    <div class="tc  mt20 mb20">
-		                                    	<button type="button" class="ui-button mr10">打印快递单</button>
-		                                    	<button type="button" class="ui-button" data-type="clear">退回</button>
-		                                    </div>
-		                        		</div>
-		                        	</div>
-		                        	</td>
-		                        </tr><!-- post end -->
+														<span class="dib pct50 f12 mb10">&emsp;&emsp;电话：<input type="text" class="ui-input pct60" value="18965421002" /></span>
+														<span class="dib pct50 f12 mb10">&emsp;快递费：<input type="text" class="ui-input pct60" value="10" /></span>
+														<span class="dib pct50 f12 mb10">快递公司：<input type="text" class="ui-input pct60" value="中通快递" /></span>
+														<span class="dib pct50 f12 mb10">金牌商家：志华</span>
+														<span class="dib pct50 f12 mb10">联系方式：18965421002</span>
+													</div>
 
-		                    </tbody>
-		                    <tfoot class="bgfa">
-		                    	<tr height="45">
-		                    		<td colspan="15">
-		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选&emsp;&emsp;当前共选择(<span class="">3</span>)信息    </span>
-		                    			<span class="r mr10">
-		                    				<!-- <button class="ui-button mr10 plr10" data-type="normal" type="button">合并快递单</button> -->
-		                    				<button class="ui-button plr10" type="button">打印签收单</button>
-		                    			</span>
-		                    		</td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="15">
-		                    			当页合计：开票总重量：<span class=" mr10">96</span>
-		                    			开票总金额：<span class="numFormat  mr10">96</span>
-		                    			不含税金额：<span class="numFormat  mr10">936</span>
-		                    			核销税额：<span class="numFormat  mr10">9456</span>
-		                    		</td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="15">
-		                    			所有页汇总：开票总重量：<span class=" mr10">96</span>
-		                    			开票总金额：<span class="numFormat  mr10">96</span>
-		                    			不含税金额：<span class="numFormat  mr10">936</span>
-		                    			核销税额：<span class="numFormat  mr10">9456</span>
-		                    		</td>
-		                    	</tr>
-		                    </tfoot>
+													<div class="tc  mt20 mb20">
+														<button type="button" class="ui-button mr10">打印快递单</button>
+														<button type="button" class="ui-button" data-type="clear">退回</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr><!-- post end -->
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45">
+										<td colspan="15">
+											<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity"
+													 name="checkbox" onclick="setAll(this)"></i>全选&emsp;&emsp;当前共选择(<span class="">3</span>)信息 </span>
+											<span class="r mr10">
+												<!-- <button class="ui-button mr10 plr10" data-type="normal" type="button">合并快递单</button> -->
+												<button class="ui-button plr10" type="button">打印签收单</button>
+											</span>
+										</td>
+									</tr>
+									<tr height="45">
+										<td colspan="15">
+											当页合计：开票总重量：<span class=" mr10">96</span>
+											开票总金额：<span class="numFormat  mr10">96</span>
+											不含税金额：<span class="numFormat  mr10">936</span>
+											核销税额：<span class="numFormat  mr10">9456</span>
+										</td>
+									</tr>
+									<tr height="45">
+										<td colspan="15">
+											所有页汇总：开票总重量：<span class=" mr10">96</span>
+											开票总金额：<span class="numFormat  mr10">96</span>
+											不含税金额：<span class="numFormat  mr10">936</span>
+											核销税额：<span class="numFormat  mr10">9456</span>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
 
-		                </table>		                
-	            	</div>
-	                
-	            </div><!-- table end -->
-	            
-	            <script type="text/javascript" src="../js/pagelist.js"></script>
+					</div><!-- table end -->
 
-
-
+					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
 			</div><!-- ui-content end -->
-	</div><!-- rightBar end -->
+		</div><!-- rightBar end -->
 
 
-	<div class="dom1 dn">
-		<div class="pb10">
-			<div class="radio">
-				<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(0)"></i>收票联系人或地址错误</label><br>
-				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(0)"></i>开票信息错误</label><br>
-				<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio" onclick="setPassFlag(1)"></i>其它</label>
+		<div class="dom1 dn">
+			<div class="pb10">
+				<div class="radio">
+					<label class="mr20"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio"
+							 onclick="setPassFlag(0)"></i>收票联系人或地址错误</label><br>
+					<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio"
+							 onclick="setPassFlag(0)"></i>开票信息错误</label><br>
+					<label class="dib mt5"><i class="ui-radio goldIcon vm mr5"><input type="radio" class="radio-opacity" name="radio"
+							 onclick="setPassFlag(1)"></i>其它</label>
+				</div>
+				<div class="radio dn mt10 pl20 cklxFee">
+					<textarea class="ui-textarea pct100" rows="3"></textarea>
+				</div>
 			</div>
-			<div class="radio dn mt10 pl20 cklxFee">
-				<textarea class="ui-textarea pct100" rows="3"></textarea>
-			</div>
+			<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
+			<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
 		</div>
-		<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
-		<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
-	</div>
 
 
-	
-	
-	<script type="text/javascript" src="../js/admin.js"></script>
-	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
-	
-
-	<script>
-		$(function(){
-			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
-		})
-		
 
 
-		function setPassFlag(flag){
-			if(flag=="1"){
-				$(".cklxFee").show();
-			}else if(flag=="0"){
-				$(".cklxFee").hide();
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); // 静态页面定位使用，开发使用title等定位
+
+			})
+			
+			function setPassFlag(flag) {
+				if (flag == "1") {
+					$(".cklxFee").show();
+				} else if (flag == "0") {
+					$(".cklxFee").hide();
+				}
 			}
-		}
-
-
-		function showTrDZh(obj){
-			$(obj).parents("tr").next().next(".dzh").toggle();
-		}
-		
-
-
-		function showTrPost(obj){
-			$(obj).parents("tr").next().next().next(".post").toggle();
-		}
-	</script>
-</body>
+			
+			function showTrDZh(obj) {
+				var $hi = $(obj).parents("tr").next().next(".dzh");
+				$(".hideTr").not($hi).addClass("dn");
+				$(obj).parents("tr").next().next(".dzh").toggleClass("dn");
+			}
+			
+			function showTrMore(obj){
+				var $hi = $(obj).parents("tr").next(".hideTr");
+				$(".hideTr").not($hi).addClass("dn");
+				$(obj).parents("tr").next(".hideTr").toggleClass("dn");
+			}
+			
+			function showTrPost(obj) {
+				var $hi = $(obj).parents("tr").next().next().next(".post");
+				$(".hideTr").not($hi).addClass("dn");
+				$(obj).parents("tr").next().next().next(".post").toggleClass("dn");
+			}
+		</script>
+	</body>
 </html>
