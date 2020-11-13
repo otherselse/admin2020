@@ -112,6 +112,19 @@ $(function(){
 			}
 		});
 	}
+	
+	if($(".showTip").length>0){
+		$(".showTip").find('.table_ell').find('[title]').qtip({
+			position: {
+				my: 'bottom center', //my:是指三角的位置
+				at: 'top center' //是在提示在组件的相对位置
+					},
+			style: {
+				classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+			}
+		});
+	}
+
 
 
 	if($(".tiptop").length>0){ //提示显示在元素的上方
