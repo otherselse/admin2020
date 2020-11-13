@@ -13,7 +13,36 @@
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 	<title>订单提成-财务管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-
+	<style>
+			.table-cell-fix-left,
+        .table-cell-fix-right {
+            left: 0;
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            z-index: 2;
+            background: #fff;
+        }
+		.table-cell-fix-left-last::after {
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: 0;
+            width: 30px;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: -webkit-box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition: box-shadow .3s;
+            transition: box-shadow .3s, -webkit-box-shadow .3s;
+            content: '';
+            pointer-events: none;
+            -webkit-box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+            box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, .15);
+        }
+		.m-tabLimitSCroll {
+			overflow: auto;
+		}
+	</style>
 
 </head>
 
@@ -158,7 +187,7 @@
 					</a>
 				</div>
 
-				<div class="lgui-table-box checkbox m-tabLimitSCroll tabLimitSCroll">
+				<div class="lgui-table-box checkbox m-tabLimitSCroll tabLimitSCroll  fixrightTab">
 					<div class="lgui-table-header">
 						<table class="ui-table tc f12 " width="100%">
 							<thead>
@@ -202,7 +231,7 @@
 									<th width="3%">操作类型</th>
 									<th width="3%">分红金额</th>
 									<th width="4%" data-item-field="actime">实际出口日期</th>
-									<th width="4%">操作</th>
+									<th width="4%"  class="sticky-right table-cell-fix-right table-cell-fix-left-last"  style="right: 0;">操作</th>
 								</tr>
 							</thead>
 						</table>
@@ -234,7 +263,7 @@
 									<td width="4%" class="numFormat ">0</td>
 									<td width="4%">
 										<a href="javascript:void(0)"
-											title="增值税:&nbsp;0.0<br/>附加税:&nbsp;0.0<br/>印花税:&nbsp;0.48<br/>企业所得税:&nbsp;0.0<br/>个人所得税:&nbsp;<span class=''>未结算分红，未计算个税</span><br/><span class='ui-tip pct100' data-type='normal'>注：红色字体的个税表示的是：当月订单合计个税</span>"><span
+											title="增值税:&nbsp;0.0<br/>附加税:&nbsp;0.0<br/>印花税:&nbsp;0.48<br/>企业所得税:&nbsp;0.0<br/>个人所得税:&nbsp;<span class=''>未结算分红，未计算个税</span><br/><span class='ui-tip pct100' data-type='normal'>个人所得税表示当月订单合计个税</span>"><span
 												class="m"><span class="numFormat ">0.48</span></span></a>
 									</td>
 									<td width="4%" class="numFormat ">0</td>
@@ -253,7 +282,7 @@
 									<td width="3%">定购</td>
 									<td width="3%"></td>
 									<td width="4%" data-item-field="actime"></td>
-									<td width="4%"><a href="javascript:void(0)" title="该订单未操作完" class="g28">未结束</a><span
+									<td width="4%"  class="sticky-right table-cell-fix-right table-cell-fix-left-last"  style="right: 0;"><a href="javascript:void(0)" title="该订单未操作完" class="g28">未结束</a><span
 											class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0);"
 											onclick="javascript:toOrderRate(61080);">利息</a>
 									</td>
