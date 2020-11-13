@@ -164,6 +164,17 @@
 					$('.dropUpfileCont').eq($(this).index()-1).removeClass("dn");
 					// $("#dropUpfileCont").find("a").remove();
 				});
+				
+				//删除图片方法
+				function delFile(obj) {
+					var key = Number($(obj).attr("data-key"));
+					var l = $("#imgshow").find(".ui-files").length;
+					$(obj).remove();
+					myLgUpload.filesObj.remove(key);
+					if (l == 1) {
+						$("#imgshow").hide();
+					}
+				}
 
 				setTime4();
 				var endtime = '',

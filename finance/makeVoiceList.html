@@ -47,8 +47,8 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct25 dib f12 searchLable">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
-						<span class="pct25 dib f12 searchLable">发票单位：<span class="input-selSearch pct69">
+						<span class="pct22 dib f12 searchLable">发票号码：<input type="text" class="ui-input pct69" placeholder="只能输入数字" autocomplete="off"></span>
+						<span class="pct22 dib f12 searchLable">发票单位：<span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off" readonly="">
 								<div class="search-cont">
 									<a href="javascript:void(0)" class="search-list db ell">北京</a>
@@ -60,27 +60,23 @@
 								</div>
 							</span>
 						</span>
-						<span class="pct25 dib f12 searchLable">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						<span class="pct30 dib f12 searchLable">&emsp;&emsp;&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
 						<span class="pct25 dib f12 searchLable">区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>	
+						</span>
 					</div>
-		
 
 	                <div class="f0 mb10">
 
-	                	<span class="pct25 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+	                	<span class="pct22 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
 
-	                	<span class="pct25 dib f12 "><span class="searchLable">业务类型：</span>
+	                	<span class="pct22 dib f12 "><span class="searchLable">业务类型：</span>
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>直购</label>
 						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>定购</label></span>
 
-	                	<span class="pct25 dib f12 m_pct31 searchLable">发票开具日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+	                	<span class="pct30 dib f12 m_pct31 searchLable">发票开具日期：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-						</span></span>	
-		
-	                	
-                		
+						</span></span>
 
 	                </div>
 
@@ -90,7 +86,7 @@
 
 	                <!-- search end -->
 
-					<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll tabLimitSCroll">
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 " width="100%">
 		                    <thead>
@@ -157,10 +153,8 @@
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
 		                    		<td colspan="16">
-		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/单位名称&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    </span>
-		                    			<span class="r mr10">
-		                    				<button class="ui-button mr10 plr10"  type="button">导出</button>
-		                    				<button class="ui-button plr10 mr10" data-type="normal" type="button">取消导出</button>
+		                    			<span class="l ml10 pt5"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/单位名称&emsp;&emsp;当前共选择(<span class="red">3</span>)信息    
+		                    				<button class="ui-button plr10 mr10 ml10" data-type="normal" type="button">取消导出</button>
 		                    				<button class="ui-button plr10 mr10" type="button">批量打印</button>
 		                    			</span>
 		                    		</td>
@@ -171,7 +165,7 @@
 		                    			已开票不含税金额：<span class="numFormat  mr10">96</span>
 		                    			已开票销项税额：<span class="numFormat  mr10">936</span>
 		                    			已开票金额：<span class="numFormat ">9456</span>
-		                    		</td>		                    		
+		                    		</td>
 		                    	</tr>
 		                    	<tr height="45">
 		                    		<td colspan="15">
@@ -184,11 +178,11 @@
 
 		                    </tfoot>
 
-		                </table>		                
+		                </table>
 	            	</div>
-	                
+
 	            </div><!-- table end -->
-	            
+
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
 
 
@@ -201,24 +195,17 @@
 
 
 
-	
-	
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
-	
 
 	<script>
 		$(function(){
 			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
-		
-
-
-		
 
 	</script>
 </body>
