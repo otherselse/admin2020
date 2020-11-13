@@ -17,6 +17,15 @@
 			.hoverBlue:hover {
             padding: 2px 5px;
         }
+		@media (max-width: 1440px) {
+		    .m-tabLimitSCroll {
+		        /* max-height: 520px; */
+		    }
+		
+		    .ui-table {
+		        min-width: 1440px;
+		    }
+		}
     </style>
 	</head>
 
@@ -80,110 +89,110 @@
 						<button type="button" class="ui-button mr20">查询</button>
 						<button type="button" class="ui-button" data-type="clear">清空</button>
 					</div>
+					<div class="m-tabLimitSCroll mt30 lgui-table-box fixrightTab">
+						<table class="ui-table tc table-cw  f12" width="100%" data-type="edit">
+							<thead>
+								<tr>
+									<th width="3%">序号</th>
+									<th width="3%">金牌商家</th>
+									<th width="3%">金牌商家编号</th>
+									<th width="3%">开店区域</th>
+									<th width="3%">所属地区</th>
+									<th width="3%">提成类型</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											系统充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											个人充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											系统充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											个人充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											其它转入<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="4%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											其它转出<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="4%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											提现<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											G2G总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="4%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											G2G钱包<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="4%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											乐财宝<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="6%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											G2G可用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="5%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											G2G占用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
 
-					<table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
-						<thead>
-							<tr>
-								<th width="3%">序号</th>
-								<th width="3%">金牌商家</th>
-								<th width="3%">金牌商家编号</th>
-								<th width="3%">开店区域</th>
-								<th width="3%">所属地区</th>
-								<th width="3%">提成类型</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										系统充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										个人充值余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										系统充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										个人充值汇总<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										其它转入<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="4%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										其它转出<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="4%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										提现<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="4%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G钱包<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="4%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										乐财宝<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="6%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G可用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="5%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G占用余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-
-									<lable class="jpsj_Sort" onclick="setOrderCol('x.outhate',this)"><i data="orderBy" id="Ix.outhate" class=""></i></lable>
-								</th>
-								<th width="5%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="5%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										风险金余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="3%">新手体验</th>
-								<th width="3%">共享通</th>
-								<th width="3%">融享通</th>
-								<th width="3%">未到期收益</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover">
-							<tr class="bgwh">
-								<td width="3%">1</td>
-								<td width="3%">江小白</td>
-								<td width="3%">11232</td>
-								<td width="3%">上海</td>
-								<td width="3%">上海</td>
-								<td width="3%">零售</td>
-								<td width="6%">0.00</td>
-								<td width="6%">0.00</td>
-								<td width="6%">0.00</td>
-								<td width="6%">0.00</td>
-								<td width="4%">0.00</td>
-								<td width="4%">0.00</td>
-								<td width="4%">0.00</td>
-								<td width="6%">0.00</td>
-								<td width="4%">0.00</td>
-								<td width="4%">0.00</td>
-								<td width="6%">0.00</td>
-								<td width="5%">0.00</td>
-								<td width="5%">0.00</td>
-								<td width="5%">0.00</td>
-								<td width="3%">0.00</td>
-								<td width="3%">0.00</td>
-								<td width="3%">0.00</td>
-								<td width="3%">0.00</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<!--  <tr height="45">
+										<lable class="jpsj_Sort" onclick="setOrderCol('x.outhate',this)"><i data="orderBy" id="Ix.outhate" class=""></i></lable>
+									</th>
+									<th width="5%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="5%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+											风险金余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="3%">新手体验</th>
+									<th width="3%">共享通</th>
+									<th width="3%">融享通</th>
+									<th width="3%">未到期收益</th>
+								</tr>
+							</thead>
+							<tbody class="ui-thover">
+								<tr class="bgwh">
+									<td width="3%">1</td>
+									<td width="3%">江小白</td>
+									<td width="3%">11232</td>
+									<td width="3%">上海</td>
+									<td width="3%">上海</td>
+									<td width="3%">零售</td>
+									<td width="6%">0.00</td>
+									<td width="6%">0.00</td>
+									<td width="6%">0.00</td>
+									<td width="6%">0.00</td>
+									<td width="4%">0.00</td>
+									<td width="4%">0.00</td>
+									<td width="4%">0.00</td>
+									<td width="6%">0.00</td>
+									<td width="4%">0.00</td>
+									<td width="4%">0.00</td>
+									<td width="6%">0.00</td>
+									<td width="5%">0.00</td>
+									<td width="5%">0.00</td>
+									<td width="5%">0.00</td>
+									<td width="3%">0.00</td>
+									<td width="3%">0.00</td>
+									<td width="3%">0.00</td>
+									<td width="3%">0.00</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<!--  <tr height="45">
                             <td colspan="24">
                                 <div class="df pl20">
                                     <div class="min-w60">本页合计：</div>
@@ -209,28 +218,28 @@
                                 </div>
                             </td>
                         </tr> -->
-							<tr height="45">
-								<td colspan="6">本页合计</td>
-								<td>1,763,093.54</td>
-								<td>1,366,768,849.68</td>
-								<td>1,126,807.79</td>
-								<td>3,766,567,318.57</td>
-								<td>0.00</td>
-								<td>0.00</td>
-								<td>306,830.47</td>
-								<td>1,154,410,575.26</td>
-								<td>0.00</td>
-								<td>0.00</td>
-								<td>1,152,112,004.35</td>
-								<td>15,944,116.56</td>
-								<td>-14,030,550.17</td>
-								<td>200,000.00</td>
-								<td>10,000.00</td>
-								<td>140,000.00</td>
-								<td>35,000.00</td>
-								<td>4.52</td>
-							</tr>
-							<!-- <tr height="45">
+								<tr height="45">
+									<td colspan="6">本页合计</td>
+									<td>1,763,093.54</td>
+									<td>1,366,768,849.68</td>
+									<td>1,126,807.79</td>
+									<td>3,766,567,318.57</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>306,830.47</td>
+									<td>1,154,410,575.26</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>1,152,112,004.35</td>
+									<td>15,944,116.56</td>
+									<td>-14,030,550.17</td>
+									<td>200,000.00</td>
+									<td>10,000.00</td>
+									<td>140,000.00</td>
+									<td>35,000.00</td>
+									<td>4.52</td>
+								</tr>
+								<!-- <tr height="45">
 								<td colspan="24">
 									<div class="df pl20">
 										<div class="min-w60">汇总合计：</div>
@@ -256,29 +265,30 @@
 									</div>
 								</td>
 							</tr> -->
-							<tr height="45">
-								<td colspan="6">汇总合计</td>
-								<td>1,956,700,668.00</td>
-								<td>26,582,531,931.60</td>
-								<td>1,722,582,128.54</td>
-								<td>8,365,311,023.56</td>
-								<td>58,036.62</td>
-								<td>16,556.00</td>
-								<td>1,516,784,160.39</td>
-								<td>7,267,261,465.27</td>
-								<td>0.00</td>
-								<td>0.00</td>
-								<td>6,833,411,200.23</td>
-								<td>483,693,428.65</td>
-								<td>-59,752,936.71</td>
-								<td>3,097,329.97</td>
-								<td>94,399.00</td>
-								<td>1,215,001.00</td>
-								<td>1,103,000.00</td>
-								<td>38.14</td>
-							</tr>
-						</tfoot>
-					</table>
+								<tr height="45">
+									<td colspan="6">汇总合计</td>
+									<td>1,956,700,668.00</td>
+									<td>26,582,531,931.60</td>
+									<td>1,722,582,128.54</td>
+									<td>8,365,311,023.56</td>
+									<td>58,036.62</td>
+									<td>16,556.00</td>
+									<td>1,516,784,160.39</td>
+									<td>7,267,261,465.27</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>6,833,411,200.23</td>
+									<td>483,693,428.65</td>
+									<td>-59,752,936.71</td>
+									<td>3,097,329.97</td>
+									<td>94,399.00</td>
+									<td>1,215,001.00</td>
+									<td>1,103,000.00</td>
+									<td>38.14</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
 			</div>
