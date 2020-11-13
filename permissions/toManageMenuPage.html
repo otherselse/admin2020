@@ -41,7 +41,7 @@
                 <a href="toManageMenuPage.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">权限分配</span><i class="goldIcon ui-tab3-dot"></i></a>
                 <a href="toManageMenuClone.html" class="ui-tab3-list rel"><span class="ui-tab3-text">权限复制</span><i class="goldIcon ui-tab3-dot"></i></a>
             </div>
-        <div class="ui-content minH">
+        <div class="ui-content minH " style="margin-bottom: 100px">
             <div class="p30">
                 <div class="pb20 bbe">
                     <span class="searchLable dib pct10">人员（单选）：</span>
@@ -103,8 +103,8 @@
                             </td>
                             <td width="90%" class="cont bgfa" style="padding-top:5px;padding-bottom: 5px">
                                 <div class="ui-tab4 n16_isMulS">
-                                    <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a>
-                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
+                                   <!--  <a href="javascript:void(0)" class="ui-tab4-list on w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="0">首页</a> -->
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5 on" onclick="setMulAuthoriy(this)" id="600">评审管理</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="700">物流管理</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="900">信息管理</a>                                    
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setMulAuthoriy(this)" id="800">权限管理</a>
@@ -167,8 +167,8 @@
                     </tbody>
                 </table>
 
-                <div class="f14 mt20 mb10"><span class="searchLable">已选权限</span><span class="ui-tip   ml10" data-type="normal">请选择审批节点</span></div>
-                <table class="ui-table tc f12 chooseAppl checkbox" width="100%">
+                <div class="f14 mt20 mb50"><span class="searchLable">已选权限</span><span class="ui-tip   ml10" data-type="normal">请选择审批节点</span></div>
+                <table class="ui-table tc f12 chooseAppl checkbox adm_even" width="100%">
                     <thead>
                         <tr>
                             <th width="10%">审批权限</th>
@@ -188,7 +188,7 @@
             
 
                 
-                <div class="tc mt40 mb50">
+                <div class="tc adm_fixbot">
                     <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
 

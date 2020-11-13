@@ -315,7 +315,7 @@ function showStep(){
 	// 	shade: 0.4,
 	// 	area: ['80%', '80%'],
 	// 	content: '../index/orderInfo.html' //iframe的url
-	// });win
+	// });
 	window.open("../public/theOrderDetails.html"); 
 }
 

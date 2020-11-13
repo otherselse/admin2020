@@ -53,7 +53,7 @@
 		</div>
 		<div class="ui-content ovh minH">
 			<div class="p20 f12">
-				<span class="ui-tip pct100" data-type="blue">注：红色字体的个税表示的是：当月订单合计个税</span>
+				
 				<div class="f0  mt20">
 					<span class="pct30 dib f12 radio"><span class="searchLable">是否已核算红利：</span>
 						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -128,7 +128,7 @@
                         </div>
 					</span>
 					
-					<span class="pct30 dib f12 searchLable">&emsp;区域：<input type="text" class="ui-input pct59" placeholder="请输入"
+					<span class="pct30 dib f12 searchLable">区域：&emsp;<input type="text" class="ui-input pct59" placeholder="请输入"
 							autocomplete="off">
 					</span>
 					<span class="pct40 dib f12 searchLable">红利核算日期：<span class="ui-input f0 pct69 range" data-type="time">
@@ -185,7 +185,7 @@
 									<th width="4%">结算入库付款</th>
 									<th width="4%">库存销售成本</th>
 									<th width="4%">费用结算付款</th>
-									<th width="3%">咨询分红</th>
+									<th width="3%" data-item-field="bonus">咨询分红</th>
 									<th width="4%">资金占用利息</th>
 									<th width="4%">税金</th>
 									<th width="4%">商互通成本</th>
@@ -197,14 +197,14 @@
 									</th>
 									<th width="3%">税前毛利</th>
 									<th width="3%">余卷重量</th>
-									<th width="3%">G2G金额</th>
+									<th width="3%" data-item-field="g2g">G2G金额</th>
 									<th width="5%">是否允许核算红利</th>
 									<th width="5%">是否已核算红利</th>
 									<th width="4%">结算完成时间</th>
 									<th width="3%">业务类型</th>
 									<th width="3%">操作类型</th>
 									<th width="3%">分红金额</th>
-									<th width="4%">实际出口日期</th>
+									<th width="4%" data-item-field="actime">实际出口日期</th>
 									<th width="4%">操作</th>
 								</tr>
 							</thead>
@@ -233,11 +233,11 @@
 									<td width="4%" class="numFormat ">0</td>
 									<td width="4%" class="numFormat ">0</td>
 									<td width="4%" class="numFormat ">0</td>
-									<td width="3%" class="numFormat ">0</td>
+									<td width="3%" class="numFormat " data-item-field="bonus">0</td>
 									<td width="4%" class="numFormat ">0</td>
 									<td width="4%">
 										<a href="javascript:void(0)"
-											title="增值税:&nbsp;0.0<br/>附加税:&nbsp;0.0<br/>印花税:&nbsp;0.48<br/>企业所得税:&nbsp;0.0<br/>个人所得税:&nbsp;<span class=''>未结算分红，未计算个税</span>"><span
+											title="增值税:&nbsp;0.0<br/>附加税:&nbsp;0.0<br/>印花税:&nbsp;0.48<br/>企业所得税:&nbsp;0.0<br/>个人所得税:&nbsp;<span class=''>未结算分红，未计算个税</span><br/><span class='ui-tip pct100' data-type='normal'>注：红色字体的个税表示的是：当月订单合计个税</span>"><span
 												class="m"><span class="numFormat ">0.48</span></span></a>
 									</td>
 									<td width="4%" class="numFormat ">0</td>
@@ -245,7 +245,7 @@
 									<td width="3%" class="numFormat ">-0.48</td>
 									<td width="3%" class="numFormat ">0</td>
 									<td width="3%" class="numFormat ">0</td>
-									<td width="3%" class="numFormat ">0</td>
+									<td width="3%" class="numFormat " data-item-field="g2g">0</td>
 
 									<td width="5%">
 										<a href="javascript:void(0)" title="是否允许核算红利">禁止</a>
@@ -255,7 +255,7 @@
 									<td width="3%">现款业务</td>
 									<td width="3%">定购</td>
 									<td width="3%"></td>
-									<td width="4%"></td>
+									<td width="4%" data-item-field="actime"></td>
 									<td width="4%"><a href="javascript:void(0)" title="该订单未操作完" class="g28">未结束</a><span
 											class="ml5 mr5 dib gd9">|</span><a href="javascript:void(0);"
 											onclick="javascript:toOrderRate(61080);">利息</a>
@@ -265,7 +265,7 @@
 							</tbody>
 							<tfoot class="bgfa">
 								<tr height="40">
-									<td colspan="33">
+									<td colspan="28">
 										当前页合计：
 										毛利金额：<span class="numFormat bkall  mr20">123213323</span>
 										G2G金额：<span class="numFormat bkall  mr20">1323123</span>
@@ -273,14 +273,14 @@
 									</td>
 								</tr>
 								<tr height="40">
-									<td colspan="33">
+									<td colspan="28">
 										所有页合计：
 										毛利金额：<span class="numFormat bkall  mr20">13213323</span>
 										G2G金额：<span class="numFormat bkall  mr20">1232131323</span>
 										分红金额：<span class="numFormat bkall  mr20">1232131323</span>
 									</td>
 								</tr>
-								<tr height="40">
+								<!-- <tr height="40">
 									<td colspan="33">
 										销售已收款:<span class="numFormat ">0</span>&nbsp;&nbsp;采购已付款:<span
 											class="numFormat ">0</span>&nbsp;&nbsp;物流结算付款:<span
@@ -291,7 +291,7 @@
 											class="numFormat ">0</span>
 										&nbsp;&nbsp;毛利金额：<span class="numFormat ">0</span>
 									</td>
-								</tr>
+								</tr> -->
 
 							</tfoot>
 
@@ -312,11 +312,22 @@
 	</div><!-- ui-content end -->
 	</div><!-- rightBar end -->
 
+	<div class="lgui-table-tools dn">
+		<div class="lgui-table-tcont" >
+			<div class="mt20"><span class="dib lgui-table-detail"></span></div>
+			<div class="tc mt20">
+				<button class="ui-button w90" type="button" onclick="setBut()">确认</button>
+				<button class="ui-button ml10 w90" data-type="clear" type="button" id="closeSetCot">关闭</button>
+			</div>
+		</div>
+	</div>
+
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/fixScroll/lgBaseFuncBut.js"></script>
 
 
 	<script>
@@ -324,6 +335,10 @@
 			$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
+
+		//cols 定义显示及权限
+		var mylgColInfo=[{"name":"bonus","intro":"咨询分红","status":true},{"name":"g2g","intro":"G2G金额","status":true},{"name":"actime","intro":"实际出口日期","status":true}]
+		lgScrollTable.choiceCol(mylgColInfo,'.lgui-table-detail','.lgui-table-box'); //根据表格中列的配置，实现初始化表格
 
 		function toOrderRate() {
 			layer.open({
@@ -336,6 +351,24 @@
 			});
 		}
 
+		function setBut(){
+			//lgui-table-detail 表示选择区域内容class、lgui-table-box表示整个表格部分box，实现点击确认显示不显示；
+			lgScrollTable.seltable('.lgui-table-detail','.lgui-table-box')
+		}
+
+		function showLayer(){
+			var page=layer.open({
+				type: 1,
+				title: '表头配置',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['400px', '200px'],
+				content: $('.lgui-table-tools') //iframe的url
+			});
+			$("#closeSetCot").on("click",function(){
+				layer.close(page);
+			})
+		}
 
 
 
