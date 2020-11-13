@@ -94,7 +94,7 @@
 						</span>
 					</div>
 
-					<div class="mb10 f0">
+					<div class="mb10">
 						<span class="pct25 dib f12"><span class="searchLable">发票抬头：</span><span class="input-selSearch pct69">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码、汉字即时搜索" autocomplete="off" >
 								<div class="search-cont">
@@ -108,9 +108,9 @@
 							</span>
 						</span>
 						<span class="pct25 dib f12">
-							<span class="searchLable">发票号：</span>
-							<input type="text" class="ui-input pct69" placeholder="请输入" />
-						</span> 
+							<span class="searchLable">发票号码：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" >
+						</span>
 
 						<span class="pct25 dib f12"><span class="searchLable">申请日期：</span><span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
@@ -125,7 +125,7 @@
 	                <!-- search end -->
 
 
-							<table class="ui-table tc f12 mt30" width="100%">
+							<table class="ui-table tc table-cw f12 mt30" width="100%">
 								<thead>
 		                        <tr>
 		                            <th width="6%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
@@ -145,14 +145,11 @@
 		                    <tbody class="ui-thover">
 		                    	 <tr><td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 		                            <td class="tl">
-		                            	<div class="pl10 ">
-		                            		<span class="f_blueCircle mr2"  title="
-<span class='f_greenCircle dib mt2 mb2 mr2'>网</span>&nbsp;客户自主下单<br/>
-                                    <span class='m_j mr2 dib mt2 mb2'>金</span>&nbsp;金牌商家代下单<br/>
-                                    <span class='f_blueCircle dib mb2 mt2 mr2'>代</span>&nbsp;加工商代下单">代</span>
+		                            	<div class="pl10 table_ell">
+		                            		<span class="f_blueCircle mr2">代</span>
 		                            		<!-- <span class="f_greenCircle mr2">网</span>
 		                            		<span class="f_orangeCircle mr2">金</span> -->
-		                            		上海柒柒贸易有限公司
+		                            	<span class="ell" title="上海柒柒贸易有限公司">上海柒柒贸易有限公司</span>
 		                            	</div>
 		                            </td>
 		                            <td>综合加工费</th>
@@ -160,7 +157,7 @@
 		                            <td><a class="numFormat" href="javascript:void(0)" onclick="layerTSum()">12300.00</a></td>
 		                            <td><span class="numFormat">13300.00</span></td>
 		                            <td><span class="numFormat">13400.00</span></td>
-		                            <td>2020-04-22 11:11：11</td>
+		                            <td>2020-04-22 11:11:11</td>
 		                            <td>李四</td>
 		                            <td><a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">快递到家</a></td>
 		                            <td><a href="javascript:void(0)" onclick="showTrMoreOn(this)">查看</a></td>
@@ -234,15 +231,12 @@
 
 		                        		</div>
 		                        	</td>
-		                        </tr> 
+		                        </tr>
 		                        <tr><td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 		                            <td class="tl">
-		                            	<div class="pl10 ">		                            		
-		                            		<span class="f_greenCircle mr2"  title="
-<span class='f_greenCircle dib mt2 mb2 mr2'>网</span>&nbsp;客户自主下单<br/>
-                                    <span class='m_j mr2 dib mt2 mb2'>金</span>&nbsp;金牌商家代下单<br/>
-                                    <span class='f_blueCircle dib mb2 mt2 mr2'>代</span>&nbsp;加工商代下单">网</span>
-		                            		上海柒柒贸易有限公司
+		                            	<div class="pl10 table_ell">
+		                            		<span class="f_greenCircle mr2">网</span>
+		                            	<span class="ell" title="上海柒柒贸易有限公司">上海柒柒贸易有限公司</span>	
 		                            	</div>
 		                            </td>
 		                            <td>综合加工费</th>
@@ -250,7 +244,7 @@
 		                            <td><a class="numFormat" href="javascript:void(0)" onclick="layerTSum()">12300.00</a></td>
 		                            <td><span class="numFormat">13300.00</span></td>
 		                            <td><span class="numFormat">13400.00</span></td>
-		                            <td>2020-04-22 11:11：11</td>
+		                            <td>2020-04-22 11:11:11</td>
 		                            <td>李四</td>
 		                            <td>上门取件</td>
 		                            <td><a href="javascript:void(0)" onclick="showTrMoreOn(this)">查看</a></td>
@@ -296,7 +290,6 @@
 			收件人姓名：<span class="g28">123456</span></br>			
 			手机号码：&emsp;<span class="g28">18618888888</span>			
 		</div>
-		<div class="tc"><button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button></div>
 	</div>
 
 

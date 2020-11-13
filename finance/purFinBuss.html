@@ -40,7 +40,7 @@
 				<a href="saleBuss.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">往来账</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content ovh minH">
-				<div class="ui-tab4 p20">
+				<div class="ui-tab4 p20 f0">
                     <a href="saleBuss.html" class="ui-tab4-list mb10 ">销售业务往来账</a>
                     <a href="businessBalance.html" class="ui-tab4-list mb10 ">销售业务余额表</a>
                     <a href="saleFinBuss.html" class="ui-tab4-list mb10 ">销售财务往来账</a>
@@ -53,57 +53,109 @@
                 </div>					
 				<div class="p20 f12 bte">
 					<div class="mb10 f0 searchLable">
-						<span class="pct22 dib f12">供应商名称：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct25 dib f12">业务日期：<span class="ui-input tc f0 pct69  range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-						</span></span>
-						<button type="button" class="ui-button ">查询</button>					
-
+						<span class="pct22 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12">&emsp;&emsp;&emsp;区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="dib f12 mr40">往来余额大于零：
+							<span class="radio">
+								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+								<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							</span>
+						</span>
+						<span class="dib f12">是否结算完毕：
+							<span class="radio">
+								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+								<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							</span>
+						</span>
 					</div>
+					<div class="mb10 f0 searchLable">
+						<span class="pct22 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12">&emsp;业务日期：<span class="ui-input tc f0 pct69  range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+							</span></span>
+							<span class="dib f12 mr40">账户余额大于零：
+								<span class="radio">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+							<span class="dib f12">业务余额大于零：
+								<span class="radio">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+						</div>
+						<div class="mb10 f0 searchLable">
+							<span class="pct22 dib f12">&emsp;订单号：<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" readonly="" placeholder="请选择" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">选择选择1</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span></span>
+							<span class="pct25 dib f12">
+								发票未收回：<span class="ui-input pct69 f0" data-type="section">
+										<input type="text" placeholder="请输入" style="width: 35%;">
+										<span class="f12 pct5 dib tc">天</span>
+										<span class="pct5 dib tc">~</span>
+										<input type="text" placeholder="请输入" style="width: 25%;">
+										<span class="f12 pct5 dib tc r">天</span>
+									</span>
+							</span>
+							</span>
+							<button type="button" class="ui-button ">查询</button>
+						</div>
+										
 					
 
 	                <!-- search end -->
 
 					<div class="mt30">
-							<table class="ui-table tc f12 " width="100%">
+							<table class="ui-table tc f12 table-cw" width="100%">
 								<thead>
 		                        <tr>
-		                            <th width="5%">业务日期</th>
-		                            <th width="15%" class="tl"><div class="pl10">供应商名称</div></th>
-		                            <th width="6%">订单号</th>
-		                            <th width="6%">队列</th>		                            
-		                            <th width="6%">收款</th> 
-		                            <th width="6%">付款</th>
-		                            <th width="8%">开票金额</th>  
-		                            <th width="8%">未开票金额</th>
-		                            <th width="10%">登记前账户金额</th> 
-		                            <th width="6%">余额</th>
-		                            <th width="6%">发票号</th>
-		                            <th width="6%">结算吨数</th>
-		                            <th width="6%">结算金额</th>
+									<th width="10%">订单号</th>
+									<th width="6%">金牌商家</th>
+		                            <th width="15%" class="tl"><div class="pl10">采购单位</div></th>
+		                            <th width="6%">订单日期</th>		                            
+		                            <th width="6%">合同重量</th> 
+		                            <th width="6%">合同金额</th>
+		                            <th width="6%">是否结算完毕</th>  
+		                            <th width="8%">结算重量</th>
+		                            <th width="6%">结算金额</th> 
+		                            <th width="6%">合同核销金额</th>
+		                            <th width="8%">银行收支金额</th>
+		                            <th width="6%">业务余额</th>
+		                            <th width="6%">往来余额</th>
+		                            <th width="6%">账户余额</th>
 		                        </tr>
 		                    </thead>
-		                    <tbody class="ui-thover">		                    	
+		                    <tbody class="ui-thover">
 		                        <tr>
-							  		<td>期初</td>
-							  		<td numtype="formatMoney">0</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td numtype="formatMoney">0</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  		<td>--</td>
-							  </tr>                       
-		                       
-		                </table>		                
-	                
+							  		<td>34944 <span class="card_w ml2">上海</span></td>
+							  		<td>马云</td>
+							  		<td><div class="tl table_ell"><span class="ell" title="上海市一家失业有线公司">上海市一家失业有线公司</span></div></td>
+							  		<td>2020-10-11</td>
+							  		<td>102</td>
+							  		<td>111</td>
+							  		<td>否</td>
+							  		<td>444</td>
+							  		<td>111</td>
+							  		<td>0</td>
+							  		<td>11</td>
+							  		<td>11</td>
+							  		<td>11</td>
+							  		<td>11</td>
+							  </tr>
+
+		                </table>
 	            </div><!-- table end -->
-	            
+
 	            <script type="text/javascript" src="../js/pagelist.js"></script>
 
 

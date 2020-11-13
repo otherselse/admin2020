@@ -11,8 +11,6 @@
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 	<title>应收票据备查簿-财务管理-乐刚智能云系统</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-	
-	
 </head>
 <body class="showTip fixtab">
 	<script type="text/javascript" src="../js/topBar.js"></script>	
@@ -42,13 +40,10 @@
 						</span>
 						<span class="pct25 dib f12 mr20">票据号码：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						
 						<span class="pct40 dib f12">收票日期：<span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 					</span>
 						</span>
-						
-						
 					</div>	
 					<div class="tc mt20">
 						<button type="button" class="ui-button mr5">查询</button>
@@ -56,7 +51,7 @@
 					</div>
 	                <!-- search end -->
 
-				<div class="m-tabLimitSCroll mt30 checkbox">
+				<div class="m-tabLimitSCroll mt30 checkbox tabLimitSCroll">
 						<table class="ui-table tc f12 " width="100%">
 							<thead>
 		                        <tr>
@@ -105,22 +100,55 @@
 									<td>2020-02-26</td>
 									<td>2020-08-21</td>
 									<td>240000</td>
-									<td>浙江华光汽车内饰股份有限公司	</td>
-									<td>中国建设银行成都市第三支行	</td>
-									<td>嘉兴和新精冲科技有限公司	</td>
+									<td>浙江华光汽车内饰股份有限公司</td>
+									<td>中国建设银行成都市第三支行</td>
+									<td>嘉兴和新精冲科技有限公司</td>
+									<td>
+										<span class="edittext">2020-11-04</span>
+										<span class="editinput">
+											<span class="ui-input" style="width: 90%" data-type="time" small-type="small"><input type="text" class="render-time" readonly="" ></span>
+										</span>
+									</td>
 									<td></td>
-									<td></td>
-									<td></td>
-									<td>2020-05-26</td>
+									<td>
+										<span class="edittext">asdasdasas</span>
+										<span class="editinput">
+											<input type="text" class="ui-input tc pct90" data-type="small">
+										</span>
+									</td>
+									<td>
+										<span class="edittext">2020-11-04</span>
+										<span class="editinput">
+											<span class="ui-input" style="width: 90%" data-type="time" small-type="small"><input type="text" class="render-time" readonly="" ></span>
+										</span>
+									</td>
 					                <td>238729.8</td>
-					                <td>2020.5银收1686</td>
+										<td>
+											<span class="edittext">dasdas</span>
+											<span class="editinput">
+												<input type="text" name="" class="txt1 txpzh" value="" style="width: 90%">
+											</span>
+										</td>
+										<td>
+											<span class="edittext">2020-11-04</span>
+											<span class="editinput">
+												<span class="ui-input" style="width: 90%" data-type="time" small-type="small"><input type="text" class="render-time" readonly="" ></span>
+											</span>
+										</td>
 									<td></td>
-									<td></td>
-									<td></td>
+									
+									<td>
+										<span class="edittext">dasdas</span>
+										<span class="editinput">
+											<input type="text" name="" class="txt1 txpzh" value="" style="width: 90%">
+										</span>
+									</td>
 									<td></td>
 									<td></td>
 									<td></td>
 									<td class="">
+										<a href="javascirpt:void(0)" class="blue" onclick="javascript:editQuiry(this);">修改</a>
+										<a href="javascript:void(0);" onclick="javascript:editSave(this,'B3A864946E8556F2E05371001FAC65FE');" class="dn blue saveBut ">保存</a>
 										<input type="hidden" name="indexid" value="A9E98CB337581B1DE05371001FAC230B" class="readX90" readonly="">
 										<a href="javascript:void(0);" class="blue" onclick="javascript:deleteQuiry('A9E98CB337581B1DE05371001FAC230B');">删除</a>
 									</td>
@@ -174,6 +202,12 @@
 
 		})
 		
+		function editQuiry(obj,id) {
+        $(obj).parents("tr").addClass("edittr");
+        $(obj).hide();
+        $(obj).parents("td").find(".saveBut").show();
+
+    }
 
 
 		
