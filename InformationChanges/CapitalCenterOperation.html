@@ -65,10 +65,10 @@
                 <div class="dac">
                     <span class="f1 dac">
                         信息类别：<div class="ui-tab4 df">
-                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10 on">办事指南</a>
+                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-option mb10 on mr10">办事指南</a>
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="sel(0)"
-                                    class="ui-tab4-list mb10 str1 xiaLa ">资料中心</a>
+                                    class="ui-option mb10 str1 xiaLa mr10">资料中心</a>
                                 <div class="search-cont lj" style="left: 0px; display: none;width: 150%;">
                                     <a href="javascript:void(0)" class="search-list db ell">管理制度资料</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -78,10 +78,10 @@
                                     <a href="javascript:void(0)" class="search-list db ell">信用资料</a>
                                 </div>
                             </span>
-                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-tab4-list mb10">审计中心</a>
+                            <a href="javascript:void(0)" onclick="sel(1)" class="ui-option mb10 mr10">审计中心</a>
                             <span class="input-selSearch">
                                 <a href="javascript:void(0)" onclick="inp()"
-                                    class="ui-tab4-list mb10 str2 xiaLa">政府补助及荣耀</a>
+                                    class="ui-option mb10 str2  xiaLa">政府补助及荣耀</a>
                                 <div class="search-cont lj" style="left: 0px; display: none;width: 120%;">
                                     <a href="javascript:void(0)" class="search-list db ell">11</a>
                                     <a href="javascript:void(0)" class="search-list db ell">工商管理</a>
@@ -167,11 +167,10 @@
         });
     });
 
-    $(".ui-tab4-list").click(function () {
-        $(".ui-tab4-list").removeClass("on");
-        $(this).addClass("on");
-    });
-
+  $(".ui-option").click(function () {
+      $(".ui-option").removeClass("on");
+      $(this).addClass("on");
+  });
     function sel(inde) {
         $(".nameSel1").css("display", "block");
         $(".nameSel2").addClass("dn");

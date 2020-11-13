@@ -46,76 +46,101 @@
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
 					<div class="mb10 f0">
-						<span class="pct22 dib f12 radio">
-							<span class="searchLable">发票状态：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>有效</label>
-							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>作废</label>
+						<span class="pct30 dib f12 radio ">
+							<span class="searchLable">是否认证：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
+									 class="radio-opacity" name="radio"></i>是</label>
+							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
-						<span class="pct22 dib f12 radio"><span class="searchLable">是否清票：</span>
+						<span class="pct30 dib f12 radio"><span class="searchLable">是否清票：</span>
 							<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
-						<span class="pct22 dib f12 radio">
-							<span class="searchLable">是否认证：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<span class="pct30 dib f12 radio">
+							<span class="searchLable">&emsp;&emsp;发票状态：</span><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input
+									 type="radio" class="radio-opacity" name="radio"></i>是</label>
 							<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 						</span>
-						<span class="pct30 dib f12"><span class="searchLable">发票登记日期：</span><span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" ></span>
+					</div>
+					<div class="mb10 f0 searchLable">
+						<span class="pct30 dib f12">发票单位：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct30 dib f12 searchLable">&emsp;&emsp;区域：<input type="text" class="ui-input pct59" placeholder="请输入"
+							 autocomplete="off">
+						</span>
+						<span class="pct30 dib f12">发票登记日期：<span class="ui-input f0 pct69 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+							</span>
 						</span>
 					</div>
-					<div class="mb10 f0">
-						<span class="pct22 dib f12"><span class="searchLable">发票单位：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct22 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct22 dib f12"><span class="searchLable">&emsp;订单号：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct30 dib f12"><span class="searchLable">发票清票日期：</span><span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" ></span> <span class="checkbox"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>无</span>
-						</span>
-					</div>
-					<div class="mb10 f0">
-						<span class="pct22 dib f12">
-							<span class="searchLable">发票类型：</span><span class="input-selSearch pct59">
+					<div class="mb10 f0 searchLable">
+						<span class="pct30 dib f12">
+							发票类型：<span class="input-selSearch pct59">
 								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
 								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">全部</a>
+									<a href="javascript:void(0)" class="search-list db ell">加工发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">运输发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">仓库发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">仓库发票(加工)</a>
+									<a href="javascript:void(0)" class="search-list db ell">吊装发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">出库发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">运输发票(加工)</a>
+									<a href="javascript:void(0)" class="search-list db ell">订舱发票</a>
+									<a href="javascript:void(0)" class="search-list db ell">办公费用发票</a>
 								</div>
 							</span>
 						</span>
-						<span class="pct22 dib f12"><span class="searchLable">金牌商家：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct22 dib f12"><span class="searchLable">&emsp;发票号：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
+						<span class="pct30 dib f12">&emsp;订单号：<input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
 						</span>
-						<span class="pct30 dib f12"><span class="searchLable">发票入账日期：</span><span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-					</span>
+						<span class="pct30 dib f12 "><span class="searchLable">发票清票日期：</span><span class="ui-input f0 pct69 range"
+							 data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+							</span> <span class="checkbox"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+									 name="checkbox"></i>无</span>
 						</span>
-
 					</div>
-
-					<div class="mb10 f0 cah dn">						
-						
-						<span class="pct22 dib f12"><span class="searchLable">&emsp;登票人：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct22 dib f12"><span class="searchLable">&emsp;清票人：</span><input type="text" class="ui-input pct59" placeholder="请输入" autocomplete="off">
-						</span>
-						<span class="pct22 dib f12"><span class="searchLable">认证日期：</span><span class="ui-input f0 pct59 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-						</span></span>
-						<span class="pct30 dib f12"><span class="searchLable">发票开具日期：</span><span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-					</span>
-						</span>						
+					<div class="cah dn">
+						<div class="mb10 f0 ">
+							<span class="pct30 dib f12 searchLable">金牌商家：<input type="text" class="ui-input pct59" placeholder="请输入"
+								 autocomplete="off"></span>
+					
+							<span class="pct30 dib searchLable f12">&emsp;发票号：<input type="text" class="ui-input pct59" placeholder="请输入"
+								 autocomplete="off">
+							</span>
+							<span class="pct30 dib f12 searchLable">发票入账日期：<span class="ui-input f0 pct69 range" data-type="time">
+									<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+									 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+								</span>
+							</span>
+						</div>
+						<div class="mb10 f0">
+							<span class="pct30 dib searchLable f12">&emsp;登票人：<input type="text" class="ui-input pct59" placeholder="请输入"
+								 autocomplete="off">
+							</span>
+							<span class="pct30 dib searchLable f12">&emsp;清票人：<input type="text" class="ui-input pct59" placeholder="请输入"
+								 autocomplete="off">
+							</span>
+							<span class="pct30 dib searchLable f12">发票开具日期：<span class="ui-input f0 pct69 range" data-type="time">
+									<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+									 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+								</span>
+							</span>
+						</div>
+						<div class="f0">
+							<span class="pct30 dib f12 searchLable">认证日期：<span class="ui-input f0 pct59 range" data-type="time">
+									<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+									 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+								</span></span>
+						</div>
 					</div>
-
-
-	                <div class="tc mt20">
-	                	<button type="button" class="ui-button mr10">查询</button>
-	                    <button type="button" class="ui-button" onclick="showSearchIconDn(this)" data-type="clear" ot="更多查询">
-	                        <span class="bText dib mr5">更多查询</span>
-	                        <i class="fanArrowIcon"></i>
-	                    </button>
-	                    <!-- <button type="button" class="ui-button " data-type="clear">清空</button> -->
-	                </div>
-
+					<div class="tc mt20 ">
+						<button type="button" class="ui-button mr10">查询</button>
+						<button type="button" class="ui-button" onclick="showSearchIconDn(this)" data-type="clear" ot="更多查询">
+							<span class="bText dib mr5">更多查询</span>
+							<i class="fanArrowIcon"></i>
+						</button>
+					</div>
 	                <!-- search end -->
 					
 					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll">
