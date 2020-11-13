@@ -92,46 +92,44 @@
 
 						
 						
-						<span class="pct25 dib f12"><span class="searchLable">发票抬头：</span><span class="input-selSearch pct69">
-								<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码、汉字即时搜索" autocomplete="off" >
-								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">北京</a>
-									<a href="javascript:void(0)" class="search-list db ell">上海</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-								</div>
-							</span>
-						</span>
-								
+					
 					</div>
 					
 					<div class="mb10">
+						<span class="pct25 dib f12"><span class="searchLable">发票抬头：</span><span class="input-selSearch pct69">
+							<input type="text" class="ui-input searchUp pct100" placeholder="请输入助记码、汉字即时搜索" autocomplete="off" >
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell">北京</a>
+								<a href="javascript:void(0)" class="search-list db ell">上海</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+					</span>
 						<span class="pct25 dib f12"><span class="searchLable">申请日期：</span><span class="ui-input tc f0 pct69  range" data-type="time">
 						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
 						</span></span>	
+						<button type="button" class="ui-button ">查询</button>
 					</div>
 
-	                <div class="tc  mt20 mb20">
-						<button type="button" class="ui-button ">查询</button>
-	                    <!-- <button type="button" class="ui-button mr10" data-type="clear">清空</button> -->
-	                </div>
+	                
 
 	                <!-- search end -->
 
 
-							<table class="ui-table tc f12 mt30" width="100%">
+							<table class="ui-table table-cw tc f12 mt30" width="100%">
 								<thead>
 		                        <tr>
 		                            <th width="6%" ><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</th>
 		                            <th width="12%" class="tl"><div class="pl10 ">发票抬头</div></th>
-		                            <th width="10%">发票名称</th>
-		                            <th width="10%">开票总重量</th>
-		                            <th width="10%">开票总金额</th>
+		                            <th width="8%">发票名称</th>
+		                            <th width="9%">开票总重量</th>
+		                            <th width="9%">开票总金额</th>
 		                            <th width="10%">不含税金额</th> 
 		                            <th width="8%">销项税额</th>
-		                            <th width="13%">申请日期</th>  
+		                            <th width="17%">申请日期</th>  
 		                            <th width="7%">申请人</th>
 		                            <th width="7%">取票方式</th> 
 		                            <th width="7%">开票信息</th>
@@ -140,11 +138,11 @@
 		                    <tbody class="ui-thover">
 		                    	 <tr><td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 		                            <td class="tl">
-		                            	<div class="pl10 ">
+		                            	<div class="pl10 table_ell">
 		                            		<span class="f_blueCircle mr2">代</span>
 		                            		<!-- <span class="f_greenCircle mr2">网</span>
 		                            		<span class="f_orangeCircle mr2">金</span> -->
-		                            		上海柒柒贸易有限公司
+		                            	<span class="ell" title="上海柒柒贸易有限公司">上海柒柒贸易有限公司</span>	
 		                            	</div>
 		                            </td>
 		                            <td>综合加工费</th>
@@ -152,7 +150,7 @@
 		                            <td><a class="numFormat" href="javascript:void(0)" onclick="layerTSum()">12300.00</a></td>
 		                            <td><span class="numFormat">13300.00</span></td>
 		                            <td><span class="numFormat">13400.00</span></td>
-		                            <td>2020-04-22 11:11：11</td>
+		                            <td>2020-04-22 11:11:11</td>
 		                            <td>李四</td>
 		                            <td><a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">快递到家</a></td>
 		                            <td><a href="javascript:void(0)" onclick="showTrMoreOn(this)">查看</a></td>
@@ -230,9 +228,9 @@
 		                        </tr> 
 		                        <tr><td ><i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
 		                            <td class="tl">
-		                            	<div class="pl10 ">		                            		
+		                            	<div class="pl10 table_ell">		                            		
 		                            		<span class="f_greenCircle mr2">网</span>
-		                            		上海柒柒贸易有限公司
+		                            	<span class="ell" title="上海柒柒贸易有限公司">上海柒柒贸易有限公司</span>	
 		                            	</div>
 		                            </td>
 		                            <td>综合加工费</th>
@@ -240,7 +238,7 @@
 		                            <td><a class="numFormat" href="javascript:void(0)" onclick="layerTSum()">12300.00</a></td>
 		                            <td><span class="numFormat">13300.00</span></td>
 		                            <td><span class="numFormat">13400.00</span></td>
-		                            <td>2020-04-22 11:11：11</td>
+		                            <td>2020-04-22 11:11:11</td>
 		                            <td>李四</td>
 		                            <td>上门取件</td>
 		                            <td><a href="javascript:void(0)" onclick="showTrMoreOn(this)">查看</a></td>
@@ -248,7 +246,7 @@
 		                    </tbody>
 		                    <tfoot class="bgfa">
 		                    	<tr height="45">
-		                    		<td colspan="15">
+		                    		<td colspan="11">
 		                    			<span class="l pt5 pct6"><i class="ui-checkbox goldIcon mr5 vm"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</span>
 		                    			<span class="r mr10">
 		                    				<button class="ui-button plr10" type="button">合并开票</button>
@@ -256,10 +254,10 @@
 		                    		</td>
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="15">当前页合计：开票总金额：<span class="numFormat red">93336</span>吨&emsp;&emsp;不含税金额：<span class="numFormat red">93336</span>元&emsp;&emsp;销项税额：<span class="numFormat red">93336</span>元</td>
+		                    		<td colspan="11">当前页合计：开票总金额：<span class="numFormat red">93336</span>吨&emsp;&emsp;不含税金额：<span class="numFormat red">93336</span>元&emsp;&emsp;销项税额：<span class="numFormat red">93336</span>元</td>
 		                    	</tr>
 		                    	<tr height="45">
-		                    		<td colspan="15">所有页合计：开票总金额：<span class="numFormat red">93336</span>吨&emsp;&emsp;不含税金额：<span class="numFormat red">93336</span>元&emsp;&emsp;销项税额：<span class="numFormat red">93336</span>元</td>
+		                    		<td colspan="11">所有页合计：开票总金额：<span class="numFormat red">93336</span>吨&emsp;&emsp;不含税金额：<span class="numFormat red">93336</span>元&emsp;&emsp;销项税额：<span class="numFormat red">93336</span>元</td>
 		                    	</tr>
 
 		                    </tfoot>
