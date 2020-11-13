@@ -30,6 +30,10 @@
 		.myTab1.ui-table tbody td:hover,.myTab1.ui-table tbody tr:hover{
 			background: #FFFFFF;
 		}
+		
+		.w200{
+			width: 200px;
+		}
     </style>
 	</head>
 
@@ -53,7 +57,7 @@
 					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 				</div>
 			</div>
-
+			
 			<div class="ui-tab3">
 				<a href="goldMedalGuarantee.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">担保/承诺函上传</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="summaryOfGuarantee.html" class="ui-tab3-list rel"><span class="ui-tab3-text">担保/承诺函汇总</span><i class="goldIcon ui-tab3-dot"></i></a>
@@ -72,7 +76,7 @@
 								<span class="searchLable">核保人区域：</span>
 								<span class="input-selSearch pct69">
 									<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-									<div class="search-cont">
+									<div class="search-cont pct100">
 										<a href="javascript:void(0)" class="search-list db ell">北京</a>
 										<a href="javascript:void(0)" class="search-list db ell">上海</a>
 										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
@@ -86,11 +90,11 @@
 								<span class="searchLable">&emsp;核保人：</span>
 								<input type="text" class="ui-input pct69" placeholder="请输入">
 							</span>
-							<span class="pct22 dib f12 ml20">
+							<span class="pct22 dib f12 ">
 								<span class="searchLable">身份证号码：</span>
 								<input type="text" class="ui-input pct69 mb10" placeholder="请输入">
 							</span>
-							<span class="pct30 dib f12">
+							<span class="pct30 dib f12 ml10">
 								<span class="searchLable">核保日期：</span>
 								<span class="ui-input tc f0 pct69  range" data-type="time">
 									<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
@@ -98,7 +102,6 @@
 								</span>
 							</span>
 						</div>
-
 						<div class="mb10 dac">
 							<span class="pct22 dib f12">
 								<span class="searchLable">&emsp;联系方式：</span>
@@ -181,46 +184,37 @@
 									<td colspan="11">
 										<div class="pl20 pr20">
 											<div class="bgwh pt20 pb20">
-												<div class="df mb10">
-													<div class="pct10 tr">核保人：</div>
-													<div class="pl10">李思思</div>
+												<div class="dac mb10">
+													<div class="pct12 tr">核保人：</div>
+													<div class="pl10 tl" style="width: 37%;">李思思</div>
+													<div class="pct12 tr">核保区域：</div>
+													<div class="pl10 tl f1">上海</div>
 												</div>
-												<div class="df mb10">
-													<div class="pct10 tr">核保区域：</div>
-													<div class="pl10">上海</div>
-												</div>
-												<div class="df mb10">
-													<div class="pct10 tr">身份证号：</div>
-													<div class="pl10">415263192504850312</div>
-												</div>
-												<div class="df mb10">
-													<div class="pct10 tr">核保期限：</div>
-													<div class="pl10 f1 tl">
-														<span class="ui-input tc f0 pct30 range" data-type="time">
+												<div class="dac mb10">
+													<div class="pct12 tr">身份证号：</div>
+													<div class="pl10 tl" style="width: 37%;">415263192504850312</div>
+													<div class="pct12 tr">核保期限：</div>
+													<div class="pl10 f1 tl" style="width: 37%;">
+														<span class="ui-input tc w200 range" data-type="time">
 															<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="">
 														</span>
 													</div>
 												</div>
 												<div class="df mb10">
-													<div class="pct10 tr">身份证扫描件上传：</div>
+													<div class="pct12 tr">身份证扫描件上传：</div>
 													<div class="pl10 tl">
-														<button type="button" class="ui-button mr10 vm" data-type="upfile" onclick="upfile()">常规上传</button>
+														<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
 															 href="#"></a></span>
-														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-															 href="#"></a></span>
-														
 														<div class="pt5 cl">
 															<span class="ui-tip" data-type="normal">身份证正反面复印于一张纸上，金牌商家签字、摁手印并书写日期。</span>
 														</div>
 													</div>
 												</div>
 												<div class="df mb10">
-													<div class="pct10 tr">承诺函扫描件上传：</div>
+													<div class="pct12 tr">承诺函扫描件上传：</div>
 													<div class="pl10 tl">
-														<button type="button" class="ui-button mr10 vm" data-type="upfile" onclick="upfile()">常规上传</button>
-														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-															 href="#"></a></span>
+														<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
 															 href="#"></a></span>
 														<div class="pt5 cl">
@@ -229,11 +223,9 @@
 													</div>
 												</div>
 												<div class="df">
-													<div class="pct10 tr">签订现场照片：</div>
+													<div class="pct12 tr">签订现场照片：</div>
 													<div class="pl10 tl">
-														<button type="button" class="ui-button mr10 vm" data-type="upfile" onclick="upfile()">常规上传</button>
-														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
-															 href="#"></a></span>
+														<button type="button" class="ui-button vm" data-type="upfile" onclick="upfile()">常规上传</button>
 														<span class="ui-files ml10 vm"><a href="javascript:void(0)" class="g80">组件1111组件</a><a class="icon-sdel goldIcon vm ml5"
 															 href="#"></a></span>
 														<div class="pt5 cl">
@@ -443,7 +435,7 @@
 					title: '历史记录',
 					shadeClose: true,
 					shade: 0.4,
-					area: ['80%', '80%'],
+					area: ['960px', '750px'],
 					content: '../documents/colist.html' //iframe的url
 				});
 			}

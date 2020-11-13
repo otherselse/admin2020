@@ -16,6 +16,25 @@
         .hoverBlue:hover {
             padding: 2px 5px;
         }
+		.xie {
+		    border: 0.5px solid #ccc;
+		    transform: rotate(35deg);
+		    position: absolute;
+		    top: 50%;
+		    width: 120%;
+		    left: -10px;
+		}
+		.leBie {
+		    position: absolute;
+		    left: 16px;
+		    bottom: -22px;
+		}
+		
+		.quYu {
+		    position: absolute;
+		   top: -22px;
+		   right: 16px;
+		}
     </style>
 </head>
 
@@ -73,16 +92,19 @@
                     </span>
                     <button type="button" class="ui-button ml20 mr20">查询</button>
                 </div>
-                <table class="ui-table tc mt30 f12" width="100%">
+                <table class="ui-table tc mt30 f12" width="100%" style="table-layout: fixed;">
                     <thead>
                         <tr class="n17-Ttitle">
-                            <th width="8%" class=" cent n17-bbb">&nbsp;</th>
+							<th rowspan="2"  class=" cent n17-bbb" style="padding: 0px; width: 100px;">
+								<div class="rel"><span class="leBie">类别</span>
+								<div class="xie"></div>
+								<span class="quYu">统计</span></div>
+							</th>
                             <th colspan="2" class=" cent n17-bbb f14 bold">首页</th>
                             <th colspan="2" class=" cent n17-bbb f14 bold">乐刚加工</th>
                             <th colspan="7" class=" cent n17-bbb f14 bold">我的乐刚-加工管理</th>
                         </tr>
                         <tr class="n17-Ttitlegrey">
-                            <th >统计</th>
                             <th width="8%" >加工下单</th>
                             <th width="8%" >推荐下单</th>
                             <th width="7%" >搜索</th>
@@ -95,8 +117,8 @@
                             <th width="9%" >单据打印</th>
                             <th width="8%" >出库查询</th>
                         </tr>
-                        <tr>
-                            <th>访客数(uv)</th>
+                        <tr height="45">
+                            <td class="bgfa">访客数(uv)</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>

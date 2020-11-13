@@ -1,200 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>G2G账户跟踪表-自有资金记录汇总-统计管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
- 
-    <style>
-        .hoverBlue:hover {
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>G2G账户跟踪表-自有资金记录汇总-统计管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+		<style>
+			.hoverBlue:hover {
             padding: 2px 5px;
         }
     </style>
-</head>
+	</head>
 
-<body class="showTip">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
+	<body class="showTip">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
 
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib gga pl5 pr5">/</span>
-                统计管理
-                <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">G2G账户跟踪表</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class="ui-tab3">
-            <a href="ownCapitalRecord.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="scheduleOfOwnFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="G2GAccountTrackingTable.html" class="ui-tab3-list rel on"><span
-                    class="ui-tab3-text">G2G账户跟踪表</span><i class="goldIcon ui-tab3-dot"></i></a>
-            <a href="scheduleOfOwnNewFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细新表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="demeritScoreSheet.html" class="ui-tab3-list rel"><span class="ui-tab3-text">扣分记录明细表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="G2GDailyTotalsTable.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G每日总额汇总表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-        <div class="ui-content minH">
-            <div class="f12 p20">
-                <div class="cl mb10 dac f12">
-                    <span class="dib pct25">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30">
-                        <span class="searchLable">业务日期：</span>
-                        <span class="ui-input tc  pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                    <button type="button" class="ui-button ml20 mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
-                </div>
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib gga pl5 pr5">/</span>
+					统计管理
+					<span class="dib gga pl5 pr5">/</span>
+					<span class="g28">G2G账户跟踪表</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="ownCapitalRecord.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="scheduleOfOwnFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="G2GAccountTrackingTable.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">G2G账户跟踪表</span><i
+					 class="goldIcon ui-tab3-dot"></i></a>
+				<a href="scheduleOfOwnNewFunds.html" class="ui-tab3-list rel"><span class="ui-tab3-text">自有资金记录明细新表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="demeritScoreSheet.html" class="ui-tab3-list rel"><span class="ui-tab3-text">扣分记录明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="G2GDailyTotalsTable.html" class="ui-tab3-list rel"><span class="ui-tab3-text">G2G每日总额汇总表</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content minH">
+				<div class="f12 p20">
+					<div class="cl mb10 dac f12">
+						<span class="dib pct25">
+							<span class="searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct30">
+							<span class="searchLable">业务日期：</span>
+							<span class="ui-input tc  pct69 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span
+								 class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+								 autocomplete="off" lay-key="2">
+							</span>
+						</span>
+						<button type="button" class="ui-button ml20 mr20">查询</button>
+						<button type="button" class="ui-button" data-type="clear">清空</button>
+					</div>
 
-                <table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="6%" rowspan="2">日期</th>
-                            <th width="6%" rowspan="2">金牌商家</th>
-                            <th width="6%" rowspan="2">上日余额</th>
-                            <th width="6%" rowspan="2">上日乐财宝</th>
-                            <th width="6%" rowspan="2">上日分红余额</th>
-                            <th width="35%" colspan="8">充值记录</th>
-                            <th width="20%" colspan="3">扣减记录</th>
-                            <th width="9%" rowspan="2">
-                                当日<br>
-                                G2G总额
-                            </th>
-                            <th width="0%" class="tablebtd1" rowspan="2">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    计算差异<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th width="8%">贸易分红</th>
-                            <th width="8%">加工分红</th>
-                            <th width="9%">加工/加盟积分</th>
-                            <th width="8%">推荐积分</th>
-                            <th width="9%">营转G2G分</th>
-                            <th width="9%">G2G收益</th>
-                            <th width="10%">个人充值<br>
-                                (自有资金充值)</th>
-                            <th width="9%">首单交易</th>
-                            <th width="10%">保证金使用G2G</th>
-                            <th width="10%">超期未收发票</th>
-                            <th width="10%">提现<br>(系统和个人)</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover">
-                        <tr>
-                            <td width="6%">2020-10-09 </td>
-                            <td width="6%">肖远辉</td>
-                            <td width="6%">0</td>
-                            <td width="6%">0</td>
-                            <td width="6%">0</td>
-                             <td width="6%">0</td>
-                            <td width="6%">0</td>
-                            <td width="6%">0</td>
-                            <td width="6%">0</td>
-                            <td width="6%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0.000</td>
-                      </tr>
-                    </tbody>
-                </table>
-                <script type="text/javascript" src="../js/pagelist.js"></script>
-            </div>
-        </div>
-    </div>
-    <!-- rightBar -->
-    <div class="dom1 dn">
-        请审批人员认真查看附件内容，以附件为参考依据进行审批。
-    </div>
+					<table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
+						<thead>
+							<tr>
+								<th width="6%" rowspan="2">日期</th>
+								<th width="6%" rowspan="2">金牌商家</th>
+								<th width="6%" rowspan="2">上日余额</th>
+								<th width="6%" rowspan="2">上日乐财宝</th>
+								<th width="6%" rowspan="2">上日分红余额</th>
+								<th width="35%" colspan="8">充值记录</th>
+								<th width="20%" colspan="3">扣减记录</th>
+								<th width="9%" rowspan="2">
+									当日<br>
+									G2G总额
+								</th>
+								<th width="0%" class="tablebtd1" rowspan="2">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										计算差异<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+							</tr>
+							<tr>
+								<th width="8%">贸易分红</th>
+								<th width="8%">加工分红</th>
+								<th width="9%">加工/加盟积分</th>
+								<th width="8%">推荐积分</th>
+								<th width="9%">营转G2G分</th>
+								<th width="9%">G2G收益</th>
+								<th width="10%">个人充值<br>
+									<span title="自有资金充值" class="tiptop goldIcon icon-info menuhook"></span>
+								</th>
+								<th width="9%">首单交易</th>
+								<th width="10%">保证金使用G2G</th>
+								<th width="10%">超期未收发票</th>
+								<th width="10%">
+									<div class="daj">提现<span title="系统和个人" class="tiptop goldIcon icon-info menuhook ml2"></span></div>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="ui-thover">
+							<tr>
+								<td width="6%">2020-10-09 </td>
+								<td width="6%">肖远辉</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="6%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0</td>
+								<td width="5%">0.000</td>
+							</tr>
+						</tbody>
+					</table>
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div>
+		</div>
+		<!-- rightBar -->
+		<div class="dom1 dn">
+			请审批人员认真查看附件内容，以附件为参考依据进行审批。
+		</div>
+		
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script>
+			$(function() {
+				$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(1).addClass("on"); // 静态页面定位使用，开发使用title等定位
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script>
-        $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					/* position:{
+					        my: 'bottom center', 
+					                at: 'top center' 
+					    },*/
+					position: {
+						viewport: $(window),
+						my: 'bottom center', //my:是指三角的位置
+						at: 'top center' //是在提示在组件的相对位置
+					},
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
+					}
+				});
+			})
 
-            //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                /* position:{
-                        my: 'bottom center', 
-                                at: 'top center' 
-                    },*/
-                position: {
-                    viewport: $(window),
-                    my: 'bottom center', //my:是指三角的位置
-                    at: 'top center' //是在提示在组件的相对位置
-                },
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                }
-            });
-        })
+			function show(obj) {
+				$(obj).find("span").toggleClass("t_deg90");
+				$(obj).toggleClass("on");
+			}
 
-        function show(obj) {
-            $(obj).find("span").toggleClass("t_deg90");
-            $(obj).toggleClass("on");
-        }
+			function clickPermit(obj, flag) {
+				if (flag == "1") {
+					$(obj).parents("tbody").find("textarea").val("同意申请。");
+				} else {
+					$(obj).parents("tbody").find("textarea").val("不同意申请。");
+				}
+			}
 
-        function clickPermit(obj, flag) {
-            if (flag == "1") {
-                $(obj).parents("tbody").find("textarea").val("同意申请。");
-            } else {
-                $(obj).parents("tbody").find("textarea").val("不同意申请。");
-            }
-        }
+			function show(obj) {
+				if ($(obj).find("img").attr("class").indexOf("t_deg90") < 0) {
+					$(obj).find("img").addClass("t_deg90");
+					$(obj).parents(".df").next("div").removeClass("dn");
+				} else {
+					$(obj).find("img").removeClass("t_deg90");
+					$(obj).parents(".df").next("div").addClass("dn");
+				}
 
-        function show(obj) {
-            if ($(obj).find("img").attr("class").indexOf("t_deg90") < 0) {
-                $(obj).find("img").addClass("t_deg90");
-                $(obj).parents(".df").next("div").removeClass("dn");
-            } else {
-                $(obj).find("img").removeClass("t_deg90");
-                $(obj).parents(".df").next("div").addClass("dn");
-            }
-
-        }
-    </script>
-</body>
+			}
+		</script>
+	</body>
 
 </html>

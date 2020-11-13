@@ -10,32 +10,24 @@
 		body,html{background-color: #fff}
 	</style>
 </head>
-<body>
+<body class="showTip isPc">
 	<div class="p20">
-		<table class="ui-table tc f12 auto mt10 " width="100%">
-						<tbody>
-							<tr class="resource-table">
-								<td class="title" width="13%">单位名称：</td>
-								<td width="37%" class="cont">简简单单企业</td>
-								<td class="title" width="13%">账户余额：</td>
-								<td width="37%" class="cont"><span class="numFormat">1,232,332,232</span>(客户余额)</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">付款银行：</td>
-								<td class="cont">中国银行</td>
-								<td class="title">付款账号：</td>
-								<td class="cont">65214568565486</td>
-							</tr>
-							<tr class="resource-table">								
-								<td class="title">到款日期：</td>
-								<td class="cont"><span class="ui-input pct40" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off" lay-key="1"></span></td>
-								<td class="title">到款金额：</td>
-								<td class="cont"><input type="text" class="ui-input pct40" value="" placeholder="请输入" ></td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">到款银行：</td>
-								<td class="cont">
-									<select id="selfBank" class="ui-input pct80">
+		<div class="mb10 f0">
+			<span class="pct50 dib f12">单位名称：简简单单企业</span>
+			<span class="pct50 dib f12">账户余额：<span class="numFormat">12323232</span>(客户余额)</span>
+		</div>
+		<div class="mb10 f0">
+			<span class="pct50 dib f12">付款银行：中国银行</span>
+			<span class="pct50 dib f12">付款账号：65214568565486</span>
+		</div>
+		<div class="mb10 f0">
+			<span class="pct50 dib f12">到款日期：
+				<span class="ui-input pct60" data-type="time"><input type="text" placeholder="选择时间" readonly="" class="render-time" autocomplete="off""></span></span>
+			<span class="pct50 dib f12">到款金额：<input type="text" class="ui-input pct60" value="" placeholder="请输入" ></span>
+		</div>
+		<div class="mb10 f0">
+			<span class="pct50 dib f12">到款银行：
+			<select id="selfBank" class="ui-input pct60">
 							      		<option value="120908385010402">招商银行上海自贸试验区分行</option>
 							      		<option value="31001579511050023589">中国建设银行上海外高桥保税区支行</option>
 				                      <option value="1001018619100004070">中国工商银行上海兰谷路支行</option>
@@ -57,32 +49,32 @@
 									   	<option value="2164 7010 0100 0518 94">兴业银行上海彭浦支行</option>
 				<!-- 					   	<option value="277881655546">中国银行天津融合广场支行</option>
 				 -->					   	<option value="1001233319005667868">中国工商银行上海宝山支行</option><option value="1001018619100004070" selected="selected">中国工商银行上海兰谷路支行</option><option value="金牌商家G2G账户">金牌商家G2G账户</option><option value="转账">转账</option><option value="446878560206">中国银行上海市友谊路支行</option><option value="1001279919005943746">工行自贸试验区外高桥保税区支行</option>
-							      </select>
-								</td>
-								<td class="title">到款账号：</td>
-								<td class="cont">1001018619100004070</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">收款类型：</td>
-								<td class="cont">销售收款</td>
-								<td class="title">到款类别：</td>
-								<td class="cont radio" colspan="3">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('电子银行承兑汇票')" value="40010"></i>电子银行承兑汇票</label>
+							      </select></span>
+			<span class="pct50 dib f12">到款账号：1001018619100004070</span>
+		</div>
+		<div class="mb10 f0">
+			<span class="pct50 dib f12">收款类型：销售收款</span>
+			<span class="pct50 dib f12">已到款金额：简简单单企业</span>			
+			
+		</div>
+		<div class="mb10">
+			<span class=" dib f12 radio">到款类别：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('电子银行承兑汇票')" value="40010"></i>电子银行承兑汇票</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('电汇')" value="4003"></i>电汇</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('银行转账支票')" value="4002"></i>银行转账支票</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('现金')" value="4001"></i>现金</label>
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" onclick="setValue('转账')" value="16024"></i>转账</label>
-								</td>
-							</tr>
-							<tr class="resource-table">
-								<td class="title">已到款金额：</td>
-								<td class="cont">2</td>
-								<td class="title">备注：</td>
-								<td class="cont"><input type="text" class="ui-input pct80" value="" placeholder="请输入" autocomplete="off"></td>
-							</tr>
-																		 
-						</tbody>
-					</table>
+			</span>
+		</div>
+		<div class="mb10 f12">
+			&emsp;&emsp;备注：
+				<textarea class="ui-textarea pct90" rows="3"></textarea>
+			
+		</div>
+
+		
+
+
+
 		<div class="tc mt30">
 			<button type="button" class="ui-button mr10">确认</button>
 			<button type="button" class="ui-button mr10" data-type="clear">关闭</button>

@@ -28,6 +28,18 @@
             font-size: 14px;
         }
     </style>
+	
+	<style>
+	    body,
+	    html {
+	        background: #fff;
+	    }
+	
+	    .ui-input[data-type='time'][small-type="small"] {
+	        height: 30px;
+	        line-height: 30px;
+	    }
+	</style>
 </head>
 
 <body class="showTip">
@@ -86,12 +98,19 @@
                         </span>
                     </span>
                 </div>
-                <div class="mb10 ">
-                    金牌商家头像：<span class=" dib">
+                <div class="mb10 df">
+                    金牌商家头像：<div class="tl dropUpfileCont">
+						<span class="tc" id="dropUpfile">
+							<span style="font-size: 50px">+</span><br>支持拖拽上传
+							<input id="file" type="file" multiple="multiple">
+						</span>
+					</div>
+					
+				<!-- 	<span class=" dib">
                         <button type="button" style="width: 145px;" class="ui-button mr10 pr10 vm" data-type="upfile"
                             onclick="upfile()">附件上传(<2MB)</button>
                                 <a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a>
-                    </span>
+                    </span> -->
                 </div>
             </div>
 
@@ -106,7 +125,8 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
-
+	<script src="../js/upfile.js" type="text/javascript" charset="utf-8"></script>
+	
 </body>
 <script>
     function showLayer(name, url) {

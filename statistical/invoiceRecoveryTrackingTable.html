@@ -22,6 +22,10 @@
             height: 30px;
             line-height: 30px;
         }
+		
+		.m_pct31{
+			width: 31%;
+		}
     </style>
 </head>
 
@@ -58,7 +62,7 @@
         <div class="ui-content minH">
             <div class="f12 p20">
                 <div class="mb10 dac f12">
-                    <span class="dib pct25">
+                    <span class="dib pct22">
                         <span class="searchLable">发票全部回收：</span>
                         <span class="radio">
                             <label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
@@ -67,37 +71,37 @@
                                         class="radio-opacity" name="radio"></i>否</label>
                         </span>
                     </span>
-                    <span class="dib pct25">
+                    <span class="dib pct22">
                         <span class="searchLable">&emsp;区域：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
+                    <span class="dib pct22">
                         <span class="searchLable">金牌商家：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
-                        <span class="searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
+					<span class="dib pct22 m_pct31">
+					    <span class="searchLable">付款时间：</span>
+					    <span class="ui-input tc f0 pct69 range" data-type="time">
+					        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
+					            autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
+					            placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
+					    </span>
+					</span>
                 </div>
 
                 <div class="mb10 dac f12">
-                    <span class="dib pct25">
+                    <span class="dib pct22">
                         <span class="searchLable">超期天数：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25">
+                    <span class="dib pct22">
                         <span class="searchLable">订单号：</span>
                         <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="dib pct25 m_pct31">
-                        <span class="searchLable">付款时间：</span>
-                        <span class="ui-input tc f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
+					<span class="dib pct22">
+					    <span class="searchLable">单位名称：</span>
+					    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+					</span>
                 </div>
 
                 <div class="mb10 dac">
@@ -118,7 +122,7 @@
                     </span>
                     <span class="dib pct50">
                         <div class="df">
-                            <div class="searchLable">状态：</div>
+                            <div class="searchLable">&emsp;&emsp;状态：</div>
                             <div class="dib selectSingle">
                                 <a class="on" href="javscript:void(0)">正常</a>
                                 <span class="">|</span>
@@ -206,7 +210,7 @@
                         </tr>
                     </tbody>
                     <tfoot>
-                        <tr height="45">
+                        <!-- <tr height="45">
                             <td colspan="15">
                                 当前页汇总：超期天数:<span class="dib mr10 red">0.0</span>
                                 已收票金额:<span class="dib mr10 red">0.0</span>
@@ -219,7 +223,23 @@
                                     已收票金额:<span class="dib mr10 red">0.0</span>
                                     未收票金额:<span class="dib mr10 red">0.0</span>
                             </td>
-                        </tr>
+                        </tr> -->
+						<tr height="45">
+						  	<td colspan="10">当前页合计:</td>	
+						  	<td><span id="s_purVoiceDays" numtype="personal">0</span></td>
+						  	<td>--</td>
+						  	<td><span id="s_voiceMoney" numtype="personal">0</span></td>
+						  	<td><span id="s_noVoiceMoney" numtype="personal">49,890.00</span></td>
+						  	<td>--</td>
+						  </tr>
+						  <tr height="45">
+						    	<td colspan="10">所有页合计:</td>	
+						    	<td numtype="formatMoney">1,006,906.26</td>
+						    	<td>--</td>
+						    	<td numtype="formatMoney">7,848,127,650.21</td>
+						    	<td numtype="formatMoney">546,643,925.36</td>
+						    	<td>--</td>
+						    </tr>
                     </tfoot>
                 </table>
                 <script type="text/javascript" src="../js/pagelist.js"></script>

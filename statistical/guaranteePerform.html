@@ -10,21 +10,22 @@
 		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
 		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-		<title>担保函上传(执行)-单据管理-乐刚智能云系统</title>
+		<title>担保函上传(执行)-统计管理-乐刚智能云系统</title>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 		<style type="text/css">
 			.ui-table tbody td {
 				padding: 10px 2px;
 			}
-			
-			.pct13{
+
+			.pct13 {
 				width: 13%;
 			}
-			.pct37{
+
+			.pct37 {
 				width: 37%;
 			}
-			
-			.w200{
+
+			.w200 {
 				width: 200px;
 			}
 		</style>
@@ -42,7 +43,7 @@
 				<div class="l gga">
 					<a href="../index/index.html" class="gga">首页</a>
 					<span class="dib pl5 pr5 ">/</span>
-					单据管理
+					统计管理
 					<span class="dib pl5 pr5">/</span>
 					<span class="g28"></span>
 					<a href="javascript:history.back(-1)" class="gga">担保函上传</a>
@@ -56,8 +57,11 @@
 			<div class="bgwh">
 				<div class="lh50 pl20 bor-bottom">
 					<a class="dfc" href="javascript:history.back(-1)">
-						<img class=" mr10" src="../images/documnts/xz5.png" alt="">
-						<span class="g0">返回上一级</span>
+						<div>
+							<img class=" mr10" src="../images/documnts/xz5.png" alt="">
+							<span class="g0">返回上一级</span>
+						</div>
+						<div class="f1"></div>
 					</a>
 				</div>
 
@@ -196,7 +200,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="dfc">
+					<div class="dfc f12">
 						<span class="checkbox">
 							<label class="mr20">
 								<i class="ui-checkbox goldIcon v-3 mr2">
@@ -209,7 +213,7 @@
 							流程说明 >
 						</a>
 					</div>
-					<h2 class="sp-yg  mt30">总额担保申请信息</h2>
+					<h2 class="sp-yg  mt30 dac"><span class="dib min-blueK mr5"></span>总额担保申请信息</h2>
 					<table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
 						<tbody>
 							<tr class="">
@@ -431,8 +435,7 @@
 									</span>
 								</td>
 							</tr>
-
-							<tr class="">
+							<tr class="dn">
 								<td class="bgfa" width="13%">
 									<span class="pt5 dib pl20">审批意见：</span>
 								</td>
@@ -475,8 +478,43 @@
 							</tr>
 						</tbody>
 					</table>
+					<h2 class="sp-yg  mt10 mb20 dac">审批意见</h2>
+					<div class="clt-check-cont  mt15">
+						<div class="cl clt-check-box">
+							<div class="clt-check-left">
+								<div class="pt20 pb20 tr">
+									<!-- <span class="mr10">1节点</span> -->
+								</div>
+							</div>
+							<div class="clt-check-right">
+								<div class="clt-check-rcont f0">
+									<div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-check on ml20 mr5 vm"></i><span
+										 class="green b">审核通过</span></div>
+									<div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct30 g28 vt">同意申请</span></div>
+									<div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="cl clt-check-box">
+							<div class="clt-check-left">
+								<div class="pt20 pb20 tr ">
+									<!-- <span class="mr10">2节点</span> -->
+								</div>
+							</div>
+							<div class="clt-check-right">
+								<div class="clt-check-rcont f0">
+									<div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-stop  ml20 mr5 vm"></i><span class="b red">审核不通过</span>
+									</div>
+									<div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct70 g28 vt">同意申请，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，</span>
+									</div>
+									<div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
 
-					<h2 class="sp-yg mt30 mb20">金牌商家评价信息</h2>
+					<h2 class="sp-yg  mt30 mb20 dac"><span class="dib min-blueK mr5"></span>金牌商家评价信息</h2>
 					<div class="f12">
 						<div class="daj mb10">
 							<div class="pct13 tr">工作年限：</div>
@@ -567,7 +605,7 @@
 							</div>
 						</div>
 						<div class="daj mb10">
-							<div class="pct13 tr " >自有车辆：</div>
+							<div class="pct13 tr ">自有车辆：</div>
 							<div class="pct37 pl10">
 								<span class="radio">
 									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
@@ -576,7 +614,7 @@
 								<span class=" dib ml20">产权必须在本人名下</span>
 							</div>
 							<div class="pct13 tr">面积(平方米)以及所在地：</div>
-							<div class="pct37 pl10" >
+							<div class="pct37 pl10">
 								<input type="text" class="ui-input w200" placeholder="请输入" value="大型重卡车" autocomplete="off">
 							</div>
 						</div>
@@ -648,9 +686,9 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script>
-		$(function() {
-			$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); // 静态页面定位使用，开发使用title等定位
-		})
+			$(function() {
+				$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(4).addClass("on"); // 静态页面定位使用，开发使用title等定位
+			})
 		</script>
 		<script>
 			//时间范围

@@ -21,6 +21,10 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
+		
+		.pct44{
+			width: 44%;
+		}
 
     </style>
 </head>
@@ -49,7 +53,7 @@
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,430)"
+                    <a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,650)"
                         class="dib xzhj-button daj">
                         <span class="dib mr10">新增仓库信息</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
@@ -58,26 +62,26 @@
             </div>
             <div class="mb20 f0 mt20 ml20  mr20">
                 <div class="mb10 f12 dac">
-                    <span class="dib pct50">
+                    <span class="dib pct44">
                         <div class="df">
                             <div class="min-w60 searchLable">仓库状态：</div>
                             <div class="dib selectSingle gc">
                                 <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)" class="">未确认</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)">已确认</a>
                             </div>
                         </div>
                     </span>
-                    <span class="dib pct50">
+                    <span class="dib f1">
                         <div class="df">
                             <div class="min-w60 searchLable">单据模板：</div>
                             <div class="dib selectSingle gc">
                                 <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)" class="">未上传</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)">已上传</a>
                             </div>
                         </div>
@@ -85,27 +89,27 @@
                 </div>
 
                 <div class="mb10 f12 dac">
-                    <span class="dib pct50">
+                    <span class="dib pct44">
                         <div class="df">
                             <div class="min-w60 searchLable">会员标记：</div>
                             <div class="dib selectSingle gc">
                                 <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)" class="">会员仓库</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)">非会员仓库</a>
                             </div>
                         </div>
                     </span>
 
-                    <span class="dib pct50">
+                    <span class="dib f1">
                         <div class="df">
                             <div class="min-w60 searchLable">停用标记：</div>
                             <div class="dib selectSingle gc">
                                 <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)" class="">停用</a>
-                                <span class="pr5 pl5 ">|</span>
+                                <span class="">|</span>
                                 <a href="javscript:void(0)">非停用</a>
                             </div>
                         </div>
@@ -113,11 +117,11 @@
                 </div>
 
                 <div class="mb10 f0">
-                    <span class="pct25 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><input type="text" class="ui-input pct69"
+                    <span class="pct22 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><input type="text" class="ui-input pct69"
                             placeholder="请输入"></span>
-                    <span class="pct25 dib f12"><span class="searchLable">&emsp;&emsp;仓库：</span><input type="text" class="ui-input pct69"
+                    <span class="pct22 dib f12"><span class="searchLable">仓库：</span><input type="text" class="ui-input pct69"
                             placeholder="请输入"></span>
-                    <span class="pct25 dib f12"><span class="searchLable">仓库单位：</span><span class="input-selSearch pct69">
+                    <span class="pct22 dib f12"><span class="searchLable">仓库单位：</span><span class="input-selSearch pct69">
                             <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
                                 readonly="">
                             <div class="search-cont">
@@ -130,20 +134,21 @@
                             </div>
                         </span>
                     </span>
-                    <span class="pct25 dib f12"><span class="searchLable">地址：</span><input type="text" class="ui-input pct69" placeholder="请输入"></span>
+					<span class="pct30 dib f12">
+					    <span class="searchLable">操作时间：</span><span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+					        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+					            class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+					            class="render-time pct45" readonly="">
+					    </span>
+					</span>
+                    
                 </div>
 
                 <div class="mb10 f0">
-                    <span class="pct25 dib f12"><span class="searchLable">&emsp;操作人：</span><input type="text" class="ui-input pct69"
+                    <span class="pct22 dib f12"><span class="searchLable">&emsp;操作人：</span><input type="text" class="ui-input pct69"
                             placeholder="请输入"></span>
-                    <span class="pct25 dib f12">
-                        <span class="searchLable">操作时间：</span><span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                class="render-time pct45" readonly="">
-                        </span>
-                    </span>
-                    <span class="dib pct50 f12">
+                  <span class="pct22 dib f12"><span class="searchLable">地址：</span><input type="text" class="ui-input pct69" placeholder="请输入"></span>
+                    <span class="dib f1 f12">
                         <button type="button" class="ui-button mr10">查询</button>
                         <button type="button" class="ui-button " data-type="clear">清空</button>
                     </span>
@@ -272,7 +277,7 @@
                                         onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
                                         title="仓库单位维护"></i>
                                     <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
-                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',960,500)" title="信息修改"></i>
+                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',960,700)" title="信息修改"></i>
                                     <i id="depotIsDel02955" style="display:inline-block "
                                         class="dib icon-stock-t poi s-tip isDelButton mr5 tiptop op5" title="停用仓库"
                                         onclick="showLayer('停用仓库','stopUsingTheWarehouse.html',600,350)"></i>
@@ -339,10 +344,10 @@
                                 <td width="8%">非会员仓库</td>
                                 <td width="16%">
                                     <i class="dib mr5 icon-stock-w poi s-tip tiptop op5"
-                                        onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',530)"
+                                        onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
                                         title="仓库单位维护"></i>
                                     <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
-                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',600)" title="信息修改"></i>
+                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',960,650)" title="信息修改"></i>
                                     <i id="depotIsDel12955" class="dib icon-stock-q poi s-tip isDelButton mr5 tiptop op5"
                                         title="启用仓库"
                                         onclick="showLayer('启用仓库','toEnableTheWarehouse.html',600,350)"></i>
