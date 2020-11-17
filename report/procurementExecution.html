@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -222,97 +222,136 @@
                         <img src="../images/report/fan.png" width="10" height="9" alt="">
                     </button>
                 </div>
-              
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="4%">序号</th>
-                            <th width="5%">订单号</th>
-                            <th width="5%">金牌商家</th>
-                            <th width="5%">业务类型</th>
-                            <th width="5%">订单类型</th>
-                            <th width="5%">库存销售类型</th>
-                            <th width="6%">采购日期</th>
-                            <th width="11%">供应商名称</th>
-                            <th width="5%">入库重量</th>
-                            <th width="5%">入库金额</th>
-                            <th width="5%">入库日期</th>
-                            <th width="5%">出库日期</th>
-                            <th width="5%">收票时间</th>
-                            <th width="5%">资金占用利息</th>
-                            <th width="5%">收票金额</th>
-                            <th width="5%">收票差异</th>
-                            <th width="5%">收货时间</th>
-                            <th width="5%">付款时间</th>
-                            <th width="5%">已付款金额</th>
-                            <th width="4%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="4%">1</td>
-                            <td width="5%"><a href="javascript:detail('61177')" title="点击查看订单详情"><span
-                                        class="redm">61177</span></a>
-                            </td>
-                            <td width="5%">赵自立</td>
-                            <td width="5%">现款业务</td>
-                            <td width="5%">定购</td>
-                            <td width="5%">供应商采购合同</td>
-                            <td width="6%">2020-09-15</td>
-                            <td width="11%">乐乐集团有限公司公司好</td>
-                            <td width="5%">
-                                <span>30</span>/吨
-                            </td>
-                            <td width="5%">120000</td>
-                            <td width="5%">2020-09-15</td>
-                            <td width="5%">--</td>
-                            <td width="5%">--</td>
-                            <td width="5%"></td>
-                            <td width="5%">0</td>
-                            <td width="5%">120000</td>
-                            <td width="5%">--</td>
-                            <td width="5%">--</td>
-                            <td width="5%">0</td>
-                            <td>
-                                <a href="/LgFront/sellReviewAction_esContractLgAdmin.action?orderID=61177"
-                                target="_blank" title="" class="redm">打印</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="20">
-                                <div class="df tl pl20">
-                                    <div>当前页合计：</div>
-                                    <div>
-                                        入库重量:<span class="red mr20">10</span>
-                                        入库金额:<span class="red mr20">1.000</span>
-                                        资金占用利息:<span class="red mr20">1.000</span>
-                                        售票金额:<span class="red mr20">1.000</span>
-                                        售票差异:<span class="red mr20">1.000</span>
-                                        已付款金额:<span class="red mr20">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="20">
-                                <div class="df tl pl20">
-                                    <div>所有页合计：</div>
-                                    <div>
-                                        入库重量:<span class="red mr20">10</span>
-                                        入库金额:<span class="red mr20">1.000</span>
-                                        资金占用利息:<span class="red mr20">1.000</span>
-                                        售票金额:<span class="red mr20">1.000</span>
-                                        售票差异:<span class="red mr20">1.000</span>
-                                        已付款金额:<span class="red mr20">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <!-- table end -->
+				
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="4%">序号</th>
+								    <th width="5%">订单号</th>
+								    <th width="5%">金牌商家</th>
+								    <th width="5%">业务类型</th>
+								    <th width="5%">订单类型</th>
+								    <th width="5%">库存销售类型</th>
+								    <th width="6%">采购日期</th>
+								    <th width="11%">供应商名称</th>
+								    <th width="5%">入库重量</th>
+								    <th width="5%">入库金额</th>
+								    <th width="5%">入库日期</th>
+								    <th width="5%">出库日期</th>
+								    <th width="5%">收票时间</th>
+								    <th width="5%">资金占用利息</th>
+								    <th width="5%">收票金额</th>
+								    <th width="5%">收票差异</th>
+								    <th width="5%">收货时间</th>
+								    <th width="5%">付款时间</th>
+								    <th width="5%">已付款金额</th>
+								    <th width="4%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="4%">1</td>
+								    <td width="5%"><a href="javascript:detail('61177')" title="点击查看订单详情"><span
+								                class="redm">61177</span></a>
+								    </td>
+								    <td width="5%">赵自立</td>
+								    <td width="5%">现款业务</td>
+								    <td width="5%">定购</td>
+								    <td width="5%">供应商采购合同</td>
+								    <td width="6%">2020-09-15</td>
+								    <td width="11%">乐乐集团有限公司公司好</td>
+								    <td width="5%">
+								        <span>30</span>/吨
+								    </td>
+								    <td width="5%">120000</td>
+								    <td width="5%">2020-09-15</td>
+								    <td width="5%">--</td>
+								    <td width="5%">--</td>
+								    <td width="5%"></td>
+								    <td width="5%">0</td>
+								    <td width="5%">120000</td>
+								    <td width="5%">--</td>
+								    <td width="5%">--</td>
+								    <td width="5%">0</td>
+								    <td width="4%">
+								        <a href="/LgFront/sellReviewAction_esContractLgAdmin.action?orderID=61177"
+								        target="_blank" title="" class="redm">打印</a>
+								    </td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								  	<td colspan="8">当前页合计：</td>
+								  	<td ><span id="s_balanceWeight"></span></td>
+								  	<td ><span id="s_balanceMoney"></span></td>
+								  	<td >--</td>
+								  	<td >--</td>
+								  	<td >--</td>
+								  	<td ><span id="s_capitalMoney"></span></td>
+								  	<td ><span id="s_voiceSum"></span></td>
+								  	<td ><span id="s_voiceDif"></span></td>
+								  	<td >--</td>
+								  	<td >--</td>
+								  	<td ><span id="s_payMoney"></span></td>
+									<td></td>
+								  </tr>
+								  <tr header="45">
+								    	<td colspan="8">所有页合计：</td>
+								    	<td>320600.528</td>
+								    	<td>1004781905.21</td>
+								    	<td >--</td>
+								    	<td >--</td>
+								    	<td >--</td>
+								    	<td>6433339523.5 </td>
+								    	<td>6042777343.15</td>
+								    	<td>-5037995509.6</td>
+								    	<td >--</td>
+								    	<td >--</td>
+								    	<td>409295937.75</td>
+										<td></td>
+								    </tr>
+								<!-- <tr height="45">
+								    <td colspan="20">
+								        <div class="df tl pl20">
+								            <div>当前页合计：</div>
+								            <div>
+								                入库重量:<span class="red mr20">10</span>
+								                入库金额:<span class="red mr20">1.000</span>
+								                资金占用利息:<span class="red mr20">1.000</span>
+								                售票金额:<span class="red mr20">1.000</span>
+								                售票差异:<span class="red mr20">1.000</span>
+								                已付款金额:<span class="red mr20">1.000</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr>
+								<tr height="45">
+								    <td colspan="20">
+								        <div class="df tl pl20">
+								            <div>所有页合计：</div>
+								            <div>
+								                入库重量:<span class="red mr20">10</span>
+								                入库金额:<span class="red mr20">1.000</span>
+								                资金占用利息:<span class="red mr20">1.000</span>
+								                售票金额:<span class="red mr20">1.000</span>
+								                售票差异:<span class="red mr20">1.000</span>
+								                已付款金额:<span class="red mr20">1.000</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr> -->
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				<!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->

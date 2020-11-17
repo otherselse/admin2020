@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -115,115 +115,110 @@
                     <button type="button" class="ui-button mr10">查询</button>
                 </span>
             </div>
-
-            <div class="lgui-table-box mt30">
-                <div class="lgui-table-body mt-1">
-                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
-                        <thead>
-                            <tr>
-                                <th width="8%" class="tl">
-                                    <div class="pl10">
-                                        备货订单号/<br>商互通订单号
-                                    </div>
-                                </th> 
-                                <th width="7%" class="tl">
-                                    <div class="pl10">
-                                        金牌商家
-                                    </div>
-                                </th>
-                                <th width="12%" class="tl">
-                                    <div class="pl10">
-                                        品名/牌号/规格
-                                    </div>
-                                </th>
-                                <th width="10%" class="tl">
-                                    <div class="pl10">
-                                        备货单位
-                                    </div>
-                                </th>
-                                <th widht="8%" class="tl">
-                                    <div class="pl10">
-                                        支付方式/日期
-                                    </div>
-                                </th>
-                                <th width="4%">仓库</th>
-                                <th width="4%">钢厂</th>
-                                <th width="4%">数量 </th>
-                                <th width="4%">重量 </th>
-                                <th width="4%">捆包号</th>
-                                <th width="6%">采购单价</th>
-                                <th width="6%">采购成本</th>
-                                <th width="6%">交易单价</th>
-                                <th width="6%">交易成本</th>
-                                <th width="4%">调整价格</th>
-                                <th width="6%">分红模式</th>
-                            </tr>
-                        </thead>
-                        <tbody class="ui-thover">
-                            <tr class="bgwh">
-                                <td class="tl">
-                                    <div class="pl10">
-                                       28459
-                                       <div class="col-8080">2112121</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10 dac">
-                                       <i class="shu-icon mr5"></i>
-                                       <span class="col-8080">
-                                           杨兴旺<br>
-                                           马云云
-                                       </span>
-                                    </div>
-                                </td>
-                                <td width="12%" class="tl">
-                                    <div class="pl10">
-                                        热轧卷板/Q235A
-                                        <div class="col-8080">11.000*800*C</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <a href="../public/userInfo1.html" target="_block" class="pl10 pr10">
-                                      阿里巴巴投资集团云慈善家
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        G2G支付
-                                        <div class="col-8080">2020-09-12</div>
-                                    </div>
-                                </td>
-                                <td>聚方库</td>
-                                <td width="4%">兆顺</td>
-                                <td width="4%" numtype="formatMoney">12.1</td>
-                                <td width="4%">35434</td>
-                                <td width="6%" numtype="formatMoney">4,000</td>
-                                <td width="6%" va="48400.0" data="cgcb" numtype="personal">48,400.00</td>
-                                <td width="6%" numtype="formatMoney">10,300</td>
-                                <td width="6%" va="124630.0" data="jycb" numtype="personal">124,630.00</td>
-                                <td widht=" 4%">5200</td>
-                                <td width="4%">60027</td>
-                                <td width="4%">
-                                    20%的红利
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <!-- <tr height="45">
-                                <td colspan="20">
-                                    <span class="dib">当页合计：</span>
-                                    <span class="dib">重量：</span>
-                                    <span class="dib red">986</span>
-                                    <span class="dib">采购成本：</span>
-                                    <span class="dib red">25,000</span>
-                                    <span class="dib">交易成本：</span>
-                                    <span class="dib red">548</span>
-                                </td>
-                            </tr> -->
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
+			
+			<div class="lgui-table-box mt30 checkbox">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+							<tr>
+							    <th width="8%" class="tl">
+							        <div class="pl10">
+							            备货订单号/<br>商互通订单号
+							        </div>
+							    </th> 
+							    <th width="7%" class="tl">
+							        <div class="pl10">
+							            金牌商家
+							        </div>
+							    </th>
+							    <th width="12%" class="tl">
+							        <div class="pl10">
+							            品名/牌号/规格
+							        </div>
+							    </th>
+							    <th width="10%" class="tl">
+							        <div class="pl10">
+							            备货单位
+							        </div>
+							    </th>
+							    <th widht="8%" class="tl">
+							        <div class="pl10">
+							            支付方式/日期
+							        </div>
+							    </th>
+							    <th width="4%">仓库</th>
+							    <th width="4%">钢厂</th>
+							    <th width="4%">数量 </th>
+							    <th width="4%">重量 </th>
+							    <th width="4%">捆包号</th>
+							    <th width="6%">采购单价</th>
+							    <th width="6%">采购成本</th>
+							    <th width="6%">交易单价</th>
+							    <th width="6%">交易成本</th>
+							    <th width="4%">调整价格</th>
+							    <th width="6%">分红模式</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="lgui-table-body mt-1">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<tbody class="ui-thover">
+							<tr class="bgwh">
+							    <td width="8%" class="tl">
+							        <div class="pl10">
+							           28459
+							           <div class="col-8080">2112121</div>
+							        </div>
+							    </td>
+							    <td width="7%" class="tl">
+							        <div class="pl10 dac">
+							           <i class="shu-icon mr5"></i>
+							           <span class="col-8080">
+							               杨兴旺<br>
+							               马云云
+							           </span>
+							        </div>
+							    </td>
+							    <td width="12%" class="tl">
+							        <div class="pl10">
+							            热轧卷板/Q235A
+							            <div class="col-8080">11.000*800*C</div>
+							        </div>
+							    </td>
+							    <td width="10%" class="tl">
+							        <a href="../public/userInfo1.html" target="_block" class="pl10 pr10">
+							          阿里巴巴投资集团云慈善家
+							        </a>
+							    </td>
+							    <td width="8%" class="tl">
+							        <div class="pl10">
+							            G2G支付
+							            <div class="col-8080">2020-09-12</div>
+							        </div>
+							    </td>
+							    <td>聚方库</td>
+							    <td width="4%">兆顺</td>
+							    <td width="4%" numtype="formatMoney">12.1</td>
+							    <td width="4%">35434</td>
+							    <td width="6%" numtype="formatMoney">4,000</td>
+							    <td width="6%" va="48400.0" data="cgcb" numtype="personal">48,400.00</td>
+							    <td width="6%" numtype="formatMoney">10,300</td>
+							    <td width="6%" va="124630.0" data="jycb" numtype="personal">124,630.00</td>
+							    <td widht="6%">5200</td>
+							    <td width="4%">60027</td>
+							    <td width="6%">
+							        20%的红利
+							    </td>
+							</tr>
+						</tbody>
+					<!-- 	<tfoot class="bgfa">
+							
+						</tfoot> -->
+					</table>
+				</div>
+			</div>
+            
             <!-- table end -->
             <script type="text/javascript" src="../js/pagelist.js"></script>
             <div class="mb20"></div>
