@@ -16,8 +16,8 @@
     <style>
         .ui-option,
         .ui-optionNo {
-            background: #fff;
-            min-width: auto;
+            /* background: #fff; */
+            min-width: 90px;
         }
 
         .qtip-lep0 .qtip-content {
@@ -81,7 +81,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -216,716 +216,301 @@
                     <button class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-
-                <!-- <div class="m-tabLimitSCroll lgui-table-box fixrightTab"> -->
-                    <table class="ui-table tc f12 table-cw" width="100%" data-type="edit">
-                        <thead>
-                            <tr class="">
-                                <th width="145px">订单号</th>
-                                <th width="10%" class="tl">
-                                    <div class="pl10">
-                                        金牌商家/单位名称
-                                    </div>
-                                </th>
-                                <th width="4%">付款方式</th>
-                                <th width="4%">贸易术语</th>
-                                <th width="5%">目的国家与港口</th>
-                                <th width="5%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同总量<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="4%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同金额<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="7%" class="tl">
-                                    <div class="pl10">
-                                        应收/未收金额
-                                    </div>
-                                </th>
-                                <th width="4%">
-                                    <lable class="jpsj_Sort" onclick="setOrderCol('x.payMoney',this)">
-                                        已付款
-                                        <i data="orderBy" id="Ix.payMoney" class=""></i> </lable>
-                                </th>
-                                <th width="5%">
-                                    税前毛利/率
-                                </th>
-                                <th width="3%">是否<br>结算</th>
-                                <th width="7%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">应收款日期<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="7%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">最后装运日期<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="7%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">订舱装运日期<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="7%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">预计到港日期<br><i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="4%">
-                                    超期<br>天数
-                                </th>
-                                <th width="4%" >
-                                    单据<br>查看
-                                </th>
-                                <!--  <th width="4%">区域</th> -->
-                                <th width="4%" style="right: 0px;">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody class="ui-thover bgwh">
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="../public/userInfo1.html" target="_block"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <!-- 开始 -->
-                            <tr class="hideTr dn">
-                                <td colspan="18">
-                                    <div class="p20">
-                                        <!-- <div class="g28 f14 mt20 b tl mb10">延期申请</div> -->
-                                        <table class="ui-table f12  auto tl" width="100%" style="min-width: 0px;">
-                                            <tbody>
-                                                <tr class="resource-table">
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">状态：</span>
-                                                    </td>
-                                                    <td width="37%">
-                                                        <span class="ml10 input-selSearch pct100 dac ">
-                                                            &nbsp;<input type="text" class="ui-input searchUp pct70"
-                                                                placeholder="请选择状态" autocomplete="off" readonly="">
-                                                            <div class="search-cont">
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell ">选择选择1</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择2</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择3</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择5</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择6</a>
-                                                            </div>
-                                                        </span>
-                                                    </td>
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">单据回收情况：</span></td>
-                                                    <td>
-                                                        <div class="ml5 dib selectSingle">
-                                                            <a class="mb10 on" href="javscript:void(0)">销售合同</a>
-                                                            <span class="mb10">|</span>
-                                                            <a class="mb10" href="javscript:void(0)">签收单</a>
-                                                            <span class="mb10">|</span>
-                                                            <a class="mb10" href="javscript:void(0)">对账函</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="resource-table">
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">采购合同号：</span>
-                                                    </td>
-                                                    <td width="37%">
-                                                        <span class="ml10 input-selSearch pct100 dac ">
-                                                            &nbsp;<input type="text" class="ui-input searchUp pct70"
-                                                                placeholder="请选择状态" autocomplete="off" readonly="">
-                                                            <div class="search-cont">
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell ">选择选择1</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择2</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择3</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择5</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="search-list db ell">选择选择6</a>
-                                                            </div>
-                                                        </span>
-                                                    </td>
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">备注：</span>
-                                                    </td>
-                                                    <td>
-                                                        <textarea class="ui-textarea pct80 ml10" rows="1"></textarea>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="tc  mt20 mb20">
-                                            <button type="button" class="ui-button mr10">提交</button>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="../public/userInfo1.html" target="_block"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="../public/userInfo1.html" target="_block"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/theOrderDetails.html" target="_block">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="javascript:void(0)"
-                                                onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td> </td>
-                                <td>FAS</td>
-                                <td>--</td>
-                                <td>0 (吨)
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        2020<span class="col-8080">/939</span>
-                                    </div>
-                                </td>
-                                <td> <span>0</span>
-                                </td>
-                                <td><span>0</span>
-                                </td>
-                                <td>否</td>
-                                <td>--</td>
-                                <td>2014-12-20</td>
-                                <td> --</td>
-                                <td>--</td>
-                                <td></td>
-                                <td >
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td style="right: 0;">
-                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="">
-                            <tr height="45">
-                                <td colspan="5">当前页合计：</td>
-                                <td>21</td>
-                                <td>19,500</td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        19,500
-                                        <div class="col-8080">12212</div>
-                                    </div>
-                                </td>
-                                <td>0</td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        19,500
-                                        <div class="col-8080">12%</div>
-                                    </div>
-                                </td>
-                                <td colspan="8"></td>
-                            </tr>
-                            <tr height="45">
-                                <td colspan="5">所有页合计：</td>
-                                <td>21</td>
-                                <td>19,500</td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        19,500
-                                        <div class="col-8080">12212</div>
-                                    </div>
-                                </td>
-                                <td>0</td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        19,500
-                                        <div class="col-8080">12%</div>
-                                    </div>
-                                </td>
-                                <td colspan="8"></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                <!-- </div> -->
-                <!-- table end -->
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<th width="145px">订单号</th>
+								<th width="10%" class="tl">
+								    <div class="pl10">
+								        金牌商家/单位名称
+								    </div>
+								</th>
+								<th width="4%">付款方式</th>
+								<th width="4%">贸易术语</th>
+								<th width="5%">目的国家与港口</th>
+								<th width="5%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同总量<i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="4%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">合同金额<i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="7%" class="tl">
+								    <div class="pl10">
+								        应收/未收金额
+								    </div>
+								</th>
+								<th width="4%">
+								    <lable class="jpsj_Sort" onclick="setOrderCol('x.payMoney',this)">
+								        已付款
+								        <i data="orderBy" id="Ix.payMoney" class=""></i> </lable>
+								</th>
+								<th width="5%">
+								    税前毛利/率
+								</th>
+								<th width="3%">是否<br>结算</th>
+								<th width="7%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">应收款日期<i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="7%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">最后装运日期<i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="7%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">订舱装运日期<i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="7%">
+								    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">预计到港日期<br><i
+								            class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="4%">
+								    超期<br>天数
+								</th>
+								<th width="4%" >
+								    单据<br>查看
+								</th>
+								<!--  <th width="4%">区域</th> -->
+								<th width="4%" style="right: 0px;">操作</th>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+									<td width="145px" class="tl">
+										<div class="pl5">
+											<a href="../public/theOrderDetails.html" target="_block">716271</a>
+											<div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
+										</div>
+									</td>
+									<td width="10%" class="tl">
+										<div class="pl10">
+											<a href="goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
+											<div class="mt5 dac">
+												<i class="gongSi-icon mr1"></i>
+												<a href="../public/userInfo1.html" target="_block"
+													onclick="showLayer('评审详情','reviewTheDetails.html','960px','900px')"
+													title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+													class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+											</div>
+										</div>
+									</td>
+									<td width="4%"> </td>
+									<td width="4%">FAS</td>
+									<td width="5%">--</td>
+									<td width="5%">0 (吨)</td>
+									<td width="4%"><span>0</span></td>
+									<td width="7%" class="tl">
+										<div class="pl10">
+											2020<span class="col-8080">/939</span>
+										</div>
+									</td>
+									<td width="4%"><span>0</span></td>
+									<td width="5%"><span>0</span></td>
+									<td width="3%">否</td>
+									<td width="7%">--</td>
+									<td width="7%">2014-12-20</td>
+									<td width="7%"> --</td>
+									<td width="7%">--</td>
+									<td width="4%"></td>
+									<td  width="4%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
+											data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="4%" style="right: 0;">
+										<a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+									</td>
+								</tr>
+								<!-- 开始 -->
+								<tr class="hideTr dn">
+								    <td colspan="18">
+								       <div class="pl20 pt10 pr20 pb10">
+								       	<div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.11);">
+								       		<div class="p20 bgwh">
+								       			<div class="auto mt15">
+								       				<div class="dac">
+								       					<div class="pct10 tr">状态：</div>
+								       					<div class="pct80 c67 tl">
+								       						<span class="single">
+								       							<input type="hidden">
+								       							<button type="button" class="ui-option mr10 on">正常</button>
+								       							<button type="button" class="ui-option mr10">协商中</button>
+								       							<button type="button" class="ui-option mr10">诉讼中</button>
+								       							<button type="button" class="ui-option mr10">诉讼执行中</button>
+								       							<button type="button" class="ui-option mr10">结果</button>
+								       						</span>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       			</div>
+								       			<div class="auto mt15">
+								       				<div class="dac">
+								       					<div class="pct10 tr">单据回收情况：</div>
+								       					<div class="pct80 c67 dac tl">
+								       						<span class="myCheckbox dac">
+								       							<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+								       									 name="checkbox"></i>&nbsp;采购合同
+								       							</label>
+								       						</span>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       				<div class="dac mt15">
+								       					<div class="pct10 tr">采购合同号：</div>
+								       					<div class="pct80 c67 dac tl">
+								       						<span class="checkbox ">
+								       							<input type="text" class="ui-input w200" placeholder="请输入" autocomplete="off">
+								       						</span>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       			</div>
+								       			<div class="auto mt15">
+								       				<div class="df">
+								       					<div class="pct10 tr pt10">备注：</div>
+								       					<div class="pct80 c67 tl">
+								       						<textarea class="ui-textarea pct100" rows="1" placeholder="请输入"></textarea>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       			</div>
+								       			<div class="auto mt15">
+								       				<div class="df">
+								       					<div class="pct10 tr pt5"></div>
+								       					<div class="pct80 c67 tl">
+								       						<button type="button" class="ui-button mr10">提交</button>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       			</div>
+								       		</div>
+								       		<div class="bor-bE6E6 pt10 bgwh"></div>
+								       		<div class="p20 bgwh">
+								       			<div class="mt10 auto">
+								       				<div class="df " style="height: 125px;">
+								       					<div class="pct10 tr">&emsp;</div>
+								       					<div class="pct80 c67 dac tl">
+								       						<div class="lan-left">
+								       							<div class="dib mt20 mb40 lan-icon"></div>
+								       						</div>
+								       						<div class="ml10 mt5 f1" style="height: 120px;">
+								       							<div class="dac mt1">
+								       								<spa class="dib mr30">
+								       									<span class="dib b f14 mr10 g28">协商中</span>
+								       									<span class="dib col-8080">操作时间：2020-09-12 14:32:12</span>
+								       								</spa>
+								       								<div class="ml40">
+								       									<span class="g28">操作人：</span>杨叔叔
+								       								</div>
+								       							</div>
+								       							<div class="dac mt5">
+								       								<span class="dac">
+								       									<span class="c28">单据回收情况：</span>
+																			<label class="mr30"><i class="ui-checkbox goldIcon on v-3 mr2"><input
+								       											 type="checkbox" class="checkbox-opacity" name="checkbox"></i>采购合同</label>
+																		<span class="ml40">采购合同号：</span>58393892
+																	</span>
+																</div>
+								       							<div class="mt10 bgfa n16_mulsel pl10 g28 pt5" style="margin-left: -10px; height: 50px;">
+								       								备注：这里是备注信息字段,这里显示备注信息字段
+								       							</div>
+								       						</div>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       				<div class="df " style="height: 125px;">
+								       					<div class="pct10 tr">&emsp;</div>
+								       					<div class="pct80 c67 dac tl">
+								       						<div class="lan-left">
+								       							<div class="dib mt20 mb40 lan-icon"></div>
+								       						</div>
+								       						<div class="ml10 mt5 f1" style="height: 120px;">
+								       							<div class="df mt1">
+								       								<spa class="dib mr30">
+								       									<span class="dib b f14 mr10 g28">正常</span>
+								       									<span class="dib col-8080">操作时间：2020-09-12
+								       										14:32:12</span>
+								       								</spa>
+								       								<div class="ml40">
+								       									<span class="g28">操作人：</span>杨叔叔
+								       								</div>
+								       							</div>
+								       							<div class="dac mt5">
+								       								<span class="dac">
+								       									<span class="c28">单据回收情况：</span>
+																			<label class=""><i class="ui-checkbox goldIcon disabled v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+								       											 name="checkbox"></i>对账函</label>
+								       									<span class="ml40">采购合同号：</span>--
+								       								</span>
+								       							</div>
+								       							<div class="mt10 bgfa n16_mulsel pl10 g28 pt5" style="margin-left: -10px; height: 50px;">
+								       								备注：这里是备注信息字段,这里显示备注信息字段
+								       							</div>
+								       						</div>
+								       					</div>
+								       					<div class="pct10"></div>
+								       				</div>
+								       			</div>
+								       		</div>
+								       	</div>
+								       </div>
+								    </td>
+								</tr>
+								
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="5">当前页合计：</td>
+								    <td>21</td>
+								    <td>19,500</td>
+								    <td class="tl">
+								        <div class="pl10">
+								            19,500
+								            <div class="col-8080">12212</div>
+								        </div>
+								    </td>
+								    <td>0</td>
+								    <td class="tl">
+								        <div class="pl10">
+								            19,500
+								            <div class="col-8080">12%</div>
+								        </div>
+								    </td>
+								    <td colspan="8"></td>
+								</tr>
+								<tr height="45">
+								    <td colspan="5">所有页合计：</td>
+								    <td>21</td>
+								    <td>19,500</td>
+								    <td class="tl">
+								        <div class="pl10">
+								            19,500
+								            <div class="col-8080">12212</div>
+								        </div>
+								    </td>
+								    <td>0</td>
+								    <td class="tl">
+								        <div class="pl10">
+								            19,500
+								            <div class="col-8080">12%</div>
+								        </div>
+								    </td>
+								    <td colspan="8"></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div><!-- table end -->
+				
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div><!-- ui-content end -->
@@ -974,7 +559,9 @@
                 },
             });
         })
-
+		$(".ui-checkbox").click(function() {
+			$(this).toggleClass("on");
+		});
     </script>
 </body>
 
