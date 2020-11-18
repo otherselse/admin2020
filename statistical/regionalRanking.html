@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<body class="showTip">
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -87,129 +87,137 @@
             </div>
 
             <div class="f14 b g28 mt20"><span class="styr">今日</span>销采量统计</div>
-            <table class="ui-table tc mt10 f12" width="100%" data-type="edit">
-                <thead class="">
-                    <tr class="n17-Ttitle2">
-                        <th width="9%">内贸排名</th>
-                        <th width="10%">区域</th>
-                        <th width="10%">销售量(吨)</th>
-                        <th width="10%">采购量(吨)</th>
-                        <th width="10%">
-                            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                销售金额(元)
-                                <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                        </th>
-                        <th width="10%">
-                            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                采购金额(元)
-                                <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                        </th>
-                        <th width="10%">收款重量(吨)</th>
-                        <th width="10%" class="f14  n17-bbb ">付款重量(吨)</th>
-                        <th width="10%" class="f14  n17-bbb ">
-                            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                收款金额(元)
-                                <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                        </th>
-                        <th width="11%">
-                            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                付款金额(元)
-                                <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="bgwh " class="ui-thover">
-                    <tr>
-                        <td>
-                            <i class="pOne-icon dib"></i>
-                        </td>
-                        <td>天津</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="pTwo-icon dib"></i>
-                        </td>
-                        <td>天津</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="pThree-icon dib"></i>
-                        </td>
-                        <td>天津</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                    </tr>
-                </tbody>
-                <tfoot class="">
-                    <tr height="45">
-                        <td >
-                            内贸汇总：
-                        </td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-						<td>0.00</td>
-                    </tr>
-                    <tr height="45">
-                        <td >
-                            自贸区：
-                        </td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-						<td>0.00</td>
-                        <td>0.00</td>
-                    </tr>
-                    <tr height="45">
-                        <td >
-                            内外贸汇总：
-                        </td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-                        <td>0.00</td>
-                        <td>0.000</td>
-                        <td>0.000</td>
-                        <td>0.00</td>
-						<td>0.00</td>
-                        <td>0.00</td>
-                    </tr>
-                </tfoot>
-            </table>
+			<div class="lgui-table-box mt10 checkbox">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+							<tr class="n17-Ttitle2">
+							    <th width="9%">内贸排名</th>
+							    <th width="10%">区域</th>
+							    <th width="10%">销售量(吨)</th>
+							    <th width="10%">采购量(吨)</th>
+							    <th width="10%">
+							        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+							            销售金额(元)
+							            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+							    </th>
+							    <th width="10%">
+							        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+							            采购金额(元)
+							            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+							    </th>
+							    <th width="10%">收款重量(吨)</th>
+							    <th width="10%" class="f14  n17-bbb ">付款重量(吨)</th>
+							    <th width="10%" class="f14  n17-bbb ">
+							        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+							            收款金额(元)
+							            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+							    </th>
+							    <th width="11%">
+							        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+							            付款金额(元)
+							            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+							    </th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="lgui-table-body mt-1">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<tbody class="ui-thover">
+							<tr>
+							    <td width="9%">
+							        <i class="pOne-icon dib"></i>
+							    </td>
+							    <td width="10%">天津</td>
+							    <td width="10%">0.000</td>
+							    <td width="10%">0.000</td>
+							    <td width="10%">0.00</td>
+							    <td width="10%">0.00</td>
+							    <td width="10%">0.000</td>
+							    <td width="10%">0.000</td>
+							    <td width="10%">0.00</td>
+							    <td width="11%">0.00</td>
+							</tr>
+							<tr>
+							    <td>
+							        <i class="pTwo-icon dib"></i>
+							    </td>
+							    <td>天津</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							</tr>
+							<tr>
+							    <td>
+							        <i class="pThree-icon dib"></i>
+							    </td>
+							    <td>天津</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							</tr>
+						</tbody>
+						<tfoot class="bgfa">
+							<tr height="45">
+							    <td >
+							        内贸汇总：
+							    </td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+								<td>0.00</td>
+							</tr>
+							<tr height="45">
+							    <td >
+							        自贸区：
+							    </td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+								<td>0.00</td>
+							    <td>0.00</td>
+							</tr>
+							<tr height="45">
+							    <td >
+							        内外贸汇总：
+							    </td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+							    <td>0.00</td>
+							    <td>0.000</td>
+							    <td>0.000</td>
+							    <td>0.00</td>
+								<td>0.00</td>
+							    <td>0.00</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+           
             <script type="text/javascript" src="../js/pagelist.js"></script>
         </div>
-    </div>
     </div>
     <!-- rightBar -->
     <div class="dom1 dn">

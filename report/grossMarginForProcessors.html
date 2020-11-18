@@ -19,11 +19,16 @@
             background: #fff;
             min-width: auto;
         }
+		
+		.ui-input[data-type='time'][small-type="small"] {
+		    height: 30px;
+		    line-height: 30px;
+		}
     </style>
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -112,7 +117,7 @@
                     <tr>
                         <td colspan="4">
                             <span class="searchLable">&emsp;费用类型：</span>
-                            <span class="dib selectSingle mr20">
+                            <span class="dib selectSingle ">
                                 <a class=" on" href="javscript:void(0)">全部</a>
                                 <span class="">|</span>
                                 <a class="" href="javscript:void(0)">加工中</a>
@@ -126,99 +131,85 @@
                         </td>
                     </tr>
                 </table>
-
-                <table class="ui-table mt20 tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="fixTr">
-                            <th width="7%">单据号</th>
-                            <th width="9%">货主</th>
-                            <th width="5%">金牌商家</th>
-                            <th width="5%">业务时间</th>
-                            <th width="5%">完成时间</th>
-                            <th width="5%">费用类型</th>
-                            <th width="5%">单价</th>
-                            <th width="5%">重量</th>
-                            <th width="5%">业务金额</th>
-                            <th width="5%">辅料费</th>
-                            <th width="5%">佣金</th>
-                            <th width="5%">运费</th>
-                            <th width="5%">委外加工费</th>
-                            <th width="5%">维修费</th>
-                            <th width="5%">电费</th>
-                            <th width="5%">水费</th>
-                            <th width="5%">毛利</th>
-                            <th width="9%">加盟单位</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>Out20161130003080</td>
-                            <td>上海乐钢供应链股份有限公司</td>
-                            <td>苏志才</td>
-                            <td>2016-11-30</td>
-                            <td>
-                                2016-11-30
-                            </td>
-                            <td>出库费用</td>
-                            <td>38</td>
-                            <td>1.13</td>
-                            <td>42.94</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>42.940
-                            </td>
-
-                            <td>上海华冶钢材加工有限公司</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <!-- <tr height="45">
-                            <td colspan="18">
-                                <div class="daj">
-                                    <div style="min-width: 50px;">总计：</div>
-                                    <div class="tl">
-                                        重量:<span class="red mr10">10</span>
-                                        业务金额:<span class="red mr10">1.000</span>
-                                        辅料费:<span class="red mr10">10</span>
-                                        佣金:<span class="red mr10">1.000</span>
-                                        运费:<span class="red mr10">10</span>
-                                        委外加工费:<span class="red mr10">1.000</span>
-                                        维修费:<span class="red mr10">10</span>
-                                        电费:<span class="red mr10">1.000</span>
-                                        水费:<span class="red mr10">10</span>
-                                        毛利:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
-                        <tr height="45">
-                            <td>总计</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>&nbsp;</td>
-
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="fixTr">
+								    <th width="7%">单据号</th>
+								    <th width="9%">货主</th>
+								    <th width="5%">金牌商家</th>
+								    <th width="5%">业务时间</th>
+								    <th width="5%">完成时间</th>
+								    <th width="5%">费用类型</th>
+								    <th width="5%">单价</th>
+								    <th width="5%">重量</th>
+								    <th width="5%">业务金额</th>
+								    <th width="5%">辅料费</th>
+								    <th width="5%">佣金</th>
+								    <th width="5%">运费</th>
+								    <th width="5%">委外加工费</th>
+								    <th width="5%">维修费</th>
+								    <th width="5%">电费</th>
+								    <th width="5%">水费</th>
+								    <th width="5%">毛利</th>
+								    <th width="9%">加盟单位</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="7%">Out20161130003080</td>
+								    <td width="9%">上海乐钢供应链股份有限公司</td>
+								    <td width="5%">苏志才</td>
+								    <td width="5%">2016-11-30</td>
+								    <td width="5%">
+								        2016-11-30
+								    </td>
+								    <td width="5%">出库费用</td>
+								    <td width="5%">38</td>
+								    <td width="5%">1.13</td>
+								    <td width="5%">42.94</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">42.940</td>
+								    <td width="9%">上海华冶钢材加工有限公司</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td>总计</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>&nbsp;</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

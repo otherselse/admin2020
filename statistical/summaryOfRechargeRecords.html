@@ -1,307 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>充值记录汇总-统计管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <style>
-        .hoverBlue:hover {
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>充值记录汇总-统计管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			.hoverBlue:hover {
             padding: 2px 5px;
         }
     </style>
-</head>
+	</head>
 
-<body class="showTip">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
+	<body class="showTip fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
 
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib gga pl5 pr5">/</span>
-                统计管理
-                <span class="dib gga pl5 pr5">/</span>
-                <span class="g28">充值记录汇总</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class="ui-content minH">
-            <div class="f12 p20">
-                <div class="cl mb10 df f12">
-                    <span class="dib pct22">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct22">
-                        <span class="searchLable">区域：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30 m_pct31">
-                        <span class="searchLable">充值时间：</span>
-                         <span class="ui-input tc f0 pct69 range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                                autocomplete="off" lay-key="1"><span class="dib pct5 tc">-</span><input type="text"
-                                placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="2">
-                        </span>
-                    </span>
-                </div>
-                <div class="cl mb10 dac f12">
-					<span class="dib pct22">
-					    <span class="searchLable">&emsp;订单ID：</span>
-					    <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-					</span>
-                    <span class="dib pct22">
-                        <span class="searchLable">仓库：</span>
-                        <input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
-                    </span>
-                    <span class="dib pct30 m_pct31 dac">
-                        <span class="searchLable">充值类型：&nbsp;</span>
-                        <span class="df pct69">
-							<span class="input-selSearch pct50">
-							    <input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off">
-							    <div class="search-cont pct100">
-							        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-							    </div>
-							</span>
-							<div style="width: 8px;"></div>
-							<span class="input-selSearch pct50">
-							    <input type="text" class="ui-input searchUp pct100" readonly placeholder="请输入"
-							        autocomplete="off">
-							    <div class="search-cont pct100">
-							        <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-							        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-							    </div>
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib gga pl5 pr5">/</span>
+					统计管理
+					<span class="dib gga pl5 pr5">/</span>
+					<span class="g28">充值记录汇总</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-content minH">
+				<div class="f12 p20">
+					<div class="cl mb10 df f12">
+						<span class="dib pct22">
+							<span class="searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct22">
+							<span class="searchLable">区域：</span>
+							<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct30 m_pct31">
+							<span class="searchLable">充值时间：</span>
+							<span class="ui-input tc f0 pct69 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" lay-key="1"><span
+								 class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly=""
+								 autocomplete="off" lay-key="2">
 							</span>
 						</span>
-                    </span>
-                </div>
-                <div class="tc mt20">
-                    <button type="button" class="ui-button mr20">查询</button>
-                    <button type="button" class="ui-button" data-type="clear">清空</button>
-                </div>
-
-                <table class="ui-table tc mt30 f12" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="3%">序号</th>
-                            <th width="7%">订单号</th>
-                            <th width="8%">充值时间</th>
-                            <th width="4%">金牌商家</th>
-                            <th width="4%">商家编号</th>
-                            <th width="4%">开店区域</th>
-                            <th width="6%">手机号</th>
-                            <th width="6%">所属地区</th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    税前红利(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    费用(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    自有资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    积分<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">仓库</th>
-                            <th width="6%">充值类型</th>
-                            <th width="4%">操作人</th>
-                            <th width="6%">备注</th>
-                            <th width="4%">是否导出</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="3%" data="index">1</td>
-                            <td width="7%">
-                                60454
-                            </td>
-                            <td width="8%">2020-10-10 09:35:53</td>
-                            <td width="4%">之华</td>
-                            <td width="4%">10993</td>
-                            <td width="4%">上海市</td>
-                            <td width="6%">0</td>
-                            <td width="6%">上海</td>
-                            <td width="8%">
-                                <span>-200</span>
-                            </td>
-                            <td width="8%" class="tablebtdb blue">
-                                —
-                            </td>
-                            <td width="8%">
-                                —
-                            </td>
-                            <td width="8%">
-                                —
-                            </td>
-                            <td width="6%">
-                                --
-                            </td>
-                            <td width="6%">外贸超时未入库</td>
-                            <td width="4%">系统自动扣除记录</td>
-                            <td width="6%">存储过程publicwockjob</td>
-                            <td width="4%">否</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr height="45">
-                            <td colspan="17">
-                                当前页汇总：税前红利:<span class="dib mr10 ">0.0</span>
-                                自有资金:<span class="dib mr10 ">0.0</span>
-                                积分:<span class="dib mr10 ">0.0</span>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="17">
-                                所有页汇总：税前红利:<span class="dib mr10 ">0.0</span>
-                                自有资金:<span class="dib mr10 ">0.0</span>
-                                积分:<span class="dib mr10 ">0.0</span>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <div class="tc mt20">
-                    <button type="button" class="ui-button mr20">导出凭证</button>
-                    <button type="button" class="ui-button mr20">取消凭证</button>
-                </div>
-                <script type="text/javascript" src="../js/pagelist.js"></script>
-            </div>
-        </div>
-    </div>
-    <!-- rightBar -->
-    <div class="dom1 dn">
-        请审批人员认真查看附件内容，以附件为参考依据进行审批。
-    </div>
-
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script>
-        $(function () {
-            $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-
-            //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                /* position:{
-                        my: 'bottom center', 
-                                at: 'top center' 
-                    },*/
-                position: {
-                    viewport: $(window),
-                    my: 'bottom center', //my:是指三角的位置
-                    at: 'top center' //是在提示在组件的相对位置
-                },
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                }
-            });
-        })
+					</div>
+					<div class="cl mb10 dac f12">
+						<span class="dib pct22">
+							<span class="searchLable">&emsp;订单ID：</span>
+							<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct22">
+							<span class="searchLable">仓库：</span>
+							<input type="text" class="ui-input pct69 " placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct30 m_pct31 dac">
+							<span class="searchLable">充值类型：&nbsp;</span>
+							<span class="df pct69">
+								<span class="input-selSearch pct50">
+									<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off">
+									<div class="search-cont pct100">
+										<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+								<div style="width: 8px;"></div>
+								<span class="input-selSearch pct50">
+									<input type="text" class="ui-input searchUp pct100" readonly placeholder="请输入" autocomplete="off">
+									<div class="search-cont pct100">
+										<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</span>
+						</span>
+					</div>
+					<div class="tc mt20">
+						<button type="button" class="ui-button mr20">查询</button>
+						<button type="button" class="ui-button" data-type="clear">清空</button>
+					</div>
 
 
-        // //父类查询子类明细
-        function searchClick() {
-            var parentBillType = document.getElementById("parentBillType");
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr>
+										<th width="3%">序号</th>
+										<th width="7%">订单号</th>
+										<th width="8%">充值时间</th>
+										<th width="4%">金牌商家</th>
+										<th width="4%">商家编号</th>
+										<th width="4%">开店区域</th>
+										<th width="6%">手机号</th>
+										<th width="6%">所属地区</th>
+										<th width="8%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												税前红利(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="8%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												费用(元)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="8%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												自有资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="8%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												积分<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="6%">仓库</th>
+										<th width="6%">充值类型</th>
+										<th width="4%">操作人</th>
+										<th width="6%">备注</th>
+										<th width="4%">是否导出</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="3%" data="index">1</td>
+										<td width="7%">
+											60454
+										</td>
+										<td width="8%">2020-10-10 09:35:53</td>
+										<td width="4%">之华</td>
+										<td width="4%">10993</td>
+										<td width="4%">上海市</td>
+										<td width="6%">0</td>
+										<td width="6%">上海</td>
+										<td width="8%">
+											<span>-200</span>
+										</td>
+										<td width="8%" class="tablebtdb blue">
+											—
+										</td>
+										<td width="8%">
+											—
+										</td>
+										<td width="8%">
+											—
+										</td>
+										<td width="6%">
+											--
+										</td>
+										<td width="6%">外贸超时未入库</td>
+										<td width="4%">系统自动扣除记录</td>
+										<td width="6%">存储过程publicwockjob</td>
+										<td width="4%">否</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45">
+										<td colspan="8" class="tablebtdb ">当前页汇总:</td>
+										<td class="tablebtdb " numtype="formatMoney">0</td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb " numtype="formatMoney">240,614</td>
+										<td class="tablebtdb " numtype="formatMoney">0</td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+									</tr>
+									<tr height="45">
+										<td colspan="8" class="tablebtdb ">所有页汇总:</td>
+										<td class="tablebtdb bkall" numtype="formatMoney">-200</td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb  bkall" numtype="formatMoney">695,870.33</td>
+										<td class="tablebtdb  bkall" numtype="formatMoney">0</td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+										<td class="tablebtdb "></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 
-            var grade = parentBillType.options[parentBillType.selectedIndex].value;
-            if (!grade) {
-                $("#corp").val("");
-                return;
-            }
-            var url = app.root + "/LgAdmin/gtg/parentBillType.action?gtGMoneyMainLog.parentBillType=" + grade;
-            $("#searchDiv").html("");
-            $.ajax({
-                type: "post",
-                url: url,
-                dataType: "json",
-                success: function (data) {
-                    if (data) {
-                        for (var i = 0; i < data.length; i++) {
-                            var a = $('<a  href="javascript:void(0)" class="n17-searchInfo" onclick="nSearchClickV(this)"></a>');
-                            a.text(data[i].billTypeName);
-                            a.attr("billtype", data[i].billtype);
-                            $("#searchDiv").append(a);
-                        }
-                        var myobj = $("#corp");
-                        $("#searchDiv").css({ "width": myobj.outerWidth(), "left": myobj.offset().left, "top": myobj.offset().top + myobj.height() })
-                        $("#searchDiv").show();
-                    }
-                }
+					<div class="tc mt20">
+						<button type="button" class="ui-button mr20">导出凭证</button>
+						<button type="button" class="ui-button mr20">取消凭证</button>
+					</div>
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div>
+		</div>
+		<!-- rightBar -->
+		<div class="dom1 dn">
+			请审批人员认真查看附件内容，以附件为参考依据进行审批。
+		</div>
 
-            })
-        }
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script>
+			$(function() {
+				$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(0).addClass("on"); // 静态页面定位使用，开发使用title等定位
 
-        // //搜索
-        function nSearchClick(obj, e) {
-            stopPro(e);
-            nsetSearchP();
-            $("#searchDiv").slideDown("fast");
-        }
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					/* position:{
+					        my: 'bottom center', 
+					                at: 'top center' 
+					    },*/
+					position: {
+						viewport: $(window),
+						my: 'bottom center', //my:是指三角的位置
+						at: 'top center' //是在提示在组件的相对位置
+					},
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
+					}
+				});
+			})
 
-        //选择明细类型时自动显示对应的大类
-        function nSearchClickV(obj) {
-            $("#corp").val($(obj).text());
-            var value = $("#corp").val();
-            $("#searchDiv").slideUp("fast");
-            var url = app.root + "/LgAdmin/gtg/searchBillTypeName.action?type=1&gtGMoneyMainLog.billTypeName=" + value;
-            //url= encodeURI(encodeURI(url)); 
-            $.ajax({
-                type: "post",
-                url: url,
-                dataType: "json",
-                success: function (data) {
-                    var chooseCtrl = document.getElementById("parentBillType");
-                    if (data) {
-                        var bill = data[0].parentBillType;
-                        var billtype = data[0].billType;
-                        // $("#lgBillType").val(billtype);
-                        for (var i = 0; i < chooseCtrl.options.length; i++) {
-                            var tmp = chooseCtrl.options[i].value;
-                            if (tmp == bill) {
-                                chooseCtrl.options[i].selected = 'selected';
-                                break;
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    </script>
-</body>
+
+			// //父类查询子类明细
+			function searchClick() {
+				var parentBillType = document.getElementById("parentBillType");
+
+				var grade = parentBillType.options[parentBillType.selectedIndex].value;
+				if (!grade) {
+					$("#corp").val("");
+					return;
+				}
+				var url = app.root + "/LgAdmin/gtg/parentBillType.action?gtGMoneyMainLog.parentBillType=" + grade;
+				$("#searchDiv").html("");
+				$.ajax({
+					type: "post",
+					url: url,
+					dataType: "json",
+					success: function(data) {
+						if (data) {
+							for (var i = 0; i < data.length; i++) {
+								var a = $('<a  href="javascript:void(0)" class="n17-searchInfo" onclick="nSearchClickV(this)"></a>');
+								a.text(data[i].billTypeName);
+								a.attr("billtype", data[i].billtype);
+								$("#searchDiv").append(a);
+							}
+							var myobj = $("#corp");
+							$("#searchDiv").css({
+								"width": myobj.outerWidth(),
+								"left": myobj.offset().left,
+								"top": myobj.offset().top + myobj.height()
+							})
+							$("#searchDiv").show();
+						}
+					}
+
+				})
+			}
+
+			// //搜索
+			function nSearchClick(obj, e) {
+				stopPro(e);
+				nsetSearchP();
+				$("#searchDiv").slideDown("fast");
+			}
+
+			//选择明细类型时自动显示对应的大类
+			function nSearchClickV(obj) {
+				$("#corp").val($(obj).text());
+				var value = $("#corp").val();
+				$("#searchDiv").slideUp("fast");
+				var url = app.root + "/LgAdmin/gtg/searchBillTypeName.action?type=1&gtGMoneyMainLog.billTypeName=" + value;
+				//url= encodeURI(encodeURI(url)); 
+				$.ajax({
+					type: "post",
+					url: url,
+					dataType: "json",
+					success: function(data) {
+						var chooseCtrl = document.getElementById("parentBillType");
+						if (data) {
+							var bill = data[0].parentBillType;
+							var billtype = data[0].billType;
+							// $("#lgBillType").val(billtype);
+							for (var i = 0; i < chooseCtrl.options.length; i++) {
+								var tmp = chooseCtrl.options[i].value;
+								if (tmp == bill) {
+									chooseCtrl.options[i].selected = 'selected';
+									break;
+								}
+							}
+						}
+					}
+				});
+			}
+		</script>
+	</body>
 
 </html>

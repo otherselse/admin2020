@@ -1,168 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>第三方支付结算跟踪表-报表管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>第三方支付结算跟踪表-报表管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-    <style>
-        .ui-option,
+		<style>
+			.ui-option,
         .ui-optionNo {
             background: #fff;
             min-width: auto;
         }
     </style>
-</head>
+	</head>
 
-<body class="showTip report">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
+	<body class="showTip report fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
 
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                报表管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">第三方支付结算跟踪表</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class="ui-tab3">
-            <a href="settlementTracking.html" class="ui-tab3-list rel"><span class="ui-tab3-text">结算跟踪</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="settlementRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">结算记录</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="cargoRecord.html" class="ui-tab3-list rel"><span class="ui-tab3-text">转货记录</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="quotaUsageSummary.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">额度使用汇总</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-        <div class="ui-content ovh minH">
-            <div class="p20 f12">
-                <div class="dac mb20">
-                    <span class="input-selSearch pct30">
-                        <span class="dib searchLable">单位名称：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
-                    </span>
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button " data-type="clear">清空</button>
-                </div>
-                <table class="ui-table tc f12 checkbox mt40" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="6%">序号</th>
-                            <th width="34%">名称</th>
-                            <th width="20%">总额度</th>
-                            <th width="20%">剩余额度</th>
-                            <th width="20%">使用情况</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="6%">1</td>
-                            <td width="34%">中国建设银行股份有限公司上海自贸试验区分行</td>
-                            <td width="20%">3,000,000</td>
-                            <td width="20%">1,100,000</td>
-                            <td width="14%" class="redm"><a href="javascript:void(0);"
-                                onclick="showTrMore(this)">查看</a>
-                            </td>
-                        </tr>
-                        <tr class="hideTr dn">
-                            <td colspan="28">
-                                <div class="pl20 pr20">
-                                    <table class="ui-table  f12  auto  mt10 mb10" width="100%">
-                                        <thead>
-                                            <tr class="tablebthb">
-                                                <th width="8%">序号</th>
-                                                <th width="8%">订单号</th>
-                                                <th width="12%">采购合同号</th>
-                                                <th width="10%">使用金额</th>
-                                                <th width="10%">返还金额</th>
-                                                <th width="12%">使用时间</th>
-                                                <th width="12%">返还时间</th>
-                                                <th width="12%">合同结算状态</th>
-                                                <th width="10%">类型</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tablebtdb">
-                                                <td>1</td>
-                                                <td>61003</td>
-                                                <td>DDC(22)-20001548</td>
-                                                <td>50000</td>
-                                                <td>0</td>
-                                                <td>2020-08-22 15:49:48</td>
-                                                <td>--</td>
-                                                <td>已结算</td>
-                                                <td>额度扣除使用记录</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- table end -->
-                <script type="text/javascript" src="../js/pagelist.js"></script>
-            </div>
-        </div><!-- ui-content end -->
-    </div><!-- rightBar end -->
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					报表管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">第三方支付结算跟踪表</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="settlementTracking.html" class="ui-tab3-list rel"><span class="ui-tab3-text">结算跟踪</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="settlementRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">结算记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="cargoRecord.html" class="ui-tab3-list rel"><span class="ui-tab3-text">转货记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="quotaUsageSummary.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">额度使用汇总</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">
+				<div class="p20 f12">
+					<div class="dac mb20">
+						<span class="input-selSearch pct30">
+							<span class="dib searchLable">单位名称：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+						</span>
+						<button type="button" class="ui-button mr10">查询</button>
+						<button type="button" class="ui-button " data-type="clear">清空</button>
+					</div>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-        })
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr>
+										<th width="6%">序号</th>
+										<th width="34%">名称</th>
+										<th width="20%">总额度</th>
+										<th width="20%">剩余额度</th>
+										<th width="20%">使用情况</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="6%">1</td>
+										<td width="34%">中国建设银行股份有限公司上海自贸试验区分行</td>
+										<td width="20%">3,000,000</td>
+										<td width="20%">1,100,000</td>
+										<td width="14%" class="redm"><a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
+										</td>
+									</tr>
+									<tr class="hideTr dn">
+										<td colspan="28">
+											<div class="pl20 pr20">
+												<table class="ui-table  f12  auto  mt10 mb10" width="100%">
+													<thead>
+														<tr class="tablebthb">
+															<th width="8%">序号</th>
+															<th width="8%">订单号</th>
+															<th width="12%">采购合同号</th>
+															<th width="10%">使用金额</th>
+															<th width="10%">返还金额</th>
+															<th width="12%">使用时间</th>
+															<th width="12%">返还时间</th>
+															<th width="12%">合同结算状态</th>
+															<th width="10%">类型</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="tablebtdb">
+															<td>1</td>
+															<td>61003</td>
+															<td>DDC(22)-20001548</td>
+															<td>50000</td>
+															<td>0</td>
+															<td>2020-08-22 15:49:48</td>
+															<td>--</td>
+															<td>已结算</td>
+															<td>额度扣除使用记录</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div><!-- table end -->
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
 
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
+		<script>
+			$(function() {
+				$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(0).addClass("on"); // 静态页面定位使用，开发使用title等定位
+			})
 
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
+			function showDiv_lrl(obj) {
+				$(obj).parents("tr").next(".hideTr").css("display", "none")
+				$(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+			}
 
-        function showLayer() {
-            layer.open({
-                type: 2,
-                title: 'G2G收益记录明细',
-                shadeClose: true,
-                shade: 0.4,
-                area: ['960px', '80%'],
-                content: 'G2GearningsRecord.html' //iframe的url
-            });
-        }
+			function showDiv_lrlHide(obj) {
+				$(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+			}
 
-    </script>
-</body>
+			$(".mySingle span").click(function() {
+				console.log(11)
+				$(this).parents(".mySingle").find("span").removeClass("sbOn")
+				$(this).addClass("sbOn")
+			});
+
+			function showLayer() {
+				layer.open({
+					type: 2,
+					title: 'G2G收益记录明细',
+					shadeClose: true,
+					shade: 0.4,
+					area: ['960px', '80%'],
+					content: 'G2GearningsRecord.html' //iframe的url
+				});
+			}
+		</script>
+	</body>
 
 </html>
