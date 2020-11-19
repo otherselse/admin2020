@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>账务处理-财务管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		
+	</head>
+	<body class="showTip fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+
+
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					财务管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">账务处理</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="financialProcesses1.html" class="ui-tab3-list rel"><span class="ui-tab3-text">账户余额清账处理</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="financialProcesses2.html" class="ui-tab3-list rel"><span class="ui-tab3-text">账户余额清账记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="financialProcesses3.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售订单平账处理</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="financialProcesses4.html" class="ui-tab3-list rel"><span class="ui-tab3-text">销售订单平账记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="financialProcesses5.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">采购订单平账处理</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="financialProcesses6.html" class="ui-tab3-list rel"><span class="ui-tab3-text">采购订单平账记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">
+				<div class="p20 f12">
+					<div class="mb10 f0">
+						<span class="pct25 dib f12">
+							<span class="searchLable">单位名称：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12">
+							<span class="searchLable">业务类型：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="pct25 dib f12">
+							<span class="searchLable">付款差异：</span>
+							<span class="ui-input pct69" data-type="section">
+								<input type="text" class="pct45" placeholder="请输入">-<input type="text" class="pct45 r" placeholder="请输入">
+								</span>
+						</span>
+						<span class="pct25 dib f12">
+							<span class="searchLable">开票差异：</span>
+							<span class="ui-input pct69" data-type="section">
+								<input type="text" class="pct45" placeholder="请输入">-<input type="text" class="pct45 r" placeholder="请输入">
+							</span>
+						</span>
+					</div>
+					<div class="mt10">
+						<span class="pct25 dib f12">
+							<span class="searchLable">&emsp;订单号：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<button type="button" class="ui-button ">查询</button>
+					</div>
+					<!-- search end -->
+
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+								<thead>
+									<tr>
+										<th width="10%"><i class="ui-checkbox
+										goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox" onclick="setAll
+										(this)"></i>全选/订单号</th>
+										<th width="13%" class="tl">
+											<div class="pl20">单位名称</div>
+										</th>
+										<th width="6%">业务类型</th>
+										<th width="8%">入库金额(元)</th>
+										<th width="8%">收票金额(元)</th>
+										<th width="8%">收票差异</th>
+										<th width="8%">已付款金额(元)</th>
+										<th width="8%">付款差异</th>
+										<th width="10%">收票差异清账</th>
+										<th width="10%">付款差异清账</th>
+										<th width="11%">备注</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table table-cw tc f12 " width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="10%"><i class="ui-checkbox
+										goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
+												 name="checkbox"></i>65434</td>
+										<td width="13%" class="tl">
+											<div class="pl20 dib zxx_text_overflow menuhook tiptop" title="乐刚供应链股份有限公司">乐刚供应链股份有限公司</div>
+										</td>
+										<td width="6%">业务类型</td>
+										<td width="8%">34,567,937.98</td>
+										<td width="8%">34,567,937.98</td>
+										<td width="8%">34,567,937.98</td>
+										<td width="8%">34,567,937.98</td>
+										<td width="8%">34,567,937.98</td>
+										<td width="10%"><input type="text" class="ui-input pct90 tc" placeholder="" autocomplete="off"></td>
+										<td width="10%"><input type="text" class="ui-input pct90 tc" placeholder="" autocomplete="off"></td>
+										<td width="11%">备注需输入吗</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr class="bgwh" height="45">
+										<td colspan="11">
+											<div class="dajs">
+												<span class="pl20">
+													<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
+														 onclick="setAll(this)"></i>全选
+													<span class="pl20">当前已选择(<span class="red">3</span>)条信息</span>
+												</span>
+												<span class="pr20 dac">
+													<button class="ui-button plr10 mr10 tipclick" qtip-dom="dom1" type="button">清账</button>
+													<button class="ui-button plr10" data-type="normal" type="button">反清账</button>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr height="45">
+										<td colspan="3">当前页合计：</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>--</td>
+									</tr>
+									<tr height="45">
+										<td colspan="3">当前页合计：</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>233,223,</td>
+										<td>--</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div><!-- table end -->
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+		
+		
+		<div class="dom1 dn">
+			<div class="mb10 df">
+				状态：<span class="radio f1">
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>尾差</label>
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>账龄长</label>
+					</span>
+			</div>
+			<div class="df mb15">
+				原因：<textarea class="ui-textarea f1" rows="3"></textarea>
+			</div>
+			<div class="mb10">
+				&emsp;&emsp;&emsp;<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
+				<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
+			</div>
+		</div>
+		
+		
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(7).addClass("on"); // 静态页面定位使用，开发使用title等定位
+				
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+				    show: { event: 'click' },
+				    hide: 'unfocus',
+				    content: {
+				        text: function (event, api) {
+				            return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+				        }
+				    },
+				    position: {
+				        my: 'top right',
+				        at: 'bottom center'
+				    },
+				    // position: {
+				    //  viewport: $(window)
+				    // },
+				    style: {
+				        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+				    }
+				});
+			})
+		</script>
+	</body>
+</html>

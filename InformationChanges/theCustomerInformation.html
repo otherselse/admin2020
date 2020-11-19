@@ -65,7 +65,14 @@
 			</div>
 
 			<div class="fix f12 bgwh p20 ui-content ovh minH">
-				<div class="cl dac f12">
+				<div class="xzhj  daj">
+				    <a href="javascript:void(0)" onclick="showLayer('客户信息新增','theCustomerInformationOperation.html')"
+				        class="dib xzhj-button daj" style="width: 160px;">
+				        <span class="dib mr10">客户信息新增</span> <img src="../images/documnts/t8.png" width="20px"
+				            height="20px" alt="">
+				    </a>
+				</div>
+				<div class="cl dac f12 mt20">
 					<span class="dib pct25">
 						<span class="searchLable">单位名称：</span>
 						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
@@ -160,16 +167,14 @@
 													<div class="pct13 tr">是否是销售单位：</div>
 													<div class="pct37 pl10">
 														<span class="radio">
-															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																	 name="radio"></i>否</label>
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 														</span>
 													</div>
 													<div class="pct13 tr">是否是供应商：</div>
 													<div class="pct37 pl10">
 														<span class="radio">
-															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																	 name="radio"></i>否</label>
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 														</span>
 													</div>
@@ -178,16 +183,14 @@
 													<div class="pct13 tr">是否是运输单位：</div>
 													<div class="pct37 pl10">
 														<span class="radio">
-															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																	 name="radio"></i>否</label>
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 														</span>
 													</div>
 													<div class="pct13 tr">是否是加工单位：</div>
 													<div class="pct37 pl10">
 														<span class="radio">
-															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity"
-																	 name="radio"></i>否</label>
+															<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 															<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 														</span>
 													</div>
@@ -243,11 +246,12 @@
 													</div>
 												</div>
 											</div>
-								
+
 											<div class="tc  mt20 mb20">
 												<button type="button" class="mr10 ui-button">提交</button>
 											</div>
 										</div>
+										
 									</td>
 								</tr><!-- 隐藏内容end -->
 							</tbody>
@@ -295,7 +299,19 @@
 			})
 		</script>
 		<script type="text/javascript">
-
+			function showLayer(name, url) {
+				var page = layer.open({
+					type: 2,
+					title: name,
+					shadeClose: true,
+					shade: 0.4,
+					area: ['960px', '600px'],
+					content: url //iframe的url
+				});
+				$("#close_but").on("click", function () {
+					layer.close(page);
+				});
+			}
 		</script>
 	</body>
 

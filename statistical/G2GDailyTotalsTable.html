@@ -19,7 +19,7 @@
     </style>
 	</head>
 
-	<body class="showTip">
+	<body class="showTip fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -73,121 +73,92 @@
 						<button type="button" class="ui-button ml20 mr20">查询</button>
 						<button type="button" class="ui-button" data-type="clear">清空</button>
 					</div>
-
-					<table class="ui-table tc table-cw mt30 f12" width="100%" data-type="edit">
-						<thead>
-							<tr class="fixTr">
-								<th width="5%">序号</th>
-								<th width="5%">金牌商家编号</th>
-								<th width="5%">金牌商家</th>
-								<th width="5%">区域</th>
-								<th width="10%">时间</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G钱包总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										乐财宝总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										共享通总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										融享通总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										新手体验<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="10%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										G2G总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="5%">1</td>
-								<td width="5%">6266</td>
-								<td width="5%">王海龙</td>
-								<td width="5%">上海</td>
-								<td width="10%">2020-08-28</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-								<td width="10%">0</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<!-- <tr height="45">
-                            <td colspan="12">
-                                <div class="daj">
-                                    <div class="min-w60">
-                                        当前页合计：
-                                    </div>
-                                    <div>
-                                        G2G钱包余额:<span class="dib mr10 red">0.0</span>
-                                        乐财宝总额:<span class="dib mr10 red">0.0</span>
-                                        分红余额:<span class="dib mr10 red">0.0</span>
-                                        共享通总额:<span class="dib mr10 red">0.0</span>
-                                        融享通总额:<span class="dib mr10 red">0.0</span>
-                                        新手体验:<span class="dib mr10 red">0.0</span>
-                                        G2G总额:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="12">
-                                <div class="daj">
-                                    <div class="min-w60">
-                                        所有页合计：
-                                    </div>
-                                    <div>
-                                        G2G钱包余额:<span class="dib mr10 red">0.0</span>
-                                        乐财宝总额:<span class="dib mr10 red">0.0</span>
-                                        分红余额:<span class="dib mr10 red">0.0</span>
-                                        共享通总额:<span class="dib mr10 red">0.0</span>
-                                        融享通总额:<span class="dib mr10 red">0.0</span>
-                                        新手体验:<span class="dib mr10 red">0.0</span>
-                                        G2G总额:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-						 -->
-							<tr  height="45">
-								<td colspan="5">当前页合计：</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-							</tr>
-							<tr height="45">
-								<td colspan="5">所有页合计：</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-								<td numtype="formatMoney">0</td>
-							</tr>
-						</tfoot>
-					</table>
+					
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr class="fixTr">
+										<th width="5%">序号</th>
+										<th width="5%">金牌商家编号</th>
+										<th width="5%">金牌商家</th>
+										<th width="5%">区域</th>
+										<th width="10%">时间</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												G2G钱包总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												乐财宝总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												共享通总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												融享通总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												新手体验<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="10%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												G2G总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="5%">1</td>
+										<td width="5%">6266</td>
+										<td width="5%">王海龙</td>
+										<td width="5%">上海</td>
+										<td width="10%">2020-08-28</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+										<td width="10%">0</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr  height="45">
+										<td colspan="5">当前页合计：</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+									</tr>
+									<tr height="45">
+										<td colspan="5">所有页合计：</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+										<td numtype="formatMoney">0</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
 			</div>

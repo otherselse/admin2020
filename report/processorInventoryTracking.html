@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -95,45 +95,54 @@
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="3%">序号</th>
-                            <th width="8%">加工商</th>
-                            <th width="6%">盘点月份</th>
-                            <th width="6%">盘点仓库</th>
-                            <th width="6%">账面数量</th>
-                            <th width="6%">实盘数量</th>
-                            <th width="6%">差异数量</th>
-                            <th width="6%">账面重量</th>
-                            <th width="6%">实盘重量</th>
-                            <th width="7%">差异重量</th>
-                            <th width="6%">盘点起始时间</th>
-                            <th width="6%">盘点结束日期</th>
-                            <th width="6%">盘点用时</th>
-                            <th width="5%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>1</td>
-                            <td>上海华冶钢材加工有限公司</td>
-                            <td>2018-03-18</td>
-                            <td>华冶A区</td>
-                            <td>45490.5</td>
-                            <td>32449.1</td>
-                            <td>13041.4</td>
-                            <td>32848.0617</td>
-                            <td>28911.937</td>
-                            <td>3936.1247</td>
-                            <td>2018-03-18</td>
-                            <td>2018-03-21 19:27:58.0</td>
-                            <td>79h</td>
-                            <!-- target="_blank" -->
-                            <td class="tablebtdb blue"><a href="procCheckLine.html">查看</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="3%">序号</th>
+								    <th width="8%">加工商</th>
+								    <th width="6%">盘点月份</th>
+								    <th width="6%">盘点仓库</th>
+								    <th width="6%">账面数量</th>
+								    <th width="6%">实盘数量</th>
+								    <th width="6%">差异数量</th>
+								    <th width="6%">账面重量</th>
+								    <th width="6%">实盘重量</th>
+								    <th width="7%">差异重量</th>
+								    <th width="6%">盘点起始时间</th>
+								    <th width="6%">盘点结束日期</th>
+								    <th width="6%">盘点用时</th>
+								    <th width="5%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="8%">上海华冶钢材加工有限公司</td>
+								    <td width="6%">2018-03-18</td>
+								    <td width="6%">华冶A区</td>
+								    <td width="6%">45490.5</td>
+								    <td width="6%">32449.1</td>
+								    <td width="6%">13041.4</td>
+								    <td width="6%">32848.0617</td>
+								    <td width="6%">28911.937</td>
+								    <td width="7%">3936.1247</td>
+								    <td width="6%">2018-03-18</td>
+								    <td width="6%">2018-03-21 19:27:58.0</td>
+								    <td width="6%">79h</td>
+								    <!-- target="_blank" -->
+								    <td width="5%" class="tablebtdb blue"><a href="procCheckLine.html">查看</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

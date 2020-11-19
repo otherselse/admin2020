@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -74,121 +74,131 @@
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc f12 checkbox table-cw mt20" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="8%" rowspan="2">日期</th>
-                            <th colspan="3">乐财宝</th>
-                            <th colspan="3">新手体验</th>
-                            <th colspan="3">共享通</th>
-                            <th colspan="3">融享通</th>
-                            <th width="6%" rowspan="2">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    总金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%" rowspan="2">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    总人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%" rowspan="2">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    总收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th width="6%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th>
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>2017-04-14</td>
-                            <td>2069787868.65</td>
-                            <td> <a href="javascript:void(0)" onclick="showLayer()">42</a></td>
-                            <td>413957.41</td>
-                            <td>135000</td>
-                            <td>5</td>
-                            <td>44.31</td>
-                            <td>1503394</td>
-                            <td>5</td>
-                            <td>370.57</td>
-                            <td>651223.11</td>
-                            <td>6</td>
-                            <td>196.21</td>
-                            <td>2072102485.7619</td>
-                            <td>8</td>
-                            <td>414576.71</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr height="45">
-                            <td colspan="16">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">当前页收益汇总：</div>
-                                    <div class="">
-                                        总收益:<span class="red mr10">225102485.09</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="16">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">所有页收益汇总：</div>
-                                    <div class="">
-                                        总收益:<span class="red mr10">3969688.08</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				
+				<div class="lgui-table-box mt20 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="8%" rowspan="2">日期</th>
+								    <th colspan="3" width="18%">乐财宝</th>
+								    <th colspan="3" width="18%">新手体验</th>
+								    <th colspan="3" width="18%">共享通</th>
+								    <th colspan="3" width="18%">融享通</th>
+								    <th width="6%" rowspan="2">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            总金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%" rowspan="2">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            总人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%" rowspan="2">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            总收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								</tr>
+								<tr>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            人数<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="8%">2017-04-14</td>
+								    <td width="6%">2069787868.65</td>
+								    <td width="6%"> <a href="javascript:void(0)" onclick="showLayer()">42</a></td>
+								    <td width="6%">413957.41</td>
+								    <td width="6%">135000</td>
+								    <td width="6%">5</td>
+								    <td width="6%">44.31</td>
+								    <td width="6%">1503394</td>
+								    <td width="6%">5</td>
+								    <td width="6%">370.57</td>
+								    <td width="6%">651223.11</td>
+								    <td width="6%">6</td>
+								    <td width="6%">196.21</td>
+								    <td width="6%">2072102485.7619</td>
+								    <td width="6%">8</td>
+								    <td width="6%">414576.71</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="16">
+								        <div class="daj">
+								            <div style="min-width: 80px;">当前页收益汇总：</div>
+								            <div class="">
+								                总收益:<span class="red mr10">225102485.09</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr>
+								<tr height="45">
+								    <td colspan="16">
+								        <div class="daj">
+								            <div style="min-width: 80px;">所有页收益汇总：</div>
+								            <div class="">
+								                总收益:<span class="red mr10">3969688.08</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

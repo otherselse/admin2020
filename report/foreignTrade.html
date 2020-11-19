@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -92,154 +92,116 @@
                     <button type="button" class="ui-button mr10 mt10">查询</button>
                 </div>
 
-                <table class="ui-table tc f12 checkbox mt30 table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="3%" rowspan="2">序号</th>
-                            <th width="4%" rowspan="2">区域</th>
-                            <th width="4%" rowspan="2">金牌商家</th>
-                            <th width="4%" rowspan="2">订单号</th>
-                            <th width="5%" rowspan="2">出库日期</th>
-                            <th width="5%" rowspan="2">出库金额</th>
-                            <th width="5%" rowspan="2">退税金额</th>
-                            <th width="5%" rowspan="2">入库金额</th>
-                            <th width="40%" colspan="8">费用金额</th>
-                            <th width="5%" rowspan="2">资金占用利息</th>
-                            <th width="5%" rowspan="2">税金</th>
-                            <th width="5%" rowspan="2">毛利小计</th>
-                            <th width="5%" rowspan="2">事后差异调整</th>
-                            <th width="5%" rowspan="2">订单结算日期</th>
-                        </tr>
-                        <tr>
-                            <th width="5%">订舱人民币</th>
-                            <th width="5%">订舱美元(人民币）</th>
-                            <th width="5%">佣金</th>
-                            <th width="5%">进仓费</th>
-                            <th width="5%">加工费</th>
-                            <th width="5%">短驳费</th>
-                            <th width="5%">仓库费</th>
-                            <th width="5%">合计</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">自贸区</td>
-                            <td width="4%">尹相春</td>
-                            <td width="4%">60979</td>
-                            <td width="5%">2020-08-19</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">11</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>11</td>
-                            <td>0</td>
-                            <td>
-                                <a href="javascript:void(0)"
-                                    title="增值税:&nbsp;0<br/>附加税:&nbsp;<br/>印花税:&nbsp;<br/>企业所得税:&nbsp;0<br/>个人所得税:&nbsp;0"
-                                    class="tiptop">0</a>
-                            <td>-11.0</td>
-                            <td>
-                                <a href="javascript:void(0)" title="点击查看补差明细" class="tiptop">0</a>
-                            </td>
-                            <td>----</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <!-- <tr height="45">
-                            <td colspan="21">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">当前页合计：</div>
-                                    <div class="tl">
-                                        出库金额:<span class="red mr10">10</span>
-                                        退税金额:<span class="red mr10">1.000</span>
-                                        入库金额:<span class="red mr10">1.000</span>
-                                        订舱人民币:<span class="red mr10">1.000</span>
-                                        订舱美元:<span class="red mr10">1.000</span>
-                                        佣金:<span class="red mr10">1.000</span>
-                                        进仓费:<span class="red mr10">1.000</span>
-                                        加工费:<span class="red mr10">1.000</span>
-                                        短驳费:<span class="red mr10">1.000</span>
-                                        仓库费:<span class="red mr10">1.000</span>
-                                        合计:<span class="red mr10">1.000</span>
-                                        资金占用利息:<span class="red mr10">1.000</span>
-                                        税金:<span class="red mr10">1.000</span>
-                                        毛利小计:<span class="red mr10">1.000</span>
-                                        事后差异调整:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="21">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">所有页合计：</div>
-                                    <div class="tl">
-                                        出库金额:<span class="red mr10">10</span>
-                                        退税金额:<span class="red mr10">1.000</span>
-                                        入库金额:<span class="red mr10">1.000</span>
-                                        订舱人民币:<span class="red mr10">1.000</span>
-                                        订舱美元:<span class="red mr10">1.000</span>
-                                        佣金:<span class="red mr10">1.000</span>
-                                        进仓费:<span class="red mr10">1.000</span>
-                                        加工费:<span class="red mr10">1.000</span>
-                                        短驳费:<span class="red mr10">1.000</span>
-                                        仓库费:<span class="red mr10">1.000</span>
-                                        合计:<span class="red mr10">1.000</span>
-                                        资金占用利息:<span class="red mr10">1.000</span>
-                                        税金:<span class="red mr10">1.000</span>
-                                        毛利小计:<span class="red mr10">1.000</span>
-                                        事后差异调整:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
-                        <tr height="45">
-                            <td class="tablebtdb " colspan="5">当前页合计:</td>
-                            <td class="tablebtdb " numtype="formatMoney">262,041.56</td>
-                            <td class="tablebtdb " numtype="formatMoney">541.9</td>
-                            <td class="tablebtdb " numtype="formatMoney">124,133.13</td>
-                            <td class="tablebtdb " numtype="formatMoney">16</td>
-                            <td class="tablebtdb " numtype="formatMoney">70.06</td>
-                            <td class="tablebtdb " numtype="formatMoney">0</td>
-                            <td class="tablebtdb " numtype="formatMoney">611</td>
-                            <td class="tablebtdb " numtype="formatMoney">220</td>
-                            <td class="tablebtdb " numtype="formatMoney">100</td>
-                            <td class="tablebtdb " numtype="formatMoney">60</td>
-                            <td class="tablebtdb " numtype="formatMoney">1,077.06</td>
-                            <td class="tablebtdb " numtype="formatMoney">0</td>
-                            <td class="tablebtdb " numtype="formatMoney">113,291.74</td>
-                            <td class="tablebtdb " numtype="formatMoney">24,081.53</td>
-                            <td class="tablebtdb " numtype="formatMoney">0</td>
-                            <td class="tablebtdb "></td>
-                        </tr>
-                        <tr height='45'>
-                            <td class="tablebtdb " colspan="5">所有页合计:</td>
-                            <td class="tablebtdb " numtype="formatMoney">30,146,114.65</td>
-                            <td class="tablebtdb " numtype="formatMoney">3,175,961.08</td>
-                            <td class="tablebtdb " numtype="formatMoney">13,107,414.51</td>
-                            <td class="tablebtdb " numtype="formatMoney">9,966.75</td>
-                            <td class="tablebtdb " numtype="formatMoney">53,739.69</td>
-                            <td class="tablebtdb " numtype="formatMoney">213,099</td>
-                            <td class="tablebtdb " numtype="formatMoney">246,779.87</td>
-                            <td class="tablebtdb " numtype="formatMoney">84,683.35</td>
-                            <td class="tablebtdb " numtype="formatMoney">28,457.96</td>
-                            <td class="tablebtdb " numtype="formatMoney">8,230</td>
-                            <td class="tablebtdb " numtype="formatMoney">728,567.62</td>
-                            <td class="tablebtdb " numtype="formatMoney">371,912.22</td>
-                            <td class="tablebtdb " numtype="formatMoney">13,051,749.6</td>
-                            <td class="tablebtdb " numtype="formatMoney">6,154,517.54</td>
-                            <td class="tablebtdb " numtype="formatMoney">371,912.22</td>
-                            <td class="tablebtdb "></td>
-                        </tr>
-                    </tfoot>
-                </table>
+
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="3%" rowspan="2">序号</th>
+								    <th width="4%" rowspan="2">区域</th>
+								    <th width="4%" rowspan="2">金牌商家</th>
+								    <th width="4%" rowspan="2">订单号</th>
+								    <th width="5%" rowspan="2">出库日期</th>
+								    <th width="5%" rowspan="2">出库金额</th>
+								    <th width="5%" rowspan="2">退税金额</th>
+								    <th width="5%" rowspan="2">入库金额</th>
+								    <th width="40%" colspan="8">费用金额</th>
+								    <th width="5%" rowspan="2">资金占用利息</th>
+								    <th width="5%" rowspan="2">税金</th>
+								    <th width="5%" rowspan="2">毛利小计</th>
+								    <th width="5%" rowspan="2">事后差异调整</th>
+								    <th width="5%" rowspan="2">订单结算日期</th>
+								</tr>
+								<tr>
+								    <th width="5%">订舱人民币</th>
+								    <th width="5%">订舱美元(人民币）</th>
+								    <th width="5%">佣金</th>
+								    <th width="5%">进仓费</th>
+								    <th width="5%">加工费</th>
+								    <th width="5%">短驳费</th>
+								    <th width="5%">仓库费</th>
+								    <th width="5%">合计</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="4%">自贸区</td>
+								    <td width="4%">尹相春</td>
+								    <td width="4%">60979</td>
+								    <td width="5%">2020-08-19</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">11</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">11</td>
+								    <td width="5%">0</td>
+								    <td width="5%">
+								        <a href="javascript:void(0)"
+								            title="增值税:&nbsp;0<br/>附加税:&nbsp;<br/>印花税:&nbsp;<br/>企业所得税:&nbsp;0<br/>个人所得税:&nbsp;0"
+								            class="tiptop">0</a>
+									</td>
+								    <td width="5%">-11.0</td>
+								    <td width="5%">
+								        <a href="javascript:void(0)" title="点击查看补差明细" class="tiptop">0</a>
+								    </td>
+								    <td width="5%">----</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td class="tablebtdb " colspan="5">当前页合计:</td>
+								    <td class="tablebtdb " numtype="formatMoney">262,041.56</td>
+								    <td class="tablebtdb " numtype="formatMoney">541.9</td>
+								    <td class="tablebtdb " numtype="formatMoney">124,133.13</td>
+								    <td class="tablebtdb " numtype="formatMoney">16</td>
+								    <td class="tablebtdb " numtype="formatMoney">70.06</td>
+								    <td class="tablebtdb " numtype="formatMoney">0</td>
+								    <td class="tablebtdb " numtype="formatMoney">611</td>
+								    <td class="tablebtdb " numtype="formatMoney">220</td>
+								    <td class="tablebtdb " numtype="formatMoney">100</td>
+								    <td class="tablebtdb " numtype="formatMoney">60</td>
+								    <td class="tablebtdb " numtype="formatMoney">1,077.06</td>
+								    <td class="tablebtdb " numtype="formatMoney">0</td>
+								    <td class="tablebtdb " numtype="formatMoney">113,291.74</td>
+								    <td class="tablebtdb " numtype="formatMoney">24,081.53</td>
+								    <td class="tablebtdb " numtype="formatMoney">0</td>
+								    <td class="tablebtdb "></td>
+								</tr>
+								<tr height="45">
+								    <td class="tablebtdb " colspan="5">所有页合计:</td>
+								    <td class="tablebtdb " numtype="formatMoney">30,146,114.65</td>
+								    <td class="tablebtdb " numtype="formatMoney">3,175,961.08</td>
+								    <td class="tablebtdb " numtype="formatMoney">13,107,414.51</td>
+								    <td class="tablebtdb " numtype="formatMoney">9,966.75</td>
+								    <td class="tablebtdb " numtype="formatMoney">53,739.69</td>
+								    <td class="tablebtdb " numtype="formatMoney">213,099</td>
+								    <td class="tablebtdb " numtype="formatMoney">246,779.87</td>
+								    <td class="tablebtdb " numtype="formatMoney">84,683.35</td>
+								    <td class="tablebtdb " numtype="formatMoney">28,457.96</td>
+								    <td class="tablebtdb " numtype="formatMoney">8,230</td>
+								    <td class="tablebtdb " numtype="formatMoney">728,567.62</td>
+								    <td class="tablebtdb " numtype="formatMoney">371,912.22</td>
+								    <td class="tablebtdb " numtype="formatMoney">13,051,749.6</td>
+								    <td class="tablebtdb " numtype="formatMoney">6,154,517.54</td>
+								    <td class="tablebtdb " numtype="formatMoney">371,912.22</td>
+								    <td class="tablebtdb "></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div> 
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

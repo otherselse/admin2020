@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -91,199 +91,167 @@
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="fixTr" style="width: 1200px;">
-                            <th width="4%">序号</th>
-                            <th width="4%">金牌商家</th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    账户总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="5%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    乐财宝<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-
-                            <th width="6%">
-                                <label title="当前可以提现的金额" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    G2G钱包<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%"><label class="jpsj_Sort" onclick="setOrderCol('x.xszx',this)" old><i
-                                        data="orderBy" id="Ix.xszx" class=""></i>
-                                </label>
-                                <label title="在投的新手体验本金" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    新手体验<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="5%">
-                                <label title="在投的共享通本金" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    共享通<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="5%">
-                                <label title="在投的融享通本金" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    融享通<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label title="业务占用资金" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    G2G占用资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="冻结的资金" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    冻结资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="4%">
-                                <label title="未结转分红部分" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label title="自第一次个人充值至今累计充值。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    个人<br>充值总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="自第一次个人提现至今累计提现。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    提现总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="自第一笔发放的分红金额至今发放的分红的累计。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    分红总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="昨日投资所有产品收益的合计。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    昨日收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="7%">
-                                <label title="自投资第一天起至今投资所有产品收益的累计。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    G2G累计收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="自业务中使用第一笔G2G金额至今使用金额的累计。" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    业务累计<br>使用金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="6%">
-                                <label title="自第一笔使用G2G社保缴纳至今金额的累计" class="tiptop sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">
-                                    社保使用金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="4%">1</td>
-                            <td width="4%">
-                                <a id="i10399" href="javascript:void(0)" title="个人投资详情" class="tiptop"
-                                    onclick="showLayer()">
-                                    <span class="redm"> 于博</span>
-                                </a></td>
-                            <td width="5%">17,742,314.02</td>
-                            <td width="4%">999,999.96</td>
-                            <td width="5%">16,693,030.86</td>
-                            <td width="4%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">0</td>
-                            <td width="4%">39,283.2</td>
-                            <td width="6%">0</td>
-                            <td width="4%">0</td>
-                            <td width="4%">10,000,000</td>
-                            <td width="4%">0</td>
-                            <td width="4%">-2,025,165.94</td>
-                            <td width="12%">
-                                <span class="tiptop menuhook"
-                                    title="随存随取：<span class='red'>12</span></br>新手体验：<span class='red'>12</span></br>&emsp;共享通：<span class='red'>12</span></br>&emsp;融享通：<span class='red'>12</span></br>">0</span>
-                            </td>
-                            <td width="12%">
-                                <span class="tiptop menuhook"
-                                    title="随取随存：<span class='red'>12</span></br>新手体验：<span class='red'>12</span></br>&emsp;共享通：<span class='red'>12</span></br>&emsp;融享通：<span class='red'>12</span></br>">0</span>
-                            </td>
-                            <td width="8%">282,523.2</td>
-                            <td width="6%">0</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <!-- <tr height="45">
-                            <td colspan="18">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">当前页合计：</div>
-                                    <div class="tl">
-                                        账户总额:<span class="red mr10">10</span>
-                                        乐财宝:<span class="red mr10">1.000</span>
-                                        G2G钱包:<span class="red mr10">1.000</span>
-                                        新手体验:<span class="red mr10">1.000</span>
-                                        共享通:<span class="red mr10">1.000</span>
-                                        融享通:<span class="red mr10">1.000</span>
-                                        G2G占用资金:<span class="red mr10">1.000</span>
-                                        冻结资金:<span class="red mr10">1.000</span>
-                                        分红余额:<span class="red mr10">1.000</span>
-                                        个人:<span class="red mr10">1.000</span>
-                                        充值总额:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="18">
-                                <div class="df pl20">
-                                    <div style="min-width: 80px;">所有页合计：</div>
-                                    <div class="tl">
-                                        账户总额:<span class="red mr10">10</span>
-                                        乐财宝:<span class="red mr10">1.000</span>
-                                        G2G钱包:<span class="red mr10">1.000</span>
-                                        新手体验:<span class="red mr10">1.000</span>
-                                        共享通:<span class="red mr10">1.000</span>
-                                        融享通:<span class="red mr10">1.000</span>
-                                        G2G占用资金:<span class="red mr10">1.000</span>
-                                        冻结资金:<span class="red mr10">1.000</span>
-                                        分红余额:<span class="red mr10">1.000</span>
-                                        个人:<span class="red mr10">1.000</span>
-                                        充值总额:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
-                        <tr height="45">
-                            <td class="tablebtdb " colspan="2">当页合计:</td>
-                            <td class="tablebtdb " numtype="formatMoney">2,648,978,864.03</td>
-                            <td class="tablebtdb " numtype="formatMoney">102,513,227.54</td>
-                            <td class="tablebtdb " numtype="formatMoney">2,533,243,870.59</td>
-                            <td class="tablebtdb " numtype="formatMoney">20,000</td>
-                            <td class="tablebtdb " numtype="formatMoney">530,000</td>
-                            <td class="tablebtdb " numtype="formatMoney">335,000</td>
-                            <td class="tablebtdb " numtype="formatMoney">18,786,888.8</td>
-                            <td class="tablebtdb " numtype="formatMoney">-538,675.85</td>
-                            <td class="tablebtdb " numtype="formatMoney">-9,050,132.42</td>
-                            <td class="tablebtdb " numtype="formatMoney">125,161,352.55</td>
-                            <td class="tablebtdb " colspan="6"></td>
-                        </tr>
-
-                        <tr height="45">
-                            <td class="tablebtdb " colspan="2">总计:</td>
-                            <td class="tablebtdb " numtype="formatMoney">15,331,621,354.55</td>
-                            <td class="tablebtdb " numtype="formatMoney">2,316,883,320.95</td>
-                            <td class="tablebtdb " numtype="formatMoney">11,772,978,252.87</td>
-                            <td class="tablebtdb " numtype="formatMoney">221,398</td>
-                            <td class="tablebtdb " numtype="formatMoney">761,491,454.98</td>
-                            <td class="tablebtdb " numtype="formatMoney">21,653,050</td>
-                            <td class="tablebtdb " numtype="formatMoney">509,770,590.74</td>
-                            <td class="tablebtdb " numtype="formatMoney">16,229,281.97</td>
-                            <td class="tablebtdb " numtype="formatMoney">-62,039,670.937331</td>
-                            <td class="tablebtdb " numtype="formatMoney">6,693,118,430.59</td>
-                            <td class="tablebtdb " colspan="6"></td>
-                        </tr>
-
-                    </tfoot>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="fixTr" style="width: 1200px;">
+								    <th width="4%">序号</th>
+								    <th width="4%">金牌商家</th>
+								    <th width="8%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            账户总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="5%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            乐财宝<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								
+								    <th width="6%">
+								        <label title="当前可以提现的金额" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            G2G钱包<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%"><label class="jpsj_Sort" onclick="setOrderCol('x.xszx',this)" old><i
+								                data="orderBy" id="Ix.xszx" class=""></i>
+								        </label>
+								        <label title="在投的新手体验本金" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            新手体验<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="5%">
+								        <label title="在投的共享通本金" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            共享通<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="5%">
+								        <label title="在投的融享通本金" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            融享通<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="7%">
+								        <label title="业务占用资金" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            G2G占用资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="冻结的资金" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            冻结资金<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="4%">
+								        <label title="未结转分红部分" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            分红余额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="7%">
+								        <label title="自第一次个人充值至今累计充值。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            个人<br>充值总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="自第一次个人提现至今累计提现。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            提现总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="自第一笔发放的分红金额至今发放的分红的累计。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            分红总额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="昨日投资所有产品收益的合计。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            昨日收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="7%">
+								        <label title="自投资第一天起至今投资所有产品收益的累计。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            G2G累计收益<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="自业务中使用第一笔G2G金额至今使用金额的累计。" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            业务累计<br>使用金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%">
+								        <label title="自第一笔使用G2G社保缴纳至今金额的累计" class="tiptop sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">
+								            社保使用金额<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="4%">1</td>
+								    <td width="4%">
+								        <a id="i10399" href="javascript:void(0)" title="个人投资详情" class="tiptop"
+								            onclick="showLayer()">
+								            <span class="redm"> 于博</span>
+								        </a></td>
+								    <td width="8%">17,742,314.02</td>
+								    <td width="5%">999,999.96</td>
+								    <td width="6%">16,693,030.86</td>
+								    <td width="6%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="7%">39,283.2</td>
+								    <td width="6%">0</td>
+								    <td width="4%">0</td>
+								    <td width="7%">10,000,000</td>
+								    <td width="6%">0</td>
+								    <td width="6%">-2,025,165.94</td>
+								    <td width="6%">
+								        <span class="tiptop menuhook"
+								            title="随存随取：<span class='red'>12</span></br>新手体验：<span class='red'>12</span></br>&emsp;共享通：<span class='red'>12</span></br>&emsp;融享通：<span class='red'>12</span></br>">0</span>
+								    </td>
+								    <td width="7%">
+								        <span class="tiptop menuhook"
+								            title="随取随存：<span class='red'>12</span></br>新手体验：<span class='red'>12</span></br>&emsp;共享通：<span class='red'>12</span></br>&emsp;融享通：<span class='red'>12</span></br>">0</span>
+								    </td>
+								    <td width="6%">282,523.2</td>
+								    <td width="6%">0</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td class="tablebtdb " colspan="2">当页合计:</td>
+								    <td class="tablebtdb " numtype="formatMoney">2,648,978,864.03</td>
+								    <td class="tablebtdb " numtype="formatMoney">102,513,227.54</td>
+								    <td class="tablebtdb " numtype="formatMoney">2,533,243,870.59</td>
+								    <td class="tablebtdb " numtype="formatMoney">20,000</td>
+								    <td class="tablebtdb " numtype="formatMoney">530,000</td>
+								    <td class="tablebtdb " numtype="formatMoney">335,000</td>
+								    <td class="tablebtdb " numtype="formatMoney">18,786,888.8</td>
+								    <td class="tablebtdb " numtype="formatMoney">-538,675.85</td>
+								    <td class="tablebtdb " numtype="formatMoney">-9,050,132.42</td>
+								    <td class="tablebtdb " numtype="formatMoney">125,161,352.55</td>
+								    <td class="tablebtdb " colspan="6"></td>
+								</tr>
+								
+								<tr height="45">
+								    <td class="tablebtdb " colspan="2">总计:</td>
+								    <td class="tablebtdb " numtype="formatMoney">15,331,621,354.55</td>
+								    <td class="tablebtdb " numtype="formatMoney">2,316,883,320.95</td>
+								    <td class="tablebtdb " numtype="formatMoney">11,772,978,252.87</td>
+								    <td class="tablebtdb " numtype="formatMoney">221,398</td>
+								    <td class="tablebtdb " numtype="formatMoney">761,491,454.98</td>
+								    <td class="tablebtdb " numtype="formatMoney">21,653,050</td>
+								    <td class="tablebtdb " numtype="formatMoney">509,770,590.74</td>
+								    <td class="tablebtdb " numtype="formatMoney">16,229,281.97</td>
+								    <td class="tablebtdb " numtype="formatMoney">-62,039,670.937331</td>
+								    <td class="tablebtdb " numtype="formatMoney">6,693,118,430.59</td>
+								    <td class="tablebtdb " colspan="6"></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

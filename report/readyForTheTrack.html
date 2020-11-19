@@ -71,7 +71,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -85,7 +85,7 @@
                 <a href="../index/index.html" class="gga">首页</a>
                 <span class="dib pl5 pr5 ">/</span>
                 报表管理
-                <span class="dib pl5 pr5">/</span>
+                <span class="dib pl5 pr5">/</span>0
                 <span class="g28">备货跟踪表</span>
             </div>
             <div class="r m_dn">
@@ -100,7 +100,7 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 df">
+                <div class=" df">
                     <span class="dib pct22">
                         <span class="searchLable">&emsp;是否入库：</span>
                         <span class="radio">
@@ -138,7 +138,7 @@
                         </span>
                     </span>
                 </div>
-                <div class="mb10 df">
+                <div class=" df">
                     <span class="pct22 dib f12">
                         <span class="searchLable">&emsp;金牌商家：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
@@ -160,7 +160,7 @@
                         </span>
                     </span>
                 </div>
-                <div class="mb10 dac">
+                <div class=" dac">
                     <span class="pct22 dib f12">
                         <span class="searchLable">&emsp;&emsp;订单号：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
@@ -194,7 +194,7 @@
                     </span>
                 </div>
                 <div class="cah dn">
-                    <div class="df mb10 ">
+                    <div class="df  ">
                         <span class="pct22 dib f12">
                             <span class="searchLable min-w70">采购合同号：</span>
                             <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
@@ -203,203 +203,224 @@
                             <div class="df">
                                 <div class="min-w60 searchLable">备货类型：</div>
                                 <div class="selectSingle">
-                                    <a class="mb10 on" href="javscript:void(0)">金牌商家备注</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">客户单位备注</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">金牌商家任你押</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
-                                    <a class="mb10" href="javscript:void(0)">客户单位任你押</a>
+                                    <a class=" on" href="javscript:void(0)">金牌商家备注</a>
+                                    <span class="">|</span>
+                                    <a class="" href="javscript:void(0)">客户单位备注</a>
+                                    <span class="">|</span>
+                                    <a class="" href="javscript:void(0)">金牌商家任你押</a>
+                                    <span class="">|</span>
+                                    <a class="" href="javscript:void(0)">客户单位任你押</a>
                                 </div>
                             </div>
                         </span>
                     </div>
                 </div>
-
-                <div class="mt20 mb10 tc">
+                
+                <div class="mt20  tc">
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button" onclick="showSearchDn(this)" data-type="clear">
                         <span class="bText dib mr5">更多查询</span>
                         <img src="../images/report/fan.png" width="10" height="9" alt="">
                     </button>
                 </div>
-
+                
                 <div class="df">
                     <div style="flex: 1;"></div>
                     <a href="javascript:void(0)" class="dac dfr" onclick="cloTable()">
-                        表头配置
-                        <img src="../images/report/sl1.png" class="mr5" alt="">
+                        表头配置<img src="../images/report/sl1.png" class="mr5" alt="">
                     </a>
                 </div>
+				
+				
+				<div class="lgui-table-box mt5 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 " width="100%">
+							<thead>
+								<tr>
+								    <th width="5%">订单号</th>
+								    <th width="4%">金牌商家</th>
+								    <th width="4%">区域</th>
+								    <th width="6%">备货类型</th>
+								    <th width="6%"> <label class="sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">签订时间<i
+								                class="goldIcon icon-sort vm ml5 down"></i></label></th>
+								    <th width="6%">供应商</th>
+								    <!-- <th width="6%">  <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">含税单价<i class="goldIcon icon-sort vm ml5 down"></i></label></th> -->
+								    <th width="5%">出库重量(吨)</th>
+								    <th width="6%">销售收款金额</th>
+								    <th width="7%" data-item-field="ys"><label class="sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">浮动金额(元)
+								            <i class="goldIcon icon-sort vm ml5 down"></i></label></th>
+								    <th width="8%"><label class="sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">G2G冻结金额
+								            <i class="goldIcon icon-sort vm ml5 down"></i></label></th>
+								    <th width="8%" data-item-field="db">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">盈亏浮动比例
+								            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="6%" data-item-field="kind">定金占比</th>
+								    <th width="10%" data-item-field="kind1">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">定金剩余占比
+								            <i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="5%">执行状态</th>
+								    <th width="10%">合同回收状态</th>
+								    <th width="5%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 " width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="5%"><a href="../public/theOrderDetails.html" target="_blank">59252</a></td>
+								    <td width="4%"><a href="../public/goldRegInfo.html" target="_block">李思思</a></td>
+								    <td width="4%">上海</td>
+								    <td width="6%">金牌商家备货</td>
+								    <td width="6%" class="tl">
+								        <div class="pl5">
+								            2020-04-05 13:05:08
+								        </div>
+								    </td>
+								    <td width="6%" class="tl">
+								        <div class="pl5">
+								            <a href="../public/userInfo.html" target="_block">乐乐集团有限公司</a>
+								        </div>
+								    </td>
+								    <td width="5%">10</td>
+								    <td width="6%">1.000</td>
+								    <td width="7%" data-item-field="ys">543</td>
+								    <td width="8%">20</td>
+								    <td width="8%" data-item-field="db">3%</td>
+								    <td width="6%" data-item-field="kind">25.3%</td>
+								    <td width="10%" data-item-field="kind1">10%</td>
+								    <td width="5%">执行中</td>
+								    <td width="10%"><a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
+								            data-hasqtip="17">未回收</a>
+								    </td>
+								    <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+								    </td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+								    <td colspan="16">
+								        <div class="p20">
+								            <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+								                <thead>
+								                    <tr>
+								                        <th width="8%">库存编码</th>
+								                        <th width="5%">品名</th>
+								                        <th width="6%">捆包号</th>
+								                        <th width="4%">牌号</th>
+								                        <th width="7%">规格</th>
+								                        <th width="3%">钢厂</th>
+								                        <th width="10%">入库时间</th>
+								                        <th width="5%">入库仓库</th>
+								                        <th width="5%">申请入库重量</th>
+								                        <th width="5%">已确认重量</th>
+								                        <th width="5%">销售订单号</th>
+								                        <th width="10%">销售出库时间</th>
+								                        <th class="4%">销售出库重量</th>
+								                        <th width="4%">采购单价</th>
+								                        <th width="5%">市场单价</th>
+								                        <th width="4%">销售单价</th>
+								                        <th width="5%">浮动差额</th>
+								                        <th width="5%">盈亏浮动比例</th>
+								                    </tr>
+								                </thead>
+								                <tbody class="ui-thover">
+								                    <tr>
+								                        <td>XSSAQ121313DAS</td>
+								                        <td>镀铝板材</td>
+								                        <td>23524124-32</td>
+								                        <td>SPCS</td>
+								                        <td>9.00-12211-C</td>
+								                        <td>宝钢</td>
+								                        <td>2020-08-19 13:20:36</td>
+								                        <td>聚方库</td>
+								                        <td>10</td>
+								                        <td>10</td>
+								                        <td><a href="">252442</a></td>
+								                        <td>2020-08-19 13:20:36</td>
+								                        <td>10</td>
+								                        <td>20000</td>
+								                        <td>0</td>
+								                        <td>2000</td>
+								                        <td>200</td>
+								                        <td>10%</td>
+								                    </tr>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr><!-- 隐藏内容end -->
+								<tr>
+								    <td width="5%"><a href="../public/theOrderDetails.html" target="_blank">59252</a></td>
+								    <td width="4%"><a href="../public/goldRegInfo.html" target="_block">李思思</a></td>
+								    <td width="4%">上海</td>
+								    <td width="6%">金牌商家备货</td>
+								    <td width="6%" class="tl">
+								        <div class="pl5">
+								            2020-04-05 13:05:08
+								        </div>
+								    </td>
+								    <td width="6%" class="tl">
+								        <div class="pl5">
+								            <a href="../public/userInfo.html" target="_block">乐乐集团有限公司</a>
+								        </div>
+								    </td>
+								    <td width="5%">10</td>
+								    <td width="6%">1.000</td>
+								    <td width="7%" data-item-field="ys">543</td>
+								    <td width="8%">20</td>
+								    <td width="8%" data-item-field="db">3%</td>
+								    <td width="6%" data-item-field="kind">25.3%</td>
+								    <td width="10%" data-item-field="kind1">10%</td>
+								    <td width="5%">执行中</td>
+								    <td width="10%">已回收</td>
+								    <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="6">当前页合计</td>
+								    <td>10</td>
+								    <td>10</td>
+								    <td data-item-field="ys">10</td>
+								    <td>10</td>
+								    <td data-item-field="db">10%</td>
+								    <td data-item-field="kind">10%</td>
+								    <td data-item-field="kind1">10%</td>
+								    <td colspan="3"></td>
+								</tr>
+								<tr height="45">
+								    <td colspan="6">页合计</td>
+								    <td>10</td>
+								    <td>10</td>
+								    <td data-item-field="ys">10</td>
+								    <td>10</td>
+								    <td data-item-field="db">10%</td>
+								    <td data-item-field="kind">10%</td>
+								    <td data-item-field="kind1">10%</td>
+								    <td colspan="3"></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				
                 <!-- <div class="m-tabLimitSCroll lgui-table-box  fixrightTab"> -->
                 <div class="lgui-table-box">
                     <table class="ui-table tc f12 checkbox mt5" width="100%" data-type="edit">
                         <thead>
-                            <tr>
-                                <th width="5%">订单号</th>
-                                <th width="4%">金牌商家</th>
-                                <th width="4%">区域</th>
-                                <th width="6%">备货类型</th>
-                                <th width="6%"> <label class="sort-list dib poi"
-                                        onclick="setOrderCol('a.inDate',this)">签订时间<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label></th>
-                                <th width="6%">供应商</th>
-                                <!-- <th width="6%">  <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">含税单价<i class="goldIcon icon-sort vm ml5 down"></i></label></th> -->
-                                <th width="5%">出库重量(吨)</th>
-                                <th width="6%">销售收款金额</th>
-                                <th width="7%" data-item-field="ys"><label class="sort-list dib poi"
-                                        onclick="setOrderCol('a.inDate',this)">浮动金额(元)
-                                        <i class="goldIcon icon-sort vm ml5 down"></i></label></th>
-                                <th width="8%"><label class="sort-list dib poi"
-                                        onclick="setOrderCol('a.inDate',this)">G2G冻结金额
-                                        <i class="goldIcon icon-sort vm ml5 down"></i></label></th>
-                                <th width="8%" data-item-field="db">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">盈亏浮动比例
-                                        <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="6%" data-item-field="kind">定金占比</th>
-                                <th width="10%" data-item-field="kind1">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">定金剩余占比
-                                        <i class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="5%">执行状态</th>
-                                <th width="10%">合同回收状态</th>
-                                <th width="5%">操作</th>
-                            </tr>
+                            
                         </thead>
                         <tbody class="ui-thover bgwh">
-                            <tr>
-                                <td><a href="../public/theOrderDetails.html" target="_blank">59252</a></td>
-                                <td><a href="../public/goldRegInfo.html" target="_block">李思思</a></td>
-                                <td>上海</td>
-                                <td>金牌商家备货</td>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        2020-04-05 13:05:08
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/userInfo.html" target="_block">乐乐集团有限公司</a>
-                                    </div>
-                                </td>
-                                <td>10</td>
-                                <td>1.000</td>
-                                <td data-item-field="ys">543</td>
-                                <td>20</td>
-                                <td data-item-field="db">3%</td>
-                                <td data-item-field="kind">25.3%</td>
-                                <td data-item-field="kind1">10%</td>
-                                <td>执行中</td>
-                                <td><a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
-                                        data-hasqtip="17">未回收</a>
-                                </td>
-                                <td><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="16">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th width="8%">库存编码</th>
-                                                    <th width="5%">品名</th>
-                                                    <th width="6%">捆包号</th>
-                                                    <th width="4%">牌号</th>
-                                                    <th width="7%">规格</th>
-                                                    <th width="3%">钢厂</th>
-                                                    <th width="10%">入库时间</th>
-                                                    <th width="5%">入库仓库</th>
-                                                    <th width="5%">申请入库重量</th>
-                                                    <th width="5%">已确认重量</th>
-                                                    <th width="5%">销售订单号</th>
-                                                    <th width="10%">销售出库时间</th>
-                                                    <th class="4%">销售出库重量</th>
-                                                    <th width="4%">采购单价</th>
-                                                    <th width="5%">市场单价</th>
-                                                    <th width="4%">销售单价</th>
-                                                    <th width="5%">浮动差额</th>
-                                                    <th width="5%">盈亏浮动比例</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>XSSAQ121313DAS</td>
-                                                    <td>镀铝板材</td>
-                                                    <td>23524124-32</td>
-                                                    <td>SPCS</td>
-                                                    <td>9.00-12211-C</td>
-                                                    <td>宝钢</td>
-                                                    <td>2020-08-19 13:20:36</td>
-                                                    <td>聚方库</td>
-                                                    <td>10</td>
-                                                    <td>10</td>
-                                                    <td><a href="">252442</a></td>
-                                                    <td>2020-08-19 13:20:36</td>
-                                                    <td>10</td>
-                                                    <td>20000</td>
-                                                    <td>0</td>
-                                                    <td>2000</td>
-                                                    <td>200</td>
-                                                    <td>10%</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
-                            <tr>
-                                <td><a href="theOrderDetails.html">59252</a></td>
-                                <td><a href="">李思思</a></td>
-                                <td>上海</td>
-                                <td>金牌商家备货</td>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        2020-04-05 13:05:08
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl5">
-                                        <a href="../public/userInfo1.html">乐乐集团有限公司</a>
-                                    </div>
-                                </td>
-                                <td>10</td>
-                                <td>1.000</td>
-                                <td data-item-field="ys">543</td>
-                                <td>20</td>
-                                <td data-item-field="db">3%</td>
-                                <td data-item-field="kind">25.3%</td>
-                                <td data-item-field="kind1">10%</td>
-                                <td>执行中</td>
-                                <td>已回收</td>
-                                <td><a href="#">查看</a></td>
-                            </tr>
+                            
                         </tbody>
                         <tfoot>
-                            <tr height="45">
-                                <td colspan="6">当前页合计</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td data-item-field="ys">10</td>
-                                <td>10</td>
-                                <td data-item-field="db">10%</td>
-                                <td data-item-field="kind">10%</td>
-                                <td data-item-field="kind1">10%</td>
-                                <td colspan="3"></td>
-                            </tr>
-                            <tr height="45">
-                                <td colspan="6">页合计</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td data-item-field="ys">10</td>
-                                <td>10</td>
-                                <td data-item-field="db">10%</td>
-                                <td data-item-field="kind">10%</td>
-                                <td data-item-field="kind1">10%</td>
-                                <td colspan="3"></td>
-                            </tr>
+                           
                         </tfoot>
                     </table>
                     <!-- table end -->
@@ -491,12 +512,12 @@
             //cols 定义显示及权限
             var mylgColInfo = [{ "name": "ys", "intro": "浮动金额", "status": false }, { "name": "db", "intro": "盈亏浮动比例", "status": false }, { "name": "kind", "intro": "定金占比", "status": false }, { "name": "kind1", "intro": "定金剩余比例", "status": false }]
 
-            //初始化表格数据
-            var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
-            for (var i = 0; i < mylgColInfo.length; i++) {
-                str += str;
-            }
-            $(".lgui-table-body").find("tbody").append(str)
+            // 初始化表格数据
+            // var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
+            // for (var i = 0; i < mylgColInfo.length; i++) {
+            //     str += str;
+            // }
+            // $(".lgui-table-body").find("tbody").append(str)
 
             // lgScrollTable.fixHeader(); //默认".lgui-table-box", ".lgui-table-header", ".lgui-table-body"固定滚动
             lgScrollTable.choiceCol(mylgColInfo, '.lgui-table-detail', '.lgui-table-box'); //根据表格中列的配置，实现初始化表格

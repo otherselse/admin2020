@@ -1,519 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>出入库跟踪表-报表管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>出入库跟踪表-报表管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-    <style>
-        .ui-option,
-        .ui-optionNo {
-            background: #fff;
-            min-width: auto;
-        }
-    </style>
+		<style>
+			.ui-option,
+			.ui-optionNo {
+				background: #fff;
+				min-width: auto;
+			}
+		</style>
+	</head>
 
-</head>
+	<body class="showTip report fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
 
-<body class="showTip report">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					报表管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">出入库跟踪表</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="summary.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">汇总表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="scheduleOf.html" class="ui-tab3-list rel"><span class="ui-tab3-text">明细表</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="inventoryRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">入库记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="outboundRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">出库记录</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content g28 ovh minH">
+				<div class="p20 f12">
+					<div class="mb10 df">
+						<span class="pct22 dib f12">
+							<span class="searchLable">订单号：&emsp;</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
+						</span>
+						<span class="pct22 dib f12">
+							<span class="searchLable">采购单位：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入采购单位" autocomplete="off">
+						</span>
+						<span class="pct22 dib f12">
+							<span class="searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+						</span>
+						<span class="input-selSearch pct25 m_pct31 dib f12">
+							<span class="searchLable">交货日期：</span>
+							<span class="ui-input tc pct69  range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+							</span>
+						</span>
+					</div>
+					<div class="df mb10">
+						<span class="pct22 dib f12">
+							<span class="searchLable">区域：&emsp;&emsp;</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入区域" autocomplete="off">
+						</span>
+						<span class="pct22 dib f12">
+							<span class="searchLable">业务类型：</span>
+							<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct22 dib f12">
+							<span class="searchLable">订单状态：</span>
+							<span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">采购发票</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 m_pct31 mt5 dib">
+							<span class="searchLable">采购合同是否结算：</span>
+							<span class="radio ">
+								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							</span>
+						</span>
+					</div>
+					<div class="cah dn">
+						<div class="df">
+							<span class="pct22 dib">
+								<span class="searchLable">是否超发：</span>
+								<span class="radio ml2">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+							<span class="pct22 dib">
+								<span class="searchLable">超交货期：</span>
+								<span class="radio ml2">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+							<span class="pct22 dib">
+								<span class="searchLable">全部入库：</span>
+								<span class="radio ml2">
+									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+								</span>
+							</span>
+						</div>
+					</div>
 
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                报表管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">出入库跟踪表</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class="ui-tab3">
-            <a href="summary.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">汇总表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="scheduleOf.html" class="ui-tab3-list rel"><span class="ui-tab3-text">明细表</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="inventoryRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">入库记录</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-            <a href="outboundRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">出库记录</span><i
-                    class="goldIcon ui-tab3-dot"></i></a>
-        </div>
-        <div class="ui-content g28 ovh minH">
-            <div class="p20 f12">
-                <div class="mb10 df">
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">订单号：&emsp;</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入订单号" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">采购单位：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入采购单位" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">金牌商家：</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
-                    </span>
-                    <span class="input-selSearch pct25 m_pct31 dib f12">
-                        <span class="searchLable">交货日期：</span>
-                        <span class="ui-input tc pct69  range" data-type="time">
-                            <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                class="render-time pct45" readonly="">
-                        </span>
-                    </span>
-                </div>
-                <div class="df mb10">
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">区域：&emsp;&emsp;</span>
-                        <input type="text" class="ui-input pct69" placeholder="请输入区域" autocomplete="off">
-                    </span>
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">业务类型：</span>
-                        <span class="input-selSearch pct69">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-                            </div>
-                        </span>
-                    </span>
-                    <span class="pct22 dib f12">
-                        <span class="searchLable">订单状态：</span>
-                        <span class="input-selSearch pct69">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell">采购发票</a>
-                            </div>
-                        </span>
-                    </span>
-                    </span>
-                    <span class="pct25 m_pct31 mt5 dib">
-                        <span class="searchLable">采购合同是否结算：</span>
-                        <span class="radio ">
-                            <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>是</label>
-                            <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                        class="radio-opacity" name="radio"></i>否</label>
-                        </span>
-                    </span>
-                </div>
-                <div class="cah dn">
-                    <div class="df">
-                        <span class="pct22 dib">
-                            <span class="searchLable">是否超发：</span>
-                            <span class="radio ml2">
-                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>是</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>否</label>
-                            </span>
-                        </span>
-                        <span class="pct22 dib">
-                            <span class="searchLable">超交货期：</span>
-                            <span class="radio ml2">
-                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>是</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>否</label>
-                            </span>
-                        </span>
-                        <span class="pct22 dib">
-                            <span class="searchLable">全部入库：</span>
-                            <span class="radio ml2">
-                                <label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>是</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>否</label>
-                            </span>
-                        </span>
-                    </div>
-                </div>
+					<div class="tc mt20 ">
+						<button type="button" class="ui-button mr10">查询</button>
+						<button type="button" class="ui-button" onclick="showSearchIconDn(this)" data-type="clear" ot="更多查询">
+							<span class="bText dib mr5">更多查询</span>
+							<i class="fanArrowIcon"></i>
+						</button>
+					</div>
 
-                <div class="tc mt20 ">
-                    <button type="button" class="ui-button mr10">查询</button>
-                    <button type="button" class="ui-button" onclick="showSearchIconDn(this)" data-type="clear"
-                        ot="更多查询">
-                        <span class="bText dib mr5">更多查询</span>
-                        <i class="fanArrowIcon"></i>
-                    </button>
-                </div>
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr>
+										<th width="150px" class="tl">
+											<div class="pl10">订单号</div>
+										</th>
+										<th width="12%" class="tl">
+											<div class="pl10">
+												金牌商家/单位名称
+											</div>
+										</th>
+										<th width="3%">区域</th>
+										<th width="7%">采购类型</th>
+										<th width="4%">合同重量</th>
+										<th width="4%">合同金额</th>
+										<th width="4%">已付款</th>
+										<th width="10%" class="tl">
+											<div class="pl10">
+												已付款金额/时间
+											</div>
+										</th>
+										<th width="10%" class="tl">
+											<div class="pl10">
+												<lable class="jpsj_Sort" onclick="setOrderCol('x.signWeight',this)">未入库重量/金额<i data="orderBy" id="Ix.signWeight"
+													 class=""></i>
+												</lable>
+											</div>
+										</th>
+										<th width="7%">采购交货时间</th>
+										<th width="4%">
+											<lable class="jpsj_Sort" onclick="setOrderCol('x.signWeight',this)">超交货期<i data="orderBy" class=""></i>
+											</lable>
+										</th>
+										<th width="4%">
+											<lable class="jpsj_Sort" onclick="setOrderCol('x.noInWeight',this)">超付款期<i data="orderBy" id="Ix.noInWeight"
+												 class=""></i>
+											</lable>
+										</th>
+										<th width="10%" class="tl">
+											<div class="pl10">
+												已出库重量/金额
+											</div>
+										</th>
+										<th width="4%">库存金额</th>
+										<th width="8%" colspan="2">状态</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="150px" class="tl">
+											<div class="pl10">
+												<a href="javascript:void(0)" onclick="showStep()">716271</a>
+												<div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
+											</div>
+										</td>
+										<td width="12%" class="tl">
+											<div class="pl10">
+												<a href="../public/goldRegInfo.html" title="联系方式：19987856462" class="b tiptop">唐一菲</a>
+												<div class="mt5 dac">
+													<i class="gongSi-icon mr1"></i>
+													<a href="../public/userInfo1.html" target="_block" title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+													 class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+												</div>
+											</div>
+										</td>
+										<td width="3%">上海</td>
+										<td width="7%">现货<span class="dib ml5 reD-gunn pl10 pr10">加工</span></td>
+										<td width="4%">1121</td>
+										<td width="4%">1211</td>
+										<td width="4%">63,000</td>
+										<td width="10%" class="tl">
+											<div class="pl10">
+												111111.xWM<br>
+												<div class="col-8080">2020-08-12</div>
+											</div>
+										</td>
+										<td width="10%" class="tl">
+											<div class="pl10 red">
+												111111<span class="col-8080">&nbsp;(2020112)</span>
+											</div>
+										</td>
+										<td width="7%">2020-10-12</td>
+										<td width="4%">12小时</td>
+										<td width="4%">2小时</td>
+										<td width="10%">143.22<span class="col-8080">&nbsp;(22121)</span></td>
+										<td width="4%">122212</td>
+										<td width="4%" class="tablebtdb"> 正常</td>
+										<td width="4%">
+											<a href="javascript:void(0);" onclick="showTrMore(this)" class="blue">查看</a>
+										</td>
+									</tr>
+									<!-- tr隐藏 -->
+									<tr class="hideTr dn">
+										<td colspan="28">
+											<div class="pl20 pr20">
+												<div class="g28 f14 mt20 b tl mb10">延期申请</div>
+												<table class="ui-table  f12  auto tc  mt10 mb10" width="100%">
+													<thead>
+														<tr>
+															<th width="6%">品名</th>
+															<th width="6%">捆包号</th>
+															<th width="7%">规格</th>
+															<th width="5%">牌号</th>
+															<th width="6%">钢厂</th>
+															<th width="5%">数量</th>
+															<th width="5%">重量</th>
+															<th width="5%">计量方式</th>
+															<th width="7%">仓库</th>
+															<th width="7%">入库时间</th>
+															<th width="7%">入库类型</th>
+															<th width="6%">入库操作人</th>
+															<th width="7%">签收时间</th>
+															<th width="7%">出库时间</th>
+															<th width="7%">出库类型</th>
+															<th width="7%">出库操作人</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>冷轧卷板</td>
+															<td>h112</td>
+															<td>11.000*800*C </td>
+															<td>SA1E</td>
+															<td>本钢</td>
+															<td>2</td>
+															<td>21</td>
+															<td>15007</td>
+															<td>聚方库</td>
+															<td>2020-09-09 14:23:22</td>
+															<td> 61120订单库存销售入库</td>
+															<td>唐宇捷</td>
+															<td>--</td>
+															<td>--</td>
+															<td>--</td>
+															<td>--</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
+													<thead>
+														<tr class="resource-table">
+															<td class="vt bgfa" width="13%"><span class="pt5 dib pl10">状态：</span>
+															</td>
+															<td width="87%">
+																<span class="dac">
+																	<span class="ml10 input-selSearch pct20 dac ">
+																		<input type="text" class="ui-input searchUp pct100" placeholder="请选择状态" autocomplete="off" readonly="">
+																		<div class="search-cont">
+																			<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+																			<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+																			<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+																			<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+																			<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+																			<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+																		</div>
+																	</span>
+																	<span class="ml5 dib selectSingle dac">
+																		<a class=" on" href="javscript:void(0)">供应能力不足</a>
+																		<span class="">|</span>
+																		<a class="" href="javscript:void(0)">质量异议</a>
+																		<span class="">|</span>
+																		<a class="" href="javscript:void(0)">其他</a>
+																	</span>
+																</span>
+															</td>
+														</tr>
+														<tr class="resource-table">
+															<td class="vt bgfa" width="13%"><span class="pt5 dib pl10">备注：</span>
+															</td>
+															<td width="87%">
+																<textarea class="ml10 ui-textarea pct90" rows="1"></textarea>
+															</td>
+														</tr>
+													</thead>
+												</table>
+												<div class="tc  mt20 mb20">
+													<button type="button" class="ui-button mr10">提交</button>
+												</div>
+											</div>
+										</td>
+									</tr>
 
-               
-                <div class="lgui-table-box">
-                    <table class="ui-table tc table-cw f12 checkbox mt30" width="100%" data-type="edit">
-                        <thead>
-                            <tr>
-                                <th width="150px" class="tl">
-                                    <div class="pl10">订单号</div>
-                                </th>
-                                <th width="12%" class="tl">
-                                    <div class="pl10">
-                                        金牌商家/单位名称
-                                    </div>
-                                </th>
-                                <th width="3%">区域</th>
-                                <th width="7%">采购类型</th>
-                                <th width="4%">合同重量</th>
-                                <th width="4%">合同金额</th>
-                                <th width="4%">已付款</th>
-                                <th width="10%" class="tl">
-                                    <div class="pl10">
-                                        已付款金额/时间
-                                    </div>
-                                </th>
-                                <th width="10%" class="tl">
-                                    <div class="pl10">
-                                        <lable class="jpsj_Sort" onclick="setOrderCol('x.signWeight',this)">未入库重量/金额<i
-                                                data="orderBy" id="Ix.signWeight" class=""></i>
-                                        </lable>
-                                    </div>
-                                </th>
-                                <th width="7%">采购交货时间</th>
-                                <th width="4%">
-                                    <lable class="jpsj_Sort" onclick="setOrderCol('x.signWeight',this)">超交货期<i
-                                            data="orderBy" id="Ix.signWeight" class=""></i>
-                                    </lable>
-                                </th>
-                                <th width="4%">
-                                    <lable class="jpsj_Sort" onclick="setOrderCol('x.noInWeight',this)">超付款期<i
-                                            data="orderBy" id="Ix.noInWeight" class=""></i>
-                                    </lable>
-                                </th>
-                                <th width="10%" class="tl">
-                                    <div class="pl10">
-                                        已出库重量/金额
-                                    </div>
-                                </th>
-                                <th width="4%">库存金额</th>
-                                <th width="8%" colspan="2">状态</th>
-                            </tr>
-                        </thead>
-                        <tbody class="ui-thover bgwh">
-                            <tr>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="javascript:void(0)" onclick="showStep()">716271</a>
-                                        <div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        <a href="../public/goldRegInfo.html" title="联系方式：19987856462"
-                                            class="b tiptop">唐一菲</a>
-                                        <div class="mt5 dac">
-                                            <i class="gongSi-icon mr1"></i>
-                                            <a href="../public/userInfo1.html" target="_block"
-                                                title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
-                                                class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>上海</td>
-                                <td>现货<span class="dib ml5 reD-gunn pl10 pr10">加工</span></td>
-                                <td>1121</td>
-                                <td>1211</td>
-                                <td>63,000</td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        111111.xWM<br>
-                                        <div class="col-8080">2020-08-12</div>
-                                    </div>
-                                </td>
-                                <td class="tl">
-                                    <div class="pl10 red">
-                                        111111<span class="col-8080">&nbsp;(2020112)</span>
-                                    </div>
-                                </td>
-                                <td>2020-10-12</td>
-                                <td>12小时</td>
-                                <td>2小时</td>
-                                <td>143.22<span class="col-8080">&nbsp;(22121)</span></td>
-                                <td>122212</td>
-                                <td class="tablebtdb"> 正常</td>
-                                <td>
-                                    <a href="javascript:void(0);" onclick="showTrMore(this)" class="blue">查看</a>
-                                </td>
-                            </tr>
-                            <!-- tr隐藏 -->
-                            <tr class="hideTr dn">
-                                <td colspan="28">
-                                    <div class="pl20 pr20">
-                                        <div class="g28 f14 mt20 b tl mb10">延期申请</div>
-                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th width="6%">品名</th>
-                                                    <th width="6%">捆包号</th>
-                                                    <th width="7%">规格</th>
-                                                    <th width="5%">牌号</th>
-                                                    <th width="6%">钢厂</th>
-                                                    <th width="5%">数量</th>
-                                                    <th width="5%">重量</th>
-                                                    <th width="5%">计量方式</th>
-                                                    <th width="7%">仓库</th>
-                                                    <th width="7%">入库时间</th>
-                                                    <th width="7%">入库类型</th>
-                                                    <th width="6%">入库操作人</th>
-                                                    <th width="7%">签收时间</th>
-                                                    <th width="7%">出库时间</th>
-                                                    <th width="7%">出库类型</th>
-                                                    <th width="7%">出库操作人</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>冷轧卷板</td>
-                                                    <td>h112</td>
-                                                    <td>11.000*800*C </td>
-                                                    <td>SA1E</td>
-                                                    <td>本钢</td>
-                                                    <td>2</td>
-                                                    <td>21</td>
-                                                    <td>15007</td>
-                                                    <td>聚方库</td>
-                                                    <td>2020-09-09 14:23:22</td>
-                                                    <td> 61120订单库存销售入库</td>
-                                                    <td>唐宇捷</td>
-                                                    <td>--</td>
-                                                    <td>--</td>
-                                                    <td>--</td>
-                                                    <td>--</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-                                            <thead>
-                                                <tr class="resource-table">
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">状态：</span>
-                                                    </td>
-                                                    <td width="87%">
-                                                        <span class="df">
-                                                            <span class="ml10 input-selSearch pct20 dac ">
-                                                                <input type="text" class="ui-input searchUp pct100"
-                                                                    placeholder="请选择状态" autocomplete="off" readonly="">
-                                                                <div class="search-cont">
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell ">选择选择1</a>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell">选择选择2</a>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell">选择选择3</a>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell">选择选择5</a>
-                                                                    <a href="javascript:void(0)"
-                                                                        class="search-list db ell">选择选择6</a>
-                                                                </div>
-                                                            </span>
-                                                            <span class="ml5 dib selectSingle dac">
-                                                                <a class=" on" href="javscript:void(0)">供应能力不足</a>
-                                                                <span class="pr5  pl5 ">|</span>
-                                                                <a class="" href="javscript:void(0)">质量异议</a>
-                                                                <span class="pr5  pl5 ">|</span>
-                                                                <a class="" href="javscript:void(0)">其他</a>
-                                                            </span>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="resource-table">
-                                                    <td class="vt bgfa" width="13%"><span
-                                                            class="pt5 dib pl10">备注：</span>
-                                                    </td>
-                                                    <td width="87%">
-                                                        <textarea class="ml10 ui-textarea pct90" rows="1"></textarea>
-                                                    </td>
-                                                </tr>
-                                            </thead>
-                                        </table>
-                                        <div class="tc  mt20 mb20">
-                                            <button type="button" class="ui-button mr10">提交</button>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="">
-                            <tr height="45">
-                                <td colspan="4">当前页合计：</td>
-                                <td>2303.33</td>
-                                <td>23012</td>
-                                <td>23012</td>
-                                <td></td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        0422121112
-                                        <div class="col-8080">(40010319.2)</div>
-                                    </div>
-                                </td>
-                                <td colspan="3"></td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        0422121112
-                                        <div class="col-8080">(40010319.2)</div>
-                                    </div>
-                                </td>
-                                <td colspan="3"></td>
-                            </tr>
-                            <tr height="45">
-                                <td colspan="4">所有页合计：</td>
-                                <td>2303.33</td>
-                                <td>23012</td>
-                                <td>23012</td>
-                                <td></td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        0422121112
-                                        <div class="col-8080">(40010319.2)</div>
-                                    </div>
-                                </td>
-                                <td colspan="3"></td>
-                                <td class="tl">
-                                    <div class="pl10">
-                                        0422121112
-                                        <div class="col-8080">(40010319.2)</div>
-                                    </div>
-                                </td>
-                                <td colspan="3"></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <!-- table end -->
-                </div>
-                <script type="text/javascript" src="../js/pagelist.js"></script>
-            </div>
-        </div><!-- ui-content end -->
-    </div><!-- rightBar end -->
-    <div class="layui-layer-shade dn max-mu" onclick="cloTable()" id="layui-layer-shade6" times="6">
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45">
+										<td colspan="4">当前页合计：</td>
+										<td>2303.33</td>
+										<td>23012</td>
+										<td>23012</td>
+										<td></td>
+										<td class="tl">
+											<div class="pl10">
+												0422121112
+												<div class="col-8080">(40010319.2)</div>
+											</div>
+										</td>
+										<td colspan="3"></td>
+										<td class="tl">
+											<div class="pl10">
+												0422121112
+												<div class="col-8080">(40010319.2)</div>
+											</div>
+										</td>
+										<td colspan="3"></td>
+									</tr>
+									<tr height="45">
+										<td colspan="4">所有页合计：</td>
+										<td>2303.33</td>
+										<td>23012</td>
+										<td>23012</td>
+										<td></td>
+										<td class="tl">
+											<div class="pl10">
+												0422121112
+												<div class="col-8080">(40010319.2)</div>
+											</div>
+										</td>
+										<td colspan="3"></td>
+										<td class="tl">
+											<div class="pl10">
+												0422121112
+												<div class="col-8080">(40010319.2)</div>
+											</div>
+										</td>
+										<td colspan="3"></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 
-    </div>
-    <div class="layui-layer dn mu-table layui-layer-page lgui-table-tools bgfa auto ovh " style=" height: 230px;position:absolute;
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+		<div class="layui-layer-shade dn max-mu" onclick="cloTable()" id="layui-layer-shade6" times="6">
+
+		</div>
+		<div class="layui-layer dn mu-table layui-layer-page lgui-table-tools bgfa auto ovh " style=" height: 230px;position:absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin:auto;">
-        <div class="layui-layer-title" style="cursor: move;">自定义表头字段</div>
-        <div class=" mt5 dac dib ml40 mt20">
-            <i class="ui-checkbox goldIcon mr5 vm pct20">
-                <input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
-            <span class="">全选</span>
-        </div>
-        <div class="lgui-table-tcont ml20 mt10">
-            <span class="dib lgui-table-detail"></span>
-        </div><br>
-        <div class="tc bte  pt20">
-            <input type="button" value="确认" onclick="setBut()" class="ui-button mr10 w90">
-            <input type="button" onclick="cloTable()" value="取消" class="ui-button w90 cancelBut" data-type="clear">
-        </div>
-        <span class="layui-layer-setwin" onclick="cloTable()"><a
-                class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;"></a></span><span
-            class="layui-layer-resize"></span>
-    </div>
+			<div class="layui-layer-title" style="cursor: move;">自定义表头字段</div>
+			<div class=" mt5 dac dib ml40 mt20">
+				<i class="ui-checkbox goldIcon mr5 vm pct20">
+					<input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+				<span class="">全选</span>
+			</div>
+			<div class="lgui-table-tcont ml20 mt10">
+				<span class="dib lgui-table-detail"></span>
+			</div><br>
+			<div class="tc bte  pt20">
+				<input type="button" value="确认" onclick="setBut()" class="ui-button mr10 w90">
+				<input type="button" onclick="cloTable()" value="取消" class="ui-button w90 cancelBut" data-type="clear">
+			</div>
+			<span class="layui-layer-setwin" onclick="cloTable()"><a class="layui-layer-ico layui-layer-close layui-layer-close1"
+				 href="javascript:;"></a></span><span class="layui-layer-resize"></span>
+		</div>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js//fixScroll/lgBaseFuncBut.js"></script>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js//fixScroll/lgBaseFuncBut.js"></script>
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-        })
+		<script>
+			$(function() {
+				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
+			})
 
-        function showDiv_lrl(obj) {
-            $(obj).parents("tr").next(".hideTr").css("display", "none")
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
-        }
+			function showDiv_lrl(obj) {
+				$(obj).parents("tr").next(".hideTr").css("display", "none")
+				$(obj).parents("tr").next(".hideTr").next(".hideTr1").toggle();
+			}
 
-        function showDiv_lrlHide(obj) {
-            $(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
-        }
+			function showDiv_lrlHide(obj) {
+				$(obj).parents("tr").next(".hideTr").next(".hideTr1").css("display", "none")
+			}
 
-        $(".mySingle span").click(function () {
-            console.log(11)
-            $(this).parents(".mySingle").find("span").removeClass("sbOn")
-            $(this).addClass("sbOn")
-        });
+			$(".mySingle span").click(function() {
+				console.log(11)
+				$(this).parents(".mySingle").find("span").removeClass("sbOn")
+				$(this).addClass("sbOn")
+			});
 
-        function showLayer() {
-            layer.open({
-                type: 2,
-                title: '表头配置',
-                shadeClose: true,
-                shade: 0.4,
-                area: ['600px', '48%'],
-                content: 'summToReadyForTheTrack.html' //iframe的url
-            });
-        }
+			function showLayer() {
+				layer.open({
+					type: 2,
+					title: '表头配置',
+					shadeClose: true,
+					shade: 0.4,
+					area: ['600px', '48%'],
+					content: 'summToReadyForTheTrack.html' //iframe的url
+				});
+			}
+		</script>
 
-    </script>
+		<script>
+			// $(function() {
 
-    <script>
-        $(function () {
-
-            //初始化表格数据
-            var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
-            for (var i = 0; i < 3; i++) {
-                str += str;
-            }
-            $(".lgui-table-body").find("tbody").append(str)
+			// 	//初始化表格数据
+			// 	var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
+			// 	for (var i = 0; i < 3; i++) {
+			// 		str += str;
+			// 	}
+			// 	$(".lgui-table-body").find("tbody").append(str)
 
 
-            //cols 定义显示及权限
-            var mylgColInfo = [{ "name": "ys", "intro": "原始成本金额", "status": false }, { "name": "db", "intro": "短驳费", "status": false }, { "name": "kind", "intro": "仓储费", "status": false }]
+			// 	//cols 定义显示及权限
+			// 	var mylgColInfo = [{
+			// 		"name": "ys",
+			// 		"intro": "原始成本金额",
+			// 		"status": false
+			// 	}, {
+			// 		"name": "db",
+			// 		"intro": "短驳费",
+			// 		"status": false
+			// 	}, {
+			// 		"name": "kind",
+			// 		"intro": "仓储费",
+			// 		"status": false
+			// 	}]
 
-            // lgScrollTable.fixHeader(); //默认".lgui-table-box", ".lgui-table-header", ".lgui-table-body"固定滚动
-            lgScrollTable.choiceCol(mylgColInfo, '.lgui-table-detail', '.lgui-table-box'); //根据表格中列的配置，实现初始化表格
-        })
+			// 	// lgScrollTable.fixHeader(); //默认".lgui-table-box", ".lgui-table-header", ".lgui-table-body"固定滚动
+			// 	lgScrollTable.choiceCol(mylgColInfo, '.lgui-table-detail', '.lgui-table-box'); //根据表格中列的配置，实现初始化表格
+			// })
 
-        function setBut() {
-            //lgui-table-detail 表示选择区域内容class、lgui-table-box表示整个表格部分box，实现点击确认显示不显示；
-            lgScrollTable.seltable('.lgui-table-detail', '.lgui-table-box');
-            cloTable();
-        }
+			function setBut() {
+				//lgui-table-detail 表示选择区域内容class、lgui-table-box表示整个表格部分box，实现点击确认显示不显示；
+				lgScrollTable.seltable('.lgui-table-detail', '.lgui-table-box');
+				cloTable();
+			}
 
-        function setAll(obj) {
-            $(obj).parents("i").toggleClass("on");
-            $(".lgui-table-tItem label").toggleClass("on");
-        }
+			function setAll(obj) {
+				$(obj).parents("i").toggleClass("on");
+				$(".lgui-table-tItem label").toggleClass("on");
+			}
 
-        //展开明细
-        function openDetails(obj) {
-            $(obj).parents(".openTr").next("tr").toggle()
-        }
-
-
-        function showCols() {
-            $(".lgui-table-tcont").toggle();
-        }
-
-        function cloTable(obj) {
-            $(".mu-table").toggleClass("dn");
-            $(".max-mu").toggleClass("dn");
-        }
+			//展开明细
+			function openDetails(obj) {
+				$(obj).parents(".openTr").next("tr").toggle()
+			}
 
 
-    </script>
+			function showCols() {
+				$(".lgui-table-tcont").toggle();
+			}
 
-</body>
+			function cloTable(obj) {
+				$(".mu-table").toggleClass("dn");
+				$(".max-mu").toggleClass("dn");
+			}
+		</script>
+	</body>
 
 </html>

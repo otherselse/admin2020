@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -63,29 +63,29 @@
                                 <div class="mt5 searchLable">加盟加工商：</div>
                                 <div class="dib selectProcName selectSingle gc ml10">
                                     <a class="mb10 on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">互帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">菲菲帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">魏热帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">鲍帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">互帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">哈哈帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-                                    <span class="pr5 mb10 pl5 ">|</span>
+                                    <span class="mb10">|</span>
                                     <a class="mb10" href="javscript:void(0)">菲菲帮</a>
                                 </div>
                                 <a class="dib vt pt2" href="javscript:void(0)" onclick="setOpen(this)"
@@ -172,47 +172,55 @@
                     </tr>
                 </table>
 
-                <table class="ui-table tc f12 checkbox mt20 table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="13%">货主</th>
-                            <th width="12%">出库日期/单号</th>
-                            <th width="12%">入库日期/单号</th>
-                            <th width="9%">品名</th>
-                            <th width="9%">捆包号</th>
-                            <th width="9%">规格</th>
-                            <th width="6%">钢厂</th>
-                            <th width="6%">牌号</th>
-                            <th width="5%">实提数量</th>
-                            <th width="5%">实提重量</th>
-                            <th width="9%">出库人</th>
-                            <th width="8%">仓库</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>上海闳宝闻贸易有限公司</td>
-                            <td>2020-09-11 <br> Out20200911699069 </td>
-                            <td>2020-07-16 <br> </td>
-                            <td>冷轧卷板</td>
-                            <td>2016992806-5</td>
-                            <td>2.000*边丝*C</td>
-                            <td>长江薄板</td>
-                            <td>20</td>
-                            <td>1</td>
-                            <td>2.0</td>
-                            <td>系统代售</td>
-                            <td>华冶B区</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="12">
-                                合计：数量:<span class="red dib mr10">232</span>重量:<span class="red">232</span>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="13%">货主</th>
+								    <th width="12%">出库日期/单号</th>
+								    <th width="12%">入库日期/单号</th>
+								    <th width="9%">品名</th>
+								    <th width="9%">捆包号</th>
+								    <th width="9%">规格</th>
+								    <th width="6%">钢厂</th>
+								    <th width="6%">牌号</th>
+								    <th width="5%">实提数量</th>
+								    <th width="5%">实提重量</th>
+								    <th width="9%">出库人</th>
+								    <th width="8%">仓库</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="13%">上海闳宝闻贸易有限公司</td>
+								    <td width="12%">2020-09-11 <br> Out20200911699069 </td>
+								    <td width="12%">2020-07-16 <br> </td>
+								    <td width="9%">冷轧卷板</td>
+								    <td width="9%">2016992806-5</td>
+								    <td width="9%">2.000*边丝*C</td>
+								    <td width="6%">长江薄板</td>
+								    <td width="6%">20</td>
+								    <td width="5%">1</td>
+								    <td width="5%">2.0</td>
+								    <td width="9%">系统代售</td>
+								    <td width="8%">华冶B区</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="12">
+								        合计：数量:<span class="dib mr10">232</span>重量:<span class="">232</span>
+								    </td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

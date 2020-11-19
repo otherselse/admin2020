@@ -43,7 +43,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -86,23 +86,23 @@
                     <span class="pct30 m_pct31 dib">
                         <span class="searchLable">评审状态：</span>
                         <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">过期</a>
+                            <a href="javscript:void(0)" class="on">过期</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">有效</a>
+                            <a href="javscript:void(0)">有效</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">未评审</a>
+                            <a href="javscript:void(0)">未评审</a>
                         </span>
                     </span>
                     <span class="dib pct30 dac mt5 m_pct31">
                         <span class="searchLable">评审等级：</span>
                         <span class="dib selectSingle">
-                            <a class='' class='' href="javscript:void(0)" class="on">1级</a>
+                            <a href="javscript:void(0)" class="on">1级</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">2级</a>
+                            <a href="javscript:void(0)">2级</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">3级</a>
+                            <a href="javscript:void(0)">3级</a>
                             <span class="">|</span>
-                            <a class='' class='' href="javscript:void(0)">4级</a>
+                            <a href="javscript:void(0)">4级</a>
                         </span>
                         <a href="javascript:void(0)" class="goldIcon icon-info dib  myTipclick-p0" qtip-dom="dom18"></a>
                     </span>
@@ -115,23 +115,23 @@
                     <span class="dib pct30 m_pct31">
                         <span class="searchLable">仓库性质：</span>
                         <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">自有</a>
+                            <a href="javscript:void(0)" class="on">自有</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">租贷</a>
+                            <a href="javscript:void(0)">租贷</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">寄放</a>
+                            <a href="javscript:void(0)">寄放</a>
                         </span>
                     </span>
                     <span>
                         <span class="searchLable">有效期限：</span>
                         <div class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">一个月</a>
+                            <a href="javscript:void(0)" class="on">一个月</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">三个月</a>
+                            <a href="javscript:void(0)">三个月</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">六个月</a>
+                            <a href="javscript:void(0)">六个月</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">十二个月</a>
+                            <a href="javscript:void(0)">十二个月</a>
                         </div>
                     </span>
                 </div>
@@ -161,9 +161,9 @@
                     <span class="dib">
                         <span class="searchLable">单据回收状态：</span>
                         <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">已回收</a>
+                            <a href="javscript:void(0)" class="on">已回收</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">未回收</a>
+                            <a href="javscript:void(0)">未回收</a>
                         </span>
                     </span>
                 </div>
@@ -171,338 +171,347 @@
                     <button type="button" class="ml10 ui-button mr10">查询</button>
                 </div>
 
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="fixTr">
-                            <th width="3%">序号</th>
-                            <th width="3%">区域</th>
-                            <th width="10%" class="tl">
-                                <div class="pl10">
-                                    单位名称
-                                </div>
-                            </th>
-                            <th width=“3%>评审类型</th>
-                            <th width="5%">单据回收</th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    评审通过时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="8%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    评审到期时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <th width="5%">
-                                <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-                                    交易量<i class="goldIcon icon-sort vm ml5 down"></i></label>
-                            </th>
-                            <!--   <th width="6%" >免检状态</th> -->
-                            <th width="7%">评审状态/等级</th>
-                            <th width="5%">实缴金额<br>(万元)</th>
-                            <th width="8%">存量发票额度<br>(万元)</th>
-                            <th width="8%">预付款额度<br>(万元)</th>
-                            <th width="6%">未收发票金额</th>
-                            <th width="6%">预付款金额</th>
-                            <th width="6%">现场评审员</th>
-                            <th width="5%">评审详情</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">上海</td>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="../public/userInfo.html" target="_block"
-                                        class="zxx_text_overflow tiptop dib"
-                                        title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
-                                </div>
-                            </td>
-                            <td>承运商评审</td>
-                            <td><a href="javascript:void(0)" onclick="showTrMore(this)">2/7</a></td>
-                            <td width="6%">2020-09-11</td>
-                            <td width="6%">2020-12-11</td>
-                            <td width="5%">1,675</td>
-                            <td width="5%">有效/1级</td>
-                            <td width="5%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,020,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>-980,000</span>
-                            </td>
-                            <td width="4%">
-                                <a href="../public/goldRegInfo.html" target="_block">徐河若</a>
-                            </td>
-                            <td width="4%">
-                                <span>
-                                    <a href="../public/applyDetail.html" target="_blank" id="step1">查看</a>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="hideTr dn">
-                            <td colspan="16" class="istd">
-                                <div class="pl5 pr5">
-                                    <div class="f14 mb10 mt10 tl b">单据回收</div>
-                                    <div class="bgwh pt20 pl10 pb20 tl">
-                                        <div class="df">
-                                            <div class=" pl10 col-8080" style="width: 7%;">
-                                                单据回收情况：
-                                            </div>
-                                            <div class="pct90 ">
-                                                <span class="checkbox dac myChe lh24">
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>营业执照附件印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>开户许可证复印件</label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label>
-
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>运输合同原件/订舱合同原件</label>
-                                                    </div>
-                                                    <div class="">
-                                                        <label class="mr10"><i
-                                                            class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                type="checkbox" class="checkbox-opacity"
-                                                                name="checkbox"></i>授权书</label><br><br>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="df mt15">
-                                            <div class="pl10 col-8080" style="width: 7%;">备注：</div>
-                                            <div class="f1">
-                                                <textarea class="ui-textarea pct80" rows="2"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="df mt10">
-                                            <div class="pl10 col-8080" style="width: 7%;"></div>
-                                            <div class="f1">
-                                                <button type="button" class=" w90 ui-button ">提交</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="f14 mb10 mt20 tl b">单据回收记录</div>
-                                    <div class="tl ss_con">
-                                        <div class="df ss-conton">
-                                            <div class="pl20 col-8080 f1 ss-top lh45">
-                                                单据回收情况：
-                                            </div>
-                                            <div class="pct15 pl20 g28 ss-top lh45">备注</div>
-                                            <div class="pct15 pl20 g28 ss-top lh45">操作记录</div>
-                                        </div>
-                                        <div class="df ">
-                                            <div class="pl20 col-8080 ss-top f1 pb5" style="background: #fff;">
-                                                <span class="checkbox pt10 dac lh24">
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>营业执照附件印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>开户许可证复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>授权书</label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label><br><br>
-
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>运输合同原件/订舱合同原件</label><br><br>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                            <div class="pct15 pl20 ss-top pt10 g28" style="background: #fff;">
-                                                看我想吃没钱买1
-                                            </div>
-                                            <div class="pct15 pl20 ss-top g28 pt10" style="background: #fff;">
-                                                网无无
-                                                <div>2020-02-12 12:45:02</div>
-                                            </div>
-                                        </div>
-                                        <div class="df">
-                                            <div class="pl20 col-8080 ss-top f1 pb5" style="background: #fff;">
-                                                <span class="checkbox pt10 dac lh24">
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>营业执照附件印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon on v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>开户许可证复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>授权书</label>
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label><br><br>
-
-                                                    </div>
-                                                    <div>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
-                                                        <label class="mr10"><i
-                                                                class="ui-checkbox goldIcon v-3 mr2"><input
-                                                                    type="checkbox" class="checkbox-opacity"
-                                                                    name="checkbox"></i>运输合同原件/订舱合同原件</label><br><br>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                            <div class="pct15 pl20 ss-top pt10 g28" style="background: #fff;">
-                                                看我想吃没钱买1
-                                            </div>
-                                            <div class="pct15 pl20 ss-top g28 pt10" style="background: #fff;">
-                                                网无无
-                                                <div>2020-02-12 12:45:02</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt40"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">上海</td>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="../public/userInfo.html" target="_block"
-                                        class="zxx_text_overflow tiptop dib"
-                                        title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
-                                </div>
-                            </td>
-                            <td>承运商评审</td>
-                            <td><a href="">2/7</a></td>
-                            <td width="6%">2020-09-11</td>
-                            <td width="6%">2020-12-11</td>
-                            <td width="5%">1,675</td>
-                            <td width="5%"><span class="red">有效</span>/1级</td>
-                            <td width="5%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,020,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>-980,000</span>
-                            </td>
-                            <td width="4%">
-                                <a href="javascript:void(0)">徐河若</a>
-                            </td>
-                            <td width="4%">
-                                <span>
-                                    <a href="../public/applyDetail.html" target="_blank" id="step1">查看</a>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">上海</td>
-                            <td class="tl">
-                                <div class="pl10">
-                                    <a href="../public/userInfo.html" target="_block"
-                                        class="zxx_text_overflow tiptop dib"
-                                        title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
-                                </div>
-                            </td>
-                            <td>承运商评审</td>
-                            <td><a href="">2/7</a></td>
-                            <td width="6%">2020-09-11</td>
-                            <td width="6%">2020-12-11</td>
-                            <td width="5%">1,675</td>
-                            <td width="5%"><span class="g13">未评审</span>/1级</td>
-                            <td width="5%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>1,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>2,020,000</span>
-                            </td>
-                            <td width="4%">
-                                <span>-980,000</span>
-                            </td>
-                            <td width="4%">
-                                <a href="javascript:void(0)">徐河若</a>
-                            </td>
-                            <td width="4%">
-                                <span>
-                                    <a href="../public/applyDetail.html" target="_blank" id="step1">查看</a>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+	
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="fixTr">
+								    <th width="3%">序号</th>
+								    <th width="3%">区域</th>
+								    <th width="8%" class="tl">
+								        <div class="pl10">
+								            单位名称
+								        </div>
+								    </th>
+								    <th width="5%">评审类型</th>
+								    <th width="5%">单据回收</th>
+								    <th width="8%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            评审通过时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="8%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            评审到期时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <th width="5%">
+								        <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+								            交易量<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								    </th>
+								    <!--   <th width="6%" >免检状态</th> -->
+								    <th width="7%">评审状态/等级</th>
+								    <th width="5%">实缴金额<br>(万元)</th>
+								    <th width="8%">存量发票额度<br>(万元)</th>
+								    <th width="8%">预付款额度<br>(万元)</th>
+								    <th width="6%">未收发票金额</th>
+								    <th width="6%">预付款金额</th>
+								    <th width="6%">现场评审员</th>
+								    <th width="5%">评审详情</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="3%">上海</td>
+								    <td width="8%" class="tl">
+								        <div class="pl10">
+								            <a href="../public/userInfo.html" target="_block"
+								                class="zxx_text_overflow tiptop dib"
+								                title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
+								        </div>
+								    </td>
+								    <td width="5%">承运商评审</td>
+								    <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">2/7</a></td>
+								    <td width="8%">2020-09-11</td>
+								    <td width="8%">2020-12-11</td>
+								    <td width="5%">1,675</td>
+								    <td width="7%">有效/1级</td>
+								    <td width="5%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>2,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>2,020,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>-980,000</span>
+								    </td>
+								    <td width="6%">
+								        <a href="../public/goldRegInfo.html" target="_block">徐河若</a>
+								    </td>
+								    <td width="5%">
+								        <span>
+								            <a href="../public/applyDetail.html" target="_blank"  >查看</a>
+								        </span>
+								    </td>
+								</tr>
+								<tr class="hideTr dn">
+								    <td colspan="16" class="istd">
+								        <div class="pl5 pr5">
+								            <div class="f14 mb10 mt10 tl b">单据回收</div>
+								            <div class="bgwh pt20 pl10 pb20 tl">
+								                <div class="df">
+								                    <div class=" pl10 col-8080" style="width: 7%;">
+								                        单据回收情况：
+								                    </div>
+								                    <div class="pct90 ">
+								                        <span class="checkbox dac myChe lh24">
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>营业执照附件印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>开户许可证复印件</label>
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label>
+								
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>运输合同原件/订舱合同原件</label>
+								                            </div>
+								                            <div class="">
+								                                <label class="mr10"><i
+								                                    class="ui-checkbox goldIcon v-3 mr2"><input
+								                                        type="checkbox" class="checkbox-opacity"
+								                                        name="checkbox"></i>授权书</label><br><br>
+								                            </div>
+								                        </span>
+								                    </div>
+								                </div>
+								                <div class="df mt15">
+								                    <div class="pl10 col-8080" style="width: 7%;">备注：</div>
+								                    <div class="f1">
+								                        <textarea class="ui-textarea pct80" rows="2"></textarea>
+								                    </div>
+								                </div>
+								                <div class="df mt10">
+								                    <div class="pl10 col-8080" style="width: 7%;"></div>
+								                    <div class="f1">
+								                        <button type="button" class=" w90 ui-button ">提交</button>
+								                    </div>
+								                </div>
+								            </div>
+								            <div class="f14 mb10 mt20 tl b">单据回收记录</div>
+								            <div class="tl ss_con">
+								                <div class="df ss-conton">
+								                    <div class="pl20 col-8080 f1 ss-top lh45">
+								                        单据回收情况：
+								                    </div>
+								                    <div class="pct15 pl20 g28 ss-top lh45">备注</div>
+								                    <div class="pct15 pl20 g28 ss-top lh45">操作记录</div>
+								                </div>
+								                <div class="df ">
+								                    <div class="pl20 col-8080 ss-top f1 pb5" style="background: #fff;">
+								                        <span class="checkbox pt10 dac lh24">
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>营业执照附件印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>开户许可证复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>授权书</label>
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label><br><br>
+								
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>运输合同原件/订舱合同原件</label><br><br>
+								                            </div>
+								                        </span>
+								                    </div>
+								                    <div class="pct15 pl20 ss-top pt10 g28" style="background: #fff;">
+								                        看我想吃没钱买1
+								                    </div>
+								                    <div class="pct15 pl20 ss-top g28 pt10" style="background: #fff;">
+								                        网无无
+								                        <div>2020-02-12 12:45:02</div>
+								                    </div>
+								                </div>
+								                <div class="df">
+								                    <div class="pl20 col-8080 ss-top f1 pb5" style="background: #fff;">
+								                        <span class="checkbox pt10 dac lh24">
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>营业执照附件印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon on v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>开户许可证复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>授权书</label>
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>道路运输经营许可证复印件/货运代理备案表复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>车辆行驶证复印件/无船承运业务经营资格登记证复印件</label><br><br>
+								
+								                            </div>
+								                            <div>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>企业法人身份证正反两面复印件</label><br>
+								                                <label class="mr10"><i
+								                                        class="ui-checkbox goldIcon v-3 mr2"><input
+								                                            type="checkbox" class="checkbox-opacity"
+								                                            name="checkbox"></i>运输合同原件/订舱合同原件</label><br><br>
+								                            </div>
+								                        </span>
+								                    </div>
+								                    <div class="pct15 pl20 ss-top pt10 g28" style="background: #fff;">
+								                        看我想吃没钱买1
+								                    </div>
+								                    <div class="pct15 pl20 ss-top g28 pt10" style="background: #fff;">
+								                        网无无
+								                        <div>2020-02-12 12:45:02</div>
+								                    </div>
+								                </div>
+								            </div>
+								            <div class="mt40"></div>
+								        </div>
+								    </td>
+								</tr>
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="3%">上海</td>
+								    <td width="8%" class="tl">
+								        <div class="pl10">
+								            <a href="../public/userInfo.html" target="_block"
+								                class="zxx_text_overflow tiptop dib"
+								                title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
+								        </div>
+								    </td>
+								    <td width="5%">承运商评审</td>
+								    <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">2/7</a></td>
+								    <td width="8%">2020-09-11</td>
+								    <td width="8%">2020-12-11</td>
+								    <td width="5%">1,675</td>
+								    <td width="7%"><span class="red">有效</span>/1级</td>
+								    <td width="5%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>2,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>2,020,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>-980,000</span>
+								    </td>
+								    <td width="6%">
+								        <a href="../public/goldRegInfo.html" target="_block">徐河若</a>
+								    </td>
+								    <td width="5%">
+								        <span>
+								            <a href="../public/applyDetail.html" target="_blank"  >查看</a>
+								        </span>
+								    </td>
+								</tr>
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="3%">上海</td>
+								    <td width="8%" class="tl">
+								        <div class="pl10">
+								            <a href="../public/userInfo.html" target="_block"
+								                class="zxx_text_overflow tiptop dib"
+								                title="<span class='b'>上海vip客户股份有限公司</span><br/>联系人：杨佳伟<br/>电话：17787856462">上海承供商家股份有限公司上海承供商家股份有限公司</a>
+								        </div>
+								    </td>
+								    <td width="5%">承运商评审</td>
+								    <td width="5%"><a href="javascript:void(0)" onclick="showTrMore(this)">2/7</a></td>
+								    <td width="8%">2020-09-11</td>
+								    <td width="8%">2020-12-11</td>
+								    <td width="5%">1,675</td>
+								    <td width="7%"><span class="g13">未评审</span>/1级</td>
+								    <td width="5%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>2,000</span>
+								    </td>
+								    <td width="8%">
+								        <span>1,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>2,020,000</span>
+								    </td>
+								    <td width="6%">
+								        <span>-980,000</span>
+								    </td>
+								    <td width="6%">
+								        <a href="../public/goldRegInfo.html" target="_block">徐河若</a>
+								    </td>
+								    <td width="5%">
+								        <span>
+								            <a href="../public/applyDetail.html" target="_blank"  >查看</a>
+								        </span>
+								    </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
