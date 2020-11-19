@@ -20,7 +20,7 @@
     </style>
 	</head>
 
-	<body class='showTip report'>
+	<body class="showTip report fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -110,8 +110,8 @@
 					<button type="button" class="ui-button" data-type="clear">清空</button>
 				</div>
 				<div class="lgui-table-box mt30">
-					<div class="lgui-table-body">
-						<table class="ui-table checkbox tc f12 table-cw" width="100%">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
 							<thead>
 								<tr class="fixTr">
 									<th width="4%">
@@ -155,20 +155,24 @@
 									<th width="4%">记录</th>
 								</tr>
 							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body">
+						<table class="ui-table checkbox tc f12 table-cw" width="100%">
 							<tbody class="ui-thover">
 								<tr class="applyLineTr">
-									<td>
+									<td width="4%">
 										<input type="hidden" name="stockList[0].operatorID" value="9218">
 										<input type="hidden" name="stockList[0].operator" value="赵自立">
 										<i class="ui-checkbox goldIcon vm "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
 									</td>
-									<td class="tl">
+									<td width="8%" class="tl">
 										<div class="pl10">
 											<a href="javascript:void(0)" onclick="showStep()">716271</a>
 											<div class="col-8080 mt5 wsn">金牌商家备货</div>
 										</div>
 									</td>
-									<td class="tl">
+									<td width="9%" class="tl">
 										<div class="pl10">
 											<a href="../public/goldRegInfo.html" title="联系方式：19987856462" target="_block" class="b tiptop">唐一菲</a>
 											<div class="mt5 dac">
@@ -178,28 +182,28 @@
 											</div>
 										</div>
 									</td>
-									<td class="tl">
+									<td width="9%" class="tl">
 										<div class="pl10">
 											冷轧卷板/TDX51D AZ
 											<div class="col-8080">11.000*1100*C</div>
 										</div>
 									</td>
-									<td class="tl">
+									<td width="7%" class="tl">
 										<div class="pl10">
 											聚方库-上海
 											<div class="col-8080">2020-08-11</div>
 										</div>
 									</td>
-									<td>沙钢</td>
-									<td>理算</td>
-									<td>12</td>
-									<td>31321</td>
-									<td>4000</td>
-									<td>
+									<td width="4%">沙钢</td>
+									<td width="4%">理算</td>
+									<td width="4%">12</td>
+									<td width="5%">31321</td>
+									<td width="5%">4000</td>
+									<td width="6%">
 										<input type="text" class="ui-input pct90 tc" size="8">
 									</td>
-									<td numtype="formatMoney">4,200</td>
-									<td>
+									<td width="4%" numtype="formatMoney">4,200</td>
+									<td width="4%">
 										<a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
 									</td>
 								</tr>

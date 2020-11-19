@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -83,131 +83,141 @@
                         </td>
                     </tr>
                 </table>
-                <table class="ui-table tc f12 mt20 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="10%">
-                                <div class="pl20"><i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
-                            </th>
-                            <th width="7%">金牌商家</th>
-                            <th width="7%">金牌商家区域</th>
-                            <th width="7%">品名</th>
-                            <th width="8%">计划量</th>
-                            <th width="7%">今日已销售</th>
-                            <th width="8%">上调浮动(%)</th>
-                            <th width="8%">下调浮动(%)</th>
-                            <th width="8%">库存量(吨)</th>
-                            <th width="8%">挂牌量（吨）</th>
-                            <th width="8%">销售状态</th>
-                            <th width="7%">调整详情</th>
-                            <th width="7%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr class="applyLineTr">
-                            <td width="10%">
-                                <i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" ></i>
-                            </td>
-                            <td width="7%">
-								<a href="../public/goldRegInfo.html" target="_block">汤小唯</a>
-							</td>
-                            <td width="7%">上海</td>
-                            <td width="7%">镀锌板材</td>
-                            <td width="8%" class="editTd">
-                                <span >22</span>
-                                <span class="editInfo dn">
-                                    <input type="text" value="22.000" class="ui-input tc pct90 planWeight txtb3">
-                                </span>
-                            </td>
-                            <td width="7%">0</td>
-                            <td width="8%" class="editTd">
-                                <span>1.0</span>
-                                <span class="input-selSearch editInfo pct80" style="display: none;">
-                                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
-                                        autocomplete="off" readonly="">
-                                    <div class="search-cont">
-                                        <a href="javascript:void(0)" class="search-list db ell on">北京</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </td>
-                            <td width="8%" class="editTd">
-                                <span >1.0</span>
-                                <span class="input-selSearch editInfo pct80" style="display: none;">
-                                    <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
-                                        autocomplete="off" readonly="" value="1.0">
-                                    <div class="search-cont">
-                                        <a href="javascript:void(0)" class="search-list db ell on">北京</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                        <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                    </div>
-                                </span>
-                            </td>
-                            <td width="8%">30</td>
-                            <td width="8%" class="editTd">
-                                <span>18</span>
-                                <span class="editInfo" style="display: none;">
-                                    <input type="text" value="22.000" class="ui-input tc pct90 planWeight txtb3">
-                                </span>
-                            </td>
-                            <td width="8%">正常</td>
-                            <td width="7%" class="blue"><a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
-                            </td>
-                            <td width="7%" class="blue"><a href="javascript:void(0)" onclick="setPriceEdit(this)">修改</a>
-                            </td>
-                            <input type="hidden" class="operator" value="汤小唯">
-                            <input type="hidden" class="steName" value="镀锌板材">
-                            <input type="hidden" class="steNameID" value="1505">
-                            <input type="hidden" class="stockWeight" value="30.000">
-                            <input type="hidden" class="operatorID" value="7376">
-                            <input type="hidden" class="steSort" value="涂镀类">
-                            <input type="hidden" class="steSortID" value="101">
-                            <input type="hidden" class="id" value="AF825323A4025FB8E05371001FACA303">
-                        </tr>
-                                            
-                        <!-- 点击执行显示 -->
-                        <tr class="hideTr dn pct100">
-                            <td colspan="23">
-                                <div class="pl20 pr20">
-                                    <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                        <thead>
-                                            <th width="20%">修改时间</th>
-                                            <th width="15%">修改人</th>
-                                            <th width="10%">计划量(吨)</th>
-                                            <th width="20%">上调浮动比例(%)</th>
-                                            <th width="20%">下调浮动比例(%)</th>
-                                            <th width="15%">挂牌量(吨)</th>
-                                        </thead>
-                                        <tbody>
-                                            <td>2020-12-12 12:12:12</td>
-                                            <td>唐玉洁</td>
-                                            <td>1221</td>
-                                            <td>11%</td>
-                                            <td>21%</td>
-                                            <td>1221</td>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr><!-- 隐藏内容end -->
-                    </tbody>
-                    <tfoot>
-                        <tr height="45">
-                            <td colspan="13" class="tr">
-                                <button type="button" class="ui-button mr20 "
-                                onclick="alert('请选择需要调整的定价参数!')">批量锁定</button>
-                            <button type="button" class="ui-button pl10 pr10 ">批量解锁</button>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				<div class="lgui-table-box mt20 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="10%">
+								        <div class="pl20"><i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选</div>
+								    </th>
+								    <th width="7%">金牌商家</th>
+								    <th width="7%">金牌商家区域</th>
+								    <th width="7%">品名</th>
+								    <th width="8%">计划量</th>
+								    <th width="7%">今日已销售</th>
+								    <th width="8%">上调浮动(%)</th>
+								    <th width="8%">下调浮动(%)</th>
+								    <th width="8%">库存量(吨)</th>
+								    <th width="8%">挂牌量（吨）</th>
+								    <th width="8%">销售状态</th>
+								    <th width="7%">调整详情</th>
+								    <th width="7%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr class="applyLineTr">
+								    <td width="10%">
+								        <i class="ui-checkbox goldIcon mr5" ><input type="checkbox" class="checkbox-opacity" name="checkbox" ></i>
+								    </td>
+								    <td width="7%">
+										<a href="../public/goldRegInfo.html" target="_block">汤小唯</a>
+									</td>
+								    <td width="7%">上海</td>
+								    <td width="7%">镀锌板材</td>
+								    <td width="8%" class="editTd">
+								        <span >22</span>
+								        <span class="editInfo dn">
+								            <input type="text" value="22.000" class="ui-input tc pct90 planWeight txtb3">
+								        </span>
+								    </td>
+								    <td width="7%">0</td>
+								    <td width="8%" class="editTd">
+								        <span>1.0</span>
+								        <span class="input-selSearch editInfo pct80" style="display: none;">
+								            <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+								                autocomplete="off" readonly="">
+								            <div class="search-cont">
+								                <a href="javascript:void(0)" class="search-list db ell on">北京</a>
+								                <a href="javascript:void(0)" class="search-list db ell">上海</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								                <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								            </div>
+								        </span>
+								    </td>
+								    <td width="8%" class="editTd">
+								        <span >1.0</span>
+								        <span class="input-selSearch editInfo pct80" style="display: none;">
+								            <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
+								                autocomplete="off" readonly="" value="1.0">
+								            <div class="search-cont">
+								                <a href="javascript:void(0)" class="search-list db ell on">北京</a>
+								                <a href="javascript:void(0)" class="search-list db ell">上海</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								                <a href="javascript:void(0)" class="search-list db ell">杭州</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								            </div>
+								        </span>
+								    </td>
+								    <td width="8%">30</td>
+								    <td width="8%" class="editTd">
+								        <span>18</span>
+								        <span class="editInfo" style="display: none;">
+								            <input type="text" value="22.000" class="ui-input tc pct90 planWeight txtb3">
+								        </span>
+								    </td>
+								    <td width="8%">正常</td>
+								    <td width="7%" class="blue"><a href="javascript:void(0);" onclick="showTrMore(this)">查看</a>
+								    </td>
+								    <td width="7%" class="blue"><a href="javascript:void(0)" onclick="setPriceEdit(this)">修改</a>
+								    </td>
+								    <input type="hidden" class="operator" value="汤小唯">
+								    <input type="hidden" class="steName" value="镀锌板材">
+								    <input type="hidden" class="steNameID" value="1505">
+								    <input type="hidden" class="stockWeight" value="30.000">
+								    <input type="hidden" class="operatorID" value="7376">
+								    <input type="hidden" class="steSort" value="涂镀类">
+								    <input type="hidden" class="steSortID" value="101">
+								    <input type="hidden" class="id" value="AF825323A4025FB8E05371001FACA303">
+								</tr>
+								                    
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn pct100">
+								    <td colspan="23">
+								        <div class="pl20 pr20">
+								            <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+								                <thead>
+								                    <th width="20%">修改时间</th>
+								                    <th width="15%">修改人</th>
+								                    <th width="10%">计划量(吨)</th>
+								                    <th width="20%">上调浮动比例(%)</th>
+								                    <th width="20%">下调浮动比例(%)</th>
+								                    <th width="15%">挂牌量(吨)</th>
+								                </thead>
+								                <tbody>
+								                    <td>2020-12-12 12:12:12</td>
+								                    <td>唐玉洁</td>
+								                    <td>1221</td>
+								                    <td>11%</td>
+								                    <td>21%</td>
+								                    <td>1221</td>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr><!-- 隐藏内容end -->
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="13" class="tr">
+								        <button type="button" class="ui-button mr20 "
+								        onclick="alert('请选择需要调整的定价参数!')">批量锁定</button>
+								    <button type="button" class="ui-button pl10 pr10 ">批量解锁</button>
+								    </td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

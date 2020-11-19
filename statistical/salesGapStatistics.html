@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body class="showTip">
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -60,91 +60,99 @@
                     </span>
                     <button type="button" class="ui-button mr20">查询</button>
                 </div>
-
-                <table class="ui-table tc mt30 f12 table-cw" style="" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="4%">序号</th>
-                            <th width="5%">统计时间</th>
-                            <th width="5%">贸易开票</th>
-                            <th width="5%">加工开票</th>
-                            <th width="5%">无票预估</th>
-                            <th width="5%">销项合计</th>
-                            <th width="5%">内贸登记</th>
-                            <th width="6%">跨月调控</th>
-                            <th width="6%">分红发票</th>
-                            <th width="6%">贸易费用发票</th>
-                            <th width="6%">报销发票</th>
-                            <th width="6%">进项合计</th>
-                            <th width="90">进项转出及调整</th>
-                            <th width="6%">当月缺口</th>
-                            <th width="6%">预计开票</th>
-                            <th width="6%">预计收票</th>
-                            <th width="6%">预计缺口</th>
-                            <th width="4%">记录</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>1</td>
-                            <td><a href="javascript:void(0);" onclick="showLayer()">2019-2</a></td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>70,000</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>40,000</td>
-                            <td>0</td>
-                            <td>
-								<div class="tl pl10 tipclick menuhook onT" qtip-dom="dom1">
-                                    <div class="">
-                                        100000 <img src="../images/report/xiuGai.png" class=" vt ml5 vm altX"
-                                            width="12" height="12" alt="">
-                                    </div>
-                                </div>
-                            </td>
-                            <td>124,203</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>
-                                <a id="i3360" href="javascript:void(0)" onclick="showTrMore(this)">
-                                    <span class="redm">查看</span></a>
-                            </td>
-                        </tr>
-                        <tr class="hideTr dn">
-                            <td colspan="18">
-                                <div class="p20">
-                                    <table class="ui-table  tc f12 auto" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th width="10%">序号</th>
-                                                <th width="15%">操作时间</th>
-                                                <th width="15%">操作人</th>
-                                                <th width="20%">转出前缺口值</th>
-                                                <th width="20%">进项转出及调整</th>
-                                                <th width="20%">转出后缺口值</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>2019-02-21 14:45:08</td>
-                                                <td>李四四</td>
-                                                <td>123566</td>
-                                                <td>111</td>
-                                                <td>123677</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr><!-- 隐藏内容end -->
-                    </tbody>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="4%">序号</th>
+								    <th width="5%">统计时间</th>
+								    <th width="5%">贸易开票</th>
+								    <th width="5%">加工开票</th>
+								    <th width="5%">无票预估</th>
+								    <th width="5%">销项合计</th>
+								    <th width="5%">内贸登记</th>
+								    <th width="6%">跨月调控</th>
+								    <th width="6%">分红发票</th>
+								    <th width="6%">贸易费用发票</th>
+								    <th width="6%">报销发票</th>
+								    <th width="6%">进项合计</th>
+								    <th width="90">进项转出及调整</th>
+								    <th width="6%">当月缺口</th>
+								    <th width="6%">预计开票</th>
+								    <th width="6%">预计收票</th>
+								    <th width="6%">预计缺口</th>
+								    <th width="4%">记录</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="4%">1</td>
+								    <td width="5%"><a href="javascript:void(0);" onclick="showLayer()">2019-2</a></td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">70,000</td>
+								    <td width="5%">0</td>
+								    <td width="5%">0</td>
+								    <td width="6%">0</td>
+								    <td width="6%">0</td>
+								    <td width="6%">0</td>
+								    <td width="6%">40,000</td>
+								    <td width="6%">0</td>
+								    <td width="90">
+										<div class="tl pl10 tipclick menuhook onT" qtip-dom="dom1">
+								            <div class="">
+								                100000 <img src="../images/report/xiuGai.png" class=" vt ml5 vm altX"
+								                    width="12" height="12" alt="">
+								            </div>
+								        </div>
+								    </td>
+								    <td width="6%">124,203</td>
+								    <td width="6%">0</td>
+								    <td width="6%">0</td>
+								    <td width="6%">0</td>
+								    <td width="4%">
+								        <a id="i3360" href="javascript:void(0)" onclick="showTrMore(this)">
+								            <span class="redm">查看</span></a>
+								    </td>
+								</tr>
+								<tr class="hideTr dn">
+								    <td colspan="18">
+								        <div class="p20">
+								            <table class="ui-table  tc f12 auto" width="100%">
+								                <thead>
+								                    <tr>
+								                        <th width="10%">序号</th>
+								                        <th width="15%">操作时间</th>
+								                        <th width="15%">操作人</th>
+								                        <th width="20%">转出前缺口值</th>
+								                        <th width="20%">进项转出及调整</th>
+								                        <th width="20%">转出后缺口值</th>
+								                    </tr>
+								                </thead>
+								                <tbody>
+								                    <tr>
+								                        <td>1</td>
+								                        <td>2019-02-21 14:45:08</td>
+								                        <td>李四四</td>
+								                        <td>123566</td>
+								                        <td>111</td>
+								                        <td>123677</td>
+								                    </tr>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr><!-- 隐藏内容end -->
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

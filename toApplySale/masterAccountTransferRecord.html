@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<body class='showTip'>
+<body class='showTip fixtab'>
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -63,39 +63,47 @@
                         </span>
                         <button type="button" class="ui-button ">查询</button>
                     </div>
-
                 </div>
-                <table class="ui-table tc mt30 f12" width="100%">
-                    <thead>
-                        <tr class="n17-Ttitle2">
-                            <th width="5%">序号</th>
-                            <th width="10%">申请时间</th>
-                            <th width="15%">单位名称</th>
-                            <th width="15%">原主账号</th>
-                            <th width="10%">申请人</th>
-                            <th width="15%">新主账号</th>
-                            <th width="10%">确认人</th>
-                            <th width="10%">变更授权受托书</th>
-                            <th width="10%">确认时间</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover">
-                        <tr>
-                            <td>1</td>
-                            <td>2020-08-26 20:02:32</td>
-                            <td>上海柒柒贸易有限公司</td>
-                            <td>17700010001</td>
-                            <td>朱柒柒</td>
-                            <td>17700010002</td>
-                            <td>朱小二</td>
-                            <td>
-                                <a href="/LgAdmin/applyCustMapAction_tranferAuthorBook.action?mobile=17700010001&amp;oldMobile=17700010002&amp;okTime=2020-08-26 20:03:25"
-                                    target="_blank" style="color:blue">查看</a>
-                            </td>
-                            <td>2020-08-26 20:03:25</td>
-                        </tr>
-                    </tbody>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="n17-Ttitle2">
+								    <th width="5%">序号</th>
+								    <th width="10%">申请时间</th>
+								    <th width="15%">单位名称</th>
+								    <th width="15%">原主账号</th>
+								    <th width="10%">申请人</th>
+								    <th width="15%">新主账号</th>
+								    <th width="10%">确认人</th>
+								    <th width="10%">变更授权受托书</th>
+								    <th width="10%">确认时间</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="5%">1</td>
+								    <td width="10%">2020-08-26 20:02:32</td>
+								    <td width="15%">上海柒柒贸易有限公司</td>
+								    <td width="15%">17700010001</td>
+								    <td width="10%">朱柒柒</td>
+								    <td width="15%">17700010002</td>
+								    <td width="10%">朱小二</td>
+								    <td width="10%">
+								        <a href="/LgAdmin/applyCustMapAction_tranferAuthorBook.action?mobile=17700010001&amp;oldMobile=17700010002&amp;okTime=2020-08-26 20:03:25"
+								            target="_blank" style="color:blue">查看</a>
+								    </td>
+								    <td width="10%">2020-08-26 20:03:25</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

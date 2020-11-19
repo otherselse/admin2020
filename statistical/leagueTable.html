@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<body class="showTip">
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -74,70 +74,78 @@
                 </div>
 
                 <div class="mb10 f14 g28 b mt10"><span class="jqShow">今日</span>销采量统计</div>
-                <table class="ui-table tc f12" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="n17-Ttitle2">
-                            <th width="6%">排名</th>
-                            <th width="6%">区域</th>
-                            <th width="7%">帮主</th>
-                            <th width="9%">销售(吨)</th>
-                            <th width="9%">采购量(吨)</th>
-                            <th width="9%">库存量(吨)</th>
-                            <th width="9%">
-                                <span class="menuhook" onclick="setUp(this)">
-                                    销售金额(元)<span class="dib xia ml5"></span>
-                                </span>
-                            </th>
-                            <th width="9%">
-                                <span class="menuhook" onclick="setUp(this)">
-                                    采购金额(元)<span class="dib xia ml5"></span>
-                                </span>
-                            </th>
-                            <th width="9%">收款重量(吨)</th>
-                            <th width="9%">付款重量(吨)</th>
-                            <th width="9%">
-                                <span class="menuhook" onclick="setUp(this)">
-                                    收款金额(元)<span class="dib xia ml5"></span>
-                                </span>
-                            </th>
-                            <th width="9%">
-                                <span class="menuhook" onclick="setUp(this)">
-                                    付款金额(元)<span class="dib xia ml5"></span>
-                                </span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="bgwh" class="ui-thover">
-                        <tr>
-                            <td>第1名</td>
-                            <td>696帮</td>
-                            <td>诸葛小芸</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr height="45">
-                            <td colspan="3">汇总</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </tfoot>
-                </table>
+				<div class="lgui-table-box mt10 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="n17-Ttitle2">
+									<th width="6%">排名</th>
+									<th width="6%">区域</th>
+									<th width="7%">帮主</th>
+									<th width="9%">销售(吨)</th>
+									<th width="9%">采购量(吨)</th>
+									<th width="9%">库存量(吨)</th>
+									<th width="9%">
+										<span class="menuhook" onclick="setUp(this)">
+											销售金额(元)<span class="dib xia ml5"></span>
+										</span>
+									</th>
+									<th width="9%">
+										<span class="menuhook" onclick="setUp(this)">
+											采购金额(元)<span class="dib xia ml5"></span>
+										</span>
+									</th>
+									<th width="9%">收款重量(吨)</th>
+									<th width="9%">付款重量(吨)</th>
+									<th width="9%">
+										<span class="menuhook" onclick="setUp(this)">
+											收款金额(元)<span class="dib xia ml5"></span>
+										</span>
+									</th>
+									<th width="9%">
+										<span class="menuhook" onclick="setUp(this)">
+											付款金额(元)<span class="dib xia ml5"></span>
+										</span>
+									</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="6%">第1名</td>
+								    <td width="6%">696帮</td>
+								    <td width="7%">诸葛小芸</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="3">汇总</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

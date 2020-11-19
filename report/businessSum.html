@@ -24,7 +24,7 @@
 
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -65,112 +65,122 @@
                             class="render-month" readonly=""></span>
                     <button type="button" class="ui-button">查询</button>
                 </div>
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="4%">项目</th>
-                            <th width="6%" class="blue"><a
-                                    href="featureItemZone.html">贸易</a>
-                            </th>
-                            <th width="6%" class="blue"><a
-                                    href="featureItemZone.html">加工</a>
-                            </th>
-                            <th width="6%">调整</th>
-                            <th width="6%">集团</th>
-                            <th width="6%">合计</th>
-                            <th width="6%">贸易环比</th>
-                            <th width="6%">加工环比</th>
-                            <th width="6%">合计环比</th>
-                            <th width="6%">贸易同比</th>
-                            <th width="6%">加工同比</th>
-                            <th width="6%">合计同比</th>
-                            <th width="6%" class="blue"><a
-                                    href="featureItemZone.html">贸易合计</a>
-                            </th>
-                            <th width="6%" class="blue"><a
-                                    href="featureItemZone.html">加工合计</a>
-                            </th>
-                            <th width="6%">集团合计</th>
-                            <th width="6%">调整合计</th>
-                            <th width="6%">合计</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr class="">
-                            <td width="4%"><strong><a href="javascript:void(0);" onclick="showTrMore(this)"
-                                        style="color:#317EE7" data="1" featureyear="2019" featuremonth="1">
-                                        收入</a></strong></td>
-                            <td width="6%" numtype="formatMoney">2,006</td>
-                            <td width="6%" numtype="formatMoney">1,000</td>
-                            <td width="6%" numtype="formatMoney">0</td>
-                            <td width="6%" numtype="formatMoney">0</td>
-                            <td width="6%" numtype="formatMoney">3,006</td>
-                            <td>-0.01%<img src="/LgAdmin/images/green-arrow.png"></td>
-                            <td>-0.008%<img src="/LgAdmin/images/green-arrow.png"> </td>
-                            <td>-0.01%<img src="/LgAdmin/images/green-arrow.png">
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td width="6%" numtype="formatMoney">13,834,339.48</td>
-                            <td width="6%" numtype="formatMoney">2,299</td>
-                            <td width="6%" numtype="formatMoney">1</td>
-                            <td width="6%" numtype="formatMoney">101</td>
-                            <td width="6%" numtype="formatMoney">13,836,740.48</td>
-                        </tr>
-                        <!-- 点击执行显示 -->
-                        <tr class="hideTr dn">
-                            <td colspan="17">
-                                <div class="pl20 pr20">
-                                    <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th width="4%">科目</th>
-                                                <th width="6%">贸易</th>
-                                                <th width="6%">加工</th>
-                                                <th width="6%">调整</th>
-                                                <th width="6%">集团</th>
-                                                <th width="6%">合计</th>
-                                                <th width="6%">贸易环比</th>
-                                                <th width="6%">加工环比</th>
-                                                <th width="6%">合计环比</th>
-                                                <th width="6%">贸易同比</th>
-                                                <th width="6%">加工同比</th>
-                                                <th width="6%">合计同比</th>
-                                                <th width="6%">贸易累计</th>
-                                                <th width="6%">加工累计</th>
-                                                <th width="6%">调整累计</th>
-                                                <th width="6%">集团累计</th>
-                                                <th width="6%">合计</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="ui-thover">
-                                            <tr>
-                                                <td><strong>贸易类收入</td>
-                                                <td>2001.0</td>
-                                                <td>1000.0</td>
-                                                <td>0.0</td>
-                                                <td>0.0</td>
-                                                <td>3001.0</td>
-                                                <td> -0.01% <img src="/LgAdmin/images/green-arrow.png"></td>
-                                                <td>0.04% <img src="/LgAdmin/images/orange-arrow.png"></td>
-                                                <td> -0.01% <img src="/LgAdmin/images/green-arrow.png"> </td>
-                                                <td> 0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>21562755.98</td>
-                                                <td>1200.0</td>
-                                                <td>1.0</td>
-                                                <td>101.0</td>
-                                                <td>21564057.98</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+				
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="4%">项目</th>
+								    <th width="6%" class="blue"><a
+								            href="featureItemZone.html">贸易</a>
+								    </th>
+								    <th width="6%" class="blue"><a
+								            href="featureItemZone.html">加工</a>
+								    </th>
+								    <th width="6%">调整</th>
+								    <th width="6%">集团</th>
+								    <th width="6%">合计</th>
+								    <th width="6%">贸易环比</th>
+								    <th width="6%">加工环比</th>
+								    <th width="6%">合计环比</th>
+								    <th width="6%">贸易同比</th>
+								    <th width="6%">加工同比</th>
+								    <th width="6%">合计同比</th>
+								    <th width="6%" class="blue"><a
+								            href="featureItemZone.html">贸易合计</a>
+								    </th>
+								    <th width="6%" class="blue"><a
+								            href="featureItemZone.html">加工合计</a>
+								    </th>
+								    <th width="6%">集团合计</th>
+								    <th width="6%">调整合计</th>
+								    <th width="6%">合计</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr class="">
+								    <td width="4%"><strong><a href="javascript:void(0);" onclick="showTrMore(this)"
+								                style="color:#317EE7" data="1" featureyear="2019" featuremonth="1">
+								                收入</a></strong></td>
+								    <td width="6%" numtype="formatMoney">2,006</td>
+								    <td width="6%" numtype="formatMoney">1,000</td>
+								    <td width="6%" numtype="formatMoney">0</td>
+								    <td width="6%" numtype="formatMoney">0</td>
+								    <td width="6%" numtype="formatMoney">3,006</td>
+								    <td>-0.01%<img src="/LgAdmin/images/green-arrow.png"></td>
+								    <td>-0.008%<img src="/LgAdmin/images/green-arrow.png"> </td>
+								    <td>-0.01%<img src="/LgAdmin/images/green-arrow.png">
+								    </td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td>0</td>
+								    <td width="6%" numtype="formatMoney">13,834,339.48</td>
+								    <td width="6%" numtype="formatMoney">2,299</td>
+								    <td width="6%" numtype="formatMoney">1</td>
+								    <td width="6%" numtype="formatMoney">101</td>
+								    <td width="6%" numtype="formatMoney">13,836,740.48</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+								    <td colspan="17">
+								        <div class="pl20 pr20">
+								            <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+								                <thead>
+								                    <tr>
+								                        <th width="4%">科目</th>
+								                        <th width="6%">贸易</th>
+								                        <th width="6%">加工</th>
+								                        <th width="6%">调整</th>
+								                        <th width="6%">集团</th>
+								                        <th width="6%">合计</th>
+								                        <th width="6%">贸易环比</th>
+								                        <th width="6%">加工环比</th>
+								                        <th width="6%">合计环比</th>
+								                        <th width="6%">贸易同比</th>
+								                        <th width="6%">加工同比</th>
+								                        <th width="6%">合计同比</th>
+								                        <th width="6%">贸易累计</th>
+								                        <th width="6%">加工累计</th>
+								                        <th width="6%">调整累计</th>
+								                        <th width="6%">集团累计</th>
+								                        <th width="6%">合计</th>
+								                    </tr>
+								                </thead>
+								                <tbody class="ui-thover">
+								                    <tr>
+								                        <td><strong>贸易类收入</td>
+								                        <td>2001.0</td>
+								                        <td>1000.0</td>
+								                        <td>0.0</td>
+								                        <td>0.0</td>
+								                        <td>3001.0</td>
+								                        <td> -0.01% <img src="/LgAdmin/images/green-arrow.png"></td>
+								                        <td>0.04% <img src="/LgAdmin/images/orange-arrow.png"></td>
+								                        <td> -0.01% <img src="/LgAdmin/images/green-arrow.png"> </td>
+								                        <td> 0</td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>21562755.98</td>
+								                        <td>1200.0</td>
+								                        <td>1.0</td>
+								                        <td>101.0</td>
+								                        <td>21564057.98</td>
+								                    </tr>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
             </div>
             <!-- table end -->
             <script type="text/javascript" src="../js/pagelist.js"></script>

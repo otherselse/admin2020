@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<body class='showTip'>
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -92,40 +92,49 @@
                 <div class="tc mt20">
                     <button type="button" class="ui-button ">查询</button>
                 </div>
-                <table class="ui-table tc mt30 f12" width="100%">
-                    <thead>
-                        <tr>
-                            <th width="6%">序号</th>
-                            <th width="15%">预审时间</th>
-                            <th width="6%">申请人</th>
-                            <th width="15%">公司名称</th>
-                            <th width="10%"><label class="sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">注册资本(万元)<i
-                                        class="goldIcon icon-sort vm ml5 up"></i></label></th>
-                            <th width="10%"><label class="sort-list dib poi"
-                                    onclick="setOrderCol('a.inDate',this)">实缴资本(万元)<i
-                                        class="goldIcon icon-sort vm ml5 up"></i></label></th>
-                            <th width="20%">所属行业</th>
-                            <th width="10%">所在地区</th>
-                            <th width="8%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover">
-                        <tr height="50px">
-                            <td>1</td>
-                            <td>2020-09-03 </td>
-                            <td>李思思</td>
-                            <td>上海陆陆科技有限公司<span class="red"></span></td>
-                            <td>13132121</td>
-                            <td>11333313131</td>
-                            <td><span class="dib zxx_text_overflow">小去买菜吸欧气扯我像前面下面齐抹茶没请完成卖外面</span></td>
-                            <td>北京/北京市</td>
-                            <td>
-                                <a href="unitBudgetReview.html" class="hoverBlue">查看</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="6%">序号</th>
+								    <th width="15%">预审时间</th>
+								    <th width="6%">申请人</th>
+								    <th width="15%">公司名称</th>
+								    <th width="10%"><label class="sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">注册资本(万元)<i
+								                class="goldIcon icon-sort vm ml5 up"></i></label></th>
+								    <th width="10%"><label class="sort-list dib poi"
+								            onclick="setOrderCol('a.inDate',this)">实缴资本(万元)<i
+								                class="goldIcon icon-sort vm ml5 up"></i></label></th>
+								    <th width="20%">所属行业</th>
+								    <th width="10%">所在地区</th>
+								    <th width="8%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr height="50px">
+								    <td width="6%">1</td>
+								    <td width="15%">2020-09-03 </td>
+								    <td width="6%">李思思</td>
+								    <td width="15%">上海陆陆科技有限公司<span class="red"></span></td>
+								    <td width="10%">13132121</td>
+								    <td width="10%">11333313131</td>
+								    <td width="20%"><span class="dib zxx_text_overflow">小去买菜吸欧气扯我像前面下面齐抹茶没请完成卖外面</span></td>
+								    <td width="10%">北京/北京市</td>
+								    <td width="8%">
+								        <a href="unitBudgetReview.html" class="hoverBlue">查看</a>
+								    </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

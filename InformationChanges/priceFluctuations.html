@@ -32,7 +32,7 @@
 		</style>
 	</head>
 
-	<body class='showTip report'>
+	<body class="showTip report fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -68,18 +68,31 @@
 					<span class="dib selectSingle">
 						<a class=" on" href="javscript:void(0)">上海</a>
 						<span class="">|</span>
-						<a class="" href="javscript:void(0)">天津</a>
+						<a href="javscript:void(0)">天津</a>
 						<span class="">|</span>
-						<a class="" href="javscript:void(0)">宁波</a>
+						<a href="javscript:void(0)">宁波</a>
 						<span class="">|</span>
-						<a class="" href="javscript:void(0)">杭州</a>
+						<a href="javscript:void(0)">杭州</a>
 						<span class="">|</span>
-						<a class="" href="javscript:void(0)">广州</a>
+						<a href="javscript:void(0)">广州</a>
 					</span>
 				</div>
+				<div class="lgui-table-box mt30 checkbox">
+					
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								
+							</tbody>
+							<tfoot class="bgfa">
+								
+							</tfoot>
+						</table>
+					</div>
+				</div>
 				<div class="lgui-table-box mt30">
-					<div class="lgui-table-body">
-						<table class="ui-table checkbox tc f12 table-cw" width="100%">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
 							<thead>
 								<tr>
 									<th width="5%">
@@ -104,39 +117,43 @@
 									<th width="5%">记录</th>
 								</tr>
 							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body">
+						<table class="ui-table checkbox tc f12 table-cw" width="100%">
 							<tbody class="ui-thover">
 								<tr class="applyLineTr">
-									<td>
+									<td width="5%">
 										<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
 									</td>
-									<td>2020-08-19 16:56:03</td>
-									<td class="tl">
+									<td width="12%">2020-08-19 16:56:03</td>
+									<td width="11%" class="tl">
 										<div class="pl10">徐河若/上海</div>
 									</td>
-									<td>镀铝板材</td>
-									<td>11.000*800*C</td>
-									<td>45#</td>
-									<td>鞍钢</td>
-									<td>4,000</td>
+									<td width="5%">镀铝板材</td>
+									<td width="10%">11.000*800*C</td>
+									<td width="5%">45#</td>
+									<td width="5%">鞍钢</td>
+									<td width="6%">4,000</td>
 								<!-- 	<td>
 										<span class="tiptop menuhook g13" title="提交时间：2020-09-22 09:23:2<br/>提交人：李四四">1,200</span>
 									</td> -->
-									<td>
+									<td width="8%">
 										<span class="tiptop menuhook " title="提交时间：2020-09-22 09:23:2<br/>提交人：李四四">1,200</span>
 									</td>
-									<td>
+									<td width="8%">
 										<!-- <input type="text" class="ui-input pct90" size="8" placeholder="请输入"> -->
 										<div class="tipclick daj menuhook" qtip-dom="dom1">
 											100000 <i class="menuhook mb5 modify-icon ml10"></i>
 										</div>
 									</td>
-									<td>
+									<td width="6%">
 										已定价
 									</td>
-									<td>
+									<td width="6%">
 										热销资源
 									</td>
-									<td>
+									<td width="5%">
 										<!-- onclick="showTrMore(this)" -->
 										<a href="javascript:void(0);" class="tipclick" qtip-dom="dom3">
 											查看

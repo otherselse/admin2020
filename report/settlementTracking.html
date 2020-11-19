@@ -22,7 +22,7 @@
     </style>
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -71,13 +71,13 @@
                     <span class="f1 dib">
                         <span class="searchLable">评审状态：</span>
                         <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">未结算</a>
+                            <a href="javscript:void(0)" class="on">未结算</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">可结算</a>
+                            <a href="javscript:void(0)">可结算</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">结算中</a>
+                            <a href="javscript:void(0)">结算中</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">已结算</a>
+                            <a href="javscript:void(0)">已结算</a>
                         </span>
                     </span>
                 </div>
@@ -97,13 +97,13 @@
                     <span class="f1 dib">
                         <span class="searchLable">订单类型：</span>
                         <span class="dib selectSingle">
-                            <a class='' href="javscript:void(0)" class="on">快速备</a>
+                            <a href="javscript:void(0)" class="on">快速备</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">任你押</a>
+                            <a href="javscript:void(0)">任你押</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">VIP业务</a>
+                            <a href="javscript:void(0)">VIP业务</a>
                             <span class="">|</span>
-                            <a class='' href="javscript:void(0)">外贸</a>
+                            <a href="javscript:void(0)">外贸</a>
                         </span>
                     </span>
                 </div>
@@ -122,175 +122,184 @@
                 <span class="ui-tip mt30">
                     温馨提示：余额在申请结算前均可享受G2G收益。
                 </span>
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="3%">序号</th>
-                            <th width="4%">订单号</th>
-                            <th width="4%">区域</th>
-                            <th width="5%">订单类型</th>
-                            <th width="7%">单位名称</th>
-                            <th width="5%">合同金额</th>
-                            <th width="5%">资金占用利息</th>
-                            <th width="7%">首次支付时间</th>
-                            <th width="5%">支付金额</th>
-                            <th width="7%">预计回款时间</th>
-                            <th width="6%">已回款金额</th>
-                            <th width="6%">回款超期天数</th>
-                            <th width="6%">G2G结算收益</th>
-                            <th width="5%">已结算金额</th>
-                            <th width="5%">未结算金额</th>
-                            <th width="5%">已转货金额</th>
-                            <th width="5%">可结算金额</th>
-                            <th width="5%">结算时间</th>
-                            <th width="5%">详情</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="3%">1</td>
-                            <td width="4%">61003</td>
-                            <td width="4%">上海</td>
-                            <td width="5%">快速备</td>
-                            <td width="7%"><a href="javascript:void(0)" class="zxx_text_90 dib" title="上海乐刚供应链股份有限公司">上海乐刚供应链股份有限公司</a></td>
-                            <td width="5%">50,000</td>
-                            <td width="5%">0</td>
-                            <td width="7%">2020-08-22</td>
-                            <td width="5%">50,000</td>
-                            <td width="7%">2020-08-22</td>
-                            <td width="6%">0</td>
-                            <td width="6%">18</td>
-                            <td width="6%">0</td>
-                            <td width="5%">0</td>
-                            <td width="5%">50,000</td>
-                            <td width="5%">0</td>
-                            <td width="5%">50,000</td>
-                            <td width="5%">--</td>
-                            <td width="5%" class="redm">
-                                <a href="javascript:void(0);" onclick="showTrMore(this)">查看</a></td>
-                        </tr>
-                        <tr class="hideTr dn">
-                            <td colspan="28">
-                                <div class="pl20 pr20">
-                                    <table class="ui-table  f12  auto  mt10 mb10" width="100%">
-                                        <thead>
-                                            <tr class="tablebthb">
-                                                <th width="8%">序号</th>
-                                                <th width="8%">订单号</th>
-                                                <th width="12%">采购合同号</th>
-                                                <th width="12%">付款时间</th>
-                                                <th width="10%">付款金额</th>
-                                                <th width="10%">G2G收益</th>
-                                                <th width="10%">已结算金额</th>
-                                                <th width="10%">已转货物金额</th>
-                                                <th width="10%">剩余结算金额</th>
-                                                <th width="10%">订单详情</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tablebtdb">
-                                                <td>1</td>
-                                                <td>61003</td>
-                                                <td>DDC(22)-20001548</td>
-                                                <td>2020-08-22</td>
-                                                <td>50000</td>
-                                                <td class="redm">
-                                                    <a href="javascript:void(0);" onclick="showLayer(this)">0</a>
-                                                </td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>50000</td>
-                                                <td>
-                                                    <!-- 定位到财务管理-付款-订单详情  -->
-                                                    <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hideTr dn">
-                                                <td colspan="10">
-                                                    <div class="p20">
-                                                        <table class="ui-table  f12 row auto  mt10 mb10" width="100%">
-                                                            <tr >
-                                                                <td class="title" width="13.3%">订单号：</td>
-                                                                <td class="cont" width="20%">2133</td>
-                                                                <td class="title" width="13.3%">供应商：</td>
-                                                                <td class="cont" width="20%">2029</td>
-                                                                <td class="title" width="13.3%">业务类型：</td>
-                                                                <td class="cont" width="20%">-06</td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td class="title" width="13.3%">合同重量(吨)：</td>
-                                                                <td class="cont" width="20%">2133</td>
-                                                                <td class="title" width="13.3%">已入库重量(吨)：</td>
-                                                                <td class="cont" width="20%">2029</td>
-                                                                <td class="title" width="13.3%">合同金额(元)：</td>
-                                                                <td class="cont" width="20%">-06</td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td class="title" width="13.3%">采购合同：</td>
-                                                                <td class="cont" width="20%"><a href="http://116.228.150.225:6889/frontCenter/supplierApplyAction_purConDetailAdmin.action?tempPurContractMain.id=6C4D9D43267859F0E05371001FACD575" target="_block">查看</a></td>
-                                                                <td class="title" width="13.3%">采购审批记录：</td>
-                                                                <!-- 跳转审批管理-付款类申请审批 -->
-                                                                <td class="cont" width="20%"><a href="">查看</a></td>
-                                                                <td class="title" width="13.3%">付款申请审批记录：</td>
-                                                                <td class="cont" width="20%"><a href="">查看</a></td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td class="title" width="13.3%">销售合同：</td>
-                                                                <td class="cont" width="20%">无</td>
-                                                                <td class="title" width="13.3%">销售审批记录：</td>
-                                                                <td class="cont" width="20%">无</td>
-                                                                <td class="title" width="13.3%">预计回款时间：</td>
-                                                                <td class="cont" width="20%">-06</td>
-                                                            </tr>
-                                                            <tr >
-                                                                <td class="title" width="13.3%">本次付款金额：</td>
-                                                                <td class="cont" width="20%">2133</td>
-                                                                <td class="title" width="13.3%">G2G共融共享货款支付 申请单：</td>
-                                                                <td class="cont" width="20%">2029</td>
-                                                                <td class="cont bgwh" width="20%" colspan="4">
-                                                                    <div class="dac">
-                                                                        <a href="http://116.228.150.225:6889/front/indexAction_capitalPrint.action?applyCapital.id=6C4DFC3F78175A82E05371001FAC39A8" target="_block" class="mr20">查看</a>
-                                                                        <a href="http://116.228.150.225:6889/LgAdmin/finance/ggxy.action" target="_block">《G2G共融共享协议》</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="19">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">当前页合计：</div>
-                                    <div class="tl">
-                                        资金占用利息:<span class="red mr10">10</span>
-                                        首次支付时间:<span class="red mr10">1.000</span>
-                                        支付金额:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="19">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">所有页合计：</div>
-                                    <div class="tl">
-                                        资金占用利息:<span class="red mr10">10</span>
-                                        首次支付时间:<span class="red mr10">1.000</span>
-                                        支付金额:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				<div class="lgui-table-box mt20 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="3%">序号</th>
+								    <th width="4%">订单号</th>
+								    <th width="4%">区域</th>
+								    <th width="5%">订单类型</th>
+								    <th width="7%">单位名称</th>
+								    <th width="5%">合同金额</th>
+								    <th width="5%">资金占用利息</th>
+								    <th width="7%">首次支付时间</th>
+								    <th width="5%">支付金额</th>
+								    <th width="7%">预计回款时间</th>
+								    <th width="6%">已回款金额</th>
+								    <th width="6%">回款超期天数</th>
+								    <th width="6%">G2G结算收益</th>
+								    <th width="5%">已结算金额</th>
+								    <th width="5%">未结算金额</th>
+								    <th width="5%">已转货金额</th>
+								    <th width="5%">可结算金额</th>
+								    <th width="5%">结算时间</th>
+								    <th width="5%">详情</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="3%">1</td>
+								    <td width="4%">61003</td>
+								    <td width="4%">上海</td>
+								    <td width="5%">快速备</td>
+								    <td width="7%"><a href="javascript:void(0)" class="zxx_text_90 dib" title="上海乐刚供应链股份有限公司">上海乐刚供应链股份有限公司</a></td>
+								    <td width="5%">50,000</td>
+								    <td width="5%">0</td>
+								    <td width="7%">2020-08-22</td>
+								    <td width="5%">50,000</td>
+								    <td width="7%">2020-08-22</td>
+								    <td width="6%">0</td>
+								    <td width="6%">18</td>
+								    <td width="6%">0</td>
+								    <td width="5%">0</td>
+								    <td width="5%">50,000</td>
+								    <td width="5%">0</td>
+								    <td width="5%">50,000</td>
+								    <td width="5%">--</td>
+								    <td width="5%" class="redm">
+								        <a href="javascript:void(0);" onclick="showTrMore(this)">查看</a></td>
+								</tr>
+								<tr class="hideTr dn">
+								    <td colspan="28">
+								        <div class="pl20 pr20">
+								            <table class="ui-table  f12  auto  mt10 mb10" width="100%">
+								                <thead>
+								                    <tr class="tablebthb">
+								                        <th width="8%">序号</th>
+								                        <th width="8%">订单号</th>
+								                        <th width="12%">采购合同号</th>
+								                        <th width="12%">付款时间</th>
+								                        <th width="10%">付款金额</th>
+								                        <th width="10%">G2G收益</th>
+								                        <th width="10%">已结算金额</th>
+								                        <th width="10%">已转货物金额</th>
+								                        <th width="10%">剩余结算金额</th>
+								                        <th width="10%">订单详情</th>
+								                    </tr>
+								                </thead>
+								                <tbody>
+								                    <tr class="tablebtdb">
+								                        <td>1</td>
+								                        <td>61003</td>
+								                        <td>DDC(22)-20001548</td>
+								                        <td>2020-08-22</td>
+								                        <td>50000</td>
+								                        <td class="redm">
+								                            <a href="javascript:void(0);" onclick="showLayer(this)">0</a>
+								                        </td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>50000</td>
+								                        <td>
+								                            <!-- 定位到财务管理-付款-订单详情  -->
+								                            <a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
+								                        </td>
+								                    </tr>
+								                    <tr class="hideTr dn">
+								                        <td colspan="10">
+								                            <div class="p20">
+								                                <table class="ui-table  f12 row auto  mt10 mb10" width="100%">
+								                                    <tr >
+								                                        <td class="title" width="13.3%">订单号：</td>
+								                                        <td class="cont" width="20%">2133</td>
+								                                        <td class="title" width="13.3%">供应商：</td>
+								                                        <td class="cont" width="20%">2029</td>
+								                                        <td class="title" width="13.3%">业务类型：</td>
+								                                        <td class="cont" width="20%">-06</td>
+								                                    </tr>
+								                                    <tr >
+								                                        <td class="title" width="13.3%">合同重量(吨)：</td>
+								                                        <td class="cont" width="20%">2133</td>
+								                                        <td class="title" width="13.3%">已入库重量(吨)：</td>
+								                                        <td class="cont" width="20%">2029</td>
+								                                        <td class="title" width="13.3%">合同金额(元)：</td>
+								                                        <td class="cont" width="20%">-06</td>
+								                                    </tr>
+								                                    <tr >
+								                                        <td class="title" width="13.3%">采购合同：</td>
+								                                        <td class="cont" width="20%"><a href="http://116.228.150.225:6889/frontCenter/supplierApplyAction_purConDetailAdmin.action?tempPurContractMain.id=6C4D9D43267859F0E05371001FACD575" target="_block">查看</a></td>
+								                                        <td class="title" width="13.3%">采购审批记录：</td>
+								                                        <!-- 跳转审批管理-付款类申请审批 -->
+								                                        <td class="cont" width="20%"><a href="">查看</a></td>
+								                                        <td class="title" width="13.3%">付款申请审批记录：</td>
+								                                        <td class="cont" width="20%"><a href="">查看</a></td>
+								                                    </tr>
+								                                    <tr >
+								                                        <td class="title" width="13.3%">销售合同：</td>
+								                                        <td class="cont" width="20%">无</td>
+								                                        <td class="title" width="13.3%">销售审批记录：</td>
+								                                        <td class="cont" width="20%">无</td>
+								                                        <td class="title" width="13.3%">预计回款时间：</td>
+								                                        <td class="cont" width="20%">-06</td>
+								                                    </tr>
+								                                    <tr >
+								                                        <td class="title" width="13.3%">本次付款金额：</td>
+								                                        <td class="cont" width="20%">2133</td>
+								                                        <td class="title" width="13.3%">G2G共融共享货款支付 申请单：</td>
+								                                        <td class="cont" width="20%">2029</td>
+								                                        <td class="cont bgwh" width="20%" colspan="4">
+								                                            <div class="dac">
+								                                                <a href="http://116.228.150.225:6889/front/indexAction_capitalPrint.action?applyCapital.id=6C4DFC3F78175A82E05371001FAC39A8" target="_block" class="mr20">查看</a>
+								                                                <a href="http://116.228.150.225:6889/LgAdmin/finance/ggxy.action" target="_block">《G2G共融共享协议》</a>
+								                                            </div>
+								                                        </td>
+								                                    </tr>
+								                                </table>
+								                            </div>
+								                        </td>
+								                    </tr>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="19">
+								        <div class="daj">
+								            <div style="min-width: 80px;">当前页合计：</div>
+								            <div class="tl">
+								                资金占用利息:<span class="mr10">10</span>
+								                首次支付时间:<span class="mr10">1.000</span>
+								                支付金额:<span class="mr10">1.000</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr>
+								<tr height="45">
+								    <td colspan="19">
+								        <div class="daj">
+								            <div style="min-width: 80px;">所有页合计：</div>
+								            <div class="tl">
+								                资金占用利息:<span class="mr10">10</span>
+								                首次支付时间:<span class="mr10">1.000</span>
+								                支付金额:<span class="mr10">1.000</span>
+								            </div>
+								        </div>
+								    </td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

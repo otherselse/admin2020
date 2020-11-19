@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>销售合同审批-审批管理-乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1"
+        id="layuicss-layer">
+</head>
+
+<body class="showTip">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <!-- 头部菜单 -->
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="menu_toav.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+    <script type="text/javascript" src="../js/leftBar.js"></script>
+    <!-- 左侧菜单 -->
+
+    <div class="rightBar">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib gga pl5 pr5">/</span>
+                审批管理
+                <span class="dib gga pl5 pr5">/</span>
+                备货采购合同审批
+                <span class="dib gga pl5 pr5">/</span>
+                <span class="g28">评审</span>
+            </div>
+            <div class="r m_dn">
+                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+            </div>
+        </div>
+        <div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()"><i class="leftArrow"></i> 返回上一级</span>
+            </div>
+            <div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./sellReview.html" class="ui-tab4-list ml20 mr10">合同详情</a>
+                    <a href="./sellReviewAction_vipList.html" class="ui-tab4-list">VIP客户评审记录</a>
+                    <a href="./sellReviewAction_guarantee.html" class="ui-tab4-list">担保函记录</a>
+                    <a href="./sellReviewAction_permit.html" class="ui-tab4-list on">采购合同评审</a>
+                </div>
+            </div>
+            <div class="p20">
+                <div class="lable_t f14 b g28">基本信息</div>
+                <table class="pct100 tl row mt15 ui-table f12">
+                    <tbody>
+                        <tr>
+                            <td width="13%">订单号</td>
+                            <td width="37%">
+                                <a href="../public/theOrderDetails.html" target="_blank">60440<i class="icon-leftArrow ml5"></i></a>
+                                <span class="r mr15">关联订单：<a href="../public/theOrderDetails.html" target="_blank">60440 <i class="icon-leftArrow ml5"></i></a></span>
+                            </td>
+                            <td width="13%">金牌商家电话</td>
+                            <td width="37%">56666</td>
+                        </tr>
+                        <tr>
+                            <td>金牌商家</td>
+                            <td>马云云</td>
+                            <td>金牌商家手机</td>
+                            <td>18888888888</td>
+                        </tr>
+                        <tr>
+                            <td>货物全景</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                            <td>货物近景</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                        </tr>
+                        <tr>
+                            <td>货物标签</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                            <td>原厂质保书</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                        </tr>
+                        <tr>
+                            <td>第三方检测结果</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                            <td>采购合同附件</td>
+                            <td><a href="javascript:void(0)" class="ui-files mr20 vm">组件1111.jpg</a></td>
+                        </tr>
+                        <tr>
+                            <td>预计回款时间</td>
+                            <td colspan="3">2020年11月18日</td>
+                        </tr>
+                        <tr>
+                            <td>金牌商家担保总额</td>
+                            <td><span class="b f14">92,334,334元</span></td>
+                            <td>金牌商家担保余额</td>
+                            <td><span class="b f14">92,334,334元</span></td>
+                        </tr>
+                        <tr>
+                            <td>客户担保总额</td>
+                            <td><span class="b f14">92,334,334元</span></td>
+                            <td>客户担保余额</td>
+                            <td><span class="b f14">92,334,334元</span></td>
+                        </tr>
+                        <tr>
+                            <td>客户单位联系人</td>
+                            <td>马云云-13911929333</td>
+                            <td>是否已电话核实</td>
+                            <td style="background: #ebf7ff;">
+                                <span class="radio">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                              <span class="ml5">杨兴旺  已于   2020-09-28 10:52:13   确认</span>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt90 clearfix">
+                        <span class="lable_t f14 b g28">审核意见</span>
+                       
+                </div>
+                <div class="clt-check-cont pct95  mt15">
+                    <div class="cl clt-check-box">
+                        <div class="clt-check-left">
+                            <div class="pt20 pb20 tr">
+                                <span class="mr10">1节点</span>
+                            </div>
+                        </div>
+                        <div class="clt-check-right">
+                            <div class="clt-check-rcont f0">
+                                <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-check on ml20 mr5 vm"></i><span class="green b">审核通过</span></div>
+                                <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct30 g28 vt">同意申请</span></div>
+                                <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rightBar -->
+
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+    <script>
+        $(function () {
+            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+
+        })
+        function prev() {
+            window.history.back(-1)
+        }
+
+    </script>
+</body>
+
+</html>

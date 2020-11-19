@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body class='showTip report'>
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -91,56 +91,59 @@
                     <button type="button" class="ui-button mr20 ml20">查询</button>
                 </span>
             </div>
-
             <div class="lgui-table-box mt30">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+						    <tr class="n17-Ttitle2">
+						        <th width="4%">序号</th>
+						        <th width="8%">金牌商家</th>
+						        <th width="7%">成单时间</th>
+						        <th width="11%">客户国家</th>
+						        <th width="12%">成单品名/牌号</th>
+						        <th width="17%">成单重量/成单规格</th>
+						        <th width="15%">主照片</th>
+						        <th width="8%">副照片</th>
+						        <th width="10%">录入时间/操作人</th>
+						        <th width="8%">操作</th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr class="n17-Ttitle2">
-                                <th width="4%">序号</th>
-                                <th width="8%">金牌商家</th>
-                                <th width="7%">成单时间</th>
-                                <th width="11%">客户国家</th>
-                                <th width="12%">成单品名/牌号</th>
-                                <th width="17%">成单重量/成单规格</th>
-                                <th width="15%">主照片</th>
-                                <th width="8%">副照片</th>
-                                <th width="10%">录入时间/操作人</th>
-                                <th width="8%">操作</th>
-                            </tr>
-                        </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td>1</td>
-                                <td>罗家丽</td>
-                                <td>2018-10-29</td>
-                                <td>American</td>
-                                <td>
+                                <td width="4%">1</td>
+                                <td width="8%">罗家丽</td>
+                                <td width="7%">2018-10-29</td>
+                                <td width="11%">American</td>
+                                <td width="12%">
                                     <div class="zxx_text_overflow auto menuhook tiptop"
                                         title="Galvalume Steel Coil and Prepainted Galvanized Steel Coil / DX51D/SGCC">
                                         Galvalume Steel Coil and Prepainted Galvanized Steel Coil / DX51D/SGCC
                                     </div>
                                 </td>
-                                <td>
+                                <td width="17%">
                                     <div class="zxx_text_overflow menuhook auto tiptop"
                                         title="54吨 / 0.38mm*1041mm*C、0.41mm*1041mm*C">
                                         54吨 / 0.38mm*1041mm*C、0.41mm*1041mm*C
                                     </div>
                                 </td>
-                                <td>
+                                <td width="15%">
                                     <a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2019/2019-05-28/1559032993513.jpg"
                                         target="_blank"
                                         class="ui-files auto zxx_text_overflow  vm">u=1428491283,1074181291&amp;fm=26&amp;gp=0.jpg</a>
                                 </td>
-                                <td>
+                                <td width="8%">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
                                 </td>
-                                <td>2018-11-15 / 吉海威</td>
-                                <td>
+                                <td width="10%">2018-11-15 / 吉海威</td>
+                                <td width="8%">
                                     <a href="javascript:void(0)"
                                     onclick="showLayer('编辑','successOperation.html')">编辑</a>
                                     <span class="dib pl2 pr2">|</span>

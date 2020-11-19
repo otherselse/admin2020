@@ -22,7 +22,7 @@
     </style>
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -76,7 +76,7 @@
                                     <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
                                         class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
                                         class="render-time pct45" readonly="">
-                                </span></span>
+                                </span>
                             </span>
                         </td>
                     </tr>
@@ -84,13 +84,13 @@
                         <td width="33.3%">
                             <span class="input-selSearch pct100 mb5 df">
                                 <span class="dib searchLable">合同类型：</span>
-                                <span class="dib ml5 selectSingle dac">
+                                <span class="dib ml5 selectSingle">
                                     <a class=" on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">上海</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">天津</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">杭州</a>
                                 </span>
                             </span>
@@ -98,23 +98,23 @@
                         <td colspan="2">
                             <span class="input-selSearch pct100 mb5 df">
                                 <span class="dib searchLable">&emsp;&emsp;区域：</span>
-                                <span class="dib selectSingle dac ml5">
+                                <span class="dib selectSingle ml5">
                                     <a class=" on" href="javscript:void(0)">全部</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">上海</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">天津</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">杭州</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">宁波</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">常熟</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">杭州</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">宁波</a>
-                                    <span class="pr5  pl5 ">|</span>
+                                    <span class="">|</span>
                                     <a class="" href="javscript:void(0)">常熟</a>
                                 </span>
                             </span>
@@ -133,52 +133,61 @@
                 <span class="ui-tip">
                     提示：增加收入/减少成本 是正数显示；减少收入/增加成本 是负数显示。
                 </span>
-                <table class="ui-table tc f12 checkbox mt20" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="5%">序号</th>
-                            <th width="5%">区域</th>
-                            <th width="9%">金牌商家</th>
-                            <th width="9%">订单号</th>
-                            <th width="12%">合同类型</th>
-                            <th width="12%">合同号</th>
-                            <th width="12%">合同重量</th>
-                            <th width="12%">合同金额</th>
-                            <th width="12%">补差金额</th>
-                            <th width="12%">差异调整时间</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="5%">1</td>
-                            <td width="5%">自贸区</td>
-                            <td width="9%">冯欢欢</td>
-                            <td width="9%">47429</td>
-                            <td width="12%">销售合同对账申请</td>
-                            <td width="12%">SHLG20180424002</td>
-                            <td width="12%">10</td>
-                            <td width="12%">8,000</td>
-                            <td width="12%">110</td>
-                            <td width="12%"></td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <tr height="45">
-                            <td colspan="6">当前页合计</td>
-                            <td>228</td>
-                            <td>500,990</td>
-                            <td>42,874.99</td>
-                            <td>--</td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="6">所有页合计</td>
-                            <td>4,531.739</td>
-                            <td>13,165,901.85</td>
-                            <td>-3,642,791.82</td>
-                            <td>--</td>
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				<div class="lgui-table-box mt20 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="5%">序号</th>
+								    <th width="5%">区域</th>
+								    <th width="9%">金牌商家</th>
+								    <th width="9%">订单号</th>
+								    <th width="12%">合同类型</th>
+								    <th width="12%">合同号</th>
+								    <th width="12%">合同重量</th>
+								    <th width="12%">合同金额</th>
+								    <th width="12%">补差金额</th>
+								    <th width="12%">差异调整时间</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="5%">1</td>
+								    <td width="5%">自贸区</td>
+								    <td width="9%">冯欢欢</td>
+								    <td width="9%">47429</td>
+								    <td width="12%">销售合同对账申请</td>
+								    <td width="12%">SHLG20180424002</td>
+								    <td width="12%">10</td>
+								    <td width="12%">8,000</td>
+								    <td width="12%">110</td>
+								    <td width="12%"></td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="6">当前页合计</td>
+								    <td>228</td>
+								    <td>500,990</td>
+								    <td>42,874.99</td>
+								    <td>--</td>
+								</tr>
+								<tr height="45">
+								    <td colspan="6">所有页合计</td>
+								    <td>4,531.739</td>
+								    <td>13,165,901.85</td>
+								    <td>-3,642,791.82</td>
+								    <td>--</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

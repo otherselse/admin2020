@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body class='showTip report'>
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -97,21 +97,26 @@
                     <button type="button" class="ui-button mr20 ml20">查询</button>
                 </span>
             </div>
-
+			
             <div class="lgui-table-box mt30">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+						    <tr class="fixTr">
+						        <th width="15%">单位名称</th>
+						        <th width="25%">主营品种</th>
+						        <th width="10%">联系人</th>
+						        <th width="15%">联系电话</th>
+						        <th width="10%">评审等级<br></th>
+						        <th width="10%">评审状态<br></th>
+						        <th width="10%">操作</th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr class="fixTr">
-                                <th width="15%">单位名称</th>
-                                <th width="25%">主营品种</th>
-                                <th width="10%">联系人</th>
-                                <th width="15%">联系电话</th>
-                                <th width="10%">评审等级<br></th>
-                                <th width="10%">评审状态<br></th>
-                                <th width="10%">操作</th>
-                            </tr>
-                        </thead>
+                       
                         <tbody class="ui-thover">
                             <tr>
                                 <td width="15%">海上的钢琴师</td>

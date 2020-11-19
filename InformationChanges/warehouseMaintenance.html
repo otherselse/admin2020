@@ -29,7 +29,7 @@
     </style>
 </head>
 
-<body class='showTip report'>
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -141,7 +141,6 @@
 					            class="render-time pct45" readonly="">
 					    </span>
 					</span>
-                    
                 </div>
 
                 <div class="mb10 f0">
@@ -156,28 +155,32 @@
             </div>
             <!-- search end -->
             <div class="lgui-table-box ml20 mt30 mr20">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+						    <tr>
+						        <th width="5%">序号</th>
+						        <th width="10%">
+						            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">仓库<i
+						                    class="goldIcon icon-sort vm ml5 down"></i></label>
+						        </th>
+						        <th width="10%">仓库地址</th>
+						        <th width="10%">仓库单位/传真</th>
+						        <th width="8%">
+						            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">成交量(吨)<i
+						                    class="goldIcon icon-sort vm ml5 down"></i></label>
+						        </th>
+						        <th width="13%">联系人/联系电话</th>
+						        <th width="10%">入库单据模板</th>
+						        <th width="10%">出库单据模板</th>
+						        <th width="8%">会员标记</th>
+						        <th width="16%">操作</th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr>
-                                <th width="5%">序号</th>
-                                <th width="10%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">仓库<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="10%">仓库地址</th>
-                                <th width="10%">仓库单位/传真</th>
-                                <th width="8%">
-                                    <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">成交量(吨)<i
-                                            class="goldIcon icon-sort vm ml5 down"></i></label>
-                                </th>
-                                <th width="13%">联系人/联系电话</th>
-                                <th width="10%">入库单据模板</th>
-                                <th width="10%">出库单据模板</th>
-                                <th width="8%">会员标记</th>
-                                <th width="16%">操作</th>
-                            </tr>
-                        </thead>
                         <tbody class="ui-thover">
                             <tr>
                                 <td width="5%">1</td>

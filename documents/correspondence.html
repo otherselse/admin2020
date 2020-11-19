@@ -20,7 +20,7 @@
     </style>
 </head>
 
-<body class='showTip'>
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -40,7 +40,7 @@
                 左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
             </div>
         </div>
-
+		
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
@@ -114,47 +114,51 @@
             </div>
             <!-- search end -->
             <div class="lgui-table-box ml20 mt30 mr20">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+						    <tr>
+						        <th width="6%">
+						            <i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
+						                    name="checkbox" onclick="setAll(this)"></i>序号
+						        </th>
+						        <th width="5%">订单号</th>
+						        <th width="5%">金牌商家</th>
+						        <th width="17%">
+						            <span class="df">
+						                <span class="ml20 mr10">企业名称</span><a href="javascript:void(0)"
+						                    class="goldIcon icon-info tiptop" oldtitle="...." title="包含客户单位和供货商单位"></a>
+						            </span>
+						        </th>
+						        <th width="7%">应收款日期</th>
+						        <th width="4%">超期天数</th>
+						        <th width="7%">延期至</th>
+						        <th width="12%" class="tl">
+						            <span class="ml20">延期原因</span>
+						        </th>
+						        <th width="8%">催款函</th>
+						        <th width="8%">起诉通知函</th>
+						        <th width="6%">其他函件</th>
+						        <th width="6%">订单状态</th>
+						        <th width="8%">订单原件/传真件</th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr>
-                                <th width="6%">
-                                    <i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
-                                            name="checkbox" onclick="setAll(this)"></i>序号
-                                </th>
-                                <th width="5%">订单号</th>
-                                <th width="5%">金牌商家</th>
-                                <th width="17%">
-                                    <span class="df">
-                                        <span class="ml20 mr10">企业名称</span><a href="javascript:void(0)"
-                                            class="goldIcon icon-info tiptop" oldtitle="...." title="包含客户单位和供货商单位"></a>
-                                    </span>
-                                </th>
-                                <th width="7%">应收款日期</th>
-                                <th width="4%">超期天数</th>
-                                <th width="7%">延期至</th>
-                                <th width="12%" class="tl">
-                                    <span class="ml20">延期原因</span>
-                                </th>
-                                <th width="8%">催款函</th>
-                                <th width="8%">起诉通知函</th>
-                                <th width="6%">其他函件</th>
-                                <th width="6%">订单状态</th>
-                                <th width="8%">订单原件/传真件</th>
-                            </tr>
-                        </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td>
+                                <td width="6%">
                                     <i class="ui-checkbox goldIcon ml20">
                                         <input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
                                     <span class="ml5">1</span>
                                 </td>
-                                <td>
+                                <td width="5%">
                                     <a href="javascript:void(0)" onclick="showStep()">59862</a>
                                 </td>
-                                <td><a href="../public/goldRegInfo.html" target="_block">冯欢欢</a></td>
-                                <td class="tl">
+                                <td width="5%"><a href="../public/goldRegInfo.html" target="_block">冯欢欢</a></td>
+                                <td width="17%" class="tl">
                                     <div class="ml20 mb5 dac">
                                         <span class="dib k-bon mr5">客</span>
                                         <span class="tiptop g28 zxx_text_b"
@@ -166,13 +170,13 @@
                                             title="大清saqxdqcxqcqqcxwcq帝国产业集团">大清saqxdqcxqdqwdqdwdc112sqqcxwcq帝国产业集团</span>
                                     </div>
                                 </td>
-                                <td>2020-07-22</td>
-                                <td>0</td>
-                                <td>2020-07-22</td>
-                                <td class="tl">
+                                <td width="7%">2020-07-22</td>
+                                <td width="4%">0</td>
+                                <td width="7%">2020-07-22</td>
+                                <td width="12%" class="tl">
                                     <span title="加工质量问题加工质量问题加工质量问题加工质量问题"
                                         class="g28 ml20 tiptop zxx_text_b">加工质量问题加工质量问题加工质量问题加工质量问题</span></td>
-                                <td>
+                                <td width="8%">
                                     <span class="daj tipclick menuhook" qtip-dom="dom2">
                                         <span class="daj g28 mr2">
                                             <span class="dib rad colorW mr5"></span>
@@ -181,7 +185,7 @@
                                         <a href="javascript:void(0)">></a>
                                     </span>
                                 </td>
-                                <td>
+                                <td width="8%">
                                     <span class="daj tipclick menuhook" qtip-dom="dom2">
                                         <span class="daj g28 mr2">
                                             <span class="dib rad colorW mr5"></span>
@@ -190,18 +194,18 @@
                                         <a href="javascript:void(0)">></a>
                                     </span>
                                 </td>
-                                <td>
+                                <td width="6%">
                                     <span>
                                         <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1">1/3</a>
                                     </span>
                                     <a href="javascript:void(0)"
                                         onclick="showLayer('其他函件详','corresManagement.html',420)">查看</a>
                                 </td>
-                                <td>
+                                <td width="6%">
                                     正常
                                     <a href="javascript:void" onclick="showLayer('单原件/传真件','change.html',370)">变更</a>
                                 </td>
-                                <td>
+                                <td width="8%">
                                     1/3 <a href="javascript:void(0)"
                                         onclick="showLayer('单原件/传真件','aFacsimile.html',320)">上传</a>
                                 </td>
@@ -415,7 +419,6 @@
                                 </td>
                             </tr>
                         </tfoot>
-                        </tbody>
                     </table>
                 </div>
             </div>

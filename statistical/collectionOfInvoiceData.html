@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body class="showTip">
+<body class="showTip fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -71,134 +71,105 @@
                     <button type="button" class="ui-button mr20">查询</button>
                 </div>
 
-                <table class="ui-table tc mt30 f12" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="5%">序号</th>
-                            <th width="8%">统计时间</th>
-                            <th width="7%">区域</th>
-                            <th width="8%">开票金额</th>
-                            <th width="8%">开票税额</th>
-                            <th width="9%">定购开票金额</th>
-                            <th width="9%">直购开票金额</th>
-                            <th width="9%">收票金额</th>
-                            <th width="9%">收票税额</th>
-                            <th width="9%">定购收票金额</th>
-                            <th width="10%">直购收票金额</th>
-                            <th width="9%">差额</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="5%">1</td>
-                            <td width="8%">-</td>
-                            <td width="7%">
-                                <a href="javascript:void(0);" onclick="showTrMore(this)">上海</a>
-                            </td>
-                            <td width="8%">4,000</td>
-                            <td width="8%">581.2</td>
-                            <td width="9%">4,000</td>
-                            <td width="9%">0</td>
-                            <td width="9%">0</td>
-                            <td width="9%">0</td>
-                            <td width="9%">0</td>
-                            <td width="10%">0</td>
-                            <td width="9%"><span>4,000</span></td>
-                        </tr>
-                        <!-- 开始 -->
-                        <tr class="hideTr dn">
-                            <td colspan="12">
-                                <div class="p20">
-                                    <table class="ui-table  tc f12 auto" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th width="5%">序号</th>
-                                                <th width="8%">统计时间</th>
-                                                <th width="7%">金牌商家</th>
-                                                <th width="8%">开票金额</th>
-                                                <th width="8%">开票税额</th>
-                                                <th width="9%">定购开票金额</th>
-                                                <th width="9%">直购开票金额</th>
-                                                <th width="9%">收票金额</th>
-                                                <th width="9%">收票税额</th>
-                                                <th width="9%">定购收票金额</th>
-                                                <th width="10%">直购收票金额</th>
-                                                <th width="9%">差额</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>-</td>
-                                                <td>汤小唯</td>
-                                                <td>4000</td>
-                                                <td>680</td>
-                                                <td>4000</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>4000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr><!-- 隐藏内容end -->
-                    </tbody>
-                    <tfoot>
-                        <!-- <tr height="45">
-                            <td colspan="12">
-                                <div class="df tl pl20">
-                                    <div class="min-w60">当前页汇总：</div>
-                                    <div>
-                                        开票金额:<span class="dib mr10 red">0.0</span>
-                                        开票税号:<span class="dib mr10 red">0.0</span>
-                                        定购开票金额:<span class="dib mr10 red">0.0</span>
-                                        直购开票金额:<span class="dib mr10 red">0.0</span>
-                                        收票金额:<span class="dib mr10 red">0.0</span>
-                                        收票税号:<span class="dib mr10 red">0.0</span>
-                                        定购收票金额:<span class="dib mr10 red">0.0</span>
-                                        直购收票金额:<span class="dib mr10 red">0.0</span>
-                                        差额:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="12">
-                                <div class="df tl pl20">
-                                    <div class="min-w60">所有页汇总：</div>
-                                    <div>
-                                        开票金额:<span class="dib mr10 red">0.0</span>
-                                        开票税号:<span class="dib mr10 red">0.0</span>
-                                        定购开票金额:<span class="dib mr10 red">0.0</span>
-                                        直购开票金额:<span class="dib mr10 red">0.0</span>
-                                        收票金额:<span class="dib mr10 red">0.0</span>
-                                        收票税号:<span class="dib mr10 red">0.0</span>
-                                        定购收票金额:<span class="dib mr10 red">0.0</span>
-                                        直购收票金额:<span class="dib mr10 red">0.0</span>
-                                        差额:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-						 -->
-						<tr height="45">
-						  	<td  colspan="3">当前页合计：</td>
-						  	<td  colspan="1"><span id="s_voiceMoney" numtype="personal">1,906,104.63</span></td>
-						  	<td  colspan="1"><span id="s_voiceRate" numtype="personal">276,955.37</span></td>
-						  	<td  colspan="1"><span id="s_Voice" numtype="personal">1,906,104.63</span></td>
-						  	<td  colspan="1"><span id="s_directVoice" numtype="personal">0</span></td>
-						  	<td  colspan="1"><span id="s_inVoiceMoney" numtype="personal">1,457,163.45</span></td>
-						  	<td  colspan="1"><span id="s_inVoiceRate" numtype="personal">211,724.60</span></td>
-						  	<td  colspan="1"><span id="s_inVoice" numtype="personal">1,457,163.45</span></td>
-						  	<td  colspan="1"><span id="s_directInVoice" numtype="personal">0</span></td>
-						  	<td  colspan="1"><span id="s_difMoney" numtype="personal">448,941.18</span></td>
-						  </tr>
-					</tfoot>
-                </table>
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+								    <th width="5%">序号</th>
+								    <th width="8%">统计时间</th>
+								    <th width="7%">区域</th>
+								    <th width="8%">开票金额</th>
+								    <th width="8%">开票税额</th>
+								    <th width="9%">定购开票金额</th>
+								    <th width="9%">直购开票金额</th>
+								    <th width="9%">收票金额</th>
+								    <th width="9%">收票税额</th>
+								    <th width="9%">定购收票金额</th>
+								    <th width="10%">直购收票金额</th>
+								    <th width="9%">差额</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="5%">1</td>
+								    <td width="8%">-</td>
+								    <td width="7%">
+								        <a href="javascript:void(0);" onclick="showTrMore(this)">上海</a>
+								    </td>
+								    <td width="8%">4,000</td>
+								    <td width="8%">581.2</td>
+								    <td width="9%">4,000</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="9%">0</td>
+								    <td width="10%">0</td>
+								    <td width="9%"><span>4,000</span></td>
+								</tr>
+								<!-- 开始 -->
+								<tr class="hideTr dn">
+								    <td colspan="12">
+								        <div class="p20">
+								            <table class="ui-table  tc f12 auto" width="100%">
+								                <thead>
+								                    <tr>
+								                        <th width="5%">序号</th>
+								                        <th width="8%">统计时间</th>
+								                        <th width="7%">金牌商家</th>
+								                        <th width="8%">开票金额</th>
+								                        <th width="8%">开票税额</th>
+								                        <th width="9%">定购开票金额</th>
+								                        <th width="9%">直购开票金额</th>
+								                        <th width="9%">收票金额</th>
+								                        <th width="9%">收票税额</th>
+								                        <th width="9%">定购收票金额</th>
+								                        <th width="10%">直购收票金额</th>
+								                        <th width="9%">差额</th>
+								                    </tr>
+								                </thead>
+								                <tbody>
+								                    <tr>
+								                        <td>1</td>
+								                        <td>-</td>
+								                        <td>汤小唯</td>
+								                        <td>4000</td>
+								                        <td>680</td>
+								                        <td>4000</td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>0</td>
+								                        <td>4000</td>
+								                    </tr>
+								                </tbody>
+								            </table>
+								        </div>
+								    </td>
+								</tr><!-- 隐藏内容end -->
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								  	<td  colspan="3">当前页合计：</td>
+								  	<td  colspan="1"><span id="s_voiceMoney" numtype="personal">1,906,104.63</span></td>
+								  	<td  colspan="1"><span id="s_voiceRate" numtype="personal">276,955.37</span></td>
+								  	<td  colspan="1"><span id="s_Voice" numtype="personal">1,906,104.63</span></td>
+								  	<td  colspan="1"><span id="s_directVoice" numtype="personal">0</span></td>
+								  	<td  colspan="1"><span id="s_inVoiceMoney" numtype="personal">1,457,163.45</span></td>
+								  	<td  colspan="1"><span id="s_inVoiceRate" numtype="personal">211,724.60</span></td>
+								  	<td  colspan="1"><span id="s_inVoice" numtype="personal">1,457,163.45</span></td>
+								  	<td  colspan="1"><span id="s_directInVoice" numtype="personal">0</span></td>
+								  	<td  colspan="1"><span id="s_difMoney" numtype="personal">448,941.18</span></td>
+								  </tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
         </div>

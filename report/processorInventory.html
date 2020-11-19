@@ -22,7 +22,7 @@
     </style>
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -162,118 +162,88 @@
                     <button type="button" class="ui-button mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr class="fixTr">
-                            <th width="10%">货主单位</th>
-                            <th width="5%">金牌商家</th>
-                            <th width="8%">单据号</th>
-                            <th width="6%">入库日期</th>
-                            <th width="5%">品名</th>
-                            <th width="6%">捆包号</th>
-                            <th width="6%">规格</th>
-                            <th width="5%">钢厂</th>
-                            <th width="6%">牌号</th>
-                            <th width="4%">计量方式</th>
-                            <th width="6%">数量</th>
-                            <th width="6%">重量</th>
-                            <th width="6%">库位</th>
-                            <th width="5%">销售单价</th>
-                            <th width="5%">销售锁货</th>
-                            <th width="3%">加工状态</th>
-                            <th width="3%">提货状态</th>
-                            <th width="6%">仓库</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td width="10%">上海柒柒贸易有限公司</td>
-                            <td width="5%">青丘白浅</td>
-                            <td width="8%">
-                                WEO(23)-20000117
-                            </td>
-                            <td width="6%">2020-09-16</td>
-                            <td width="5%">镀铝锌卷板</td>
-                            <td width="6%">asdfg7</td>
-                            <td width="6%">0.600*1250*C</td>
-                            <td width="5%">鑫铭</td>
-                            <td width="6%">DC51D AZ</td>
-                            <td width="4%">抄码</td>
-                            <td width="6%">1</td>
-                            <td width="6%">1</td>
-                            <td width="6%">a7</td>
-                            <td width="5%">0</td>
-                            <td width="5%">否</td>
-                            <td width="3%">否</td>
-                            <td width="3%">是</td>
-                            <td width="6%">华冶B区</td>
-                        </tr>
-                    </tbody>
-                    <tfoot class="">
-                        <!-- <tr height="45">
-                            <td colspan="19">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">当前页合计：</div>
-                                    <div class="tl">
-                                        数量:<span class="red mr10">1.000</span>
-                                        重量:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="19">
-                                <div class="daj">
-                                    <div style="min-width: 80px;">所有页合计：</div>
-                                    <div class="tl">
-                                        数量:<span class="red mr10">1.000</span>
-                                        重量:<span class="red mr10">1.000</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr> -->
-                        <tr height="45">
-                            <td>当前页合计:</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td> 
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td> 
-                            <td>&nbsp;</td>
-                            <td numtype="formatMoney">759</td>
-                            <td numtype="formatMoney">33.089</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr height="45">
-                            <td>所有页合计:</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td> 
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td> 
-                            <td>&nbsp;</td>
-                            <td numtype="formatMoney">759</td>
-                            <td numtype="formatMoney">33.089</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                    </tfoot>
-                </table>
+				
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr class="fixTr">
+								    <th width="10%">货主单位</th>
+								    <th width="5%">金牌商家</th>
+								    <th width="8%">单据号</th>
+								    <th width="6%">入库日期</th>
+								    <th width="5%">品名</th>
+								    <th width="6%">捆包号</th>
+								    <th width="6%">规格</th>
+								    <th width="5%">钢厂</th>
+								    <th width="6%">牌号</th>
+								    <th width="4%">计量方式</th>
+								    <th width="6%">数量</th>
+								    <th width="6%">重量</th>
+								    <th width="6%">库位</th>
+								    <th width="5%">销售单价</th>
+								    <th width="5%">销售锁货</th>
+								    <th width="3%">加工状态</th>
+								    <th width="3%">提货状态</th>
+								    <th width="6%">仓库</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+								    <td width="10%">上海柒柒贸易有限公司</td>
+								    <td width="5%">青丘白浅</td>
+								    <td width="8%">
+								        WEO(23)-20000117
+								    </td>
+								    <td width="6%">2020-09-16</td>
+								    <td width="5%">镀铝锌卷板</td>
+								    <td width="6%">asdfg7</td>
+								    <td width="6%">0.600*1250*C</td>
+								    <td width="5%">鑫铭</td>
+								    <td width="6%">DC51D AZ</td>
+								    <td width="4%">抄码</td>
+								    <td width="6%">1</td>
+								    <td width="6%">1</td>
+								    <td width="6%">a7</td>
+								    <td width="5%">0</td>
+								    <td width="5%">否</td>
+								    <td width="3%">否</td>
+								    <td width="3%">是</td>
+								    <td width="6%">华冶B区</td>
+								</tr>
+							</tbody>
+							<tfoot class="bgfa">
+								<tr height="45">
+								    <td colspan="10">当前页合计:</td>
+								    <td numtype="formatMoney">759</td>
+								    <td numtype="formatMoney">33.089</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								</tr>
+								<tr height="45">
+								    <td colspan="10">所有页合计:</td>
+								    <td numtype="formatMoney">759</td>
+								    <td numtype="formatMoney">33.089</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								    <td>&nbsp;</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>
