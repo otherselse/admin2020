@@ -25,7 +25,7 @@
     </style>
 	</head>
 
-	<body class="showTip">
+	<body class="showTip fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -67,140 +67,111 @@
 						</span>
 						<button type="button" class="ui-button mr20">查询</button>
 					</div>
-
-					<table class="ui-table table-cw tc mt30 f12" width="100%" data-type="edit">
-						<thead>
-							<tr>
-								<th width="4%">序号</th>
-								<th width="7%">区域</th>
-								<th width="7%">金牌商家</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										累计收票金额
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										累计开票金额
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										历史销售金额
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										历史采购金额
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										商互通增加额度
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										商户通减少额度
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										商互通收入
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										商户通成本
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="9%">
-									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
-										开票额度
-										<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="4%">1</td>
-								<td width="7%">天津</td>
-								<td width="7%" class="redm"><a href="javascript:void(0);" onclick="showLines('3588','o3588',1)">唐一菲</a></td>
-								<td width="9%">6,734,623,813.06</td>
-								<td width="9%">28,677.92</td>
-								<td width="9%">48,702,611.31</td>
-								<td width="9%">30,433,419.043</td>
-								<td width="9%">11,750,610.6</td>
-								<td width="9%">5,779,755.9</td>
-								<td width="9%">4,015,960.6</td>
-								<td width="9%">5,951,658.9</td>
-								<td width="9%"><span>0</span></td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<!-- <tr height="45">
-                            <td colspan="12">
-                                <div class="df tl pl20">
-                                    <div class="min-w60">当前页汇总：</div>
-                                    <div>
-                                        累计收票金额:<span class="dib mr10 red">0.0</span>
-                                        累计开票金额:<span class="dib mr10 red">0.0</span>
-                                        历史销售金额:<span class="dib mr10 red">0.0</span>
-                                        历史采购金额:<span class="dib mr10 red">0.0</span>
-                                        商互通增加额度:<span class="dib mr10 red">0.0</span>
-                                        商互通减少额度:<span class="dib mr10 red">0.0</span>
-                                        商互通收入:<span class="dib mr10 red">0.0</span>
-                                        商互通成本:<span class="dib mr10 red">0.0</span>
-                                        开票额度:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="12">
-                                <div class="df tl pl20">
-                                    <div class="min-w60">所有页汇总：</div>
-                                    <div>
-                                        累计收票金额:<span class="dib mr10 red">0.0</span>
-                                        累计开票金额:<span class="dib mr10 red">0.0</span>
-                                        历史销售金额:<span class="dib mr10 red">0.0</span>
-                                        历史采购金额:<span class="dib mr10 red">0.0</span>
-                                        商互通增加额度:<span class="dib mr10 red">0.0</span>
-                                        商互通减少额度:<span class="dib mr10 red">0.0</span>
-                                        商互通收入:<span class="dib mr10 red">0.0</span>
-                                        商互通成本:<span class="dib mr10 red">0.0</span>
-                                        开票额度:<span class="dib mr10 red">0.0</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-						 -->
-							<tr height="45">
-								<td colspan="3">当前页合计:</td>
-								<td>7,275,648,603.49</td>
-								<td>14,582,189.47</td>
-								<td>1,365,139,839.56</td>
-								<td>1,094,273,240.8563</td>
-								<td>18,353,989.52</td>
-								<td>29,669,900.02</td>
-								<td>13,287,536.28</td>
-								<td>29,165,802.14</td>
-								<td>329,458,393.41</td>
-							</tr>
-							<tr height="45">
-								<td colspan="3">所有页合计:</td>
-								<td>7,721,174,208.62</td>
-								<td>160,816,532.74</td>
-								<td>5,301,929,772.42</td>
-								<td>2,047,660,202.5139</td>
-								<td>30,400,838.6</td>
-								<td>40,106,930.22</td>
-								<td>37,111,770.78</td>
-								<td>46,751,035.94</td>
-								<td>1,078,195,652.2</td>
-							</tr>
-						</tfoot>
-					</table>
+					
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr>
+										<th width="4%">序号</th>
+										<th width="7%">区域</th>
+										<th width="7%">金牌商家</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												累计收票金额
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												累计开票金额
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												历史销售金额
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												历史采购金额
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												商互通增加额度
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												商户通减少额度
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												商互通收入
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												商户通成本
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="9%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+												开票额度
+												<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="4%">1</td>
+										<td width="7%">天津</td>
+										<td width="7%" class="redm"><a href="javascript:void(0);" onclick="showLines('3588','o3588',1)">唐一菲</a></td>
+										<td width="9%">6,734,623,813.06</td>
+										<td width="9%">28,677.92</td>
+										<td width="9%">48,702,611.31</td>
+										<td width="9%">30,433,419.043</td>
+										<td width="9%">11,750,610.6</td>
+										<td width="9%">5,779,755.9</td>
+										<td width="9%">4,015,960.6</td>
+										<td width="9%">5,951,658.9</td>
+										<td width="9%"><span>0</span></td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45">
+										<td colspan="3">当前页合计:</td>
+										<td>7,275,648,603.49</td>
+										<td>14,582,189.47</td>
+										<td>1,365,139,839.56</td>
+										<td>1,094,273,240.8563</td>
+										<td>18,353,989.52</td>
+										<td>29,669,900.02</td>
+										<td>13,287,536.28</td>
+										<td>29,165,802.14</td>
+										<td>329,458,393.41</td>
+									</tr>
+									<tr height="45">
+										<td colspan="3">所有页合计:</td>
+										<td>7,721,174,208.62</td>
+										<td>160,816,532.74</td>
+										<td>5,301,929,772.42</td>
+										<td>2,047,660,202.5139</td>
+										<td>30,400,838.6</td>
+										<td>40,106,930.22</td>
+										<td>37,111,770.78</td>
+										<td>46,751,035.94</td>
+										<td>1,078,195,652.2</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
 			</div>

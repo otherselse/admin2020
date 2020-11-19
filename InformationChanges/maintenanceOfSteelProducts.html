@@ -30,7 +30,7 @@
     </style>
 </head>
 
-<body class="showTip report">
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -85,60 +85,68 @@
                     <button type="button" class="ui-button ml20 mr10">查询</button>
                     <button type="button" class="ui-button " data-type="clear">清空</button>
                 </div>
-                <table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
-                    <thead>
-                        <tr>
-                            <th width="10%">品名</th>
-                            <th width="12%">规格</th>
-                            <th width="10%">牌号</th>
-                            <th width="9%">钢厂</th>
-                            <th width="9%">计量方式</th>
-                            <th width="7%">包装方式</th>
-                            <th width="9%">仓库</th>
-                            <th width="9%">挂牌价格</th>
-                            <th width="6%">重量</th>
-                            <th width="8%">金牌商家</th>
-                            <th width="10%">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-thover bgwh">
-                        <tr>
-                            <td>
-                                <span class="resourceNameSpan">热轧卷板</span>
-                                <input class="resourceNameInput tc ui-input pct90 auto" name="" value="热轧卷板"
-                                    style="display: none">
-                            </td>
-                            <td>
-                                <span class="resourceSpecSpan">3.000*1500*C</span>
-                                <input class="resourceSpecInput tc ui-input pct90 auto" name="" value="3.000*1500*C"
-                                    style="display: none">
-                            </td>
-                            <td>20#</td>
-                            <td>中国钢厂</td>
-                            <td>抄码</td>
-                            <td></td>
-                            <td>上海一号库</td>
-                            <td>
-                                <span class="resourcePriceSpan" numtype="formatMoney">250</span>
-                                <input class="resourcePriceInput tc ui-input pct90 auto" name="" value="250"
-                                    style="display: none">
-                            </td>
-
-                            <td numtype="formatMoney">12</td>
-                            <td>
-
-                            </td>
-                            <td>
-                                <a href="javascript:void(0)" onclick="xiajia(3468934,0)">上挂</a>
-                                <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
-                                    onclick="tiaojia(3468934)"> 调价</a>
-                                <a href="javascript:void(0)" onclick="modify(this,3468934)" class="modifyBtn"> 修改</a>
-                                <a href="javascript:void(0)" onclick="saveModify(this,3468934)" class="saveModifyBtn"
-                                    style="display: none"> 保存</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+				
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+							    <tr>
+							        <th width="10%">品名</th>
+							        <th width="12%">规格</th>
+							        <th width="10%">牌号</th>
+							        <th width="9%">钢厂</th>
+							        <th width="9%">计量方式</th>
+							        <th width="7%">包装方式</th>
+							        <th width="9%">仓库</th>
+							        <th width="9%">挂牌价格</th>
+							        <th width="6%">重量</th>
+							        <th width="8%">金牌商家</th>
+							        <th width="10%">操作</th>
+							    </tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover bgwh">
+							    <tr>
+							        <td width="10%">
+							            <span class="resourceNameSpan">热轧卷板</span>
+							            <input class="resourceNameInput tc ui-input pct90 auto" name="" value="热轧卷板"
+							                style="display: none">
+							        </td>
+							        <td width="12%">
+							            <span class="resourceSpecSpan">3.000*1500*C</span>
+							            <input class="resourceSpecInput tc ui-input pct90 auto" name="" value="3.000*1500*C"
+							                style="display: none">
+							        </td>
+							        <td width="10%">20#</td>
+							        <td width="9%">中国钢厂</td>
+							        <td width="9%">抄码</td>
+							        <td width="7%"></td>
+							        <td width="9%">上海一号库</td>
+							        <td width="9%">
+							            <span class="resourcePriceSpan" numtype="formatMoney">250</span>
+							            <input class="resourcePriceInput tc ui-input pct90 auto" name="" value="250"
+							                style="display: none">
+							        </td>
+							        <td width="6%" numtype="formatMoney">12</td>
+							        <td width="8%">
+							
+							        </td>
+							        <td width="10%">
+							            <a href="javascript:void(0)" onclick="xiajia(3468934,0)">上挂</a>
+							            <a href="javascript:void(0)" class="tipclick" qtip-dom="dom1"
+							                onclick="tiaojia(3468934)"> 调价</a>
+							            <a href="javascript:void(0)" onclick="modify(this,3468934)" class="modifyBtn"> 修改</a>
+							            <a href="javascript:void(0)" onclick="saveModify(this,3468934)" class="saveModifyBtn"
+							                style="display: none"> 保存</a>
+							        </td>
+							    </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
                 <!-- table end -->
                 <script type="text/javascript" src="../js/pagelist.js"></script>
             </div>

@@ -29,7 +29,7 @@
     </style>
 </head>
 
-<body class='showTip report'>
+<body class='showTip report fixtab'>
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -152,60 +152,64 @@
             </div>
             <!-- search end -->
             <div class="lgui-table-box ml20 mt30 mr20">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+							<tr class="n17-Ttitle2">
+							    <th width="6%">选择</th>
+							    <th width="20%">加盟公司</th>
+							    <th width="8%">信息类别</th>
+							    <th width="10%">名称</th>
+							    <th width="8%">部门</th>
+							    <th width="8%">金额</th>
+							    <th width="8%">备注</th>
+							    <th width="8%">时间</th>
+							    <th width="9%">附件详情</th>
+							    <th width="15%">操作</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr class="n17-Ttitle2">
-                                <th width="6%">选择</th>
-                                <th width="20%">加盟公司</th>
-                                <th width="8%">信息类别</th>
-                                <th width="10%">名称</th>
-                                <th width="8%">部门</th>
-                                <th width="8%">金额</th>
-                                <th width="8%">备注</th>
-                                <th width="8%">时间</th>
-                                <th width="9%">附件详情</th>
-                                <th width="15%">操作</th>
-                            </tr>
-                        </thead>
                         <tbody class="ui-thover">
                             <tr class="heji">
-                                <td>
+                                <td width="6%">
                                     <i class="ui-checkbox goldIcon vm mr5"><input type="checkbox"
                                             class="checkbox-opacity" name="checkbox"></i>1
                                 </td>
-                                <td>上海乐刚供应链</td>
-                                <td>
+                                <td width="20%">上海乐刚供应链</td>
+                                <td width="8%">
                                     政府荣誉
                                 </td>
-                                <td>
+                                <td width="10%">
                                     <span class="zxx_text_90 tiptop menuhook" title="互联网示范企业标准行业">
                                         互联网示范企业标准行业
                                     </span>
                                 </td>
-                                <td>
+                                <td width="8%">
                                     上海市政府
                                 </td>
-                                <td>
+                                <td width="8%">
                                     &nbsp;---
                                     <input type="hidden" value="" id="sumMoney">
                                 </td>
-                                <td>
+                                <td width="8%">
                                     <span class="zxx_text_90 tiptop menuhook" title="需要提交材料，上海首批示范企业">
                                         需要提交材料，上海首批示范企业
                                     </span>
                                 </td>
-                                <td>
+                                <td width="8%">
                                     2020-03-31
                                 </td>
-                                <td>
+                                <td width="9%">
                                     <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
                                         data-hasqtip="15" data-type="smallbbr">
                                         <span class="dib imgIcon"></span>&nbsp;
                                         <span class="lh16 f14 dib vt">3</span>
                                     </a>
                                 </td>
-                                <td>
+                                <td width="15%">
                                     <a href="javascript:void(0)"
                                         onclick="showLayer('编辑资本信息','CapitalCenterOperation.html',960,550)">编辑</a>
                                     <span class="pl2 dib pr2">|</span>

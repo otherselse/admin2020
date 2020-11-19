@@ -24,7 +24,7 @@
 
 	</head>
 
-	<body class="showTip report">
+	<body class="showTip report fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -141,7 +141,7 @@
 							<span class="mb10">|</span>
 							<a class="mb10" href="javscript:void(0)">菲菲帮</a>
 						</span>
-						<a class="dib mt2" href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+						<a class="dib mt2" href="javscript:void(0)" onclick="setOpen(this)" >展开</a>
 					</div>
 					<div class="cl mt10 df f12">
 						<div class="df" style="margin-top: 4px;">
@@ -177,34 +177,43 @@
 						<button type="button" class="ui-button ml20 mr10">查询</button>
 						<button type="button" class="ui-button " data-type="clear">清空</button>
 					</div>
-					<table class="ui-table tc f12 checkbox mt30" width="100%" data-type="edit">
-						<thead>
-							<tr class="fixTr">
-								<th width="5%">序号</th>
-								<th width="10%">费用类别</th>
-								<th width="13%">费用类型</th>
-								<th width="8%">费用区域</th>
-								<th width="8%">金额(元)</th>
-								<th width="8%">入账日期</th>
-								<th width="12%">操作日期</th>
-								<th width="12%">操作人</th>
-								<th width="24%">备注</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="5%">1</td>
-								<td width="10%">贸易 </td>
-								<td width="13%">其他成本</td>
-								<td width="8%">自贸区</td>
-								<td width="8%">520</td>
-								<td width="8%">2020-05-13</td>
-								<td width="12%">2020-05-13 16:18:56</td>
-								<td width="12%">李四四</td>
-								<td width="24%">扔他</td>
-							</tr>
-						</tbody>
-					</table>
+					
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr class="fixTr">
+										<th width="5%">序号</th>
+										<th width="10%">费用类别</th>
+										<th width="13%">费用类型</th>
+										<th width="8%">费用区域</th>
+										<th width="8%">金额(元)</th>
+										<th width="8%">入账日期</th>
+										<th width="12%">操作日期</th>
+										<th width="12%">操作人</th>
+										<th width="24%">备注</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="5%">1</td>
+										<td width="10%">贸易 </td>
+										<td width="13%">其他成本</td>
+										<td width="8%">自贸区</td>
+										<td width="8%">520</td>
+										<td width="8%">2020-05-13</td>
+										<td width="12%">2020-05-13 16:18:56</td>
+										<td width="12%">李四四</td>
+										<td width="24%">扔他</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 					<!-- table end -->
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>
