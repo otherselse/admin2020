@@ -578,7 +578,8 @@ a.wh:hover {
 
 .fadeIn {
   opacity: 100;
-  filter: alpha(opacity=100)
+  filter: alpha(opacity=100);
+  -webkit-filter: alpha(opacity=100);
 }
 
 .fadeOut {
@@ -4122,4 +4123,17 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
 
 .ui-button.w160{
   width: 160px;
+}
+a.on.mDListShow:after {
+  content: "";
+  /* display: inline-block; */
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  background: #1365e8;
+  /* left: 29px; */
+  bottom: 4px;
+  right: 0;
+  opacity: 0.6;
+  z-index: 0;
 }
