@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body class='showTip report'>
+<body class="showTip report fixtab">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -87,28 +87,31 @@
                     <button type="button" class="ui-button mr20 ml20">查询</button>
                 </span>
             </div>
-
             <div class="lgui-table-box mt30">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+						    <tr>
+						        <th width="7%">帮派</th>
+						        <th width="13%">月份</th>
+						        <th width="9%">帮主</th>
+						        <th width="9%">目标量(吨)</th>
+						        <th width="10%">备注</th>
+						        <th width="10%">操作</th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
                 <div class="lgui-table-body">
                     <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr>
-                                <th width="7%">帮派</th>
-                                <th width="13%">月份</th>
-                                <th width="9%">帮主</th>
-                                <th width="9%">目标量(吨)</th>
-                                <th width="10%">备注</th>
-                                <th width="10%">操作</th>
-                            </tr>
-                        </thead>
                         <tbody class="ui-thover">
                             <tr>
-                                <td>魏热1帮</td>
-                                <td>2020-07</td>
-                                <td>魏一敏</td>
-                                <td>523</td>
-                                <td></td>
-                                <td>
+                                <td width="7%">魏热1帮</td>
+                                <td width="13%">2020-07</td>
+                                <td width="9%">魏一敏</td>
+                                <td width="9%">523</td>
+                                <td width="10%"></td>
+                                <td width="10%">
                                     <input type="hidden" id="bizDate" value="2020-07">
                                     <a href="javascript:void(0)"  onclick="showLayer('修改','monthlyOperation.html')" id="a">修改</a>
                                     <span class="dib pr2 pl2">|</span>

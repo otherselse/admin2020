@@ -24,7 +24,7 @@
 
 	</head>
 
-	<body class="showTip report">
+	<body class="showTip report fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -140,86 +140,81 @@
 						<button type="button" class="ui-button ml20 mr10">查询</button>
 						<button type="button" class="ui-button " data-type="clear">清空</button>
 					</div>
-					<table class="ui-table tc f12 checkbox mt30" width="100%" data-type="edit">
-						<thead>
-							<tr class="fixTr">
-								<th width="4%">
-									<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
-								</th>
-								<th width="13%">客户单位</th>
-								<th width="7%">出库日期</th>
-								<th width="5%">余料类型</th>
-								<th width="7%">品名</th>
-								<th width="7%">捆包号</th>
-								<th width="7%">规格</th>
-								<th width="7%">入库日期</th>
-								<th width="5%">重量</th>
-								<th width="5%">代售单价</th>
-								<th width="6%">代售金额</th>
-								<th width="5%">销售单价</th>
-								<th width="6%">销售金额</th>
-								<th width="6%">仓库</th>
-								<th width="4%">操作人</th>
-								<th width="4%">是否导出</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="4%">
-									<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
-								</td>
-								<td width="13%">上海闳宝闻贸易有限公司</td>
-								<td width="7%">2020-09-11 14:58:56</td>
-								<td width="5%">边丝余料</td>
-								<td width="7%">冷轧卷板</td>
-								<td width="7%">2017092806-5</td>
-								<td width="7%">2.000*边丝*C</td>
-								<td width="7%">2020-07-16</td>
-								<td width="5%">2.000</td>
-								<td width="5%">800</td>
-								<td width="6%">1,600</td>
-								<td width="5%">1,000</td>
-								<td width="6%">2,000</td>
-								<td width="6%">华冶B区</td>
-								<td width="4%">上海加工</td>
-								<td width="4%">否</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<!-- <tr height="45">
-                            <td colspan="16">
-                                当前页合计：重量:<span class="dib mr10 red">13454111</span>
-                                代售单价:<span class="dib mr10 red">13454111</span>
-                                销售金额:<span class="dib mr10 red">13454111</span>
-                            </td>
-                        </tr>
-                        <tr height="45">
-                            <td colspan="16">
-                                所有页合计：重量:<span class="dib mr10 red">13454111</span>
-                                代售单价:<span class="dib mr10 red">13454111</span>
-                                销售金额:<span class="dib mr10 red">13454111</span>
-                            </td>
-                        </tr> -->
-							<tr height="45">
-								<td colspan="8">当前页合计</td>
-								<td id="sumWeight" numtype="personal">4.601</td>
-								<td>&nbsp;</td>
-								<td id="sumMoney" numtype="personal">3,700.80</td>
-								<td>&nbsp;</td>
-								<td id="sumMoneyT" numtype="personal">4,621.00</td>
-								<td colspan="3">&nbsp;</td>
-							</tr>
-							<tr height="45">
-								<td colspan="8">所有页合计</td>
-								<td numtype="personal">1,335.341</td>
-								<td>&nbsp;</td>
-								<td numtype="personal">896,324.02</td>
-								<td>&nbsp;</td>
-								<td numtype="personal">637,900.53</td>
-								<td colspan="3">&nbsp;</td>
-							</tr>
-						</tfoot>
-					</table>
+					
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr class="fixTr">
+										<th width="4%">
+											<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选
+										</th>
+										<th width="13%">客户单位</th>
+										<th width="7%">出库日期</th>
+										<th width="5%">余料类型</th>
+										<th width="7%">品名</th>
+										<th width="7%">捆包号</th>
+										<th width="7%">规格</th>
+										<th width="7%">入库日期</th>
+										<th width="5%">重量</th>
+										<th width="5%">代售单价</th>
+										<th width="6%">代售金额</th>
+										<th width="5%">销售单价</th>
+										<th width="6%">销售金额</th>
+										<th width="6%">仓库</th>
+										<th width="4%">操作人</th>
+										<th width="4%">是否导出</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="4%">
+											<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+										</td>
+										<td width="13%">上海闳宝闻贸易有限公司</td>
+										<td width="7%">2020-09-11 14:58:56</td>
+										<td width="5%">边丝余料</td>
+										<td width="7%">冷轧卷板</td>
+										<td width="7%">2017092806-5</td>
+										<td width="7%">2.000*边丝*C</td>
+										<td width="7%">2020-07-16</td>
+										<td width="5%">2.000</td>
+										<td width="5%">800</td>
+										<td width="6%">1,600</td>
+										<td width="5%">1,000</td>
+										<td width="6%">2,000</td>
+										<td width="6%">华冶B区</td>
+										<td width="4%">上海加工</td>
+										<td width="4%">否</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45">
+										<td colspan="8">当前页合计</td>
+										<td id="sumWeight" numtype="personal">4.601</td>
+										<td>&nbsp;</td>
+										<td id="sumMoney" numtype="personal">3,700.80</td>
+										<td>&nbsp;</td>
+										<td id="sumMoneyT" numtype="personal">4,621.00</td>
+										<td colspan="3">&nbsp;</td>
+									</tr>
+									<tr height="45">
+										<td colspan="8">所有页合计</td>
+										<td numtype="personal">1,335.341</td>
+										<td>&nbsp;</td>
+										<td numtype="personal">896,324.02</td>
+										<td>&nbsp;</td>
+										<td numtype="personal">637,900.53</td>
+										<td colspan="3">&nbsp;</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 					<!-- table end -->
 					<script type="text/javascript" src="../js/pagelist.js"></script>
 				</div>

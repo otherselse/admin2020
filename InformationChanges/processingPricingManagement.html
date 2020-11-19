@@ -39,7 +39,7 @@
     </style>
 	</head>
 
-	<body class="showTip report">
+	<body class="showTip report fixtab">
 		<script type="text/javascript" src="../js/topBar.js"></script>
 		<!-- 头部菜单 -->
 		<script type="text/javascript" src="../js/menu.js"></script>
@@ -224,172 +224,162 @@
 				</div>
 
 				<div class="pl20 pr20">
-					<table class="ui-table tc f12 mt30 checkbox table-cw" width="100%" data-type="edit">
-						<thead>
-							<tr class="fixTr" style="width: 1200px;">
-								<th width="5%">
-									<div class=""><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
-											 onclick="setAll(this)"></i></div>
-								</th>
-								<th width="9%">加工商</th>
-								<th width="5%">金牌商家</th>
-								<th width="7%">入库日期</th>
-								<th width="9%">货主单位</th>
-								<th width="6%">品名</th>
-								<th width="8%">
-									<label class="sort-list div poi" onclick="setOrderCol('a.inDate',this)">
-										规格<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="4%">钢厂</th>
-								<th width="5%">牌号</th>
-								<th width="6%">计量方式</th>
-								<th width="5%">重量</th>
-								<th width="9%">
-									<label class="sort-list div poi" onclick="setOrderCol('a.inDate',this)">
-										销售单价<i class="goldIcon icon-sort vm ml5 down"></i></label>
-								</th>
-								<th width="140" class="tl">
-									<div class="pl10">
-										最近操作时间/操作人
-									</div>
-								</th>
-								<th width="5%">仓库</th>
-								<th width="5%">定价状态</th>
-								<th width="5%">挂牌状态</th>
-							</tr>
-						</thead>
-						<tbody class="ui-thover bgwh">
-							<tr>
-								<td width="5%">
-									<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
-								</td>
-								<td width="9%">上海光明实业有限公司</td>
-								<td width="5%">金管家</td>
-								<td width="7%">2020-10-21</td>
-								<td width="9%">坏猴子影业有限责任公司</td>
-								<td width="6%">酸洗卷板</td>
-								<td width="7%">2.500*1250*C</td>
-								<td width="4%">联丰</td>
-								<td width="5%">BLD</td>
-								<td width="6%">抄码</td>
-								<td width="4%" numtype="formatMoney">22</td>
-								<td width="7%">
-									<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
-									 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
-								</td>
-								<td class="tl">
-									<div class="pl10">
-										系统上挂
-										<div class="col-8080">2020-12-11 12:21:1</div>
-									</div>
-								</td>
-								<td width="4%">光明库</td>
-								<td width="5%">未定价 </td>
-								<td width="5%">
-									<span class="red">未挂牌</span>
-								</td>
-							</tr>
-							<tr>
-								<td width="5%">
-									<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
-								</td>
-								<td width="9%">上海光明实业有限公司</td>
-								<td width="5%">金管家</td>
-								<td width="7%">2020-10-21</td>
-								<td width="9%">坏猴子影业有限责任公司</td>
-								<td width="6%">酸洗卷板</td>
-								<td width="7%">2.500*1250*C</td>
-								<td width="4%">联丰</td>
-								<td width="5%">BLD</td>
-								<td width="6%">抄码</td>
-								<td width="4%" numtype="formatMoney">22</td>
-								<td width="7%">
-									<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
-									 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
-								</td>
-								<td class="tl">
-									<div class="pl10">
-										系统上挂
-										<div class="col-8080">2020-12-11 12:21:1</div>
-									</div>
-								</td>
-								<td width="4%">光明库</td>
-								<td width="5%">未定价 </td>
-								<td width="5%">
-									<span class="ss-08">未挂牌</span>
-								</td>
-							</tr>
-							<tr>
-								<td width="5%">
-									<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
-								</td>
-								<td width="9%">上海光明实业有限公司</td>
-								<td width="5%">金管家</td>
-								<td width="7%">2020-10-21</td>
-								<td width="9%">坏猴子影业有限责任公司</td>
-								<td width="6%">酸洗卷板</td>
-								<td width="7%">2.500*1250*C</td>
-								<td width="4%">联丰</td>
-								<td width="5%">BLD</td>
-								<td width="6%">抄码</td>
-								<td width="4%" numtype="formatMoney">22</td>
-								<td width="7%">
-									<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
-									 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
-								</td>
-								<td class="tl">
-									<div class="pl10">
-										系统上挂
-										<div class="col-8080">2020-12-11 12:21:1</div>
-									</div>
-								</td>
-								<td width="4%">光明库</td>
-								<td width="5%">未定价 </td>
-								<td width="5%">
-									<span>已挂牌</span>
-								</td>
-							</tr>
-						</tbody>
-						<!-- <tfoot class="">
-				            <tr height="45">
-				                <td colspan="19">
-				                   <div class="l ml10">
-				                        <input type="text" class="ui-input">
-				                        <button class="ui-button mr20" data-type="normal" small-type="small" type="button">批量修改价格</button>
-				                   </div>
-				                   <div class="r mr10">
-				                    <button type="button" class="ui-button mr10">挂牌销售</button>
-				                    <button type="button" class="ui-button">撤销挂牌</button>
-				                   </div>
-				                </td>
-				            </tr>
-				        </tfoot> -->
-
-						<tfoot>
-							<tr height="45" class="bgfa">
-								<td colspan="20" class="lh45">
-									<div class="l">
-										<i class="ui-checkbox ml10 goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
-											 onclick="setAll(this)"></i>全选
-										<span class="div ml20">已选择<span class="red">6</span>条信息</span>
-									</div>
-									<div class="r dac">
-										<a href="javascript:void(0)" class="mr20 blue f12 link-up g80 tipclick" qtip-dom="dom2">价格统调</a>
-										<button type="button" class="ui-button mr10">挂牌销售</button>
-										<button type="button" data-type="normal" class="ui-button">撤销挂牌</button>
-									</div>
-								</td>
-							</tr>
-						</tfoot>
-
-					</table>
-
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<thead>
+									<tr class="fixTr" style="width: 1200px;">
+										<th width="5%">
+											<div class=""><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
+													 onclick="setAll(this)"></i></div>
+										</th>
+										<th width="9%">加工商</th>
+										<th width="5%">金牌商家</th>
+										<th width="7%">入库日期</th>
+										<th width="9%">货主单位</th>
+										<th width="6%">品名</th>
+										<th width="8%">
+											<label class="sort-list div poi" onclick="setOrderCol('a.inDate',this)">
+												规格<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="4%">钢厂</th>
+										<th width="5%">牌号</th>
+										<th width="6%">计量方式</th>
+										<th width="5%">重量</th>
+										<th width="9%">
+											<label class="sort-list div poi" onclick="setOrderCol('a.inDate',this)">
+												销售单价<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										</th>
+										<th width="140" class="tl">
+											<div class="pl10">
+												最近操作时间/操作人
+											</div>
+										</th>
+										<th width="5%">仓库</th>
+										<th width="5%">定价状态</th>
+										<th width="5%">挂牌状态</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 table-cw" width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="5%">
+											<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+										</td>
+										<td width="9%">上海光明实业有限公司</td>
+										<td width="5%">金管家</td>
+										<td width="7%">2020-10-21</td>
+										<td width="9%">坏猴子影业有限责任公司</td>
+										<td width="6%">酸洗卷板</td>
+										<td width="8%">2.500*1250*C</td>
+										<td width="4%">联丰</td>
+										<td width="5%">BLD</td>
+										<td width="6%">抄码</td>
+										<td width="5%" numtype="formatMoney">22</td>
+										<td width="9%">
+											<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
+											 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+										</td>
+										<td width="140" class="tl">
+											<div class="pl10">
+												系统上挂
+												<div class="col-8080">2020-12-11 12:21:1</div>
+											</div>
+										</td>
+										<td width="5%">光明库</td>
+										<td width="5%">未定价 </td>
+										<td width="5%">
+											<span class="red">未挂牌</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="5%">
+											<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+										</td>
+										<td width="9%">上海光明实业有限公司</td>
+										<td width="5%">金管家</td>
+										<td width="7%">2020-10-21</td>
+										<td width="9%">坏猴子影业有限责任公司</td>
+										<td width="6%">酸洗卷板</td>
+										<td width="7%">2.500*1250*C</td>
+										<td width="4%">联丰</td>
+										<td width="5%">BLD</td>
+										<td width="6%">抄码</td>
+										<td width="4%" numtype="formatMoney">22</td>
+										<td width="7%">
+											<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
+											 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+										</td>
+										<td class="tl">
+											<div class="pl10">
+												系统上挂
+												<div class="col-8080">2020-12-11 12:21:1</div>
+											</div>
+										</td>
+										<td width="4%">光明库</td>
+										<td width="5%">未定价 </td>
+										<td width="5%">
+											<span class="ss-08">未挂牌</span>
+										</td>
+									</tr>
+									<tr>
+										<td width="5%">
+											<i class="ui-checkbox goldIcon vm mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+										</td>
+										<td width="9%">上海光明实业有限公司</td>
+										<td width="5%">金管家</td>
+										<td width="7%">2020-10-21</td>
+										<td width="9%">坏猴子影业有限责任公司</td>
+										<td width="6%">酸洗卷板</td>
+										<td width="7%">2.500*1250*C</td>
+										<td width="4%">联丰</td>
+										<td width="5%">BLD</td>
+										<td width="6%">抄码</td>
+										<td width="4%" numtype="formatMoney">22</td>
+										<td width="7%">
+											<input type="text" data="price" class="ui-input tc auto pct90" name="stockList[0].unitPrice" value="" svalue=""
+											 onclick="javascript:$(this).val('')" onblur="javascript:if(!$(this).val()){$(this).val($(this).attr('svalue'))}">
+										</td>
+										<td class="tl">
+											<div class="pl10">
+												系统上挂
+												<div class="col-8080">2020-12-11 12:21:1</div>
+											</div>
+										</td>
+										<td width="4%">光明库</td>
+										<td width="5%">未定价 </td>
+										<td width="5%">
+											<span>已挂牌</span>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr height="45" class="bgfa">
+										<td colspan="20" class="lh45">
+											<div class="l">
+												<i class="ui-checkbox ml10 goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
+													 onclick="setAll(this)"></i>全选
+												<span class="div ml20">已选择<span class="red">6</span>条信息</span>
+											</div>
+											<div class="r dac">
+												<a href="javascript:void(0)" class="mr20 blue f12 link-up g80 tipclick" qtip-dom="dom2">价格统调</a>
+												<button type="button" class="ui-button mr10">挂牌销售</button>
+												<button type="button" data-type="normal" class="ui-button">撤销挂牌</button>
+											</div>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
 				</div>
 				<!-- table end -->
 				<script type="text/javascript" src="../js/pagelist.js"></script>
 			</div>
 		</div><!-- ui-content end -->
-		</div><!-- rightBar end -->
 
 		<div class="qtip-content" id="qtip-3-content" aria-atomic="true">
 			<div class="dom2 f12" style="display: none; visibility: visible;">
