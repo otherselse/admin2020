@@ -15,13 +15,6 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 		<link rel="stylesheet" href="http://resource.lgsteel.cn/mylg2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
 		<style>
-			.ui-option,
-        .ui-optionNo {
-            background: #fff;
-            min-width: auto;
-        }
-
-
         .table-cell-fix-left,
         .table-cell-fix-right {
             left: 0;
@@ -43,7 +36,6 @@
             .m-tabLimitSCroll {
                 /* max-height: 520px; */
             }
-
             /* .ui-table {
                 min-width: 1440px;
             } */
@@ -213,7 +205,7 @@
 						<button type="button" class="ui-button mr10">查询</button>
 						<button type="button" class="ui-button" onclick="showSearchDn(this)" data-type="clear">
 							<span class="bText dib mr5">更多查询</span>
-							<img src="../images/report/fan.png" width="10" height="9" alt="">
+							<i class="fanArrowIcon t_deg180"></i>
 						</button>
 					</div>
 
@@ -234,8 +226,8 @@
 										<th width="4%">金牌商家</th>
 										<th width="3%">区域</th>
 										<th width="4%">备货类型</th>
-										<th viewcheckbox="true" viewinfo="permitDate" viewinfotitle="签定时间" width="4%">
-											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">签订时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
+										<th viewcheckbox="true" viewinfo="permitDate" data-item-field="b0" viewinfotitle="签定时间" width="4%">
+											<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">签定时间<i class="goldIcon icon-sort vm ml5 down"></i></label>
 										</th>
 										<th width="5%">供应商</th>
 										<th viewcheckbox="true" viewinfo="conWeight" data-item-field="b1" viewinfotitle="合同重量" width="3%">
@@ -294,7 +286,7 @@
 										<td width="4%" align="center"><a href="javascript:void(0)" oldtitle="联系方式：12233344441">唐宇捷</a></td>
 										<td width="3%">上海</td>
 										<td width="4%">客户单位任你押</td>
-										<td width="4%"> 2020-09-28 16:26 </td>
+										<td width="4%" data-item-field="b0"> 2020-09-28 16:26 </td>
 										<td width="5%">
 											<div class="pl5">
 												<a href="../public/userInfo.html" target="_block">乐乐集团有限公司</a>
@@ -345,6 +337,7 @@
 																		<button type="button" class="ui-option mr10">诉讼中</button>
 																		<button type="button" class="ui-option mr10">诉讼执行中</button>
 																		<button type="button" class="ui-option mr10">结案</button>
+																		<button type="button" class="ui-option">无需跟进</button>
 																	</span>
 																</div>
 																<div class="pct10"></div>
@@ -476,7 +469,7 @@
 										<td width="4%" align="center"><a href="javascript:void(0)" oldtitle="联系方式：12233344441">唐宇捷</a></td>
 										<td width="3%">上海</td>
 										<td width="4%">客户单位任你押</td>
-										<td width="4%"> 2020-09-28 16:26 </td>
+										<td width="4%" data-item-field="b0"> 2020-09-28 16:26 </td>
 										<td width="5%">
 											<div class="pl5">
 												<a href="../public/userInfo.html" target="_block">乐乐集团有限公司</a>
@@ -505,7 +498,7 @@
 										</td>
 										<td viewinfo="isGrossStart" data-item-field="b18" width="4%">执行中</td>
 										<td viewinfo="isConRec" data-item-field="b19" width="4%">
-											<span class="tiptop menuhook" title="杨兴旺 在 2020-10-27 09:18:27 已将合同回收">未回收</span>
+											<span class="tiptop menuhook g13" title="杨兴旺 在 2020-10-27 09:18:27 已将合同回收">已回收</span>
 										</td>
 										<td viewinfo="managerButton" data-item-field="b20" width="3%">
 											<a href="javascript:void(0)" onclick="showTrMore(this)">查看</a>
@@ -514,7 +507,9 @@
 								</tbody>
 								<tfoot class="bgfa">
 									<tr height="45">
-										<td colspan="6">单页汇总</td>
+										<td colspan="4">单页汇总</td>
+										<td data-item-field="b0"></td>
+										<td></td>
 										<td viewinfo="conWeight" data-item-field="b1" numtype="formatMoney">3,502</td>
 										<td viewinfo="conMoney" data-item-field="b2" numtype="formatMoney">3,544,655.8</td>
 										<td viewinfo="createDate" data-item-field="b3">--</td>
@@ -537,7 +532,9 @@
 										<td viewinfo="managerButton" data-item-field="b20">--</td>
 									</tr>
 									<tr height="45">
-										<td colspan="6">所有汇总</td>
+										<td colspan="4">所有汇总</td>
+										<td data-item-field="b0"></td>
+										<td></td>
 										<td viewinfo="conWeight" data-item-field="b1" numtype="formatMoney">3,502</td>
 										<td viewinfo="conMoney" data-item-field="b2" numtype="formatMoney">3,544,655.8</td>
 										<td viewinfo="createDate" data-item-field="b3">--</td>
@@ -577,14 +574,14 @@
 							 onclick="setPassFlag(0)"></i>否</label>
 				</span>
 			</div>
-			<button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick()">确认</button>
+			<button type="button" class="ui-button mr20" data-type="small" onclick="gotoClick(this)">确认</button>
 			<button type="button" class="ui-button mr20" data-type="clears" id="hideTip">取消</button>
 		</div>
 
 		<div class="layui-layer-shade dn max-mu" onclick="cloTable()" id="layui-layer-shade6" times="6">
 
 		</div>
-		<div class="layui-layer dn mu-table layui-layer-page lgui-table-tools bgfa auto ovh " style=" height: 400px;position:absolute;
+		<div class="layui-layer dn mu-table layui-layer-page lgui-table-tools bgfa auto ovh " style=" height: 430px;position:absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -621,8 +618,12 @@
 		<script>
 			$(function() {
 				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(4).addClass("on"); // 静态页面定位使用，开发使用title等定位
-
+				
+				
+				// $(function() {
+				
 			})
+			
 
 
 			$(".mySingle span").click(function() {
@@ -644,93 +645,118 @@
 		</script>
 
 		<script>
-			// $(function() {
+		
+			$(".tipclick").click(function(){
+				// console.log($(this).attr(id));
+			});
+			
+			function gotoClick(obj){
+				console.log($(obj));
+				$(obj).next(".ui-button").click();
+			}
 
-			//cols 定义显示及权限
-			var mylgColInfo = [{
-					"name": "b1",
-					"intro": "合同重量",
-					"status": false
-				}, {
-					"name": "b2",
-					"intro": "合同金额",
-					"status": false
-				}, {
-					"name": "b3",
-					"intro": "申请入库时间",
-					"status": false
-				}, {
-					"name": "b4",
-					"intro": "已入库重量(吨)",
-					"status": false
-				},
-				{
-					"name": "b5",
-					"intro": "出库重量(吨)",
-					"status": true
-				}, {
-					"name": "b6",
-					"intro": "已入库金额(吨)",
-					"status": false
-				}, {
-					"name": "b7",
-					"intro": "库存重量(吨)",
-					"status": false
-				}, {
-					"name": "b8",
-					"intro": "库存金额(元)",
-					"status": false
-				}, {
-					"name": "b9",
-					"intro": "销售收款金额",
-					"status": false
-				}, {
-					"name": "b10",
-					"intro": "已付款金额(元)",
-					"status": false
-				}, {
-					"name": "b11",
-					"intro": "资金占用利息",
-					"status": false
-				}, {
-					"name": "b12",
-					"intro": "参考市值(元)",
-					"status": false
-				}, {
-					"name": "b13",
-					"intro": "浮动金额(元)",
-					"status": true
-				}, {
-					"name": "b14",
-					"intro": "G2G冻结金额",
-					"status": true
-				}, {
-					"name": "b15",
-					"intro": "盈亏浮动比例",
-					"status": false
-				}, {
-					"name": "b16",
-					"intro": "定金占比",
-					"status": true
-				}, {
-					"name": "b17",
-					"intro": "定金剩余占比",
-					"status": true
-				}, {
-					"name": "b18",
-					"intro": "执行状态",
-					"status": true
-				}, {
-					"name": "b19",
-					"intro": "合同回收状态",
-					"status": true
-				}, {
-					"name": "b20",
-					"intro": "操作",
-					"status": true
+			var ary = "b1,b2,b3,b20".split(",");
+				console.log(ary);
+				
+				//cols 定义显示及权限
+				var mylgColInfo = [
+					{
+						"name": "b0",
+						"intro": "签定时间",
+						"status": true
+					},{
+						"name": "b1",
+						"intro": "合同重量",
+						"status": true
+					}, {
+						"name": "b2",
+						"intro": "合同金额",
+						"status": true
+					}, {
+						"name": "b3",
+						"intro": "申请入库时间",
+						"status": true
+					}, {
+						"name": "b4",
+						"intro": "已入库重量(吨)",
+						"status": true
+					},
+					{
+						"name": "b5",
+						"intro": "出库重量(吨)",
+						"status": true
+					}, {
+						"name": "b6",
+						"intro": "已入库金额(吨)",
+						"status": true
+					}, {
+						"name": "b7",
+						"intro": "库存重量(吨)",
+						"status": true
+					}, {
+						"name": "b8",
+						"intro": "库存金额(元)",
+						"status": true
+					}, {
+						"name": "b9",
+						"intro": "销售收款金额",
+						"status": true
+					}, {
+						"name": "b10",
+						"intro": "已付款金额(元)",
+						"status": true
+					}, {
+						"name": "b11",
+						"intro": "资金占用利息",
+						"status": true
+					}, {
+						"name": "b12",
+						"intro": "参考市值(元)",
+						"status": true
+					}, {
+						"name": "b13",
+						"intro": "浮动金额(元)",
+						"status": true
+					}, {
+						"name": "b14",
+						"intro": "G2G冻结金额",
+						"status": true
+					}, {
+						"name": "b15",
+						"intro": "盈亏浮动比例",
+						"status": true
+					}, {
+						"name": "b16",
+						"intro": "定金占比",
+						"status": true
+					}, {
+						"name": "b17",
+						"intro": "定金剩余占比",
+						"status": true
+					}, {
+						"name": "b18",
+						"intro": "执行状态",
+						"status": true
+					}, {
+						"name": "b19",
+						"intro": "合同回收状态",
+						"status": true
+					}, {
+						"name": "b20",
+						"intro": "操作",
+						"status": true
+					}
+					
+				]
+				
+				for(var i = 0;i < ary.length;i++){
+					for(var j = 0;j < mylgColInfo.length;j++){
+						if(ary[i]==mylgColInfo[j].name){
+							mylgColInfo[j].status = false;
+							break;
+						}
+					}
 				}
-			]
-
 			// 初始化表格数据
 			// var str = $(".lgui-table-body").find("tr").eq(0).prop("outerHTML");
 			// for (var i = 0; i < mylgColInfo.length; i++) {

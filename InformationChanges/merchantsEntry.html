@@ -51,8 +51,8 @@
                         &emsp;&emsp;&emsp;&emsp;姓名：<span class="ui-input pct70" data-type="big">
                             <input type="text" placeholder="请输入" class="pct80 lh24 v-0">
                             <span class="pct15 tr dib">
-                                <a class="icon-search  goldIcon vm" href="javascript:void(0)"
-                                    onclick="showLayer('选择金牌商家','../report/selectGoldMerchants.html')"></a>
+                                <a class="icon-search  goldIcon vm" onclick="selUser()" href="javascript:void(0)"></a>
+								 <!-- onclick="showLayer('选择金牌商家','../report/selectGoldMerchants.html')" -->
                             </span>
                         </span>
                     </span>
@@ -142,6 +142,17 @@
             layer.close(page);
         });
     }
+	
+	function selUser(){
+		layer.open({
+			type: 2,
+			title: '选择金牌商家',
+			shadeClose: true,
+			shade: 0.4,
+			area: ['960px', '405px'],
+			content: '../public/seluser.html' //需要传一个paream
+		});
+	}
 </script>
 
 </html>
