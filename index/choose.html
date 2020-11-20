@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+    <title>乐刚智能云系统</title>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body class="showTip report">
+    <script type="text/javascript" src="../js/topBar.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+
+    <div class="auto w1280">
+        <div class="nav ovh">
+            <div class="l gga">
+                <a href="../index/index.html" class="gga">首页</a>
+                <span class="dib pl5 pr5 ">/</span>
+                通讯录
+            </div>
+        </div>
+        <div class="ui-content ovh minH">
+            <div class="p30">
+                <div class="cl">
+                    <span class="g28 f24">通讯录</span>
+                    <a class="r ml30 mt2 lh30" onclick="showSearchIconDn(this)" href="javascript:void(0)" ot="更多查询">    <span class="bText dib mr5">更多查询</span><i class="fanArrowIcon"></i>
+                    </a>
+                    <span class="ui-input pct25 r" data-type="big">
+                        <input type="text" class="pct80 lh24 v-0" placeholder="请输入关键词">
+                        <span class="r dib"><a class="icon-searchb goldIcon vm" href="javascript:void(0)"></a></span>
+                    </span>
+                </div>
+                <div class="cl choose_searchbg mt20 cah dn">
+                    <div class="choose_sline ovh">
+                        <span class="dib vt mt2"><span class="g28">专业领域：&ensp;&ensp;</span></span>
+                        <span class="pct90 f12 dib">
+                            <!-- <a href="javascript:void(0)" class="choose_selAera">全部<i class="icon-sdel goldIcon ml2 v-3"></i></a> -->
+                            <a href="javascript:void(0)" class="choose_selAera">开发<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">法务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">人事<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">金牌商家<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">加工<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">加工客服<i class="icon-sdel goldIcon ml2 v-3"></i></a>                   
+                            <a href="javascript:void(0)" class="choose_selAera">法务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">人事<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">金牌商家<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">加工<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">加工客服<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">开发<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">法务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                        </span>
+                    </div>
+                    <div class="choose_sline ovh">
+                        <span class="dib vt mt2"><span class="g28">所在地区：&ensp;&ensp;</span></span>
+                        <span class="pct90 f12 dib">
+                            <a href="javascript:void(0)" class="choose_selAera">全部<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">开发<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">法务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">人事<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">产品应用服务<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">金牌商家<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                        </span>
+                    </div>                   
+                    <div class="choose_sline ovh">
+                        <span class="dib vt mt2"><span class="g28">按&ensp;姓&ensp;氏：&ensp;&ensp;</span></span>
+                        <span class="pct90 f12 dib">
+                            <!-- <a href="javascript:void(0)" class="choose_selAera">全部<i class="icon-sdel goldIcon ml2 v-3"></i></a> -->
+                            <a href="javascript:void(0)" class="choose_selAera">A<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">B<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">C<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">D<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">E<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">F<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">G<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">H<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">I<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">J<i class="icon-sdel goldIcon ml2 v-3"></i></a> 
+                            <a href="javascript:void(0)" class="choose_selAera">K<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">L<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">M<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">N<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">O<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">P<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">Q<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">R<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">S<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">T<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">U<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">V<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">W<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">X<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">Y<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                            <a href="javascript:void(0)" class="choose_selAera">Z<i class="icon-sdel goldIcon ml2 v-3"></i></a>
+                        </span>
+                    </div>   
+                    <div class="tc mt20"><button class="ui-button">查询</button></div>    
+                </div>
+                <!-- choose_searchbg end-->
+
+                <div class="ovh cl mt20">
+                    <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+                     <div class="choose_user">
+                        <div class="p10 rel">
+                            <img src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-09-23/1600839499563.jpg" class="choose_userImg vt">
+                            <div class="dib ml10 vt pct66">
+                                <div class="cl mt5"><span class="f14 g28 w70 ell dib vm">李航航</span><span class="f12 g80">上海</span></div>
+                                <div class="cl g80 f12 mt10 ell">
+                                    <i class="admIcon choose_tel vm "></i>15669826812
+                                    <i class="admIcon choose_mob vm ml20 mr5"></i>222
+                                </div>
+                                <div class="g28 ell f12 mt20">专业领域：产品设计服务</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- choose_user -->
+
+
+                </div>
+
+                <script type="text/javascript" src="../js/pagelist.js"></script>
+
+                <div class="tc mt40 mb30">
+                    <button class="ui-button " data-type="normal" type="button">上一步</button>
+                    <button class="ui-button ml10" type="button" id="step2">下一步</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="renzhi dn" >
+        <div style="padding: 5px; height: 380px; overflow-y: auto; " >
+            <p  style="padding:10px 30px;line-height:22px;display:table;height:1px;">
+                <span style="font-weight:bold;line-height:35px;display:inline-block">一、工作准则</span><br />
+      <span style="display:inline-block;text-indent:2em;">入职乐刚，防微慎独。不贪不占不以权谋私，不骄不躁不贪图享乐。热爱平台，心系用户。务实求真以服务平台用户，廉洁自律以用户满意为目标。
+       工作中做到实事求是，作风端正，依法办事，据德做人；力争当一名合格的、称职的、有作为的乐刚系统管理员！</span>
+       时刻保持思路清晰，正确行使自身岗位职权和履行岗位义务。<br />
+        <span style="font-weight:bold;line-height:35px;display:inline-block">二、任职要求 </span><br />
+        1、具有完全民事行为能力，具备任职合法性资格。 <br />
+        2、品行端正，遵守国家法律法规，符合岗位任职要求。 <br />
+        3、知悉并遵守乐刚网的各项管理规章制度，严格按制度办事。 <br />
+        4、妥善保管本人乐刚账户，不得随意将本人账户及密码告知或委托他人，否则承担由此带来的一切不利后果。 <br />
+        5、恪守职业道德，积极履行职责，规范操作行为，承诺对本人的所有操作行为负法律责任。 <br />
+        6、遵照诚实信用原则，所有操作行为务必审慎对待，对可能出现的问题及风险有及时报告的义务。 <br />
+        7、忠诚履职、廉洁自律，承诺保守乐刚网中的一切商业秘密。 <br />
+        8、接受乐刚网的监督管理，维护乐刚网形象，不做有损乐刚网利益的行为。 <br />
+        <span style="font-weight:bold;line-height:35px;display:inline-block">三、保密责任 </span><br />
+        1、除履行职务需要之外，未经乐刚事先书面同意，不得泄漏、传播、公布、发表、或者以其他任何方式使任何第三方（包括无权知悉该项秘密的其他职员）知悉属于乐刚或者属于第三方但乐刚承诺有保密义务的商业秘密，也不得在履行职务之外使用这些秘密信息。 <br />
+        2、不得将涉及乐刚保密的信息用于其他的任何用途。除为执行乐刚项目目的外，不得对保密信息进行复制，对外泄漏。未经上海乐刚供应链股份有限公司同意，也不得利用保密信息进行新的研究或开发。 <br />
+        3、对自己的账号信息予以妥善保管，并对保密信息在工作期间发生的非技术原因失密事故承担保密责任。  <br />
+        4、离岗后不得将各种涉及乐刚智能云系统的安全信息对外泄漏，否则，乐刚保留追究泄密损失的权利。 <br />
+         <br />
+        您点击本声明下方的“我已阅读并同意”按钮即视为您承诺本声明的全部内容，对本声明的各项条款，完全理解其字意及规定精神，愿负绝对责任，并遵守履行。  
+            </p>
+        </div>
+        <div align="center">
+            <button class="ui-button "  type="button" id="pageAgree">我已阅读并同意</button>
+            <button class="ui-button ml10" type="button"  id="pageCancelbtn" data-type="normal">不同意</button>
+        </div>
+    </div>
+
+
+     <div class="secrecyAgree" style="padding: 5px; height: 426px; overflow-y: auto; display: none;">
+        <p style="margin:50px 20px 0px;font-size:18px;text-align:center;font-weight:bold">保密要求</p>
+        <p style="margin:50px 20px 20px;font-size:16px">根据乐刚智能云系统保密责任，未经乐刚事先书面同意，不得：</p>
+    
+        <p style="margin:20px;font-size:16px;color:#FF6600;text-indent:2em">复制、泄漏、传播、公布、发表</p>
+        
+     
+        <p style="margin:20px 20px 60px ;font-size:16px;text-indent:2em"><span style="color:#FF6600">或者以其他任何方式</span>使任何第三方（包括无权知悉乐刚智能云系统信息的其他职员）知悉属于乐刚或者属于第三方但乐刚承诺有保密义务的商业秘密，也不得在履行职务之外使用这些秘密信息。</p>
+        <div align="center">
+            <button class="ui-button "  type="button" id="pagebtn">确定</button>
+        </div>
+    </div>
+        
+    
+    
+
+
+    <script type="text/javascript" src="../js/admin.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            //点击专业领域选中
+            $("body").on("click",".choose_selAera",function(){
+             $(this).addClass("on").siblings().removeClass("on")
+            })
+
+
+            $('#step2').on('click', function(){
+                var pageii = layer.open({
+                    type: 1,
+                    title: '乐刚网管理员任职声明',
+                    area: ['1000px', '480px'],
+                    content: $(".renzhi")
+                });
+            })
+
+            //自设关闭
+            $('#pageAgree').on('click', function(){
+                /*var pageii = layer.open({
+                        type: 1,
+                        offset:['50px',''],
+                        title: '乐刚网管理员保密要求',
+                        //closeBtn: [0, false], //去掉默认关闭按钮
+                        area: ['1000px', '480px'],
+                        content: $(".secrecyAgree")
+                        });*/
+
+                        window.location='index.html'
+
+                
+            }); 
+
+       })
+    </script>
+
+
+</body>
+</html>

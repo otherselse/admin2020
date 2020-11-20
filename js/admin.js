@@ -258,9 +258,13 @@ function getWidth(){
 function getHeader(){	
 	if($("body").hasClass("fixtab")){
 		if($(window).width()>=1440){
-			$(".lgui-table-header").width($(window).width()-300);
+			if($(".setLeftBar ").hasClass("on")){
+				$(".lgui-table-header").width($(window).width()-300);
+			}else{
+				$(".lgui-table-header").width($(window).width()-100);
+			}
+			//$(".lgui-table-header").width($(window).width()-300);
 		}else{
-			$(".lgui-table-header").width($(window).width()-100);
 			if($(window).width()<1280){
 				$(".lgui-table-header").removeClass("fixed");
 				$(".lgui-table-body").removeAttr("style");
@@ -364,9 +368,9 @@ function showSearchDn(obj) {
 	$(".cah").toggleClass("dn");
 	$(obj).find("img").toggleClass("t_deg180");
 	if ($(".cah").attr("class").indexOf("dn") < 0) {
-		$(".bText").text("收起");
+		$(obj).find(".bText").text("收起");
 	} else {
-		$(".bText").text("更多查询");
+		$(obj).find(".bText").text("更多查询");
 	}
 }
 

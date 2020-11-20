@@ -111,7 +111,7 @@ for(var i=0;i<menu_Data.length;i++){
 			 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
 		var _menuStrA=''
 		for(var a=0;a<menu_Data[i].menuList[0].smallM.length;a++){
-			_menuStrA+='<a class="mDListShow" href="'+menu_Data[i].menuList[0].smallM[a].href+'">'+menu_Data[i].menuList[0].smallM[a].mtitle+'</a>'
+			_menuStrA+='<a class="mDListShow  rel" href="'+menu_Data[i].menuList[0].smallM[a].href+'">'+menu_Data[i].menuList[0].smallM[a].mtitle+'</a>'
 		}
 		_menuStr+=_menuStrA+'</div></div></div></span>'
 	}else{
@@ -124,17 +124,15 @@ for(var i=0;i<menu_Data.length;i++){
 			var _menuStrV='';
 			for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
 				if(menu_Data[i].menuList[j].smallM[v].hide){
-					_menuStrV+='<a class="mDListShow" style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
+					_menuStrV+='<a class="mDListShow " style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}else{
-					_menuStrV+='<a class="mDListShow" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
+					_menuStrV+='<a class="mDListShow  rel" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}
-				
 			}
 			_menuStrD+='<div class="mDListCont trans">'+_menuStrV+'</div></div>'
 		}
 		_menuStr+=_menuStrD+'</div></div></span>'
 	}
-	
 }
 $(".menuConfig").html(_menuStr)
 //console.log(_menuStr)
