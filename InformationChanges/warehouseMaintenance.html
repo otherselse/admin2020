@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>仓库信息维护-信息管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <style>
-        .hideTr1 {
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>仓库信息维护-信息管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			.hideTr1 {
             background: #F1F3F7;
         }
 		
@@ -27,456 +27,439 @@
 		}
 
     </style>
-</head>
+	</head>
 
-<body class="showTip report fixtab">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                信息管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">仓库信息维护</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-
-        <div class="fix f12 bgwh ui-content ovh minH">
-            <div class="pl20 pr20">
-                <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,650)"
-                        class="dib xzhj-button daj">
-                        <span class="dib mr10">新增仓库信息</span> <img src="../images/documnts/t8.png" width="20px"
-                            height="20px" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="mb20 f0 mt20 ml20  mr20">
-                <div class="mb10 f12 dac">
-                    <span class="dib pct44">
-                        <div class="df">
-                            <div class="min-w60 searchLable">仓库状态：</div>
-                            <div class="dib selectSingle gc">
-                                <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)" class="">未确认</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)">已确认</a>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="dib f1">
-                        <div class="df">
-                            <div class="min-w60 searchLable">单据模板：</div>
-                            <div class="dib selectSingle gc">
-                                <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)" class="">未上传</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)">已上传</a>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-
-                <div class="mb10 f12 dac">
-                    <span class="dib pct44">
-                        <div class="df">
-                            <div class="min-w60 searchLable">会员标记：</div>
-                            <div class="dib selectSingle gc">
-                                <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)" class="">会员仓库</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)">非会员仓库</a>
-                            </div>
-                        </div>
-                    </span>
-
-                    <span class="dib f1">
-                        <div class="df">
-                            <div class="min-w60 searchLable">停用标记：</div>
-                            <div class="dib selectSingle gc">
-                                <a href="javscript:void(0)" class="on">全部</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)" class="">停用</a>
-                                <span class="">|</span>
-                                <a href="javscript:void(0)">非停用</a>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-
-                <div class="mb10 df f0">
-                    <span class="pct22 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><input type="text" class="ui-input pct69"
-                            placeholder="请输入"></span>
-                    <span class="pct22 dib f12"><span class="searchLable">仓库：</span><input type="text" class="ui-input pct69"
-                            placeholder="请输入"></span>
-                    <span class="pct22 dib f12"><span class="searchLable">仓库单位：</span><span class="input-selSearch pct69">
-                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off"
-                                readonly="">
-                            <div class="search-cont">
-                                <a href="javascript:void(0)" class="search-list db ell">北京</a>
-                                <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-                                <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                            </div>
-                        </span>
-                    </span>
-					<span class="pct30 m_pct31 dib f12">
-					    <span class="searchLable">操作时间：</span><span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-					        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-					            class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-					            class="render-time pct45" readonly="">
-					    </span>
-					</span>
-                </div>
-
-                <div class="mb10 f0">
-                    <span class="pct22 dib f12"><span class="searchLable">&emsp;操作人：</span><input type="text" class="ui-input pct69"
-                            placeholder="请输入"></span>
-                  <span class="pct22 dib f12"><span class="searchLable">地址：</span><input type="text" class="ui-input pct69" placeholder="请输入"></span>
-                    <span class="dib f1 f12">
-                        <button type="button" class="ui-button mr10">查询</button>
-                        <button type="button" class="ui-button " data-type="clear">清空</button>
-                    </span>
-                </div>
-            </div>
-            <!-- search end -->
-            <div class="lgui-table-box ml20 mt30 mr20">
-				<div class="lgui-table-header">
-					<table class="ui-table tc f12 table-cw" width="100%">
-						<thead>
-						    <tr>
-						        <th width="5%">序号</th>
-						        <th width="10%">
-						            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">仓库<i
-						                    class="goldIcon icon-sort vm ml5 down"></i></label>
-						        </th>
-						        <th width="10%">仓库地址</th>
-						        <th width="10%">仓库单位/传真</th>
-						        <th width="8%">
-						            <label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">成交量(吨)<i
-						                    class="goldIcon icon-sort vm ml5 down"></i></label>
-						        </th>
-						        <th width="13%">联系人/联系电话</th>
-						        <th width="10%">入库单据模板</th>
-						        <th width="10%">出库单据模板</th>
-						        <th width="8%">会员标记</th>
-						        <th width="16%">操作</th>
-						    </tr>
-						</thead>
-					</table>
+	<body class="showTip report fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					信息管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">仓库信息维护</span>
 				</div>
-                <div class="lgui-table-body">
-                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <tbody class="ui-thover">
-                            <tr>
-                                <td width="5%">1</td>
-                                <td width="10%">真元</td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo">防守打法</div>
-                                </td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
-                                    </div>
-                                </td>
-                                <td width="8%">0</td>
-                                <td width="13%">
-                                    <div class="lh25">地方/11122222222</div>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="8%">会员仓库</td>
-                                <td width="16%">
-                                    <i class="dib  icon-stock-enter poi s-tip tiptop op5"
-                                        onclick="showLayer('仓库信息确认','determineTheWarehouse.html',960,500)"
-                                        title="信息确认"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
-                                        onclick="showTrMore(this,2957)"></i>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr class="n17-Ttitle">
-                                                    <th width="10%">序号</th>
-                                                    <th width="21%">操作人</th>
-                                                    <th width="16%">操作时间</th>
-                                                    <th width="26%">操作动作</th>
-                                                    <th width="27%">备注</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>赵自立</td>
-                                                    <td>2020-07-29 16:03:25</td>
-                                                    <td>确认仓库信息</td>
-                                                    <td>登记支付扽记之分</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
-                            <tr>
-                                <td width="5%">3</td>
-                                <td width="10%">嘟嘟嘟</td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo" style="width: 100px">123123</div>
-                                </td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
-                                    </div>
-                                </td>
-                                <td width="8%">0</td>
-                                <td width="13%">
-                                    <div class="lh25">123/12345677654</div>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="8%">非会员仓库</td>
-                                <td width="16%">
-                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop op5"
-                                        onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
-                                        title="仓库单位维护"></i>
-                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
-                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',960,700)" title="信息修改"></i>
-                                    <i id="depotIsDel02955" style="display:inline-block "
-                                        class="dib icon-stock-t poi s-tip isDelButton mr5 tiptop op5" title="停用仓库"
-                                        onclick="showLayer('停用仓库','stopUsingTheWarehouse.html',600,350)"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
-                                        onclick="showTrMore(this)"></i>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr class="n17-Ttitle">
-                                                    <th width="10%">序号</th>
-                                                    <th width="21%">操作人</th>
-                                                    <th width="16%">操作时间</th>
-                                                    <th width="26%">操作动作</th>
-                                                    <th width="27%">备注</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>赵自立</td>
-                                                    <td>2020-07-29 16:03:25</td>
-                                                    <td>确认仓库信息</td>
-                                                    <td>登记支付扽记之分</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
 
-                            <tr>
-                                <td width="5%">3</td>
-                                <td width="10%">嘟嘟嘟</td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo" style="width: 100px">123123</div>
-                                </td>
-                                <td width="10%">
-                                    <div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
-                                    </div>
-                                </td>
-                                <td width="8%">0</td>
-                                <td width="13%">
-                                    <div class="lh25">123/12345677654</div>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="10%">
-                                    <a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18"
-                                        data-hasqtip="15" data-type="smallbbr">
-                                        <span class="dib imgIcon"></span>&nbsp;
-                                        <span class="lh16 f14 dib vt">3</span>
-                                    </a>
-                                </td>
-                                <td width="8%">非会员仓库</td>
-                                <td width="16%">
-                                    <i class="dib mr5 icon-stock-w poi s-tip tiptop op5"
-                                        onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
-                                        title="仓库单位维护"></i>
-                                    <i class="dib mr5 icon-stock-x poi s-tip tiptop op5"
-                                        onclick="showLayer('信息修改','modifyTheWarehouse.html',960,650)" title="信息修改"></i>
-                                    <i id="depotIsDel12955" class="dib icon-stock-q poi s-tip isDelButton mr5 tiptop op5"
-                                        title="启用仓库"
-                                        onclick="showLayer('启用仓库','toEnableTheWarehouse.html',600,350)"></i>
-                                    <i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情"
-                                        onclick="showTrMore(this)"></i>
-                                </td>
-                            </tr>
-                            <!-- 点击执行显示 -->
-                            <tr class="hideTr dn">
-                                <td colspan="10">
-                                    <div class="pl20 pr20">
-                                        <table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
-                                            <thead>
-                                                <tr class="n17-Ttitle">
-                                                    <th width="10%">序号</th>
-                                                    <th width="21%">操作人</th>
-                                                    <th width="16%">操作时间</th>
-                                                    <th width="26%">操作动作</th>
-                                                    <th width="27%">备注</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="ui-thover">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>赵自立</td>
-                                                    <td>2020-07-29 16:03:25</td>
-                                                    <td>确认仓库信息</td>
-                                                    <td>登记支付扽记之分</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr><!-- 隐藏内容end -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- table end -->
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-            <div class="mb20"></div>
-        </div>
-    </div>
+			<div class="fix f12 bgwh ui-content ovh minH">
+				<div class="pl20 pr20">
+					<div class="xzhj mt20 daj">
+						<a href="javascript:void(0)" onclick="showLayer('新增仓库信息','theNewWarehouse.html',960,650)" class="dib xzhj-button daj">
+							<span class="dib mr10">新增仓库信息</span> <img src="../images/documnts/t8.png" width="20px" height="20px" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="mb20 f0 mt20 ml20  mr20">
+					<div class="mb10 f12 dac">
+						<span class="dib pct44">
+							<div class="df">
+								<div class="min-w60 searchLable">仓库状态：</div>
+								<div class="dib selectSingle gc">
+									<a href="javscript:void(0)" class="on">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)" class="">未确认</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">已确认</a>
+								</div>
+							</div>
+						</span>
+						<span class="dib f1">
+							<div class="df">
+								<div class="min-w60 searchLable">单据模板：</div>
+								<div class="dib selectSingle gc">
+									<a href="javscript:void(0)" class="on">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)" class="">未上传</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">已上传</a>
+								</div>
+							</div>
+						</span>
+					</div>
 
-    <!-- 查看图片 -->
-    <div class="f12 dom18 dn">
-        <div class="selectDiv f12">
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-            <div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+					<div class="mb10 f12 dac">
+						<span class="dib pct44">
+							<div class="df">
+								<div class="min-w60 searchLable">会员标记：</div>
+								<div class="dib selectSingle gc">
+									<a href="javscript:void(0)" class="on">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)" class="">会员仓库</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">非会员仓库</a>
+								</div>
+							</div>
+						</span>
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                position: {
-                    my: 'top center',
-                    at: 'bottom center'
-                },
-                // position: {
-                //  viewport: $(window)
-                // },
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                }
-            });
-            //myTipclick-p0 点击出现数据段没有内边距
-            $('.myTipclick-p0').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                position: {
-                    my: 'top center',
-                    at: 'bottom center'
-                },
-                // position: {
-                //     viewport: $(window)
-                // },;
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0',  //
-                },
-            });
-            
-            $("tr").hover(function(){
-                $(this).find(".s-tip").toggleClass("op5");
-            },function(){
-                $(this).find(".s-tip").toggleClass("op5");
-            });
-        })
-    </script>
-    <script>
+						<span class="dib f1">
+							<div class="df">
+								<div class="min-w60 searchLable">停用标记：</div>
+								<div class="dib selectSingle gc">
+									<a href="javscript:void(0)" class="on">全部</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)" class="">停用</a>
+									<span class="">|</span>
+									<a href="javscript:void(0)">非停用</a>
+								</div>
+							</div>
+						</span>
+					</div>
 
-        function showLayer(name, url, w, h) {
-            layer.open({
-                type: 2,
-                title: name,
-                shadeClose: true,
-                shade: 0.4,
-                area: [w + 'px', h + 'px'],
-                content: url //iframe的url
-            });
-        }
-    </script>
-</body>
+					<div class="mb10 df f0">
+						<span class="pct25 dib f12"><span class="searchLable">&emsp;&emsp;区域：</span><input type="text" class="ui-input pct69"
+							 placeholder="请输入"></span>
+						<span class="pct25 dib f12"><span class="searchLable">仓库单位：</span><span class="input-selSearch pct69">
+								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">北京</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</span>
+						<span class="pct25 dib f12"><span class="searchLable">仓库：</span><input type="text" class="ui-input pct69"
+							 placeholder="请输入"></span>
+
+						<span class="pct25 dib f12"><span class="searchLable">地址：</span><input type="text" class="ui-input pct69"
+							 placeholder="请输入"></span>
+					</div>
+					<div class="mb10 f0">
+						<span class="pct25 dib f12"><span class="searchLable">&emsp;操作人：</span><input type="text" class="ui-input pct69"
+							 placeholder="请输入"></span>
+						<span class="pct25 m_pct31 dib f12">
+							<span class="searchLable">操作时间：</span><span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+							</span>
+						</span>
+					</div>
+					<div class="tc mt20">
+						<button type="button" class="ui-button mr10">查询</button>
+						<button type="button" class="ui-button " data-type="clear">清空</button>
+					</div>
+				</div>
+				<!-- search end -->
+				<div class="lgui-table-box ml20 mt30 mr20">
+					<div class="lgui-table-header">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<thead>
+								<tr>
+									<th width="5%">序号</th>
+									<th width="10%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">仓库<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="10%">仓库地址</th>
+									<th width="10%">仓库单位/传真</th>
+									<th width="8%">
+										<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">成交量(吨)<i class="goldIcon icon-sort vm ml5 down"></i></label>
+									</th>
+									<th width="13%">联系人/联系电话</th>
+									<th width="10%">入库单据模板</th>
+									<th width="10%">出库单据模板</th>
+									<th width="8%">会员标记</th>
+									<th width="16%">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body">
+						<table class="ui-table checkbox tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+									<td width="5%">1</td>
+									<td width="10%">真元</td>
+									<td width="10%">
+										<div class="ell lh25 demo">防守打法</div>
+									</td>
+									<td width="10%">
+										<div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
+										</div>
+									</td>
+									<td width="8%">0</td>
+									<td width="13%">
+										<div class="lh25">地方/11122222222</div>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="8%">会员仓库</td>
+									<td width="16%">
+										<i class="dib  icon-stock-enter poi s-tip tiptop op5" onclick="showLayer('仓库信息确认','determineTheWarehouse.html',960,750)"
+										 title="信息确认"></i>
+										<i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情" onclick="showTrMore(this,2957)"></i>
+									</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+									<td colspan="10">
+										<div class="pl20 pr20">
+											<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+												<thead>
+													<tr class="n17-Ttitle">
+														<th width="10%">序号</th>
+														<th width="21%">操作人</th>
+														<th width="16%">操作时间</th>
+														<th width="26%">操作动作</th>
+														<th width="27%">备注</th>
+													</tr>
+												</thead>
+												<tbody class="ui-thover">
+													<tr>
+														<td>1</td>
+														<td>赵自立</td>
+														<td>2020-07-29 16:03:25</td>
+														<td>确认仓库信息</td>
+														<td>登记支付扽记之分</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr><!-- 隐藏内容end -->
+								<tr>
+									<td width="5%">3</td>
+									<td width="10%">嘟嘟嘟</td>
+									<td width="10%">
+										<div class="ell lh25 demo" style="width: 100px">123123</div>
+									</td>
+									<td width="10%">
+										<div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
+										</div>
+									</td>
+									<td width="8%">0</td>
+									<td width="13%">
+										<div class="lh25">123/12345677654</div>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="8%">非会员仓库</td>
+									<td width="16%">
+										<i class="dib mr5 icon-stock-w poi s-tip tiptop op5" onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
+										 title="仓库单位维护"></i>
+										<i class="dib mr5 icon-stock-x poi s-tip tiptop op5" onclick="showLayer('信息修改','modifyTheWarehouse.html',960,700)"
+										 title="信息修改"></i>
+										<i id="depotIsDel02955" style="display:inline-block " class="dib icon-stock-t poi s-tip isDelButton mr5 tiptop op5"
+										 title="停用仓库" onclick="showLayer('停用仓库','stopUsingTheWarehouse.html',600,350)"></i>
+										<i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情" onclick="showTrMore(this)"></i>
+									</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+									<td colspan="10">
+										<div class="pl20 pr20">
+											<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+												<thead>
+													<tr class="n17-Ttitle">
+														<th width="10%">序号</th>
+														<th width="21%">操作人</th>
+														<th width="16%">操作时间</th>
+														<th width="26%">操作动作</th>
+														<th width="27%">备注</th>
+													</tr>
+												</thead>
+												<tbody class="ui-thover">
+													<tr>
+														<td>1</td>
+														<td>赵自立</td>
+														<td>2020-07-29 16:03:25</td>
+														<td>确认仓库信息</td>
+														<td>登记支付扽记之分</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr><!-- 隐藏内容end -->
+
+								<tr>
+									<td width="5%">3</td>
+									<td width="10%">嘟嘟嘟</td>
+									<td width="10%">
+										<div class="ell lh25 demo" style="width: 100px">123123</div>
+									</td>
+									<td width="10%">
+										<div class="ell lh25 demo tiptop menuhook" title="哈哈哈哈哈哈公司/1233344">哈哈哈哈哈哈公司/1233344
+										</div>
+									</td>
+									<td width="8%">0</td>
+									<td width="13%">
+										<div class="lh25">123/12345677654</div>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="10%">
+										<a href="javascript:void(0)" class="myTipclick-p0" qtip-dom="dom18" data-hasqtip="15" data-type="smallbbr">
+											<span class="dib imgIcon"></span>&nbsp;
+											<span class="lh16 f14 dib vt">3</span>
+										</a>
+									</td>
+									<td width="8%">非会员仓库</td>
+									<td width="16%">
+										<i class="dib mr5 icon-stock-w poi s-tip tiptop op5" onclick="showLayer('仓库单位维护','warehouseMaintenanceMin.html',960,530)"
+										 title="仓库单位维护"></i>
+										<i class="dib mr5 icon-stock-x poi s-tip tiptop op5" onclick="showLayer('信息修改','modifyTheWarehouse.html',960,700)"
+										 title="信息修改"></i>
+										<i id="depotIsDel12955" class="dib icon-stock-q poi s-tip isDelButton mr5 tiptop op5" title="启用仓库" onclick="showLayer('启用仓库','toEnableTheWarehouse.html',600,350)"></i>
+										<i class="dib icon-stock-list poi s-tip tiptop op5" title="操作记录详情" onclick="showTrMore(this)"></i>
+									</td>
+								</tr>
+								<!-- 点击执行显示 -->
+								<tr class="hideTr dn">
+									<td colspan="10">
+										<div class="pl20 pr20">
+											<table class="ui-table tc f12 auto  showShadow mt-1" width="100%">
+												<thead>
+													<tr class="n17-Ttitle">
+														<th width="10%">序号</th>
+														<th width="21%">操作人</th>
+														<th width="16%">操作时间</th>
+														<th width="26%">操作动作</th>
+														<th width="27%">备注</th>
+													</tr>
+												</thead>
+												<tbody class="ui-thover">
+													<tr>
+														<td>1</td>
+														<td>赵自立</td>
+														<td>2020-07-29 16:03:25</td>
+														<td>确认仓库信息</td>
+														<td>登记支付扽记之分</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</td>
+								</tr><!-- 隐藏内容end -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- table end -->
+				<script type="text/javascript" src="../js/pagelist.js"></script>
+				<div class="mb20"></div>
+			</div>
+		</div>
+
+		<!-- 查看图片 -->
+		<div class="f12 dom18 dn">
+			<div class="selectDiv f12">
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+				<div class="mt5 tc"><a href="" class="g68">信用证草本.jpg</a></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(0).addClass("on"); // 静态页面定位使用，开发使用title等定位
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					position: {
+						my: 'top center',
+						at: 'bottom center'
+					},
+					// position: {
+					//  viewport: $(window)
+					// },
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
+					}
+				});
+				//myTipclick-p0 点击出现数据段没有内边距
+				$('.myTipclick-p0').qtip({
+					show: {
+						event: 'click'
+					},
+					hide: 'unfocus',
+					content: {
+						text: function(event, api) {
+							return $("." + $(this).attr('qtip-dom')) //qtip-dom 是点击提示框的内容的id，自己定义
+						}
+					},
+					position: {
+						my: 'top center',
+						at: 'bottom center'
+					},
+					// position: {
+					//     viewport: $(window)
+					// },;
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded qtip-lep0', //
+					},
+				});
+
+				$("tr").hover(function() {
+					$(this).find(".s-tip").toggleClass("op5");
+				}, function() {
+					$(this).find(".s-tip").toggleClass("op5");
+				});
+			})
+		</script>
+		<script>
+			function showLayer(name, url, w, h) {
+				layer.open({
+					type: 2,
+					title: name,
+					shadeClose: true,
+					shade: 0.4,
+					area: [w + 'px', h + 'px'],
+					content: url //iframe的url
+				});
+			}
+		</script>
+	</body>
 
 </html>
