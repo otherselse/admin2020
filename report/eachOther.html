@@ -1,243 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>商互通管理-报表管理-乐刚智能云系统</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>商互通管理-报表管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
-</head>
+	</head>
 
-<body class="showTip report fixtab">
-    <script type="text/javascript" src="../js/topBar.js"></script>
-    <!-- 头部菜单 -->
-    <script type="text/javascript" src="../js/menu.js"></script>
-    <script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
-    <script type="text/javascript" src="../js/leftBar.js"></script>
-    <!-- 左侧菜单 -->
+	<body class="showTip report fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
 
-    <div class="rightBar">
-        <div class="nav ovh">
-            <div class="l gga">
-                <a href="../index/index.html" class="gga">首页</a>
-                <span class="dib pl5 pr5 ">/</span>
-                报表管理
-                <span class="dib pl5 pr5">/</span>
-                <span class="g28">商互通管理</span>
-            </div>
-            <div class="r m_dn">
-                左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
-            </div>
-        </div>
-        <div class=" fix f12 bgwh ui-content ovh minH p20">
-            <div class="mb10 df ">
-                <span class="pct25 dib  tr">
-                    <span class="searchLable">备货金牌商家：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct22 dib  tr">
-                    <span class="searchLable">仓库：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct22 dib  tr">
-                    <span class="searchLable">规格：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct30 dib  tr">
-                    <span class="searchLable">&emsp;成交时间：</span>
-                    <span class="ui-input f0 pct69 range" data-type="time">
-                        <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""
-                            autocomplete="off"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                            class="render-time pct45" readonly="" autocomplete="off">
-                    </span>
-                </span>
-            </div>
-
-            <div class="mb10 mt10 df">
-                <span class="pct25 dib  tr">
-                    <span class="searchLable">购买金牌商家：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct22 dib tr">
-                    <span class="searchLable">钢厂：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct22 dib  tr">
-                    <span class="searchLable">牌号：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct30 dib f12 tr">
-                    <span class="searchLable">备货订单号：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-            </div>
-            <div class="mb10 mt10">
-                <span class="pct25 dib  tr">
-                    <span class="searchLable">商互通订单号：</span>
-                    <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct22 dib tr" style="margin-left: -3px;">
-                    <span class="searchLable">品名：</span>
-                    <input type="text" class="ui-input pct69 mr-2" placeholder="请输入" autocomplete="off">
-                </span>
-                <span class="pct50 dib">
-                    <span class="searchLable">&emsp;&emsp;支付方式：</span>
-                    <span class="radio">
-                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio"
-                                    class="radio-opacity" name="radio"></i>G2G支付</label>
-                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                    class="radio-opacity" name="radio"></i>白条支付</label>
-                    </span>
-                </span>
-            </div>
-            <div class="mb10 mt10">
-                <span class="pct50 dib ">
-                    <span class="dib searchLable">&emsp;&emsp;分红模式：</span>
-                    <span class="selectSingle">
-                        <a class="on" href="javscript:void(0)">2元/吨</a>
-                        <span class="">|</span>
-                        <a href="javscript:void(0)">20%的红利</a>
-                        <span class="">|</span>
-                        <a href="javscript:void(0)">60%的红利</a>
-                        <span class="">|</span>
-                        <a href="javscript:void(0)">100%的红利</a>
-                    </span>
-                </span>
-                <span class="pct50 f12">
-                    <button type="button" class="ui-button mr10">查询</button>
-                </span>
-            </div>
-			
-			<div class="lgui-table-box mt30 checkbox">
-				<div class="lgui-table-header">
-					<table class="ui-table tc f12" width="100%">
-						<thead>
-							<tr>
-							    <th width="8%" class="tl">
-							        <div class="pl10">
-							            备货订单号/<br>商互通订单号
-							        </div>
-							    </th> 
-							    <th width="7%" class="tl">
-							        <div class="pl10">
-							            金牌商家
-							        </div>
-							    </th>
-							    <th width="12%" class="tl">
-							        <div class="pl10">
-							            品名/牌号/规格
-							        </div>
-							    </th>
-							    <th width="10%" class="tl">
-							        <div class="pl10">
-							            备货单位
-							        </div>
-							    </th>
-							    <th widht="8%" class="tl">
-							        <div class="pl10">
-							            支付方式/日期
-							        </div>
-							    </th>
-							    <th width="4%">仓库</th>
-							    <th width="4%">钢厂</th>
-							    <th width="4%">数量 </th>
-							    <th width="4%">重量 </th>
-							    <th width="4%">捆包号</th>
-							    <th width="6%">采购单价</th>
-							    <th width="6%">采购成本</th>
-							    <th width="6%">交易单价</th>
-							    <th width="6%">交易成本</th>
-							    <th width="4%">调整价格</th>
-							    <th width="6%">分红模式</th>
-							</tr>
-						</thead>
-					</table>
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					报表管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">商互通管理</span>
 				</div>
-				<div class="lgui-table-body mt-1">
-					<table class="ui-table tc f12" width="100%">
-						<tbody class="ui-thover">
-							<tr class="bgwh">
-							    <td width="8%" class="tl">
-							        <div class="pl10">
-							           28459
-							           <div class="col-8080">2112121</div>
-							        </div>
-							    </td>
-							    <td width="7%" class="tl">
-							        <div class="pl10 dac">
-							           <i class="shu-icon mr5"></i>
-							           <span class="col-8080">
-							               杨兴旺<br>
-							               马云云
-							           </span>
-							        </div>
-							    </td>
-							    <td width="12%" class="tl">
-							        <div class="pl10">
-							            热轧卷板/Q235A
-							            <div class="col-8080">11.000*800*C</div>
-							        </div>
-							    </td>
-							    <td width="10%" class="tl">
-							        <a href="../public/userInfo1.html" target="_block" class="pl10 pr10">
-							          阿里巴巴投资集团云慈善家
-							        </a>
-							    </td>
-							    <td width="8%" class="tl">
-							        <div class="pl10">
-							            G2G支付
-							            <div class="col-8080">2020-09-12</div>
-							        </div>
-							    </td>
-							    <td width="4%">聚方库</td>
-							    <td width="4%">兆顺</td>
-							    <td width="4%" numtype="formatMoney">12.1</td>
-							    <td width="4%">35434</td>
-							    <td width="4%" numtype="formatMoney">4,000</td>
-							    <td width="6%" va="48400.0" data="cgcb" numtype="personal">48,400.00</td>
-							    <td width="6%" numtype="formatMoney">10,300</td>
-							    <td width="6%" va="124630.0" data="jycb" numtype="personal">124,630.00</td>
-							    <td widht="6%">5200</td>
-							    <td width="4%">60027</td>
-							    <td width="6%">
-							        20%的红利
-							    </td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 				</div>
 			</div>
-            
-            <!-- table end -->
-            <script type="text/javascript" src="../js/pagelist.js"></script>
-            <div class="mb20"></div>
-        </div>
-    </div><!-- rightBar end -->
+			<div class=" fix f12 bgwh ui-content ovh minH p20">
+				<div class="mb10 df ">
+					<span class="pct25 dib  tr">
+						<span class="searchLable">备货金牌商家：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct22 dib  tr">
+						<span class="searchLable">仓库：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct22 dib  tr">
+						<span class="searchLable">规格：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct30 dib  tr">
+						<span class="searchLable">&emsp;成交时间：</span>
+						<span class="ui-input f0 pct69 range" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off"><span class="dib pct5 tc">-</span><input
+							 type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
+						</span>
+					</span>
+				</div>
+				
+				<div class="mb10 mt10 df">
+					<span class="pct25 dib  tr">
+						<span class="searchLable">购买金牌商家：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct22 dib tr">
+						<span class="searchLable">钢厂：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct22 dib  tr">
+						<span class="searchLable">牌号：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct30 dib f12 tr">
+						<span class="searchLable">备货订单号：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+				</div>
+				<div class="mb10 mt10">
+					<span class="pct25 dib  tr">
+						<span class="searchLable">商互通订单号：</span>
+						<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct22 dib tr" style="margin-left: -3px;">
+						<span class="searchLable">品名：</span>
+						<input type="text" class="ui-input pct69 mr-2" placeholder="请输入" autocomplete="off">
+					</span>
+					<span class="pct50 dib">
+						<span class="searchLable">&emsp;&emsp;支付方式：</span>
+						<span class="radio">
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>G2G支付</label>
+							<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>白条支付</label>
+						</span>
+					</span>
+				</div>
+				<div class="mb10 mt10">
+					<span class="dib">
+						<span class="dib searchLable">&emsp;&emsp;&nbsp;&nbsp;分红模式：</span>
+						<span class="selectSingle">
+							<a class="on" href="javscript:void(0)">2元/吨</a>
+							<span class="">|</span>
+							<a href="javscript:void(0)">20%的红利</a>
+							<span class="">|</span>
+							<a href="javscript:void(0)">60%的红利</a>
+							<span class="">|</span>
+							<a href="javscript:void(0)">100%的红利</a>
+						</span>
+					</span>
+					<span class="f1 f12">
+						<button type="button" class="ml20 ui-button mr10">查询</button>
+					</span>
+				</div>
 
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+				<div class="lgui-table-box mt30 checkbox">
+					<div class="lgui-table-header">
+						<table class="ui-table tc table-cw f12" width="100%">
+							<thead>
+								<tr>
+									<th width="8%" class="tl">
+										<div class="pl10">
+											备货订单号/<br>商互通订单号
+										</div>
+									</th>
+									<th width="7%" class="tl">
+										<div class="pl10">
+											金牌商家
+										</div>
+									</th>
+									<th width="12%" class="tl">
+										<div class="pl10">
+											品名/牌号/规格
+										</div>
+									</th>
+									<th width="10%" class="tl">
+										<div class="pl10">
+											备货单位
+										</div>
+									</th>
+									<th widht="8%" class="tl">
+										<div class="pl10">
+											支付方式/日期
+										</div>
+									</th>
+									<th width="4%">仓库</th>
+									<th width="4%">钢厂</th>
+									<th width="4%">数量 </th>
+									<th width="4%">重量 </th>
+									<th width="4%">捆包号</th>
+									<th width="6%">采购单价</th>
+									<th width="6%">采购成本</th>
+									<th width="6%">交易单价</th>
+									<th width="6%">交易成本</th>
+									<th width="4%">调整价格</th>
+									<th width="6%">分红模式</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="lgui-table-body mt-1">
+						<table class="ui-table tc f12 table-cw" width="100%">
+							<tbody class="ui-thover">
+								<tr>
+									<td width="8%" class="tl">
+										<div class="pl10">
+											28459
+											<div class="col-8080">2112121</div>
+										</div>
+									</td>
+									<td width="7%" class="tl">
+										<div class="pl10 dac">
+											<i class="shu-icon mr5"></i>
+											<span class="col-8080">
+												杨兴旺<br>
+												马云云
+											</span>
+										</div>
+									</td>
+									<td width="12%" class="tl">
+										<div class="pl10">
+											热轧卷板/Q235A
+											<div class="col-8080">11.000*800*C</div>
+										</div>
+									</td>
+									<td width="10%" class="tl">
+										<a href="../public/userInfo1.html" title="阿里巴巴投资集团云慈善家" target="_block" class="zxx_text_overflow dib pl10 pr10">
+											阿里巴巴投资集团云慈善家
+										</a>
+									</td>
+									<td widht="8%" class="tl">
+										<div class="pl10">
+											G2G支付
+											<div class="col-8080">2020-09-12</div>
+										</div>
+									</td>
+									<td width="4%">聚方库</td>
+									<td width="4%">钢厂</td>
+									<td width="4%">数量 </td>
+									<td width="4%">重量 </td>
+									<td width="4%">捆包号</td>
+									<td width="6%">采购单价</td>
+									<td width="6%">采购成本</td>
+									<td width="6%">交易单价</td>
+									<td width="6%">交易成本</td>
+									<td width="4%">调整价格</td>
+									<td width="6%">分红模式</td>
+								</tr>
+								<tr class="bgwh dn">
+									<td width="8%" class="tl">
+
+									</td>
+									<td width="7%" class="tl">
+
+									</td>
+									<td width="12%" class="tl">
+
+									</td>
+									<td width="10%" class="tl">
+
+									</td>
+									<td widht="8%" class="tl">
+
+									</td>
+									<td width="4%"></td>
+									<td width="4%"></td>
+									<td width="4%" numtype="formatMoney">12.1</td>
+									<td width="4%">35434</td>
+									<td width="4%" numtype="formatMoney">4,000</td>
+									<td width="6%" va="48400.0" data="cgcb" numtype="personal">48,400.00</td>
+									<td width="6%" numtype="formatMoney">10,300</td>
+									<td width="6%" va="124630.0" data="jycb" numtype="personal">124,630.00</td>
+									<td widht="6%">5200</td>
+									<td width="4%">60027</td>
+									<td width="6%">
+										20%的红利
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- table end -->
+				<script type="text/javascript" src="../js/pagelist.js"></script>
+				<div class="mb20"></div>
+			</div>
+		</div><!-- rightBar end -->
+
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
 
-    <script>
-        $(function () {
-            $(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-            $(".qj").click(function () {
-                $('#qj').click()
-                // $("#qj").trigger("focus");
-            })
-        })		
-    </script>
-</body>
+		<script>
+			$(function() {
+				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(5).addClass("on"); // 静态页面定位使用，开发使用title等定位
+			})
+		</script>
+	</body>
 
 </html>
