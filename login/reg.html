@@ -8,15 +8,17 @@
         mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>注册-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <style>
         html,body{ height: 100%; background: url(../images/login/BG.jpg) no-repeat top center }
     </style>
 </head>
 
-<body class="login f0">
+<body class="login f0 showTip">
         <span class="logo-white trans"></span>
         <span class="logo-light trans"></span>
         <span class="bg-txt"></span>
@@ -33,7 +35,7 @@
                     <span class="reg_step ml40"><i class="icon-doStep mr10">3</i><span class="f18 vm mr30 reg_stepTxt">完成</span> </span>
                 </div>
             </div>
-                <div class="pct80 mt40 auto reg_box ">
+            <div class="pct80 mt40 auto reg_box">
              <div class="f0 pb15 bor-bE6E6">
                  <span class="dib pct10 vt g28 f14">专业领域：</span>
                  <span class="dib f14  reg_selbox pct90">
@@ -85,12 +87,79 @@
              </div>
              </div>
              <div class="tc mt30">
-                 <button type="button" class="ui-button lh38 w160">下一步</button>
+                 <button type="button" class="ui-button lh38 w160" onclick="regNext(this)">下一步</button>
              </div>
-                <div class="tc login_reg mt20">已有账号？<a href="#">去登录</a></div>
+                <div class="tc login_reg mt20">已有账号？<a href="#" >去登录</a></div>
             </div>
+            <div class="pct80 mt40 auto reg_box f0 dn">
+                <div class="dib pct50 f14">
+                    <div class="mb20">
+                     <span class="g28"><span class="red">*</span>姓名：&emsp;&emsp;</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                        <span class="red">*</span>性别：&emsp;&emsp;<span class="radio">
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>男</label>
+                            <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>女</label>
+                        </span>
+                    </div>
+                    <div class="mb20">
+                       <span class="g28"><span class="red">*</span>身份证号：</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                    <span class="g28"> <span class="red">*</span>座机号码：</span>
+                    <input type="text" class="ui-input pct10" placeholder="区号"> 
+                    <span class="g28">-</span>
+                    <input type="text" class="ui-input pct30" placeholder="电话号码"> 
+                    <span class="g28">-</span>
+                    <input type="text" class="ui-input pct20" placeholder="分机号"> 
+                    <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="全国性号码无需输入区号"></a>
+                    </div>
+                    <div class="mb20">
+                     <span class="g28"><span class="red">*</span>电子邮箱：</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                     <span class="g28"> <span class="red">*</span>通讯地址：</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                      <span class="g28">QQ号：&emsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                    <span class="g28">微信号：&emsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct60">
+                    </div>
+                    <div class="mb20">
+                   <span class="g28"><span class="red">*</span>推荐单位：</span><input type="text" class="ui-input pct60">
+                    </div>
+                </div>
+                
+            </div>
+
         </div>
-    </script>
+        <script>
+            $(function(){
+                $(".reg_selbox").on("click",".reg_selitem",function(){
+                    $(this).addClass("on").siblings(".reg_selitem").removeClass("on")
+                })
+                $(".showTip").find('[title]').qtip({
+							position: {
+								my: 'bottom center', //my:是指三角的位置
+								at: 'top center' //是在提示在组件的相对位置
+							},
+							style: {
+								classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+							}
+						});
+            //radio点选
+			$("body").find(".radio").on("click", ".ui-radio", function () {
+				$(this).parents(".radio").find(".ui-radio").removeClass("on");
+				$(this).addClass("on")
+			})
+
+            })
+            function regNext(obj){
+                $(obj).parents(".reg_box").hide().next(".reg_box").show()
+                $(".reg_step").eq(1).addClass("on").siblings(".reg_step").removeClass("on")
+            }
+        </script>
 </body>
 
 </html>
