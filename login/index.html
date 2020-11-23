@@ -51,23 +51,27 @@
             </div>
         </div>
         </div>
-        <div class="dib login_r bgwh loginR  vt f14 rel r w1080" s>
+        <div class="dib login_r bgwh loginR bgfa  vt f14 rel r pct75" style="display: none;">
             <div class="reg_t ovh">
+                <div class="pct75 auto">
                 <div class="mt25">
                     <a href="javascript:void(0)" class="login_logo"></a>
                     <i class="login_line"></i>
                     <span class="f24 login_txt">智能云系统</span>
                 </div>
-                <div class="mt30">
-                    <span class="reg_step on"><i class="icon-doStep mr10 vm">1</i><span class="f18 vm mr30 reg_stepTxt">账号注册</span> <i class="icon-stepRight mr45 vm"></i></span>
-                    <span class="reg_step ml40"><i class="icon-doStep mr10 vm">2</i><span class="f18 vm mr30 reg_stepTxt">信息录入</span> <i class="icon-stepRight mr45 vm"></i></span>
-                    <span class="reg_step ml40"><i class="icon-doStep mr10 vm">3</i><span class="f18 vm mr30 reg_stepTxt">完成</span> </span>
+                <div class="mt30 reg_stepBox">
+                    <span class="reg_step on poi" data-step="0"><i class="icon-doStep mr10 vm">1</i><span class="f18 vm mr30 reg_stepTxt">账号注册</span> </span>
+                    <i class="icon-stepRight mr45 vm"></i>
+                    <span class="reg_step ml40 poi"  data-step="1"><i class="icon-doStep mr10 vm">2</i><span class="f18 vm mr30 reg_stepTxt">信息录入</span> </span>
+                    <i class="icon-stepRight mr45 vm"></i>
+                    <span class="reg_step ml40 poi"  data-step="2"><i class="icon-doStep mr10 vm">3</i><span class="f18 vm mr30 reg_stepTxt">完成</span> </span>
                 </div>
             </div>
-            <div class="pct80 mt40 auto reg_box ">
-             <div class="f0 pb15 bor-bE6E6">
-                 <span class="dib pct10 vt g28 f14">专业领域：</span>
-                 <span class="dib f14  reg_selbox pct90">
+            </div>
+            <div class="pct75  auto reg_box ">
+             <div class="f0 pb15 bor-bE6E6 df">
+                 <span class="dib  vt g28 f14">专业领域：&emsp;</span>
+                 <span class="dib f14  reg_selbox f1">
                      <span class="reg_selitem mr5 on mb10">财务</span>
                      <span class="reg_selitem mr5 mb10">人事</span>
                      <span class="reg_selitem mr5 mb10">资本</span>
@@ -89,9 +93,9 @@
                      <span class="reg_selitem mr5 mb10">合规</span>
                  </span>
              </div>
-             <div class="f0 pb15 bor-bE6E6 mt15">
-                 <span class="dib pct10 vt g28 f14">所在地区：</span>
-                 <span class="dib f14  reg_selbox pct90">
+             <div class="f0 pb15 bor-bE6E6 mt15 df">
+                 <span class="dib  vt g28 f14">所在地区：&emsp;</span>
+                 <span class="dib f14  reg_selbox f1">
                      <span class="reg_selitem mr5 on mb10">全区域</span>
                      <span class="reg_selitem mr5 mb10">上海</span>
                      <span class="reg_selitem mr5 mb10">无锡</span>
@@ -102,14 +106,14 @@
                      <span class="reg_selitem mr5 mb10">广州</span>
                  </span>
              </div>
-             <div class="pb15 bor-bE6E6 mt15 f0">
+             <div class="pb15 bor-bE6E6 mt15 f0 ">
              <div>
-                 <span class="dib pct10 vt g28 f14">手机号码：</span>
+                 <span class="dib  g28 f14">手机号码：&emsp;</span>
                     <input type="text" class="ui-input pct25">
              </div>
-             <div class="mt15">
-                <span class="dib pct10 vt g28 f14">短信验证码： </span>
-                <span class="ui-input-x pct25" data-type="code">
+             <div class="mt15 ">
+                <span class="dib   g28 f14">短信验证码： </span>
+                <span class="ui-input-x pct25 " data-type="code">
                     <span class="red  f16"></span> <input type="text" class="ui-input bd_none pct50">
                       <a href="javascript:void(0)" class="pct50 ui-inputbut  bld9 tc r">获取验证码</a>
                   </span>
@@ -120,11 +124,11 @@
              </div>
                 <div class="tc login_reg mt20">已有账号？<a href="javascript:void(0)"  onclick="toLogin()">去登录</a></div>
             </div>
-            <div class="pct80 mt40 auto reg_box f0  dn">
-                <div class="bor-bE6E6 pb25">
-                <div class="dib pct50 f14 vt">
+            <div class="pct75  auto reg_box f0  dn">
+                <div class="bor-bE6E6 pb25 df">
+                <div class="dib pct60 f14 vt">
                     <div class="mb20">
-                     <span class="g28"><span class="red">*</span>姓名：&emsp;&emsp;</span><input type="text" class="ui-input pct60">
+                     <span class="g28"><span class="red">*</span>姓名：&emsp;&emsp;</span><input type="text" class="ui-input pct50">
                     </div>
                     <div class="mb20">
                         <span class="red">*</span>性别：&emsp;&emsp;<span class="radio">
@@ -133,34 +137,35 @@
                         </span>
                     </div>
                     <div class="mb20">
-                       <span class="g28"><span class="red">*</span>身份证号：</span><input type="text" class="ui-input pct60">
+                       <span class="g28"><span class="red">*</span>身份证号：</span><input type="text" class="ui-input pct50">
                     </div>
                     <div class="mb20">
                     <span class="g28"> <span class="red">*</span>座机号码：</span>
                     <input type="text" class="ui-input pct10" placeholder="区号"> 
                     <span class="g28">-</span>
-                    <input type="text" class="ui-input pct30" placeholder="电话号码"> 
+                    <input type="text" class="ui-input pct20" placeholder="电话号码"> 
                     <span class="g28">-</span>
-                    <input type="text" class="ui-input pct20" placeholder="分机号"> 
+                    <input type="text" class="ui-input pct15" placeholder="分机号"> 
                     <a href="javascript:void(0)" class="goldIcon icon-info vm ml5" title="全国性号码无需输入区号"></a>
                     </div>
                     <div class="mb20">
-                     <span class="g28"><span class="red">*</span>电子邮箱：</span><input type="text" class="ui-input pct60">
+                     <span class="g28"><span class="red">*</span>电子邮箱：</span><input type="text" class="ui-input pct50">
                     </div>
                     <div class="mb20">
-                     <span class="g28"> <span class="red">*</span>通讯地址：</span><input type="text" class="ui-input pct60">
+                     <span class="g28"> <span class="red">*</span>通讯地址：</span><input type="text" class="ui-input pct50">
                     </div>
                     <div class="mb20">
-                      <span class="g28">QQ号：&emsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct60">
+                      <span class="g28">QQ号：&emsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct50">
                     </div>
                     <div class="mb20">
-                    <span class="g28">微信号：&emsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct60">
+                    <span class="g28">微信号：&emsp;&nbsp;&nbsp;</span><input type="text" class="ui-input pct50">
                     </div>
                     <div>
-                   <span class="g28"><span class="red">*</span>推荐单位：</span><input type="text" class="ui-input pct60">
+                   <span class="g28"><span class="red">*</span>推荐单位：</span><input type="text" class="ui-input pct50">
                     </div>
                 </div>
-                <div class="dib pct50 f14 vt">
+                <div class="dib pct40 f14 vt">
+                    <div class="pl50">
                     <div class="g28">个人头像：</div>
                     <div class="mt10">
                         <input type="file" id="page_imageFile_Jpsj" class="dn" onchange="checkImgType3(this)">
@@ -199,14 +204,15 @@
                                 <a href="javascript:void(0)" class="f12" title="<img src='http://resource.lgsteel.cn/gold2020/images/jpsj/001.png' style='width:128px;height:85px' /><br><img class='mt10' src='http://resource.lgsteel.cn/gold2020/images/jpsj/002.png' style='width:128px;height:85px' /> <div class='tc'>示例证件<div>">查看示例</a>
                             </div>
                     </div>
+                    </div>
                 </div>
                 </div>
                 <div class="mt30 tc">
-                    <button class="ui-button w160 lh38" onclick="toLogin()" type='button'>提交</button>
+                    <button class="ui-button w160 lh38" onclick="regNext1(this)" type='button'>提交</button>
                 </div>
                 <div class="tc f14 mt50">已有账号？<a href="javascript:void(0)" onclick="toLogin()">去登录</a></div>
             </div>
-            <div class="pct80 mt40 auto reg_box f0  dn">
+            <div class="pct75 mt40 auto reg_box f0  dn">
                 <div class="mt100 tc">
                     <i class="icon-finish"></i>
                 </div>
@@ -215,7 +221,7 @@
                     审核通过后，我们会以短信形式通知您，感谢您加盟乐刚网！
                 </div>
                 <div class="mt30 tc">
-                    <a class="ui-button w160 lh38" href="./index.html">完成</a>
+                    <a class="ui-button w160 lh38" href="javascript:void(0)"  onclick="toLogin()">完成</a>
                 </div>
             </div>
         </div>
@@ -226,9 +232,6 @@
                 $("#page_imageFile_zm").uploadPreview({ Img: "photoZM", Width: 180, Height:100 });
                 $("#page_imageFile_fm").uploadPreview({ Img: "photoFM", Width: 180, Height:100 });
                 $("#page_imageFile_Jpsj").uploadPreview({ Img: "photoJpsj", Width: 71, Height:95 });
-
-
-
                 $(".reg_selbox").on("click",".reg_selitem",function(){
                     $(this).addClass("on").siblings(".reg_selitem").removeClass("on")
                 })
@@ -246,31 +249,45 @@
 				$(this).parents(".radio").find(".ui-radio").removeClass("on");
 				$(this).addClass("on")
 			})
-
+            $(".reg_stepBox").on("click",".reg_step ",function(){
+                $(this).addClass("on").siblings(".reg_step").removeClass("on")
+                var index = $(this).attr("data-step")
+                $(".reg_box").eq(index).show().siblings(".reg_box").hide()
             })
+            })
+            //点击注册
             function toReg(obj){
-                $(".loginC").animate({right:"-50%"})
-                $(".loginR").animate({right:"0"})
+                $(".loginC").animate({right:"-50%"}).hide()
+                $(".loginR").show().animate({right:"0"})
             }
+            // 点击登录
             function toLogin(){
-                $(".loginC").animate({right:"0"})
-                $(".loginR").animate({right:"-1080px"})
+                $(".loginC").show().animate({right:"0"})
+                $(".loginR").animate({right:"-75%"}).hide()
             }
 
+            function regStep(obj){
+                $(obj).parents(".reg_step").addClass("on").siblings(".reg_step").removeClass("on")
+            }
+            // 信息录入
             function regNext(obj){
                 $(obj).parents(".reg_box").hide().next(".reg_box").show()
                 $(".reg_step").eq(1).addClass("on").siblings(".reg_step").removeClass("on")
             }
+            //完成
             function regNext1(obj){
                 $(obj).parents(".reg_box").hide().next(".reg_box").show()
                 $(".reg_step").eq(2).addClass("on").siblings(".reg_step").removeClass("on")
             }
+            //上传身份证正面
             function upLoadImg(obj){
                 $("#page_imageFile_zm").click()
             }
+            //上传身份证反面
             function upLoadImgFm(obj){
                 $("#page_imageFile_fm").click()
             }
+            // 上传头像
             function uploadUserPhoto(){
                 $("#page_imageFile_Jpsj").click()
             }
