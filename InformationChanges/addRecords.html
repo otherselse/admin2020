@@ -91,7 +91,6 @@
 			</div>
 
 			<div class="fix f12 bgwh ui-content ovh minH">
-
 				<div class="ui-tab2 ml20 mt20 pct50" data-type="2">
 					<span class="ui-tab2-line" style="left:0;"></span>
 					<div class="ui-tab2-cont">
@@ -108,15 +107,16 @@
 					</div>
 				</div>
 				<div class=" p20">
-					<div class="mb10 f0">
+					<div class="mb10 df f0">
 						<span class="pct22 dib f12"><span class="dib searchLable">名称：</span><input type="text" class="ui-input pct69"
 							 placeholder="请输入"></span>
 						<span class="pct22 dib f12"><span class="dib searchLable">大类：</span><input type="text" class="ui-input pct69"
 							 placeholder="请输入"></span>
 						<span class="pct22 dib f12"><span class="dib searchLable">操作人：</span><input type="text" class="ui-input pct69"
 							 placeholder="请输入"></span>
-						<span class="pct25 m_pct31 dib f12"><span class="dib searchLable">截止日期：</span><span class="ui-input tc f0 pct69 mr5 range"
-							 data-type="time">
+						<span class="pct25 m_pct31 dac f12">
+							<span class="dib searchLable">截止日期：</span>
+							<span class="ui-input tc f0 pct69 range" data-type="time">
 								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
 								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
 							</span>
@@ -232,6 +232,24 @@
 								</div>
 							</td>
 						</tr>
+						<!-- 大类-英文版 -->
+						<tr class="y dn">
+							<td width="10%" class=" bgfa">
+								<span class=" dib ">大类：</span>
+							</td>
+							<td width="90%">
+								<div class="dac">
+									<div style="width: 95%;" class="dac">
+										<span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+										</span>
+									</div>
+								</div>
+							</td>
+						</tr>
 						<!-- 品名 -->
 						<tr>
 							<td width="10%" class=" bgfa">
@@ -254,8 +272,36 @@
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- 品名-英文版 -->
+						<tr class="y dn">
+							<td width="10%" class=" bgfa">
+								<span class=" dib ">品名：</span>
+							</td>
+							<td width="90%">
+								<div class="dac max">
+									<div style="width: 95%;" class="dac">
+										<div class="dn pct20 mr10 inK">
+											<span class="ui-input pct100 dajs ml10" data-type="price">
+												<input type="text" class="pct80" value="" placeholder="请输入">
+												<i class="icon-sdel goldIcon vm ml5 mr5 menuhook" onclick="dakai(this)"></i>
+											</span>
+										</div>
+										<span class="">
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+										</span>
+									</div>
+									<div class="zk">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
@@ -275,15 +321,15 @@
 											</span>
 										</div>
 										<span class="">
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
@@ -310,8 +356,36 @@
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- 牌号-英文版 -->
+						<tr class="y dn">
+							<td width="10%" class=" bgfa">
+								<span class=" dib ">牌号：</span>
+							</td>
+							<td width="90%">
+								<div class="dac max">
+									<div style="width: 95%;" class="dac">
+										<div class="dn pct20 mr10 inK">
+											<span class="ui-input pct100 dajs ml10" data-type="price">
+												<input type="text" class="pct80" value="" placeholder="请输入">
+												<i class="icon-sdel goldIcon vm ml5 mr5 menuhook" onclick="dakai(this)"></i>
+											</span>
+										</div>
+										<span class="">
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+										</span>
+									</div>
+									<div class="zk">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
@@ -338,8 +412,36 @@
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- 钢厂-英文版 -->
+						<tr class="y dn">
+							<td width="10%" class=" bgfa">
+								<span class=" dib ">钢厂：</span>
+							</td>
+							<td width="90%">
+								<div class="dac max">
+									<div style="width: 95%;" class="dac">
+										<div class="dn pct20 mr10 inK">
+											<span class="ui-input pct100 dajs ml10" data-type="price">
+												<input type="text" class="pct80" value="" placeholder="请输入">
+												<i class="icon-sdel goldIcon vm ml5 mr5 menuhook" onclick="dakai(this)"></i>
+											</span>
+										</div>
+										<span class="">
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+										</span>
+									</div>
+									<div class="zk">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
@@ -401,13 +503,76 @@
 									</div>
 									<div class="zk">
 										<span class="dib mr5 menuhook icon-zk" onclick="updown(this)"></span>
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
 						</tr>
-						<!-- 国家 -->
+						<!-- 包装方式-英文版 -->
+						<tr class="y dn">
+							<td width="10%" class=" bgfa">
+								<span class=" dib ">包装方式：</span>
+							</td>
+							<td width="90%">
+								<div class="dac max">
+									<div style="width: 91%;margin-right: 11px;" class="dac h30 kZhan chao">
+										<div class="dn pct20 mr10 inK">
+											<span class="ui-input pct100 dajs ml10" data-type="price">
+												<input type="text" class="pct80" value="" placeholder="请输入">
+												<i class="icon-sdel goldIcon vm ml5 mr5 menuhook" onclick="dakai(this)"></i>
+											</span>
+										</div>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">materials</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+										<span class="dib ml10 mr10">材料类</span>
+									</div>
+									<div class="zk">
+										<span class="dib mr5 menuhook icon-zk" onclick="updown(this)"></span>
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- 国家-英文版 -->
 						<tr class="y dn">
 							<td width="10%" class=" bgfa">
 								<span class=" dib ">国家：</span>
@@ -422,20 +587,20 @@
 											</span>
 										</div>
 										<span class="">
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
 						</tr>
-						<!-- 港口 -->
+						<!-- 港口-英文版 -->
 						<tr class="y dn">
 							<td width="10%" class=" bgfa">
 								<span class=" dib ">港口：</span>
@@ -450,15 +615,15 @@
 											</span>
 										</div>
 										<span class="">
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
-											<span class="dib ml10 mr10">材料类</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
+											<span class="dib ml10 mr10">materials</span>
 										</span>
 									</div>
 									<div class="zk">
-										<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
-										<img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook" width="10" height="10" alt="">
+										<i class="inCha-icon dib img1 menuhook" onclick="show(this)"></i>
+										<i class="inCha-icon img2 dn menuhook"></i>
 									</div>
 								</div>
 							</td>
@@ -551,7 +716,14 @@
 				})
 				$(this).addClass("on").siblings().removeClass("on");
 				var str = $(this).html()
-				
+				if(str == "中文"){
+					$(".informationAdd").find("tr").removeClass("dn");
+					$(".y").addClass("dn")
+				}else{
+					$(".informationAdd").find("tr").addClass("dn");
+					$(".y").removeClass("dn")
+				}
+				// $(".y").toggleClass("dn");
 			})
 		</script>
 
