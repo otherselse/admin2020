@@ -21,11 +21,63 @@
         .qtip-lep0 .qtip-content {
             padding: 0px;
         }
-
+		
         body,
         html {
             background: #fff;
         }
+		.xx {
+		    background: url(../images/InformationChanges/11.png) no-repeat right;
+		}
+		
+		.h30 {
+		    height: 30px;
+		    line-height: 30px;
+		}
+		
+		.h60 {
+		    height: 60px;
+		}
+		
+		.sy {
+		    overflow-x: hidden;
+		    overflow-y: scroll;
+		}
+		
+		.chao {
+		    overflow: hidden;
+		}
+		
+		.classMax>span {
+		    cursor: pointer;
+		}
+		
+		.ui-files {
+		    font-size: 12px;
+		    line-height: 26px;
+		    height: 26px;
+		    box-sizing: border-box;
+		    display: inline-block;
+		    border: 1px solid #E5E5E5;
+		    border-radius: 13px;
+		    padding: 0px 10px 0px 10px;
+		    color: #676767;
+		    background: url(=) #fff no-repeat 12px 5px;
+		    max-width: 100%;
+		    overflow: hidden;
+		}
+		
+		.classMax span {
+		    width: 70px;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		}
+		
+		.w95h18{
+		    width: 95%; 
+		    height:18px;
+		}
     </style>
 	</head>
 
@@ -49,7 +101,7 @@
 					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
 				</div>
 			</div>
-
+			
 			<div class="ui-tab3">
 				<a href="addRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">添加记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 				<a href="theRelationalRecord.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">关联记录</span><i class="goldIcon ui-tab3-dot"></i></a>
@@ -68,7 +120,7 @@
 
 				<div class="pl20 pr20">
 					<div class="xzhj mt20 daj">
-						<a href="javascript:void(0)" onclick="showLayer('关联添加','linkToAdd.html',960,530)" class="dib xzhj-button daj">
+						<a href="javascript:void(0)" onclick="showLayer()" class="dib xzhj-button daj">
 							<span class="dib mr10">关联添加</span> <img src="../images/documnts/t8.png" width="20px" height="20px" alt="">
 						</a>
 					</div>
@@ -101,7 +153,7 @@
 							</span>
 						</span>
 					</div>
-					<div class="mb10 df">
+					<div class="mb10 dac">
 						<span class="pct22 dib f12"><span class="searchLable">港口：</span><input type="text" class="ui-input pct69"
 							 placeholder="请输入"></span>
 						<span class="pct22 dib f12"><span class="searchLable">&emsp;国家：</span><input type="text" class="ui-input pct69"
@@ -187,6 +239,432 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
+		<div class="linkToAdd ml20 mt5 mr20">
+		    <div class="pct100">
+		        <div class="single mt20 tc">
+		            <input type="hidden">
+		            关联类别：<button type="button" onclick="trShow([1,2,4])" class="ui-option mr20  on">品名牌号关联</button>
+		            <button type="button" onclick="trShow([1,5,6])" class="ui-option gang mr20">钢厂包装关联</button>
+					<button type="button" onclick="trShow([1,2,3,4])" class="ui-option mr20 yn" style="display: none;">钢材标准牌号关联</button>
+					<button type="button" onclick="trShow([7,8])" class="ui-option yn" style="display: none;">国家港口关联</button>
+		        </div>
+		        <table class="ui-table f12 auto tl row mt20 " width="100%">
+					<!-- 中文 -->
+					<tbody class="zn">
+						<!-- 大类 -->
+						<tr class="selTr daTr">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">大类：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac">
+						            <div  class="dac w95 h18">
+						                <span class="classMax">
+						                    <span class="dib ml10 mr10 ell da" title="材12122222212121料类">材12122222212121料类</span>
+						                    <span class="dib ml10 mr10 ell da">材料类</span>
+						                    <span class="dib ml10 mr10 ell da">材料类</span>
+						                    <span class="dib ml10 mr10 da">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 品名 -->
+						<tr class="selTr p">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">品名：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">21w1w</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 钢材标准 -->
+						<tr class="selTr gC" style="display: none;">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">钢材标准：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95 h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 gbiao">材料类</span>
+						                    <span class="dib ml10 mr10 gbiao">材料类</span>
+						                    <span class="dib ml10 mr10 gbiao">1111qqaq</span>
+						                    <span class="dib ml10 mr10 gbiao">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 牌号 -->
+						<tr class="selTr p">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">牌号：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95 h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 pai">材料类</span>
+						                    <span class="dib ml10 mr10 pai">材料类</span>
+						                    <span class="dib ml10 mr10 pai">材料类</span>
+						                    <span class="dib ml10 mr10 pai">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 钢厂 -->
+						<tr class="selTr g dn">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">钢厂：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95 h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">1111qqaq</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 包装方式 -->
+						<tr class="selTr g dn">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">包装方式：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div style="width: 91%;margin-right: 11px;" class="dac classMax h30 kZhan chao">
+						                <span class="dib ml10 mr10 bao">2121</span>
+						                <span class="dib ml10 mr10 bao">3swqsq`</span>
+						                <span class="dib ml10 mr10 bao">qxqqxx</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						                <span class="dib ml10 mr10">材料类</span>
+						            </div>
+						            <div class="zk">
+						                <span class="dib mr5 menuhook icon-zk" onclick="updown(this)"></span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 国家 -->
+						<tr class="selTr gjTr" style="display: none;">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">国家：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 da">材料类</span>
+						                    <span class="dib ml10 mr10 da">材料类</span>
+						                    <span class="dib ml10 mr10 da">材料类</span>
+						                    <span class="dib ml10 mr10 da">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<!-- 港口 -->
+						<tr class="selTr gjTr" style="display: none;">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">港口：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <div  class="dac w95h18">
+						                <span class="classMax ">
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                    <span class="dib ml10 mr10 pin">1111qqaq</span>
+						                    <span class="dib ml10 mr10 pin">材料类</span>
+						                </span>
+						            </div>
+						        </div>
+						    </td>
+						</tr>
+						<tr class="y">
+						    <td width="10%" class=" bgfa">
+						        <span class=" dib ">已选择：</span>
+						    </td>
+						    <td width="90%">
+						        <div class="dac max">
+						            <span class="ui-files mr20 vm selectClass" style="display: none;">
+						                <span class=" da"></span>
+						                <span class="x1">-</span>
+						                <span class=" pin"></span>
+						                <span class="x2">-</span>
+						                <span class=" gbiao"></span>
+						                <span class="x3 dn">-</span>
+						                <span class=" pai"></span>
+						                <i class="icon-sdel goldIcon vm ml5 menuhook"></i>
+						            </span>
+						        </div>
+						    </td>
+						</tr>
+						
+					</tbody>
+		            <!-- 英文 -->
+					<tbody class="yn dn">
+						<!-- 大类 -->
+		                <tr class="selTr daTr">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">大类：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac">
+		                            <div  class="dac w95 h18">
+		                                <span class="classMax">
+		                                    <span class="dib ml10 mr10 ell da" title="材12122222212121料类">材12122222212121料类</span>
+		                                    <span class="dib ml10 mr10 ell da">材料类</span>
+		                                    <span class="dib ml10 mr10 ell da">材料类</span>
+		                                    <span class="dib ml10 mr10 da">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 品名 -->
+		                <tr class="selTr p">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">品名：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">21w1w</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 钢材标准 -->
+		                <tr class="selTr gC dn">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">钢材标准：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95 h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 gbiao">材料类</span>
+		                                    <span class="dib ml10 mr10 gbiao">材料类</span>
+		                                    <span class="dib ml10 mr10 gbiao">1111qqaq</span>
+		                                    <span class="dib ml10 mr10 gbiao">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 牌号 -->
+		                <tr class="selTr p">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">牌号：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95 h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 pai">材料类</span>
+		                                    <span class="dib ml10 mr10 pai">材料类</span>
+		                                    <span class="dib ml10 mr10 pai">材料类</span>
+		                                    <span class="dib ml10 mr10 pai">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 钢厂 -->
+		                <tr class="selTr g dn">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">钢厂：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95 h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">1111qqaq</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 包装方式 -->
+		                <tr class="selTr g dn">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">包装方式：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div style="width: 91%;margin-right: 11px;" class="dac classMax h30 kZhan chao">
+		                                <span class="dib ml10 mr10 bao">2121</span>
+		                                <span class="dib ml10 mr10 bao">3swqsq`</span>
+		                                <span class="dib ml10 mr10 bao">qxqqxx</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                                <span class="dib ml10 mr10">材料类</span>
+		                            </div>
+		                            <div class="zk">
+		                                <span class="dib mr5 menuhook icon-zk" onclick="updown(this)"></span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 国家 -->
+		                <tr class="selTr gjTr dn">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">国家：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 da">材料类</span>
+		                                    <span class="dib ml10 mr10 da">材料类</span>
+		                                    <span class="dib ml10 mr10 da">材料类</span>
+		                                    <span class="dib ml10 mr10 da">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+						<!-- 港口 -->
+		                <tr class="selTr gjTr dn">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">港口：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <div  class="dac w95h18">
+		                                <span class="classMax ">
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                    <span class="dib ml10 mr10 pin">1111qqaq</span>
+		                                    <span class="dib ml10 mr10 pin">材料类</span>
+		                                </span>
+		                            </div>
+		                        </div>
+		                    </td>
+		                </tr>
+		                <tr class="y">
+		                    <td width="10%" class=" bgfa">
+		                        <span class=" dib ">已选择：</span>
+		                    </td>
+		                    <td width="90%">
+		                        <div class="dac max">
+		                            <span class="ui-files mr20 vm selectClass" style="display: none;">
+		                                <span class=" da"></span>
+		                                <span class="x1">-</span>
+		                                <span class=" pin"></span>
+		                                <span class="x2">-</span>
+		                                <span class=" gbiao"></span>
+		                                <span class="x3 dn">-</span>
+		                                <span class=" pai"></span>
+		                                <i class="icon-sdel goldIcon vm ml5 menuhook"></i>
+		                            </span>
+		                        </div>
+		                    </td>
+		                </tr>
+						
+					</tbody>
+		        </table>
+		        <div class="tc mt20">
+		            <button type="button" class="ui-button mr10 w90">提交</button>
+		            <button type="button" class="ui-button w90" data-type="clear">取消</button>
+		        </div>
+		    </div>
+		</div>
+
 		<script>
 			$(function() {
 				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(6).addClass("on"); // 静态页面定位使用，开发使用title等定位
@@ -237,17 +715,16 @@
 			})
 		</script>
 		<script>
-			function showLayer(name, url, w, h) {
+			function showLayer() {
 				layer.open({
-					type: 2,
-					title: name,
+					type: 1,
+					title: '关联添加',
 					shadeClose: true,
 					shade: 0.4,
-					area: [w + 'px', h + 'px'],
-					content: url //iframe的url
+					area: ['960px','530px'],
+					content: $(".linkToAdd") //iframe的url
 				});
 			}
-
 
 			//tab2 菜单移动
 			$(".ui-tab2").find(".ui-tab2-list").on("click", function() {
@@ -256,9 +733,110 @@
 					"left": tab2index
 				})
 				$(this).addClass("on").siblings().removeClass("on");
+				var str = $(this).html();
+				if(str == "中文"){
+					$(".yn").addClass("dn");
+					$(".zn").removeClass("dn");
+					$(".ui-option.yn").css("display","none");
+				}else{
+					$(".zn").addClass("dn");
+					$(".yn").removeClass("dn");
+					$(".ui-option.yn").css("display","inline-block");
+				}
 			})
 		</script>
-
+		<script>
+		    var dakai = function (obj) {
+		        $(obj).parents(".max").find(".zk").find(".img1").toggleClass("dn");
+		        $(obj).parents(".max").find(".zk").find(".img2").toggleClass("dn");
+		        $(obj).parents(".inK").toggleClass("dn");
+		    }
+		    var show = function (obj) {
+		        $(obj).toggleClass("dn");
+		        $(obj).next(".img2").removeClass("dn");
+		        $(obj).parents(".max").find(".inK").toggleClass("dn");
+		    }
+		
+		    var updown = function (obj) {
+		        $(obj).toggleClass("on");
+		        $(obj).parents(".zk").prev(".kZhan").toggleClass("h60");
+		        $(obj).parents(".zk").prev(".kZhan").toggleClass("sy");
+		        $(obj).parents(".zk").prev(".kZhan").toggleClass("chao");
+		    }
+		
+		    $(".classMax > span").click(function () {
+		        $(this).parents(".classMax").find("span").not(".bao").removeClass("g13");
+		        $(this).addClass("g13");
+		        $(".selectClass").css("display", "block");
+		    });
+		
+		    $(".classMax > .da").click(function () {
+				var tou = $(this).parents("td").prev("td").find("span").text();
+		        $(".selectClass .da").text(tou+""+$(this).text());
+		    });
+		
+		    $(".classMax > .pin").click(function () {
+		        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+		            alert("请选择大类");
+		            $(this).removeClass("g13");
+		            $(".selectClass").css("display", "none");
+		            return;
+		        } else {
+					var tou = $(this).parents("td").prev("td").find("span").text();
+		            $(".selectClass .pin").text(tou+""+$(this).text());
+		        }
+		    });
+			
+			$(".classMax > .bao").click(function () {
+			   if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+			       alert("请选择大类");
+			       $(this).removeClass("g13");
+			       $(".selectClass").css("display", "none");
+			       return;
+			   }else{
+					if($(".selectClass .pai").text() == "" || $(".selectClass .pai").text() == null){
+						var tou = $(this).parents("td").prev("td").find("span").text();
+						 $(".selectClass .pai").text(tou+""+$(this).text());
+					}else{
+						$(".selectClass .pai").text($(".selectClass .pai").text()+","+$(this).text());
+					}
+			   }
+			});
+		    $(".classMax > .gbiao").click(function () {
+				var tou = $(this).parents("td").prev("td").find("span").text();
+		        $(".selectClass .gbiao").text(tou+""+$(this).text());
+		    });
+		
+		    $(".classMax > .pai").click(function () {
+		        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+		            alert("请选择大类");
+		            $(this).removeClass("g13");
+		            $(".selectClass").css("display", "none");
+		            return;
+		        } else {
+					var tou = $(this).parents("td").prev("td").find("span").text();
+					$(".selectClass .pai").text(tou+""+$(this).text());
+		        }
+		    });
+		
+		    $(".icon-sdel").click(function () {
+		        $(".selectClass").css("display", "none");
+		        $(".selectClass .pin,.selectClass .pai,.selectClass .da").text("");
+		        $(".classMax span").removeClass("g13");
+		    });
+			
+			function trShow(ary){
+				$(".selTr").addClass("dn");
+				$(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+				$(".selectClass").css("display", "none");
+				$(".classMax span").removeClass("g13");
+				for(var i = 0;i < ary.length;i++){
+					$(".selTr:nth-child("+ary[i]+")").removeClass("dn");
+				}
+				
+			}
+		</script>
+		
 	</body>
 
 </html>
