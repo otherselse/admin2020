@@ -316,15 +316,15 @@ a.wh:hover {
 }
 
 .pr25 {
-  margin-right: 25px
+  padding-right: 25px
 }
 
 .pl25 {
-  margin-left: 25px
+  padding-left: 25px
 }
 
 .pt25 {
-  margin-top: 25px
+  padding-top: 25px
 }
 
 .resource-table .title,
@@ -1470,9 +1470,8 @@ a.wh:hover {
   box-sizing: border-box;
 }
 
-.login_l,
-.login_r {
-  height: 100%;
+.login_l,.login_r{
+  min-height: calc(100vh);
 }
 
 .login_l {
@@ -1580,7 +1579,7 @@ a.wh:hover {
 
 
 .login_reg {
-  margin-top: 170px;
+  margin-top: calc(10vh)
 }
 
 .logo-white {
@@ -1707,9 +1706,16 @@ a.wh:hover {
   font-size: 12px !important
 }
 
-
+ 
 /*mobile*/
 @media only screen and (max-width: 1100px) {
+  .login_r {
+    width: 100% !important;
+  }
+  .loginC{
+    justify-content: normal !important;
+    padding-top: 50px !important;
+  }
   .f12 {
     font-size: 16px !important
   }
@@ -3975,6 +3981,7 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
   box-shadow: 0 3px 12px 0 rgba(0,0,0,0.05);
   height: 180px;
   box-sizing:border-box;
+  padding-top: 25px;
   }
   .icon-doStep{
     width: 24px;
@@ -4137,12 +4144,12 @@ a.on.mDListShow:after {
 }
 .reg_box{
   padding-top: 40px;
-  background: #fafafa;
+  box-sizing: border-box;
 }
 .icon-finish{
   width: 144px;
   height: 120px;
-  background: url(../images/login/finish.png) no-repeat center;
+  background: url(../images/login/finish.png) no-repeat ;
   display: inline-block;
 }
 .mt100{
@@ -4152,9 +4159,7 @@ body.login{
   background: url(../images/login/BG.jpg) no-repeat top center
 }
 .loginC{
-  position: absolute;
-  right: 0;
-  top: 0;
+ 
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -4170,4 +4175,11 @@ body.login{
 }
 .pct55{
   width: 55%;
+}
+.reg_Boxheight{
+ height: calc(100vh - 180px);
+ overflow-y: auto; 
+}
+.reg_scorll{
+ 
 }
