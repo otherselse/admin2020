@@ -54,122 +54,91 @@
 				<a href="processingOutboundRecords.html" class="ui-tab3-list rel"><span class="ui-tab3-text">出库记录</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content ovh minH">
-				<div class="pl20 pr20 pt10 f12">
-					<table width="100%" class="checkbox pl10" style="border-collapse:separate; border-spacing:0px 10px;">
-						<tr>
-							<td colspan="4">
-								<div class="df">
-									<div class="mt5 searchLable">加盟加工商：</div>
-									<div class="dib selectProcName selectSingle gc ml10">
-										<a class="mb10 on" href="javscript:void(0)">全部</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">魏热帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">鲍帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">互帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">哈哈帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">菲菲帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">魏热帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">鲍帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">互帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">哈哈帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
-										<span class="mb10">|</span>
-										<a class="mb10" href="javscript:void(0)">菲菲帮</a>
-									</div>
-									<a class="dib vt pt2" href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">收货仓库：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入收货仓库" autocomplete="off">
-								</span>
-							</td>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">收货仓库：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入收货仓库" autocomplete="off">
-								</span>
-							</td>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">捆包号：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入捆包号" autocomplete="off">
-								</span>
-							</td>
-
-							<td width="30%">
-								<span class="input-selSearch pct100 ">
-									<span class="dib searchLable">时间：</span>
-									<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-										<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
-										 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-									</span>
-								</span>
-							</td>
-						</tr>
-
-						<tr>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">&emsp;&emsp;货主：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入货主" autocomplete="off">
-								</span>
-							</td>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">&emsp;&emsp;钢厂：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入钢厂" autocomplete="off">
-								</span>
-							</td>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">&emsp;规格：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入货主" autocomplete="off">
-								</span>
-							</td>
-							<td width="30%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">重量：</span>
-									<span class="ui-input pct69" data-type="section">
-										<input type="text" placeholder="起始重量">~<input type="text" placeholder="结束重量">
-									</span>
-								</span>
-							</td>
-						</tr>
-						<tr>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">&emsp;&emsp;牌号：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入牌号" autocomplete="off">
-								</span>
-							</td>
-							<td width="22%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">&emsp;单据号：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入捆包号" autocomplete="off">
-								</span>
-							</td>
-							<td colspan="2">
-								<button type="button" class="ui-button mr10">查询</button>
-								<button type="button" class="ui-button " data-type="clear">清空</button>
-							</td>
-						</tr>
-					</table>
-
+				<div class="p20 f12">
+					<div class="df mb10">
+						<div class="mt5 searchLable min-w75">加盟加工商：</div>
+						<div class="dib selectProcName selectSingle gc">
+							<a class="mb10 on" href="javscript:void(0)">全部</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">魏热帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">鲍帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">互帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">哈哈帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">菲菲帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">魏热帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">鲍帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">互帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">哈哈帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">嘻嘻帮</a>
+							<span class="mb10">|</span>
+							<a class="mb10" href="javscript:void(0)">菲菲帮</a>
+						</div>
+						<a class="dib vt w25 pt2" href="javscript:void(0)" onclick="setOpen(this)" id="jgs_scroll">展开</a>
+					</div>
+					<div class="dac mb10">
+						<span class="dib pct25">
+							<span class="dib searchLable">&emsp;入货仓库：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">收货仓库：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">货主：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">牌号：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+					</div>
+					<div class="dac mb10">
+						<span class="dib pct25">
+							<span class="dib searchLable">&emsp;&emsp;捆包号：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">&emsp;&emsp;钢厂：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">规格：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">重量：</span>
+							<span class="ui-input pct69" data-type="section">
+								<input type="text" placeholder="起始重量">~<input type="text" placeholder="结束重量">
+							</span>
+						</span>
+					</div>
+					<div class="dac mb10">
+						<span class="dib pct25">
+							<span class="dib searchLable">&emsp;&emsp;单据号：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="dib pct25 m_pct31">
+							<span class="dib searchLable">&emsp;&emsp;时间：</span>
+							<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+							</span>
+						</span>
+						<button type="button" class="ui-button mr10">查询</button>
+					</div>
+					
 					<div class="lgui-table-box mt30 checkbox">
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 table-cw" width="100%">

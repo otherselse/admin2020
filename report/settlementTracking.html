@@ -19,6 +19,9 @@
             background: #fff;
             min-width: auto;
         }
+		.pct44{
+			width: 44%;
+		}
     </style>
 </head>
 
@@ -55,8 +58,8 @@
         </div>
         <div class="ui-content ovh minH">
             <div class="p20 f12">
-                <div class="mb10 dac">
-                    <span class="pct30 dib">
+                <div class="mb10 df">
+                    <span class="pct25 m_pct31 dib">
                         <span class="dib searchLable">&emsp;&emsp;支付日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -68,8 +71,8 @@
                         <span class="dib searchLable">单位名称：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="f1 dib">
-                        <span class="searchLable">评审状态：</span>
+                    <span class="pct44 df mt5 pt2 dib">
+                        <span class="searchLable min-70">评审状态：</span>
                         <span class="dib selectSingle">
                             <a href="javscript:void(0)" class="on">未结算</a>
                             <span class="">|</span>
@@ -81,8 +84,8 @@
                         </span>
                     </span>
                 </div>
-                <div class="mb10 dac">
-                    <span class="pct30 dib">
+                <div class="mb10 df">
+                    <span class="pct25 m_pct31 dib">
                         <span class="dib searchLable">&emsp;&emsp;结算日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -94,8 +97,8 @@
                         <span class="dib searchLable">&emsp;订单号：</span>
                         <input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
                     </span>
-                    <span class="f1 dib">
-                        <span class="searchLable">订单类型：</span>
+                    <span class="pct44 df dib pt2 mt5">
+                        <span class="searchLable min-70">订单类型：</span>
                         <span class="dib selectSingle">
                             <a href="javscript:void(0)" class="on">快速备</a>
                             <span class="">|</span>
@@ -108,7 +111,7 @@
                     </span>
                 </div>
                 <div class="mb10 dac">
-                    <span class="pct30 dib">
+                    <span class="pct25 m_pct31  dib">
                         <span class="dib searchLable">预计回款日期：</span>
                         <span class="ui-input tc f0 pct69 mr5 range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -132,7 +135,7 @@
 								    <th width="4%">订单号</th>
 								    <th width="4%">区域</th>
 								    <th width="5%">订单类型</th>
-								    <th width="7%">单位名称</th>
+								    <th width="7%" class="tl"><div class="pl5">单位名称</div></th>
 								    <th width="5%">合同金额</th>
 								    <th width="5%">资金占用利息</th>
 								    <th width="7%">首次支付时间</th>
@@ -273,28 +276,36 @@
 							</tbody>
 							<tfoot class="bgfa">
 								<tr height="45">
-								    <td colspan="19">
-								        <div class="daj">
-								            <div style="min-width: 80px;">当前页合计：</div>
-								            <div class="tl">
-								                资金占用利息:<span class="mr10">10</span>
-								                首次支付时间:<span class="mr10">1.000</span>
-								                支付金额:<span class="mr10">1.000</span>
-								            </div>
-								        </div>
-								    </td>
+								    <td colspan="5">当前页合计：</td>
+									<td>10</td>
+									<td>10</td>
+									<td>--</td>
+									<td>1,000</td>
+									<td>--</td>
+									<td>20</td>
+									<td>--</td>
+									<td>0</td>
+									<td>19212.1</td>
+									<td>19212.1</td>
+									<td>0</td>
+									<td>19212.1</td>
+									<td colspan="2">--</td>
 								</tr>
 								<tr height="45">
-								    <td colspan="19">
-								        <div class="daj">
-								            <div style="min-width: 80px;">所有页合计：</div>
-								            <div class="tl">
-								                资金占用利息:<span class="mr10">10</span>
-								                首次支付时间:<span class="mr10">1.000</span>
-								                支付金额:<span class="mr10">1.000</span>
-								            </div>
-								        </div>
-								    </td>
+									<td colspan="5">所有页合计：</td>
+									<td>10</td>
+									<td>10</td>
+									<td>--</td>
+									<td>1,000</td>
+									<td>--</td>
+									<td>20</td>
+									<td>--</td>
+									<td>0</td>
+									<td>19212.1</td>
+									<td>19212.1</td>
+									<td>1</td>
+									<td>19212.1</td>
+									<td colspan="2">--</td>
 								</tr>
 							</tfoot>
 						</table>

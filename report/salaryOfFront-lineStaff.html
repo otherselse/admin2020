@@ -53,7 +53,7 @@
         <div class="ui-content p20 ovh minH ">
             <div class="f12">
                 <div class="dac mb10">
-                    <span class="pct30 dac">
+                    <span class="pct25 m_pct31 dac">
                         <span class="dib searchLable">&emsp;日期：</span>
                         <span class="ui-input tc f0 pct69  range" data-type="time">
                             <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
@@ -113,42 +113,50 @@
 					<div class="lgui-table-header">
 						<table class="ui-table tc f12 table-cw" width="100%">
 							<thead>
-								 <tr class="fixTr">
-                                <th width="6%">序号</th>
-                                <th width="15%">区域</th>
-                                <th width="12%">部门</th>
-                                <th width="12%">姓名</th>
-                                <th width="12%">工资月份</th>
-                                <th width="12%">应发工资(元)</th>
-                                <th width="10%">社保缴纳(公司)</th>
-                                <th width="10%">公积金缴纳(公司)</th>
-                                <th width="10%">共计(元)</th>
-                            </tr>
+								<tr class="fixTr">
+									<th width="6%">序号</th>
+									<th width="15%">区域</th>
+									<th width="12%">部门</th>
+									<th width="12%">姓名</th>
+									<th width="12%">工资月份</th>
+									<th width="12%">应发工资(元)</th>
+									<th width="10%">社保缴纳(公司)</th>
+									<th width="10%">公积金缴纳(公司)</th>
+									<th width="10%">共计(元)</th>
+								</tr>
 							</thead>
 						</table>
 					</div>
 					<div class="lgui-table-body mt-1">
 						<table class="ui-table tc f12 table-cw" width="100%">
 							<tbody class="ui-thover">
-								
+								<tr class="fixTr">
+									<td width="6%">序号</td>
+									<td width="15%">区域</td>
+									<td width="12%">部门</td>
+									<td width="12%">姓名</td>
+									<td width="12%">工资月份</td>
+									<td width="12%">应发工资(元)</td>
+									<td width="10%">社保缴纳(公司)</td>
+									<td width="10%">公积金缴纳(公司)</td>
+									<td width="10%">共计(元)</td>
+								</tr>
 							</tbody>
 							<tfoot class="bgfa">
 								 <tr height="45">
-                                <td colspan="9">
-                                    当前页合计：应发工资:<span class="dib mr10">29424</span>
-                                    社保缴纳:<span class="dib mr10">29424</span>
-                                    公积金缴纳:<span class="dib mr10">29424</span>
-                                    共计:<span class="">29424</span>
-                                </td>
-                            </tr>
-                            <tr height="45">
-                                <td colspan="9">
-                                    当前页合计：应发工资:<span class="dib mr10">29424</span>
-                                    社保缴纳:<span class="dib mr10">29424</span>
-                                    公积金缴纳:<span class="dib mr10">29424</span>
-                                    共计:<span class="">29424</span>
-                                </td>
-                            </tr>
+									<td class="tablebtdb " colspan="5">当前页合计：</td>
+									<td class="tablebtdb "><span id="s_mustWages" numtype="personal">0</span></td>
+									<td class="tablebtdb "><span id="s_socialComp" numtype="personal">0</span></td>
+									<td class="tablebtdb "><span id="s_fundComp" numtype="personal">0</span></td>
+									<td class="tablebtdb "><span id="s_total" numtype="personal">0.00</span></td>
+								</tr>
+								<tr height="45">
+									<td class="tablebtdb " colspan="5">所有页合计：</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+									<td class="tablebtdb " numtype="formatMoney">0</td>
+								</tr>
 							</tfoot>
 						</table>
 					</div>
