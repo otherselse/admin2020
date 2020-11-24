@@ -35,22 +35,24 @@ $(function(){
 	//不可复制的功能
 	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
-	//搜索下拉
-	$("body").on("click", function () {
-		$(".search-cont").hide();
-	})
-	//下拉
-	$("body").on("click", ".searchUp", function (e) {
-		e.stopPropagation();
-		$(".search-cont").hide();
-		$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)})
-		$(this).parents(".input-selSearch").find(".search-cont").show();
-	})
-	$("body").on("click", ".search-list", function () {
-		$(this).addClass("active").siblings().removeClass("active");
-		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
-		$(this).parents(".input-selSearch").find(".search-cont").hide();
-	})
+	if(mySearch_Funcflag!=1){  //mySearch_Funcflag 与mySearch_Func 方法不同时共存
+		//搜索下拉
+		$("body").on("click", function () {
+			$(".search-cont").hide();
+		})
+		//下拉
+		$("body").on("click", ".searchUp", function (e) {
+			e.stopPropagation();
+			$(".search-cont").hide();
+			$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)})
+			$(this).parents(".input-selSearch").find(".search-cont").show();
+		})
+		$("body").on("click", ".search-list", function () {
+			$(this).addClass("active").siblings().removeClass("active");
+			$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+			$(this).parents(".input-selSearch").find(".search-cont").hide();
+		})
+	}
 
 	//选择单选
 	$(".single").on("click", ".ui-option", function () {
@@ -236,9 +238,10 @@ $(function(){
 
 })
 
+var mySearch_Funcflag=''
 
 //下拉模块化 通过dataList传值以及电机的时候，执行函数
-/*
+/*	mySearch_Funcflag=mySearch_Func.setFlag(); 表示使用该赋值
 	var dataList=[{"corp":"上海一加实业有限公司","corpID":1111},{"corp":"上海耀绩实业有限公司","corpID":1112},{"corp":"上海渊静实业有限公司","corpID":1113},{"corp":"上海营佳实业有限公司","corpID":1114}];
 	mySearch_Func.init(dataList,setValue,checkCont)
 	function setValue(obj){
@@ -253,44 +256,48 @@ $(function(){
 	}
 */
 var mySearch_Func=(function($){
-		var $body=$("body");
-		var init=function(data,func1,func2){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
-			$body.on("click",function(){
-				$(".search-cont").hide();
-			})
-			$body.on("keyup", ".searchUp", function (e) {
-				var str='';		
-				e.stopPropagation();
-				$(".search-cont").hide();
-				if(func2){
-					if(func2(this)){
-						return
-					}else{
-					    func2(this)
+			var $body=$("body");
+			var init=function(data,func1,func2){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
+				$body.on("click",function(){
+					$(".search-cont").hide();
+				})
+				$body.on("keyup", ".searchUp", function (e) {
+					var str='';		
+					e.stopPropagation();
+					$(".search-cont").hide();
+					if(func2){
+						if(func2(this)){
+							return
+						}else{
+						    func2(this)
+						}
 					}
-				}
-				
-				$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)});
-				for(var i=0;i<data.length;i++){
-					str+='<a href="javascript:void(0)" class="search-list db ell" id='+data[i].corpID+'>'+data[i].corp+'</a>'
-				}
-				$(this).parents(".input-selSearch").find(".search-cont").html(str)
-				$(this).parents(".input-selSearch").find(".search-cont").show();
-			})
-			$body.on("click", ".search-list", function () {
-				if(func1){
-					func1(this);
-				}
-				$(this).addClass("active").siblings().removeClass("active");
-				$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
-				$(this).parents(".input-selSearch").find(".search-cont").hide();
-			})
+					
+					$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)});
+					for(var i=0;i<data.length;i++){
+						str+='<a href="javascript:void(0)" class="search-list db ell" id='+data[i].corpID+'>'+data[i].corp+'</a>'
+					}
+					$(this).parents(".input-selSearch").find(".search-cont").html(str)
+					$(this).parents(".input-selSearch").find(".search-cont").show();
+				})
+				$body.on("click", ".search-list", function () {
+					if(func1){
+						func1(this);
+					}
+					$(this).addClass("active").siblings().removeClass("active");
+					$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+					$(this).parents(".input-selSearch").find(".search-cont").hide();
+				})
 
-		}
-		return{
-			init:init
-		}
-	})(jQuery);
+			}
+			,setFlag=function(flag){
+				return 1
+			}
+			return{
+				init:init
+				,setFlag:setFlag
+			}
+		})(jQuery);
 
 // 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
