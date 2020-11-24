@@ -26,66 +26,78 @@
 				<div class="lgui-table-header f12 pct100">
 					<div class="ml40">
 						<div class="mb10 df">
-							<span class="dib wsn pct40">
-								&emsp;&emsp;&emsp;仓库名称：<input type="text" class="ui-input  pct70 " placeholder="请输入">
-							</span>
-							<span class="dib pct10"></span>
-							<span class="dib pct40">
-								仓库单位：<span class="input-selSearch pct70">
-									<input type="text" class="ui-input searchUp pct100 " placeholder="请选择" autocomplete="off" readonly="">
-									<div class="search-cont">
-										<a href="javascript:void(0)" class="search-list db ell">北京</a>
-										<a href="javascript:void(0)" class="search-list db ell">上海</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-										<a href="javascript:void(0)" class="search-list db ell">杭州</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-									</div>
+							<span class="dib wsn pct90">
+								&emsp;&emsp;&emsp;企业性质：<span class="single">
+									<input type="hidden">
+									<button type="button" class="ui-option mr10 on ml-3">外资</button>
+									<button type="button" class="ui-option mr10 ">合资</button>
+									<button type="button" class="ui-option mr10 ">民营</button>
+									<button type="button" class="ui-option ">国企</button>
 								</span>
 							</span>
 						</div>
-						<div class="mb10 df">
+						<div class="mb10 wsn df">
 							<span class="dib wsn pct40">
+								&emsp;&emsp;&emsp;公司名称：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								&emsp;&emsp;注册地址：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb10 wsn df">
+							<span class="dib wsn pct40">
+								&emsp;&emsp;&emsp;公司税号：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								&emsp;&emsp;仓库名称：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb10 wsn df">
+							<span class="dib wsn pct40">
+								&emsp;&emsp;&emsp;开户银行：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								&emsp;&emsp;银行账号：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb10  df">
+							<span class="dib wsn pct40">
+								&emsp;&emsp;&emsp;仓库地址：<span class="input-selSearch pct70" onclick="setArea(this,'getAddrStock',event)" id="getAddrStock">
+									<input type="text" class="ui-input searchUp pct100 " placeholder="请选择省市区" autocomplete="off" readonly="">
+								</span></span>
+							<span class="dib pct10"></span>
+							<span class="dib wsn pct40">
+								仓库详细地址：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb10 wsn df">
+							<span class="dib pct40">
+								&emsp;&emsp;&emsp;联系电话：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+							<span class="dib pct10"></span>
+							<span class="dib pct40">
+								&emsp;&emsp;固定电话：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+							</span>
+						</div>
+						<div class="mb10 wsn df">
+							<span class="dib pct40">
 								&emsp;&emsp;&emsp;&emsp;联系人：<input type="text" class="ui-input  pct70 " placeholder="请输入">
 							</span>
 							<span class="dib pct10"></span>
 							<span class="dib pct40">
-								联系电话：<input type="text" class="ui-input  pct70 " placeholder="请输入">
+								&emsp;&emsp;&emsp;&emsp;传真：<input type="text" class="ui-input  pct70 " placeholder="请输入">
 							</span>
 						</div>
-						<div class="mb10 df">
-							<span class="dib wsn pct40">
-								&emsp;&emsp;&emsp;&emsp;&emsp;传真：<input type="text" class="ui-input  pct70 " placeholder="请输入">
-							</span>
-							<span class="dib pct10"></span>
-							<span class="dib pct40">
-								会员标记：会员标记
-							</span>
-						</div>
-						<div class="mb10 df">
-							<span class="dib wsn  dac">
-								&emsp;&emsp;&emsp;仓库地址：<div align="left">
-									<input type="text" class="searchUp ui-input" value="--" readonly="" onclick="setArea(this,'getAddrStock',event)"
-									 id="getAddrStock">&emsp;
-									<input type="text" name="depot.addr" id="addr" class="ui-input" value="小猫咪仓库">
-									<input type="hidden" name="depot.province" id="province" class="txt1" value="">
-									<input type="hidden" name="depot.city" id="city" class="txt1" value="">
-									<input type="hidden" name="depot.area" id="area" class="txt1" value="">
-									<input type="hidden" name="depot.provinceID" id="provinceID" class="txt1" value="">
-									<input type="hidden" name="depot.cityID" id="cityID" class="txt1" value="">
-									<input type="hidden" name="depot.areaID" id="areaID" class="txt1" value="">
-									<input type="hidden" name="depot.applyID" id="applyID" class="txt1" value="B3A4311DBFFE0692E05371001FAC0623">
-								</div>
-							</span>
-							<!-- <span class="dib pct10"></span
-							> -->
-						<!-- 	<span class="dib pct40">
-								&emsp;&emsp;备注：<textarea class="ui-textarea pct70" rows="1" placeholder="请填入">是大夫</textarea>
-							</span> -->
+						<div class="mb10">
+							&emsp;&emsp;&emsp;会员标记：会员仓库
 						</div>
 						<div class="mb10">
 							&emsp;&emsp;&emsp;&emsp;&emsp;备注：<textarea class="ui-textarea pct70" rows="2" placeholder="请填入">是大夫</textarea>
 						</div>
+						
 						<div class="mb10 df">
 							&emsp;入库单据模板：<span class="dib ">
 								<div class="tl dropUpfileCont">
@@ -120,6 +132,8 @@
 						<button type="button" class="ui-button mr10 w90">提交</button>
 						<button type="button" class="ui-button w90" data-type="clear">关闭</button>
 					</div>
+					
+					<div class="mt20"></div>
 				</div>
 			</div>
 		</div>

@@ -19,6 +19,10 @@
             background: #fff;
             min-width: auto;
         }
+		.ui-input[data-type='time'][small-type="small"] {
+		    height: 30px;
+		    line-height: 30px;
+		}
     </style>
 
 	</head>
@@ -52,70 +56,53 @@
 				<a href="G2GGraph.html" class="ui-tab3-list rel "><span class="ui-tab3-text">G2G曲线图</span><i class="goldIcon ui-tab3-dot"></i></a>
 			</div>
 			<div class="ui-content ovh minH">
-				<div class="pl20 pr20 pt10 f12">
-					<table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
-						<tr>
-							<td width="25%">
-								<span class="input-selSearch pct100">
-									<span class="dib searchLable">金牌商家：</span>
-									<input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
-								</span>
-							</td>
-							<td width="25%">
-								<span class="input-selSearch pct100 dac">
-									<span class="dib searchLable">业务类型：</span>
-									&nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择" autocomplete="off" readonly="">
-									<div class="search-cont">
-										<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-									</div>
-								</span>
-							</td>
-							<td width="25%">
-								<span class="dib pl10 mr20 pct100">
-									<span class="dib searchLable">投资时间：</span>
-									<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
-										<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
-										 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
-									</span>
-								</span>
-							</td>
-							<td width="25%">
-								<span class="input-selSearch pct100">
-									<span class="dib pct100">
-										<span class="dib searchLable">计息时间：</span>
-										<span class="ui-input ui-input pct69 " data-type="time" small-type="small"><input type="text" placeholder="time4"
-											 id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
-									</span>
-								</span>
-							</td>
-						</tr>
-						<tr>
-							<td width="25%">
-								<span class="input-selSearch pct100 dac">
-									<span class="dib searchLable">&emsp;&emsp;状态：</span>
-									&nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择" autocomplete="off" readonly="">
-									<div class="search-cont">
-										<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-									</div>
-								</span>
-							</td>
-							<td colspan="3">
-								<button type="button" class="ui-button mr10">查询</button>
-								<button type="button" class="ui-button " data-type="clear">清空</button>
-							</td>
-						</tr>
-					</table>
-
+				<div class="p20 f12">
+					<div class="df mb10">
+						<span class="dib pct25">
+							<span class="dib searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入金牌商家" autocomplete="off">
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">业务类型：</span>
+							&nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择" autocomplete="off" readonly="">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">计息时间：</span>
+							<span class="ui-input ui-input pct69 " data-type="time" small-type="small"><input type="text" placeholder="time4"
+								 id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
+						</span>
+						<span class="dib pct25">
+							<span class="dib searchLable">&emsp;&emsp;状态：</span>
+							&nbsp;<input type="text" class="ui-input searchUp pct69" placeholder="请选择" autocomplete="off" readonly="">
+							<div class="search-cont">
+								<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+					</div>
+					<div class="df mb10">
+						<span class="dib pct25 m_pct31">
+							<span class="dib searchLable">投资时间：</span>
+							<span class="ui-input tc f0 pct69 mr5 range" data-type="time">
+								<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span class="dib pct5 tc">-</span><input
+								 type="text" placeholder="结束时间" class="render-time pct45" readonly="">
+							</span>
+						</span>
+						<button type="button" class="ui-button">查询</button>
+					</div>
+	
 					<div class="lgui-table-box mt30 checkbox">
 						<div class="lgui-table-header">
 							<table class="ui-table tc f12 table-cw" width="100%">

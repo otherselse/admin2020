@@ -19,6 +19,7 @@
             background: #fff;
             min-width: auto;
         }
+		
     </style>
 
 </head>
@@ -55,28 +56,18 @@
                     class="goldIcon ui-tab3-dot"></i></a>
         </div>
         <div class="ui-content ovh minH">
-            <div class="pl20 pr20 pt10 f12">
-                <table width="100%" class="checkbox" style="border-collapse:separate; border-spacing:0px 10px;">
-                    <tr>
-                        <td width="33.3%">
-                            <span class="dib pl10 mr20 pct100">
-                                <span class="dib searchLable">日期：</span>
-                                <span class="ui-input tc f0 pct70 mr5 range" data-type="time">
-                                    <input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
-                                        class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
-                                        class="render-time pct45" readonly="">
-                                </span>
-                            </span>
-                        </td>
-                        <td>
-                            <button type="button" class="ui-button mr10">查询</button>
-                            <button type="button" class="ui-button " data-type="clear">清空</button>
-                        </td>
-                    </tr>
-                </table>
+            <div class="p20 f12">
+				<div class="dac">
+					<span class="dib searchLable">日期：</span>
+					<span class="ui-input tc f0 mr5 range" data-type="time">
+						<input type="text" placeholder="开始时间" class="render-time pct45" readonly=""><span
+							class="dib pct5 tc">-</span><input type="text" placeholder="结束时间"
+							class="render-time pct45" readonly="">
+					</span>
+					 <button type="button" class="ui-button ml20">查询</button>
+				</div>
 				
-				
-				<div class="lgui-table-box mt20 checkbox">
+				<div class="lgui-table-box mt30 checkbox">
 					<div class="lgui-table-header">
 						<table class="ui-table tc f12 table-cw" width="100%">
 							<thead>
