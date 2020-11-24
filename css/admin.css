@@ -1572,11 +1572,6 @@ a.wh:hover {
   bottom: 60px;
 }
 
-.login_cont {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 .login_input .ui-input:hover {
   animation: breath3 1.5s infinite ease alternate;
@@ -1623,16 +1618,13 @@ a.wh:hover {
   -webkit-animation: breath1 2s infinite ease alternate;
 }
 
-.bg-txt {
+.bg-txt1 {
   width: 252px;
   height: 83px;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  right: 52%;
+  background: url(../images/login/bg-txt.png) no-repeat;
+  bottom: 60px;
 }
 
 @keyframes breath2 {
@@ -3994,7 +3986,6 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
   background: #FFFFFF;
   box-shadow: 0 3px 12px 0 rgba(0,0,0,0.05);
   height: 180px;
-  padding-left: 92px;
   box-sizing:border-box;
   }
   .icon-doStep{
@@ -4032,8 +4023,7 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
 .reg_selitem{
   display: inline-block;
   height: 26px;
-  padding: 0 25px 0 8px;
-  background: #FFFFFF;
+  padding:0 8px;
   line-height: 26px;
   cursor: pointer;
   font-size: 14px;
@@ -4044,6 +4034,7 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
   border: 1px solid #E6E6E6;
   border-radius: 13px;
+  background: #fff;
 }
 .ui-input-x[data-type="code"] >input{
   height: 28px;
@@ -4156,7 +4147,10 @@ a.on.mDListShow:after {
 .pb25{
   padding-bottom: 25px;
 }
-
+.reg_box{
+  padding-top: 40px;
+  background: #fafafa;
+}
 .icon-finish{
   width: 144px;
   height: 120px;
@@ -4173,9 +4167,19 @@ body.login{
   position: absolute;
   right: 0;
   top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;  
 }
 .loginR{
   position: absolute;
-  right: -1080px;
+  right: -75%;
   top: 0;
+}
+.pl90{
+  padding-left: 90px;
+}
+.pct55{
+  width: 55%;
 }
