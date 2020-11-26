@@ -107,35 +107,93 @@
                 <table class="pct100 tl row mt15 ui-table f12">
                     <tbody>
                         <tr>
-                            <td width="13%">1.结算方式</td>
-                            <td width="87%">
-                                账期是否在三个月以内，最长账期为三个月付全款，期间分阶段付款均可；
+                            <td width="20%">结算账期在三个月内</td>
+                            <td width="80%">
+                                <span class="radio " >
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1"  onclick="selPayment(this)"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  val="0" onclick="selPayment(this)"></i>否</label>
+                                </span>
                             </td>
                         </tr>
                         <tr>
-                            <td>2.支付方式</td>
-                            <td>用银行转账、银行承兑汇票、银信通、建信融通等哪种方式支付，如涉及贴息，谁承担贴息费用，一般由客户承担；</td>
+                            <td>支付方式</td>
+                            <td>
+                                <span class="radio">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" val="1" onclick="selPayType(this)"></i>银行转账</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0" onclick="selPayType(this)"></i>多种方式</label>
+                                </span>
+                                <span class="ml80 dn" id="payTypeMore">
+                                    <span>若涉及贴息，贴息费用承担方：</span>
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1" onclick="selAssume(this)"></i>我司承担</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0"  onclick="selAssume(this)"></i>客户承担</label>
+                                    </span>
+                                </span>
+                        </td>
                         </tr>
                         <tr>
-                            <td>3.签收方式</td>
-                            <td>单位签收：是否预留样章。 个人签收：是否明确授权签收人姓名、联系电话、身份证号及预留签名；</td>
+                            <td>签收方式</td>
+                            <td>
+                                <span class="radio ">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio" val="1" onclick="selSign(this)"></i>个人签收</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"  val="0" onclick="selSign(this)"></i>单位签收</label>
+                                </span>
+                                <span class="ml80 dn" id="company" >
+                                    <span>是否预留样章：</span>
+                                    <span class="radio">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                </span>
+                                <span class="ml80" id="person">
+                                    <span>是否明确授权签收人姓名、联系电话、身份证号及预留签名：</span>
+                                    <span class="radio ">
+                                        <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                        <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                    </span>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
-                            <td>4.质量异议</td>
-                            <td>签收后如有质量异议，应于签收单上显示的需方签收之日起15个自然日内以书面形式提出，质量异议提出最长不大于15个自然日；</td>
+                            <td>质量异议在签收后15个自然日内提出</td>
+                            <td>
+                                <span class="radio ">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0"></i>否</label>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
-                            <td>5.违约责任</td>
-                            <td>超期未付款资金占用利息约定是否为每日万分之八；是否明确违约金责任方及违约金的比例；</td>
+                            <td>超期资金占用利息</td>
+                            <td>
+                                <span class="radio ">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1"></i>每日万分之八</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0"></i>其他利率</label>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
-                            <td>6.诉讼管辖地</td>
-                            <td>合同签订地及诉讼管辖地是否明确为上海市宝山区。</td>
+                            <td>违约金责任方及违约金比例</td>
+                            <td>
+                                <span class="radio ">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1"></i>已明确且同系统设定</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0"></i>未明确</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>诉讼管辖地为上海市宝山区</td>
+                            <td>
+                                <span class="radio ">
+                                    <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="1"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio" val="0"></i>否</label>
+                                </span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="mt30 clearfix">
-                        <span class="lable_t f14 b g28">销售合同评审意见</span>
+                        <span class="lable_t f14 b g28">销售合同评审</span>
                         <a href="javascript:void(0)" class="ml15 poi f12" title="1.港澳台客户，必须提供电话，审批时要做电话核实。<br>
                         2.非港澳台客户，对应金牌商家必须提供与国外客户的Email沟通记录。<br>
                         对于国外客户需提供注册信息报告,查询机构可通过上海巽泽企业管理咨询有限公司（环球咨询），联系人李翔(13795496020/021-62992208)">
@@ -148,6 +206,35 @@
                             </a>
                 </div>
                 <div class="clt-check-cont pct95  mt15">
+                    <div class="cl clt-check-box">
+                        <div class="clt-check-left">
+                            <div class="pt20 pb20 tr">
+                                <span class="mr10">1节点</span>
+                            </div>
+                        </div>
+                        <div class="clt-check-right">
+                            <div class="clt-check-rcont f0">
+                                <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-check on ml20 mr5 vm"></i><span class="green b">审核通过</span></div>
+                                <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct30 g28 vt">同意申请</span></div>
+                                <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cl clt-check-box">
+                        <div class="clt-check-left">
+                            <div class="pt20 pb20 tr ">
+                                <span class="mr10">2节点</span>
+                            </div>
+                        </div>
+                        <div class="clt-check-right">
+                            <div class="clt-check-rcont f0">
+                                <div class="dib pct20 f12"><span class="g28 f14">李世民</span> <i class="icon-stop  ml20 mr5 vm"></i><span class="b red">审核不通过</span> </div>
+                                <div class="dib pct40 f12"><span class="dib vt">审核意见：</span><span class="dib pct70 g28 vt">同意申请，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，这里是大段审批意见描述，</span>
+                                </div>
+                                <div class="dib pct40 f12">审批时间：<span class="dib g28">2020-01-22 10:11:11</span></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="cl clt-check-box">
                         <div class="clt-check-left">
                             <div class="pt20 pb20 mr10 tr">
@@ -170,14 +257,15 @@
                                         <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未通过验证</label>
                                     </span>
                                 </div>
-                                    <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2">备注：</textarea>
+                                    <textarea class=" ui-textarea bd_none pct100 mt10 f12" cols="30" rows="2" id="remark">备注：
+                                    </textarea>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tc mt20">
-                    <button class="ui-button mr20" type="button">提交</button>
-                    <button class="ui-button" type="button" data-type="clear">退回</button>
+                    <button class="ui-button mr20" type="button" id="submit">提交</button>
+                    <button class="ui-button" type="button" data-type="clear" id="submit2">退回</button>
                 </div>
             </div>
         </div>
@@ -210,7 +298,54 @@
                 $(obj).parents(".clt-check-rcont").find("textarea").val("备注：不同意申请。");
             }
         }
+        var approveStr = "",paymentStr = "",payTypeStr = "",selAssumeStr = "",signStr=""
+         //选择账期
+         function selPayment(obj){
+             var flag = $(obj).attr("val")
+             if(flag=="1"){
+                paymentStr="结算账期在三个月内；"
+             }else{
+                paymentStr="结算账期大于三个月；"
+             }
+             joinStr()
+         }
+         function selPayType(obj){
+             var flag = $(obj).attr("val")
+             if(flag=="1"){
+                payTypeStr="支付方式为银行转账；"
+                $("#payTypeMore").hide()
+                selAssumeStr=""
+             }else{
+                payTypeStr="支付方式为多种方式；"
+                $("#payTypeMore").show()
+             }
+             joinStr()
+         }
+         function selAssume(obj){
+             var flag = $(obj).attr("val")
+             if(flag=="1"){
+                selAssumeStr="若涉及贴息，贴息费用由我方承担；"
+             }else{
+                selAssumeStr="若涉及贴息，贴息费用由客户承担；"
+             }
+             joinStr()
+         }
+         function selSign(obj){
+             var flag = $(obj).attr("val")
+             if(flag=="1"){
+               $("#person").show()
+               $("#company").hide()
+             }else{
+                $("#person").hide()
+               $("#company").show()
+             }
+         }
 
+         //拼接意见框字符
+         function joinStr(){
+            approveStr = paymentStr+payTypeStr+selAssumeStr
+            $("#remark").val(approveStr)
+         }
     </script>
 </body>
 
