@@ -146,15 +146,15 @@
 		var lg_fileType='.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|'  // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
 		myLgUpload.init(lg_MaxSize,lg_type,lg_fileType);
 		
-		$('#file').change(function (event) {
+		$('.fileBut').change(function (event) {
 				var files = event.target.files;
 				myLgUpload.getFilesUpload(files,this);
 			})
 
-		$('#file3').change(function (event) {
-				var files = event.target.files;
-				myLgUpload.getFilesUpload(files,this);
-			})
+		// $('#file3').change(function (event) {
+		// 		var files = event.target.files;
+		// 		myLgUpload.getFilesUpload(files,this);
+		// 	})
 
 		$("#maxL").text((lg_MaxSize/(1024 * 1024))+"MB")
 		$("#fileT").text(",文件格式为："+lg_fileType.replace(/\|/g," "))
