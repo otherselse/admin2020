@@ -471,3 +471,57 @@ function stopPro(e){
 		e.stopPropagation();
  }
 }
+
+  //消抖（debounce）某个操作结束之后，在一段时间后，重新唤起。如：当在指定时间间隔内没有再输入时，才会发送请求。
+  // $("body").on("keyup",".testDebDom", debounce(testFn,200));
+   function debounce (fn, delay) {
+          var timer   = null;
+
+          return function () {
+          var args = arguments;
+          var context = this;
+
+              if (timer) {
+                  clearTimeout(timer);
+
+                  timer = setTimeout(function () {
+                      fn.apply(context, args);
+                  }, delay);
+              } else {
+                  timer = setTimeout(function () {
+                      fn.apply(context, args);
+                  }, delay);
+              }
+          }
+      }
+
+   //节流（throttle）每隔一段时间执行一次函数。
+   //$("body").on("click",".throttle", throttle(testCon,2000))
+   function throttle (fn, delay) {
+       var  timer    = null,
+            remaining   = 0,
+            previous = new Date();
+
+        return function () {
+            var now = new Date(),
+            remaining = now - previous,
+            args = arguments,
+            context = this;
+
+            if (remaining >= delay) {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                fn.apply(context, args);
+                previous = now;
+            } else {
+                if (!timer) {
+                    timer = setTimeout(function () {
+                        fn.apply(context, args);
+                        previous = new Date();
+                    }, delay - remaining);
+                }
+            }
+        };
+    }
