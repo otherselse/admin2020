@@ -2,6 +2,7 @@ $(function(){
 	 setHeight();
 	$(window).resize(function(){
 		setHeight();
+		getHeader();
 	})
 	$("body").on("mousewheel",function() {
 		setHeight();
@@ -310,9 +311,9 @@ function getWidth(){
 		$(".setLeftBar").addClass("on");
 		$(".leftBar").css("left","0")
 	}
-
+	getScroll()
 	getHeader()
-	getScroll()	
+		
 
 }
 
@@ -326,9 +327,15 @@ function getHeader(){
 				$(".lgui-table-header").width($(window).width()-100);
 			}
 			//$(".lgui-table-header").width($(window).width()-300);
+		}else if($(window).width()>=1280&&$(window).width()<1440){
+			if($(".setLeftBar ").hasClass("on")){
+				$(".lgui-table-header").width($(window).width()-300);
+			}else{
+				$(".lgui-table-header").width($(window).width()-100);
+			}
 		}else{
 			if($(window).width()<1280){
-				$(".lgui-table-header").removeClass("fixed");
+				$(".lgui-table-header").removeClass("fixed").removeAttr("style");
 				$(".lgui-table-body").removeAttr("style");
 			}
 		}
