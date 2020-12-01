@@ -137,7 +137,7 @@
 									<tr class="n19-Title">
 										<th width="4%" class="cent">
 											<div class=""><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
-													 onclick="setAll(this)"></i>选择</div>
+													 onclick="mySetAll(this)"></i>选择</div>
 										</th>
 										<th width="12%" class="tc">单位名称</th>
 										<th width="5%">收支类型</th>
@@ -159,7 +159,7 @@
 								<tbody class="ui-thover">
 									<tr>
 										<td width="4%" class="cent">
-											<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<i class="ui-checkbox disabled goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
 										</td>
 										<td width="12%" class="tl">
 											<div class="tl ell">
@@ -385,6 +385,18 @@
 					},
 				});
 			})
+			//全选
+			function mySetAll(obj) {
+				var myobj = $(obj).parents(".checkbox").find(".ui-checkbox").not(":disabled").not($(obj).parent('.ui-checkbox'));
+				if (obj.checked) {
+					myobj.not(".disabled").addClass("on");
+					myobj.find(":checkbox").prop("checked", true);
+				} else {
+					myobj.not(".disabled").removeClass("on");
+					myobj.find(":checkbox").prop("checked", false);
+				}
+			
+			}
 
 			function showDiv_lrl(obj) {
 				$(obj).parents("tr").next(".hideTr").css("display", "none")

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>单位评审-评审管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css">
+    <link rel="stylesheet" href="http://resource.lgsteel.cn/admin2020/js/laydate/theme/default/laydate.css?v=5.0.9" id="layuicss-laydate">
+</head>
+<body class="showTip">
+
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+    <!-- 供应商评审、承运商评审 页面结构大致相同 表中字段自行修改 -->
+
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_toas.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+
+	<div class="rightBar">
+		<div class="nav ovh">
+			<div class="l gga">
+	            <a href="../index/index.html" class="gga">首页</a>
+	            <span class="dib gga pl5 pr5">/</span>
+	            评审管理
+	            <span class="dib gga pl5 pr5">/</span>
+	            <span class="g28">评审</span>
+	        </div>
+	        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+	        	</div>
+        </div>
+		<div class="ui-content minH">
+            <div class="bbe"><span class="ui-content-t n poi" onclick="prev()" ><i class="leftArrow"></i> 返回上一级</span> </div>
+			<div class="lh84 bor-bottom">
+                <div class="ui-tab4">
+                    <a href="./supplierApply.html" class="ui-tab4-list ml20 mr10 ">承运商申请表</a>
+                    <a href="./supplierlocale.html" class="ui-tab4-list on">现场资料审核</a>
+                    <a href="./history.html" class="ui-tab4-list">承运商申请历史记录</a>
+                    <a href="review.html" class="ui-tab4-list">承运商评审</a>
+                </div>
+            </div>
+            <div class="p20">
+                <div class="mt10 f16">
+                     现场资料信息由<span class="pl5 pr5 b g28">赵自立</span>(金牌商家)上传
+                     <a href="javascript:void(0)" class="ml15 poi f12" title="<div>
+                        <b>1) </b>当供应商资质为国企时，可免现场照片等资料上传；  <br>
+                        <b>2) </b>当供应商为我司已合作客户，实缴资金大于1000万人民币，成立年限长于5年，且近期无新增风险信息的，可免现场照片上传。<br>
+                        <b>3) </b>当供应商为外地供应商（判断外地的最低标准为非我司各区经营所在地），实缴资金大于1000万，成立年限长于5年，且近期无风险信息的，若首次合作由客户按我司要求拍摄现场资料，我司工作人员不要求必须入镜。（需期货交货的除外）。<br>
+                        <b>4) </b>对于免现场资料上传评审通过的供应商，在即将到期后由风控人员自行对供应商综合评估，延长有效期或是退回现场重新审核。
+                            <br><span class='red'>以上具体要求请知悉，最终具体审核结果由审批人员把控。</span>
+                    </div>">
+                                <i class="goldIcon icon-info vm "></i>
+                                供应商评审现场资料上传须知</a>
+                </div>
+                <span class="ui-tip pct100 mt30">注：现场拍摄资料需在 <span class="red">15天有效期之内</span>，请核查。</span>
+                <div class="mt30 lable_t g28 b">基本信息</div>
+                <div class="mt15 f0">
+                    <div class="pct50 f12 dib">
+                       <span class="red">*</span> 相关协议钢厂：<input type="text" class="ui-input pct30" placeholder="请输入">
+                    </div>
+                    <div class="pct50 f12 dib">
+                      &emsp;&emsp;&emsp;<span class="red">*</span>主营品种：<span class="input-selSearch pct20 mr10">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont  ">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                        <span class="input-selSearch pct20 mr10">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                        <span class="input-selSearch pct20">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="mt10 f0">
+                    <div class="pct50 f12 dib">
+                     &nbsp;&emsp;&emsp;<span class="red">*</span>评审周期：<span class="input-selSearch pct20">
+                        <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                        <div class="search-cont pct100">
+                            <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                            <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                        </div>
+                    </span>
+                    </div>
+                  
+                    <div class="pct50 f12 dib">
+                        &ensp;&nbsp;&nbsp;<span class="red">*</span>使用合同版本：<span class="input-selSearch pct20">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont pct100">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                         </div>
+                </div>
+                <div class="mt10 f0">
+                    <div class="pct50 f12 dib">
+                        <span class="dib vt">&ensp;&ensp;&ensp;&ensp;&ensp;合同附件：</span>
+                        <span class="dib">
+                            <div>
+                              <button class="ui-button mr15" data-type="upfile" type="button">附件上传</button>
+                              <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" data-hasqtip="14" oldtitle="删除" title=""></i></span>
+                            </div>
+                            <div>
+                              <span class="ui-tip mt10" data-type="normal">合同非我司格式需提交常用合同版本</span>
+                            </div>
+                        </span>
+                     </div>
+                     <div class="pct50 f12 dib vt">
+                        <span class="red">*</span>  是否与法务确认：<span class="radio g28">
+                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                     </div>
+                </div>
+                <div class="mt10 f0">
+                    <div class="pct100 f12 dib">
+                        &ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>企业性质：<span class="radio g28">
+                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>国企</label>
+                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>民营</label>
+                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>合资</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>外贸</label>
+                        </span>
+                        <span class="ui-tip ml20" data-type="normal">国企、央企可以不上传现场评审资料,企业性质查询点击 企业信息查询平台  国家企业信用信息公示系统</span>
+
+                    </div>
+                </div>
+                <div class="mt10 f0">
+                    <div class="pct50 f12 dib">
+                        &ensp;&ensp;&ensp;&ensp;&ensp;<span class="red">*</span>实缴资本：<input type="text" class="ui-input pct20 mr5" placeholder="请输入">万人民币
+                    </div>
+                    <div class="pct50 f12 dib">
+                        &emsp;&emsp;&emsp;<span class="red">*</span>注册时间：<span class="ui-input" data-type="time"><input type="text" placeholder="时间" class="render-time" readonly=""></span>
+                    </div>
+                </div>
+                <div class="mt10 f0">
+                    <div class="pct50 f12 dib">
+                        <span class="red">*</span>是否上传供应商合作协议：<span class="radio g28">
+                            <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                            <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="lable_t g28 mt40 b">附件信息</div>
+                <div class="mt25 f12">
+                  <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;评审附件：</span> 
+                  <span class="dib">
+                      <div>
+                        <button class="ui-button mr15" data-type="upfile" type="button">附件上传</button>
+                        <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                      </div>
+                      <div>
+                        <span class="ui-tip mt10" data-type="normal">A.营业执照副本 B.税务登记证 C.企业组织机构代码证 D.银行开户许可证</span>
+                      </div>
+                  </span>
+                </div>
+                <div class="mt15 f12">
+                    <span class="dib">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;现场评审：</span>
+                    <span class="single">
+                        <button type="button" class="ui-option mr10 on">现场评审</button>
+                        <button type="button" class="ui-option mr10">未现场评审</button>
+                        <button type="button" class="ui-option">免现场资料上传</button>
+                    </span>
+                </div>
+                <div class="mt15 f12">
+                    <span class="dib">&emsp;&emsp;&emsp;&emsp;&emsp;现场评审方式：</span>
+                    <span class="single">
+                        <button type="button" class="ui-option mr10 on">现场照片上传</button>
+                        <button type="button" class="ui-option">远程视频拍摄</button>
+                    </span>
+                    <span class="red ml20">注：视频拍摄有效期为一个月内，请按具体要求进行拍摄上传。每个视频大小需在30M以内</span>
+                </div>
+                <div class="selItem1 dn">
+                <div class="mt15 f12">
+                  <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;正门抬头照片：</span>
+                  <span class="dib">
+                      <div>
+                        <button class="ui-button mr15" data-type="upfile" type="button">附件上传</button>
+                        <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                      </div>
+                      <div>
+                        <span class="ui-tip mt10" data-type="normal">评审人员与抬头合照，若无抬头标识，需评审人员手持营业执照原件拍照</span>
+                      </div>
+                  </span>
+                </div>
+                <div class="mt15 f12">
+                  <span class="dib vt">办公环境及工作人员照片：</span>
+                  <span class="dib">
+                      <div>
+                        <button class="ui-button mr15" data-type="upfile" type="button">附件上传</button>
+                        <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                      </div>
+                      <div>
+                        <span class="ui-tip mt10" data-type="normal">照片数量不少于5张、不多于10张，每张照片需有水印拍摄时间</span>
+                      </div>
+                  </span>
+                </div>
+                <div class="mt15 f12">
+                  <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;仓库抬头照片：</span> 
+                  <span class="dib">
+                      <div>
+                        <button class="ui-button mr15" data-type="upfile" type="button">合同上传</button>
+                        <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                      </div>
+                      <div>
+                        <span class="ui-tip mt10" data-type="normal">评审人员与货物实际所在仓库抬头合照，照片须有水印时间</span>
+                      </div>
+                  </span>
+                </div>
+                <div class="mt15 f12">
+                  <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;货物照片：</span> 
+                  <span class="dib">
+                      <div>
+                        <button class="ui-button mr15" data-type="upfile" type="button">合同上传</button>
+                        <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                      </div>
+                      <div>
+                        <span class="ui-tip mt10" data-type="normal">照片数量不少于5张、不多于10张，每张照片需有水印拍摄时间；货物照片为该公司实际库存，严禁用他人库存顶替，弄虚作假者负全责</span>
+                      </div>
+                  </span>
+                </div>
+                </div>
+                <div class="selItem1">
+                    <div class="mt15 f12">
+                      <span class="dib vt">办公环境及工作人员视频：</span>
+                      <span class="dib">
+                          <div>
+                            <button class="ui-button mr15" data-type="upfile" type="button">附件上传</button>
+                            <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                          </div>
+                          <div>
+                            <span class="ui-tip mt10" data-type="normal">包含公司抬头及办公室环境，若公司没有抬头则需要拍摄营业执照与办公环境，拍摄公司抬头和营业执照时需停留2秒，文字内容需清晰可辨，需拍摄者口述拍摄日期，包含年月日 （可上传三个视频，至少一个视频）</span>
+                          </div>
+                      </span>
+                    </div>
+                    <div class="mt15 f12">
+                      <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;仓库视频：</span> 
+                      <span class="dib">
+                          <div>
+                            <button class="ui-button mr15" data-type="upfile" type="button">合同上传</button>
+                            <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                          </div>
+                          <div>
+                            <span class="ui-tip mt10" data-type="normal">包含仓库抬头及存货视频，需拍摄者口述拍摄日期，包含年月日， 货物视频为该公司实际库存，严禁用他人库存顶替，弄虚作假者负全责（可上传三个视频，至少一个视频） </span>
+                          </div>
+                      </span>
+                    </div>
+                    <div class="mt15 f12">
+                      <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;生产环境视频：</span> 
+                      <span class="dib">
+                          <div>
+                            <button class="ui-button mr15" data-type="upfile" type="button">合同上传</button>
+                            <span class="ui-files mr20 vm"><a href="javascript:void(0)" class="g80">组件1111.jpg</a><i class="icon-sdel goldIcon vm ml5" title="删除"></i></span>
+                          </div>
+                          <div>
+                            <span class="ui-tip mt10" data-type="normal">包含加工生产车间工作情况及原料或产成品堆放情况视频，需拍摄者口述拍摄日期，包含年月日，视频需拍摄实际工作开展情况，弄虚作假者负全责（可上传三个视频，至少一个视频）
+
+                            </span>
+                          </div>
+                      </span>
+                    </div>
+                    </div>
+                <div class="mt15 f0">
+                    <div class="f12 dib pct50">
+                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="red">*</span>仓库名称：<input type="text" class="ui-input" class="pct20">
+                    </div>
+                    <div class="f12 dib pct50">
+                        <span class="red">*</span>仓库性质：<span class="input-selSearch pct20 mr10">
+                            <input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off">
+                            <div class="search-cont  ">
+                                <a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+                                <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="mt15 f12">
+                  <span class="dib vt">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;情况说明：</span>
+                    <textarea class="ui-textarea pct80" rows="2" placeholder="请填写"></textarea>
+                </div>
+                <!-- <table class="ui-table row  f12  auto tl  mt20" width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="13%">自有车辆数量(辆)：</td>
+                            <td width="40%"><input type="text" class="ui-input pct80" placeholder="请输入"> </td>
+                            <td width="13%">停车场性质：</td>
+                            <td width="40%">
+                                <span class="radio">
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>月均运量(吨)：</td>
+                            <td><input type="text" class="ui-input pct80" placeholder="请输入"> </td>
+                            <td>评审周期：</td>
+                            <td>
+                                <span class="radio">
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>3个月</label>
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>6个月</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>12个月</label>
+                                </span>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>前期是否合作：</td>
+                            <td>
+                                <span class="radio">
+                                    <label class="mr15"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+                                    <label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+                                </span>
+                            </td>
+                            <td>合作时间：</td>
+                            <td><input type="text" class="ui-input pct30 mr5" placeholder="请输入">月 </td>
+                        </tr>
+                        <tr>
+                            <td>合同原件是否收回：</td>
+                            <td colspan="3">
+                                <span class="checkbox mr20">
+                                    <label><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>是</label>
+                                </span>
+                                <button type="button" class="ui-button mr15" data-type="upfile">打印</button>
+                                <button type="button" class="ui-button mr20" data-type="upfile">合同上传</button>
+                                <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>办公现场照片：</td>
+                            <td colspan="3">
+                                <div>
+                                    <button type="button" class="ui-button mr20" data-type="upfile">附件上传</button>
+                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                    <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                </div>
+                                <div class="mt5">
+                                    <span class="ui-tip" data-type="normal">办公场所外观、内部办公环境及工作人员等照片5-10张（需有评审人员与公司抬头合照，且全部照片须有水印拍摄时间）。</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>车辆考察照片：</td>
+                            <td colspan="3">
+                                <div>
+                                    <button type="button" class="ui-button mr20" data-type="upfile">附件上传</button>
+                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                    <a href="javascript:void(0)" class="ui-files mr10 vm">组件1111.jpg</a>
+                                    <a href="javascript:void(0)" class="ui-files vm">组件1111.jpg</a>
+                                </div>
+                                <div class="mt5">
+                                    <span class="ui-tip" data-type="normal">在用车辆、停车现场及工作人员等照片5-10张（需至少一张照片有评审人员出镜，且全部照片须有水印拍摄时间）。</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>情况说明：</td>
+                            <td colspan="3">
+                                <textarea class="ui-textarea pct98" rows="3" placeholder="请输入"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>审批意见：</td>
+                            <td colspan="3">
+                                <textarea class="ui-textarea pct98" rows="3" placeholder="请输入"></textarea>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table> -->
+                <div class="mt20 tc">
+                    <button class="ui-button mr10" data-type="big" type="button">提交</button>
+                    <button class="ui-button" data-type="bigclear" type="button">退回申请人</button>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!-- rightBar -->
+
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script>
+		$(function(){
+			$(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			//提示
+			if($(".showTip").length>0){
+				$(".showTip").find('[title]').qtip({
+					position: {
+						my: 'top left', //my:是指三角的位置
+						at: 'bottom left' //是在提示在组件的相对位置
+							},
+					style: {
+						classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+					}
+				});
+			}
+		})
+		function prev(){
+			window.history.back(-1)
+		}
+
+	</script>
+</body>
+</html>
