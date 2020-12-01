@@ -19,24 +19,180 @@
         html {
             background: #fff;
         }
+        
+        .xx {
+            background: url(../images/InformationChanges/11.png) no-repeat right;
+        }
+        
+        .h30 {
+            height: 30px;
+            line-height: 30px;
+        }
+        
+        .h60 {
+            height: 60px;
+        }
+        
+        .sy {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
+        .chao {
+            overflow: hidden;
+        }
+        
+        .classMax>span {
+            cursor: pointer;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #353535;
+        }
+        
+        .ui-files {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 26px;
+            height: 26px;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid #E5E5E5;
+            border-radius: 13px;
+            padding: 0px 10px 0px 10px;
+            color: #676767;
+            background: url(=) #fff no-repeat 12px 5px;
+            max-width: 500px;
+            overflow: hidden;
+        }
+        
+        .classMax span {
+            width: 70px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .jia a {
+            width: 95px;
+        }
+        
+        .selectSingle span {
+            color: #676767;
+        }
+        
+        .selectSingle a.on {
+            color: #1365e8;
+            background: #FFFFFF;
+            border: 1px solid #E6E6E6;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
 <body class="showTip">
-    <div class="lgui-table-box ml40 mr20">
-        <div class="lgui-table-header f12 ml20 pct100">
-            <div class="mb10 mt20">
-                大类： <span class="single">
-                    <button type="button" class="ui-option mr10 on">热轧类</button>
-                    <button type="button" class="ui-option mr10">酸洗类</button>
-                    <button type="button" class="ui-option mr10">冷镀类</button>
-                    <button type="button" class="ui-option">其他类</button>
-                </span>
-            </div>
-            <div class="">
-                品名：<input type="text" class="ui-input pct70" placeholder="请输入">
-            </div>
-        </div>
+    <div class="lgui-table-box ml20 mr20">
+		<table class="ui-table f12 row auto tl mt20 " width="100%">
+			<tbody class="n17-kClist n17-bbb ovh">
+				<tr class=" t1">
+					<td width="10%" class=" bgfa">
+						<span class=" dib">&emsp;&emsp;大类：</span>
+						<input type="hidden" id="j_steSort" data="stat_catalog" name="steNameQuality.steSort" value="冷镀类">
+						<input type="hidden" id="j_steSortID" data="stat_catalog" name="steNameQuality.steSortID" value="53">
+					</td>
+					<td width="90%">
+						<div class="c max">
+							<div style="width: 95%;" class="c">
+								<span class="n17-kClistCont selectSingle first fl pct92 n17-bdb stat_catalog" cname="大类">
+									<a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog01" onclick="j_selectSteSort(this,'13')"><span
+										 class="n17-kClCInfoText">热轧类</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog02" onclick="j_selectSteSort(this,'14')"><span
+										 class="n17-kClCInfoText">酸洗类</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog03" onclick="j_selectSteSort(this,'53')"><span
+										 class="n17-kClCInfoText">冷镀类</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo" id="catalog04" onclick="j_selectSteSort(this,'54')"><span
+										 class="n17-kClCInfoText">其他类</span></a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class=" t1">
+					<td width="10%" class=" bgfa">
+						<span class=" dib">&emsp;&emsp;品名：</span>
+						<input type="hidden" id="t_steName" data="stat_stename" name="steNameQuality.steName" value="酸洗卷板">
+						<input type="hidden" id="t_steNameID" data="stat_stename" name="steNameQuality.steNameID" value="1579">
+					</td>
+					<td width="90%">
+						<div class="c df">
+							<div style="width: 91%;" class="c mt5 kZhan chao">
+								<span class="n17-kClistCont fl h20 dac n17-bdb selectSingle stat_stename" id="t_priceSteNameList" cname="品名">
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName01" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">热轧卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName02" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">镀铝锌卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName03" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">无取向电工钢卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName04" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">铝卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName05" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">镀铝卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName06" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">热轧花纹卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName07" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">花纹卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName08" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">不锈钢卷板</span></a>
+									<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName09" onclick="t_confirmSteName(event,this,'1')"><span
+										 class="n17-kClCInfoText">直缝焊管</span></a>
+								</span>
+							</div>
+							<div class="zk tr pr20">
+								<span class="input-selSearch dib mr10" style="width: 65%;">
+									<!--onclick="stopPro(event)" onkeyup="t_searchSteNameList(this,event)" 老版搜索方法 -->
+									<input type="text" class="ui-input searchUp pct100"  placeholder="请输入" autocomplete="off">
+									<div class="search-cont pct100 tl">
+										<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+								<span class="dib ml10 mr5 menuhook icon-zk" onclick="updown(this)"></span>
+								<!-- <img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook"
+		                        width="10" height="10" alt=""> -->
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr class=" t1">
+					<td width="10%" class=" bgfa">
+						<span class=" dib">&emsp;&emsp;牌号：</span>
+					</td>
+					<td width="90%">
+						<span class="input-selSearch dib mr10 pct30">
+							<!--onclick="stopPro(event)" onkeyup="t_searchSteNameList(this,event)" 老版搜索方法 -->
+							<input type="text" class="ui-input searchUp pct100"  placeholder="请输入" autocomplete="off">
+							<div class="search-cont pct100 tl">
+								<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+								<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+							</div>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
         <div class="tc mt20">
             <button type="button" class="ui-button mr10 w90">提交</button>
             <button type="button" class="ui-button w90" data-type="clear">取消</button>
@@ -47,6 +203,470 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	<script type="text/javascript">
+		var updown = function(obj) {
+			$(obj).toggleClass("on");
+			$(obj).parents(".zk").prev(".kZhan").toggleClass("h60");
+			$(obj).parents(".zk").prev(".kZhan").toggleClass("sy");
+			$(obj).parents(".zk").prev(".kZhan").toggleClass("chao");
+		}
+	</script>
+	<script>
+		//20170711 add
+	
+		$(function() {
+			$(window).on("click", function() {
+				$(".n17-searchList").slideUp("fast");
+			})
+	
+			//用来点击选择选中
+			$("body").on("click", ".n17-kClCInfo", function() {
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+				//setOptionOn(this);
+			});
+	
+			$("body").on("click", ".first", function() {
+				$(this).parents(".n17-kClist").css("height", "auto");
+				$(this).parent().children(".n18-showinfo").show();
+			})
+	
+			//用来显示悬浮时表格的边框
+			$(".n17-Ttd").live("mouseover", function() {
+				showtbmsfc($(this));
+			});
+			$(".n17-Ttd").live("mouseout", function() {
+				$(".tbmsfc").hide();
+			});
+	
+			$("body").append(
+				"<div id='tbmsfct' class='tbmsfc tbmsfc-t'></div><div id='tbmsfcb' class='tbmsfc tbmsfc-b' ></div><div id='tbmsfcl' class='tbmsfc tbmsfc-l' ></div><div id='tbmsfcr' class='tbmsfc tbmsfc-r'></div>"
+			);
+	
+		})
+	
+		function showtbmsfc(tbtr) {
+			$(".tbmsfc").show();
+			$("#tbmsfct").css({
+				"top": tbtr.offset().top,
+				"left": tbtr.offset().left,
+				"width": tbtr.outerWidth(),
+				"height": "0"
+			});
+			$("#tbmsfcl").css({
+				"top": tbtr.offset().top,
+				"left": tbtr.offset().left,
+				"width": "0",
+				"height": tbtr.height()
+			});
+			$("#tbmsfcb").css({
+				"top": tbtr.offset().top + tbtr.height(),
+				"left": tbtr.offset().left,
+				"width": tbtr.outerWidth(),
+				"height": "0"
+			});
+			$("#tbmsfcr").css({
+				"top": tbtr.offset().top,
+				"left": tbtr.offset().left + tbtr.outerWidth(),
+				"width": "0",
+				"height": tbtr.height()
+			});
+		}
+	
+		//点击搜索图标
+		function setSearch(obj) {
+			$(obj).toggleClass("active");
+		}
+	
+		//点击增加图标
+		function addName(obj) {
+			$.layer({
+				type: 2,
+				title: '增加品名',
+				shadeClose: true, //开启点击遮罩关闭层
+				area: ['1000px', '300px'],
+				offset: ['100px', ''],
+				iframe: {
+					src: 'addProdName.html'
+				}
+			});
+		}
+	
+		function addStuffName() {
+			$.layer({
+				type: 2,
+				title: '增加牌号',
+				shadeClose: true, //开启点击遮罩关闭层
+				area: ['1000px', '500px'],
+				offset: ['100px', ''],
+				iframe: {
+					src: 'addProdStaff.html'
+				}
+			});
+		}
+	
+		//用来收起展开品名牌号维护的数据
+		function scrollBar(obj) {
+			var myobj = $(obj).parent().prev();
+			if (myobj.height() == 48) {
+				myobj.height("auto");
+				$(obj).addClass("n17-down");
+			} else {
+				myobj.height(48);
+				$(obj).removeClass("n17-down");
+			}
+		}
+	
+		//用来收起展开各模块
+		function setScroll(obj) {
+			if ($(obj).parents(".n17-kClist").height() == 48) {
+				$(obj).parents(".n17-kClist").height("auto");
+				$(obj).parents(".n17-kClist").find(".n18-showinfo").show();
+				$(obj).parents(".n17-kClist").find(".selContactMore").html('');
+				$(obj).parents(".n17-kClist").find(".n17-kClCInfo").removeClass("on");
+				$(obj).parents(".n17-kClist").find(".selContact").hide();
+	
+			} else {
+				$(obj).parents(".n17-kClist").height(48);
+				$(obj).parents(".n17-kClist").find(".n18-showinfo").hide();
+			}
+		}
+	
+		//点击添加到已选择部分
+		function setOptionOn(obj) {
+			var str = "",
+				s = "",
+				n = "",
+				flag = 0,
+				l = 0;
+			n = $(obj).parent().attr("cname");
+			s = $(obj).parents().attr("class");
+			s = getClassString(s, "stat_");
+			l = $(obj).parents(".n18-showinfo").find(".n17-bdb").length;
+			/* if($(obj).parent().hasClass("stat_price")){
+			    if($(obj).parents(".n17-kindCont").find(".selContactMore").find("span").length<l-1){
+			        //alert("请最后选择单价，谢谢！");
+			        $(obj).removeClass("on");
+			        return;
+			    }
+			} */
+	
+			str = "<span data='" + s + "' id='" + $(obj).attr("id") +
+				"'><a href='javascript:void(0)' onclick='contactDel(this)' class='ui-files  selContactList'>" + n + "：" + $(obj).children(
+					".n17-kClCInfoText").text() + "   <i class='icon-sdel goldIcon vm ml5 menuhook'></i></a></span>";
+			$(obj).parents(".n17-kClist").find(".selContactMore").children("span").each(function() {
+				if ($(this).attr("data") == s) {
+					$(this).prop('outerHTML', str);
+					flag++;
+				}
+			})
+	
+			if (!flag) {
+				if ($(obj).parent().hasClass("first")) {
+					$(obj).parents(".n17-kClist").find(".selContactMore").prepend(str);
+				} else {
+					$(obj).parents(".n17-kClist").find(".selContactMore").append(str);
+				}
+			} else {}
+	
+			$(obj).parents(".n17-kClist").find(".selContact").show();
+	
+		}
+	
+		//查找对应的字符串，并返回字符串
+		function getClassString(s, str) {
+			var index = s.indexOf(str);
+			var index2 = s.indexOf(" ", index);
+			if (index2 > -1) {
+				s = s.substring(index, index2);
+			} else {
+				s = s.substring(index);
+			}
+			return s;
+		}
+	
+		function searchList(obj, e) {
+			var myobj = $(obj).parents(".n17-Operating").find(".n17-searchList");
+			setSearchPosition(obj);
+			myobj.show();
+		}
+	
+		//搜索定位
+		function setSearchPosition(obj) {
+			$(obj).parents(".n17-Operating").find(".n17-searchList").width($(obj).parents(".n17-searchshow").width());
+			$(obj).parents(".n17-Operating").find(".n17-searchList").css({
+				"top": $(obj).offset().top + $(obj).outerHeight(),
+				"left": $(obj).offset().left
+			});
+		}
+	
+		//搜索下拉点击
+		function searchGetValue(obj) {
+			var flag = 0;
+	
+			$(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").each(function() {
+				if ($(this).attr("id") == $(obj).attr("id")) {
+					$(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").removeClass("on");
+					$(this).addClass("on");
+					flag++;
+					//setOptionOn(this);
+				}
+			})
+			if (!flag) {
+				$(obj).parents(".n17-Operating").prev(".n17-kClistCont").find(".n17-kClCInfo").removeClass("on");
+				var str = "<a href='javascript:void(0)' class='dib n17-kClCInfo ell on' id='" + $(obj).attr("id") +
+					"' ><span class='n17-kClCInfoText'>" + $(obj).text() + "</span></a>";
+				$(obj).parents(".n17-kClist").find(".n17-searchSAdd").html(str);
+	
+			}
+	
+			$(obj).parents(".n17-Operating").find("input.n17-addinput").val($(obj).text());
+			$(obj).parents(".n17-Operating").find(".n17-searchList").slideUp("fast");
+	
+		}
+	
+		//删除已选择中的选择项
+		function contactDel(obj) {
+			var k = $(obj).parent("span").attr("data");
+			var id = $(obj).parent("span").attr("id");
+			$(obj).parents(".n17-kClist").find(".n17-kClCInfo").each(function() {
+				if ($(this).attr("id") == id) {
+					$(this).removeClass("on");
+				}
+			});
+			$(obj).parents(".n17-kClist").find("input[data='" + k + "']").val("");
+			$(obj).parent("span").remove();
+	
+		}
+	
+		//清除所有选择项
+		function setAllClear(obj) {
+			$(obj).parents(".n17-kClist").find(".n17-kClCInfo").removeClass("on");
+			$(obj).parents(".selContact").find(".selContactMore").html('');
+			$(obj).parents(".selContact").hide();
+			$(obj).parents(".n17-kClist").find("input").each(function() {
+				$(this).val("");
+			});
+		}
+	
+		//防止冒泡
+		function stopPro(e) {
+			if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i) == "7." || navigator.appVersion
+					.match(/8./i) == "8.")) {
+				if (event.stopPropagation) {
+					// this code is for Mozilla and Opera 
+					event.stopPropagation();
+				} else if (window.event) {
+					// this code is for IE 
+					window.event.cancelBubble = true;
+				}
+			} else {
+				e.stopPropagation();
+			}
+		}
+		//选中时添加样式
+		function setClickOn(obj) {
+			$(obj).parent().siblings().removeClass("on");
+			$(obj).parent().addClass("on");
+		}
+		//=======在操作加工商区域时===========开始
+		//选择加工商
+		function j_confirmProc(obj, sortNum) {
+			$("#j_procCorp").val($(obj).find("span").text());
+			$("#j_procCorpID").val(sortNum);
+			setOptionOn(obj);
+		}
+	
+		//搜索加工商
+		function j_queryCustProc(obj) {
+			var memoCode = $(obj).val().toUpperCase();
+			if (memoCode != null && memoCode != "" && memoCode.length >= 6) {
+				var url = app.root + "/LgAdmin/procOrderIndex/queryCustProc.action";
+				$.post(url, {
+					"memoCode": memoCode
+				}, function(arrayList) {
+					var htmlStr = "";
+					$.each(arrayList, function(i, item) {
+						htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company" + i +
+							"\" onclick=\"j_confirmProc(this,'" + item.corpID + "')\" title='" + item.corp +
+							"'><span class=\"n17-kClCInfoText\">" + item.corp + "</span></a>";
+					});
+					$("#procList").html(htmlStr);
+				});
+			} else if (memoCode == null || memoCode == "") {
+				var htmlStr = "";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company01\" onclick=\"j_confirmProc(this,'14')\" title='上海华冶钢材加工有限公司'><span class=\"n17-kClCInfoText\">上海华冶钢材加工有限公司</span></a>";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company02\" onclick=\"j_confirmProc(this,'2')\" title='广州启圆钢材加工有限公司'><span class=\"n17-kClCInfoText\">广州启圆钢材加工有限公司</span></a>";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company03\" onclick=\"j_confirmProc(this,'18')\" title='天津华冶钢材加工有限公司'><span class=\"n17-kClCInfoText\">天津华冶钢材加工有限公司</span></a>";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company04\" onclick=\"j_confirmProc(this,'24')\" title='浙江南冶金属剪切配送有限公司'><span class=\"n17-kClCInfoText\">浙江南冶金属剪切配送有限公司</span></a>";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company05\" onclick=\"j_confirmProc(this,'9')\" title='无锡海德钢材加工有限公司'><span class=\"n17-kClCInfoText\">无锡海德钢材加工有限公司</span></a>";
+				htmlStr +=
+					"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"company06\" onclick=\"j_confirmProc(this,'6')\" title='常熟宝进钢材加工有限公司'><span class=\"n17-kClCInfoText\">常熟宝进钢材加工有限公司</span></a>";
+				$("#procList").html(htmlStr);
+			}
+		}
+	
+		//选择大类
+		function j_selectSteSort(obj, sortNum) {
+			$("#j_steSort").val($(obj).find("span").text());
+			$("#j_steSortID").val(sortNum);
+			setOptionOn(obj);
+		}
+	
+		//=======在操作加工商区域时===========结束
+	
+		//=======在操作大类区域时===========开始
+		//选择大类，并搜索品名
+		function t_selectSteSort(obj, sortNum) {
+			//清空品名和id
+			$("#t_steName").val("");
+			$("#t_steNameID").val("");
+			$(obj).parents(".n17-kClist").find(".selContactMore").find("span[data='stat_stename']").remove();
+			//清空品名助记码
+			$("#t_steNameMemoCode").val("");
+			$("#t_qualityMemoCode").val("");
+			var steSort = $(obj).text();
+			$("#t_steSort").val(steSort);
+			$("#j_steSortID").val(sortNum);
+			setOptionOn(obj);
+			var url = app.root + "/LgAdmin/procOrderIndex/selectPriceName.action";
+			$.post(url, {
+				"steName.steSortID": sortNum
+			}, function(arrayList) {
+				var htmlStr = "";
+				$.each(arrayList, function(i, item) {
+					htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName" + item.steNameID +
+						"\" onclick=\"t_confirmSteName(event,this,'" + item.steNameID + "')\"><span class=\"n17-kClCInfoText\">" +
+						item.steName + "</span></a>";
+				});
+	
+				$("#t_priceSteNameList").html(htmlStr);
+				if (arrayList.length < 1) {
+					var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>无结果，请添加品名</a>";
+					$("#t_priceSteNameList").html(pmSteName);
+				}
+			});
+		}
+	
+		//搜索品名
+		function t_searchSteNameList(obj, e) {
+			//清空选中的品名
+			$("#t_steName").val("");
+			$("#t_steNameID").val("");
+			//清空品名助记码
+			$("#t_qualityMemoCode").val("");
+			var j_steSortID = $("#j_steSortID").val();
+			var memoCode = $(obj).val().toUpperCase();
+			var url = app.root + "/LgAdmin/procOrderIndex/selectPriceName.action";
+			$.post(url, {
+				"steName.steSortID": j_steSortID,
+				"steName.memoCode": memoCode
+			}, function(arrayList) {
+				var htmlStr = "";
+				$.each(arrayList, function(i, item) {
+					htmlStr += "<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName" + item.steNameID +
+						"\" onclick=\"t_confirmSteName(event,this,'" + item.steNameID + "')\"><span class=\"n17-kClCInfoText\">" +
+						item.steName + "</span></a>";
+				});
+				$("#t_priceSteNameList").html(htmlStr);
+				if (arrayList.length < 1) {
+					var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>搜索无结果，请添加品名</a>";
+					$("#t_priceSteNameList").html(pmSteName);
+				}
+			});
+		}
+	
+		//确认品名,并搜索牌号
+		function t_confirmSteName(e, obj, steNameID) {
+			//stopPro(e);
+			//清楚牌号和id
+			$("#t_qualityID").val("");
+			$("#t_qualityName").val("");
+			$(obj).parents(".n17-kClist").find(".selContactMore").find("span[data='stat_stuff']").remove();
+			var j_steSortID = $("#j_steSortID").val();
+			if (j_steSortID == null || j_steSortID == "") {
+				alert("请先选择大类");
+				return;
+			}
+			//确认品名前，先把之前 选择的牌号清空
+			$("#t_qualityID").val("");
+			$("#t_qualityName").val("");
+			var steName = $(obj).find("span").text();
+			$("#t_steName").val(steName);
+			$("#t_steNameID").val(steNameID);
+			/* $(obj).parent().siblings().removeClass("on");
+			$(obj).parent().addClass("on"); */
+			setOptionOn(obj);
+			var url = app.root + "/LgAdmin/procOrderIndex/selectSteNameQuality.action";
+			$.post(url, {
+				"steNameQuality.steSortID": j_steSortID,
+				"steNameQuality.steNameID": steNameID
+			}, function(arrayList) {
+				var htmlStr = "";
+				$.each(arrayList, function(i, item) {
+					htmlStr +=
+						"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName01\" onclick=\"t_confirmSteNameQuality(event,this,'" +
+						item.qualityID + "')\"><span class=\"n17-kClCInfoText\">" + item.qualityName + "</span></a>";
+				});
+	
+				$("#t_priceSteNameQualityList").html(htmlStr);
+				if (arrayList.length < 1) {
+					var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>无结果，请添加牌号</a>";
+					$("#t_priceSteNameQualityList").html(pmSteName);
+				}
+			});
+		}
+		//搜索牌号
+		function t_searchSteNameQualityList(obj, e) {
+			var j_steSortID = $("#j_steSortID").val(); //大类ID
+			var t_steNameID = $("#t_steNameID").val(); //品名ID
+			var searchCode = $(obj).val().toUpperCase();
+			if (j_steSortID == null || j_steSortID == "") {
+				alert("请选择大类");
+				return;
+			}
+			if (t_steNameID == null || t_steNameID == "") {
+				alert("请选择品名");
+				return;
+			}
+			//清空品名助记码
+			$("#t_qualityMemoCode").val("");
+			var qualityName = $(obj).val().toUpperCase();
+			var url = app.root + "/LgAdmin/procOrderIndex/selectSteNameQuality.action";
+			var date = {
+				"steNameQuality.steSortID": j_steSortID,
+				"steNameQuality.steNameID": t_steNameID,
+				"steNameQuality.qualityName": qualityName
+			};
+			$.post(url, date, function(arrayList) {
+				var htmlStr = "";
+				$.each(arrayList, function(i, item) {
+					htmlStr +=
+						"<a href=\"javascript:void(0)\" class=\"dib n17-kClCInfo ell\" id=\"steName01\" onclick=\"t_confirmSteNameQuality(event,this,'" +
+						item.qualityID + "')\"><span class=\"n17-kClCInfoText\">" + item.qualityName + "</span></a>";
+				});
+	
+				$("#t_priceSteNameQualityList").html(htmlStr);
+				if (arrayList.length < 1) {
+					var pmSteName = "<a href='javascript:void(0)' class='n17-searchInfo'>搜索无结果，请添加牌号</a>";
+					$("#t_priceSteNameQualityList").html(pmSteName);
+				}
+			});
+		}
+
+		//选择大类
+		function p_selectSteSort(obj, steSortID) {
+			$("#p_steSort").val($(obj).find("span").text());
+			$("#p_steSortID").val(steSortID);
+			setOptionOn(obj);
+		}
+	</script>
+	
 </body>
 
 </html>

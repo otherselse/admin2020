@@ -116,8 +116,8 @@
 							</td>
 							<td width="90%" style="padding: 8px 2px;">
 								<div class="c mt5">
-									<div style="width: 95%;" class="c">
-										<span class="n17-kClistCont  pl15 jia pct70 stat_company first selectSingle" id="procList" cname="加工商">
+									<div style="width: 100%;" class="c dajs">
+										<span class="n17-kClistCont df pl15 jia pct70 stat_company first selectSingle" id="procList" cname="加工商">
 											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company01" onclick="j_confirmProc(this,'14')"
 											 title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司</span></a>
 											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company02" onclick="j_confirmProc(this,'2')"
@@ -130,6 +130,18 @@
 											 title="无锡海德钢材加工有限公司"><span class="n17-kClCInfoText">无锡海德钢材加工有限公司</span></a>
 											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" id="company06" onclick="j_confirmProc(this,'6')"
 											 title="常熟宝进钢材加工有限公司"><span class="n17-kClCInfoText">常熟宝进钢材加工有限公司</span></a>
+										</span>
+										<span class="input-selSearch dib pct15 mr10">
+											 <!-- onclick="stopPro(event)" onkeyup="j_queryCustProc(this)" 老版搜索方法--> 
+											<input type="text" class="ui-input searchUp pct100"placeholder="请输入" autocomplete="off">
+											<div class="search-cont pct100">
+												<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+											</div>
 										</span>
 									</div>
 								</div>
@@ -294,7 +306,7 @@
 							</td>
 							<td width="90%">
 								<div class="c df">
-									<div style="width: 91%;" class="c kZhan chao">
+									<div style="width: 91%;" class="c lh30 kZhan chao">
 										<span class="n17-kClistCont fl h20 dac n17-bdb selectSingle stat_stename" id="t_priceSteNameList" cname="品名">
 											<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steName01" onclick="t_confirmSteName(event,this,'1')"><span
 												 class="n17-kClCInfoText">热轧卷板</span></a>
@@ -316,7 +328,19 @@
 												 class="n17-kClCInfoText">直缝焊管</span></a>
 										</span>
 									</div>
-									<div class="zk">
+									<div class="zk tr pr20">
+										<span class="input-selSearch dib mr10" style="width: 65%;">
+											<!--onclick="stopPro(event)" onkeyup="t_searchSteNameList(this,event)" 老版搜索方法 -->
+											<input type="text" class="ui-input searchUp pct100"  placeholder="请输入" autocomplete="off">
+											<div class="search-cont pct100 tl">
+												<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+											</div>
+										</span>
 										<span class="dib ml10 mr5 menuhook icon-zk" onclick="updown(this)"></span>
 										<a href="../InformationChanges/nameRecord.html" target="_block" class="tiptop" title="添加品名">
 											<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
@@ -335,7 +359,7 @@
 							</td>
 							<td width="90%">
 								<div class="c df">
-									<div style="width: 91%;" class="c kZhan chao">
+									<div style="width: 91%;" class="c lh30 kZhan chao">
 										<span class="n17-kClistCont fl h20 dac selectSingle n17-bdb stat_stuff" id="t_priceSteNameQualityList" cname="牌号">
 											<a href="javascript:void(0)" class="dib n17-kClCInfo ell" id="steStuff01"><span class="n17-kClCInfoText"
 												 onclick="t_confirmSteNameQuality(event,this,'1')">Q235B</span></a>
@@ -357,13 +381,25 @@
 												 onclick="t_confirmSteNameQuality(event,this,'1')">SGCC+Z80</span></a>
 										</span>
 									</div>
-									<div class="zk">
+									<div class="zk tr pr20">
+										<span class="input-selSearch dib mr10" style="width: 65%;">
+											<!--onclick="stopPro(event)" onkeyup="t_searchSteNameQualityList(this,event)"  老版搜索方法 -->
+											<input type="text" class="ui-input searchUp pct100" placeholder="请输入" autocomplete="off">
+											<div class="search-cont pct100 tl">
+												<a href="javascript:void(0)" class="search-list db ell active">选择选择1</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
+												<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+											</div>
+										</span>
 										<span class="dib ml10 mr5 menuhook icon-zk" onclick="updown(this)"></span>
-										<a href="../InformationChanges/brandRecord.html" target="_block" class="tiptop" title="添加牌号">
+										<a href="../InformationChanges/brandRecord.html" target="_block" class="tiptop" title="添加品名">
 											<img src="../images/InformationChanges/26-w.png" class="img1 menuhook" width="10" height="10" alt="" onclick="show(this)">
 										</a>
 										<!-- <img src="../images/InformationChanges/26-y.png" class="img2 dn" class="menuhook"
-                                        width="10" height="10" alt=""> -->
+									    width="10" height="10" alt=""> -->
 									</div>
 								</div>
 							</td>

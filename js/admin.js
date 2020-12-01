@@ -2,6 +2,7 @@ $(function(){
 	 setHeight();
 	$(window).resize(function(){
 		setHeight();
+		getHeader();
 	})
 	$("body").on("mousewheel",function() {
 		setHeight();
@@ -35,24 +36,23 @@ $(function(){
 	//不可复制的功能
 	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
-	if(mySearch_Funcflag!=1){  //mySearch_Funcflag 与mySearch_Func 方法不同时共存
-		//搜索下拉
-		$("body").on("click", function () {
-			$(".search-cont").hide();
-		})
-		//下拉
-		$("body").on("click", ".searchUp", function (e) {
-			e.stopPropagation();
-			$(".search-cont").hide();
-			$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)})
-			$(this).parents(".input-selSearch").find(".search-cont").show();
-		})
-		$("body").on("click", ".search-list", function () {
-			$(this).addClass("active").siblings().removeClass("active");
-			$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
-			$(this).parents(".input-selSearch").find(".search-cont").hide();
-		})
-	}
+	//搜索下拉
+	$("body").on("click", function () {
+		$(".search-cont").hide();
+	})
+	//下拉
+	$("body").on("click", ".searchUp", function (e) {
+		e.stopPropagation();
+		$(".search-cont").hide();
+		$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)})
+		$(this).parents(".input-selSearch").find(".search-cont").show();
+	})
+	$("body").on("click", ".search-list", function () {
+		$(this).addClass("active").siblings().removeClass("active");
+		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+		$(this).parents(".input-selSearch").find(".search-cont").hide();
+	})
+	
 
 	//选择单选
 	$(".single").on("click", ".ui-option", function () {
@@ -238,66 +238,70 @@ $(function(){
 
 })
 
-var mySearch_Funcflag=''
 
-//下拉模块化 通过dataList传值以及电机的时候，执行函数
-/*	mySearch_Funcflag=mySearch_Func.setFlag(); 表示使用该赋值
-	var dataList=[{"corp":"上海一加实业有限公司","corpID":1111},{"corp":"上海耀绩实业有限公司","corpID":1112},{"corp":"上海渊静实业有限公司","corpID":1113},{"corp":"上海营佳实业有限公司","corpID":1114}];
-	mySearch_Func.init(dataList,setValue,checkCont)
-	function setValue(obj){
-		$("#e1").val("44433333")
-	}
-	function checkCont(obj){
-		if(obj.value.length<6){
-			return true;
-		}else{
-			alert(33333);
-		}
-	}
+//下拉模块化 keyGetFunc 是keyup时调用的方法
+/*	function keyGetFunc(e){
+			var dataDom={
+				dataList:[{"corp":"上海一加实业有限公司","corpID":1111,"corpshow":12111111},{"corp":"上海营佳实业有限公司","corpID":1112,"corpshow":12111111},{"corp":"上海渊静实业有限公司","corpID":1113,"corpshow":12111111},{"corp":"上海营佳实业有限公司","corpID":1114,"corpshow":12111111}]
+				,dataSplit:"-"   //间隔
+				,dataText:["corp","corpshow"]  //下拉显示的内容
+				,dataPara:["corpID","corpshow"] //数据内容
+				,dataPrefix:"data"   //数据前缀
+			}	
+			var mysearch=mySearch_Func(setValue2,checkCont);//f1,f2 传入函数
+			mysearch.keyupFun(e,dataDom); //event,data传入参数。必须
+			mySearchClickItem=function(obj){
+				setValue2(obj)
+				mysearch.clickItem(obj)
+			}			
+		}}
 */
-var mySearch_Func=(function($){
-			var $body=$("body");
-			var init=function(data,func1,func2){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
-				$body.on("click",function(){
-					$(".search-cont").hide();
-				})
-				$body.on("keyup", ".searchUp", function (e) {
-					var str='';		
-					e.stopPropagation();
-					$(".search-cont").hide();
-					if(func2){
-						if(func2(this)){
-							return
-						}else{
-						    func2(this)
+		var mySearchClickItem={} // 必须有
+		var mySearch_Func=function(func){
+			var that={}
+			that.func=func
+			that.keyupFun=function(e,data){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
+				var str='';	
+				var obj=$(e.target)	
+				e.stopPropagation();
+				$(".search-cont").hide();
+				if(this.func){
+					if(this.func(obj[0])){
+						return
+					}else{
+					    this.func(obj[0])
+					}
+				}				
+				obj.parents(".input-selSearch").find(".search-cont").css({ "left": obj.offset().left - obj.parents(".input-selSearch").offset().left,"min-width":obj.outerWidth(true)});
+				var dataList=data.dataList;
+				var dataText=data.dataText;
+				var dataPara=data.dataPara;
+				for(var i=0;i<dataList.length;i++){
+					var name='';
+						for(var j=0;j<dataText.length;j++){
+						 name+=dataList[i][dataText[j]]+data.dataSplit;
 						}
-					}
-					
-					$(this).parents(".input-selSearch").find(".search-cont").css({ "left": $(this).offset().left - $(this).parents(".input-selSearch").offset().left,"min-width":$(this).outerWidth(true)});
-					for(var i=0;i<data.length;i++){
-						str+='<a href="javascript:void(0)" class="search-list db ell" id='+data[i].corpID+'>'+data[i].corp+'</a>'
-					}
-					$(this).parents(".input-selSearch").find(".search-cont").html(str)
-					$(this).parents(".input-selSearch").find(".search-cont").show();
-				})
-				$body.on("click", ".search-list", function () {
-					if(func1){
-						func1(this);
-					}
-					$(this).addClass("active").siblings().removeClass("active");
-					$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
-					$(this).parents(".input-selSearch").find(".search-cont").hide();
-				})
+						name=name.substring(0,name.length-1);
+											
 
+					var para='';
+						for(var v=0;v<dataPara.length;v++){
+							para+=((data.dataPrefix+dataPara[v])+"="+dataList[i][dataPara[v]])+" "
+						}
+										
+
+					str+='<a href="javascript:void(0)" class="search-list db ell" '+para+' onclick="mySearchClickItem(this)">'+name+'</a>'
+				}
+				obj.parents(".input-selSearch").find(".search-cont").html(str)
+				obj.parents(".input-selSearch").find(".search-cont").show();
 			}
-			,setFlag=function(flag){
-				return 1
+			,that.clickItem=function(obj){
+				$(obj).addClass("active").siblings().removeClass("active");
+				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
+				$(obj).parents(".input-selSearch").find(".search-cont").hide();
 			}
-			return{
-				init:init
-				,setFlag:setFlag
-			}
-		})(jQuery);
+			return that;
+		};
 
 // 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
@@ -310,9 +314,9 @@ function getWidth(){
 		$(".setLeftBar").addClass("on");
 		$(".leftBar").css("left","0")
 	}
-
-	getHeader()
 	getScroll()
+	getHeader()
+		
 
 }
 
@@ -326,9 +330,15 @@ function getHeader(){
 				$(".lgui-table-header").width($(window).width()-100);
 			}
 			//$(".lgui-table-header").width($(window).width()-300);
+		}else if($(window).width()>=1280&&$(window).width()<1440){
+			if($(".setLeftBar ").hasClass("on")){
+				$(".lgui-table-header").width($(window).width()-300);
+			}else{
+				$(".lgui-table-header").width($(window).width()-100);
+			}
 		}else{
 			if($(window).width()<1280){
-				$(".lgui-table-header").removeClass("fixed");
+				$(".lgui-table-header").removeClass("fixed").removeAttr("style");
 				$(".lgui-table-body").removeAttr("style");
 			}
 		}
@@ -464,3 +474,57 @@ function stopPro(e){
 		e.stopPropagation();
  }
 }
+
+  //消抖（debounce）某个操作结束之后，在一段时间后，重新唤起。如：当在指定时间间隔内没有再输入时，才会发送请求。
+  // $("body").on("keyup",".testDebDom", debounce(testFn,200));
+   function debounce (fn, delay) {
+          var timer   = null;
+
+          return function () {
+          var args = arguments;
+          var context = this;
+
+              if (timer) {
+                  clearTimeout(timer);
+
+                  timer = setTimeout(function () {
+                      fn.apply(context, args);
+                  }, delay);
+              } else {
+                  timer = setTimeout(function () {
+                      fn.apply(context, args);
+                  }, delay);
+              }
+          }
+      }
+
+   //节流（throttle）每隔一段时间执行一次函数。
+   //$("body").on("click",".throttle", throttle(testCon,2000))
+   function throttle (fn, delay) {
+       var  timer    = null,
+            remaining   = 0,
+            previous = new Date();
+
+        return function () {
+            var now = new Date(),
+            remaining = now - previous,
+            args = arguments,
+            context = this;
+
+            if (remaining >= delay) {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                fn.apply(context, args);
+                previous = now;
+            } else {
+                if (!timer) {
+                    timer = setTimeout(function () {
+                        fn.apply(context, args);
+                        previous = new Date();
+                    }, delay - remaining);
+                }
+            }
+        };
+    }
