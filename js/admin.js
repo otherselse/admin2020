@@ -312,7 +312,7 @@ function getWidth(){
 	}
 
 	getHeader()
-	getScroll()	
+	getScroll()
 
 }
 
