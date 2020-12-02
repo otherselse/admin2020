@@ -186,7 +186,7 @@ $(function(){
 
 	//千位分隔符
 	$(".numFormat").each(function(){
-		$(this).text(lgNumberUtil.numFormat($(this).text()))
+		$(this).text(lgNumberUtil.numFormat($.trim($(this).text()))
 	})
 
 
@@ -295,9 +295,13 @@ $(function(){
 				obj.parents(".input-selSearch").find(".search-cont").html(str)
 				obj.parents(".input-selSearch").find(".search-cont").show();
 			}
-			,that.clickItem=function(obj){
+			,that.clickItem=function(obj){  //赋值并显示
 				$(obj).addClass("active").siblings().removeClass("active");
 				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
+				$(obj).parents(".input-selSearch").find(".search-cont").hide();
+			}
+			,that.clickItemShow=function(obj){ //显示
+				$(obj).addClass("active").siblings().removeClass("active");
 				$(obj).parents(".input-selSearch").find(".search-cont").hide();
 			}
 			return that;
