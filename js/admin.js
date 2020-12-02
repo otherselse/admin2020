@@ -261,11 +261,10 @@ $(function(){
 				,dataPara:["corpID","corpshow"] //数据内容
 				,dataPrefix:"data"   //数据前缀
 			}	
-			var mysearch=mySearch_Func(setValue2,checkCont);//f1,f2 传入函数
+			var mysearch=mySearch_Func(checkCont);//f 传入函数
 			mysearch.keyupFun(e,dataDom); //event,data传入参数。必须
 			mySearchClickItem=function(obj){
-				setValue2(obj)
-				mysearch.clickItem(obj)
+				setValue2(obj)  //这个方法不写
 			}			
 		}}
 */
