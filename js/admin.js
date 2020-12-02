@@ -34,7 +34,7 @@ $(function(){
 
 
 	//不可复制的功能
-	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+	//$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
 	//搜索下拉
 	$("body").on("click", function () {
@@ -78,6 +78,17 @@ $(function(){
 		    elem: this
 		    ,trigger: 'click'
 		    , theme: 'lgblue'
+		  });
+		}); 
+	}
+
+	if($('.render-datetime').length>0){
+		lay('.render-datetime').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		    ,type: 'datetime'
 		  });
 		}); 
 	}
@@ -281,7 +292,9 @@ $(function(){
 						for(var j=0;j<dataText.length;j++){
 						 name+=dataList[i][dataText[j]]+data.dataSplit;
 						}
-						name=name.substring(0,name.length-1);
+						if(data.dataSplit){
+							name=name.substring(0,name.length-1);
+						}
 											
 
 					var para='';
