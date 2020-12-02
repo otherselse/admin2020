@@ -186,7 +186,7 @@ $(function(){
 
 	//千位分隔符
 	$(".numFormat").each(function(){
-		$(this).text(lgNumberUtil.numFormat($.trim($(this).text()))
+		$(this).text(lgNumberUtil.numFormat($.trim($(this).text())))
 	})
 
 
