@@ -34,7 +34,7 @@ $(function(){
 
 
 	//不可复制的功能
-	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+	//$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
 	//搜索下拉
 	$("body").on("click", function () {
@@ -78,6 +78,17 @@ $(function(){
 		    elem: this
 		    ,trigger: 'click'
 		    , theme: 'lgblue'
+		  });
+		}); 
+	}
+
+	if($('.render-datetime').length>0){
+		lay('.render-datetime').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		    ,type: 'datetime'
 		  });
 		}); 
 	}
@@ -186,7 +197,7 @@ $(function(){
 
 	//千位分隔符
 	$(".numFormat").each(function(){
-		$(this).text(lgNumberUtil.numFormat($(this).text()))
+		$(this).text(lgNumberUtil.numFormat($.trim($(this).text())))
 	})
 
 
@@ -281,7 +292,9 @@ $(function(){
 						for(var j=0;j<dataText.length;j++){
 						 name+=dataList[i][dataText[j]]+data.dataSplit;
 						}
-						name=name.substring(0,name.length-1);
+						if(data.dataSplit){
+							name=name.substring(0,name.length-1);
+						}
 											
 
 					var para='';
@@ -295,9 +308,13 @@ $(function(){
 				obj.parents(".input-selSearch").find(".search-cont").html(str)
 				obj.parents(".input-selSearch").find(".search-cont").show();
 			}
-			,that.clickItem=function(obj){
+			,that.clickItem=function(obj){  //赋值并显示
 				$(obj).addClass("active").siblings().removeClass("active");
 				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
+				$(obj).parents(".input-selSearch").find(".search-cont").hide();
+			}
+			,that.clickItemShow=function(obj){ //显示
+				$(obj).addClass("active").siblings().removeClass("active");
 				$(obj).parents(".input-selSearch").find(".search-cont").hide();
 			}
 			return that;
