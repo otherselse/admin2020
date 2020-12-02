@@ -49,7 +49,9 @@ $(function(){
 	})
 	$("body").on("click", ".search-list", function () {
 		$(this).addClass("active").siblings().removeClass("active");
-		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+		if(!$(this).hasClass("_mySearchF")){
+			$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+		}	
 		$(this).parents(".input-selSearch").find(".search-cont").hide();
 	})
 	
@@ -295,6 +297,7 @@ $(function(){
 						if(data.dataSplit){
 							name=name.substring(0,name.length-1);
 						}
+						
 											
 
 					var para='';
@@ -303,19 +306,10 @@ $(function(){
 						}
 										
 
-					str+='<a href="javascript:void(0)" class="search-list db ell" '+para+' onclick="mySearchClickItem(this)">'+name+'</a>'
+					str+='<a href="javascript:void(0)" class="search-list db ell _mySearchF" '+para+' onclick="mySearchClickItem(this)">'+name+'</a>'
 				}
 				obj.parents(".input-selSearch").find(".search-cont").html(str)
 				obj.parents(".input-selSearch").find(".search-cont").show();
-			}
-			,that.clickItem=function(obj){  //赋值并显示
-				$(obj).addClass("active").siblings().removeClass("active");
-				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
-				$(obj).parents(".input-selSearch").find(".search-cont").hide();
-			}
-			,that.clickItemShow=function(obj){ //显示
-				$(obj).addClass("active").siblings().removeClass("active");
-				$(obj).parents(".input-selSearch").find(".search-cont").hide();
 			}
 			return that;
 		};
