@@ -261,7 +261,7 @@ $(function(){
 				,dataPara:["corpID","corpshow"] //数据内容
 				,dataPrefix:"data"   //数据前缀
 			}	
-			var mysearch=mySearch_Func(checkCont);//f 传入函数
+			var mysearch=mySearch_Func();
 			mysearch.keyupFun(e,dataDom); //event,data传入参数。必须
 			mySearchClickItem=function(obj){
 				setValue2(obj)  //这个方法不写
@@ -269,21 +269,13 @@ $(function(){
 		}}
 */
 		var mySearchClickItem={} // 必须有
-		var mySearch_Func=function(func){
+		var mySearch_Func=function(){
 			var that={}
-			that.func=func
 			that.keyupFun=function(e,data){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
 				var str='';	
 				var obj=$(e.target)	
 				e.stopPropagation();
-				$(".search-cont").hide();
-				if(this.func){
-					if(this.func(obj[0])){
-						return
-					}else{
-					    this.func(obj[0])
-					}
-				}				
+				$(".search-cont").hide();				
 				obj.parents(".input-selSearch").find(".search-cont").css({ "left": obj.offset().left - obj.parents(".input-selSearch").offset().left,"min-width":obj.outerWidth(true)});
 				var dataList=data.dataList;
 				var dataText=data.dataText;
