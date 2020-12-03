@@ -310,6 +310,10 @@ $(function(){
 				obj.parents(".input-selSearch").find(".search-cont").html(str)
 				obj.parents(".input-selSearch").find(".search-cont").show();
 			}
+			,that.clickItemValue=function(obj){
+				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
+			}
+
 			return that;
 		};
 
