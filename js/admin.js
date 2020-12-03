@@ -337,19 +337,19 @@ function getWidth(){
 
 function getHeader(){	
 	if($("body").hasClass("fixtab")){
-		if($(window).width()>=1440){
+
+		if($(window).width()>=1280){
 			if($(".setLeftBar ").hasClass("on")){
-				$(".lgui-table-header").width($(window).width()-300);
+				if($("body").scrollTop()>0){
+					$(".lgui-table-header").width($(window).width()-320);
+				}else{
+					$(".lgui-table-header").width($(window).width()-300);
+				}
+				
 			}else{
 				$(".lgui-table-header").width($(window).width()-100);
 			}
 			//$(".lgui-table-header").width($(window).width()-300);
-		}else if($(window).width()>=1280&&$(window).width()<1440){
-			if($(".setLeftBar ").hasClass("on")){
-				$(".lgui-table-header").width($(window).width()-300);
-			}else{
-				$(".lgui-table-header").width($(window).width()-100);
-			}
 		}else{
 			if($(window).width()<1280){
 				$(".lgui-table-header").removeClass("fixed").removeAttr("style");
