@@ -34,7 +34,7 @@ $(function(){
 
 
 	//不可复制的功能
-	// $("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+	//$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
 	//搜索下拉
 	$("body").on("click", function () {
@@ -49,7 +49,9 @@ $(function(){
 	})
 	$("body").on("click", ".search-list", function () {
 		$(this).addClass("active").siblings().removeClass("active");
-		$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+		if(!$(this).hasClass("_mySearchF")){
+			$(this).parents(".input-selSearch").find(".searchUp").val($(this).text());
+		}	
 		$(this).parents(".input-selSearch").find(".search-cont").hide();
 	})
 	
@@ -78,6 +80,17 @@ $(function(){
 		    elem: this
 		    ,trigger: 'click'
 		    , theme: 'lgblue'
+		  });
+		}); 
+	}
+
+	if($('.render-datetime').length>0){
+		lay('.render-datetime').each(function(){
+		  laydate.render({
+		    elem: this
+		    ,trigger: 'click'
+		    , theme: 'lgblue'
+		    ,type: 'datetime'
 		  });
 		}); 
 	}
@@ -186,7 +199,7 @@ $(function(){
 
 	//千位分隔符
 	$(".numFormat").each(function(){
-		$(this).text(lgNumberUtil.numFormat($(this).text()))
+		$(this).text(lgNumberUtil.numFormat($.trim($(this).text())))
 	})
 
 
@@ -248,30 +261,21 @@ $(function(){
 				,dataPara:["corpID","corpshow"] //数据内容
 				,dataPrefix:"data"   //数据前缀
 			}	
-			var mysearch=mySearch_Func(setValue2,checkCont);//f1,f2 传入函数
+			var mysearch=mySearch_Func();
 			mysearch.keyupFun(e,dataDom); //event,data传入参数。必须
 			mySearchClickItem=function(obj){
-				setValue2(obj)
-				mysearch.clickItem(obj)
+				setValue2(obj)  //这个方法不写
 			}			
 		}}
 */
 		var mySearchClickItem={} // 必须有
-		var mySearch_Func=function(func){
+		var mySearch_Func=function(){
 			var that={}
-			that.func=func
 			that.keyupFun=function(e,data){ //data必有，func1可选用于点击下拉时调用的函数，func2可选，用于验证等操作 
 				var str='';	
 				var obj=$(e.target)	
 				e.stopPropagation();
-				$(".search-cont").hide();
-				if(this.func){
-					if(this.func(obj[0])){
-						return
-					}else{
-					    this.func(obj[0])
-					}
-				}				
+				$(".search-cont").hide();				
 				obj.parents(".input-selSearch").find(".search-cont").css({ "left": obj.offset().left - obj.parents(".input-selSearch").offset().left,"min-width":obj.outerWidth(true)});
 				var dataList=data.dataList;
 				var dataText=data.dataText;
@@ -281,7 +285,10 @@ $(function(){
 						for(var j=0;j<dataText.length;j++){
 						 name+=dataList[i][dataText[j]]+data.dataSplit;
 						}
-						name=name.substring(0,name.length-1);
+						if(data.dataSplit){
+							name=name.substring(0,name.length-1);
+						}
+						
 											
 
 					var para='';
@@ -290,16 +297,15 @@ $(function(){
 						}
 										
 
-					str+='<a href="javascript:void(0)" class="search-list db ell" '+para+' onclick="mySearchClickItem(this)">'+name+'</a>'
+					str+='<a href="javascript:void(0)" class="search-list db ell _mySearchF" '+para+' onclick="mySearchClickItem(this)">'+name+'</a>'
 				}
 				obj.parents(".input-selSearch").find(".search-cont").html(str)
 				obj.parents(".input-selSearch").find(".search-cont").show();
 			}
-			,that.clickItem=function(obj){
-				$(obj).addClass("active").siblings().removeClass("active");
+			,that.clickItemValue=function(obj){
 				$(obj).parents(".input-selSearch").find(".searchUp").val($(obj).text());
-				$(obj).parents(".input-selSearch").find(".search-cont").hide();
 			}
+
 			return that;
 		};
 
@@ -323,19 +329,19 @@ function getWidth(){
 
 function getHeader(){	
 	if($("body").hasClass("fixtab")){
-		if($(window).width()>=1440){
+
+		if($(window).width()>=1280){
 			if($(".setLeftBar ").hasClass("on")){
-				$(".lgui-table-header").width($(window).width()-300);
+				if($("body").scrollTop()>0){
+					$(".lgui-table-header").width($(window).width()-320);
+				}else{
+					$(".lgui-table-header").width($(window).width()-300);
+				}
+				
 			}else{
 				$(".lgui-table-header").width($(window).width()-100);
 			}
 			//$(".lgui-table-header").width($(window).width()-300);
-		}else if($(window).width()>=1280&&$(window).width()<1440){
-			if($(".setLeftBar ").hasClass("on")){
-				$(".lgui-table-header").width($(window).width()-300);
-			}else{
-				$(".lgui-table-header").width($(window).width()-100);
-			}
 		}else{
 			if($(window).width()<1280){
 				$(".lgui-table-header").removeClass("fixed").removeAttr("style");
@@ -345,7 +351,7 @@ function getHeader(){
 	}
 
 }
-
+ 
 
 
 function getScroll(){
@@ -527,4 +533,153 @@ function stopPro(e){
                 }
             }
         };
+    }
+
+
+    function Arabia_to_Chinese(Num) {
+        for (i = Num.length - 1; i >= 0; i--) {
+            Num = Num.replace(",", "")//替换tomoney()中的“,”
+            Num = Num.replace(" ", "")//替换tomoney()中的空格
+        }
+        Num = Num.replace("￥", "")//替换掉可能出现的￥字符
+        if (isNaN(Num)) { //验证输入的字符是否为数字
+            alert("请检查小写金额是否正确");
+            return;
+        }
+        //---字符处理完毕，开始转换，转换采用前后两部分分别转换---//
+        part = String(Num).split(".");
+        newchar = "";
+        //小数点前进行转化
+        for (i = part[0].length - 1; i >= 0; i--) {
+            if (part[0].length > 10) {
+                alert("位数过大，无法计算");
+                return "";
+            } //若数量超过拾亿单位，提示
+            tmpnewchar = ""
+            perchar = part[0].charAt(i);
+            switch (perchar) {
+                case "0":
+                    tmpnewchar = "零" + tmpnewchar;
+                    break;
+                case "1":
+                    tmpnewchar = "壹" + tmpnewchar;
+                    break;
+                case "2":
+                    tmpnewchar = "贰" + tmpnewchar;
+                    break;
+                case "3":
+                    tmpnewchar = "叁" + tmpnewchar;
+                    break;
+                case "4":
+                    tmpnewchar = "肆" + tmpnewchar;
+                    break;
+                case "5":
+                    tmpnewchar = "伍" + tmpnewchar;
+                    break;
+                case "6":
+                    tmpnewchar = "陆" + tmpnewchar;
+                    break;
+                case "7":
+                    tmpnewchar = "柒" + tmpnewchar;
+                    break;
+                case "8":
+                    tmpnewchar = "捌" + tmpnewchar;
+                    break;
+                case "9":
+                    tmpnewchar = "玖" + tmpnewchar;
+                    break;
+            }
+            switch (part[0].length - i - 1) {
+                case 0:
+                    tmpnewchar = tmpnewchar + "元";
+                    break;
+                case 1:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "拾";
+                    break;
+                case 2:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "佰";
+                    break;
+                case 3:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "仟";
+                    break;
+                case 4:
+                    tmpnewchar = tmpnewchar + "万";
+                    break;
+                case 5:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "拾";
+                    break;
+                case 6:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "佰";
+                    break;
+                case 7:
+                    if (perchar != 0) tmpnewchar = tmpnewchar + "仟";
+                    break;
+                case 8:
+                    tmpnewchar = tmpnewchar + "亿";
+                    break;
+                case 9:
+                    tmpnewchar = tmpnewchar + "拾";
+                    break;
+            }
+            newchar = tmpnewchar + newchar;
+        }
+        //小数点之后进行转化
+        if (Num.indexOf(".") != -1) {
+            if (part[1].length > 2) {
+                alert("小数点之后只能保留两位,系统将自动截段");
+                part[1] = part[1].substr(0, 2)
+            }
+            for (i = 0; i < part[1].length; i++) {
+                tmpnewchar = ""
+                perchar = part[1].charAt(i)
+                switch (perchar) {
+                    case "0":
+                        tmpnewchar = "零" + tmpnewchar;
+                        break;
+                    case "1":
+                        tmpnewchar = "壹" + tmpnewchar;
+                        break;
+                    case "2":
+                        tmpnewchar = "贰" + tmpnewchar;
+                        break;
+                    case "3":
+                        tmpnewchar = "叁" + tmpnewchar;
+                        break;
+                    case "4":
+                        tmpnewchar = "肆" + tmpnewchar;
+                        break;
+                    case "5":
+                        tmpnewchar = "伍" + tmpnewchar;
+                        break;
+                    case "6":
+                        tmpnewchar = "陆" + tmpnewchar;
+                        break;
+                    case "7":
+                        tmpnewchar = "柒" + tmpnewchar;
+                        break;
+                    case "8":
+                        tmpnewchar = "捌" + tmpnewchar;
+                        break;
+                    case "9":
+                        tmpnewchar = "玖" + tmpnewchar;
+                        break;
+                }
+                if (i == 0) tmpnewchar = tmpnewchar + "角";
+                if (i == 1) tmpnewchar = tmpnewchar + "分";
+                newchar = newchar + tmpnewchar;
+            }
+        }
+        //替换所有无用汉字
+        while (newchar.search("零零") != -1)
+            newchar = newchar.replace("零零", "零");
+        newchar = newchar.replace("零亿", "亿");
+        newchar = newchar.replace("亿万", "亿");
+        newchar = newchar.replace("零万", "万");
+        newchar = newchar.replace("零元", "元");
+        newchar = newchar.replace("零角", "");
+        newchar = newchar.replace("零分", "");
+        if (newchar.charAt(newchar.length - 1) == "元" || newchar.charAt(newchar.length - 1) == "角")
+            newchar = newchar + "整"
+        //  document.write(newchar);
+        return newchar;
     }
