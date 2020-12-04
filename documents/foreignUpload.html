@@ -91,14 +91,13 @@
                                 </td>
                                 <td width="10%"><a href="../public/goldRegInfo.html" target="_block">冯欢欢</a></td>
                                 <td width="12%">2020-18-29</td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,0)">查看</a></td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,1)">查看</a></td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,2)">查看</a></td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,3)">查看</a></td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,4)">查看</a></td>
-                                <td width="6%"><a href="javascript:void(0)" onclick="showTrMore(this),showTbody(this,5)">查看</a></td>
-                                <td width="10%"><a href="javascript:void(0)" onclick="showLayer(this)">上传</a>
-                                </td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,0)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,1)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,2)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,3)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,4)">查看</a></td>
+                                <td width="6%"><a href="javascript:void(0)" onclick="showTbody(this,5)">查看</a></td>
+                                <td width="10%"><a href="javascript:void(0)" onclick="showLayer(this)">上传</a></td>
                             </tr>
                             <!-- 点击执行显示 -->
                             <tr class="hideTr dn pct100">
@@ -117,10 +116,10 @@
                                             </thead>
                                             <tbody class="ui-thover dn">
                                                 <tr>
-                                                    <td><a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg"
-                                                            target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
-                                                        </td>
-                                                    <td>审核通过</td>
+                                                    <td>
+														<a href="http://fs.lgsteel.cn:8080/file/upload/workflow2/2020/2020-08-13/1597304435380.jpeg" target="_blank" class="ui-files zxx_text_overflow vm">pexels-photo-3876394.jpeg</a>
+													</td>
+                                                    <td>审核通过2</td>
                                                     <td>李四四</td>
                                                     <td>2020-08-13 15:40:33</td>
                                                     <td>2020-08-13</td>
@@ -187,7 +186,6 @@
                                                     <td>2020-08-13</td>
                                                 </tr>
                                             </tbody>
-                                            
                                         </table>
                                     </div>
                                 </td>
@@ -266,7 +264,8 @@
 
         function showTbody(obj,index){
             $(obj).parents("tr").next(".hideTr").find("tbody").addClass("dn");
-            $(obj).parents("tr").next(".hideTr").find("tbody:eq("+index+")").removeClass("dn");
+            $(obj).parents("tr").next(".hideTr").find("tbody").eq(index).removeClass("dn");
+			$(obj).parents("tr").next(".hideTr").removeClass("dn");
         }
     </script>
 </body>
