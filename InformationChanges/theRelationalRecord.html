@@ -2,15 +2,14 @@
 <html lang="en">
 
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="format-detection" content="telephone=no,email=no,address=no">
-		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
-		 type="image/x-icon">
-		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
-		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+	 type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 		<title>资源信息维护-信息管理-乐刚智能云系统</title>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 		<style>
@@ -52,18 +51,23 @@
 		    cursor: pointer;
 		}
 		
+		a {
+		    text-decoration: none;
+		    color: #353535;
+		}
+		
 		.ui-files {
+		    margin-top: 5px;
 		    font-size: 12px;
 		    line-height: 26px;
 		    height: 26px;
 		    box-sizing: border-box;
-		    display: inline-block;
 		    border: 1px solid #E5E5E5;
 		    border-radius: 13px;
 		    padding: 0px 10px 0px 10px;
 		    color: #676767;
 		    background: url(=) #fff no-repeat 12px 5px;
-		    max-width: 100%;
+		    max-width: 500px;
 		    overflow: hidden;
 		}
 		
@@ -74,9 +78,26 @@
 		    overflow: hidden;
 		}
 		
-		.w95h18{
-		    width: 95%; 
-		    height:18px;
+		.jia a {
+		    width: 95px;
+		}
+		
+		.selectSingle span {
+		    color: #676767;
+		}
+		
+		.selectSingle a.on {
+		    color: #1365e8;
+		    background: #FFFFFF;
+		    border: 1px solid #E6E6E6;
+		    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+		    border-radius: 15px;
+		    box-sizing: border-box;
+		}
+		
+		.n17-kClCInfoText,.n17-kClCInfo{
+			width: 60px;
+			display: inline-block;
 		}
     </style>
 	</head>
@@ -233,11 +254,7 @@
 		</div>
 
 		<div class="itemCapital" id="itemCapitalIn"></div>
-		<script type="text/javascript" src="../js/admin.js"></script>
-		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
-		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
 
 		<div class="linkToAdd ml20 dn mt5 mr20">
 		    <div class="pct100">
@@ -260,10 +277,10 @@
 						        <div class="dac">
 						            <div  class="dac w95 h18">
 						                <span class="classMax">
-						                    <span class="dib ml10 mr10 ell da" title="材12122222212121料类">材12122222212121料类</span>
-						                    <span class="dib ml10 mr10 ell da">材料类</span>
-						                    <span class="dib ml10 mr10 ell da">材料类</span>
-						                    <span class="dib ml10 mr10 da">材料类</span>
+						                    <span class="dib ml10 mr10 ell  tiptop" title="材12122222212121料类">材12122222212121料类</span>
+						                    <span class="dib ml10 mr10 ell ">材料类</span>
+						                    <span class="dib ml10 mr10 ell ">材料类</span>
+						                    <span class="dib ml10 mr10 ">材料类</span>
 						                </span>
 						            </div>
 						        </div>
@@ -835,7 +852,116 @@
 		        </div>
 		    </div>
 		</div>
-
+		
+		<!-- 中文的 -->
+		<div class="ChineseAdd p20">
+			<div class="single mt20 tc">
+			    <input type="hidden">
+			    关联类别：<button type="button" onclick="trShow([1,2,4])" class="ui-option mr20  on">品名牌号关联</button>
+			    <button type="button" onclick="trShow([1,5,6])" class="ui-option gang mr20">钢厂包装关联</button>
+				<!-- <button type="button" onclick="trShow([1,2,3,4])" class="ui-option mr20 yn" style="display: none;">钢材标准牌号关联</button>
+				<button type="button" onclick="trShow([7,8])" class="ui-option yn" style="display: none;">国家港口关联</button> -->
+			</div>
+			
+			 <table class="ui-table f12 auto tl row mt20 " width="100%">
+				 <tbody>
+					 <tr>
+						 <td width="10%" class=" bgfa">
+						     <span class=" dib ">大类：</span>
+						 </td>
+						 <td width="90%">
+						     <div class="dac">
+						         <div  class="dac w95 h18">
+						             <span class="selectSingle">
+						                 <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="dl_sel(this)"
+						                  title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司x</span></a>
+										  <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="dl_sel(this)"
+										   title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司z</span></a>
+										   <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="dl_sel(this)"
+										    title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司w</span></a>
+											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="dl_sel(this)"
+											 title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司a</span></a>
+						             </span>
+						         </div>
+						     </div>
+						 </td>
+					 </tr>
+					 <tr>
+						 <td width="10%" class=" bgfa">
+							 <span class=" dib ">钢厂：</span>
+						 </td>
+						 <td width="90%">
+							 <div class="dac">
+								 <div  class="dac w95 h18">
+									 <span class="selectSingle">
+									     <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="gc_sel(this)"
+									      title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢公司</span></a>
+										  <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="gc_sel(this)"
+										   title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">加工有限公司</span></a>
+										   <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="gc_sel(this)"
+											title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">工有限公司</span></a>
+											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="gc_sel(this)"
+											 title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">加工有限公司</span></a>
+									 </span>
+								 </div>
+							 </div>
+						 </td>
+					 </tr>
+					 <tr>
+						 <td width="10%" class=" bgfa">
+							 <span class=" dib ">牌号：</span>
+						 </td>
+						 <td width="90%">
+							 <div class="dac">
+								 <div  class="dac w95 h18">
+									 <span class="classMax">
+										<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="ph_sel(this)"
+										 title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材加工有限公司</span></a>
+										 <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="ph_sel(this)"
+										  title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材</span></a>
+										  <a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell"  onclick="ph_sel(this)"
+											title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材</span></a>
+											<a href="javascript:void(0)" class="dib n17-kClCInfo tiptop ell" onclick="ph_sel(this)"
+											 title="上海华冶钢材加工有限公司"><span class="n17-kClCInfoText">上海华冶钢材</span></a>
+									 </span>
+								 </div>
+							 </div>
+						 </td>
+					 </tr>
+					 <tr>
+						 <td width="10%" class=" bgfa">
+						 	<span class=" dib ">已选：</span>
+						 </td>
+						 <td width="90%">
+							<div class="dajs">
+								<span >
+									<a href="javascript:void(0)" onclick="contactDel(this)" class="ui-files dn  selContactList">
+										大类：<span class="setNameCon"></span>  <i class="icon-sdel goldIcon vm ml5 menuhook" title="删除"></i>
+									</a>
+									<a href="javascript:void(0)" onclick="contactDel(this)" class="ui-files dn selContactList">
+										钢厂：<span class="setNameCon"></span><i class="icon-sdel goldIcon vm ml5 menuhook" title="删除"></i>
+									</a>
+									<a href="javascript:void(0)" onclick="contactDel(this)" class="ui-files dn selContactList">
+										牌号：<span class="setNameCon"></span>  <i class="icon-sdel goldIcon vm ml5 menuhook" title="删除"></i>
+									</a>
+								</span>
+								<span class="dib pct22 clM">
+									<button class="ui-button pl5 mr10 pr5 ml10 n17-greybut" data-type="smallbbr" onclick="clerAll(this)" type="button">清除全部</button>
+									<button class="ui-button pl5 pr5 n17-orangebut " data-type="small" type="button" onclick="t_addConnection(event,this,'1')">保存关联</button>
+								</span>		
+							</div>
+						 </td>			 
+					 </tr>
+				 </tbody>
+			 </table>
+		</div>
+		
+		
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/layte/layte.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 		<script>
 			$(function() {
 				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(6).addClass("on"); // 静态页面定位使用，开发使用title等定位
@@ -885,6 +1011,55 @@
 				});
 			})
 		</script>
+		
+		<script type="text/javascript">
+			
+			$(".classMax > span").click(function () {
+				// $(this).parents(".classMax").find("span").not(".bao").removeClass("g13");
+				$(this).addClass("on").siblings("span")
+				// $(this).addClass("g13");
+				// $(".selectClass").css("display", "block");
+			});
+			
+			// 给对应类复赋值
+			function setName(obj,index,state){
+				var $sel = $(obj).parents("tbody").find(".selContactList").eq(index);
+				$sel.eq(index).removeClass("dn");
+				if(state == 0){
+					var toofText = $(obj).attr("data");
+					var str = $sel.find(".setNameCon").eq(index).text();
+					if(str.indexOf(toofText)==0){
+						str = str.replace(toofText,"");
+						$sel.find(".setNameCon").eq(index).text(str);
+					}else if(str.indexOf(toofText)>0){
+						str = str.replace(toofText+"：","");
+						str = str.replace("："+toofText,"");
+						$sel.find(".setNameCon").eq(index).text(str);
+					}else{
+						$sel.find(".setNameCon").eq(index).text((str==""?str:str+"：")+toofText);
+					}
+				}else{
+					var toofText = $(obj).text();
+					$sel.find(".setNameCon").text(toofText);
+				}
+			}
+			
+			//选择大类
+			function dl_sel(obj){
+				setName(obj,0);
+			}
+			//选择钢厂
+			function gc_sel(obj){
+				setName(obj,1);
+			}
+			
+			//选择牌号
+			function ph_sel(obj){
+				setName(obj,2);
+			}
+			
+		</script>
+		
 		<script>
 			function showLayer() {
 				layer.open({
@@ -893,7 +1068,7 @@
 					shadeClose: true,
 					shade: 0.4,
 					area: ['960px','530px'],
-					content: $(".linkToAdd") //iframe的url
+					content: $(".ChineseAdd") //iframe的url
 				});
 			}
 
@@ -935,77 +1110,76 @@
 		        $(obj).parents(".zk").prev(".kZhan").toggleClass("chao");
 		    }
 		
-		    $(".classMax > span").click(function () {
-		        $(this).parents(".classMax").find("span").not(".bao").removeClass("g13");
-		        $(this).addClass("g13");
-		        $(".selectClass").css("display", "block");
-		    });
+		//     $(".classMax > span").click(function () {
+		//         $(this).parents(".classMax").find("span").not(".bao").removeClass("g13");
+		//         $(this).addClass("g13");
+		//         $(".selectClass").css("display", "block");
+		//     });
 		
-		    $(".classMax > .da").click(function () {
-				var tou = $(this).parents("td").prev("td").find("span").text();
-		        $(".selectClass .da").text(tou+""+$(this).text());
-		    });
+		//     $(".classMax > .da").click(function () {
+		// 		var tou = $(this).parents("td").prev("td").find("span").text();
+		//         $(".selectClass .da").text(tou+""+$(this).text());
+		//     });
 		
-		    $(".classMax > .pin").click(function () {
-		        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
-		            alert("请选择大类");
-		            $(this).removeClass("g13");
-		            $(".selectClass").css("display", "none");
-		            return;
-		        } else {
-					var tou = $(this).parents("td").prev("td").find("span").text();
-		            $(".selectClass .pin").text(tou+""+$(this).text());
-		        }
-		    });
+		//     $(".classMax > .pin").click(function () {
+		//         if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+		//             alert("请选择大类");
+		//             $(this).removeClass("g13");
+		//             $(".selectClass").css("display", "none");
+		//             return;
+		//         } else {
+		// 			var tou = $(this).parents("td").prev("td").find("span").text();
+		//             $(".selectClass .pin").text(tou+""+$(this).text());
+		//         }
+		//     });
 			
-			$(".classMax > .bao").click(function () {
-			   if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
-			       alert("请选择大类");
-			       $(this).removeClass("g13");
-			       $(".selectClass").css("display", "none");
-			       return;
-			   }else{
-					if($(".selectClass .pai").text() == "" || $(".selectClass .pai").text() == null){
-						var tou = $(this).parents("td").prev("td").find("span").text();
-						 $(".selectClass .pai").text(tou+""+$(this).text());
-					}else{
-						$(".selectClass .pai").text($(".selectClass .pai").text()+","+$(this).text());
-					}
-			   }
-			});
-		    $(".classMax > .gbiao").click(function () {
-				var tou = $(this).parents("td").prev("td").find("span").text();
-		        $(".selectClass .gbiao").text(tou+""+$(this).text());
-		    });
+		// 	$(".classMax > .bao").click(function () {
+		// 	   if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+		// 	       alert("请选择大类");
+		// 	       $(this).removeClass("g13");
+		// 	       $(".selectClass").css("display", "none");
+		// 	       return;
+		// 	   }else{
+		// 			if($(".selectClass .pai").text() == "" || $(".selectClass .pai").text() == null){
+		// 				var tou = $(this).parents("td").prev("td").find("span").text();
+		// 				 $(".selectClass .pai").text(tou+""+$(this).text());
+		// 			}else{
+		// 				$(".selectClass .pai").text($(".selectClass .pai").text()+","+$(this).text());
+		// 			}
+		// 	   }
+		// 	});
+		//     $(".classMax > .gbiao").click(function () {
+		// 		var tou = $(this).parents("td").prev("td").find("span").text();
+		//         $(".selectClass .gbiao").text(tou+""+$(this).text());
+		//     });
 		
-		    $(".classMax > .pai").click(function () {
-		        if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
-		            alert("请选择大类");
-		            $(this).removeClass("g13");
-		            $(".selectClass").css("display", "none");
-		            return;
-		        } else {
-					var tou = $(this).parents("td").prev("td").find("span").text();
-					$(".selectClass .pai").text(tou+""+$(this).text());
-		        }
-		    });
+		//     $(".classMax > .pai").click(function () {
+		//         if ($(".g").attr("class").indexOf("dn") < 0 && $(".selectClass .da").text() == "") {
+		//             alert("请选择大类");
+		//             $(this).removeClass("g13");
+		//             $(".selectClass").css("display", "none");
+		//             return;
+		//         } else {
+		// 			var tou = $(this).parents("td").prev("td").find("span").text();
+		// 			$(".selectClass .pai").text(tou+""+$(this).text());
+		//         }
+		//     });
 		
-		    $(".icon-sdel").click(function () {
-		        $(".selectClass").css("display", "none");
-		        $(".selectClass .pin,.selectClass .pai,.selectClass .da").text("");
-		        $(".classMax span").removeClass("g13");
-		    });
+		//     $(".icon-sdel").click(function () {
+		//         $(".selectClass").css("display", "none");
+		//         $(".selectClass .pin,.selectClass .pai,.selectClass .da").text("");
+		//         $(".classMax span").removeClass("g13");
+		//     });
 			
-			function trShow(ary){
-				$(".selTr").addClass("dn");
-				$(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
-				$(".selectClass").css("display", "none");
-				$(".classMax span").removeClass("g13");
-				for(var i = 0;i < ary.length;i++){
-					$(".selTr:nth-child("+ary[i]+")").removeClass("dn");
-				}
-				
-			}
+		// 	function trShow(ary){
+		// 		$(".selTr").addClass("dn");
+		// 		$(".selectClass .pin,.selectClass .pai,.selectClass .da,.selectClass .gbiao").text("");
+		// 		$(".selectClass").css("display", "none");
+		// 		$(".classMax span").removeClass("g13");
+		// 		for(var i = 0;i < ary.length;i++){
+		// 			$(".selTr:nth-child("+ary[i]+")").removeClass("dn");
+		// 		}
+		// 	}
 		</script>
 		
 	</body>
