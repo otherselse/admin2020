@@ -2,7 +2,10 @@ html,
 body {
   background: #F1F3F7;
   font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti, WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
-  color: #676767
+  color: #676767;
+  text-size-adjust: none;
+-webkit-text-size-adjust: none;
+-moz-text-size-adjust: none;
 }
 
 
@@ -1940,7 +1943,7 @@ a.on.mDListShow{
   }
 
   .m_pct50 {
-    width: 50%
+    width: 50% !important;
   }
 
   .m_pct9 {
@@ -1974,6 +1977,7 @@ a.on.mDListShow{
   .m_dib {
     display: inline-block;
   }
+
 }
 
 /*小于1280 就不显示左侧的菜单 */
@@ -4220,4 +4224,7 @@ body.login{
 }
 .pct47{
   width: 47%;
+}
+.login_top{
+  padding: 0 1%;
 }
