@@ -1940,7 +1940,7 @@ a.on.mDListShow{
   }
 
   .m_pct50 {
-    width: 50%
+    width: 50% !important;
   }
 
   .m_pct9 {
@@ -1974,6 +1974,7 @@ a.on.mDListShow{
   .m_dib {
     display: inline-block;
   }
+
 }
 
 /*小于1280 就不显示左侧的菜单 */
@@ -2587,7 +2588,7 @@ a.on.mDListShow{
 .head-img {
   height: 136px;
   width: 88px;
-  background-color: url(../images/report/tc12.png);
+  background: url(../images/report/tc12.png);
   background-size: 100% 100%;
 }
 
@@ -3082,6 +3083,7 @@ a.on.mDListShow{
   -o-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
 }
 
 .t_deg180 {
@@ -3096,6 +3098,7 @@ a.on.mDListShow{
   -o-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
 }
 
 .c-80 {
@@ -4038,7 +4041,6 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
   line-height: 26px;
   cursor: pointer;
   font-size: 14px;
-
 }
 .reg_selitem.on{
   color: #1365E8;
@@ -4046,6 +4048,10 @@ box-shadow: 0px 3px 8px 0px #E6E9EF;
   border: 1px solid #E6E6E6;
   border-radius: 13px;
   background: #fff;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
 }
 .ui-input-x[data-type="code"] >input{
   height: 28px;
@@ -4209,4 +4215,13 @@ body.login{
 }
 .pct32{
   width:32%
+}
+.city-picker-span > .placeholder {
+  color: #cecece !important;
+}
+.pct47{
+  width: 47%;
+}
+.login_top{
+  padding: 0 1%;
 }
