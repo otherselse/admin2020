@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
     <link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>订单原价/传真件-上传</title>
+	<link rel="stylesheet" type="text/css" href="http://resource.lgsteel.cn/admin2020/css/upfile.css"/>
+    
+	<title>订单原价/传真件-上传</title>
     <style>
         .ui-tab5-list {
             color: #676767FF;
@@ -39,145 +41,7 @@
             line-height: 30px;
         }
     </style>
-    <style>
-        a {
-            text-decoration: none
-        }
-
-        a:hover {
-            color: #2172F5
-        }
-
-        #dropUpfile {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto;
-            background-color: #fafafa;
-            position: relative;
-            overflow: hidden;
-            color: #1365E8;
-            box-sizing: border-box;
-            padding: 20px;
-            font-size: 12px;
-            display: inline-block;
-        }
-
-        #dropUpfile:hover {
-            background-color: #F0F8FF
-        }
-
-        #file {
-            line-height: 100%;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 100px
-        }
-
-        #imgshow {
-            vertical-align: top;
-            display: inline-block;
-        }
-
-        .upfileBg {
-            width: 150px;
-            height: 150px;
-            border: 1px #efefef solid;
-            display: inline-block;
-            position: relative;
-            box-sizing: border-box;
-            font-size: 12px;
-            color: #808080;
-            vertical-align: top;
-            margin-bottom: 10px;
-            text-align: center
-        }
-
-        .photoZM {
-            width: 140px;
-            height: 120px;
-            display: inline-block;
-        }
-
-
-        .icon-sdel {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            position: absolute;
-            right: -6px;
-            top: -6px;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAgVBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz////Q0NDx8fHo6Oju7u76+vr39/fl5eXY2NjS0tLz8/PU1NQFDf5tAAAAHnRSTlMA6I3B9rephnEJ++Hbx6CYelBKNyQZDrJYAe7RZi79Cix+AAAAy0lEQVQoz52ORwKDIBBFB7DHqNH0ArFGc/8Dxi8qmqVvQXnD8Ie2c07dyOHX07/3PXtnBUy4x7U/PORI6C3905IGfjPv4Q3JnBv2tzeU3thryoXoSvim+vRrpCdIBQq5yqUsVNWixSXg7iTIVdGoupXAJuAEOOO5ysekvS5ITaMUckyBs7GhK5EDBIHrXvsaOcNn95jAiWOqasgtFca9ZKQrGOurc+GtlEY8uSKiGb70tk+GhE06iM+0JItDaOYcaM3tmFyEsHnm01Z+Qo8gMu2en7QAAAAASUVORK5CYII=') no-repeat;
-        }
-
-        .upfileBg:hover {
-            border-color: #2172F5
-        }
-
-        .upfileBg:hover .icon-sdel {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAmVBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmb////W1tZ1dXVsbGzq6uq9vb23t7eJiYlwcHDy8vLb29vT09PLy8vIyMiwsLB4eHjj4+OCgoJ8fHxBzwGmAAAAH3RSTlMA6I23qYZxCfv34dvHwqCYelBKNxkO8b6yWCbRZi4gLbR2JAAAANhJREFUKM+djlcOgzAQRG3TQyiB9LZLIL3n/oeL1zTDJ08CiTesZthwZokVmmI17XvHNkaeywNr3/WTDVT4tu63HrQI7f856MRNry+/LqU8yIfv6l4Styf5U3GW73CtgmRBBxlm0uP1RyeWCqwRSPI7Hl9YvIEwVGC6oDgiZlXTuAyg5IX4BD0QvDq4PfCeA7FQwWpMFScscpALaO88UsFU0Nzrh3ofSHOXKSsTmvU9AHHOAbyEVdjQIWQNQveGw1piXms3mjGdNPJJc3PCeqzjZRAYInXYUP4aRiHCLZKAxwAAAABJRU5ErkJggg==');
-        }
-
-
-        .ui-button.w60 {
-            min-width: 60px;
-        }
-
-        #noFileReader {
-            height: 100px;
-            line-height: 100px;
-            text-align: center
-        }
-
-        .upfileDoc {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) 0 0;
-        }
-
-        .upfileXlsx {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) -140px 0;
-        }
-
-        .upfilePdf {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) -280px 0;
-        }
-
-        .upfileRar {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) -420px 0;
-        }
-
-        .upfileVideo {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) -560px 0;
-        }
-
-        .upfileOthers {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) -700px 0;
-        }
-
-        .upfilePps {
-            width: 140px;
-            height: 120px;
-            background: url(../images/upfiles/upfileIcon.png) 0 -120px;
-        }
-
-        #dropUpfileCont {
-            min-height: 336px;
-        }
-    </style>
+ 
 </head>
 
 <body class="showTip bgwh">
@@ -187,25 +51,25 @@
         <a href="javascript:void(0)" class="ui-tab5-list">对账函原件/传真件</a>
     </div>
     <div class="lgui-table-box bgwh">
-        <div class="lgui-table-header pct100 bgwh auto h100">
-            <div id="dropUpfileCont" class="tl pt20 pl10 pr10">
-                <span class="tc" id="dropUpfile">
-                    <span style="font-size: 50px">+</span><br>支持拖拽上传
-                    <input id="file" type="file" multiple="multiple">
-                </span>
+        <div class="lgui-table-header pct100 mt20 pl20 bgwh auto h100">
+            <div class="tl dropUpfileCont 1">
+            	<span class="tc" id="dropUpfile">
+            		<span style="font-size: 50px">+</span><br>支持拖拽上传
+            		<input class="fileBut" type="file" multiple="multiple">
+            	</span>
             </div>
-            <!-- <div class="lh50 f12 dac bgfa pct100" style="position: fixed;bottom: 50px;border: 0.5px solid #D9D9D9;">
-                <div class="ml20">
-                    <span class="searchLable">实际出口日期：</span>
-                    <span class="ui-input " data-type="time" small-type="small"><input type="text" placeholder="time4"
-                            id="time4" readonly="" value="2020-07-20" lay-key="11"></span>
-                </div>
-                <div class="ml20">
-                    <span class="searchLable">相关申报日期：</span>
-                    <span class="ui-input " data-type="time"><input type="text" placeholder="请选择" id="time2"
-                            readonly=""></span>
-                </div>
-            </div> -->
+            <div class="tl dropUpfileCont 2 dn">
+            	<span class="tc" id="dropUpfile">
+            		<span style="font-size: 50px">+</span><br>支持拖拽上传
+            		<input class="fileBut" type="file" multiple="multiple">
+            	</span>
+            </div>
+            <div class="tl dropUpfileCont 3 dn">
+            	<span class="tc" id="dropUpfile">
+            		<span style="font-size: 50px">+</span><br>支持拖拽上传
+            		<input class="fileBut" type="file" multiple="multiple">
+            	</span>
+            </div>
             <div class="lh50 pr20 tr" style="position: fixed;bottom: 0px;right: 0px;">
                 <button type="button" class="ui-button w90" data-type="clear" onclick="upfileClose()"
                     type="button">取消</button>
@@ -219,17 +83,33 @@
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="../js/upfile.js"></script>
+	
 
     <script>
+		
+		//删除图片方法
+		function delFile(obj) {
+			var key = Number($(obj).attr("data-key"));
+			var l = $("#imgshow").find(".ui-files").length;
+			$(obj).remove();
+			myLgUpload.filesObj.remove(key);
+			if (l == 1) {
+				$("#imgshow").hide();
+			}
+		}
+		
         $(function () {
-            $('.ui-tab5-list').click(function () {
-                $('.ui-tab5-list').removeClass("on");
-                $(this).addClass('on');
-                // $('.uplad').addClass("dn");
-                // $('.' + $(this).index()).removeClass("dn");
-                $("#dropUpfileCont").find("a").remove();
-            });
-
+			
+			$('.ui-tab5-list').click(function() {
+				$('.ui-tab5-list').removeClass("on");
+				$(this).addClass('on');
+				$(".dropUpfileCont").addClass("dn");
+				// $('.uplad').addClass("dn");
+				$('.dropUpfileCont').eq($(this).index()-1).removeClass("dn");
+				// $("#dropUpfileCont").find("a").remove();
+			});
+		
             setTime4();
             var endtime = '', starttime = '';
             function setTime4() {
@@ -271,318 +151,6 @@
         })
 
 
-    </script>
-
-    <script>
-        if (!Array.from) {
-            Array.from = function (el) {
-                return Array.apply(this, el);
-            }
-        }
-
-        var myLgUpload = {
-            lg_MaxSize: null
-            , lg_type: null
-            , lg_fileType: null
-            , filesObj: new FilesObj()     // 实例化文件存储对象
-            , init: function (lg_MaxSize, lg_type, lg_fileType) {
-                myLgUpload.lg_MaxSize = lg_MaxSize;   //最大文件大小 1024 * 1024 * 2
-                myLgUpload.lg_type = lg_type;		     // 0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
-                myLgUpload.lg_fileType = lg_fileType; // 例如：".jpg|.jpeg|.gif|.bmp|.png|"
-
-                myLgUpload.checkBrower()
-            }
-            , checkBrower: function () {	 //如果是不支持拖拽等还是采用原有老的上传方法,（IE9及以下浏览器不支持FileReader）
-                if (typeof FileReader == "undefined") {
-                    myLgUpload.showVersion(false);
-                } else {
-                    myLgUpload.showVersion(true);
-                    myLgUpload.supportFunc();
-                }
-            }
-            , showVersion: function (flag) { //用于显示新旧版本。flag为true是新版本，false是老版本
-                if (flag) {
-                    $("#submitNew").show();
-                    $("#dropUpfileCont").show();
-                    $("#noFileReader").remove();
-                    if (myLgUpload.lg_type == 0) {
-                        $("#file").removeAttr("multiple");
-                    } else {
-                        $("#file").attr("multiple", "multiple");
-                    }
-                } else {
-                    $("#dropUpfileCont").remove();
-                    $("#noFileReader").show();
-                    $("#submitNew").hide();
-
-                }
-            }
-            , supportFunc: function () {
-
-                //拖拽阻止默认方法
-                window.onload = function () {
-                    document.addEventListener('dragleave', function (e) { e.preventDefault(); }); //拖离			
-                    document.addEventListener('drop', function (e) { e.preventDefault(); }); //拖后放			
-                    document.addEventListener('dragenter', function (e) { e.preventDefault(); }); //拖进			
-                    document.addEventListener('dragover', function (e) { e.preventDefault(); }); //拖来拖去
-                };
-                var box = document.getElementById("dropUpfileCont");
-                box.addEventListener("drop", function (e) {
-                    e.preventDefault(); //取消默认浏览器拖拽效果
-                    var files = e.dataTransfer.files; // 获取当前文件对象
-                    if (files) {
-                        myLgUpload.getFilesUpload(files);
-                    } else {
-                        layer.msg("您的浏览器不支持拖动，请点击上传文件");
-                        return;
-                    }
-
-                }, false);
-
-                $('#file').change(function (event) {
-                    var files = event.target.files;
-                    myLgUpload.getFilesUpload(files);
-                })
-            }
-            , getFilesUpload: function (files) {
-                if (!(files instanceof FileList)) {
-                    console.log('参数仅支持FileList或者[File]');
-                    return false;
-                }
-                var arr = Array.from(files);
-
-                if (arr.length === 0) {
-                    console.log('参数中的文件对象个数为0');
-                    return false;
-                }
-                var filesSize = myLgUpload.filesObj.size(); // 已存储的文件个数
-                var filesTotalSize = arr.length + filesSize; // 与当前文件合并后的文件个数
-                var f = true;
-                if (myLgUpload.lg_type === 0 && filesTotalSize > 1) {
-                    layer.msg('提示：只能上传一个附件');
-                    return;
-                } else {
-                    if (filesTotalSize > myLgUpload.lg_type && myLgUpload.lg_type > 1) {
-                        layer.msg('提示：只能上传' + lg_type + '个附件');
-                        return;
-                    }
-                    //var beyondMaxSize = arr.some(item => item.size > myLgUpload.lg_MaxSize);
-                    var beyondMaxSize = false;
-                    for (var i = 0; i < arr.length; i++) {
-                        if (arr[i].size > myLgUpload.lg_MaxSize) {
-                            beyondMaxSize = true;
-                            break;
-                        }
-                        if (myLgUpload.lg_fileType.length != 0) {  //判断类型
-                            if (!myLgUpload.toSameType(arr[i].name)) {
-                                return;
-                            }
-                        }
-
-                        if (myLgUpload.filesObj.toSameFile(arr[i].name)) {
-                            layer.alert("提示：您已选择了此附件，请勿重复添加相同附件！")
-                            return;
-                        }
-
-
-
-
-                    }
-                    if (beyondMaxSize) {
-                        layer.msg('提示：上传附件大小不可超过' + Math.round(myLgUpload.lg_MaxSize / (1024 * 1024)) + 'MB');
-                        return;
-                    }
-                    for (var i = 0; i < arr.length; i++) {
-                        var key = myLgUpload.filesObj.push(arr[i]);
-                        showFiles(arr[i], key);
-                    }
-                    $('#file').val('');
-                }
-            }
-            , toSameType: function (name) { //返回false表示类型不匹配
-                var extName = name.substring(name.lastIndexOf(".")).toLowerCase();//        
-                if (myLgUpload.lg_fileType.indexOf(extName + "|") == -1) {
-                    var errfile = myLgUpload.lg_fileType.replace(/\|/g, " ")
-                    var ErrMsg = "该文件类型不允许上传。请上传 " + errfile + " 类型的文件，当前文件类型为" + extName;
-                    layer.alert(ErrMsg);
-                    return false;
-                }
-                return true;
-            }
-            , delFile: function (obj) {
-                var key = Number($(obj).attr("data-key"));
-                var l = $("#imgshow").find(".ui-files").length;
-                $(obj).remove();
-                myLgUpload.filesObj.remove(key);
-                if (l == 1) {
-                    $("#imgshow").hide();
-                }
-            }
-        }
-
-        // 定义一个文件存储对象
-        function FilesObj() {
-            this.files = {}; // 文件集合
-            this.length = 0; // 文件个数
-            this.lastKey = 0; // 下一个key
-        }
-        // 通过key删除一个文件
-        FilesObj.prototype.remove = function (key) {
-            delete this.files[key];
-            this.length--;
-            //this.toArray()
-            return key;
-        };
-
-        // 向后添加一个文件，返回当前添加的key值
-        FilesObj.prototype.push = function (file) {
-            if (file instanceof File) {
-                this.files[this.lastKey] = file;
-                this.length++;
-                this.lastKey++;
-                return this.lastKey - 1;
-            }
-            else console.error('参数仅支持File类型');
-            return -1;
-        };
-        // 将文件对象转成数组输出
-        FilesObj.prototype.toArray = function () {
-            //return data.map(item => this.files[item]);
-            var _this = this
-            var arr = Object.keys(_this.files).map(function (item) {
-                return _this.files[item]
-            });
-            return arr
-        };
-        // 返回文件对象存储的个数
-        FilesObj.prototype.size = function () {
-            return this.length;
-        };
-        FilesObj.prototype.toSameFile = function (filename) {  //返回true表示含有同名的文件；
-            for (var i = 0; i < this.lastKey; i++) {
-                //alert("filename:"+filename+"this.files[i].name:"+this.files[i].name)
-                if (this.files[i] && (filename == this.files[i].name)) {  //已经含有同名的文件					
-                    return true;
-                }
-            }
-            return false;
-        }
-    </script>
-
-    <script>
-        //
-        var lg_MaxSize = 1024 * 1024 * 3;   //最大文件大小 3M
-        var lg_type = 1;					  //0表示只能上传一个，1表示可以上传多个,>1表示最多可以传几个
-        var lg_fileType = '.jpg|.jpeg|.gif|.bmp|.png|.pdf|.docx|.doc|.xlsx|.xls|'  // 例如：空表示不限文件类型；".jpg|.jpeg|.gif|.bmp|.png|"
-        myLgUpload.init(lg_MaxSize, lg_type, lg_fileType);
-
-        $("#maxL").text((lg_MaxSize / (1024 * 1024)) + "MB")
-        $("#fileT").text(",文件格式为：" + lg_fileType.replace(/\|/g, " "))
-
-
-        function showFiles(file, key) {
-            var fd = new FileReader();
-            //调它的readAsDataURL并把原生File对象传给它，
-            fd.readAsDataURL(file)//base64
-            var name = file.name;
-            if (!getFilesType(name)) {
-                layer.msg('文件类型不正确');
-                return;
-            }
-
-            fd.onload = function (ev) {
-                if (getFilesType(name) == "pic") { //假如是图片
-                    var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><img src="" class="photoZM"><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
-                    $("#dropUpfileCont").prepend(str);
-                    var imgBase64 = ev.target.result;	//console.log(imgBase64)   //base64 代码
-                    $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").attr("src", imgBase64);
-                } else {
-                    var str = '<a data-key="' + key + '" class="upfileBg mr10 vm" href="javascript:void(0)" onclick="myLgUpload.delFile(this)"  title="删除"><span  class="photoZM"></span><div class="ell">' + name + '</div><i class="icon-sdel vm ml5" ></i></a>'
-                    $("#dropUpfileCont").prepend(str);
-                    if (getFilesType(name) == "doc") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileDoc");
-                    } else if (getFilesType(name) == "xlsx") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileXlsx");
-                    } else if (getFilesType(name) == "pdf") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfilePdf");
-                    } else if (getFilesType(name) == "rar") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileRar");
-                    } else if (getFilesType(name) == "video") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileVideo");
-                    } else if (getFilesType(name) == "ppt") {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfilePps");
-                    } else {
-                        $("#dropUpfileCont").find("a[data-key=" + key + "]").find(".photoZM").addClass("upfileOthers");
-                    }
-
-                }
-
-
-                //$("#imgshow").show();
-            }
-        }
-
-
-        function getFilesType(fname) {
-            if (fname.lastIndexOf('.') == -1) {    //如果不存在"."  
-                layer.msg("文件不正确!");
-                return false;
-            }
-            var AllImgExt = [
-                { "name": "pic", "type": ".jpg|.jpeg|.gif|.bmp|.png|" },
-                { "name": "doc", "type": ".doc|.docx|" },
-                { "name": "xlsx", "type": ".xls|.xlsx|.csv|" },
-                { "name": "pdf", "type": ".pdf|" },
-                { "name": "rar", "type": ".zip|.rar|" },
-                { "name": "ppt", "type": ".pptx|.ppt|" },
-                { "name": "video", "type": ".mp4|.avi|.mpg|" }
-            ]
-
-            var extName = fname.substring(fname.lastIndexOf(".")).toLowerCase();
-
-            for (var i = 0; i < AllImgExt.length; i++) {
-                if (AllImgExt[i].type.indexOf(extName + "|") > -1) {
-                    return AllImgExt[i].name
-                }
-            }
-
-            return false;
-
-        }
-
-
-
-        function upfileClose() {
-            var index = parent.layer.getFrameIndex(window.name); //获取当前窗体索引
-            parent.layer.close(index); //执行关闭 
-        }
-
-        function doSubmit() {
-            var myarr = myLgUpload.filesObj.toArray();
-
-            //上传文件
-            // if(myarr.length>0){
-            //     for(var i=0,len = myarr.length;i < len;i++){
-            //         let formData = new FormData();
-            //         formData.append('file',myarr[i]);
-            //         $.ajax({
-            //             url:'/oss/file/uploadFiles',
-            //             type:'post',
-            //             data:formData,
-            //             processData:false,
-            //             contentType:false,
-            //             success:function(data,statusText,headers){
-            //                 if(data.success){
-
-            //                 }
-            //             }
-            //         })
-            //     }
-            //     }else{
-            //         alert("请选择文件！")
-            //     }
-            //     return false;
-        }
     </script>
 </body>
 
