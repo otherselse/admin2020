@@ -24,14 +24,23 @@
 
 <body class="showTip">
     <div class="lgui-table-box ml20 mt5 mr20">
-        <div class="lgui-table-header pct100">
-            <div class="mt20 mb10 tc">
+        <div class="lgui-table-header f12 pct100">
+			<div class="mt20 tc">
+			   <span class="dib" style="margin-right: 45px;">
+				   类型：<span class="single">
+				   	<input type="hidden">
+				   	<button type="button" class="ui-option mr10 on">贸易</button>
+				   	<button type="button" class="ui-option">加工</button>
+				   </span>
+			   </span>
+			</div>
+            <div class="mt10 mb10 tc">
                 品名：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
             </div>
-            <div class="mb10 tc">
+            <div class="mb30 tc">
                 编码：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
             </div>
-            <div class="mb30 tc">
+          <!--  <div class="mb30 tc">
                 编码：<span class="input-selSearch pct69">
                     <input type="text" class="ui-input searchUp pct100" placeholder="请选择"
                         autocomplete="off">
@@ -44,7 +53,7 @@
                         <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
                     </div>
                 </span>
-            </div>
+            </div> -->
             <div class="tc">
                 <button type="button" class="ui-button mr10 tBtn">提交</button>
                 <button type="button" class="ui-button tBtn " id="close_but" data-type="clear">关闭</button>
