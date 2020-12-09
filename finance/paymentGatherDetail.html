@@ -82,7 +82,11 @@
 		               </tr>
 		               <tr class="resource-table">
 		                 <td class="title">申请单号：</td>
-		                 <td class="cont"><a href="javascript:void(0)" onclick="showStep()">STC(22)-20001207</a></td>
+		                 <td class="cont">
+		                 	<a href="javascript:void(0)" onclick="showStep()">STC(22)-20001207</a>
+		                 	<a href="javascript:void(0)" onclick="showlayer()">type1</a>
+		                 	<a href="javascript:void(0)" onclick="showlayer2()">type2</a>
+		                 </td>
 		                 <td class="title">结算申请类别：</td>
 		                 <td class="cont">销售合同收款</td>
 		               </tr>
@@ -138,7 +142,27 @@
 
 		})
 		
+		function showlayer(){
+			layer.open({
+				type: 2,
+				title: '审核意见详情',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'verifyInfo.html' //iframe的url
+			});
+		}
 
+		function showlayer2(){
+			layer.open({
+				type: 2,
+				title: '审核意见详情',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['80%', '80%'],
+				content: 'verifyInfo2.html' //iframe的url
+			});
+		}
 
 		
 
