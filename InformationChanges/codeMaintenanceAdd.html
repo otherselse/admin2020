@@ -55,7 +55,7 @@
                 </span>
             </div> -->
             <div class="tc">
-                <button type="button" class="ui-button mr10 tBtn">提交</button>
+                <button type="button" class="ui-button mr10 tBtn" onclick="layerMsg(6)">提交</button>
                 <button type="button" class="ui-button tBtn " id="close_but" data-type="clear">关闭</button>
             </div>
         </div>
@@ -66,6 +66,27 @@
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
+
+	<script>
+		
+		     
+		        function layerMsg(flag) { //icon: 1 成功 icon: 2 出错 icon:3 等待
+					//layer.msg('玩命提示中');			
+					if(flag){
+						layer.msg('保存成功', { icon: flag,time:200000});
+					}else{
+						layer.msg('该订单处理中，请稍后…', { icon: 1 ,time:200000});
+					}
+					
+					// layer.msg('同上', {
+					//   icon: 1,
+					//   time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					// }, function(){
+					//   //do something
+					//   alert(2222)
+					// });   
+				}
+	</script>
 </body>
 
 </html>
