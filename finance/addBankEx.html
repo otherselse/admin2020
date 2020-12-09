@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
 	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/upfile2020.css">
+
 	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
 	<title>银行收支录入</title>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
@@ -15,57 +17,102 @@
 	</style>
 </head>
 <body class="isPc">
-	<div class="p20">
-		<div class="cl f0">
-			<div class="pct22 dib f12">
-				银行账号：<br/>
-				<span class="input-selSearch pct90 mt10">
-								<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
-								<div class="search-cont">
-									<a href="javascript:void(0)" class="search-list db ell">中国工商银行上海宝山支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">建行上海外高桥保税区支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">上海农商银行上海自贸试验区分行</a>
-									<a href="javascript:void(0)" class="search-list db ell">招商银行上海自贸试验区分行</a>
-									<a href="javascript:void(0)" class="search-list db ell">中国银行上海市外高桥保税区支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">中国银行（香港美元户）</a>
-									<a href="javascript:void(0)" class="search-list db ell">转帐</a>
-									<a href="javascript:void(0)" class="search-list db ell">中国银行上海市友谊路支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">建行广州萝岗政务中心支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">中国银行上海市外高桥保税区支行(美元户）</a>
-									<a href="javascript:void(0)" class="search-list db ell">兴业银行上海彭浦支行</a>
-									<a href="javascript:void(0)" class="search-list db ell">中国银行（香港人民币户）</a>
-								</div>
-							</span>
+	<div class="pl20 pr20 pt10">
+		<div class="ui-tab5">
+			<a href="javascript:void(0)" class="ui-tab5-list on ">Excel表格批量录入</a>
+			<a href="javascript:void(0)" class="ui-tab5-list">在线录入</a>
+		</div>
+		<div class="excelCont mt15">
+			<div class="dropUpfileCont ">
+				<a class="upfileBg _singleP" onclick="removeImg(this)"><span class="photoZM  upfileXlsx" id="ImgPr03"></span><div class="ell _singleTxt"></div><i class="icon-sdel vm ml5"></i></a>
+				<span class="tc dropUpfile">
+					<span class="dropAdd">+</span><div class="droptext">支持xls、xlsx<br/>Excel文件</div>
+					<input id="file3" type="file" class="fileBut">				
+				</span>				
 			</div>
-			<span class="pct22 dib f12">交易单位：<br/><input type="text" class="ui-input pct90 mt10" placeholder="请输入" autocomplete="off"></span>
-			<span class="pct22 dib f12">金额：<br/><input type="text" class="ui-input pct90 mt10" placeholder="请输入" autocomplete="off"></span>
-			<span class="dib f12 pct30">
-	                		交易单位：<br/><span class="ui-input f0 pct90 range mt10" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
-					</span>
-	        </span>
 		</div>
-		<div class="mt20 cl">
-			<span class="dib f12 mr40">
-	                		款项类型：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>收款</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>付款</label>
-	                	</span>
-	                	<span class="dib f12">
-	                		币种：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>人民币</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>美元</label>
-	                	</span>		
+		<!-- excelCont -->
+		<div class="excelCont dn mt10">
+			<div class="cl f0">
+				<div class="pct22 dib f12">
+					银行账号：<br/>
+					<span class="input-selSearch pct90 mt10">
+									<input type="text" class="ui-input searchUp pct100" placeholder="请选择" autocomplete="off" readonly="">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">中国工商银行上海宝山支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">建行上海外高桥保税区支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">上海农商银行上海自贸试验区分行</a>
+										<a href="javascript:void(0)" class="search-list db ell">招商银行上海自贸试验区分行</a>
+										<a href="javascript:void(0)" class="search-list db ell">中国银行上海市外高桥保税区支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">中国银行（香港美元户）</a>
+										<a href="javascript:void(0)" class="search-list db ell">转帐</a>
+										<a href="javascript:void(0)" class="search-list db ell">中国银行上海市友谊路支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">建行广州萝岗政务中心支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">中国银行上海市外高桥保税区支行(美元户）</a>
+										<a href="javascript:void(0)" class="search-list db ell">兴业银行上海彭浦支行</a>
+										<a href="javascript:void(0)" class="search-list db ell">中国银行（香港人民币户）</a>
+									</div>
+								</span>
+				</div>
+				<span class="pct22 dib f12">交易单位：<br/><input type="text" class="ui-input pct90 mt10" placeholder="请输入" autocomplete="off"></span>
+				<span class="pct22 dib f12">金额：<br/><input type="text" class="ui-input pct90 mt10" placeholder="请输入" autocomplete="off"></span>
+				<span class="dib f12 pct30">
+		                		交易单位：<br/><span class="ui-input f0 pct90 range mt10" data-type="time">
+							<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" >
+						</span>
+		        </span>
+			</div>
+			<div class="mt15 cl">
+				<span class="dib f12 mr40">
+		                		款项类型：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>收款</label>
+							<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>付款</label>
+		                	</span>
+		                	<span class="dib f12">
+		                		币种：<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>人民币</label>
+							<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>美元</label>
+		                	</span>		
+			</div>
+			<div class="mt15 cl f12">
+				备注：
+				<textarea class="ui-textarea pct80" rows="4"></textarea>
+			</div>
 		</div>
-		<div class="mt20 cl f12">
-			备注：
-			<textarea class="ui-textarea pct80" rows="4"></textarea>
+		<div class="tc mt10">
+			<button class="ui-button mr10 w90" type="button">提交</button>
+			<button class="ui-button w90" data-type="clear" type="button">关闭</button>
 		</div>
 	</div>
-	<div class="tc">
-		<button class="ui-button mr10 w90" type="button">提交</button>
-		<button class="ui-button w90" data-type="clear" type="button">关闭</button>
-	</div>
+	<!-- excelCont -->
 
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/gold2020/js/single_imgshow.js"></script>
+	<script>
+		$(function(){
+			$(".ui-tab5-list").on("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+				var index=$(this).parents(".ui-tab5").find(".ui-tab5-list").index($(this));
+				$(".excelCont").hide();
+				$(".excelCont").eq(index).show();
+			})
+		})
+
+		var  opt3={Img:"ImgPr03", ImgType:["xls", "xlsx"],  Callback: function () {
+		 		callB(this)
+			}}
+		$("#file3").uploadPreview(opt3);
+		function removeImg(obj){
+			$(obj).parents(".dropUpfileCont").removeClass("_singleImg");
+			$(obj).parents(".dropUpfileCont").find(".fileBut").val('');
+			$(obj).parents(".dropUpfileCont").find("._singleTxt").text('');
+			$(obj).parents(".dropUpfileCont").find(".photoZM").attr("src","");
+		}
+
+
+		function callB(obj){
+			var myobj=$("#"+obj.Img);
+			console.log("scr:"+myobj.attr("src"))
+		}
+	</script>
 </body>
 </html>
