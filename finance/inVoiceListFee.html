@@ -175,10 +175,18 @@
 				<!-- search end -->
 
 					<!-- search end -->
-					<div class="lgui-table-box mt30 checkbox m-tabLimitSCroll tabLimitSCroll  fixrightTab">
-						<div class="lgui-table-header table-cw">
+					<div class="mt30"><a href="javascript:void(0)" onclick="enLarge()">收票明细表放大查看</a></div>
+	            <div class="fixenlargeDiv ">
+					<div class="lgui-table-box  checkbox m-tabLimitSCroll tabLimitSCroll  fixrightTab mt5">
+						<!-- <div class="lgui-table-header table-cw">
 							<table class="ui-table tc f12 " width="100%">
-								<thead>
+							
+							</table>
+
+						</div> -->
+						<div class="lgui-table-body ">
+							<table class="ui-table tc f12 " width="100%">
+									<thead>
 									<tr>
 										<th width="3%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
 												 onclick="setAll(this)"></i></th>
@@ -205,11 +213,6 @@
 										<th width="6%" class="sticky-right table-cell-fix-right table-cell-fix-left-last" style="right: 0;">操作</th>
 									</tr>
 								</thead>
-							</table>
-
-						</div>
-						<div class="lgui-table-body mt-1">
-							<table class="ui-table tc f12 " width="100%">
 								<tbody class="ui-thover">
 									<tr>
 										<td width="3%"><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i></td>
@@ -264,17 +267,7 @@
 									</tr>
 								</tbody>
 								<tfoot class="bgfa">
-									<tr height="45">
-										<td colspan="18" class="tl">
-											<i class="ui-checkbox goldIcon mr5 ml10"><input type="checkbox" class="checkbox-opacity" name="checkbox"
-												 onclick="setAll(this)"></i>全选
-											<span class="ml20">入账日期：</span><span class="ui-input pct10 mr10" data-type="time"><input type="text"
-												 placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
-											<button type="button" class="ui-button mr10">批量清票</button>
-											<button type="button" class="ui-button pl10 pr10 mr10">外贸采购发票及结转成本凭证导出</button>
-											<button type="button" class="ui-button mr20" data-type="clear">取消导出</button>
-										</td>
-									</tr>
+									
 									<tr height="45">
 										<td colspan="7" class="tr">
 											当前页合计：
@@ -312,10 +305,27 @@
 
 							</table>
 						</div>
+						<div class="bgfa ovh bde mt-1 enlarge_bot" >
+		                   		
+		                   			<div  class="l tc" style="width: 3%">
+		                   				<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>
+		                   			</div>
+		                   			<div  class="l">
+		                   				&emsp;全选
+		                   				<span class="ml20">入账日期：</span><span class="ui-input pct15 mr10" data-type="time"><input type="text"
+												 placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
+											<button type="button" class="ui-button mr10">批量清票</button>
+											<button type="button" class="ui-button pl10 pr10 mr10">外贸采购发票及结转成本凭证导出</button>
+											<button type="button" class="ui-button mr20" data-type="clear">取消导出</button>
+									</div>
+		                   </div> 
+
 
 					</div><!-- table end -->
 
-					<script type="text/javascript" src="../js/pagelist.js"></script>
+					<!-- <script type="text/javascript" src="../js/pagelist.js"></script> -->
+					<div class="tc">pagelist</div>
+				</div>
 
 				</div>
 			</div><!-- ui-content end -->
@@ -349,6 +359,18 @@
 
 				}
 			}
+
+			    function enLarge(){
+    	layer.open({
+			type: 1,
+			title: '收票明细表',
+			shadeClose: true,
+			shade: 0.4,
+			area: ['100%', '100%'],
+			content: $(".fixenlargeDiv")
+		});
+    }
+
 		</script>
 	</body>
 </html>
