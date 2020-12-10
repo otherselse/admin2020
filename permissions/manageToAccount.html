@@ -44,8 +44,8 @@
         <div class="ui-content minH">
             <div class="p20">
                <div class=" f12">
-                        <span class="searchLable">姓名：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
-                        <span class="searchLable">账号：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">&emsp;姓名：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                        <span class="searchLable">&emsp;&emsp;账号：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
                         <span class="searchLable">区域：</span>
                         <div class="dib selectSingle">
                                         <a class="on" href="javscript:void(0)">全部</a>
@@ -59,7 +59,12 @@
                                         <a href="javscript:void(0)">宁波</a>
                                     </div>
                 </div>
-                <div class="tc mt20"><button type="button" class="ui-button ">查询</button></div>
+                <div class="mt10 f12">
+                    <span class="searchLable">分公司：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                    <span class="searchLable">电话号码：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
+                    <button type="button" class="ui-button ">查询</button>
+                </div>
+                
 
                 <table class="ui-table tc f12 mt30" width="100%">
                             <thead>
@@ -75,7 +80,7 @@
                             </thead>
                             <tbody class="ui-thover">
                                  <tr>
-                                    <td><a href="">马云云</a></td>
+                                    <td><a href="javascript:void(0)" onclick="showInfo()">马云云</a></td>
                                     <td>13712345678</td>
                                     <td>上海(上海乐刚)</td>
                                     <td>零售版</td>
@@ -86,7 +91,7 @@
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>停用文化</label></span>
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>停用管理</label></span>
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>开通登录任务系统</label></span>
-                                        <a class="ml10 dib" href="javascript:void(0)" onclick="reSetUser(1234)" title="重置密码为随机密码">密码</a>
+                                        <a class="ml10 dib" href="javascript:void(0)" onclick="reSetUser(1234)" title="重置密码为随机密码">密码</a><br/>
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>账户冻结</label></span>
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>锁定文化</label></span>
                                         <span class="ml10 dib f12 mb5"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>锁定管理</label></span>
