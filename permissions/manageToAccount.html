@@ -47,6 +47,7 @@
                         <span class="searchLable">&emsp;姓名：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
                         <span class="searchLable">&emsp;&emsp;账号：</span><input type="text" class="ui-input pct15 mr20" placeholder="请输入" autocomplete="off">
                         <span class="searchLable">区域：</span>
+                        
                         <div class="dib selectSingle">
                                         <a class="on" href="javscript:void(0)">全部</a>
                                         <span class="pr5 pl5 ">|</span>
@@ -80,7 +81,7 @@
                             </thead>
                             <tbody class="ui-thover">
                                  <tr>
-                                    <td><a href="javascript:void(0)" onclick="showInfo()">马云云</a></td>
+                                    <td><a href="javascript:void(0)" onclick="showInfo(this,event)">马云云</a></td>
                                     <td>13712345678</td>
                                     <td>上海(上海乐刚)</td>
                                     <td>零售版</td>
@@ -108,12 +109,32 @@
         </div>
     </div>
 
+    <div class="oa-userinfo dn" onclick="stopPro(event)">
+            <i class="icon-sdel goldIcon vm ml5 poi" title="删除" onclick="closeUserinfo(this)" ></i>
+            <div class="pt10 ovh mt2 mb2 pb10 pl10">
+                <img src="../images/hwjj.jpg" class="oa-address-img l">
+                <div class="l pct60 ell f12 ml5">
+                    <div class="mb2 g28 f14">张三</div>
+                    <div class="ell mb10 g28">上海哈哈哈哈哈哈哈公司</div>
+                    传&emsp;&emsp;真：<span class="g28">2003494292</span><br>
+                    上级领导：<span class="g28">张三丰</span>
+                </div>
+            </div>            
+            <div class="oa-address-bot g28 cl f12">
+                <i class="admIcon choose_tel vm  ml10"></i>13925966943
+                <i class="admIcon choose_mob vm ml20  mr5"></i>8017
+            </div>
+        </div>
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
     <script>
         $(function () {
             $(".mulfolder").eq(1).addClass("open").find(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+            $(window).on("click",function(){
+                    $(".oa-userinfo").hide();
+                })
 
         })
 
@@ -125,6 +146,21 @@
         
         }
         
+         function showInfo(obj,event){
+                stopPro(event)
+                if($(".oa-userinfo").css("display")=="none"){
+                    var left=$(obj).offset().left;
+                    var top=$(obj).offset().top+$(obj).outerHeight(true)+10;
+                    $(".oa-userinfo").css({"top":top,"left":left});
+                    $(".oa-userinfo").show();
+                }else{
+                    $(".oa-userinfo").hide();
+                }               
+            }
+
+            function closeUserinfo(obj){
+                 $(obj).parents(".oa-userinfo").hide();
+            }
       
 
     </script>
