@@ -464,6 +464,17 @@ function showSearchIconDn(obj) {
 	}
 }
 
+function showInfo(){
+		layer.open({
+		type: 2,
+		title: '修改信息',
+		shadeClose: true,
+		shade: 0.4,
+		area: ['450px', '500px'],
+		content: '../index/userInfo.html' //iframe的url
+	});
+}
+
 //阻止冒泡
 function stopPro(e){
 	if(navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.match(/7./i)=="7."|| navigator.appVersion.match(/8./i)=="8.")) 

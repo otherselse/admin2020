@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/upfile2020.css">
+
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>修改信息</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="../js/admin.js"></script>
+
+	<style>
+		html,body{background-color: #fff}
+	</style>
+</head>
+<body class="isPc showTip">
+	<div class="pl30  pt20 pb10">
+		<div class="mb10">
+	        <span class="g28">乐刚账号：</span>13162733186
+	    </div>
+	    <div class="mb10">
+	        <span class="g28">&emsp;手机号：</span><input type="text" class="ui-input pct70" value="13162733186">
+	    </div>
+	    <div class="mb10">
+	        <span class="g28">&emsp;座机号：</span><input type="text" class="ui-input pct70" value="4444">
+	    </div>
+	    <div class="mb10">
+	        <span class="g28">专业领域：</span><select name="oaErp.professionalType" id="professionalType" class="ui-input pct70" onchange="selectOption();">
+			<option value="165">合规</option>
+			
+			<option value="162">开发</option>
+			
+			<option value="164">法务</option>
+			
+			<option value="166">应用</option>
+			
+			<option value="74">人事</option>
+			
+			<option value="163">用户体验</option>
+			
+			<option value="165">合规</option>
+			
+			<option value="167">产品服务</option>
+			
+			<option value="169">业务</option>
+			
+			<option value="161">产品</option>
+			
+			<option value="132">加工金牌商家</option>
+			
+			<option value="168">物流</option>
+			
+			<option value="54">生产加工</option>
+			
+			<option value="160">行政</option>
+			
+			<option value="75">资本</option>
+			
+			<option value="112">供应链</option>
+			
+			<option value="9">财务</option>
+			
+			<option value="231">产品设计服务</option>
+			
+			<option value="191">风控</option>
+			
+			<option value="233">用户体验</option>
+			
+			<option value="232">开发</option>
+			
+			<option value="251">运营</option>
+			
+			<option value="271">软件测试</option>
+			
+			<option value="291">法</option>
+			
+		</select>
+	    </div>
+	     <div class="mb10">
+	        <span class="g28">&emsp;新密码：</span><input type="pasword" class="ui-input pct70" >
+	    </div>
+	    <div class="mb10">
+	    	 <span class="g28">&emsp;&emsp;&emsp;&emsp;&ensp;</span>
+	    	<span class="ui-tip pct70">密码必须由数字和字母组成,长度在6-16位之间,且不含空格,区分大小写</span>
+	    </div>
+	    <div class="mb10">
+	        <span class="g28">确认密码：</span><input type="pasword" class="ui-input pct70" >
+	    </div>
+	    <div class="mb10">
+	    	 <span class="g28">&emsp;&emsp;&emsp;&emsp;&ensp;</span>
+	    	<span class="ui-tip pct70">请再次输入密码</span>
+	    </div>
+	     <div class="mb10">
+	        <span class="g28">&emsp;验证码：</span><input type="text" class="ui-input pct40 mr20" value="">
+	        <button class="ui-button vm w90" data-type="normal" type="button" style="font-size: 12px" id="codee">发送验证码</button>
+	    </div>
+	    <div class="mt10">
+	    	<span class="g28 vt">头像上传：</span>
+                                <input type="file" id="page_imageFile_Jpsj" class="dn" >
+                                <div class="userPhoto-box dib" onclick="uploadUserPhoto(this)">
+                                    <div class="userPhoto tc" id="userphoto_txt">
+                                        <span class="mt60 dib f12">点击上传</span>
+                                    </div>
+                                    <img src="" class="dn" id="photoJpsj" style="width: 100%;height: 100%;">
+                                </div>
+                                <div class="dib ml10 vt">
+                                    <span class="g9a f12">请上传宽71px，高95px的头像</span><br>
+                                    <a href="javascript:void(0)" class="f12" title="<img src='http://resource.lgsteel.cn/gold2020/images/jpsj/003.png' style='width:71px;height:95px' /><div class='tc'>示例头像<div>" >查看示例</a>
+                                </div>
+                            </div>
+
+	</div>
+	<div class="bte tc pt10 pb10">
+		<input type="button" value="提交" class="ui-button mr10 w90" />
+		<input type="button" value="关闭" class="ui-button w90" data-type="clear" />
+	</div>
+
+	<script type="text/javascript" src="http://resource.lgsteel.cn/gold2020/js/single_imgshow.js"></script>
+	<script>
+		$("#page_imageFile_Jpsj").uploadPreview(
+			{ Img: "photoJpsj",
+			  Width: 71,
+			  Height: 95 , 
+			  Callback:function(){
+			  	$("#userphoto_txt").hide().addClass("on")
+            	$("#photoJpsj").show();
+			  }
+			}
+		);
+		var wait = 120;
+		$(function(){
+			 $("#codee").on("click",function(){
+				timeSet(this)
+			})
+		})
+	
+         // 上传头像
+        function uploadUserPhoto() {
+            $("#page_imageFile_Jpsj").click()
+        }
+
+        
+       
+    	function timeSet(btn) {
+        if (wait == 0) {
+        	$(btn).prop("disabled",false);
+        	$(btn).text("获取登录验证码");
+            $(btn).addClass("blue");
+            wait = 120;
+        } else {
+            $(btn).removeClass("blue");
+        	$(btn).prop("disabled",true);
+        	$(btn).text("重新发送(" + wait + "s)")
+            wait--;
+            setTimeout(function () {
+                    timeSet(btn);
+                },
+                1000)
+                }
+    }
+	</script>
+
+
+</body>
+</html>
