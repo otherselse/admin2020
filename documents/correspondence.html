@@ -573,6 +573,9 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
                 }
             });
+			layui.use('layer', function(){
+					  var layer = layui.layer; 
+			});
         })
     </script>
     <script>
@@ -628,6 +631,7 @@
             $(obj).parents(".hideTr").find('.httkxs').toggle();
         }
 
+		
         function showLayer(name, url, h) {
             layer.open({
                 type: 2,
@@ -638,6 +642,7 @@
                 content: url //iframe的url
             });
         }
+		 
         function Modify(obj) {
             var $span = $(obj).parents("tr").prev("tr").find("td").next("td").find("span");
             if ($span.css("display") == "block") {
