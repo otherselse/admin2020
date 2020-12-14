@@ -44,7 +44,7 @@
         <div class="fix f12 bgwh ui-content ovh minH">
             <div class="pl20 pr20">
                 <div class="xzhj mt20 daj">
-                    <a href="javascript:void(0)" onclick="showLayer('函件制作','letterToMake.html',470)"
+                    <a href="javascript:void(0)" onclick="goHan()"
                         class="dib xzhj-button daj">
                         <span class="dib mr10">函件制作</span> <img src="../images/documnts/t8.png" width="20px"
                             height="20px" alt="">
@@ -544,6 +544,78 @@
             </tr>
         </table>
     </div> -->
+	
+	
+	<div class=" dn" id="soso">
+		<div class="lgui-table-box">
+			<div class="lgui-table-header pct100">
+				<table class="tr mt10 fs12 pct100" style="border-spacing:0px 10px;" width="100%">
+					<tr>
+						<td class="">
+							函件类型：
+						</td>
+						<td class="tl" width="80%">
+							<span class="input-selSearch pct80">
+								<input type="text" class="ui-input searchUp pct100" id="correspondence" placeholder="请选择函件类型" autocomplete="off"
+								 readonly="">
+								<div class="search-cont">
+									<a href="javascript:void(0)" class="search-list db ell">北京</a>
+									<a href="javascript:void(0)" class="search-list db ell">上海</a>
+									<a href="javascript:void(0)" class="search-list db ell">保证函(金牌商家对供应商)</a>
+									<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+									<a href="javascript:void(0)" class="search-list db ell">承诺函(供应商)</a>
+									<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+								</div>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="">
+							订单号：
+						</td>
+						<td class="tl ">
+							<input type="text" class="ui-input pct80 orderNumber" placeholder="请输入订单号">
+						</td>
+					</tr>
+					<tr class="1 dn">
+						<td class="tc" colspan="2">
+							<button type="button" class="ui-button" onclick="select()">查询</button>
+						</td>
+					</tr>
+					<tr class="2 dn">
+						<td colspan="2" class="tc">
+							<div style="height: 80px;border:1px solid #D9D9D9" class="pct80 auto tl box-con p10"></div>
+							<span class="radio dib mt5">
+								<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
+								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="">
+							备注：
+						</td>
+						<td class="tl">
+							<textarea class="ui-textarea pct80" rows="1"></textarea>
+						</td>
+					</tr>
+					<tr class="3 dn">
+						<td class="tc" colspan="2">
+							<span class="ui-tip" data-type="normal">
+								「该函件可多个订单合并生成，各订单号以‘,’相连」
+							</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="tc mt10">
+				<button type="button" class="mr10 ui-button w90" onclick="previewLetter()">预览</button>
+				<button type="button" class="mr10 ui-button w90" data-type="clear">制作</button>
+				<button type="button" class="ui-button w90" data-type="clear">取消</button>
+			</div>
+		</div>
+	</div>
+	
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -573,9 +645,6 @@
                     classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
                 }
             });
-			layui.use('layer', function(){
-					  var layer = layui.layer; 
-			});
         })
     </script>
     <script>
@@ -631,6 +700,27 @@
             $(obj).parents(".hideTr").find('.httkxs').toggle();
         }
 
+		function goHan(){
+			layer.open({
+			    type: 1,
+			    title: "函件制作",
+			    shadeClose: true,
+			    shade: 0.4,
+			    area: ['600px','470px'],
+			    content:$('#soso') //iframe的url
+			});
+		}
+		
+		function previewLetter() {
+			layer.open({
+				type: 2,
+				title: '函件预览',
+				shadeClose: true,
+				area: ['1000px', '600px'],
+				offset: ['50px', ''],
+				content:"new_file.html"
+			});
+		}
 		
         function showLayer(name, url, h) {
             layer.open({

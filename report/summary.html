@@ -14,11 +14,7 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
 		<style>
-			.ui-option,
-			.ui-optionNo {
-				background: #fff;
-				min-width: auto;
-			}
+
 		</style>
 	</head>
 
@@ -281,46 +277,140 @@
 														</tr>
 													</tbody>
 												</table>
-												<table class="ui-table  f12  auto tl  mt10 mb10" width="100%">
-													<thead>
-														<tr class="resource-table">
-															<td class="vt bgfa" width="13%"><span class="pt5 dib pl10">状态：</span>
-															</td>
-															<td width="87%">
-																<span class="dac">
-																	<span class="ml10 input-selSearch pct20 dac ">
-																		<input type="text" class="ui-input searchUp pct100" placeholder="请选择状态" autocomplete="off" readonly="">
-																		<div class="search-cont">
-																			<a href="javascript:void(0)" class="search-list db ell ">选择选择1</a>
-																			<a href="javascript:void(0)" class="search-list db ell">选择选择2</a>
-																			<a href="javascript:void(0)" class="search-list db ell">选择选择3</a>
-																			<a href="javascript:void(0)" class="search-list db ell">选择选择选择选择选择选择选择选择4</a>
-																			<a href="javascript:void(0)" class="search-list db ell">选择选择5</a>
-																			<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+
+												<div class=" pt10 bgwh pb10">
+													<div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.11);">
+														<div class="p20 ">
+															<div class="auto mt15">
+																<div class="dac">
+																	<div class="pct10 tr">状态：</div>
+																	<div class="pct80 c67 tl">
+																		<span class="single">
+																			<input type="hidden">
+																			<button type="button" class="ui-option mr10 on">正常</button>
+																			<button type="button" class="ui-option mr10">协商中</button>
+																			<button type="button" class="ui-option mr10">诉讼中</button>
+																			<button type="button" class="ui-option mr10">诉讼执行中</button>
+																			<button type="button" class="ui-option mr10">结案</button>
+																			<button type="button" class="ui-option">无需跟踪</button>
+																		</span>
+																	</div>
+																	<div class="pct10"></div>
+																</div>
+															</div>
+															<div class="auto mt15">
+																<div class="dac">
+																	<div class="pct10 tr">原因：</div>
+																	<span class="che-on">
+																		<span>
+																			<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+																					 name="checkbox"></i>&nbsp;供应能力不足
+																			</label>
+																		</span>
+																		<span><label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+																					 name="checkbox"></i>&nbsp;质量异议
+																			</label></span>
+
+																		<span>
+																			<label class="mr20"><i class="ui-checkbox goldIcon v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+																					 name="checkbox"></i>&nbsp;其他
+																			</label>
+																		</span>
+
+																	</span>
+																</div>
+																<div class="pct10"></div>
+															</div>
+														</div>
+														<div class="auto ">
+															<div class="df">
+																<div class="pct10 tr pt10">备注：</div>
+																<div class="pct80 c67 tl">
+																	<textarea class="ui-textarea pct100" rows="1" placeholder="请输入"></textarea>
+																</div>
+																<div class="pct10"></div>
+															</div>
+														</div>
+														<div class="auto mt15">
+															<div class="df">
+																<div class="pct10 tr pt5"></div>
+																<div class="pct80 c67 tl">
+																	<button type="button" class="ui-button mr10">提交</button>
+																</div>
+																<div class="pct10"></div>
+															</div>
+														</div>
+														<br>
+													</div>
+													<div class="bor-bE6E6 pt10 bgwh"></div>
+													<div class="p20 bgwh">
+														<div class="mt10 auto">
+															<div class="df " style="height: 125px;">
+																<div class="pct10 tr">&emsp;</div>
+																<div class="pct80 c67 dac tl">
+																	<div class="lan-left">
+																		<div class="dib mt20 mb40 lan-icon"></div>
+																	</div>
+																	<div class="ml10 mt5 f1" style="height: 120px;">
+																		<div class="dac mt1">
+																			<spa class="dib mr30">
+																				<span class="dib b f14 mr10 g28">协商中</span>
+																				<span class="dib col-8080">操作时间：2020-09-12 14:32:12</span>
+																			</spa>
+																			<div class="ml40">
+																				<span class="g28">操作人：</span>杨叔叔
+																			</div>
 																		</div>
-																	</span>
-																	<span class="ml5 dib selectSingle">
-																		<a class=" on" href="javscript:void(0)">供应能力不足</a>
-																		<span class="">|</span>
-																		<a class="" href="javscript:void(0)">质量异议</a>
-																		<span class="">|</span>
-																		<a class="" href="javscript:void(0)">其他</a>
-																	</span>
-																</span>
-															</td>
-														</tr>
-														<tr class="resource-table">
-															<td class="vt bgfa" width="13%"><span class="pt5 dib pl10">备注：</span>
-															</td>
-															<td width="87%">
-																<textarea class="ml10 ui-textarea pct90" rows="1"></textarea>
-															</td>
-														</tr>
-													</thead>
-												</table>
-												<div class="tc  mt20 mb20">
-													<button type="button" class="ui-button mr10">提交</button>
+																		<div class="dac mt5">
+																			<span class="dac">
+																				<span class="c28">原因：</span>
+																				<label class="mr30"><i class="ui-checkbox goldIcon on v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+																						 name="checkbox"></i>&nbsp;供应能力不足
+																				</label>
+																			</span>
+																		</div>
+																		<div class="mt10 bgfa n16_mulsel pl10 g28 pt5" style="margin-left: -10px; height: 50px;">
+																			备注：这里是备注信息字段,这里显示备注信息字段
+																		</div>
+																	</div>
+																</div>
+																<div class="pct10"></div>
+															</div>
+															<div class="df " style="height: 125px;">
+																<div class="pct10 tr">&emsp;</div>
+																<div class="pct80 c67 dac tl">
+																	<div class="lan-left">
+																		<div class="dib mt20 mb40 lan-icon"></div>
+																	</div>
+																	<div class="ml10 mt5 f1" style="height: 120px;">
+																		<div class="dac mt1">
+																			<spa class="dib mr30">
+																				<span class="dib b f14 mr10 g28">正常</span>
+																				<span class="dib col-8080">操作时间：2020-09-12 14:32:12</span>
+																			</spa>
+																			<div class="ml40">
+																				<span class="g28">操作人：</span>杨叔叔
+																			</div>
+																		</div>
+																		<div class="dac mt5">
+																			<span class="dac">
+																				<span class="c28">原因：</span>
+																				<label class="mr30"><i class="ui-checkbox goldIcon on v-3 mr2"><input type="checkbox" class="checkbox-opacity"
+																						 name="checkbox"></i>&nbsp;供应能力不足
+																				</label>
+																			</span>
+																		</div>
+																		<div class="mt10 bgfa n16_mulsel pl10 g28 pt5" style="margin-left: -10px; height: 50px;">
+																			备注：这里是备注信息字段,这里显示备注信息字段
+																		</div>
+																	</div>
+																</div>
+																<div class="pct10"></div>
+															</div>
+														</div>
+													</div>
 												</div>
+											
 											</div>
 										</td>
 									</tr>
@@ -414,7 +504,13 @@
 		<script>
 			$(function() {
 				$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
+
 			})
+			$(".che-on").on('click', 'span', function() {
+				$(this).find("i").toggleClass("on");
+			})
+
+
 
 			function showDiv_lrl(obj) {
 				$(obj).parents("tr").next(".hideTr").css("display", "none")
