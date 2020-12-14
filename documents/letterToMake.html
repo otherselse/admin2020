@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
-        mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
-    <link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
-    <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
-    <title>进仓通知单上传-历史记录</title>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
-    <style>
-        html,
+	<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico"
+	    mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<title>进仓通知单上传-历史记录</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			html,
         body {
             height: 100%;
             margin: 0px;
@@ -23,139 +24,195 @@
             background: #fff;
         }
     </style>
-</head>
+	</head>
 
-<body class="showTip">
-    <div>
-        <div class="lgui-table-box">
-            <div class="lgui-table-header pct100">
-                <table class="tr mt10 fs12 pct100" style="border-spacing:0px 10px;" width="100%">
-                    <tr>
-                        <td class="">
-                            函件类型：
-                        </td>
-                        <td class="tl" width="80%">
-                            <span class="input-selSearch pct80">
-                                <input type="text" class="ui-input searchUp pct100" id="correspondence"
-                                    placeholder="请选择函件类型" autocomplete="off" readonly="">
-                                <div class="search-cont">
-                                    <a href="javascript:void(0)" class="search-list db ell">北京</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">上海</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">保证函(金牌商家对供应商)</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">杭州</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">承诺函(供应商)</a>
-                                    <a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
-                                </div>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="">
-                            订单号：
-                        </td>
-                        <td class="tl ">
-                            <input type="text" class="ui-input pct80 orderNumber" placeholder="请输入订单号">
-                        </td>
-                    </tr>
-                    <tr class="1 dn">
-                        <td class="tc" colspan="2">
-                            <button type="button" class="ui-button" onclick="select()">查询</button>
-                        </td>
-                    </tr>
-                    <tr class="2 dn">
-                        <td colspan="2" class="tc">
-                            <div style="height: 80px;border:1px solid #D9D9D9" class="pct80 auto tl box-con p10"></div>
-                            <span class="radio dib mt5">
-                                <label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
-                                <label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio"
-                                            class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="">
-                            备注：
-                        </td>
-                        <td class="tl">
-                            <textarea class="ui-textarea pct80" rows="1"></textarea>
-                        </td>
-                    </tr>
-                    <tr class="3 dn">
-                        <td class="tc" colspan="2">
-                            <span class="ui-tip" data-type="normal">
-                                「该函件可多个订单合并生成，各订单号以‘,’相连」
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="tc mt10">
-                <button type="button" class="mr10 ui-button w90">预览</button>
-                <button type="button" class="mr10 ui-button w90" data-type="clear">制作</button>
-                <button type="button" class="ui-button w90" data-type="clear">取消</button>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/admin.js"></script>
-    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script>
-        $(function () {
-            $(".smlist ").eq(2).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
-        })
-    </script>
-    <script>
-        var start = laydate.render({
-            elem: '#time2',
-            theme: 'lgblue',
-            trigger: 'click',
-            btns: ['clear', 'confirm'],
-            min: 0,
-            done: function (value, date) {
-                getTotal()
-            }
-        })
+	<body class="showTip">
+		<div>
+			<div class="lgui-table-box">
+				<div class="lgui-table-header pct100">
+					<table class="tr mt10 fs12 pct100" style="border-spacing:0px 10px;" width="100%">
+						<tr>
+							<td class="">
+								函件类型：
+							</td>
+							<td class="tl" width="80%">
+								<span class="input-selSearch pct80">
+									<input type="text" class="ui-input searchUp pct100" id="correspondence" placeholder="请选择函件类型" autocomplete="off"
+									 readonly="">
+									<div class="search-cont">
+										<a href="javascript:void(0)" class="search-list db ell">北京</a>
+										<a href="javascript:void(0)" class="search-list db ell">上海</a>
+										<a href="javascript:void(0)" class="search-list db ell">保证函(金牌商家对供应商)</a>
+										<a href="javascript:void(0)" class="search-list db ell">杭州</a>
+										<a href="javascript:void(0)" class="search-list db ell">承诺函(供应商)</a>
+										<a href="javascript:void(0)" class="search-list db ell">选择选择6</a>
+									</div>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="">
+								订单号：
+							</td>
+							<td class="tl ">
+								<input type="text" class="ui-input pct80 orderNumber" placeholder="请输入订单号">
+							</td>
+						</tr>
+						<tr class="1 dn">
+							<td class="tc" colspan="2">
+								<button type="button" class="ui-button" onclick="select()">查询</button>
+							</td>
+						</tr>
+						<tr class="2 dn">
+							<td colspan="2" class="tc">
+								<div style="height: 80px;border:1px solid #D9D9D9" class="pct80 auto tl box-con p10"></div>
+								<span class="radio dib mt5">
+									<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商已签署承诺书</label>
+									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>供应商未签署承诺书</label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="">
+								备注：
+							</td>
+							<td class="tl">
+								<textarea class="ui-textarea pct80" rows="1"></textarea>
+							</td>
+						</tr>
+						<tr class="3 dn">
+							<td class="tc" colspan="2">
+								<span class="ui-tip" data-type="normal">
+									「该函件可多个订单合并生成，各订单号以‘,’相连」
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tc mt10">
+					<button type="button" class="mr10 ui-button w90" onclick="previewLetter()">预览</button>
+					<button type="button" class="mr10 ui-button w90" data-type="clear">制作</button>
+					<button type="button" class="ui-button w90" data-type="clear">取消</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="w_a4 dn">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="90%" style="margin-left:5%;margin-right:5%;">
+				<tbody>
+					<tr>
+						<td>
+							<div style="text-align:center"><span class="btitle">承诺书</span></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>致上海乐钢供应链管理有限公司：</b><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p style="text-indent:2em">贵我两司于<span class="bbr">2020年12月09日</span>签订编号为<span class="bbr">DDC(22)-20002061</span>的采购合同，合同约定贵司向我司采购货物<span
+								 class="bbr">10</span>吨，合同总金额<span class="bbr">30000</span>元，交货截止日期<span class="bbr">2020年12月09日</span>。合同签订后，贵司向我司支付了全部货款，截至本承诺书签订之日，我司交付货物<span
+								 class="bbr">10</span>吨，尚有<span class="bbr">0</span>吨仍未交付，未交付货物金额<span class="bbr">0</span>元（大写：<span class="bbr"></span>）。</p>
+							<p style="text-indent:2em">现我司承诺：在本承诺书签订后<span class="bbr">       </span>个自然日内贵司退还上述全部未交付货物的款项<span class="bbr">       </span>元（大写：<span
+								 class="bbr">            </span>），并支付从合同交货截止日期起至实际退还款项之日止的利息（利息按照每日<span class="bbr">       </span>利率计算，截至本承诺书退还款项之日合计<span
+								 class="bbr">       </span>元）。如我司未按照本承诺书向贵司退还款项及支付相应利息，我司将另行向贵司支付违约金<span class="bbr">       </span>元（大写：<span
+								 class="bbr">            </span>）。</p>
+							<p style="text-indent:2em">另，姓名<span class="bbr">       </span>（身份证号：<span class="bbr">            </span>）愿意以个人现有的和将来取得的全部财产对<span
+								 class="bbr">            </span>公司因上述承诺事项对贵司履行的一切债务承担不可撤销的连带责任保证。</p>
+							<p style="text-indent:2em">特此承诺！</p>
+		
+		
+							<span class="bbr">上海承供商家股份有限</span>公司（公章）<br>
+							法定代表人：<span class="bbr">            </span><br><br>
+		
+							保证人（签字+手印）：<span class="bbr">      </span><br>
+							联系方式：<span class="bbr">            </span><br>
+							联系地址：<span class="bbr">            </span><br> <br>
+		
+							时间：<span class="bbr">    </span>年<span class="bbr">  </span>月<span class="bbr">  </span>日
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		</div>
+		
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+		<script>
+			$(function() {
+				$(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
+			})
+		</script>
+		<script>
+			var start = laydate.render({
+				elem: '#time2',
+				theme: 'lgblue',
+				trigger: 'click',
+				btns: ['clear', 'confirm'],
+				min: 0,
+				done: function(value, date) {
+					getTotal()
+				}
+			})
 
-        $(".search-cont a").click(function () {
-            let val = $(this).html();
-            console.log(val)
-            if (val == "保证函(金牌商家对供应商)" || val == "承诺函(供应商)") {
-                $(".1,.3").removeClass("dn")
-            } else {
-                $(".1,.2,.3").addClass("dn")
-            }
-        });
+			$(".search-cont a").click(function() {
+				let val = $(this).html();
+				console.log(val)
+				if (val == "保证函(金牌商家对供应商)" || val == "承诺函(供应商)") {
+					$(".1,.3").removeClass("dn")
+				} else {
+					$(".1,.2,.3").addClass("dn")
+				}
+			});
 
-        function select() {
-            let orderNumber = $(".orderNumber").val();
-            if (orderNumber) {
-                $(".2").removeClass("dn")
-                $(".2").addClass("dd")
+			function select() {
+				let orderNumber = $(".orderNumber").val();
+				if (orderNumber) {
+					$(".2").removeClass("dn")
+					$(".2").addClass("dd")
 
-                $(".box-con").append(
-                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
-                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
-                    '<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>'
-                    // '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'+
-                    // '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'
+					$(".box-con").append(
+						'<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
+						'<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>' +
+						'<div><i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity " name="checkbox"></i>DDC(22)-19000572 Amy测试供应公司</div>'
+						// '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'+
+						// '<i class="ui-checkbox goldIcon"><input type="checkbox" class="checkbox-opacity" name="checkbox"> DDC(22)-19000572 Amy测试供应公司</i><BR/>'
+					)
 
-                )
+				} else {
+					alert("请输入订单号")
+				}
+			}
 
-            } else {
-                alert("请输入订单号")
-            }
-        }
+			$(".box-con").on('click', '.ui-checkbox', function() {
+				if ($(this).attr("class").indexOf(" on") < 1) {
+					$(this).addClass("on")
+				} else {
+					$(this).removeClass("on")
+				}
+			})
 
-        $(".box-con").on('click', '.ui-checkbox', function () {
-            if ($(this).attr("class").indexOf(" on") < 1) {
-                $(this).addClass("on")
-            } else {
-                $(this).removeClass("on")
-            }
-        })
-    </script>
-</body>
+			function previewLetter() {
+				parent.layer.open({
+					type: 1,
+					title: '函件预览',
+					shadeClose: true,
+					area: ['1000px', '600px'],
+					offset: ['50px', ''],
+					iframe: {
+						src:$(".w_a4")
+					}
+				});
+			}
+		</script>
+	</body>
 
 </html>

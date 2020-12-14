@@ -46,64 +46,62 @@
 						<a href="financialProcesses2.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">账户余额清账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
 						<a href="financialProcesses3.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">销售订单平账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
 						<a href="financialProcesses4.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">销售订单平账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
-						<a href="financialProcesses5.html" class="ui-tab4-list rel mb10 on"><span class="ui-tab4-text">采购订单平账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
-						<a href="financialProcesses6.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">采购订单平账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses5.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">采购订单平账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses6.html" class="ui-tab4-list rel mb10"><span class="ui-tab4-text">采购订单平账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
 						<a href="financialProcesses7.html" class="ui-tab4-list rel mb10"><span class="ui-tab4-text">G2G账户清账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
-						<a href="financialProcesses8.html" class="ui-tab4-list rel mb10 "><span class="ui-tab4-text">G2G账户清账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses8.html" class="ui-tab4-list rel mb10 on"><span class="ui-tab4-text">G2G账户清账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
 					</div>
 					<div class="bor-bottom mt10 mb20"></div>
 					<div class="mb10 f0">
 						<span class="pct25 dib f12">
-							<span class="searchLable">单位名称：</span>
+							<span class="searchLable">&emsp;区域：</span>
 							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
 						<span class="pct25 dib f12">
-							<span class="searchLable">业务类型：</span>
+							<span class="searchLable">金牌商家：</span>
+							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
+						</span>
+						<span class="f12 ml10">
+							<span class="searchLable">类型：</span>
+							<span class="radio">
+								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>清账</label>
+								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>反清账</label>
+							</span>
+						</span>
+					</div>
+					<div class="mt10 f0">
+						<span class="pct25 dib f12">
+							<span class="searchLable">操作人：</span>
 							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
 						</span>
 						<span class="pct25 dib f12">
-							<span class="searchLable">付款差异：</span>
-							<span class="ui-input pct69" data-type="section">
-								<input type="text" class="pct45" placeholder="请输入">-<input type="text" class="pct45 r" placeholder="请输入">
-								</span>
-						</span>
-						<span class="pct25 dib f12">
-							<span class="searchLable">收票差异：</span>
+							<span class="searchLable">清账金额：</span>
 							<span class="ui-input pct69" data-type="section">
 								<input type="text" class="pct45" placeholder="请输入">-<input type="text" class="pct45 r" placeholder="请输入">
 							</span>
 						</span>
-					</div>
-					<div class="mt10">
-						<span class="pct25 dib f12">
-							<span class="searchLable">&emsp;订单号：</span>
-							<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off">
-						</span>
-						<button type="button" class="ui-button ">查询</button>
+						<button type="button" class="ui-button ml10">查询</button>
 					</div>
 					<!-- search end -->
 
 					<div class="lgui-table-box mt30 checkbox">
 						<div class="lgui-table-header">
-							<table class="ui-table tc f12 " width="100%">
+							<table class="ui-table tc f12 table-cw" width="100%">
 								<thead>
 									<tr>
-										<th width="10%"><i class="ui-checkbox
-										goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
-												 name="checkbox" onclick="setAll
-										(this)"></i>全选/订单号</th>
-										<th width="13%" class="tl">
-											<div class="pl20">单位名称</div>
+										<th width="5%">序号</th>
+										<th width="14%">金牌商家编号/金牌商家</th>
+										<th width="5%">区域</th>
+										<th width="10%">G2G总额</th>
+										<th width="10%">G2G钱包</th>
+										<th width="10%">乐财宝</th>
+										<th width="10%">分红余额</th>
+										<th width="10%">清账金额(元)</th>
+										<th width="5%">类型</th>
+										<th width="140px" class="tl">
+											<div class="pl10">操作人/操作时间</div>
 										</th>
-										<th width="6%">业务类型</th>
-										<th width="8%">入库金额(元)</th>
-										<th width="8%">收票金额(元)</th>
-										<th width="8%">收票差异</th>
-										<th width="8%">已付款金额(元)</th>
-										<th width="8%">付款差异</th>
-										<th width="10%">收票差异清账</th>
-										<th width="10%">付款差异清账</th>
-										<th width="11%">备注</th>
+										<th width="10%">备注</th>
 									</tr>
 								</thead>
 							</table>
@@ -112,41 +110,27 @@
 							<table class="ui-table table-cw tc f12 " width="100%">
 								<tbody class="ui-thover">
 									<tr>
-										<td width="10%"><i class="ui-checkbox
-										goldIcon mr5"><input type="checkbox" class="checkbox-opacity"
-												 name="checkbox"></i>65434</td>
-										<td width="13%" class="tl">
-											<div class="pl20 mt5 dib zxx_text_overflow menuhook tiptop" title="乐刚供应链股份有限公司">乐刚供应链股份有限公司</div>
+										<td width="5%">1</td>
+										<td width="14%">9812/李思思</td>
+										<td width="5%">上海</td>
+										<td width="10%">213,121,311</td>
+										<td width="10%">332,4222</td>
+										<td width="10%">2121,21,2</td>
+										<td width="10%">2123,221,12</td>
+										<td width="10%">22,212,121</td>
+										<td width="5%">清账</td>
+										<td width="140" class="tl">
+											<div class="pl10">
+												李思思<br>
+												2020-10-25 12:12:22
+											</div>
 										</td>
-										<td width="6%">业务类型</td>
-										<td width="8%">34,567,937.98</td>
-										<td width="8%">34,567,937.98</td>
-										<td width="8%">34,567,937.98</td>
-										<td width="8%">34,567,937.98</td>
-										<td width="8%">34,567,937.98</td>
-										<td width="10%"><input type="text" class="ui-input pct90 tc" placeholder="" autocomplete="off"></td>
-										<td width="10%"><input type="text" class="ui-input pct90 tc" placeholder="" autocomplete="off"></td>
-										<td width="11%">
-											<a href="javascript:void(0);" class="zxx_text_overflow dib mt5 pl5 g28 tiptop" title="继续输入备注">继续输入备注</a>
+										<td width="10%">
+											<a href="javascript:void(0);" class="tiptop dib zxx_text_overflow g28 pl5" title="备注需输备注注需输备注">备注需输备注注需输备注</a>
 										</td>
 									</tr>
 								</tbody>
 								<tfoot class="bgfa">
-									<tr class="bgwh" height="45">
-										<td colspan="11">
-											<div class="dajs">
-												<span class="pl20">
-													<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
-														 onclick="setAll(this)"></i>全选
-													<span class="pl20">当前已选择(<span class="red">3</span>)条信息</span>
-												</span>
-												<span class="pr20 dac">
-													<button class="ui-button plr10 mr10 tipclick" qtip-dom="dom1" type="button">清账</button>
-													<button class="ui-button plr10" data-type="normal" type="button">反清账</button>
-												</span>
-											</div>
-										</td>
-									</tr>
 									<tr height="45">
 										<td colspan="3">当前页合计：</td>
 										<td>233,223,</td>
@@ -154,9 +138,7 @@
 										<td>233,223,</td>
 										<td>233,223,</td>
 										<td>233,223,</td>
-										<td>233,223,</td>
-										<td>233,223,</td>
-										<td>--</td>
+										<td colspan="3">--</td>
 									</tr>
 									<tr height="45">
 										<td colspan="3">所有页合计：</td>
@@ -165,9 +147,7 @@
 										<td>233,223,</td>
 										<td>233,223,</td>
 										<td>233,223,</td>
-										<td>233,223,</td>
-										<td>233,223,</td>
-										<td>--</td>
+										<td colspan="3">--</td>
 									</tr>
 								</tfoot>
 							</table>
@@ -182,8 +162,8 @@
 		<div class="dom1 dn">
 			<div class="mb10 df">
 				状态：<span class="radio f1">
-						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>尾差</label>
-						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>账龄长</label>
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额小</label>
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>时间就</label>
 					</span>
 			</div>
 			<div class="df mb15">

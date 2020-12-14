@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>账务处理-财务管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	
+	</head>
+	<body class="showTip fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+
+
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					财务管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">账务处理</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			<div class="ui-tab3">
+				<a href="javascript:void(0)" class="ui-tab3-list rel on"><span class="ui-tab3-text">账务处理</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+			<div class="ui-content ovh minH">
+				<div class="p20 f12">
+					<div class="ui-tab4">
+						<a href="financialProcesses1.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">账户余额清账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses2.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">账户余额清账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses3.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">销售订单平账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses4.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">销售订单平账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses5.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">采购订单平账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses6.html" class="ui-tab4-list mb10 rel"><span class="ui-tab4-text">采购订单平账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses7.html" class="ui-tab4-list mb10 rel on"><span class="ui-tab4-text">G2G账户清账处理</span><i class="goldIcon ui-tab4-dot"></i></a>
+						<a href="financialProcesses8.html" class="ui-tab4-list mb10 rel "><span class="ui-tab4-text">G2G账户清账记录</span><i class="goldIcon ui-tab4-dot"></i></a>
+					</div>
+					<div class="bor-bottom mt10 mb20"></div>
+					<div class="mb10 f0 searchLable">
+						<span class="pct25 dib f12">金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12">区域：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+						<span class="pct25 dib f12">
+							G2G总额：<span class="ui-input pct69" data-type="section">
+								<input type="text" class="pct45" placeholder="请输入">-<input type="text" class="pct45 r" placeholder="请输入">
+							</span>
+						</span>
+						<button type="button" class="ui-button ">查询</button>
+					</div>
+					
+					<!-- search end -->
+					
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc table-cw f12 " width="100%">
+								<thead>
+									<tr>
+										<th width="10%">
+											<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setAll(this)"></i>全选/序号
+										</th>
+										<th width="14%">金牌商家编号/金牌商家</th>
+										<th width="5%">区域</th>
+										<th width="10%">G2G总额</th>
+										<th width="12%">
+											<i class="ui-checkbox  goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setG2GAll(this)"></i>G2G钱包
+										</th>
+										<th width="12%">
+											<i class="ui-checkbox  goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setLcbAll(this)"></i>乐财宝
+										</th>
+										<th width="12%">
+											<i class="ui-checkbox  goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox" onclick="setFhylAll(this)"></i>分红余额
+										</th>
+										<th width="10%">清账金额(元)</th>
+										<th width="15%">备注</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc table-cw f12 " width="100%">
+								<tbody class="ui-thover cheCont">
+									<tr>
+										<td width="10%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">1</span>
+										</td>
+										<td width="14%">9527/李思思</td>
+										<td width="5%">上海</td>
+										<td width="10%">9182,222,2902</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="10%">
+											<input type="text" class="ui-input tc pct90" placeholder="请输入" autocomplete="off">
+										</td>
+										<td width="15%">
+											<a href="javascript:void(0);" class="tiptop dib zxx_text_overflow g28 pl5" title="备注需输备注注需输备注">备注需输备注注需输备注</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="10%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">1</span>
+										</td>
+										<td width="14%">9527/李思思</td>
+										<td width="5%">上海</td>
+										<td width="10%">9182,222,2902</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="10%">
+											<input type="text" class="ui-input tc pct90" placeholder="请输入" autocomplete="off">
+										</td>
+										<td width="15%">
+											<a href="javascript:void(0);" class="tiptop dib zxx_text_overflow g28 pl5" title="备注需输备注注需输备注">备注需输备注注需输备注</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="10%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">1</span>
+										</td>
+										<td width="14%">9527/李思思</td>
+										<td width="5%">上海</td>
+										<td width="10%">9182,222,2902</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="10%">
+											<input type="text" class="ui-input tc pct90" placeholder="请输入" autocomplete="off">
+										</td>
+										<td width="15%">
+											<a href="javascript:void(0);" class="tiptop dib zxx_text_overflow g28 pl5" title="备注需输备注注需输备注">备注需输备注注需输备注</a>
+										</td>
+									</tr>
+									<tr>
+										<td width="10%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">1</span>
+										</td>
+										<td width="14%">9527/李思思</td>
+										<td width="5%">上海</td>
+										<td width="10%">9182,222,2902</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="12%">
+											<i class="ui-checkbox goldIcon vm"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>
+											<span class="ml3 dib">9182,222,2902</span>
+										</td>
+										<td width="10%">
+											<input type="text" class="ui-input tc pct90" placeholder="请输入" autocomplete="off">
+										</td>
+										<td width="15%">
+											<a href="javascript:void(0);" class="tiptop dib zxx_text_overflow g28 pl5" title="备注需输备注注需输备注">备注需输备注注需输备注</a>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot class="bgfa">
+									<tr class="bgwh" height="45">
+										<td colspan="9">
+											<div class="dajs">
+												<span class="pl20">
+													<i class="ui-checkbox goldIcon mr5"><input type="checkbox" class="checkbox-opacity" name="checkbox"
+														 onclick="setAll(this)"></i>全选
+													<span class="pl20">当前已选择(<span class="red cheSum">0</span>)条信息</span>
+												</span>
+												<span class="pr20 dac">
+													<button class="ui-button plr10 mr10 tipclick" qtip-dom="dom1" type="button">清账</button>
+													<button class="ui-button plr10" data-type="normal" type="button">反清账</button>
+												</span>
+											</div>
+										</td>
+									</tr>
+									<tr height="45">
+										<td colspan="3">当前页合计：</td>
+										<td>233,223,232,32</td>
+										<td>232,131,33,132</td>
+										<td>233,223,232,32</td>
+										<td>233,223,232,32</td>
+										<td>233,223,232,32</td>
+										<td>--</td>
+									</tr>
+									<tr height="45">
+										<td colspan="3">所有页合计：</td>
+										<td>233,223,232,32</td>
+										<td>232,131,33,132</td>
+										<td>233,223,232,32</td>
+										<td>233,223,232,32</td>
+										<td>233,223,232,32</td>
+										<td>--</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div><!-- table end -->
+
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+
+
+		<div class="dom1 dn">
+			<div class="mb10 df">
+				状态：<span class="radio f1">
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额小</label>
+						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>时间久</label>
+					</span>
+			</div>
+			<div class="df mb15">
+				原因：<textarea class="ui-textarea f1" rows="3"></textarea>
+			</div>
+			<div class="mb10">
+				&emsp;&emsp;&emsp;<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
+				<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
+			</div>
+		</div>
+<!-- 
+		<div class="lgui-table-box mt30 checkbox">
+			<div class="lgui-table-header">
+				<table class="ui-table tc f12 table-cw" width="100%">
+					<thead>
+						
+					</thead>
+				</table>
+			</div>
+			<div class="lgui-table-body mt-1">
+				<table class="ui-table tc f12 table-cw" width="100%">
+					<tbody class="ui-thover">
+						
+					</tbody>
+					<tfoot class="bgfa">
+						
+					</tfoot>
+				</table>
+			</div>
+		</div> -->
+		<!-- table end -->
+
+
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(7).addClass("on"); // 静态页面定位使用，开发使用title等定位
+				
+				//tipclick 点击出现数据段
+				$('.tipclick').qtip({
+				    show: { event: 'click' },
+				    hide: 'unfocus',
+				    content: {
+				        text: function (event, api) {
+				            return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
+				        }
+				    },
+				    position: {
+				        my: 'top right',
+				        at: 'bottom center'
+				    },
+				    // position: {
+				    //  viewport: $(window)
+				    // },
+				    style: {
+				        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+				    }
+				});
+				
+				//checkbox 多选
+				$(".checkbox").on("click", ".ui-checkbox", function () {
+					var index = $(this).parents("td").index();
+					var thObj = $("th").eq(index).find(".checkbox-opacity").get(0);
+					if(index == 0){
+						var chak =  $(this).find(".checkbox-opacity").prop("checked");
+						if(chak){
+							$(this).parents("tr").find(".ui-checkbox").addClass("on");
+							$(this).parents("tr").find(".checkbox-opacity").prop("checked",true);
+						}else{
+							$(this).parents("tr").find(".ui-checkbox").removeClass("on");
+							$(this).parents("tr").find(".checkbox-opacity").prop("checked",false);
+						}
+						if(setRow($(this))){
+							$("th").eq(index).find("i").addClass("on");
+							$("th").eq(index).find(".checkbox-opacity").prop("checked",true);
+							setAll(thObj)
+						}
+					}else{
+						lineSetOne($(this));
+						if(setRow($(this))){
+							$("th").eq(index).find("i").addClass("on");
+							$("th").eq(index).find(".checkbox-opacity").prop("checked",true);
+							if(index==4){
+								setG2GAll(thObj);
+							}else if(index == 5){
+								setLcbAll(thObj);
+							}else if(index == 6){
+								setFhylAll(thObj);
+							}
+						}else{
+							$("th").eq(index).find("i").removeClass("on");
+							$("th").eq(index).find(".checkbox-opacity").prop("checked",false);
+						}
+					}
+					selectLine();
+				})
+			})
+			
+			// 当点tobdy里面的多选框 判断表头是否要选中
+			function setRow(obj){
+				var i = 0;
+				var index = $(obj).parents("td").index();
+				var leng = $(".cheCont").find("tr").length;
+				$(".cheCont").find("tr").each(function(){
+					if($(this).find("td").eq(index).find(".checkbox-opacity").prop("checked")){
+						i++;
+					}
+				});
+				return i == leng?true:false;
+			}
+			
+			//点击表头多选框 选中这一列多选框
+			function setOneCh(i,obj){
+				var myobj ="";
+				$(".cheCont").find("tr").each(function(){
+					myobj = $(this).find("td").eq(i).find(".ui-checkbox").not(":disabled").not($(obj).parent('.ui-checkbox'));
+					if (obj.checked) {
+						myobj.addClass("on");
+						myobj.find(":checkbox").prop("checked", true);
+					} else {
+						myobj.removeClass("on");
+						myobj.find(":checkbox").prop("checked", false);
+					}
+				});
+			}
+			
+			//计算选中多少行并显示数值
+			function selectLine(){
+				var i = 0;
+				$(".cheCont").find("tr").each(function(){
+					if($(this).find("td").eq(0).find(".checkbox-opacity").prop("checked")){
+						i++
+					}
+				});
+				$(".cheSum").text(i);
+			}
+				
+			// 第一列多选框是否要选中
+			function lineSetOne(obj,staus){
+				var G2gChe = "";
+				var LcbChe ="";
+				var FhylChe = "";
+				$(".cheCont").find("tr").each(function(){
+					G2gChe = $(this).find("td").eq(4).find(".checkbox-opacity").prop("checked");
+					LcbChe = $(this).find("td").eq(5).find(".checkbox-opacity").prop("checked");
+					FhylChe = $(this).find("td").eq(6).find(".checkbox-opacity").prop("checked");
+					
+					// 当这一行除了第一列都选中时 选中第一列多选框样式
+					if(G2gChe && LcbChe && FhylChe){
+						/* $(this).find("td").eq(0).find("i").addClass("on"); */
+						if(staus == 1){
+							G2gChe = $(this).find("th").eq(4).find(".checkbox-opacity").prop("checked");
+							LcbChe = $(this).find("th").eq(5).find(".checkbox-opacity").prop("checked");
+							FhylChe = $(this).find("th").eq(6).find(".checkbox-opacity").prop("checked");
+							if(G2gChe && LcbChe && FhylChe){
+								setAll(obj);
+							}
+						}else{
+							$(this).find("td").eq(0).find("i").addClass("on");
+							$(this).find("td").eq(0).find("i").attr("data-type","");
+							$(this).find("td").eq(0).find("i").prop("checked",true);
+						}
+					}else if(G2gChe || LcbChe || FhylChe){
+						$(this).find("td").eq(0).find("i").addClass("on");
+						$(this).find("td").eq(0).find("i").attr("data-type","all");
+						$(this).find("td").eq(0).find(".checkbox-opacity").prop("checked",true);
+						if(staus == 1){
+							$("tr").find("th").eq(0).find("i").addClass("on");
+							$("tr").find("th").eq(0).find(".checkbox-opacity").prop("checked",true);
+							$("tfoot").find("i").addClass("on");
+							$("tfoot").find(".checkbox-opacity").prop("checked",true);
+						}
+						
+					}else{
+						$(this).find("td").eq(0).find("i").removeClass("on");
+						$(this).find("td").eq(0).find("i").attr("data-type","");
+						$(this).find("td").eq(0).find(".checkbox-opacity").prop("checked",false);
+					
+						$("tr").find("th").eq(0).find("i").removeClass("on");
+						$("tr").find("th").eq(0).find(".checkbox-opacity").prop("checked",false);
+						$("tfoot").find("i").removeClass("on");
+						$("tfoot").find(".checkbox-opacity").prop("checked",false);
+						
+					}
+				});
+			}
+			
+			// 全选
+			function setAll(obj){
+				var myobj = $(obj).parents(".checkbox").find(".ui-checkbox").not(":disabled").not($(obj).parent('.ui-checkbox'));
+				if (obj.checked) {
+					myobj.addClass("on");
+					myobj.find(":checkbox").prop("checked", true);
+				} else {
+					myobj.removeClass("on");
+					myobj.find(":checkbox").prop("checked", false);
+				}
+				$("tr").find("td").eq(0).find("i").attr("data-type","");
+			}
+			
+			// 表头-G2G钱包多选框点击
+			function setG2GAll(obj){
+				var index = $(obj).parents("th").index();
+				setOneCh(index,obj);
+				lineSetOne(obj,1);
+			}
+			
+			// 表头-乐财宝多选框点击
+			function setLcbAll(obj){
+				var index = $(obj).parents("th").index();
+				setOneCh(index,obj);
+				lineSetOne(obj,1);
+			}
+			
+			// 表头-分红余额多选框点击
+			function setFhylAll(obj){
+				var index = $(obj).parents("th").index();
+				setOneCh(index,obj);
+				lineSetOne(obj,1);
+			}
+		</script>
+	</body>
+</html>
