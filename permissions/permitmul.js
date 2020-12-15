@@ -195,7 +195,7 @@
 
                     // 应该采用setMulPanelSec 方法，setMulPanelSec2只是用于展示静态结果。
                     //dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,'+type+',event)"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
-                    dom='<div class="setMulPanelMenu " onclick="setMulPanelSec2(this,'+type+',event,\''+approl+'\')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
+                    dom='<div class="setMulPanelMenu " onclick="setMulPanelSec(this,'+type+',event,\''+approl+'\')"  id='+myarr[i].id+' childnum="'+myarr[i].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+hasArrow+'"></i>'+myarr[i].title+'</div>'
                 }
                 mystr+=dom
                
