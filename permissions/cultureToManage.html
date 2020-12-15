@@ -127,7 +127,8 @@
                 </table>
 
                  <div class="f14 mt20 mb10"><span class="searchLable">已选权限</span><span class="ui-tip   ml10" data-type="normal">请选择审批节点</span></div>
-                <table class="ui-table tc f12 chooseAppl checkbox adm_even" width="100%">
+                 <div class="chooseAppl"></div>
+                <!-- <table class="ui-table tc f12 chooseAppl checkbox adm_even" width="100%">
                     <thead>
                         <tr>
                             <th width="10%">审批权限</th>
@@ -143,8 +144,8 @@
                     <tbody>
                         
                     </tbody>
-                </table>
-
+                </table> -->
+                <p>&nbsp;</p><p>&nbsp;</p>
                 <div class="tc adm_fixbot">
                     <button class="ui-button w120" data-type="big" type="button">提交</button>
                 </div>
@@ -157,7 +158,7 @@
         </div>
     </div>
 
-
+<!-- 
      <div class="qCont  qtip-lg" style="display: none;width: 350px;" onclick="stopPro(event)" >
         <div class="qContent">
             <div class="f0 checkbox lh22 admcityshow admContXq">
@@ -196,7 +197,7 @@
                 <button type="button" class="ui-button " data-type="clears" id="hideTip">取消</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
@@ -282,54 +283,9 @@
         function setApproval(obj){
             myMenuList.setCloseAll()
             var cont='adm_mAppCont';
-            myMenuList.setMulThValueNewOne(obj,3,cont,cul_Data2,"approl");//type=1,显示到文化流程处
+            myMenuList.setMulThValueNewOne(obj,3,cont,cul_Data2);//type=1,显示到文化流程处
         }
 
-        function setTable(obj,pid,chain,bid){ //文化权限被配置
-          // var str='<a href="javascript:void(0)" onclick="delCulMenu(this)" class="n16_menudel adm_optMenu" id="sort'+$(obj).attr("id")+'" pid="'+pid+'" chain="'+chain+'">'+$(obj).text()+'<i class="icon-menudel admIcon"></i></a>';
-          var str='<tr class="ui-thover adm_optMenu" id="sort'+$(obj).attr("id")+'" bid="'+bid+'" pid="'+pid+'" chain="'+chain+'">'+
-                  '  <td><a href="javascript:void(0)" class="g28" onclick="delCulMenuTab(this)">'+$(obj).text()+'<i class="p_closeIcon vm ml5"></i></a></td>'+
-                  '  <td colspan="7" style="padding: 0"><table class="ui-table noline checkbox" width="100%" style="border:0">'+
-                                '    <tbody><tr>'+
-                                '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第1节点</label></div></td>'+
-                                '        <td width="10%">复核</td>'+
-                                '        <td width="10%">1</td>'+
-                                '        <td width="10%">有管理员配置</td>'+
-                                '        <td width="10%">普通操作</td>'+
-                                '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
-                                '        <td width="10%"><a href="javscript:void(0)"  onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>'+
-                                '    </tr>'+
-                                '    <tr>'+
-                                '       <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第2节点</label></div></td>'+
-                                '        <td width="10%">复核</td>'+
-                                '        <td width="10%">1</td>'+
-                                '        <td width="10%">有管理员配置</td>'+
-                                '        <td width="10%">普通操作</td>'+
-                                '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
-                                '        <td width="10%"><a href="javscript:void(0)"  onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>'+
-                                '    </tr>'+
-                                '    <tr>'+
-                                '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 disabled"><input type="checkbox" class="checkbox-opacity" name="checkbox" disabled=""></i>第3节点</label></div></td>'+
-                                '        <td width="10%">复核</td>'+
-                                '        <td width="10%">1</td>'+
-                                '        <td width="10%">有管理员配置</td>'+
-                                '        <td width="10%">普通操作</td>'+
-                                '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
-                                '        <td width="10%"><a href="javscript:void(0)"  onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>'+
-                                '    </tr>'+
-                                '     <tr>'+
-                                '        <td width="10%" class="tl"><div class="pl10"><label><i class="ui-checkbox goldIcon v-3 mr5 "><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>第4节点</label></div></td>'+
-                                '        <td width="10%">复核</td>'+
-                                '        <td width="10%">1</td>'+
-                                '        <td width="10%">有管理员配置</td>'+
-                                '        <td width="10%">普通操作</td>'+
-                                '        <td width="15%"><a href="javascript:void(0)" class="ui-switch goldIcon vm manage-switch"></a></td>'+
-                                '        <td width="10%"><a href="javscript:void(0)"  onclick="getArea(this,event,1)">区域权限</a><span class="ml5 mr5 dib gd9">|</span><a href="javscript:void(0)" onclick="getArea(this,event,2)">公司权限</a></td>'+
-                                '    </tr>'+
-                                '</tbody></table></td></tr>';
-          return str;
-        }
-   
        
       //每次查询显示当前菜单的下级菜单
       function setMulPanelSec(obj,type,e,approl){
