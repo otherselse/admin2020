@@ -9,7 +9,9 @@ $(function(){
 		getHeader();
 	});
 
-
+	if($(".test").length>=2){
+		$(".test:gt(0)").remove()
+	}
 	// //切换菜单栏，只有在1100以前显示
 	$(".setLeftBar").on("click",function(){
 		if($(this).hasClass("on")){
@@ -28,6 +30,7 @@ $(function(){
 			}
 		}
 	})
+
 
 
 
