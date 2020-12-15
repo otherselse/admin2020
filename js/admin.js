@@ -36,6 +36,7 @@ $(function(){
 
 
 
+
 	//不可复制的功能
 	//$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
@@ -314,11 +315,11 @@ $(function(){
 
 // 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
-	if($(window).width()<1440&&$(".setLeftBar").hasClass("on")){
+	if($(window).width()<1420&&$(".setLeftBar").hasClass("on")){
 		$("body").addClass("bLeftBar");
 		$(".setLeftBar").removeClass("on");
 		$(".leftBar").css("left","-200px")	
-	}else if($(window).width()>1440&&$(".setLeftBar").hasClass("on")){
+	}else if($(window).width()>1420&&$(".setLeftBar").hasClass("on")){
 		$("body").removeClass("bLeftBar");
 		$(".setLeftBar").addClass("on");
 		$(".leftBar").css("left","0")
