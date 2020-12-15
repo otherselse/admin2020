@@ -98,47 +98,7 @@
 		</div>
 		
 		
-		<div class="w_a4 dn">
-			<table align="center" border="0" cellpadding="0" cellspacing="0" width="90%" style="margin-left:5%;margin-right:5%;">
-				<tbody>
-					<tr>
-						<td>
-							<div style="text-align:center"><span class="btitle">承诺书</span></div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<b>致上海乐钢供应链管理有限公司：</b><br>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p style="text-indent:2em">贵我两司于<span class="bbr">2020年12月09日</span>签订编号为<span class="bbr">DDC(22)-20002061</span>的采购合同，合同约定贵司向我司采购货物<span
-								 class="bbr">10</span>吨，合同总金额<span class="bbr">30000</span>元，交货截止日期<span class="bbr">2020年12月09日</span>。合同签订后，贵司向我司支付了全部货款，截至本承诺书签订之日，我司交付货物<span
-								 class="bbr">10</span>吨，尚有<span class="bbr">0</span>吨仍未交付，未交付货物金额<span class="bbr">0</span>元（大写：<span class="bbr"></span>）。</p>
-							<p style="text-indent:2em">现我司承诺：在本承诺书签订后<span class="bbr">       </span>个自然日内贵司退还上述全部未交付货物的款项<span class="bbr">       </span>元（大写：<span
-								 class="bbr">            </span>），并支付从合同交货截止日期起至实际退还款项之日止的利息（利息按照每日<span class="bbr">       </span>利率计算，截至本承诺书退还款项之日合计<span
-								 class="bbr">       </span>元）。如我司未按照本承诺书向贵司退还款项及支付相应利息，我司将另行向贵司支付违约金<span class="bbr">       </span>元（大写：<span
-								 class="bbr">            </span>）。</p>
-							<p style="text-indent:2em">另，姓名<span class="bbr">       </span>（身份证号：<span class="bbr">            </span>）愿意以个人现有的和将来取得的全部财产对<span
-								 class="bbr">            </span>公司因上述承诺事项对贵司履行的一切债务承担不可撤销的连带责任保证。</p>
-							<p style="text-indent:2em">特此承诺！</p>
 		
-		
-							<span class="bbr">上海承供商家股份有限</span>公司（公章）<br>
-							法定代表人：<span class="bbr">            </span><br><br>
-		
-							保证人（签字+手印）：<span class="bbr">      </span><br>
-							联系方式：<span class="bbr">            </span><br>
-							联系地址：<span class="bbr">            </span><br> <br>
-		
-							时间：<span class="bbr">    </span>年<span class="bbr">  </span>月<span class="bbr">  </span>日
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		
-		</div>
 		
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -201,15 +161,13 @@
 			})
 
 			function previewLetter() {
-				parent.layer.open({
-					type: 1,
+				layer.open({
+					type: 2,
 					title: '函件预览',
 					shadeClose: true,
 					area: ['1000px', '600px'],
 					offset: ['50px', ''],
-					iframe: {
-						src:$(".w_a4")
-					}
+					content:"new_file.html"
 				});
 			}
 		</script>
