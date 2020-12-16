@@ -40,7 +40,7 @@
         <div class="fix f12 bgwh p20 ui-content ovh minH">
             
             <div class="xzhj daj">
-                <a href="javascript:void(0)" onclick="showLayer('信息录入','informationInput.html',600,300)"
+                <a href="javascript:void(0)" onclick="showLayer()"
                     class="dib xzhj-button daj">
                     <span class="dib mr10">信息录入</span> <img src="../images/documnts/t8.png" width="20px"
                         height="20px" alt="">
@@ -95,7 +95,7 @@
                                 <td width="20%" class="tablebtdb redm">
                                     <a href="javascript:change('0175','0124','1');">停用</a>
                                     <span class="dib pl2 pr2">|</span>
-                                    <a href="javascript:void(0);">编辑接收人</a>
+                                    <a href="javascript:void(0);" onclick="selUser()">编辑接收人</a>
                                 </td>
                             </tr>
                             <!-- 点击执行显示 -->
@@ -138,6 +138,39 @@
             <div class="mb20"></div>
         </div>
     </div>
+	
+	<div class="dn addSms mt20">
+		<div class="f12 pct100">
+			<div class="mb10 dac">
+				<span class="dib pct30 tr">短信类型：</span>
+				<span class="dib pct70">
+					<span class="single">
+						<input type="hidden">
+						<button type="button" class="ui-option mr10 on">库存定金</button>
+						<button type="button" class="ui-option mr10 ">入库定价</button>
+						<button type="button" class="ui-option ">备货定价</button>
+					</span>
+				</span>
+			</div>
+			<div class="mb10 df">
+				<span class="dib tr pct30 mt5">短信接收人：</span>
+				<span class="dib pct70">
+					<input type="text" class="ui-input pct70 " onclick="selUser()" placeholder="请输入" autocomplete="off">
+				</span>
+			</div>
+			<div class="df">
+				<span class="dib tr pct30">短信内容：</span>
+				<span class="pct70 dib">
+					<textarea class="ui-textarea pct70" rows="2"></textarea>
+				</span>
+			</div>
+	
+			<div class="tc mt20">
+				<button type="button" class="ui-button mr10 w90">提交</button>
+				<button type="button" class="ui-button w90" data-type="clear">关闭</button>
+			</div>
+		</div>
+	</div>
 
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
@@ -170,16 +203,27 @@
             });
         })
         
-        function showLayer(name, url, w, h) {
-            layer.open({
-                type: 2,
-                title: name,
-                shadeClose: true,
-                shade: 0.4,
-                area: [w + 'px', h + 'px'],
-                content: url //iframe的url
-            });
-        }
+      function showLayer() {
+          layer.open({
+              type: 1,
+              title: "信息录入",
+              shadeClose: true,
+              shade: 0.4,
+              area: ['600px','300px'],
+              content: $(".addSms") //iframe的url
+          });
+      }
+	  
+	  function selUser(){
+	  			layer.open({
+	  				type: 2,
+	  				title: '选择金牌商家',
+	  				shadeClose: true,
+	  				shade: 0.4,
+	  				area: ['990px', '560px'],
+	  				content: '../public/seluser.html' //需要传一个paream
+	  			});
+	  		}
     </script>
     <script>
 
