@@ -9,25 +9,29 @@ $(function(){
 		getHeader();
 	});
 
+	// //切换菜单栏，只有在1100以内显示
+		/*$("body").on("click",".setLeftBar",function(e){
+			//console.log("111")
+			if($(this).hasClass("on")){
+				$(this).removeClass("on");
+				$("body").addClass("bLeftBar");
+				$(".leftBar").css("left","-200px");
+				if($("body").hasClass("fixtab")){  //点击右侧切换按钮，固定滚动时，重新设置滚动头部的宽度
+					$(".lgui-table-header").width($(window).width()-100);
+				}
+			}else{
+				$(this).addClass("on");
+				$("body").removeClass("bLeftBar");			
+				$(".leftBar").css("left","0");
+				if($("body").hasClass("fixtab")){
+					$(".lgui-table-header").width($(window).width()-300);
+				}
+			}
+		})*/
 
-	// //切换菜单栏，只有在1100以前显示
-	$(".setLeftBar").on("click",function(){
-		if($(this).hasClass("on")){
-			$(this).removeClass("on");
-			$("body").addClass("bLeftBar");
-			$(".leftBar").css("left","-200px");
-			if($("body").hasClass("fixtab")){  //点击右侧切换按钮，固定滚动时，重新设置滚动头部的宽度
-				$(".lgui-table-header").width($(window).width()-100);
-			}
-		}else{
-			$(this).addClass("on");
-			$("body").removeClass("bLeftBar");			
-			$(".leftBar").css("left","0");
-			if($("body").hasClass("fixtab")){
-				$(".lgui-table-header").width($(window).width()-300);
-			}
-		}
-	})
+
+	
+
 
 
 
@@ -311,11 +315,11 @@ $(function(){
 
 // 当屏幕小于1440的时候，左侧的菜单自动隐藏。但小于1100，手机显示的时候就不在显示右侧的显示按钮
 function getWidth(){
-	if($(window).width()<1440&&$(".setLeftBar").hasClass("on")){
+	if($(window).width()<1420&&$(".setLeftBar").hasClass("on")){
 		$("body").addClass("bLeftBar");
 		$(".setLeftBar").removeClass("on");
 		$(".leftBar").css("left","-200px")	
-	}else if($(window).width()>1440&&$(".setLeftBar").hasClass("on")){
+	}else if($(window).width()>1420&&$(".setLeftBar").hasClass("on")){
 		$("body").removeClass("bLeftBar");
 		$(".setLeftBar").addClass("on");
 		$(".leftBar").css("left","0")
@@ -694,3 +698,24 @@ function stopPro(e){
         //  document.write(newchar);
         return newchar;
     }
+
+
+function setLeftBarFunc(obj){
+	if($(obj).hasClass("on")){
+				$(obj).removeClass("on");
+				$("body").addClass("bLeftBar");
+				$(".leftBar").css("left","-200px");
+				if($("body").hasClass("fixtab")){  //点击右侧切换按钮，固定滚动时，重新设置滚动头部的宽度
+					$(".lgui-table-header").width($(window).width()-100);
+				}
+			}else{
+				$(obj).addClass("on");
+				$("body").removeClass("bLeftBar");			
+				$(".leftBar").css("left","0");
+				if($("body").hasClass("fixtab")){
+					$(".lgui-table-header").width($(window).width()-300);
+				}
+			}
+}
+
+
