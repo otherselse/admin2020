@@ -130,7 +130,8 @@
                         <tr>
                             <td width="8%" class="tl">
                                 <div class="pl10">
-                                    <a href="../public/goldRegInfo.html" target="_block">袁大海</a><br>合伙式
+                                    <a href="../public/goldRegInfo.html" target="_block">袁大海</a><br>
+									 <a href="javascript:void(0)" onclick="changeDetail()">合伙式</a>
                                 </div>
                             </td>
                             <td width="4%">上海</td>
@@ -226,6 +227,17 @@
                 },
             });
         })
+		
+		function changeDetail(){
+			layer.open({
+			    type: 2,
+			    title: '加盟方式转换记录',
+			    shadeClose: true,
+			    shade: 0.4,
+			    area: ['960px', '500px'],
+			    content: 'changeJoinList.html' //iframe的url
+			});
+		}
     </script>
 </body>
 
