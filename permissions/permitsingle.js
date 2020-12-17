@@ -5,24 +5,37 @@
                 for(var i=0;i<cul_Data.length;i++){
                 if(id==cul_Data[i].id){
                     var str="",menu='';
-                    for(var j=0;j<cul_Data[i].menuList.length;j++){
-                        if(cul_Data[i].menuList[j].childnum==0){
-                            var myclass=myMenuListSingle.searchIDhasOn(cul_Data[i].menuList[j].id,showobj);
-                            var checked=(myclass=="on")?"checked":""
-                             menu='<span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')" id="'+cul_Data[i].menuList[j].id+'" childnum="0" data-title="'+cul_Data[i].menuList[j].title+'" '+checked+'></i>'+cul_Data[i].menuList[j].title+'</label></span>';
-                        }else{
-                            var myclass=myMenuListSingle.searchMulhasOn(cul_Data[i].menuList[j].id,showobj);
+                    if(cul_Data[i].menuList.length==0){
+                         var myclass=myMenuListSingle.searchIDhasOn(cul_Data[i].id,showobj);
+                         var checked=(myclass=="on")?"checked":""
+                        str='<label class="f12"><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio" onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')" id="'+cul_Data[i].id+'" childnum="0" data-title="'+cul_Data[i].title+'" '+checked+'></i>'+cul_Data[i].title+'</label>'
+                    }else{
 
-                            menu='<span class="dib pct20 f12 rel adm_firstMulMenu" ><span class="man_list"  onclick="setMulPanel(this,event)" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                        for(var j=0;j<cul_Data[i].menuList.length;j++){
+                            if(cul_Data[i].menuList[j].childnum==0){
+                                var myclass=myMenuListSingle.searchIDhasOn(cul_Data[i].menuList[j].id,showobj);
+                                var checked=(myclass=="on")?"checked":""
+                                 menu='<span class="dib pct20 f12"><label class=""><i class="ui-radio goldIcon v-3 mr2 '+myclass+'"><input type="radio" class="radio-opacity" name="radio"  onclick="myMenuListSingle.setMulThValueNew(this,event,\''+showobj+'\','+tableType+')" id="'+cul_Data[i].menuList[j].id+'" childnum="0" data-title="'+cul_Data[i].menuList[j].title+'" '+checked+'></i>'+cul_Data[i].menuList[j].title+'</label></span>';
+                            }else{
+                                var myclass=myMenuListSingle.searchMulhasOn(cul_Data[i].menuList[j].id,showobj);
+
+                                menu='<span class="dib pct20 f12 rel adm_firstMulMenu" ><span class="man_list"  onclick="setMulPanel(this,event)" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                            }
+                            str+=menu
+                           
                         }
-                        str+=menu
-                       
+                        
+
                     }
-                 break;
+
+                    break;                  
+
+
                 }
              }
              contobj.html(str);
              $(obj).addClass("on").siblings().removeClass("on");
+
            }
            ,setMulThValueNew:function(obj,e,showobj,tableType){   //点击最末级菜单选择       
                 stopPro(e);
