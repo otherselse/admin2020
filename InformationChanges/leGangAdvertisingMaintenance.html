@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
     <title>乐刚广告维护-信息管理-乐刚智能云系统</title>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
     <style>
     </style>
 </head>
@@ -93,100 +94,174 @@
                 </span>
             </div>
 
-            <div class="lgui-table-box mt30">
-                <div class="lgui-table-body">
-                    <table class="ui-table checkbox tc f12 table-cw" width="100%">
-                        <thead>
-                            <tr class="n17-Ttitle">
-                                <th width="5%">轮播顺序</th>
-                                <th width="5%">是否显示</th>
-                                <!-- <th width="10%">广告投放</th> -->
-                                <th width="15%">公司名称</th>
-                                <th width="15%">投放期限</th>
-                                <th width="10%">类型</th>
-                                <th width="15%">操作人/操作时间</th>
-                                <th width="15%">操作</th>
-                            </tr>
-                        </thead>
+            <div class="sort-list-group mt30">
+                <table class="ui-table tc f12" width="100%">
+                     <thead>
+                        <tr class="n17-Ttitle">
+                            <th width="5%">是否显示</th>
+                            <th width="15%">公司名称</th>
+                            <th width="15%">投放期限</th>
+                            <th width="10%">类型</th>
+                            <th width="20%">操作人/操作时间</th>
+                            <th width="20%">操作</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div id="swapDemo" class="mt-1" >
+                    <div class="sort-group-list" id="s001">
+                        <table class="ui-table tc f12" width="100%">
                         <tbody class="ui-thover">
-                            <tr class="n17-Ttd ">
-                                <td class="isedit">
-                                    <span class="showText" id="39e7d5c6fe6d493aaef5759f89f2ca5c">1</span>
-                                    <span class="showInput tc dn">
-                                        <input type="text" name="adverQuery.sorts" value="1" id="sortsId"
-                                            class="cent ui-input pct90">
-                                        <a href="javascript:void(0)" class="mr5 dib cancelPx"
-                                            onclick="pxEdit(this)">取消</a><a href="javascript:void(0)"
-                                            onclick="sureSorts('39e7d5c6fe6d493aaef5759f89f2ca5c')"
-                                            class="dib enterPx">确定</a>
-                                    </span>
-                                </td>
-                                <td>是</td>
-                               <!--  <td>我的乐刚1</td> -->
-                                <td>上海乐刚网有限公司</td>
-                                <td>
-                                    2019-09-17/2019-12-17
-                                </td>
-                                <td>html代码 </td>
-                                <td>李四四/2019-09-18</td>
-                                <td>
-                                    <a href="javascript:void(0)" onclick="pxEdit(this)" class="mr5 n17-blue">排序</a>
-                                    <span class="dib pl2 pr2">|</span>
-                                    <a href="javascript:void(0)" onclick="showLayer('添加广告','increasedAdvertising.html')"
-                                        class="mr5 n17-blue">查看</a>
-                                    <span class="dib pl2 pr2">|</span>
-                                    <a href="javascript:void(0)"
-                                        onclick="tableDel(this,'39e7d5c6fe6d493aaef5759f89f2ca5c')"
-                                        class="n17-blue">删除</a>
-                                </td>
-                            </tr>
-                            <tr class="n17-Ttd ">
-                                    <td width="5%" class="isedit">
-                                        <span class="showText" id="6707e58d16dc473a9eb826f9bee494b0">1</span>
-                                        <span class="showInput tc dn">
-                                            <input type="text" name="adverQuery.sorts" id="sortsId" class="cent ui-input pct90 Tinput" autocomplete="off">
-                                            <a href="javascript:void(0)" class="mr5 dib cancelPx" onclick="pxEdit(this)">取消</a><a href="javascript:void(0)" class="dib enterPx">确定</a>
-                                        </span>
-                                    </td>
-                                    <td width="5%">
-                                        
-                                            是
-                                        
-                                        
-                                    </td>
-                                    <td width="15%">asdfggghh</td>
+                                <tr class="n17-Ttd " >
+                                    
+                                    <td width="5%">是</td>
+                                    <td width="15%">河南省新华书店发行集团有限公司</td>
                                     <td width="15%">
                                         
                                         
-                                        2020-12-16
+                                        2020-11-12
                                         /
                                         
                                         
-                                        2020-12-16
+                                        2020-11-13
                                     </td>
                                     <td width="10%">
                                         
-                                        <img src="http://resource.lgsteel.cn/mainSite/images/banner/customer/banner-jy-login.jpg" width="80%" title='<img src="http://resource.lgsteel.cn/mainSite/images/banner/customer/banner-jy-login.jpg" width="250px"/>' class="tiptop">
+                                        
+                                                html
+                                        
                                     </td>
-                                    <td width="15%">
+                                    <td width="20%">
                                         杨兴旺 /
                                         
                                         
-                                        2020-12-16
+                                        2020-11-12
                                     </td>
-                                    <td width="15%">
-                                        <a href="javascript:void(0)" onclick="pxEdit(this)" class="mr5 n17-blue">排序</a>
+                                    <td width="20%">
+                                        <a href="javascript:void(0)" onclick="addAdv(1,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="mr5 n17-blue">查看</a>
                                         <span class="dib pl2 pr2">|</span>
-                                        <a href="javascript:void(0)" onclick="addAdv(1,'6707e58d16dc473a9eb826f9bee494b0')" class="mr5 n17-blue">查看</a>
-                                        <span class="dib pl2 pr2">|</span>
-                                        <a href="javascript:void(0)" onclick="tableDel(this,'6707e58d16dc473a9eb826f9bee494b0')" class="n17-blue">删除</a>
+                                        <a href="javascript:void(0)" onclick="tableDel(this,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="n17-blue">删除</a>
                                     </td>
                                 </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sort-group-list" id="s002">
+                        <table class="ui-table tc f12" width="100%">
+                        <tbody class="ui-thover">
+                                <tr class="n17-Ttd ">
+                                    
+                                    <td width="5%">是</td>
+                                    <td width="15%">简ssad</td>
+                                    <td width="15%">
+                                        
+                                        
+                                        2020-11-12
+                                        /
+                                        
+                                        
+                                        2020-11-13
+                                    </td>
+                                    <td width="10%">
+                                        
+                                        
+                                                html
+                                        
+                                    </td>
+                                    <td width="20%">
+                                        杨兴旺 /
+                                        
+                                        
+                                        2020-11-12
+                                    </td>
+                                    <td width="20%">
+                                        <a href="javascript:void(0)" onclick="addAdv(1,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="mr5 n17-blue">查看</a>
+                                        <span class="dib pl2 pr2">|</span>
+                                        <a href="javascript:void(0)" onclick="tableDel(this,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="n17-blue">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sort-group-list" id="s003">
+                        <table class="ui-table tc f12" width="100%">
+                        <tbody class="ui-thover">
+                                <tr class="n17-Ttd ">
+                                    
+                                    <td width="5%">是</td>
+                                    <td width="15%">上海乐刚网有限公司</td>
+                                    <td width="15%">
+                                        
+                                        
+                                        2020-11-12
+                                        /
+                                        
+                                        
+                                        2020-11-13
+                                    </td>
+                                    <td width="10%">
+                                        
+                                        
+                                                html
+                                        
+                                    </td>
+                                    <td width="20%">
+                                        杨兴旺 /
+                                        
+                                        
+                                        2020-11-12
+                                    </td>
+                                    <td width="20%">
+                                        <a href="javascript:void(0)" onclick="addAdv(1,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="mr5 n17-blue">查看</a>
+                                        <span class="dib pl2 pr2">|</span>
+                                        <a href="javascript:void(0)" onclick="tableDel(this,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="n17-blue">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sort-group-list" id="s004">
+                        <table class="ui-table tc f12" width="100%">
+                        <tbody class="ui-thover">
+                                <tr class="n17-Ttd ">
+                                    
+                                    <td width="5%">是</td>
+                                    <td width="15%">上海好乐迪有限公司</td>
+                                    <td width="15%">
+                                        
+                                        
+                                        2020-11-12
+                                        /
+                                        
+                                        
+                                        2020-11-13
+                                    </td>
+                                    <td width="10%">
+                                        <img src="http://resource.lgsteel.cn/mainSite/images/banner/customer/banner-jy-login.jpg" width="80%" class="tiptop"  title="<img src='http://resource.lgsteel.cn/mainSite/images/banner/customer/banner-jy-login.jpg' width='250px'/>" >
+                                        
+                                    </td>
+                                    <td width="20%">
+                                        杨兴旺 /
+                                        
+                                        
+                                        2020-11-12
+                                    </td>
+                                    <td width="20%">
+                                        <a href="javascript:void(0)" onclick="addAdv(1,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="mr5 n17-blue">查看</a>
+                                        <span class="dib pl2 pr2">|</span>
+                                        <a href="javascript:void(0)" onclick="tableDel(this,'0b4fbb9f87ab45c9baf56030e615ffdf')" class="n17-blue">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                   
                 </div>
             </div>
-            <script type="text/javascript" src="../js/pagelist.js"></script>
+            <div class="mt20 mb20 tc">
+                <button type="button" class="ui-button" onclick="setSort()">确认排序</button>
+            </div>
+            <!-- <script type="text/javascript" src="../js/pagelist.js"></script> -->
+
             <div class="mb20"></div>
         </div>
     </div>
@@ -195,32 +270,24 @@
     <script type="text/javascript" src="../js/laydate/laydate.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+    <script type="text/javascript" src="../js/Sortable.min.js"></script>
 
     <script>
         $(function () {
             $(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(3).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
             //tipclick 点击出现数据段
-            $('.tipclick').qtip({
-                show: { event: 'click' },
-                hide: 'unfocus',
-                content: {
-                    text: function (event, api) {
-                        return $("." + $(this).attr('qtip-dom'))  //qtip-dom 是点击提示框的内容的id，自己定义
-                    }
-                },
-                position: {
-                    my: 'top center',
-                    at: 'bottom center'
-                },
-                // position: {
-                //  viewport: $(window)
-                // },
-                style: {
-                    classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
-                }
-            });
+
         })
+        var example1 = $("#swapDemo")[0]
+        new Sortable(example1, {
+            animation: 50,
+            onEnd: function (evt) {
+                    console.log(evt.target.id)
+                    console.log("oldIndex:"+evt.oldIndex)
+                    console.log("newIndex:"+evt.newIndex)
+                }
+        });
+
         function showLayer(name, url) {
             var page = layer.open({
                 type: 2,
@@ -235,35 +302,28 @@
             });
         }
 
-        setTime4();
-        var endtime = '', starttime = '';
-        function setTime4() {
-            starttime = laydate.render({
-                elem: '#time4'
-                , theme: 'lgblue'
-                , trigger: 'click'
-                , min: '2020-07-01'
-                , done: function (value, date, endDate) {
-                    var myobj = {
-                        year: date.year,
-                        month: date.month - 1,//关键
-                        date: date.date
-                    };
-                    endtime.config.max = myobj;
-                }
+        function setSort(){
+            var myarr=[]
+            $(".sort-group-list").each(function(i){
+                var myobj={"id":$(this).attr("id"),"sort":i};
+                myarr.push(myobj)
+            })
 
-            });
-            //$("#time5").removeAttr("lay-key");
+            alert(JSON.stringify(myarr)) //用于显示，传到后台需要用到$.parseJSON( myarr)
         }
 
+
+
     </script>
-    <script type="text/javascript">
+ <!--    <script type="text/javascript">
         function pxEdit(obj) {
             $(obj).parents("tr").find(".isedit").find(".showText").toggleClass("dn");
             $(obj).parents("tr").find(".isedit").find(".showInput").toggleClass("dn");
             // $(obj).parents("tr").find(".showInput").addClass("active");
         }
-    </script>
+
+
+    </script> -->
 </body>
 
 </html>
