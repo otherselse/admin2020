@@ -47,7 +47,7 @@ var authoryMList={
         $(obj).addClass("on").siblings().removeClass("on");
 	}
 	,setMulThValueNew:function(obj,type,e,approl){   //点击最末级菜单选择       
-            stopPro(e);
+            //stopPro(e);
             var myobj='',str='',pid='';
             myobj=getmType(type);
             pid=''
