@@ -104,11 +104,7 @@
 	</div><!-- rightBar end -->
 
 
-	<div class="dom1 dn">
-		<div class="mb15 mt5"><i class="vm admIcon icondoubt mr5"></i>是否确定已完成退税申报？</div>
-		<button type="button" class="ui-button mr5" data-type="small" onclick="gotoClick()">确认</button>
-		<button type="button" class="ui-button" data-type="clears" id="hideTip">取消</button>
-	</div>
+
 
 
 	
@@ -124,38 +120,13 @@
 
 	<script>
 		$(function(){
-			$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(4).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+			$(".mulfolder").eq(0).addClass("open").find(".smlist ").eq(7).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 
 		})
 
 
 		
-		function toBackRate(){
-			layer.open({
-				type: 2,
-				title: '退税',
-				shadeClose: true,
-				shade: 0.4,
-				area: ['600px', '420px'],
-				content: 'toBackRate.html' //iframe的url
-			});
-		}
-
-		function logExport(str){
-			var preDateStart=$("input[name='enExchange.preDateStart']").val();
-            var preEndStart=$("input[name='enExchange.preEndStart']").val();
-            var baDateStart=$("input[name='enExchange.baDateStart']").val();
-            var baEndStart=$("input[name='enExchange.baEndStart']").val();
-
-            if (str==1&& baDateStart=="" &&baEndStart=="") {
-                layer.alert("请选择退税日期起止时间");
-                return;
-            }
-            if (str==2&&preDateStart == ""&&preEndStart=="") {
-                layer.alert("请选择预退税日期起止时间");
-                return;
-            }
-		}
+		
 
 
 		
