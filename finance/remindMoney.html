@@ -30,7 +30,7 @@
 		            <span class="dib pl5 pr5 ">/</span>
 		            财务管理
 		            <span class="dib pl5 pr5">/</span>
-		            <span class="g28">出口退税</span>
+		            <span class="g28">客户余额</span>
 		        </div>
 		        <div class="r m_dn">
 	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar" onclick="setLeftBarFunc(this)"></a>
@@ -38,147 +38,54 @@
 	        </div>
 			<div class="ui-content ovh minH">				
 				<div class="p20 f12">
-					<span class="ui-tip pct100 mb20">温馨提醒：每年12月份请及时完成退税申报，申报流程提交后要及时反馈给跟踪人和CEO，并及时提醒所属专管员老师，以免因为税所退税指标问题影响我司退税款不能及时到账。 </span>
-					<div class="mb10 f0 searchLable">
-						<span class="pct30 dib f12">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct30 dib f12">&emsp;金牌商家：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
-						<span class="pct30 dib f12">&emsp;订单号：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>					
-						
-						
-					</div>			
-					<div class="mb10 f0 searchLable">
-						<span class="pct30 dib f12 ">出口日期：<span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" ><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off">
-					</span></span>
-						<span class="pct30 dib f12 ">预退税日期：<span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.preDateStart"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.preEndStart">
-					</span></span>
 
-					<span class="pct30 dib f12  ">退税日期：<span class="ui-input f0 pct69 range" data-type="time">
-						<input type="text" placeholder="开始时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.baDateStart"><span class="dib pct5 tc">-</span><input type="text" placeholder="结束时间" class="render-time pct45" readonly="" autocomplete="off" name="enExchange.baEndStart">
-					</span></span>		
-						
+					<div class="cl mb10 ">
+	                        <span class="searchLable">账户类型：</span><div class="dib selectSingle mr20">
+	                                    <a class="on" href="javscript:void(0)">全部账户</a>
+	                                    <span>|</span>
+	                                    <a href="javscript:void(0)">账户余额</a>
+	                                    <span>|</span>
+	                                    <a href="javscript:void(0)">余料款余额</a>
+	                                    <span>|</span>
+	                                    <a href="javscript:void(0)">废料款余额</a>
 
-					
-						
-	                </div>	
+	                                </div>
+	                        <span class="pct30 dib f12 searchLable ">单位名称：<input type="text" class="ui-input pct69" placeholder="请输入" autocomplete="off"></span>
+	                        <button type="button" class="ui-button ">查询</button>
 
-	                <div class="mt5 lh30">
-	                	<span class="f12"><span class="searchLable">是否退税：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class="mr40"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
-	                	<span class=" dib f12"><span class="searchLable">未收款<10%：</span>
-						<label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
-	                		
+					</div>
 
-	                </div>
-
-	                <div class="tc  mt20 mb20">
-						<button type="button" class="ui-button ">查询</button>
-	                </div>
 
 	                <!-- search end -->
 
 					<div class="lgui-table-box mt30">
 						<div class="lgui-table-header">
-							<table class="ui-table tc f12 " width="100%">
+							<table class="ui-table tl f12 " width="100%">
 		                    <thead>
 		                        <tr>
-		                            <th width="5%">序号</th>
-		                            <th width="7%">订单号</th>
-		                            <th width="11%">单位名称</th>
-		                            <th width="9%">已开票不含税金额</th>
-		                            <th width="7%">出口日期</th>
-		                            <th width="7%">预退税金额</th> 
-		                            <th width="7%">预退税日期</th>
-		                            <th width="7%">退税率</th>  
-		                            <th width="7%">退税金额</th>
-		                            <th width="7%">退税日期</th> 
-		                            <th width="7%">未收款<10%</th>
-		                            <th width="7%">操作</th>
-		                            <th width="5%">退税申报</th>
-		                            <th width="7%">备注</th>
+		                            <th width="40%"><div class="pl10">单位名称</div></th>
+		                            <th width="20%"><div class="pl10">账户余额</div></th>
+		                            <th width="20%"><div class="pl10">余料款余额</div></th>
+		                            <th width="20%"><div class="pl10">废料款余额</div></th>
 		                        </tr>
 		                    </thead>
 		                </table>
 
 						</div>
 						<div class="lgui-table-body mt-1">
-							<table class="ui-table tc f12 " width="100%">
+							<table class="ui-table tl f12 " width="100%">
 		                    <tbody class="ui-thover">
-		                    	 <tr><td width="5%">1</td>
-		                            <td width="7%"><a href="javascript:void(0)" onclick="showStep()">11111</a></td>
-		                            <td width="11%">中国邮政运输集团</th>
-		                            <td width="9%" class="numFormat">22122330</td>
-		                            <td width="7%">2020-04-22</td>
-		                            <td width="7%">100</td>
-		                            <td width="7%">2020-04-22</td>
-		                            <td width="7%">100</td>
-		                            <td width="7%">100</td>
-		                            <td width="7%">2020-04-22</td>
-		                            <td width="7%">是</td>
-		                            <td width="7%"><a href="javascript:void(0)" onclick="toBackRate()">退税</a></td>
-		                            <td width="5%"><a href="javascript:void(0)"  class="tipclick" qtip-dom="dom1">申报</a></td>
-		                            <td width="7%"><a href="javascript:void(0)" onclick="showTrMore(this)">查看</a></td>
-		                        </tr>
-		                        <tr class="hideTr dn">
-		                        	<td colspan="14">
-		                        		<div class="pl20 pr20">
-		                        			<div class="ovh mb10 tl f14 mt10 g28 b">备注信息</div>
-		                        			<table class="ui-table tc f12 auto mt10 showShadow" width="100%">
-	              	                         <tbody>
-	                                            <tr class="resource-table">
-	                                            	<td class="title" width="10%">本人审批备注：</td>
-	                                            	<td width="90%" class="cont">
-	                                            		<textarea  class="ui-textarea pct98 mb10" rows="3" value="" placeholder="请输入"></textarea>
-	                                            		<button class="ui-button" data-type="small" type="button">提交</button>
-	                                            	</td>
-	                                            </tr>
-	                                          </tbody>
-	                                      	</table>
-
-		                        			<div class="ovh mb10 tl f14 mt30 g28 b">备注信息记录</div>
-		                        			<table class="ui-table tc f12 auto mt10 showShadow mb10" width="100%">
-													<thead>
-														<tr>
-															<th width="75%" class="tl"><div class="pl20">备注信息</div></th>
-															<th width="10%">操作人</th>
-															<th width="15%">操作时间</th>
-														</tr>
-														<tbody class="ui-thover">
-															<tr>
-																<td class="tl"><div class="pl20">非常非常好</div></td>
-																<td>万小东</td>
-																<td>2020-07-26 11:11:11</td>
-															</tr>
-														</tbody>
-												</table>
-
-		                        		</div>
-		                        	</td>
-		                        </tr>
-		                       
+		                    	 <tr>
+		                    	 	<td width="40%"><div class="pl10">上海好好好有限公司上海分公司</div></td>
+		                    	 	<td width="20%"><div class="pl10">23434.00</div></td>
+		                            <td width="20%"><div class="pl10">234.00</div></td>
+		                            <td width="20%"><div class="pl10">3434.00</div></td>		  
+		                        </tr>		                       
 		                    </tbody>
-		                    <tfoot class="bgfa">
+		                    <tfoot class="bgfa tc">
 		                    	<tr height="45">
 		                    		<td colspan="14">
-		                    			<!-- <span class="ui-tip l ml10">提示：导出前请先选择好相对应的时间。</span> -->
-		                    			<span class="r mr10">
-		                    				<button class="ui-button mr10 plr10" data-type="normal" type="button" onclick="logExport(1);">导出退税款到账凭证</button>
-		                    				<button class="ui-button plr10" type="button" onclick="logExport(2);">导出外贸计提凭证</button>
-		                    			</span>
-		                    		</td>
-		                    	</tr>
-		                    	<tr height="45">
-		                    		<td colspan="14">
-		                    			当前合计：预退税金额：<span class="numFormat red">12323233</span>元&emsp;&emsp;退税金额：<span class="numFormat red">12323233</span>元                            
-		                    		</td>
-		                    	</tr>
-
-		                    	<tr height="45">
-		                    		<td colspan="14">
-		                    			所有页汇总：预退税金额：<span class="numFormat red">12323233</span>元&emsp;&emsp;退税金额：<span class="numFormat red">12323233</span>元                            
+		                    			所有页总计&emsp;&emsp;&emsp;账户余额：<span class="numFormat ">12323233</span>元&emsp;&emsp;余料款余额：<span class="numFormat ">12323233</span>元&emsp;&emsp;废料款余额：<span class="numFormat ">12323233</span>                         
 		                    		</td>
 		                    	</tr>
 		                    </tfoot>
