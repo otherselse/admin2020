@@ -148,6 +148,7 @@
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5 on" onclick="setApproval(this)" id="7777">人事薪资</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setApproval(this)" id="7778">行政用印</a>
                                     <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setApproval(this)" id="7779">费用支出</a>
+                                    <a href="javascript:void(0)" class="ui-tab4-list w76 mt5 mb5" onclick="setApproval(this)" id="7780">费用one</a>
                                     
                                 </div>
                             </td>
@@ -297,6 +298,10 @@
 
                     ]
             }
+            ,{"title":"费用one",
+             "id":7780,
+             "menuList":[]
+            }
         ]
 
         //文化菜单
@@ -421,8 +426,9 @@
 
     function delCulMenuTab(obj){
         myMenuList.setCloseAll()
-        var pobj="chooseAppl"
-        myMenuList.delCulMenuCommTab($(obj).parents("tr")[0],pobj)
+        var pobj="chooseAppl";
+        var cont='adm_mAppCont';
+        myMenuList.delCulMenuCommTab($(obj).parents("tr")[0],pobj,cont)
     }
 
 

@@ -4,18 +4,28 @@
             for(var i=0;i<cul_Data.length;i++){
                 if(id==cul_Data[i].id){
                     var str="",menu='';
-                    for(var j=0;j<cul_Data[i].menuList.length;j++){
-                        if(cul_Data[i].menuList[j].childnum==0){
-                            var myclass=myMenuList.searchIDhasOn(cul_Data[i].menuList[j].id,type);
-                             menu=' <span class="dib pct20 f12"><span class="man_list" onclick="myMenuList.setMulThValueNew(this,'+type+',event,0,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span></span>'
-                        }else{
-                            var myclass=myMenuList.searchMulhasOn(cul_Data[i].menuList[j].id,type);
-                            //console.log("myclass:"+myclass)
-                            menu='<span class="dib pct20 f12 rel adm_firstMulMenu" ><span class="man_list"  onclick="setMulPanel(this,'+type+',event,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+
+                    if(cul_Data[i].menuList.length==0){
+                         var myclass=myMenuList.searchIDhasOn(cul_Data[i].id,type);
+                         var checked=(myclass=="on")?"checked":""
+                        str=' <span class="dib pct20 f12"><span class="man_list" onclick="myMenuList.setMulThValueNew(this,'+type+',event,0,\''+approl+'\')" id="'+cul_Data[i].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].title+'</span></span>'
+                    }else{
+                        for(var j=0;j<cul_Data[i].menuList.length;j++){
+                          if(cul_Data[i].menuList[j].childnum==0){
+                              var myclass=myMenuList.searchIDhasOn(cul_Data[i].menuList[j].id,type);
+                               menu=' <span class="dib pct20 f12"><span class="man_list" onclick="myMenuList.setMulThValueNew(this,'+type+',event,0,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="0"><i class="ui-checkbox-unable goldIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span></span>'
+                          }else{
+                              var myclass=myMenuList.searchMulhasOn(cul_Data[i].menuList[j].id,type);
+                              //console.log("myclass:"+myclass)
+                              menu='<span class="dib pct20 f12 rel adm_firstMulMenu" ><span class="man_list"  onclick="setMulPanel(this,'+type+',event,\''+approl+'\')" id="'+cul_Data[i].menuList[j].id+'" childnum="'+cul_Data[i].menuList[j].childnum+'"><i class="mulselIcon admIcon v-3 mr5 '+myclass+'"></i>'+cul_Data[i].menuList[j].title+'</span><span class="setMulPanelCont"></span></span>'
+                          }
+                          str+=menu                       
                         }
-                        str+=menu
-                       
                     }
+
+                    
+
+
                  break;
                 }
             }
@@ -30,7 +40,7 @@
         }
         ,setMulThValueNew:function(obj,type,e,flag,approl){   //点击最末级菜单选择
        
-            stopPro(e);
+           // stopPro(e);
             var myobj='',str='';
             myobj=getmType(type);
             var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
@@ -242,11 +252,17 @@
         }
       }
       //删除菜单，同时对选择做出处理
-      ,delCulMenuCommTab:function(obj,pobj){
+      ,delCulMenuCommTab:function(obj,pobj,cont){
        // var l=$(obj).parents(".chooseSmallCont").length;
         var id=$(obj).attr("id").replace("sort","");
         var pid=$(obj).attr("bid");
-        $("#"+id).find(".ui-checkbox-unable").removeClass("on");
+        if(cont){
+          cont=$("."+cont);
+           cont.find("#"+id).find(".ui-checkbox-unable").removeClass("on");
+        }else{
+          $("#"+id).find(".ui-checkbox-unable").removeClass("on");
+        }
+       
         $(obj).remove();
 
         var flag=0;
