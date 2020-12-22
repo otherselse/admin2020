@@ -38,7 +38,7 @@
 
            }
            ,setMulThValueNew:function(obj,e,showobj,tableType){   //点击最末级菜单选择       
-                stopPro(e);
+              //  stopPro(e);
                 var str='',chain='';
                 var pid=$(obj).parents(".setMulPanelMCont ").attr("pid")||"0";
                 var myid="sort"+$(obj).attr("id");
