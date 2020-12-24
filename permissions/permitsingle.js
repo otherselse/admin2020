@@ -44,6 +44,7 @@
                 var myid="sort"+$(obj).attr("id");
                 var title=$(obj).attr("data-title");
                 $(obj).parents(".radio").find(".ui-radio").removeClass("on");
+                $(obj).parents(".radio").find(".mulselIcon").removeClass("on");
                 $(obj).parents(".ui-radio").addClass("on");
                 if(pid!=0){   //假如下拉菜单下，不选择
                     chain=$(obj).parents(".setMulPanelMCont ").attr("chain");
