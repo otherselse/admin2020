@@ -46,7 +46,7 @@
                 $(obj).parents(".radio").find(".ui-radio").removeClass("on");
                 $(obj).parents(".radio").find(".mulselIcon").removeClass("on");
                 $(obj).parents(".ui-radio").addClass("on");
-                if(pid!=0){   //假如下拉菜单下，不选择
+                if(pid!=0){   //假如有下拉菜单
                     chain=$(obj).parents(".setMulPanelMCont ").attr("chain");
                     var z_obj=$(obj).parents(".setMulPanelMCont");
                     var z=$(obj).parents(".setMulPanelCont").find(".setMulPanelMCont").index(z_obj);
@@ -56,7 +56,8 @@
                        if($(obj).parents(".setMulPanelMCont").find(".setMulPanelMenu").length>0){
                             $(obj).parents(".setMulPanelMCont").find(".mulselIcon").removeClass("on");
                        }
-                    }     
+                    }
+
                 }else{ //假如一级显示菜单切换的时候，关闭下拉的浮层；
                     $(obj).parents(".radio").find(".adm_firstMulMenu").each(function(){
                         $(this).find(".mulselIcon").removeClass("on");
@@ -90,6 +91,10 @@
                 stopPro(e);
                 var myobj=$(obj).next(".setMulPanelCont");
                 myobj.attr("pname",$(obj).text()).attr("pid",$(obj).attr("id"));  
+                $(obj).parents(".radio").find(".setMulPanelCont").hide();
+                $(obj).parents(".radio").find(".setMulPanelCont").each(function(){
+                    $(this).children(".setMulPanelMCont:gt(0)").remove();
+                })
                 if(myobj.find(".setMulPanelMCont[pid='"+$(obj).attr("id")+"']").length>0){
                     myobj.show();
                     return;
