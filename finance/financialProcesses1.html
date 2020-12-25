@@ -96,7 +96,7 @@
 										</td>
 										<td width="20%">23,234,233,232,1231</td>
 										<td width="20%">
-											<input type="text" class="ui-input pct90" placeholder="请输入" autocomplete="off">
+											<input type="number" class="ui-input pct90" placeholder="请输入" autocomplete="off">
 										</td>
 										<td width="20%"><a href="javascript:void(0);" class="zxx_text_overflow dib mt5 pl5 g28 tiptop" title="继续输入备注继续输入备注继续输入备注">继续输入备注继续输入备注继续输入备注</a></td>
 									</tr>
@@ -281,8 +281,8 @@
 													<span class="pl20">当前已选择(<span class="red">3</span>)条信息</span>
 												</span>
 												<span class="pr20 dac">
-													<button class="ui-button plr10 mr10 tipclick" qtip-dom="dom1" type="button">清账</button>
-													<button class="ui-button plr10" data-type="normal" type="button">反清账</button>
+													<button class="ui-button plr10 mr10 tipclick" qtip-dom="dom1" type="button" datatype="1">清账</button>
+													<button class="ui-button plr10 tipclick" data-type="normal" type="button" qtip-dom="dom1" datatype="2">反清账</button>
 												</span>
 											</div>
 										</td>
@@ -312,6 +312,7 @@
 
 		<div class="dom1 dn">
 			<div class="mb10 df">
+				<input type="hidden" id="setDataType">
 				状态：<span class="radio f1">
 						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>金额小</label>
 						<label class="mr20"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>时间久</label>
@@ -359,6 +360,9 @@
 			$(function() {
 				$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(7).addClass("on"); // 静态页面定位使用，开发使用title等定位
 				
+				$(".tipclick").on("click",function(){
+					$("#setDataType").val($(this).attr("datatype"))
+				})
 				//tipclick 点击出现数据段
 				$('.tipclick').qtip({
 				    show: { event: 'click' },
@@ -380,6 +384,10 @@
 				    }
 				});
 			})
+
+			function gotoClick(){
+
+			}
 		</script>
 	</body>
 </html>

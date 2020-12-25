@@ -48,7 +48,7 @@
              $(obj).addClass("on").siblings().removeClass("on");
            }
            ,setMulThValueNew:function(obj,e,showobj,tableType){   //点击最末级菜单选择       
-                stopPro(e);
+                //stopPro(e);
                 var str='',chain='';
                 var myid="sort"+$(obj).attr("id");
                 var title=$(obj).attr("data-title");
