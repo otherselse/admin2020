@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>收开票数据汇总-统计管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style>
+			body,html{
+				background-color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body class="showTip fixtab">
+		<div class="f12 p20">
+			<div class="cl mb10 dac f12">
+				<span class="dib pct25">
+					<span class="searchLable">区域：</span>
+					<input type="text" class="ui-input pct70" placeholder="请输入" autocomplete="off">
+				</span>
+				<span class="dib pct25">
+					<span class="searchLable">订单号：</span>
+					<input type="text" class="ui-input pct70" placeholder="请输入" autocomplete="off">
+				</span>
+				<button type="button" class="ui-button mr20">查询</button>
+			</div>
+
+			<div class="lgui-table-box mt30 checkbox">
+				<div class="lgui-table-header">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<thead>
+							<tr>
+								<th width="8%">序号</th>
+								<th width="10%">订单</th>
+								<th width="10%">金牌商家</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										累计收票金额
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										累计开票金额
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										商互通增加额度
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										商户通减少额度
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										调控额度
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+								<th width="12%">
+									<label class="sort-list dib poi" onclick="setOrderCol('a.inDate',this)">
+										开票额度
+										<i class="goldIcon icon-sort vm ml5 down"></i></label>
+								</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="lgui-table-body mt-1">
+					<table class="ui-table tc f12 table-cw" width="100%">
+						<tbody class="ui-thover">
+							<tr>
+								<td width="8%" align="center">1</td>
+								<td width="10%" align="center">42684</td>
+								<td width="10%" align="center">乐钢网</td>
+								<td width="12%" align="center" numtype="formatMoney">65,995.65</td>
+								<td width="12%" align="center" numtype="formatMoney">0</td>
+								<td width="12%" align="center" numtype="formatMoney">0</td>
+								<td width="12%" align="center" numtype="formatMoney">0</td>
+								<td width="12%" align="center" numtype="formatMoney">0</td>
+								<td width="12%" align="center" da="data" purvoice="65995.65" salevoice="0" shtmoneyadd="0" shtmoneydes="0"
+								 floatvoice="0" voicesum="65995.65"><span numtype="formatMoney">65,995.65</span></td>
+							</tr>
+						</tbody>
+						<tfoot class="bgfa">
+							<tr height="45">
+								<td colspan="3">当前页合计:</td>
+								<td><span id="s_purVoice" numtype="personal">334,818.87</span></td>
+								<td><span id="s_saleVoice" numtype="personal">0</span></td>
+								<td><span id="s_shtMoneyAdd" numtype="personal">0</span></td>
+								<td><span id="s_shtMoneyDes" numtype="personal">0</span></td>
+								<td><span id="s_floatVoice" numtype="personal">0</span></td>
+								<td><span id="s_voiceSum" numtype="personal">334,818.87</span></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			<script type="text/javascript" src="../js/pagelist.js"></script>
+		</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script>
+			
+		</script>
+	</body>
+
+</html>
