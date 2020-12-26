@@ -1,3 +1,6 @@
+var menu_Data2=[{"menuList":[{"bigM":"评审管理","smallM":[{"mtitle":"单位评审","href":"/LgAdmin/adminIndex/adminIndexListReview.html","menuCode":"dwps"},{"mtitle":"实名注册审批","href":"/LgAdmin/applyRealName/realNameList.html","menuCode":"smzcsp"}]}],"title":"评审管理"},{"menuList":[{"bigM":"合同类","smallM":[{"mtitle":"销售合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"VIP业务采购合同评审","href":"../toApproval/adminIndexAction_adminIndexList.html"},{"mtitle":"备货采购合同审批","href":"../toApproval/admin_xs.html"},{"mtitle":"运输合同审批","href":"../toApproval/adminIndexAction_adminIndexList1.html"},{"mtitle":"加工仓储协议审批","href":"../toApproval/loadSignApplyInfo.html"},{"mtitle":"退货入库审批单据","href":"../toApproval/saleBackFilePermit.html"},{"mtitle":"售后审批","href":"../toApproval/procBonusApplyAction_procAfterProcessList.html"}
+			 ]},{"bigM":"款项类","smallM":[]},{"bigM":"加工类","smallM":[]},{"bigM":"外贸类","smallM":[]},{"bigM":"其他","smallM":[]}],"title":"审批管理"},{"menuList":[{"bigM":"物流管理","smallM":[]}],"title":"物流管理"},{"menuList":[{"bigM":"款项类","smallM":[]},{"bigM":"发票类","smallM":[]},{"bigM":"表单类","smallM":[]},{"bigM":"操作类","smallM":[]}],"title":"财务管理"},{"menuList":[{"bigM":"统计汇总类","smallM":[]},{"bigM":"统计分析类","smallM":[]},{"bigM":"款项类","smallM":[]},{"bigM":"加工类","smallM":[]}],"title":"统计管理"},{"menuList":[{"bigM":"订单类","smallM":[]},{"bigM":"报表类","smallM":[]},{"bigM":"分析类","smallM":[]},{"bigM":"资金流","smallM":[]},{"bigM":"加工类","smallM":[]}],"title":"报表管理"},{"menuList":[{"bigM":"单据管理","smallM":[]}],"title":"单据管理"},{"menuList":[{"bigM":"基础信息","smallM":[]},{"bigM":"客户相关","smallM":[]},{"bigM":"前台信息类","smallM":[]},{"bigM":"加工类","smallM":[]}],"title":"信息管理"},{"menuList":[{"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../permissions/toManagePerson.html"},{"mtitle":"角色配置人员","href":"../permissions/toManageRolePerson.html"}]},{"bigM":"权限管理","smallM":[]},{"bigM":"文化系统","smallM":[]}],"title":"权限管理"}]	
+
 var menu_Data=[
 	{"title":"评审管理",
 	 "menuList":[
@@ -95,10 +98,17 @@ var menu_Data=[
 	,{"title":"权限管理",
 	 "menuList":[
 	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../permissions/toManagePerson.html"},{"mtitle":"角色配置人员","href":"../permissions/toManageRolePerson.html"}]}
-			 ,{"bigM":"权限管理","smallM":[{"mtitle":"角色权限管理","href":"../permissions/manageToRole.html"},{"mtitle":"流程节点管理","href":"../permissions/manageToNode.html"},{"mtitle":"账号管理","href":"../permissions/manageToAccount.html"},{"mtitle":"管理员注册审批","href":"../permissions/manageToRegister.html"}]}	
-			 ,{"bigM":"文化系统","smallM":[{"mtitle":"权限配置","href":"../permissions/cultureToSet.html"},{"mtitle":"权限管理","href":"../permissions/cultureToManage.html"}]}
+			 ,{"bigM":"权限管理","smallM":[]}	
+			 ,{"bigM":"文化系统","smallM":[]}
 		]
 	}
+
+	/*,{"title":"权限管理","menuList":[
+		{"bigM":"权限配置","smallM":[]},
+		{"bigM":"权限管理","smallM":[{"mtitle":"流程节点管理","href":"/LgAdmin/permissions/manageToNode.html","menuCode":"lcjdgl"}]},
+		{"bigM":"文化系统","smallM":[]}
+		]
+	}*/
 
 ]
 
@@ -106,35 +116,51 @@ var _menuStr=''
 for(var i=0;i<menu_Data.length;i++){
 	var l=menu_Data[i].menuList.length;
 	if(l==1){   //只有一个菜单的情况下
-		_menuStr+='<span class="menuList menuhook" dataChild="1">'+
-			 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
+		var myfalg=0;		
 		var _menuStrA=''
 		for(var a=0;a<menu_Data[i].menuList[0].smallM.length;a++){
 			_menuStrA+='<a class="mDListShow  rel" href="'+menu_Data[i].menuList[0].smallM[a].href+'">'+menu_Data[i].menuList[0].smallM[a].mtitle+'</a>'
+			myfalg++
 		}
-		_menuStr+=_menuStrA+'</div></div></div></span>'
+		if(myfalg){
+			_menuStr+='<span class="menuList menuhook" dataChild="1">'+
+			 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail "><div class="mDetailCont"><div class="mDList m_first">'
+			_menuStr+=_menuStrA+'</div></div></div></span>'
+		}
+
+		
+
 	}else{
-		var w=(160+50)*l-50
-		_menuStr+='<span class="menuList menuhook " dataChild="'+l+'">'+
-			 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont" style="width:'+w+'px">'
-		var _menuStrD='';
+		var bfalg=0,_menuStrD='',tfalg=0;smflag=0;
 		for(var j=0;j<menu_Data[i].menuList.length;j++){
-			_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
-			var _menuStrV='';
-			for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){
+			var _menuStrV='',myfalg=0;
+			bfalg++;
+			for(var v=0;v<menu_Data[i].menuList[j].smallM.length;v++){			
 				if(menu_Data[i].menuList[j].smallM[v].hide){
 					_menuStrV+='<a class="mDListShow " style="display:none" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}else{
 					_menuStrV+='<a class="mDListShow  rel" href="'+menu_Data[i].menuList[j].smallM[v].href+'">'+menu_Data[i].menuList[j].smallM[v].mtitle+'</a>'
 				}
+				myfalg++
 			}
-			_menuStrD+='<div class="mDListCont trans">'+_menuStrV+'</div></div>'
+			tfalg+=myfalg;
+			if(myfalg){
+				_menuStrD+='<div class="mDList"><div class="mDListTitle">'+menu_Data[i].menuList[j].bigM+'</div>'
+				_menuStrD+='<div class="mDListCont trans">'+_menuStrV+'</div></div>'
+				smflag++
+			}
+			
 		}
-		_menuStr+=_menuStrD+'</div></div></span>'
+		var w=(160+50)*smflag-50;
+		if((bfalg!==0)&&(tfalg!==0)){
+			_menuStr+='<span class="menuList menuhook " dataChild="'+smflag+'">'+
+			 '<span class="menuText">'+menu_Data[i].title+'</span><div class="mDetail"><div class="mDetailCont" style="width:'+w+'px">'
+			_menuStr+=_menuStrD+'</div></div></span>'
+		}
+		
 	}
 }
 $(".menuConfig").html(_menuStr)
-//console.log(_menuStr)
 
 
 
