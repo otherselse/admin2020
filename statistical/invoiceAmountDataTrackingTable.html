@@ -131,7 +131,7 @@
 									<tr>
 										<td width="4%">1</td>
 										<td width="7%">天津</td>
-										<td width="7%" class="redm"><a href="javascript:void(0);" onclick="showLines('3588','o3588',1)">唐一菲</a></td>
+										<td width="7%" class="redm"><a href="javascript:void(0);" onclick="showLines()">唐一菲</a></td>
 										<td width="9%">6,734,623,813.06</td>
 										<td width="9%">28,677.92</td>
 										<td width="9%">48,702,611.31</td>
@@ -190,6 +190,19 @@
 				$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
 
 			})
+			
+			//点击展开明细
+			function showLines(){
+				layer.open({
+					type: 2,
+					title: '查看明细',
+					shadeClose: true,
+					shade: 0.4,
+					area: ['999px', '550px'],
+					content: 'voiceAmountByOpID.html' //需要传一个paream
+				});
+				
+			} 
 
 			setTime4();
 			var endtime = '',
