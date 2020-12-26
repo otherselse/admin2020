@@ -98,17 +98,10 @@ var menu_Data=[
 	,{"title":"权限管理",
 	 "menuList":[
 	 		 {"bigM":"权限配置","smallM":[{"mtitle":"人员配置权限","href":"../permissions/toManageMenuPage.html"},{"mtitle":"菜单配置人员","href":"../permissions/toManageRoleMenu.html"},{"mtitle":"审批配置人员","href":"../permissions/toManagePerson.html"},{"mtitle":"角色配置人员","href":"../permissions/toManageRolePerson.html"}]}
-			 ,{"bigM":"权限管理","smallM":[]}	
-			 ,{"bigM":"文化系统","smallM":[]}
+			 ,{"bigM":"权限管理","smallM":[{"mtitle":"角色权限管理","href":"../permissions/manageToRole.html"},{"mtitle":"流程节点管理","href":"../permissions/manageToNode.html"},{"mtitle":"账号管理","href":"../permissions/manageToAccount.html"},{"mtitle":"管理员注册审批","href":"../permissions/manageToRegister.html"}]}	
+			 ,{"bigM":"文化系统","smallM":[{"mtitle":"权限配置","href":"../permissions/cultureToSet.html"},{"mtitle":"权限管理","href":"../permissions/cultureToManage.html"}]}
 		]
 	}
-
-	/*,{"title":"权限管理","menuList":[
-		{"bigM":"权限配置","smallM":[]},
-		{"bigM":"权限管理","smallM":[{"mtitle":"流程节点管理","href":"/LgAdmin/permissions/manageToNode.html","menuCode":"lcjdgl"}]},
-		{"bigM":"文化系统","smallM":[]}
-		]
-	}*/
 
 ]
 
