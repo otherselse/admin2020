@@ -142,7 +142,12 @@
             //console.log(approl)
             stopPro(e);
             var myobj=$(obj).next(".setMulPanelCont");
-            myobj.attr("pname",$(obj).text()).attr("pid",$(obj).attr("id"));        
+            myobj.attr("pname",$(obj).text()).attr("pid",$(obj).attr("id"));  
+            $(obj).parents("td").find(".setMulPanelCont").hide();
+             $(obj).parents("td").find(".setMulPanelCont").each(function(){
+                 $(this).children(".setMulPanelMCont:gt(0)").remove();
+             })
+
             var mystr='';
             for(var i=0;i<myarr.length;i++){
                 var dom=''
