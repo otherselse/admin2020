@@ -144,6 +144,7 @@ $(function(){
 		});
 	}
 
+if($(".topbarTip").length>0){
 $(".topbarTip").find('[title]').qtip({
    	position: {
 				my: 'top right', //my:是指三角的位置
@@ -152,7 +153,7 @@ $(".topbarTip").find('[title]').qtip({
     style: {
         classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded istopbarTip'  //
     }
-})
+	})}
 
 
 	if($(".tiptop").length>0){ //提示显示在元素的上方
