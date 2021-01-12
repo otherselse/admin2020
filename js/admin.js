@@ -77,6 +77,18 @@ $(function(){
 		$(this).addClass("on")
 	})
 
+	$(".radioCan").on("click", "label", function () {
+		var obj=$(this).find(".ui-radio-unable")
+		if(obj.hasClass("on")){
+			obj.removeClass("on");
+			//obj.prop("checked",false)
+		}else{
+			obj.parents(".radioCan").find(".ui-radio-unable").removeClass("on");
+			obj.addClass("on")
+		}
+	})
+	
+
 	//同时绑定多个
 	if($('.render-time').length>0){
 		lay('.render-time').each(function(){

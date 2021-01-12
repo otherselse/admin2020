@@ -104,32 +104,36 @@
 					<div class="df mb10">
 						<span class="dib pct22">
 							<span class="searchLable">是否结算完毕：</span>
-							<span class="radio">
-								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							<span class="radioCan">
+								<input type="hidden" name="saleBussDetail.isGrossStart" value="">
+								<label class="mr10" data_v="1" onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2" ></i>是</label>
+								<label class="" data_v="0" onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2"  ></i>否</label>
 							</span>
 						</span>
 						<span class="dib pct22">
 							<span class="searchLable">是否超期：</span>
-							<span class="radio">
-								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							<span class="radioCan">
+								<input type="hidden" name="saleBussDetail.isPass" value="">
+								<label class="mr10" data_v="1"  onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2" ></i>是</label>
+								<label class="" data_v="0"  onclick="setIsGrossStart(this)"><i class="ui-radio goldIcon v-3 mr2"></i>否</label>
 							</span>
 						</span>
 						<span class="dib pct25">
 							<div class="df">
 								<div class="searchLable" style="min-width: 85px;">单据回收情况：</div>
-								<div class="radio ml2">
-									<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>已回收</label>
-									<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>未回收</label>
+								<div class="radioCan ml2">
+									<input type="hidden" name="saleBussDetail.isBack" value="">
+									<label class="mr10" data_v="1"  onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2 " ></i>已回收</label>
+									<label class="" data_v="0"  onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2"></i>未回收</label>
 								</div>
 							</div>
 						</span>
 						<span class="dib pct30">
 							<span class="searchLable">&emsp;&emsp;是否已执行：</span>
-							<span class="radio">
-								<label class="mr10"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
-								<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
+							<span class="radioCan">
+								<input type="hidden" name="saleBussDetail.isPay" value="">
+								<label class="mr10" data_v="1"  onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2"></i>是</label>
+								<label class="" data_v="0"  onclick="setIsGrossStart(this)"><i class="ui-radio-unable goldIcon v-3 mr2"></i>否</label>
 							</span>
 						</span>
 					</div>
@@ -947,6 +951,18 @@
 			$(".ui-checkbox").click(function() {
 				$(this).toggleClass("on");
 			});
+
+			function setIsGrossStart(obj){
+				var my_v=""
+				if($(obj).find(".ui-radio-unable").hasClass("on")){
+					 my_v=""
+				}else{
+					my_v=$(obj).attr("data_v")
+				}
+				$(obj).parents(".radioCan").find("input").val(my_v);
+
+				
+			}
 		</script>
 	</body>
 
