@@ -38,7 +38,7 @@ $(function(){
 
 
 	//不可复制的功能
-	//$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
+	$("body").attr("onselectstart","return false").attr("oncontextmenu","return false")
 
 	//搜索下拉
 	$("body").on("click", function () {
@@ -144,6 +144,16 @@ $(function(){
 		});
 	}
 
+if($(".topbarTip").length>0){
+$(".topbarTip").find('[title]').qtip({
+   	position: {
+				my: 'top right', //my:是指三角的位置
+				at: 'bottom center' //是在提示在组件的相对位置
+					},
+    style: {
+        classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded istopbarTip'  //
+    }
+	})}
 
 
 	if($(".tiptop").length>0){ //提示显示在元素的上方

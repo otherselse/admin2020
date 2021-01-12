@@ -21,20 +21,27 @@
 		'	</span>'+
 		'</div>'
 
-		var m_mymenustr='',m_all='';	
+		var m_mymenustr='',m_all='';
 		for(var i=0;i<myarr.length;i++){
 			//console.log(i)
-			m_mymenustr='<div class="mulfolder trans" >'+
-		'	<a class="menuItem" href="javascript:void(0)" onclick="showsMenu(this)"><i class="admIcon vm mr2 leftbarIcon type'+i+'"></i><span class="menuItemText">'+myarr[i].bigM+'</span><i class="imenu-up admIcon vm"></i></a><div class="smenu">';
+
 			var s_mymenustr='';
+
+			var s_flag=0
 			for(var j=0;j<myarr[i].smallM.length;j++){
 				if(myarr[i].smallM[j].hide){
 					s_mymenustr+='<a class="smlist ell" href="'+myarr[i].smallM[j].href+'" style="display:none">'+myarr[i].smallM[j].mtitle+'</a>' 
 				}else{
 					s_mymenustr+='<a class="smlist ell" href="'+myarr[i].smallM[j].href+'">'+myarr[i].smallM[j].mtitle+'</a>' 
 				}
+				s_flag++
 			}
-			m_all+=m_mymenustr+s_mymenustr+'</div></div>';
+			if(s_flag){
+				m_mymenustr='<div class="mulfolder trans" >'+
+		'	<a class="menuItem" href="javascript:void(0)" onclick="showsMenu(this)"><i class="admIcon vm mr2 leftbarIcon type'+i+'"></i><span class="menuItemText">'+myarr[i].bigM+'</span><i class="imenu-up admIcon vm"></i></a><div class="smenu">';
+				m_all+=m_mymenustr+s_mymenustr+'</div></div>';
+			}
+			
 		}
 		var menu_str='<div class="leftBar scrollbar">'+mysearch+m_all+'</div>'
 

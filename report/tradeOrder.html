@@ -232,32 +232,33 @@
 						<div class="lgui-table-header">
 							<table class="ui-table table-cw tc f12 " width="100%">
 								<thead>
-									<th width="150px" class="tl">
-										<div class="pl10">订单号</div>
+<!-- 									<th width="2%">序号</th>
+ -->									<th width="150" class="tl">
+										<div class="pl5">订单号</div>
 									</th>
-									<th width="12%" class="tl">
-										<div class="pl10">
+									<th width="8%" class="tl">
+										<div class="pl5">
 											金牌商家/单位名称
 										</div>
 									</th>
-									<th width="6%">合同总重量</th>
-									<th width="6%">合同总金额</th>
-									<th width="10%" class="tl">
-										<div class="pl10">
-											应收/未收金额
+									<th width="9%" class="tl"><div class="pl5">合同总金额/总重量</div></th>
+									<th width="7%" class="tl">
+										<div class="pl5">
+											应收/已收金额
 										</div>
 									</th>
 									<th width="4%">已付款</th>
-									<th width="7%">应收款日期</th>
-									<th width="7%">交货日期 </th>
-									<th width="6%">未开票金额</th>
+									<th width="6%">应收款日期</th>
+									<th width="6%">交货日期 </th>
+									<th width="5%">未开票金额</th>
 									<th width="6%">税前毛利/率</th>
 									<th width="5%">实际账期</th>
 									<th width="5%">合同账期</th>
 									<th width="4%">区域</th>
-									<th width="4%">是否超期</th>
+									<th width="9%">未收款金额/超期天数</th>
+									<th width="4%">单据</th>
 									<th width="5%">结算状态</th>
-									<th width="8%">订单状态</th>
+									<th width="6%">订单状态</th>
 								</thead>
 							</table>
 						</div>
@@ -265,14 +266,15 @@
 							<table class="ui-table tc f12 table-cw" width="100%">
 								<tbody class="ui-thover">
 									<tr>
-										<td width="150px" class="tl">
-											<div class="pl10">
+<!-- 										<td width="2%">1</td>
+ -->										<td width="150" class="tl">
+											<div class="pl5">
 												<a href="javascript:void(0)" onclick="showStep()">716271</a>
-												<div class="col-8080 mt5 wsn">外贸业务&ensp;|&ensp;2020-10-12</div>
+												<div class="col-8080 mt5 wsn">2020-10-12&ensp;|&ensp;外贸业务</div>
 											</div>
 										</td>
-										<td width="12%" class="tl">
-											<div class="pl10">
+										<td width="8%" class="tl">
+											<div class="pl5">
 												<a href="../public/goldRegInfo.html" title="联系方式：19987856462" target="_block" class="b tiptop">唐一菲</a>
 												<div class="mt5 dac">
 													<i class="gongSi-icon mr1"></i>
@@ -281,25 +283,28 @@
 												</div>
 											</div>
 										</td>
-										<td width="6%">2020</td>
-										<td width="6%">2020</td>
-										<td width="10%" class="tl">
-											<div class="pl10">
+										<td width="9%" class="tl"><div class="pl5">555.00/2020.000</div></td>
+										<td width="7%" class="tl">
+											<div class="pl5">
 												2020<span class="col-8080">/939</span>
 											</div>
 										</td>
 										<td width="4%">2020</td>
-										<td width="7%">2020-10-12</td>
-										<td width="7%">2020-10-12</td>
-										<td width="6%">2</td>
+										<td width="6%">2020-10-12</td>
+										<td width="6%">2020-10-12</td>
+										<td width="5%">2</td>
 										<td width="6%">2<span class="col-8080">/93%</span></td>
 										<td width="5%">--</td>
 										<td width="5%">2</td>
 										<td width="4%">上海</td>
-										<td width="4%">
-											<span class="red menuhook tipclick" qtip-dom="dom1">超期</span>
+										<td width="9%">
+											--
+											<!-- <span class="red menuhook tipclick" qtip-dom="dom1">超</span> -->
 										</td>
-										<td width="5%" class="tc">
+										<td width="4%" class="tc">
+											0/3
+										</td>
+										<td width="5%">
 											<div class="tiptop menuhook" title="
 								        <div class='f14 b mb10 g28'>已结算</div>
 								        <div class='mb5'>
@@ -315,15 +320,15 @@
 												<span class="blue">已结算</span>
 											</div>
 										</td>
-										<td width="4%">正常</td>
-										<td width="4%" viewinfo="saleID"><a id="iAECB57A03F193D57E05371001FACCD1B" href="javascript:void(0)">
+										<td width="3%">正常</td>
+										<td width="3%" viewinfo="saleID"><a id="iAECB57A03F193D57E05371001FACCD1B" href="javascript:void(0)">
 												<span class="redm" onclick="showTrMore(this)">查看</span>
 											</a>
 										</td>
 									</tr>
 									<!-- 开始隐藏 -->
 									<tr class="hideTr dn">
-										<td colspan="18">
+										<td colspan="17">
 											<div class="pl20 pt10 pr20 pb10">
 												<div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.11);">
 													<div class="p20 bgwh">
@@ -519,7 +524,69 @@
 											</div>
 										</td>
 									</tr>
+
 									<tr>
+<!-- 										<td width="2%">1</td>
+ -->										<td width="150" class="tl">
+											<div class="pl5">
+												<a href="javascript:void(0)" onclick="showStep()">716271</a>
+												<div class="col-8080 mt5 wsn">2020-10-12&ensp;|&ensp;外贸业务</div>
+											</div>
+										</td>
+										<td width="8%" class="tl">
+											<div class="pl5">
+												<a href="../public/goldRegInfo.html" title="联系方式：19987856462" target="_block" class="b tiptop">唐一菲</a>
+												<div class="mt5 dac">
+													<i class="gongSi-icon mr1"></i>
+													<a href="../public/userInfo1.html" target="_block" title="<span class='b'>上海vip客户股份有限公司</span><br/>账号：17787856462<span class='red dib ba'>已认证</span><span class='red dib ba'>已盖章</span>"
+													 class="mt2 tiptop col-8080 pr10 f1 ell">上海vip客户股份有限公司112212sxqsxqxxq</a>
+												</div>
+											</div>
+										</td>
+										<td width="9%" class="tl"><div class="pl5">555.00/2020.000</div></td>
+										<td width="7%" class="tl">
+											<div class="pl5">
+												2020<span class="col-8080">/939</span>
+											</div>
+										</td>
+										<td width="4%">2020</td>
+										<td width="6%">2020-10-12</td>
+										<td width="6%">2020-10-12</td>
+										<td width="5%">2</td>
+										<td width="6%">2<span class="col-8080">/93%</span></td>
+										<td width="5%">--</td>
+										<td width="5%">2</td>
+										<td width="4%">上海</td>
+										<td width="9%" >
+											<span class="red tipclick" qtip-dom="dom1">2000.00/13</span>
+											<!-- <span class="red menuhook tipclick" qtip-dom="dom1">超</span> -->
+										</td>
+										<td width="4%" class="tc">
+											0/3
+										</td>
+										<td width="5%">
+											<div class="tiptop menuhook" title="
+								        <div class='f14 b mb10 g28'>未结算</div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算金额</span>3000元
+								        </div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算重量</span>3000元
+								        </div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算日期</span>--
+								        </div>
+								        ">
+												<span class="blue">未结算</span>
+											</div>
+										</td>
+										<td width="3%">诉讼执行中</td>
+										<td width="3%" viewinfo="saleID"><a id="iAECB57A03F193D57E05371001FACCD1B" href="javascript:void(0)">
+												<span class="redm" onclick="showTrMore(this)">查看</span>
+											</a>
+										</td>
+									</tr>
+									<!-- <tr>
 										<td width="150px" class="tl">
 											<div class="pl10">
 												<a href="javascript:void(0)" onclick="showStep()">716271</a>
@@ -555,8 +622,17 @@
 											<span class="red menuhook tipclick" qtip-dom="dom1">超期</span>
 										</td>
 										<td width="5%" class="tc">
-											<div class="tiptop menuhook">
-												<span class="">未结算</span>
+											<div class="tiptop menuhook" title="<div class='f14 b mb10 g28'>未结算</div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算金额</span>3000元
+								        </div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算重量</span>3000元
+								        </div>
+								        <div class='mb5'>
+								            <span class='col-8080 mr10'>结算日期</span>2020-08-12 12:23:11
+								        </div>">
+												<span class="blue">未结算</span>
 											</div>
 										</td>
 										<td width="4%">协商中</td>
@@ -702,13 +778,13 @@
 												<span class="redm" onclick="showTrMore(this)">查看</span>
 											</a>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 								<tfoot class="bgfa">
 									<tr height="45">
 										<td colspan="2">当前页合计：</td>
-										<td>21200</td>
-										<td>201201</td>
+										<td>122122<br>
+											<span class="col-8080">212122</span></td>
 										<td>
 											122122<br>
 											<span class="col-8080">212122</span>
@@ -721,8 +797,8 @@
 									</tr>
 									<tr height="45">
 										<td colspan="2">所有页合计：</td>
-										<td>21200</td>
-										<td>201201</td>
+										<td>122122<br>
+											<span class="col-8080">212122</span></td>
 										<td>122122<br><span class="col-8080">212122</span></td>
 										<td>31232</td>
 										<td colspan="2"></td>
@@ -730,7 +806,7 @@
 										<td>12222<br><span class="col-8080">34%</span></td>
 										<td colspan="8"></td>
 									</tr>
-								</tfoot>
+								</tfoot> 
 							</table>
 						</div>
 					</div><!-- table end -->
