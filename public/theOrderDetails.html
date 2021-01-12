@@ -51,7 +51,7 @@
     </style>
 </head>
 
-<body class='showTip report g28'>
+<body class="showTip report g28">
     <script type="text/javascript" src="../js/topBar.js"></script>
     <!-- 头部菜单 -->
     <script type="text/javascript" src="../js/menu.js"></script>
@@ -978,6 +978,164 @@
                         <div style="border-bottom: 1px solid #ccc;"></div>
                     </div>
 
+					<!-- 财务 -->
+					<div class="max-Details mt30">
+					    <div class="dajs mb5">
+					        <div class="dac">
+					            <span class="dib min-blueK"></span>
+					            <span class="f14 dib b ml5">财务</span>
+					        </div>
+					        <a onclick="showDet(this)" href="javascript:void(0)" class="mr10">展开</a>
+					    </div>
+					    <div class="reDK dn">
+					        <div>
+					            <div class="lh50 reD-top dajs">
+					                <span class="f16 dfc ml20">
+					                    <span class="b g28">当前账户客户余额：</span>    
+										<span class="f12 dib mr10 ">我方收款：<span class="g13 b">0</span>&nbsp;元</span>
+										<span class="f12 ">我方付款：<span class="g13 b">0</span>&nbsp;元</span>
+					                </span>
+					            </div>
+								<div class="p20">
+					                <table class="ui-table tc f12 checkbox table-cw" width="100%"
+					                    data-type="edit">
+					                    <thead>
+					                        <th width="10%">合同类型</th>
+					                        <th width="14%">合同号</th>
+					                        <th width="11%">合同重量(吨)</th>
+					                        <th width="10%">签收重量(吨)</th>
+					                        <th width="10%">合同金额(元)</th>
+					                        <th width="10%">合同定金(元)</th>
+					                        <th width="17%">实际收(付)款金额(元)</th>
+					                        <th width="15%">操作</th>
+					                    </thead>
+					                    <tbody class="bgwh">
+					                        <tr>
+					                            <td>销售合同</td>
+					                            <td>STC(22)-200000475</td>
+					                            <td>10</td>
+					                            <td>0</td>
+					                            <td>0</td>
+					                            <td>0</td>
+					                            <td><span class="g13">0(0)</span></td>
+					                            <td>
+					                                <a href="javascript:void(0)" onclick="showTrMore(this)">查看明细</a>&emsp;
+													<a href="javascript:void(0)" onclick="showTrMoreNext(this)">出库明细</a>
+					                            </td>
+					                        </tr>
+					                        <tr class="hideTr dn bg-F1F3F7FF">
+					                            <td colspan="8">
+					                                <div class="pl20 pr20 pt10 pb10">
+					                                    <table class="ui-table tc f12 myTabShadow checkbox table-cw"
+					                                        width="100%">
+					                                        <thead>
+					                                            <tr>
+					                                                <th width="25%">类型</th>
+					                                                <th width="35%">到款时间</th>
+					                                                <th width="20%">金额</th>
+					                                                <th width="20%">操作员</th>
+					                                            </tr>
+					                                        </thead>
+					                                        <tbody>
+					                                            <tr>
+					                                                <td>--</td>
+					                                                <td>--</td>
+					                                                <td>--</td>
+					                                                <td>--</td>
+					                                            </tr>
+					                                        </tbody>
+					                                    </table>
+					                                </div>
+					                            </td>
+					                        </tr>
+											<tr class="hideTr dn bg-F1F3F7FF">
+											   <td colspan="8">
+											        <div class="pl20 pr20 pt10 pb10">
+											           <!-- <table class="ui-table tc f12 myTabShadow checkbox table-cw"
+											                width="100%">
+											                <thead>
+											                    <tr>
+											                        <th width="25%">类型</th>
+											                        <th width="35%">到款时间</th>
+											                        <th width="20%">金额</th>
+											                        <th width="20%">操作员</th>
+											                    </tr>
+											                </thead>
+											                <tbody>
+											                    <tr>
+											                        <td>--</td>
+											                        <td>--</td>
+											                        <td>--</td>
+											                        <td>--</td>
+											                    </tr>
+											                </tbody>
+											            </table> -->
+														<div>暂无数据</div>
+											        </div>
+											    </td>
+												
+											</tr>
+					                    </tbody>
+					                </table>
+					            </div>
+								
+								<div class="p20">
+								    <table class="ui-table tc f12 checkbox table-cw" width="100%"
+								        data-type="edit">
+								        <thead>
+								            <th width="10%">合同类型</th>
+								            <th width="14%">合同号</th>
+								            <th width="11%">合同重量(吨)</th>
+								            <th width="10%">合同金额(元)</th>
+								            <th width="17%">实际收(付)款金额(元)</th>
+								            <th width="15%">操作</th>
+								        </thead>
+								        <tbody class="bgwh">
+								            <tr>
+								                <td>--</td>
+								                <td>--</td>
+								                <td>--</td>
+								                <td>--</td>
+								                <td>--</td>
+								                <td>--</td>
+								            </tr>
+								            <tr class="hideTr dn bg-F1F3F7FF">
+								                <td colspan="11">
+								                    <div class="pl20 pr20 pt10 pb10">
+								                        <table class="ui-table tc f12 myTabShadow checkbox table-cw"
+								                            width="100%">
+								                            <thead>
+								                                <tr>
+								                                    <th width="15%">品名</th>
+								                                    <th width="15%">规格</th>
+								                                    <th width="15%">牌号</th>
+								                                    <th width="15%">数量</th>
+								                                    <th width="20%">重量</th>
+								                                    <th width="20%">已验收重量</th>
+								                                </tr>
+								                            </thead>
+								                            <tbody>
+								                                <tr>
+								                                    <td>浅绿卷板</td>
+								                                    <td>10100*980090</td>
+								                                    <td>DC03</td>
+								                                    <td>33</td>
+								                                    <td>33</td>
+								                                    <td>33</td>
+								                                </tr>
+								                            </tbody>
+								                        </table>
+								                    </div>
+								                </td>
+								            </tr>
+								        </tbody>
+								    </table>
+								</div>
+							</div>
+					    </div>
+					    <div style="border-bottom: 1px solid #ccc;"></div>
+					</div>
+					
                     <!-- 毛利明细 -->
                     <div class="max-Details mt30">
                         <div class="dajs mb5">
@@ -1136,6 +1294,16 @@
                 $(obj).text("展开")
             }
         }
+		
+		
+		function showTrMoreNext(obj){
+			$(obj).parents("table").find(".hideTr").not($(obj).parents("tr").next("tr").next(".hideTr")).css("display","none");
+			$(obj).parents("tr").next("tr").next(".hideTr").toggle();
+		}
+		function showTrMore(obj){
+			$(obj).parents("table").find(".hideTr").not($(obj).parents("tr").next(".hideTr")).css("display","none");
+			$(obj).parents("tr").next(".hideTr").toggle();
+		}
     </script>
 
 </body>
