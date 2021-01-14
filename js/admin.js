@@ -229,7 +229,7 @@ $(".topbarTip").find('[title]').qtip({
 	})*/
 	$(".numFormat").each(function(){
 		var str = $(this).text();
-		if (str) {
+		if (str && str.indexOf("$")<0) {
 			if(Number.parseFloat(str)!="NaN"){
 				$(this).text(lgNumberUtil.numFormat($.trim(Number.parseFloat(str))));
 			}else{
