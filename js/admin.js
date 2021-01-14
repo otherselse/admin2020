@@ -212,10 +212,19 @@ $(".topbarTip").find('[title]').qtip({
 	})
 
 	//千位分隔符
-	$(".numFormat").each(function(){
+	/* $(".numFormat").each(function(){
 		$(this).text(lgNumberUtil.numFormat($.trim($(this).text())))
+	})*/
+	$(".numFormat").each(function(){
+		var str = $(this).text();
+		if (str) {
+			if(Number.parseFloat(str)!="NaN"){
+				$(this).text(lgNumberUtil.numFormat($.trim(Number.parseFloat(str))));
+			}else{
+				$(this).text(lgNumberUtil.numFormat($.trim(str)));
+			}
+		}
 	})
-
 
 	  var os = function (){
 	    var ua = navigator.userAgent,

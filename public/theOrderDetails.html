@@ -1285,7 +1285,7 @@
         function showTable(obj) {
             $(obj).parents(".xian").next("table").toggleClass("dn");
         }
-
+		
         function showDet(obj) {
             $(obj).parents(".dajs").next(".reDK").toggleClass("dn");
             if ($(obj).text() == "展开") {
@@ -1295,15 +1295,16 @@
             }
         }
 		
-		
 		function showTrMoreNext(obj){
 			$(obj).parents("table").find(".hideTr").not($(obj).parents("tr").next("tr").next(".hideTr")).css("display","none");
 			$(obj).parents("tr").next("tr").next(".hideTr").toggle();
 		}
+		
 		function showTrMore(obj){
 			$(obj).parents("table").find(".hideTr").not($(obj).parents("tr").next(".hideTr")).css("display","none");
 			$(obj).parents("tr").next(".hideTr").toggle();
 		}
+		
     </script>
 
 </body>
