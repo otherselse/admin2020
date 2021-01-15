@@ -14,7 +14,7 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
 
 		<style type="text/css">
-			.addDisat{
+			.addDisat {
 				padding-left: 40px;
 				padding-right: 40px;
 			}
@@ -44,8 +44,10 @@
 
 			<div class="ui-content ovh minH">
 				<div class="p20 f12">
-					<div class="addtitleBg mb20 tc">
-						<a href="javascript:void(0);" onclick="showLayer()" class="addNewPage"><span class="dib vm">新增</span><i class="addarrow vm ml5"></i></a>
+					<div class="xzhj mb20 daj">
+						<a href="javascript:void(0)" onclick="showLayer()" class="dib xzhj-button daj">
+							<span class="dib mr10">新增</span><i class="addarrow vm ml5"></i>
+						</a>
 					</div>
 					<div class="mb10 f0">
 						<span class="pct20 dib f12 searchLable">加工商：<input type="text" class="ui-input pct59" placeholder="请输入"
@@ -69,13 +71,23 @@
 								<thead>
 									<tr>
 										<th width="6%">承接方</th>
-										<th width="17%"><div class="tl pl5">一级接单加工商</div></th>
+										<th width="17%">
+											<div cRass="tl pl5">一级接单加工商</div>
+										</th>
 										<th width="11%">一级接单分红比例</th>
-										<th width="17%"><div class="tl pl5">二级接单加工商</div></th>
+										<th width="17%">
+											<div class="tl pl5">二级接单加工商</div>
+										</th>
 										<th width="11%">二级接单分红比例</th>
-										<th width="15%"><div class="tl pl5">执行说明</div></th>
-										<th width="8%"><div class="tl pl5">执行日期</div></th>
-										<th width="14%"><div class="tl pl10">创建人/时间</div></th>
+										<th width="15%">
+											<div class="tl pl5">执行说明</div>
+										</th>
+										<th width="8%">
+											<div class="tl pl5">执行日期</div>
+										</th>
+										<th width="14%">
+											<div class="tl pl10">创建人/时间</div>
+										</th>
 									</tr>
 								</thead>
 							</table>
@@ -105,7 +117,9 @@
 												此处为执行说明此处为执行说明此处为执行说明
 											</div>
 										</td>
-										<td width="8%"><div class="tl pl5">2019-08-08</div></td>
+										<td width="8%">
+											<div class="tl pl5">2019-08-08</div>
+										</td>
 										<td width="14%">
 											<div class="tl pl10">
 												<div>张三三</div>
@@ -119,52 +133,53 @@
 					</div><!-- table end -->
 
 					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+
+
+		<div class="addDisat dn">
+			<div class="pt20 bor-bE6E6 pb20">
+				<span class="searchLable">一级接单加工商：</span>
+				<button class="ui-button mr10" onclick="showUser()" data-type="normal" type="button">选择加工商</button>
+				<span>
+					<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+					<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+				</span>
 			</div>
-		</div><!-- ui-content end -->
-	</div><!-- rightBar end -->
-
-
-	<div class="addDisat dn">
-		<div class="pt20 bor-bE6E6 pb20">
-			<span class="searchLable">一级接单加工商：</span>
-			<button class="ui-button mr10" data-type="normal" type="button">选择加工商</button>
-			<span>
-				<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
-				<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
-			</span>
+			<div class="pt20 bor-bE6E6 pb20">
+				<span class="searchLable">一级接单分红比例：</span>
+				<span class="ui-input" data-type="price">
+					<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
+				</span>
+				<span class="searchLable dib ml30">执行日期：</span>
+				<span class="ui-input w200 pct25" data-type="time"><input type="text" placeholder="请选择日期" id="time2" readonly=""
+					 autocomplete="off" lay-key="4"></span>
+			</div>
+			<div class="pt20 bor-bE6E6 checkbox pb20">
+				<i class="ui-checkbox goldIcon vm mr5" onclick="showDiLine()"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>订单业务金额达
+				<input type="text" class="ui-input tc" value="">
+				元后自动转为二级接单
+			</div>
+			<div class="dn diLine">
+				<div class="pt20 bor-bE6E6 pb20">
+					<span class="searchLable">二级接单加工商：</span>
+					<button class="ui-button mr10" data-type="normal" type="button">选择加工商</button>
+					<span>
+						<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+					</span>
+				</div>
+				<div class="pt20 pb20">
+					<span class="searchLable">二级接单分红比例：</span>
+					<span class="ui-input" data-type="price">
+						<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
+					</span>
+				</div>
+			</div>
+			<div class="mt30 tc">
+				<button class="ui-button w90" type="button">保存</button>
+			</div>
 		</div>
-		<div class="pt20 bor-bE6E6 pb20">
-			<span class="searchLable">一级接单分红比例：</span>
-			<span class="ui-input" data-type="price">
-				<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
-			</span>
-			<span class="searchLable dib ml30">执行日期：</span>
-			<span class="ui-input w200 pct25" data-type="time"><input type="text" placeholder="请选择日期" id="time2" readonly="" autocomplete="off" lay-key="4"></span>
-		</div>
-		<div class="pt20 bor-bE6E6 checkbox pb20">
-			<i class="ui-checkbox goldIcon vm mr5 on"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>订单业务金额达
-			<input type="text" class="ui-input tc" value="">
-			元后自动转为二级接单
-		</div>
-		<div class="pt20 bor-bE6E6 pb20">
-			<span class="searchLable">二级接单加工商：</span>
-			<button class="ui-button mr10" data-type="normal" type="button">选择加工商</button>
-			<span>
-				<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
-			</span>
-		</div>
-		<div class="pt20 pb20">
-			<span class="searchLable">二级接单分红比例：</span>
-			<span class="ui-input" data-type="price">
-				<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
-			</span>
-		</div>
-		<div class="mt30 tc">
-			<button class="ui-button w90" type="button">保存</button>
-		</div>
-	</div>
-
-
 
 
 		<script type="text/javascript" src="../js/admin.js"></script>
@@ -173,25 +188,24 @@
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
 		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
 
-
 		<script>
 			$(function() {
 				$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); // 静态页面定位使用，开发使用title等定位
-				
-				if($(".showTip").length>0){
+
+				if ($(".showTip").length > 0) {
 					$(".showTip").find('[title]').qtip({
 						position: {
 							my: 'bottom center', //my:是指三角的位置
 							at: 'top center' //是在提示在组件的相对位置
-								},
+						},
 						style: {
-							classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+							classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
 						}
 					});
 				}
 			})
-			
-			  function showLayer() {
+
+			function showLayer() {
 				var page = layer.open({
 					type: 1,
 					title: "新增",
@@ -200,18 +214,32 @@
 					area: ['960px', '500px'],
 					content: $(".addDisat") //iframe的url
 				});
-				$("#close_but").on("click", function () {
+				$("#close_but").on("click", function() {
 					layer.close(page);
 				});
 			}
 			
-			 var start = laydate.render({
+			function showUser(){
+				var page = layer.open({
+					type: 2,
+					title: "选择加工商",
+					shadeClose: true,
+					shade: 0.4,
+					area: ['600px', '500px'],
+					content: "../public/selUser1.html" //iframe的url
+				});
+				$("#close_but").on("click", function() {
+					layer.close(page);
+				});
+			}
+
+			var start = laydate.render({
 				elem: '#time2',
 				theme: 'lgblue',
 				trigger: 'click',
 				btns: ['clear', 'confirm'],
 				min: 0,
-				done: function (value, date) {
+				done: function(value, date) {
 					getTotal()
 					// var myobj = {
 					// 	year: date.year,
@@ -220,9 +248,14 @@
 					// };
 					// end.config.value = value;
 					// end.config.min = myobj;
-	
+
 				}
 			})
+
+
+			function showDiLine() {
+				$(".diLine").toggleClass("dn");
+			}
 		</script>
 	</body>
 </html>

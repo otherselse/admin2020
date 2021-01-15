@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css">
+		<link rel="stylesheet" href="../css/admin.css">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/seluser2020.css">
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<title>选择加工商</title>
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/js/layer/3.1.1/theme/default/layer.css?v=3.1.1" id="layuicss-layer">
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+		<style type="text/css">
+			.seluser_imgListR {
+			    cursor: pointer;
+			    padding: 0px 30px;
+			    box-sizing: border-box;
+				/* margin: 0 30px; */
+			}
+			
+			.seluser_imgList {
+			    cursor: pointer;
+			    padding: 10px 0;
+			    overflow: hidden;
+			    margin-right: 5%;
+			    width: 90%;
+			    box-sizing: border-box;
+			    border-bottom: 1px #E5E5E5 solid;
+			    float: left;
+			}
+			
+			.seluser_left {
+			    width: 50%;
+			}
+			.seluser_right {
+			    width: 50%;
+			}
+			
+			.seluser_delIcon {
+			    top: 30%;
+			    /* right: 8%; */
+			}
+			.allUser{
+				position: fixed;
+				bottom: 20px;
+				box-sizing: border-box;margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body class="showTip">
+		<div class="seluser_left" style="height: 517px;">
+			<div class="pt15" style="padding-left: 26px;">
+				<div class="seluser_lsearch">
+					<input type="text" class="seluser_searinput f12 mt2" placeholder="请搜索"><a href="javascript:void(0)" class="seluser_searbut iconSelUser  mt2"></a>
+				</div>
+			</div>
+			
+			<div class="seluser_imgCont mt20 scrollbar">
+				<div class="seluser_imgList" id="001" onclick="selUser(this)">
+					<div class="zxx_text_90" title="上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业">上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业</div>
+				</div>
+				<div class="seluser_imgList" id="002" onclick="selUser(this)">
+					<div class="zxx_text_90" title="上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业">上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业</div>
+				</div>
+				<div class="seluser_imgList" id="003" onclick="selUser(this)">
+					<div class="zxx_text_90" title="上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业">上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业</div>
+				</div>
+				<div class="seluser_imgList" id="004" onclick="selUser(this)">
+					<div class="zxx_text_90" title="上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业">上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业上海西单实业有限公司上海西单实业</div>
+				</div>
+				<!-- seluser_imgListR -->
+			</div>
+		</div>
+		<div class="seluser_right rel">
+			<div class="cl pl30 mb10 mt20">已选择加工商：</div>
+			<div class="scrollbar selrigt_user">
+
+			</div>
+			
+			<div>
+				<a href="javascript:void(0);" onclick="getUserAll()" class="allUser">全选</a>
+				<div class="auto tc selg_bottom">
+					<!-- <a href="javascript:void(0)" class="selg_btnSubmit dib" onclick="changeImage()">确定</a> -->
+					<button class="sel_button" type="button">确定</button>
+				</div>
+			</div>
+
+
+		</div>
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+		<script>
+			$(function() {
+				$(".choose_item").on("click", function() {
+					if ($(this).hasClass("on")) {
+						$(this).removeClass("on");
+					} else {
+						$(this).addClass("on").siblings().removeClass("on");
+					}
+				})
+
+				$(".seluser_left").height($(window).height());
+
+				$(window).resize(function() {
+					$(".seluser_left ").height($(window).height());
+				})
+
+				$("body").on("click", ".seluser_imgListR", function() {
+					$(this).remove();
+				})
+				
+				if($(".showTip").length>0){
+					$(".showTip").find('[title]').qtip({
+						position: {
+							my: 'bottom center', //my:是指三角的位置
+							at: 'top center' //是在提示在组件的相对位置
+								},
+						style: {
+							classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded'  //
+						}
+					});
+				}
+			})
+
+			function getUserAll(){
+				$(".seluser_imgCont .seluser_imgList").each(function(){
+					let _this = this;
+					let count = 0;
+					$(".seluser_imgListR").each(function() {
+						if ($(this).attr("userid") != $(_this).attr("id")) {
+							count++
+						}
+					})
+					if(count == $(".seluser_imgListR").length){
+						$(this).click();
+					}
+				});
+			}
+
+			function selUser(obj) {
+				var id = $(obj).attr("id");
+				var name = $(obj).find(".zxx_text_90").text();
+				var flag = 0;
+
+				$(".seluser_imgListR").each(function() {
+					if ($(this).attr("userid") == id) {
+						flag++
+						return false;
+					}
+				})
+
+				if (flag == 0) {
+					var str = '<div class="seluser_imgListR" userid=' + id + '>' +
+						
+						'<div class="seluser_imgRList">'+
+							'<div class="zxx_text_90">'+name+'</div>'+
+							'<i href="javascript:void(0)" class="iconSelUser seluser_delIcon"></i>'+
+						'</div>'+
+						'</div>	';
+					$(".selrigt_user").append(str);
+				} else {
+					layer.alert('该加工商已经选中！');
+					return;
+				}
+			}
+		</script>
+
+	</body>
+</html>
