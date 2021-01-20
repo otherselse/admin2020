@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>利支差录入-财务管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+
+	</head>
+	<body class="showTip fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+
+
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					财务管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">利支差录入</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+			
+			<div class="ui-tab3">
+				<a href="profitMarginEntry.html" class="ui-tab3-list rel on"><span class="ui-tab3-text">利支差录入</span><i class="goldIcon ui-tab3-dot"></i></a>
+				<a href="profitMarginSum.html" class="ui-tab3-list rel"><span class="ui-tab3-text">利支差统计</span><i class="goldIcon ui-tab3-dot"></i></a>
+			</div>
+
+			<div class="ui-content ovh minH">
+				<div class="p20 f12 ">
+					<table class="ui-table tc f12 auto mt10 " width="100%">
+						<tbody>
+							<tr class="resource-table">
+								<td class="title" width="10%">加盟公司：</td>
+								<td width="23%" class="cont">
+									<span class="input-selSearch pct70">
+										<input type="text" class="ui-input searchUp pct100 bd_none" placeholder="请输入公司名/拼音首字母" autocomplete="off">
+										<div class="search-cont">
+											<a href="javascript:void(0)" class="search-list db ell">1232</a>
+											<a href="javascript:void(0)" class="search-list db ell">323</a>
+											<a href="javascript:void(0)" class="search-list db ell">华冶物产集团有限公司</a>
+										</div>
+									</span>
+								</td>
+								<td class="title" width="10%">利支差日期：</td>
+								<td width="23%" class="cont"><span class="ui-input pct70 bd_none" data-type="time"><input type="text"
+										 placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span></td>
+								<td class="title" width="10%">申请日期：</td>
+								<td width="23%" class="cont">
+									<span class="ui-input pct70 bd_none" data-type="time"><input type="text"
+											 placeholder="选择时间" readonly="" class="render-time" autocomplete="off"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table width="100%" class="dn forecastTable nomal outLine ui-table tc mt30 f12">
+						<thead>
+							<tr>
+								<th width="20%">各区域实际支出成本</th>
+								<th width="20%">给物产开具发票</th>
+								<th width="20%">给乐刚开具发票</th>
+								<th width="20%">其他（如对外开具的租赁费、加工费、仓储费）</th>
+								<th width="20%">内部往来销账</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="forecastTr">
+								<td><input type="text" name="cOutLineList[0].prepurOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><input type="text" name="cOutLineList[0].prepurOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><input type="text" name="cOutLineList[0].preprocOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><input type="text" name="cOutLineList[0].presalOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><span>1211221</span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table width="100%" class="dn forecastTable nomal outLine ui-table tc mt30 f12">
+						<thead>
+							<tr>
+								<th width="25%">物产金蝶利润</th>
+								<th width="25%">物产折旧</th>
+								<th width="25%">物产摊销</th>
+								<th width="25%">物产对外还账</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="forecastTr">
+								<td><input type="text" name="cOutLineList[0].prepurOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><input type="text" name="cOutLineList[0].prepurOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><input type="text" name="cOutLineList[0].preprocOne" class="ui-input tc pct90 inflowCheck" value="" oldvalue="0"></td>
+								<td><span>1211221</span></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="tc mt20 mb30">
+						<button class="ui-button mr10 w245" data-type="bb" type="button">保存</button>
+						<button class="ui-button" data-type="big" type="button">提交</button>
+					</div>
+
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+
+
+
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(2).addClass("on"); // 静态页面定位使用，开发使用title等定位
+
+				// 静态页面所用
+				$("body").on("click", ".addForecastCols", function() {
+					var myobj = $(this).parents(".forecastTr").clone(true);
+					myobj.find("input").val('');
+					myobj.find(".addForecastCols").hide();
+					myobj.find(".delForecastCols").css("display", "inline-block");
+					myobj.find(".render-time").removeAttr("lay-key"); // 动态获取时间，并重新绑定               
+					$(this).parents(".forecastTr").parent("tbody").append(myobj);
+					lay('.render-time').each(function() {
+						laydate.render({
+							elem: this,
+							trigger: 'click',
+							theme: 'lgblue'
+						});
+					});
+				})
+				// 静态页面所用
+				$("body").on("click", ".delForecastCols", function() {
+					$(this).parents(".forecastTr").remove();
+
+				})
+				
+				$(".search-cont").find(".search-list").click(function(){
+					if($(this).text()=="华冶物产集团有限公司"){
+						$(".forecastTable").eq(0).addClass("dn");
+						$(".forecastTable").eq(1).removeClass("dn");
+					}else{
+						$(".forecastTable").eq(1).addClass("dn");
+						$(".forecastTable").eq(0).removeClass("dn");
+					}
+				});
+			})
+		
+
+		</script>
+	</body>
+</html>

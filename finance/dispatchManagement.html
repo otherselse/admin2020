@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico"
+		 type="image/x-icon">
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+		<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+		<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+		<title>派单管理-财务管理-乐刚智能云系统</title>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+
+		<style type="text/css">
+			.addDisat {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		</style>
+	</head>
+	<body class="showTip fixtab">
+		<script type="text/javascript" src="../js/topBar.js"></script>
+		<!-- 头部菜单 -->
+		<script type="text/javascript" src="../js/menu.js"></script>
+		<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+		<script type="text/javascript" src="../js/leftBar.js"></script>
+		<!-- 左侧菜单 -->
+
+		<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+					<a href="../index/index.html" class="gga">首页</a>
+					<span class="dib pl5 pr5 ">/</span>
+					财务管理
+					<span class="dib pl5 pr5">/</span>
+					<span class="g28">派单管理</span>
+				</div>
+				<div class="r m_dn">
+					左侧菜单栏 <a href="javascript:void(0)" onclick="setLeftBarFunc(this)" class="ui-switch goldIcon vm on setLeftBar"></a>
+				</div>
+			</div>
+
+			<div class="ui-content ovh minH">
+				<div class="p20 f12">
+					<div class="xzhj mb20 daj">
+						<a href="javascript:void(0)" onclick="showLayer()" class="dib xzhj-button daj">
+							<span class="dib mr10">新增</span><i class="addarrow vm ml5"></i>
+						</a>
+					</div>
+					<div class="mb10 f0">
+						<span class="pct20 dib f12 searchLable">加工商：<input type="text" class="ui-input pct59" placeholder="请输入"
+							 autocomplete="off">
+						</span>
+						<span class="searchLable f12">收款类型：</span>
+						<span class=" dib f12 selectSingle">
+							<a href="javscript:void(0)" class="on">全部</a>
+							<span class="">|</span>
+							<a href="javscript:void(0)">一级派单</a>
+							<span class="">|</span>
+							<a href="javscript:void(0)">二级派单</a>
+						</span>
+						<button type="button" class="ui-button ml40">查询</button>
+					</div>
+					<!-- search end -->
+
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc table-cw f12 " width="100%">
+								<thead>
+									<tr>
+										<th width="6%">承接方</th>
+										<th width="17%">
+											<div cRass="tl pl5">一级接单加工商</div>
+										</th>
+										<th width="11%">一级接单分红比例</th>
+										<th width="17%">
+											<div class="tl pl5">二级接单加工商</div>
+										</th>
+										<th width="11%">二级接单分红比例</th>
+										<th width="15%">
+											<div class="tl pl5">执行说明</div>
+										</th>
+										<th width="8%">
+											<div class="tl pl5">执行日期</div>
+										</th>
+										<th width="14%">
+											<div class="tl pl10">创建人/时间</div>
+										</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table table-cw tc f12 " width="100%">
+								<tbody class="ui-thover">
+									<tr>
+										<td width="6%">平台</td>
+										<td width="17%">
+											<div class="tl pl5 menuhook" title="<div class='mb5'>中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团</div><div class='mb5'>中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团</div>">
+												<div class="zxx_text_overflow">中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团</div>
+												<div class="zxx_text_overflow">中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团</div>
+												<!-- 如果超过两个加工商就显示...... -->
+												<div>......</div>
+											</div>
+										</td>
+										<td width="11%">99%</td>
+										<td width="17%">
+											<div class="tl pl5 menuhook zxx_text_overflow" title="中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团">
+												中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团中国邮政运输集团
+											</div>
+										</td>
+										<td width="11%">50%</td>
+										<td width="15%">
+											<div class="tl pl5 menuhook zxx_text_overflow" title="此处为执行说明此处为执行说明此处为执行说明此处为执行说明">
+												此处为执行说明此处为执行说明此处为执行说明
+											</div>
+										</td>
+										<td width="8%">
+											<div class="tl pl5">2019-08-08</div>
+										</td>
+										<td width="14%">
+											<div class="tl pl10">
+												<div>张三三</div>
+												<div>2020-11-07 10:45:27</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div><!-- table end -->
+
+					<script type="text/javascript" src="../js/pagelist.js"></script>
+				</div>
+			</div><!-- ui-content end -->
+		</div><!-- rightBar end -->
+
+
+		<div class="addDisat dn">
+			<div class="pt20 bor-bE6E6 pb20">
+				<span class="searchLable">一级接单加工商：</span>
+				<button class="ui-button mr10" onclick="showUser()" data-type="normal" type="button">选择加工商</button>
+				<span>
+					<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+					<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+				</span>
+			</div>
+			<div class="pt20 bor-bE6E6 pb20">
+				<span class="searchLable">一级接单分红比例：</span>
+				<span class="ui-input" data-type="price">
+					<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
+				</span>
+				<span class="searchLable dib ml30">执行日期：</span>
+				<span class="ui-input w200 pct25" data-type="time"><input type="text" placeholder="请选择日期" id="time2" readonly=""
+					 autocomplete="off" lay-key="4"></span>
+			</div>
+			<div class="pt20 bor-bE6E6 checkbox pb20">
+				<i class="ui-checkbox goldIcon vm mr5" onclick="showDiLine()"><input type="checkbox" class="checkbox-opacity" name="checkbox"></i>订单业务金额达
+				<input type="text" class="ui-input tc" value="">
+				元后自动转为二级接单
+			</div>
+			<div class="dn diLine">
+				<div class="pt20 bor-bE6E6 pb20">
+					<span class="searchLable">二级接单加工商：</span>
+					<button class="ui-button mr10" data-type="normal" type="button">选择加工商</button>
+					<span>
+						<a href="javascript:void(0)" class="n16_menudel">马云云<i class="icon-sdel goldIcon v-3"></i></a>
+					</span>
+				</div>
+				<div class="pt20 pb20">
+					<span class="searchLable">二级接单分红比例：</span>
+					<span class="ui-input" data-type="price">
+						<input type="text" value="" placeholder="请输入"><span class="searchLable">%</span>
+					</span>
+				</div>
+			</div>
+			<div class="mt30 tc">
+				<button class="ui-button w90" type="button">保存</button>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="../js/admin.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+		<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+
+		<script>
+			$(function() {
+				$(".mulfolder").eq(2).addClass("open").find(".smlist ").eq(5).addClass("on"); // 静态页面定位使用，开发使用title等定位
+
+				if ($(".showTip").length > 0) {
+					$(".showTip").find('[title]').qtip({
+						position: {
+							my: 'bottom center', //my:是指三角的位置
+							at: 'top center' //是在提示在组件的相对位置
+						},
+						style: {
+							classes: 'qtip-lg qtip-light  qtip-shadow qtip-rounded' //
+						}
+					});
+				}
+			})
+
+			function showLayer() {
+				var page = layer.open({
+					type: 1,
+					title: "新增",
+					shadeClose: true,
+					shade: 0.4,
+					area: ['960px', '500px'],
+					content: $(".addDisat") //iframe的url
+				});
+				$("#close_but").on("click", function() {
+					layer.close(page);
+				});
+			}
+			
+			function showUser(){
+				var page = layer.open({
+					type: 2,
+					title: "选择加工商",
+					shadeClose: true,
+					shade: 0.4,
+					area: ['600px', '500px'],
+					content: "../public/selUser1.html" //iframe的url
+				});
+				$("#close_but").on("click", function() {
+					layer.close(page);
+				});
+			}
+
+			var start = laydate.render({
+				elem: '#time2',
+				theme: 'lgblue',
+				trigger: 'click',
+				btns: ['clear', 'confirm'],
+				min: 0,
+				done: function(value, date) {
+					getTotal()
+					// var myobj = {
+					// 	year: date.year,
+					// 	month: date.month - 1,//关键
+					// 	date: date.date
+					// };
+					// end.config.value = value;
+					// end.config.min = myobj;
+
+				}
+			})
+
+
+			function showDiLine() {
+				$(".diLine").toggleClass("dn");
+			}
+		</script>
+	</body>
+</html>
