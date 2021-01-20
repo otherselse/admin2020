@@ -112,8 +112,12 @@
                         <tr class="openTr">
                             <td>1</td>
                             <td>
-                                <div class="pl20 tl">
-                                    <a href="../public/userInfo1.html" target="_block">简简单单供应链服务</a>
+                                <div class="pl20 tl copyDiv" >
+                                   <!--  <input type="text" value="简简单单供应链服务简简单单供应链服务简简单单供应链服务" class="bd_none pct95 ell" readonly=""  /> -->
+                                   <a href="javascript:void(0)">简简单单供应链服务简简单单供</a>
+                                   <input type="text" id="copyInput" value="简简单单供应链服务简简单单供" style="opacity: 0;height: 1px;width: 1px" />
+                                    <a href="javascript:void(0)" onclick="selectVal(this)" class="copyIcon" >复制</a>
+                                    <!-- <a href="../public/userInfo1.html" target="_block"></a> -->
                                 </div>
                             </td>
                             <td>220天</td>
@@ -191,6 +195,12 @@
             $(obj).parents(".openTr").next("tr").toggle()
         }
 
+        function selectVal(obj){
+            var input = $(obj).parents(".copyDiv").find("#copyInput")[0];
+            input.select(); // 选中文本
+            document.execCommand("copy"); // 执行浏览器复制命令
+            alert("复制成功");
+        }
 
     </script>
 </body>
