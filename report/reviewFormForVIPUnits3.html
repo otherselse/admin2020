@@ -114,9 +114,9 @@
                             <td>
                                 <div class="pl20 tl copyDiv" >
                                    <!--  <input type="text" value="简简单单供应链服务简简单单供应链服务简简单单供应链服务" class="bd_none pct95 ell" readonly=""  /> -->
-                                   <a href="javascript:void(0)">简简单单供应链服务简简单单供</a>
-                                   <input type="text" id="copyInput" value="简简单单供应链服务简简单单供" style="opacity: 0;height: 1px;width: 1px" />
-                                    <a href="javascript:void(0)" onclick="selectVal(this)" class="copyIcon" >复制</a>
+                                   <a href="javascript:void(0)">简简单单供应链服务简简单单供1</a>
+                                   <input type="text" id="copyInput" value="简简单单供应链服务简简单单供1" style="opacity: 0;height: 1px;width: 1px" />
+                                    <a href="javascript:void(0)" onclick="selectVal(this)" class="copyIcon vm tiptop" title="点击复制该单位名称"></a>
                                     <!-- <a href="../public/userInfo1.html" target="_block"></a> -->
                                 </div>
                             </td>
@@ -199,7 +199,7 @@
             var input = $(obj).parents(".copyDiv").find("#copyInput")[0];
             input.select(); // 选中文本
             document.execCommand("copy"); // 执行浏览器复制命令
-            alert("复制成功");
+            layer.msg("已复制该单位名称");
         }
 
     </script>
