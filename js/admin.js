@@ -750,3 +750,13 @@ function setLeftBarFunc(obj){
 }
 
 
+function showMoreFlow(obj){
+	if($(obj).hasClass("down")){
+		$(obj).parents(".flow_stepCont").find(".flow_stepDet").hide();
+		$(obj).removeClass("down").text("展开")
+	}else{
+		$(obj).parents(".flow_stepCont").find(".flow_stepDet").show();
+		$(obj).addClass("down").text("收起")
+	}
+}
+
