@@ -44,7 +44,7 @@
         </div>
 		<div class="ui-content minH">
             <div class="bbe"><span class="ui-content-t n poi" onclick="prev()" ><i class="leftArrow"></i> 返回上一级</span> </div>
-			<div class="lh84 bor-bottom">
+			<!-- <div class="lh84 bor-bottom">
                 <div class="ui-tab4">
                     <a href="./supplierApply.html" class="ui-tab4-list ml20 mr10 on">承运商申请表</a>
                     <a href="./supplierlocale.html" class="ui-tab4-list ">现场资料审核</a>
@@ -52,6 +52,13 @@
                     <a href="./review.html" class="ui-tab4-list">承运商评审</a>
                     <a href="./autoGrade.html" class="ui-tab4-list">自动打分</a>
                     <a href="./sellReviewAction_permit.html" class="ui-tab4-list ">风险信息备案</a>
+                </div>
+            </div> -->
+            <div class="mt20 mb20  myfixui-tab5">
+               <div class="ui-tab5 bgwh pl20" >
+                    <a href="./supplierApply.html" class="ui-tab5-list  ml20">基本信息</a>
+                    <a href="./autoGrade.html" class="ui-tab5-list  ml20">准入资格</a>
+                    <a href="./review.html" class="ui-tab5-list ml20 on">单位评审</a>
                 </div>
             </div>
             <div class="p20">
@@ -134,7 +141,11 @@
 	<script type="text/javascript" src="../js/admin.js"></script>
 	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
 	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+    <script src="http://resource.lgsteel.cn/public/js/fixScroll/myFixedScroll.js"></script>
 	<script>
+        var opts={'pDom':'.myfixui-tab5','distance':0}  //pDom为父节点，distance为距离,左侧菜单固定滚动
+        $(".ui-tab5").myscrollFunc(opts)
+
 		$(function(){
 			$(".smlist ").eq(1).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
 			//提示

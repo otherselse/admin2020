@@ -751,12 +751,13 @@ function setLeftBarFunc(obj){
 
 
 function showMoreFlow(obj,str){
-	if($(obj).hasClass("down")){
-		$(obj).parents("."+str).find(".flow_stepDet").hide();
-		$(obj).removeClass("down").text("展开")
+	var myobj=$(obj).find(".link-up");
+	if($(myobj).hasClass("down")){
+		$(myobj).parents("."+str).find(".flow_stepDet").hide();
+		$(myobj).removeClass("down").text("展开")
 	}else{
-		$(obj).parents("."+str).find(".flow_stepDet").show();
-		$(obj).addClass("down").text("收起")
+		$(myobj).parents("."+str).find(".flow_stepDet").show();
+		$(myobj).addClass("down").text("收起")
 	}
 }
 
