@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no,email=no,address=no"> 
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>G2G充值比例调整-财务管理-乐刚智能云系统</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+</head>
+<body class="showTip fixtab">
+	<script type="text/javascript" src="../js/topBar.js"></script>	
+	<!-- 头部菜单 -->
+	<script type="text/javascript" src="../js/menu.js"></script>
+	<script type="text/javascript" src="menu_totrs.js"></script><!-- 静态页面定位使用，开发去掉，用于评审管理使用 -->
+	<script type="text/javascript" src="../js/leftBar.js"></script>	
+	<!-- 左侧菜单 -->
+
+	<div class="rightBar">
+			<div class="nav ovh">
+				<div class="l gga">
+		            <a href="../index/index.html" class="gga" >首页</a>
+		            <span class="dib pl5 pr5 ">/</span>
+		            财务管理
+		            <span class="dib pl5 pr5">/</span>
+		            <span class="g28">G2G充值比例调整</span>
+		        </div>
+		        <div class="r m_dn">
+	        		左侧菜单栏 <a href="javascript:void(0)" class="ui-switch goldIcon vm on setLeftBar" onclick="setLeftBarFunc(this)"></a>
+	        	</div>
+			</div>
+
+			<div class="ui-content ovh minH">
+				<div class="p20 f12">
+
+					<div class="mb10 searchLable">
+						金牌商家：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						单位名称：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						订单号：<input type="text" class="ui-input pct15 mr20" placeholder="请输入">
+						销售合同提交：<span class="radio mr20 n"><label class="mr10"><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
+						<label class=""><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label></span>
+						<button type="button" class="ui-button ">查询</button>
+					</div>
+
+	                <!-- search end -->
+
+					<div class="lgui-table-box mt30 checkbox">
+						<div class="lgui-table-header">
+							<table class="ui-table tc f12 " width="100%">
+		                    <thead>
+		                        <tr>
+		                            <th width="4%">序号</th>
+		                            <th width="7%">金牌商家</th>
+		                            <th width="6%">订单号</th>
+		                            <th width="15%" class="tl"><div class="pl10">单位名称</div></th>
+		                            <th width="10%">评审充值比例</th>
+		                            <th width="10%">逾期充值比例</th>
+		                            <th width="10%">调整后充值比例</th>
+		                            <th width="10%">销售合同提交</th>
+		                            <th width="13%">备注</th>
+									<th width="7%">操作人员</th>
+		                            <th width="8%">操作</th>
+		                        </tr>
+		                    </thead>
+		                </table>
+
+						</div>
+						<div class="lgui-table-body mt-1">
+							<table class="ui-table tc f12 " width="100%">
+		                    <tbody class="ui-thover">
+		                    	 <tr><td width="4%">1</td>
+		                            <td width="7%">李思思</td>
+		                            <td width="6%">12234</td>
+		                            <td width="15%" class="tl"><div class="pl10"><a href="javascript:void(0)" title="名&emsp;称：上海市爱尚有限公司<br/>联系人：唐宇捷" class="tiptop">上海市爱尚有限公司</a></div></td>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="13%">太厉害了，可下调充值比例</th>
+		                            <td width="7%">李四</td>
+		                            <td width="8%">--</td>
+		                        </tr>
+		                        <tr><td width="4%">1</td>
+		                            <td width="7%">李思思</td>
+		                            <td width="6%">12234</td>
+		                            <td width="15%" class="tl"><div class="pl10"><a href="javascript:void(0)" title="名&emsp;称：上海市爱尚有限公司<br/>联系人：唐宇捷" class="tiptop">上海市爱尚有限公司</a></div></td>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="10%">11%</th>
+		                            <td width="13%">太厉害了，可下调充值比例</th>
+		                            <td width="7%">李四</td>
+		                            <td width="8%"><a href="javascript:void(0)" onclick="editRatio()">比例调整</a></td>
+		                        </tr>
+		                       
+		                    </tbody>
+
+		                </table>
+
+						</div>
+		                
+	            	</div>
+	                <!-- table end -->
+	                <script type="text/javascript" src="../js/pagelist.js"></script>
+
+
+
+				</div>
+			</div><!-- ui-content end -->
+	</div><!-- rightBar end -->
+
+
+	<div class="dn  myeditRatio">
+		<div class="p20">
+			<div class="mb10 ">
+				&emsp;&emsp;&emsp;&emsp;订单号：<span class="pct20 dib">18888</span>
+				充值比例：<span class="red">4.5 </span>%
+			</div>
+			<div class="mb10">
+				&emsp;评审充值比例：<span class="pct20 dib"><span class="red">1.5 </span>%</span>
+				逾期充值比例：<span class="red">3</span> %
+			</div>
+			<div class="mb10">
+				调整后充值比例：<input type="text" class="ui-input pct60" />
+			</div>
+			<div class="mb10">
+				&emsp;&emsp;&emsp;&emsp;&emsp;备注：<textarea class="pct60 ui-textarea" rows="5"></textarea>
+			</div>
+			<div class="tc mt20">
+                <button type="button" class="ui-button mr10 w90" >确认</button>
+                <button type="button w90" class="ui-button w90" data-type="clear">取消</button>
+            </div>
+
+		</div>
+	</div>
+
+
+	
+	
+	<script type="text/javascript" src="../js/admin.js"></script>
+	<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/qtip2/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/layer/3.1.1/layer.js"></script>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/Number/NumberUtils.js"></script>
+	
+
+	<script>
+		$(function(){
+			$(".mulfolder").eq(3).addClass("open").find(".smlist ").eq(9).addClass("on"); 	// 静态页面定位使用，开发使用title等定位
+
+		})
+
+		function editRatio(){
+			layer.open({
+				type: 1,
+				title: '比例调整',
+				shadeClose: true,
+				shade: 0.4,
+				area: ['500px', '370px'],
+				content: $(".myeditRatio")
+			});
+		}
+
+
+		
+		
+	</script>
+</body>
+</html>
