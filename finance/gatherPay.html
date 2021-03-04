@@ -46,7 +46,7 @@
 								<label class="mr15"><i class="ui-radio goldIcon v-3 mr2 on"><input type="radio" class="radio-opacity" name="radio"></i>是</label>
 								<label><i class="ui-radio goldIcon v-3 mr2"><input type="radio" class="radio-opacity" name="radio"></i>否</label>
 							</span>
-						<button type="button" class="ui-button ">查询</button>
+						<button type="button" class="ui-button " onclick="openToAnswe()">查询</button>
 					</div>
 	                <!-- search end -->
 
@@ -194,6 +194,16 @@
 				shade: 0.4,
 				area: ['700px', '350px'],
 				content: $(".gatherBox") //iframe的url
+			});
+		}
+		
+		function openToAnswe(){
+			layer.open({
+				type: 2,
+				title: '',
+				shade: 0.4,
+				area: ['960px', '680px'],
+				content: "toBeAnswered.html" //iframe的url
 			});
 		}
 
