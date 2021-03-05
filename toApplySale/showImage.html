@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" href="http://resource.lgsteel.cn/public/images/favicon.ico" mce_href="http://resource.lgsteel.cn/public/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/public/style/lib.css" type="text/css" />
+	<link rel="stylesheet" href="http://resource.lgsteel.cn/gold2020/css/uiElement.css" type="text/css" />
+	<link rel="stylesheet" href="../css/admin.css?v=1" type="text/css" />
+	<title>查看附件</title>
+	<script type="text/javascript" src="http://resource.lgsteel.cn/public/js/jquery-1.8.3.min.js"></script>
+	<style>
+	.auto{margin-left:auto;margin-right:auto}
+	.tc{text-align:center}
+	.bgbottom{position:fixed;bottom:0;z-index:9999;width:100%;margin:0 auto;text-align:center;padding:10px 0;background-color: rgba(255,255,255,0.5); }
+	.poi{cursor:pointer}
+	.imgContent{margin-bottom:20px;}
+	</style>
+</head>
+<body>
+	
+	<div class="tc imgContent">
+		<!-- <img id="target" title="点击旋转" src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2021/2021-02-08/1612775648900.png" width="1000"> -->
+		<video src="http://fs.lgsteel.cn:8080/file/upload/workflow2/2021/2021-03-03/1614759017662.mp4"  width="800" id="target" controls=""  >
+			your browser does not support the video tag
+		</video>
+
+	</div>
+	<p>&emsp;</p><p>&emsp;</p><p>&emsp;</p><p>&emsp;</p>
+	<div class="bgbottom">
+	<img title="放大" src="http://116.228.150.231:6889/images/enlarge.png" onclick="ImageChange(true)" style="width:50px; margin-right: 30px;cursor:pointer">
+	<img title="缩小" src="http://116.228.150.231:6889/images/ensmall.png" onclick="ImageChange(false)" style="width:50px; margin-right: 30px;cursor:pointer">
+	<img title="点击向左旋转" src="http://116.228.150.231:6889/images/rotateLeft.png" onclick="xuanzhuanLeft()" style="width:50px; margin-right: 30px;cursor:pointer">
+	<img title="点击向右旋转" src="http://116.228.150.231:6889/images/rotateRight.png" onclick="xuanzhuanRight()" style="width:50px;margin-right: 30px;cursor:pointer">
+
+	<img title="播放" src="play.png" id="playBut" onclick="play(this)" style="width:53px; margin-right: 30px;cursor:pointer;margin-right: 30px;">
+	<img title="重置" src="reset.png" onclick="window.location.reload()" style="width:53px; margin-right: 30px;cursor:pointer;margin-right: 30px;">
+	<!-- <a onclick="play(this)">播放</a>
+	<a onclick="window.location.reload()">重置</a> -->
+	</div>
+
+
+	<script type="text/javascript">
+	function getQueryString(name){
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	}
+
+	var current = 0;
+	window.onload = function(){
+		
+		var imageUrl = getQueryString("imageUrl");
+		if(imageUrl){
+				
+			var fileType = imageUrl.substr(imageUrl.lastIndexOf('.')+1).toLowerCase();
+			switch (fileType){
+				case 'png':break;
+				case 'jpg':break;
+				case 'gif':break;
+				case 'bmp':break;
+				case 'jpeg':break;
+				default :location.href=imageUrl;
+			}
+		}
+		
+		
+		
+	    document.getElementById('target').onclick = function(){
+	    	if($("#target")[0].tagName="video"){
+				$("#target")[0].controls=false;
+				$("#target")[0].play()
+				$("#playBut").attr("title","停止").attr("src",'stop.png');
+				return;
+			}
+	        current = (current+90)%360;
+	        this.style.transform = 'rotate('+current+'deg)';
+	        if(current/90==1||current/90==3){
+	       		setMargin();
+	       	}else{
+	       		$(".imgContent").css("margin-top",0);
+	       	} 
+	    }
+	}; 
+
+
+	function play(obj){
+		var v=$("#target")[0];
+		if($(obj).attr("title")=="播放"){
+			$(obj).attr("src",'stop.png')
+			v.play();
+			$(obj).attr("title","停止");	 
+		}else{
+			$(obj).attr("title","播放");
+			$(obj).attr("src",'play.png')
+			v.pause();	
+		}
+
+	}
+
+	function xuanzhuanRight(){
+		if($("#target")[0].tagName="video"){
+			$("#target")[0].controls=false;
+		}
+		current = (current+90)%360;
+	    document.getElementById('target').style.transform = 'rotate('+current+'deg)';
+	   	if(current/90==1||current/90==3){
+	   		setMargin();
+	   	}else{
+	   		$(".imgContent").css("margin-top",0);
+	   	}  
+	} 
+	function xuanzhuanLeft(){
+		current = (current-90)%360;
+	    document.getElementById('target').style.transform = 'rotate('+current+'deg)';
+	    if(current/90==-1||current/90==-3){
+	   		setMargin();
+	   	}else{
+	   		$(".imgContent").css("margin-top",0);
+	   	}
+	}
+	function ImageChange(args) {
+	    var oImg = document.getElementById("target");
+	    if (args) {
+	      oImg.width = oImg.width * 1.3;
+	      oImg.height = oImg.height * 1.3;
+	    }
+	    else {
+	      oImg.width = oImg.width / 1.3;
+	      oImg.height = oImg.height / 1.3;
+	    }
+	  }
+	function setMargin(){
+		var w=$("#target").width();
+		var h=$("#target").height();
+		if(h>w){
+			$(".imgContent").css("margin-top",0);
+		}else{
+			$(".imgContent").css("margin-top",(w-h)/2);
+		}
+	}
+</script>
+
+</body>
+</html>
